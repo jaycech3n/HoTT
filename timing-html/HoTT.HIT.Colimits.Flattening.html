@@ -30,14 +30,14 @@ pre {
 
 <div class="code" title="File: Flattening.v
 Line: 1
-Time: 0.04s">
-<div class="time" style="width: 1.7189514396218%"></div>
+Time: 0.043s">
+<div class="time" style="width: 1.7924135056273%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 1
-Time: 0.179s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0.188s">
+<div class="time" style="width: 7.8365985827428%"></div>
 <pre>
 Require Import Colimits.Diagram Colimits.Colimit Colimits.Pushout.</pre>
 </div>
@@ -141,8 +141,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 21
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre> exact {g : G i.1 j.1 &amp; D _f g i.2 = j.2}.</pre>
 </div>
 <div class="code" title="File: Flattening.v
@@ -178,8 +178,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 28
-Time: 0.003s">
-<div class="time" style="width: 0.12892135797164%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.16673614005836%"></div>
 <pre>
 
   Let E_f {i j : G} (g : G i j) (x : D i) : E (i; x) -&gt; E (j; (D _f g) x)
@@ -230,8 +230,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 38
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre> exact {x : D i &amp; E (i; x)}.</pre>
 </div>
 <div class="code" title="File: Flattening.v
@@ -255,8 +255,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 39
-Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       exists (D _f g x.1).</pre>
 </div>
@@ -286,7 +286,7 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 45
 Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre>Definition equifibered := forall i j (g : G i j) (x : D i), IsEquiv (E_f g x).</pre>
 </div>
 <div class="code" title="File: Flattening.v
@@ -362,7 +362,7 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 55
 Time: 0.002s">
-<div class="time" style="width: 0.085947571981092%"></div>
+<div class="time" style="width: 0.083368070029179%"></div>
 <pre> symmetry.</pre>
 </div>
 <div class="code" title="File: Flattening.v
@@ -397,8 +397,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 61
-Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.083368070029179%"></div>
 <pre>Definition transport_E' {i j : G} (g : G i j)  (x : D i) (y : E (i; x))
     : transport E' (colimp i j g x) (E_f g x y) = y.</pre>
 </div>
@@ -411,8 +411,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 63
-Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     simple refine (transport_idmap_ap _ _ _ _ _ _ @ _).</pre>
 </div>
@@ -426,7 +426,7 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 65
 Time: 0.002s">
-<div class="time" style="width: 0.085947571981092%"></div>
+<div class="time" style="width: 0.083368070029179%"></div>
 <pre>
     2: apply colimit_rec_beta_colimp.</pre>
 </div>
@@ -445,22 +445,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 67
-Time: 0.003s">
-<div class="time" style="width: 0.12892135797164%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.16673614005836%"></div>
 <pre>
     symmetry; apply transport_path_universe.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 68
-Time: 0.008s">
-<div class="time" style="width: 0.34379028792437%"></div>
+Time: 0.007s">
+<div class="time" style="width: 0.29178824510213%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 69
 Time: 0.002s">
-<div class="time" style="width: 0.085947571981092%"></div>
+<div class="time" style="width: 0.083368070029179%"></div>
 <pre>
 
   Definition transport_E'_V {i j : G} (g : G i j)  (x : D i) (y : E (i; x))
@@ -483,7 +483,7 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 74
 Time: 0.003s">
-<div class="time" style="width: 0.12892135797164%"></div>
+<div class="time" style="width: 0.12505210504377%"></div>
 <pre> symmetry.</pre>
 </div>
 <div class="code" title="File: Flattening.v
@@ -495,15 +495,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 75
-Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.083368070029179%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 76
 Time: 0.006s">
-<div class="time" style="width: 0.25784271594327%"></div>
+<div class="time" style="width: 0.25010421008754%"></div>
 <pre>
 
   Definition transport_E'_V_E' {i j : G} (g : G i j)  (x : D i) (y : E (i; x))
@@ -528,34 +528,34 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 83
 Time: 0.006s">
-<div class="time" style="width: 0.25784271594327%"></div>
+<div class="time" style="width: 0.25010421008754%"></div>
 <pre>
     rewrite moveR_transport_V_V.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 84
 Time: 0.005s">
-<div class="time" style="width: 0.21486892995273%"></div>
+<div class="time" style="width: 0.20842017507295%"></div>
 <pre>
     rewrite inv_V.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 85
 Time: 0.004s">
-<div class="time" style="width: 0.17189514396218%"></div>
+<div class="time" style="width: 0.16673614005836%"></div>
 <pre> symmetry.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 85
 Time: 0.002s">
-<div class="time" style="width: 0.085947571981092%"></div>
+<div class="time" style="width: 0.083368070029179%"></div>
 <pre>
     apply ap_transport_transport_pV.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 86
-Time: 0.018s">
-<div class="time" style="width: 0.77352814782982%"></div>
+Time: 0.019s">
+<div class="time" style="width: 0.7919966652772%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -573,8 +573,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 93
-Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition cocone_E' : cocone sigma_diagram (sig E').</pre>
 </div>
 <div class="code" title="File: Flattening.v
@@ -586,8 +586,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 94
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre>
     simple refine (Build_cocone _ _); cbn.</pre>
 </div>
@@ -631,8 +631,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 97
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre> simple refine (path_sigma' _ _ _).</pre>
 </div>
 <div class="code" title="File: Flattening.v
@@ -664,7 +664,7 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 99
 Time: 0.002s">
-<div class="time" style="width: 0.085947571981092%"></div>
+<div class="time" style="width: 0.083368070029179%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -686,8 +686,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 104
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre>
 
   Definition is_universal_cocone_E' : is_universal cocone_E'.</pre>
@@ -708,8 +708,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 108
-Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> serapply isequiv_adjointify.</pre>
 </div>
 <div class="code" title="File: Flattening.v
@@ -740,8 +740,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 110
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre>
       simple refine (colimit_ind _ _ _); cbn.</pre>
 </div>
@@ -774,20 +774,20 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 113
 Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre> funext y.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 113
 Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre>
         refine (transport_arrow_toconst _ _ _ @ _).</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 114
 Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre>
         refine (_ @ qq i j g (x; y)).</pre>
 </div>
@@ -800,20 +800,20 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 115
 Time: 0.002s">
-<div class="time" style="width: 0.085947571981092%"></div>
+<div class="time" style="width: 0.083368070029179%"></div>
 <pre> f_ap.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 115
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre>
         refine (path_sigma' _ 1 _); cbn.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 116
 Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre> apply transport_E'_V.</pre>
 </div>
 <div class="code" title="File: Flattening.v
@@ -826,13 +826,13 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 117
 Time: 0.01s">
-<div class="time" style="width: 0.42973785990546%"></div>
+<div class="time" style="width: 0.41684035014589%"></div>
 <pre> intros [q qq].</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 117
 Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre> simple refine (path_cocone _ _).</pre>
 </div>
 <div class="code" title="File: Flattening.v
@@ -844,8 +844,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 118
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre> intros i x; reflexivity.</pre>
 </div>
 <div class="code" title="File: Flattening.v
@@ -857,72 +857,72 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 119
-Time: 0.092s">
-<div class="time" style="width: 3.9535883111302%"></div>
+Time: 0.097s">
+<div class="time" style="width: 4.0433513964152%"></div>
 <pre> intros i j g [x y].</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 119
-Time: 0.101s">
-<div class="time" style="width: 4.3403523850451%"></div>
+Time: 0.103s">
+<div class="time" style="width: 4.2934556065027%"></div>
 <pre>
         rewrite concat_1p, concat_p1.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 120
 Time: 0.002s">
-<div class="time" style="width: 0.085947571981092%"></div>
+<div class="time" style="width: 0.083368070029179%"></div>
 <pre> cbn.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 120
-Time: 0.046s">
-<div class="time" style="width: 1.9767941555651%"></div>
+Time: 0.048s">
+<div class="time" style="width: 2.0008336807003%"></div>
 <pre> rewrite ap_path_sigma.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 120
 Time: 0.005s">
-<div class="time" style="width: 0.21486892995273%"></div>
+<div class="time" style="width: 0.20842017507295%"></div>
 <pre>
         cbn.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 121
 Time: 0.037s">
-<div class="time" style="width: 1.5900300816502%"></div>
+<div class="time" style="width: 1.5423092955398%"></div>
 <pre> rewrite colimit_ind_beta_colimp.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 121
-Time: 0.015s">
-<div class="time" style="width: 0.64460678985819%"></div>
+Time: 0.016s">
+<div class="time" style="width: 0.66694456023343%"></div>
 <pre> rewrite ap10_path_forall.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 121
-Time: 0.425s">
-<div class="time" style="width: 18.263859045982%"></div>
+Time: 0.43s">
+<div class="time" style="width: 17.924135056273%"></div>
 <pre>
         hott_simpl.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 122
 Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre>
         refine (_ @ concat_1p _).</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 123
 Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre> refine (_ @@ 1).</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 123
 Time: 0.003s">
-<div class="time" style="width: 0.12892135797164%"></div>
+<div class="time" style="width: 0.12505210504377%"></div>
 <pre>
         match goal with
         | |- ap _ ?X @ _ = _ =&gt; set X
@@ -963,7 +963,7 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 128
 Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre>
           exact (moveL_transport_V_V E' _ _ _ _)^.</pre>
 </div>
@@ -976,14 +976,14 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 129
 Time: 0.006s">
-<div class="time" style="width: 0.25784271594327%"></div>
+<div class="time" style="width: 0.25010421008754%"></div>
 <pre>
         rewrite X.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 130
 Time: 0.004s">
-<div class="time" style="width: 0.17189514396218%"></div>
+<div class="time" style="width: 0.16673614005836%"></div>
 <pre> clearbody p.</pre>
 </div>
 <div class="code" title="File: Flattening.v
@@ -995,13 +995,13 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 130
 Time: 0.004s">
-<div class="time" style="width: 0.17189514396218%"></div>
+<div class="time" style="width: 0.16673614005836%"></div>
 <pre> set (E_f g x y) in *.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 130
 Time: 0.007s">
-<div class="time" style="width: 0.30081650193382%"></div>
+<div class="time" style="width: 0.29178824510213%"></div>
 <pre>
         clearbody d; destruct p.</pre>
 </div>
@@ -1022,25 +1022,25 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 133
 Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre> intro f.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 133
-Time: 0.011s">
-<div class="time" style="width: 0.472711645896%"></div>
+Time: 0.012s">
+<div class="time" style="width: 0.50020842017507%"></div>
 <pre> funext [x y].</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 133
 Time: 0.003s">
-<div class="time" style="width: 0.12892135797164%"></div>
+<div class="time" style="width: 0.12505210504377%"></div>
 <pre> revert x y; cbn.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 133
 Time: 0.004s">
-<div class="time" style="width: 0.17189514396218%"></div>
+<div class="time" style="width: 0.16673614005836%"></div>
 <pre>
       simple refine (colimit_ind _ _ _); cbn.</pre>
 </div>
@@ -1067,33 +1067,33 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 136
 Time: 0.002s">
-<div class="time" style="width: 0.085947571981092%"></div>
+<div class="time" style="width: 0.083368070029179%"></div>
 <pre> intros i j g x; cbn.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 136
-Time: 0.002s">
-<div class="time" style="width: 0.085947571981092%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.12505210504377%"></div>
 <pre> funext y.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 136
-Time: 0.028s">
-<div class="time" style="width: 1.2032660077353%"></div>
+Time: 0.027s">
+<div class="time" style="width: 1.1254689453939%"></div>
 <pre>
         rewrite transport_forall; cbn.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 137
 Time: 0.012s">
-<div class="time" style="width: 0.51568543188655%"></div>
+<div class="time" style="width: 0.50020842017507%"></div>
 <pre>
         rewrite transport_paths_FlFr.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 138
 Time: 0.022s">
-<div class="time" style="width: 0.94542329179201%"></div>
+<div class="time" style="width: 0.91704877032097%"></div>
 <pre>
         match goal with
         | |- (_ @ ?pp) @ _ = _ =&gt; set pp
@@ -1102,7 +1102,7 @@ Time: 0.022s">
 <div class="code" title="File: Flattening.v
 Line: 141
 Time: 0.003s">
-<div class="time" style="width: 0.12892135797164%"></div>
+<div class="time" style="width: 0.12505210504377%"></div>
 <pre> cbn in p.</pre>
 </div>
 <div class="code" title="File: Flattening.v
@@ -1128,7 +1128,7 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 143
 Time: 0.011s">
-<div class="time" style="width: 0.472711645896%"></div>
+<div class="time" style="width: 0.45852438516048%"></div>
 <pre>
           match goal with
           | |- transportD E' ?C _ _ _ = _ =&gt; set (C2:=C)
@@ -1137,132 +1137,132 @@ Time: 0.011s">
 <div class="code" title="File: Flattening.v
 Line: 146
 Time: 0.008s">
-<div class="time" style="width: 0.34379028792437%"></div>
+<div class="time" style="width: 0.33347228011672%"></div>
 <pre>
           rewrite (transportD_is_transport _ (fun w =&gt; C2 w.1 w.2)).</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 147
 Time: 0.004s">
-<div class="time" style="width: 0.17189514396218%"></div>
+<div class="time" style="width: 0.16673614005836%"></div>
 <pre>
           subst C2; cbn.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 148
 Time: 0.038s">
-<div class="time" style="width: 1.6330038676407%"></div>
+<div class="time" style="width: 1.5839933305544%"></div>
 <pre> rewrite transport_paths_FlFr.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 148
 Time: 0.077s">
-<div class="time" style="width: 3.308981521272%"></div>
+<div class="time" style="width: 3.2096706961234%"></div>
 <pre>
           rewrite concat_p1.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 149
 Time: 0.006s">
-<div class="time" style="width: 0.25784271594327%"></div>
+<div class="time" style="width: 0.25010421008754%"></div>
 <pre> apply moveR_Vp.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 149
-Time: 0.017s">
-<div class="time" style="width: 0.73055436183928%"></div>
+Time: 0.018s">
+<div class="time" style="width: 0.75031263026261%"></div>
 <pre> rewrite concat_p1.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 149
-Time: 0.063s">
-<div class="time" style="width: 2.7073485174044%"></div>
+Time: 0.065s">
+<div class="time" style="width: 2.7094622759483%"></div>
 <pre>
           rewrite ap_path_sigma.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 150
 Time: 0.01s">
-<div class="time" style="width: 0.42973785990546%"></div>
+<div class="time" style="width: 0.41684035014589%"></div>
 <pre> cbn.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 150
-Time: 0.044s">
-<div class="time" style="width: 1.890846583584%"></div>
+Time: 0.047s">
+<div class="time" style="width: 1.9591496456857%"></div>
 <pre>
           rewrite colimit_ind_beta_colimp.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 151
-Time: 0.038s">
-<div class="time" style="width: 1.6330038676407%"></div>
+Time: 0.039s">
+<div class="time" style="width: 1.625677365569%"></div>
 <pre> rewrite ap10_path_forall.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 151
-Time: 1.162s">
-<div class="time" style="width: 49.935539321014%"></div>
+Time: 1.18s">
+<div class="time" style="width: 49.187161317216%"></div>
 <pre>
           hott_simpl.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 152
-Time: 0.026s">
-<div class="time" style="width: 1.1173184357542%"></div>
+Time: 0.027s">
+<div class="time" style="width: 1.1254689453939%"></div>
 <pre>
           rewrite ap11_is_ap10_ap01.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 153
 Time: 0.008s">
-<div class="time" style="width: 0.34379028792437%"></div>
+<div class="time" style="width: 0.33347228011672%"></div>
 <pre> cbn.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 153
-Time: 0.027s">
-<div class="time" style="width: 1.1602922217447%"></div>
+Time: 0.028s">
+<div class="time" style="width: 1.1671529804085%"></div>
 <pre> rewrite concat_1p.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 153
-Time: 0.025s">
-<div class="time" style="width: 1.0743446497636%"></div>
+Time: 0.027s">
+<div class="time" style="width: 1.1254689453939%"></div>
 <pre>
           rewrite (ap_compose (fun y =&gt; (colim j ((D _f g) x); y)) f).</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 154
 Time: 0.007s">
-<div class="time" style="width: 0.30081650193382%"></div>
+<div class="time" style="width: 0.29178824510213%"></div>
 <pre> cbn.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 154
-Time: 0.034s">
-<div class="time" style="width: 1.4611087236786%"></div>
+Time: 0.036s">
+<div class="time" style="width: 1.5006252605252%"></div>
 <pre>
           rewrite (ap_compose (fun x0 : exists x0 : D j, E (j; x0)
                                =&gt; (colim j (pr1 x0); pr2 x0)) f).</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 156
-Time: 0.063s">
-<div class="time" style="width: 2.7073485174044%"></div>
+Time: 0.065s">
+<div class="time" style="width: 2.7094622759483%"></div>
 <pre>
           rewrite &lt;- !ap_pp.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 157
 Time: 0.004s">
-<div class="time" style="width: 0.17189514396218%"></div>
+<div class="time" style="width: 0.16673614005836%"></div>
 <pre> apply (ap (ap f)).</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 157
 Time: 0.023s">
-<div class="time" style="width: 0.98839707778255%"></div>
+<div class="time" style="width: 0.95873280533556%"></div>
 <pre>
           match goal with
           | |- _ = (ap ?ff ?pp1 @ ?pp2) @ ?pp3 =&gt; set (p1 := pp1)
@@ -1271,7 +1271,7 @@ Time: 0.023s">
 <div class="code" title="File: Flattening.v
 Line: 160
 Time: 0.002s">
-<div class="time" style="width: 0.085947571981092%"></div>
+<div class="time" style="width: 0.083368070029179%"></div>
 <pre>
           assert (p1 = ap (transport E' (colimp i j g x)^)
                           (transport_pV E' (colimp i j g x) y)^).</pre>
@@ -1292,7 +1292,7 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 163
 Time: 0.006s">
-<div class="time" style="width: 0.25784271594327%"></div>
+<div class="time" style="width: 0.25010421008754%"></div>
 <pre>
             etransitivity.</pre>
 </div>
@@ -1306,7 +1306,7 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 165
 Time: 0.003s">
-<div class="time" style="width: 0.12892135797164%"></div>
+<div class="time" style="width: 0.12505210504377%"></div>
 <pre> serapply moveL_transport_V_1.</pre>
 </div>
 <div class="code" title="File: Flattening.v
@@ -1318,7 +1318,7 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 165
 Time: 0.006s">
-<div class="time" style="width: 0.25784271594327%"></div>
+<div class="time" style="width: 0.25010421008754%"></div>
 <pre>
             etransitivity.</pre>
 </div>
@@ -1331,13 +1331,13 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 166
 Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre> serapply inverse2.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 166
 Time: 0.003s">
-<div class="time" style="width: 0.12892135797164%"></div>
+<div class="time" style="width: 0.12505210504377%"></div>
 <pre> 2: serapply transport_VpV.</pre>
 </div>
 <div class="code" title="File: Flattening.v
@@ -1348,8 +1348,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 166
-Time: 0.006s">
-<div class="time" style="width: 0.25784271594327%"></div>
+Time: 0.007s">
+<div class="time" style="width: 0.29178824510213%"></div>
 <pre>
             symmetry; apply ap_V.</pre>
 </div>
@@ -1361,8 +1361,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 167
-Time: 0.021s">
-<div class="time" style="width: 0.90244950580146%"></div>
+Time: 0.029s">
+<div class="time" style="width: 1.2088370154231%"></div>
 <pre>
           rewrite X.</pre>
 </div>
@@ -1374,60 +1374,60 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 168
-Time: 0.029s">
-<div class="time" style="width: 1.2462397937258%"></div>
+Time: 0.022s">
+<div class="time" style="width: 0.91704877032097%"></div>
 <pre>
           rewrite &lt;- ap_compose.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 169
 Time: 0.005s">
-<div class="time" style="width: 0.21486892995273%"></div>
+<div class="time" style="width: 0.20842017507295%"></div>
 <pre> cbn.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 169
-Time: 0.036s">
-<div class="time" style="width: 1.5470562956596%"></div>
+Time: 0.038s">
+<div class="time" style="width: 1.5839933305544%"></div>
 <pre>
           rewrite (ap_path_sigma (fun x =&gt; E (j; x)) (fun x y =&gt; (colim j x; y))).</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 170
-Time: 0.007s">
-<div class="time" style="width: 0.30081650193382%"></div>
+Time: 0.008s">
+<div class="time" style="width: 0.33347228011672%"></div>
 <pre>
           cbn.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 171
 Time: 0.057s">
-<div class="time" style="width: 2.4495058014611%"></div>
+<div class="time" style="width: 2.3759899958316%"></div>
 <pre> rewrite !concat_p1.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 171
 Time: 0.014s">
-<div class="time" style="width: 0.60163300386764%"></div>
+<div class="time" style="width: 0.58357649020425%"></div>
 <pre> rewrite concat_pp_p.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 171
-Time: 0.016s">
-<div class="time" style="width: 0.68758057584873%"></div>
+Time: 0.017s">
+<div class="time" style="width: 0.70862859524802%"></div>
 <pre>
           rewrite ap_V.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 172
 Time: 0.004s">
-<div class="time" style="width: 0.17189514396218%"></div>
+<div class="time" style="width: 0.16673614005836%"></div>
 <pre> apply moveL_Vp.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 172
 Time: 0.031s">
-<div class="time" style="width: 1.3321873657069%"></div>
+<div class="time" style="width: 1.2922050854523%"></div>
 <pre>
           match goal with
           | |- ?pp1 @ _ = ?pp2 @ _ =&gt; set (p1 := pp1); set (p2 := pp2)
@@ -1436,13 +1436,13 @@ Time: 0.031s">
 <div class="code" title="File: Flattening.v
 Line: 175
 Time: 0.006s">
-<div class="time" style="width: 0.25784271594327%"></div>
+<div class="time" style="width: 0.25010421008754%"></div>
 <pre> cbn in *.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 175
 Time: 0.002s">
-<div class="time" style="width: 0.085947571981092%"></div>
+<div class="time" style="width: 0.083368070029179%"></div>
 <pre>
           assert (p1 = path_sigma' E' 1 (transport_Vp _ _ _)).</pre>
 </div>
@@ -1462,13 +1462,13 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 177
 Time: 0.009s">
-<div class="time" style="width: 0.38676407391491%"></div>
+<div class="time" style="width: 0.3751563151313%"></div>
 <pre> rewrite &lt;- ap_existT.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 177
 Time: 0.016s">
-<div class="time" style="width: 0.68758057584873%"></div>
+<div class="time" style="width: 0.66694456023343%"></div>
 <pre>
             rewrite (ap_compose (transport E' (colimp i j g x)^)
                                 (fun v =&gt; (colim j ((D _f g) x); v))).</pre>
@@ -1476,14 +1476,14 @@ Time: 0.016s">
 <div class="code" title="File: Flattening.v
 Line: 179
 Time: 0.005s">
-<div class="time" style="width: 0.21486892995273%"></div>
+<div class="time" style="width: 0.20842017507295%"></div>
 <pre>
             f_ap.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 180
-Time: 0.002s">
-<div class="time" style="width: 0.085947571981092%"></div>
+Time: 0.01s">
+<div class="time" style="width: 0.41684035014589%"></div>
 <pre> set (colimp i j g x).</pre>
 </div>
 <div class="code" title="File: Flattening.v
@@ -1494,15 +1494,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 180
-Time: 0.013s">
-<div class="time" style="width: 0.5586592178771%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.16673614005836%"></div>
 <pre>
             symmetry.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 181
 Time: 0.002s">
-<div class="time" style="width: 0.085947571981092%"></div>
+<div class="time" style="width: 0.083368070029179%"></div>
 <pre> apply transport_VpV.</pre>
 </div>
 <div class="code" title="File: Flattening.v
@@ -1513,82 +1513,82 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 181
-Time: 0.015s">
-<div class="time" style="width: 0.64460678985819%"></div>
+Time: 0.016s">
+<div class="time" style="width: 0.66694456023343%"></div>
 <pre>
           rewrite X; clear p1 X.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 182
 Time: 0.004s">
-<div class="time" style="width: 0.17189514396218%"></div>
+<div class="time" style="width: 0.16673614005836%"></div>
 <pre>
           assert (p2 = path_sigma' E' 1 (transport_E'_V _ _ _))
             by reflexivity.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 184
-Time: 0.019s">
-<div class="time" style="width: 0.81650193382037%"></div>
+Time: 0.02s">
+<div class="time" style="width: 0.83368070029179%"></div>
 <pre>
           rewrite X; clear p2 X.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 185
-Time: 0.082s">
-<div class="time" style="width: 3.5238504512248%"></div>
+Time: 0.087s">
+<div class="time" style="width: 3.6265110462693%"></div>
 <pre>
           rewrite &lt;- !path_sigma_pp_pp'.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 186
-Time: 0.01s">
-<div class="time" style="width: 0.42973785990546%"></div>
+Time: 0.011s">
+<div class="time" style="width: 0.45852438516048%"></div>
 <pre> f_ap.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 186
-Time: 0.024s">
-<div class="time" style="width: 1.0313708637731%"></div>
+Time: 0.026s">
+<div class="time" style="width: 1.0837849103793%"></div>
 <pre>
           rewrite concat_p1.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 187
 Time: 0.025s">
-<div class="time" style="width: 1.0743446497636%"></div>
+<div class="time" style="width: 1.0421008753647%"></div>
 <pre> rewrite concat_pp_p.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 187
 Time: 0.003s">
-<div class="time" style="width: 0.12892135797164%"></div>
+<div class="time" style="width: 0.12505210504377%"></div>
 <pre>
           refine (1 @@ _).</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 188
 Time: 0.003s">
-<div class="time" style="width: 0.12892135797164%"></div>
+<div class="time" style="width: 0.12505210504377%"></div>
 <pre>
           apply moveL_Mp.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 189
-Time: 0.023s">
-<div class="time" style="width: 0.98839707778255%"></div>
+Time: 0.024s">
+<div class="time" style="width: 1.0004168403501%"></div>
 <pre> rewrite &lt;- ap_V.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 189
 Time: 0.012s">
-<div class="time" style="width: 0.51568543188655%"></div>
+<div class="time" style="width: 0.50020842017507%"></div>
 <pre> rewrite &lt;- ap_pp.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 189
 Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre>
           simple refine (_ @ _).</pre>
 </div>
@@ -1602,20 +1602,20 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 191
 Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre> refine (ap (transport E' (colimp i j g x)) _).</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 191
-Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.083368070029179%"></div>
 <pre>
             refine ((transport_E'_V _ _ _)^ @ _).</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 192
 Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre>
             refine (ap _ (transport_pV _ _ _)).</pre>
 </div>
@@ -1628,20 +1628,20 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 194
-Time: 0.006s">
-<div class="time" style="width: 0.25784271594327%"></div>
+Time: 0.007s">
+<div class="time" style="width: 0.29178824510213%"></div>
 <pre> f_ap.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 194
 Time: 0.002s">
-<div class="time" style="width: 0.085947571981092%"></div>
+<div class="time" style="width: 0.083368070029179%"></div>
 <pre> refine (1 @@ _).</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 194
-Time: 0.002s">
-<div class="time" style="width: 0.085947571981092%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.12505210504377%"></div>
 <pre>
             apply transport_VpV.</pre>
 </div>
@@ -1654,34 +1654,34 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 196
-Time: 0.013s">
-<div class="time" style="width: 0.5586592178771%"></div>
+Time: 0.014s">
+<div class="time" style="width: 0.58357649020425%"></div>
 <pre> set (transport E' (colimp i j g x) (transport E' (colimp i j g x)^ y)).</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 196
 Time: 0.006s">
-<div class="time" style="width: 0.25784271594327%"></div>
+<div class="time" style="width: 0.25010421008754%"></div>
 <pre>
             rewrite ap_pp.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 197
 Time: 0.009s">
-<div class="time" style="width: 0.38676407391491%"></div>
+<div class="time" style="width: 0.3751563151313%"></div>
 <pre> rewrite &lt;- ap_compose.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 197
 Time: 0.004s">
-<div class="time" style="width: 0.17189514396218%"></div>
+<div class="time" style="width: 0.16673614005836%"></div>
 <pre>
             refine (_ @ (transport_E'_V_E' _ _ _)^).</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 198
 Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre>
             refine (1 @@ _).</pre>
 </div>
@@ -1694,33 +1694,33 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 199
 Time: 0.003s">
-<div class="time" style="width: 0.12892135797164%"></div>
+<div class="time" style="width: 0.12505210504377%"></div>
 <pre>
             refine (_ @ (transport_pVp _ _ _)^).</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 200
-Time: 0.009s">
-<div class="time" style="width: 0.38676407391491%"></div>
+Time: 0.01s">
+<div class="time" style="width: 0.41684035014589%"></div>
 <pre>
             rewrite ap_compose.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 201
-Time: 0.005s">
-<div class="time" style="width: 0.21486892995273%"></div>
+Time: 0.007s">
+<div class="time" style="width: 0.29178824510213%"></div>
 <pre> f_ap.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 201
 Time: 0.004s">
-<div class="time" style="width: 0.17189514396218%"></div>
+<div class="time" style="width: 0.16673614005836%"></div>
 <pre> symmetry.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 201
 Time: 0.002s">
-<div class="time" style="width: 0.085947571981092%"></div>
+<div class="time" style="width: 0.083368070029179%"></div>
 <pre>
             apply transport_VpV.</pre>
 </div>
@@ -1732,14 +1732,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 202
-Time: 0.325s">
-<div class="time" style="width: 13.966480446927%"></div>
+Time: 0.336s">
+<div class="time" style="width: 14.005835764902%"></div>
 <pre>
         rewrite X; hott_simpl.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 203
-Time: 2.327s">
+Time: 2.399s">
 <div class="time" style="width: 100%"></div>
 <pre>
   Defined.</pre>
@@ -1769,8 +1769,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 209
-Time: 0.046s">
-<div class="time" style="width: 1.9767941555651%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre>
     serapply colimit_unicity.</pre>
 </div>
@@ -1804,8 +1804,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 214
-Time: 1.221s">
-<div class="time" style="width: 52.470992694456%"></div>
+Time: 1.241s">
+<div class="time" style="width: 51.729887453105%"></div>
 <pre>
 End Flattening.</pre>
 </div>
@@ -1957,7 +1957,7 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 239
 Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre> intros [[] x]; revert x.</pre>
 </div>
 <div class="code" title="File: Flattening.v
@@ -1996,7 +1996,7 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 242
 Time: 0.044s">
-<div class="time" style="width: 1.890846583584%"></div>
+<div class="time" style="width: 1.8340975406419%"></div>
 <pre> intros [[] x] [[] y] []; cbn; intros [].</pre>
 </div>
 <div class="code" title="File: Flattening.v
@@ -2035,7 +2035,7 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 245
 Time: 0.029s">
-<div class="time" style="width: 1.2462397937258%"></div>
+<div class="time" style="width: 1.2088370154231%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -2056,15 +2056,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 249
-Time: 0.025s">
-<div class="time" style="width: 1.0743446497636%"></div>
+Time: 0.023s">
+<div class="time" style="width: 0.95873280533556%"></div>
 <pre>
     intros [] [] [] x; cbn.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 250
 Time: 0.002s">
-<div class="time" style="width: 0.085947571981092%"></div>
+<div class="time" style="width: 0.083368070029179%"></div>
 <pre> destruct b; cbn in *.</pre>
 </div>
 <div class="code" title="File: Flattening.v
@@ -2095,15 +2095,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 252
-Time: 0.025s">
-<div class="time" style="width: 1.0743446497636%"></div>
+Time: 0.021s">
+<div class="time" style="width: 0.87536473530638%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 253
 Time: 0.002s">
-<div class="time" style="width: 0.085947571981092%"></div>
+<div class="time" style="width: 0.083368070029179%"></div>
 <pre>
 
   Definition PO_flattening
@@ -2119,7 +2119,7 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 257
 Time: 0.002s">
-<div class="time" style="width: 0.085947571981092%"></div>
+<div class="time" style="width: 0.083368070029179%"></div>
 <pre>
     assert (PO (functor_sigma f f0) (functor_sigma g g0)
             = colimit (sigma_diagram (span f g) POCase_E)).</pre>
@@ -2139,8 +2139,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 260
-Time: 0.012s">
-<div class="time" style="width: 0.51568543188655%"></div>
+Time: 0.011s">
+<div class="time" style="width: 0.45852438516048%"></div>
 <pre>
       serapply path_diagram; cbn.</pre>
 </div>
@@ -2154,7 +2154,7 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 262
 Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre> intros [|[]]; cbn.</pre>
 </div>
 <div class="code" title="File: Flattening.v
@@ -2172,8 +2172,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 263
-Time: 0.093s">
-<div class="time" style="width: 3.9965620971208%"></div>
+Time: 0.091s">
+<div class="time" style="width: 3.7932471863276%"></div>
 <pre> intros [] [] [] x; destruct b; cbn in *.</pre>
 </div>
 <div class="code" title="File: Flattening.v
@@ -2192,14 +2192,14 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 264
 Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre>
     rewrite X; clear X.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 265
 Time: 0.002s">
-<div class="time" style="width: 0.085947571981092%"></div>
+<div class="time" style="width: 0.083368070029179%"></div>
 <pre>
     transitivity (exists x, E' (span f g) POCase_E POCase_HE x).</pre>
 </div>
@@ -2213,7 +2213,7 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 267
 Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre> apply flattening_lemma.</pre>
 </div>
 <div class="code" title="File: Flattening.v
@@ -2239,7 +2239,7 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 269
 Time: 0.002s">
-<div class="time" style="width: 0.085947571981092%"></div>
+<div class="time" style="width: 0.083368070029179%"></div>
 <pre>
       assert (E' (span f g) POCase_E POCase_HE x = POCase_P x).</pre>
 </div>
@@ -2259,14 +2259,14 @@ Time: 0s">
 <div class="code" title="File: Flattening.v
 Line: 271
 Time: 0.01s">
-<div class="time" style="width: 0.42973785990546%"></div>
+<div class="time" style="width: 0.41684035014589%"></div>
 <pre>
         f_ap.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 272
 Time: 0.003s">
-<div class="time" style="width: 0.12892135797164%"></div>
+<div class="time" style="width: 0.12505210504377%"></div>
 <pre> serapply path_cocone.</pre>
 </div>
 <div class="code" title="File: Flattening.v
@@ -2278,8 +2278,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 273
-Time: 0.013s">
-<div class="time" style="width: 0.5586592178771%"></div>
+Time: 0.014s">
+<div class="time" style="width: 0.58357649020425%"></div>
 <pre> intros [[]|[]] y; cbn.</pre>
 </div>
 <div class="code" title="File: Flattening.v
@@ -2323,14 +2323,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 276
-Time: 0.306s">
-<div class="time" style="width: 13.149978513107%"></div>
+Time: 0.322s">
+<div class="time" style="width: 13.422259274698%"></div>
 <pre> intros [] [] []; cbn.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 276
-Time: 0.298s">
-<div class="time" style="width: 12.806188225183%"></div>
+Time: 0.287s">
+<div class="time" style="width: 11.963318049187%"></div>
 <pre>
           destruct b, u; intro y; simpl; hott_simpl.</pre>
 </div>
@@ -2343,15 +2343,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 278
-Time: 0.002s">
-<div class="time" style="width: 0.085947571981092%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.12505210504377%"></div>
 <pre>
           rewrite &lt;- path_universe_V_uncurried.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 279
 Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+<div class="time" style="width: 0.041684035014589%"></div>
 <pre>
           refine (path_universe_compose (f0 y)^-1 (g0 y))^.</pre>
 </div>
@@ -2370,21 +2370,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Flattening.v
 Line: 281
-Time: 0.001s">
-<div class="time" style="width: 0.042973785990546%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 281
-Time: 0.306s">
-<div class="time" style="width: 13.149978513107%"></div>
+Time: 0.312s">
+<div class="time" style="width: 13.005418924552%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Flattening.v
 Line: 282
-Time: 0.244s">
-<div class="time" style="width: 10.485603781693%"></div>
+Time: 0.258s">
+<div class="time" style="width: 10.754481033764%"></div>
 <pre>
 
 End POCase.</pre>
