@@ -3253,12 +3253,12 @@
           
 
             i = 647;
-            data = "1 subgoal (ID 382)	  	  UA : Univalence	  PR : PropResizing	  n : N	  ============================	  Sect	    (fun X : {m : N & m < n} + Unit =>	     match X with	     | inl mH => (pr1 mH; N_lt_le (pr1 mH) n (pr2 mH))	     | inr _ => (n; reflexivity n)	     end)	    (fun mH : {m : N & m <= n} =>	     let s := N_le_eq_or_lt (pr1 mH) n (pr2 mH) in	     match s with	     | inl _ => inr tt	     | inr Hs => inl (pr1 mH; Hs)	     end)	";
+            data = "1 subgoal (ID 382)	  	  UA : Univalence	  PR : PropResizing	  n : N	  ============================	  Sect	    (fun X : {m : N & m < n} + Unit =>	     match X with	     | inl mH => (pr1 mH; N_lt_le (pr1 mH) n (pr2 mH))	     | inr _ => (n; reflexivity n)	     end)	    (fun mH : {m : N & m <= n} =>	     let s := N_le_eq_or_lt (pr1 mH) n (pr2 mH) in	     match s with	     | inl _ => inr tt	     | inr Hs => inl (pr1 mH; Hs)	     end)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 384)		subgoal 1 (ID 384) is:	 Sect	   (fun mH : {m : N & m <= n} =>	    let s := N_le_eq_or_lt (pr1 mH) n (pr2 mH) in	    match s with	    | inl _ => inr tt	    | inr Hs => inl (pr1 mH; Hs)	    end)	   (fun X : {m : N & m < n} + Unit =>	    match X with	    | inl mH => (pr1 mH; N_lt_le (pr1 mH) n (pr2 mH))	    | inr _ => (n; reflexivity n)	    end)	";
             responses[i]=data;
           
 
             i = 648;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 384)		subgoal 1 (ID 384) is:	 Sect	   (fun mH : {m : N & m <= n} =>	    let s := N_le_eq_or_lt (pr1 mH) n (pr2 mH) in	    match s with	    | inl _ => inr tt	    | inr Hs => inl (pr1 mH; Hs)	    end)	   (fun X : {m : N & m < n} + Unit =>	    match X with	    | inl mH => (pr1 mH; N_lt_le (pr1 mH) n (pr2 mH))	    | inr _ => (n; reflexivity n)	    end)	1 subgoal (ID 384)	  	  UA : Univalence	  PR : PropResizing	  n : N	  ============================	  Sect	    (fun mH : {m : N & m <= n} =>	     let s := N_le_eq_or_lt (pr1 mH) n (pr2 mH) in	     match s with	     | inl _ => inr tt	     | inr Hs => inl (pr1 mH; Hs)	     end)	    (fun X : {m : N & m < n} + Unit =>	     match X with	     | inl mH => (pr1 mH; N_lt_le (pr1 mH) n (pr2 mH))	     | inr _ => (n; reflexivity n)	     end)	No more subgoals.	";
+            data = "1 subgoal (ID 384)	  	  UA : Univalence	  PR : PropResizing	  n : N	  ============================	  Sect	    (fun mH : {m : N & m <= n} =>	     let s := N_le_eq_or_lt (pr1 mH) n (pr2 mH) in	     match s with	     | inl _ => inr tt	     | inr Hs => inl (pr1 mH; Hs)	     end)	    (fun X : {m : N & m < n} + Unit =>	     match X with	     | inl mH => (pr1 mH; N_lt_le (pr1 mH) n (pr2 mH))	     | inr _ => (n; reflexivity n)	     end)	No more subgoals.	";
             responses[i]=data;
           
 
@@ -4043,17 +4043,17 @@
           
 
             i = 805;
-            data = "1 subgoal (ID 948)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  n : N	  f : {m : N & m <= n} -> X	  xsn : X	  ============================	  equiv_N_segment_succ_maps n (f, xsn)	    (succ_seg (succ n) (_^-1 (_^-1 (inr (center _))))) = xsn	1 subgoal (ID 951)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  n : N	  f : {m : N & m <= n} -> X	  xsn : X	  ============================	  sum_ind_uncurried (fun _ : {m : N & m <= n} + Unit => X)	    (functor_prod idmap (Unit_ind (A:=unit_name X)) (f, xsn))	    (functor_sum	       (functor_sigma idmap (fun a : N => fst (N_lt_succ_iff_le a n))) idmap	       match	         N_le_eq_or_lt (succ n) (succ n)	           (fst (N_lt_iff_succ_le n (succ n))	              (snd (N_lt_succ_iff_le n n) (reflexive_N_le n)))	       with	       | inl _ => inr tt	       | inr Hs => inl (succ n; Hs)	       end) = xsn	";
+            data = "1 subgoal (ID 948)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  n : N	  f : {m : N & m <= n} -> X	  xsn : X	  ============================	  equiv_N_segment_succ_maps n (f, xsn)	    (succ_seg (succ n) (_^-1 (_^-1 (inr (center _))))) = xsn	";
             responses[i]=data;
           
 
             i = 806;
-            data = "1 subgoal (ID 952)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  n : N	  f : {m : N & m <= n} -> X	  xsn : X	  ============================	  forall s : (succ n = succ n) + (succ n < succ n),	  sum_ind_uncurried (fun _ : {m : N & m <= n} + Unit => X)	    (functor_prod idmap (Unit_ind (A:=unit_name X)) (f, xsn))	    (functor_sum	       (functor_sigma idmap (fun a : N => fst (N_lt_succ_iff_le a n))) idmap	       match s with	       | inl _ => inr tt	       | inr Hs => inl (succ n; Hs)	       end) = xsn	";
+            data = "1 subgoal (ID 951)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  n : N	  f : {m : N & m <= n} -> X	  xsn : X	  ============================	  sum_ind_uncurried (fun _ : {m : N & m <= n} + Unit => X)	    (functor_prod idmap (Unit_ind (A:=unit_name X)) (f, xsn))	    (functor_sum	       (functor_sigma idmap (fun a : N => fst (N_lt_succ_iff_le a n))) idmap	       match	         N_le_eq_or_lt (succ n) (succ n)	           (fst (N_lt_iff_succ_le n (succ n))	              (snd (N_lt_succ_iff_le n n) (reflexive_N_le n)))	       with	       | inl _ => inr tt	       | inr Hs => inl (succ n; Hs)	       end) = xsn	";
             responses[i]=data;
           
 
             i = 807;
-            data = "2 subgoals (ID 958)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  n : N	  f : {m : N & m <= n} -> X	  xsn : X	  L : succ n = succ n	  ============================	  sum_ind_uncurried (fun _ : {m : N & m <= n} + Unit => X)	    (functor_prod idmap (Unit_ind (A:=unit_name X)) (f, xsn))	    (functor_sum	       (functor_sigma idmap (fun a : N => fst (N_lt_succ_iff_le a n))) idmap	       (inr tt)) = xsn		subgoal 2 (ID 959) is:	 sum_ind_uncurried (fun _ : {m : N & m <= n} + Unit => X)	   (functor_prod idmap (Unit_ind (A:=unit_name X)) (f, xsn))	   (functor_sum	      (functor_sigma idmap (fun a : N => fst (N_lt_succ_iff_le a n))) idmap	      (inl (succ n; L))) = xsn	";
+            data = "1 subgoal (ID 952)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  n : N	  f : {m : N & m <= n} -> X	  xsn : X	  ============================	  forall s : (succ n = succ n) + (succ n < succ n),	  sum_ind_uncurried (fun _ : {m : N & m <= n} + Unit => X)	    (functor_prod idmap (Unit_ind (A:=unit_name X)) (f, xsn))	    (functor_sum	       (functor_sigma idmap (fun a : N => fst (N_lt_succ_iff_le a n))) idmap	       match s with	       | inl _ => inr tt	       | inr Hs => inl (succ n; Hs)	       end) = xsn	2 subgoals (ID 958)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  n : N	  f : {m : N & m <= n} -> X	  xsn : X	  L : succ n = succ n	  ============================	  sum_ind_uncurried (fun _ : {m : N & m <= n} + Unit => X)	    (functor_prod idmap (Unit_ind (A:=unit_name X)) (f, xsn))	    (functor_sum	       (functor_sigma idmap (fun a : N => fst (N_lt_succ_iff_le a n))) idmap	       (inr tt)) = xsn		subgoal 2 (ID 959) is:	 sum_ind_uncurried (fun _ : {m : N & m <= n} + Unit => X)	   (functor_prod idmap (Unit_ind (A:=unit_name X)) (f, xsn))	   (functor_sum	      (functor_sigma idmap (fun a : N => fst (N_lt_succ_iff_le a n))) idmap	      (inl (succ n; L))) = xsn	";
             responses[i]=data;
           
 
@@ -4153,17 +4153,17 @@
           
 
             i = 827;
-            data = "No more subgoals.	";
+            data = "No more subgoals.	<infomsg>partial_Nrec_succ0 is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 828;
-            data = "<infomsg>partial_Nrec_succ0 is defined</infomsg>	";
+            data = "<infomsg>partial_Nrec_succ is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 829;
-            data = "<infomsg>partial_Nrec_succ is defined</infomsg>	1 subgoal (ID 476)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  n : N	  ============================	  Contr (partial_Nrec n)	";
+            data = "1 subgoal (ID 476)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  n : N	  ============================	  Contr (partial_Nrec n)	";
             responses[i]=data;
           
 

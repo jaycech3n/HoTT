@@ -263,12 +263,12 @@
           
 
             i = 49;
-            data = "1 subgoal (ID 10)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  ============================	  forall i j : PO_graph,	  PO_graph i j ->	  (fun X : PO_graph =>	   match X with	   | inl _ => A	   | inr true => B	   | inr false => C	   end) i ->	  (fun X : PO_graph =>	   match X with	   | inl _ => A	   | inr true => B	   | inr false => C	   end) j	";
+            data = "1 subgoal (ID 10)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  ============================	  forall i j : PO_graph,	  PO_graph i j ->	  (fun X : PO_graph =>	   match X with	   | inl _ => A	   | inr true => B	   | inr false => C	   end) i ->	  (fun X : PO_graph =>	   match X with	   | inl _ => A	   | inr true => B	   | inr false => C	   end) j	1 subgoal (ID 44)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  i : Unit	  j : Bool	  u : PO_graph (inl i) (inr j)	  ============================	  A -> if j then B else C	";
             responses[i]=data;
           
 
             i = 50;
-            data = "1 subgoal (ID 44)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  i : Unit	  j : Bool	  u : PO_graph (inl i) (inr j)	  ============================	  A -> if j then B else C	2 subgoals (ID 59)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  i : Unit	  u : PO_graph (inl i) (inr true)	  ============================	  A -> B		subgoal 2 (ID 60) is:	 A -> C	";
+            data = "2 subgoals (ID 59)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  i : Unit	  u : PO_graph (inl i) (inr true)	  ============================	  A -> B		subgoal 2 (ID 60) is:	 A -> C	";
             responses[i]=data;
           
 

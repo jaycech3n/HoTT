@@ -40,13 +40,13 @@ Time: 0s">
 <div class="code" title="File: Wtype.v
 Line: 3
 Time: 0.018s">
-<div class="time" style="width: 10.714285714286%"></div>
+<div class="time" style="width: 11.764705882353%"></div>
 <pre>Require Import HoTT.Basics.</pre>
 </div>
 <div class="code" title="File: Wtype.v
 Line: 3
 Time: 0.012s">
-<div class="time" style="width: 7.1428571428571%"></div>
+<div class="time" style="width: 7.843137254902%"></div>
 <pre>
 Require Import Types.Forall Types.Sigma Types.Paths Types.Unit.</pre>
 </div>
@@ -82,7 +82,7 @@ Time: 0s">
 <div class="code" title="File: Wtype.v
 Line: 9
 Time: 0.002s">
-<div class="time" style="width: 1.1904761904762%"></div>
+<div class="time" style="width: 1.3071895424837%"></div>
 <pre>
 Inductive W (A : Type) (B : A -&gt; Type) : Type :=
   sup { w_label : A ; w_arg : B w_label -&gt; W A B }.</pre>
@@ -122,7 +122,7 @@ Time: 0s">
 <div class="code" title="File: Wtype.v
 Line: 18
 Time: 0.002s">
-<div class="time" style="width: 1.1904761904762%"></div>
+<div class="time" style="width: 1.3071895424837%"></div>
 <pre>Definition path_wtype {A B} (u v : W A B)
   (pq : (w_label u;w_arg u) = (w_label v;w_arg v) :&gt; {a : _ &amp; B a -&gt; W A B})
 : u = v.</pre>
@@ -137,14 +137,14 @@ Proof.</pre>
 <div class="code" title="File: Wtype.v
 Line: 21
 Time: 0.005s">
-<div class="time" style="width: 2.9761904761905%"></div>
+<div class="time" style="width: 3.2679738562092%"></div>
 <pre>
   destruct u,v; apply (path_sigma_uncurried _ _ _)^-1 in pq.</pre>
 </div>
 <div class="code" title="File: Wtype.v
 Line: 22
 Time: 0.006s">
-<div class="time" style="width: 3.5714285714286%"></div>
+<div class="time" style="width: 3.921568627451%"></div>
 <pre>
   destruct pq as [p q]; cbn in p; destruct p; cbn in q; destruct q.</pre>
 </div>
@@ -158,14 +158,14 @@ Time: 0s">
 <div class="code" title="File: Wtype.v
 Line: 24
 Time: 0.005s">
-<div class="time" style="width: 2.9761904761905%"></div>
+<div class="time" style="width: 3.2679738562092%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Wtype.v
 Line: 25
-Time: 0.007s">
-<div class="time" style="width: 4.1666666666667%"></div>
+Time: 0.006s">
+<div class="time" style="width: 3.921568627451%"></div>
 <pre>
 
 Definition path_wtype_inv {A B} {u v : W A B} (pq : u = v)
@@ -189,7 +189,7 @@ Time: 0s">
 <div class="code" title="File: Wtype.v
 Line: 36
 Time: 0.007s">
-<div class="time" style="width: 4.1666666666667%"></div>
+<div class="time" style="width: 4.5751633986928%"></div>
 <pre>Definition eisretr_path_wtype {A B} {z z' : W A B}
 : Sect (@path_wtype_inv _ _ z z') (path_wtype z z')
   := fun p =&gt; match p as p in (_ = z') return
@@ -205,7 +205,7 @@ Time: 0.007s">
 <div class="code" title="File: Wtype.v
 Line: 46
 Time: 0.001s">
-<div class="time" style="width: 0.5952380952381%"></div>
+<div class="time" style="width: 0.65359477124183%"></div>
 <pre>
 
 Definition eissect_path_wtype {A B} {z z' : W A B}
@@ -221,42 +221,42 @@ Proof.</pre>
 <div class="code" title="File: Wtype.v
 Line: 50
 Time: 0.008s">
-<div class="time" style="width: 4.7619047619048%"></div>
+<div class="time" style="width: 5.2287581699346%"></div>
 <pre>
   intro r; destruct z, z'; set (pq := (path_sigma_uncurried _ _ _)^-1 r).</pre>
 </div>
 <div class="code" title="File: Wtype.v
 Line: 51
 Time: 0.007s">
-<div class="time" style="width: 4.1666666666667%"></div>
+<div class="time" style="width: 4.5751633986928%"></div>
 <pre>
   rewrite (eisretr _ _ : path_sigma_uncurried _ _ _ pq = r)^.</pre>
 </div>
 <div class="code" title="File: Wtype.v
 Line: 52
-Time: 0.025s">
-<div class="time" style="width: 14.880952380952%"></div>
+Time: 0.029s">
+<div class="time" style="width: 18.954248366013%"></div>
 <pre>
   destruct pq as [p q]; cbn in p; destruct p; cbn in q; destruct q.</pre>
 </div>
 <div class="code" title="File: Wtype.v
 Line: 53
 Time: 0.001s">
-<div class="time" style="width: 0.5952380952381%"></div>
+<div class="time" style="width: 0.65359477124183%"></div>
 <pre>
   exact idpath.</pre>
 </div>
 <div class="code" title="File: Wtype.v
 Line: 54
-Time: 0.024s">
-<div class="time" style="width: 14.285714285714%"></div>
+Time: 0.023s">
+<div class="time" style="width: 15.032679738562%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Wtype.v
 Line: 55
 Time: 0.001s">
-<div class="time" style="width: 0.5952380952381%"></div>
+<div class="time" style="width: 0.65359477124183%"></div>
 <pre>
 
 Global Instance isequiv_path_wtype {A B} {z z' : W A B}
@@ -272,7 +272,7 @@ Proof.</pre>
 <div class="code" title="File: Wtype.v
 Line: 59
 Time: 0.001s">
-<div class="time" style="width: 0.5952380952381%"></div>
+<div class="time" style="width: 0.65359477124183%"></div>
 <pre>
   refine (isequiv_adjointify (path_wtype z z')
                        (@path_wtype_inv _ _ z z')
@@ -282,14 +282,14 @@ Time: 0.001s">
 <div class="code" title="File: Wtype.v
 Line: 63
 Time: 0.001s">
-<div class="time" style="width: 0.5952380952381%"></div>
+<div class="time" style="width: 0.65359477124183%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Wtype.v
 Line: 64
 Time: 0.001s">
-<div class="time" style="width: 0.5952380952381%"></div>
+<div class="time" style="width: 0.65359477124183%"></div>
 <pre>
 
 Definition equiv_path_wtype {A B} (z z' : W A B)
@@ -308,7 +308,7 @@ Time: 0s">
 <div class="code" title="File: Wtype.v
 Line: 70
 Time: 0.001s">
-<div class="time" style="width: 0.5952380952381%"></div>
+<div class="time" style="width: 0.65359477124183%"></div>
 <pre>Global Instance trunc_wtype `{Funext} `{B : A -&gt; Type}
          `{IsTrunc n.+1 A}
 : IsTrunc n.+1 (W A B) | 100.</pre>
@@ -329,15 +329,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Wtype.v
 Line: 74
-Time: 0.168s">
+Time: 0.153s">
 <div class="time" style="width: 100%"></div>
 <pre>
   intro y; destruct y as [a0 w0]; refine (trunc_equiv _ (equiv_path_wtype _ _)).</pre>
 </div>
 <div class="code" title="File: Wtype.v
 Line: 75
-Time: 0.001s">
-<div class="time" style="width: 0.5952380952381%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   apply (trunc_equiv' {p : a = a0 &amp; forall b, w b = w0 (p # b)}).</pre>
 </div>
@@ -351,7 +351,7 @@ Time: 0s">
 <div class="code" title="File: Wtype.v
 Line: 77
 Time: 0.001s">
-<div class="time" style="width: 0.5952380952381%"></div>
+<div class="time" style="width: 0.65359477124183%"></div>
 <pre> transitivity {p : a = a0 &amp; transport (fun a =&gt; B a -&gt; W A B) p w = w0}.</pre>
 </div>
 <div class="code" title="File: Wtype.v
@@ -364,7 +364,7 @@ Time: 0s">
 <div class="code" title="File: Wtype.v
 Line: 78
 Time: 0.001s">
-<div class="time" style="width: 0.5952380952381%"></div>
+<div class="time" style="width: 0.65359477124183%"></div>
 <pre> apply equiv_functor_sigma_id; intro p; induction p.</pre>
 </div>
 <div class="code" title="File: Wtype.v
@@ -383,7 +383,7 @@ Time: 0s">
 <div class="code" title="File: Wtype.v
 Line: 79
 Time: 0.001s">
-<div class="time" style="width: 0.5952380952381%"></div>
+<div class="time" style="width: 0.65359477124183%"></div>
 <pre>
     by erapply (equiv_path_sigma _ (a;w) (a0;w0)).</pre>
 </div>
@@ -395,15 +395,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Wtype.v
 Line: 80
-Time: 0.006s">
-<div class="time" style="width: 3.5714285714286%"></div>
+Time: 0.004s">
+<div class="time" style="width: 2.6143790849673%"></div>
 <pre>
   apply (@trunc_sigma _ _ _ (ac a a0)); intro p; rapply @trunc_forall.</pre>
 </div>
 <div class="code" title="File: Wtype.v
 Line: 81
-Time: 0.005s">
-<div class="time" style="width: 2.9761904761905%"></div>
+Time: 0.003s">
+<div class="time" style="width: 1.9607843137255%"></div>
 <pre>
 Defined.</pre>
 </div>

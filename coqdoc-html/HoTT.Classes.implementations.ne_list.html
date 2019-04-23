@@ -110,7 +110,7 @@ A nonempty list. Below there is an implicit coercion
 &nbsp;&nbsp;<span class="id" title="keyword">Proof</span> <span class="id" title="keyword">with</span> <span class="id" title="tactic">auto</span>.<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">induction</span> <span class="id" title="var">l</span>...<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">destruct</span> <span class="id" title="var">l</span>...<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">simpl</span> <span class="id" title="tactic">in</span> ×.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">cbn</span> <span class="id" title="tactic">in</span> ×.<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <span class="id" title="var">IHl</span>...<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Qed</span>.<br/>
 
@@ -177,7 +177,7 @@ A nonempty list. Below there is an implicit coercion
 &nbsp;&nbsp;<a class="idref" href="HoTT.Classes.implementations.list.html#InList"><span class="id" title="definition">InList</span></a> <a class="idref" href="HoTT.Classes.implementations.ne_list.html#x"><span class="id" title="variable">x</span></a> (<a class="idref" href="HoTT.Classes.implementations.ne_list.html#ne_list.to_list"><span class="id" title="definition">to_list</span></a> (<a class="idref" href="HoTT.Classes.implementations.ne_list.html#ne_list.tails"><span class="id" title="definition">tails</span></a> <a class="idref" href="HoTT.Classes.implementations.ne_list.html#y"><span class="id" title="variable">y</span></a>)) <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a><br/>
 &nbsp;&nbsp;<a class="idref" href="Coq.Init.Peano.html#le"><span class="id" title="inductive">le</span></a> (<a class="idref" href="HoTT.Classes.implementations.list.html#length"><span class="id" title="definition">length</span></a> (<a class="idref" href="HoTT.Classes.implementations.ne_list.html#ne_list.to_list"><span class="id" title="definition">to_list</span></a> <a class="idref" href="HoTT.Classes.implementations.ne_list.html#x"><span class="id" title="variable">x</span></a>)) (<a class="idref" href="HoTT.Classes.implementations.list.html#length"><span class="id" title="definition">length</span></a> (<a class="idref" href="HoTT.Classes.implementations.ne_list.html#ne_list.to_list"><span class="id" title="definition">to_list</span></a> <a class="idref" href="HoTT.Classes.implementations.ne_list.html#y"><span class="id" title="variable">y</span></a>)).<br/>
 <span class="id" title="keyword">Proof</span> <span class="id" title="keyword">with</span> <span class="id" title="tactic">auto</span>.<br/>
-&nbsp;<span class="id" title="tactic">induction</span> <span class="id" title="var">y</span>; <span class="id" title="tactic">simpl</span>.<br/>
+&nbsp;<span class="id" title="tactic">induction</span> <span class="id" title="var">y</span>; <span class="id" title="var">cbn</span>.<br/>
 &nbsp;- <span class="id" title="tactic">intros</span> [[] | <span class="id" title="var">C</span>].<br/>
 &nbsp;&nbsp;&nbsp;+ <span class="id" title="tactic">constructor</span>.<br/>
 &nbsp;&nbsp;&nbsp;+ <span class="id" title="tactic">elim</span> <span class="id" title="var">C</span>.<br/>
@@ -197,7 +197,7 @@ A nonempty list. Below there is an implicit coercion
 <span class="id" title="keyword">Proof</span>.<br/>
 &nbsp;&nbsp;<span class="id" title="tactic">induction</span> <span class="id" title="var">l</span>.<br/>
 &nbsp;&nbsp;- <span class="id" title="tactic">reflexivity</span>.<br/>
-&nbsp;&nbsp;- <span class="id" title="tactic">simpl</span>. <span class="id" title="tactic">rewrite</span> &lt;- <span class="id" title="var">IHl</span>. <span class="id" title="tactic">reflexivity</span>.<br/>
+&nbsp;&nbsp;- <span class="id" title="var">cbn</span>. <span class="id" title="tactic">rewrite</span> &lt;- <span class="id" title="var">IHl</span>. <span class="id" title="tactic">reflexivity</span>.<br/>
 <span class="id" title="keyword">Qed</span>.<br/>
 
 <br/>
