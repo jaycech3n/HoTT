@@ -1,0 +1,507 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="coqdoc.css" type="text/css" rel="stylesheet">
+<link href="proviola.css" type="text/css" rel="stylesheet">
+<script type="text/javascript">
+        var responses = new Array();
+
+        function mouseover(id, scene) {
+          set_response(get_response(id), scene);
+        };
+
+        function mouseout(scene) {
+          set_response("", scene);
+        };
+
+        function set_array() {
+          
+
+            i = 0;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 1;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 2;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 3;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 4;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 5;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 6;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 7;
+            data = "1 subgoal (ID 11)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  ============================	  Type	";
+            responses[i]=data;
+          
+
+            i = 8;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 9;
+            data = "No more subgoals.	";
+            responses[i]=data;
+          
+
+            i = 10;
+            data = "<infomsg>dpath is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 11;
+            data = "1 subgoal (ID 36)	  	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  x, y : A	  p : x = y	  u : P (f x)	  v : P (f y)	  ============================	  dpath P (ap f p) u v <~> dpath (fun x0 : A => P (f x0)) p u v	";
+            responses[i]=data;
+          
+
+            i = 12;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 13;
+            data = "No more subgoals.	";
+            responses[i]=data;
+          
+
+            i = 14;
+            data = "<infomsg>dpath_compose is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 15;
+            data = "1 subgoal (ID 66)	  	  A : Type	  P : A -> Type	  Q : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  r : Q x	  s : Q y	  h : dpath P p u v	  k : dpath Q p r s	  ============================	  dpath (fun x0 : A => P x0 * Q x0) p (u, r) (v, s)	";
+            responses[i]=data;
+          
+
+            i = 16;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 17;
+            data = "No more subgoals.	";
+            responses[i]=data;
+          
+
+            i = 18;
+            data = "<infomsg>dpath_prod is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 19;
+            data = "1 subgoal (ID 93)	  	  H : Funext	  A : Type	  B : Type	  P : A -> B -> Type	  x, y : A	  p : x = y	  u : forall b : B, P x b	  v : forall b : B, P y b	  h : forall b : B, dpath (fun a : A => P a b) p (u b) (v b)	  ============================	  dpath (fun a : A => forall b : B, P a b) p u v	";
+            responses[i]=data;
+          
+
+            i = 20;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 21;
+            data = "1 subgoal (ID 111)	  	  H : Funext	  A : Type	  B : Type	  P : A -> B -> Type	  x : A	  u, v : forall b : B, P x b	  h : forall b : B, u b = v b	  ============================	  u = v	";
+            responses[i]=data;
+          
+
+            i = 22;
+            data = "No more subgoals.	";
+            responses[i]=data;
+          
+
+            i = 23;
+            data = "<infomsg>dpath_forall_const is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 24;
+            data = "1 subgoal (ID 117)	  	  A : Type	  P : A -> Type	  u, v : {x : _ & P x}	  pq : {p : pr1 u = pr1 v & dpath P p (pr2 u) (pr2 v)}	  ============================	  u = v	";
+            responses[i]=data;
+          
+
+            i = 25;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 26;
+            data = "1 subgoal (ID 140)	  	  A : Type	  P : A -> Type	  u1 : A	  u2 : P u1	  v1 : A	  v2 : P v1	  p : pr1 (u1; u2) = pr1 (v1; v2)	  q : dpath P p (pr2 (u1; u2)) (pr2 (v1; v2))	  ============================	  (u1; u2) = (v1; v2)	";
+            responses[i]=data;
+          
+
+            i = 27;
+            data = "No more subgoals.	";
+            responses[i]=data;
+          
+
+            i = 28;
+            data = "<infomsg>path_sig_uncurried is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 29;
+            data = "<infomsg>path_sig is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 30;
+            data = "1 subgoal (ID 169)	  	  A : Type	  P : A -> Type	  u, v : {x : _ & P x}	  p : pr1 u = pr1 v	  q : dpath P p (pr2 u) (pr2 v)	  ============================	  ap pr1 (path_sig P u v p q) = p	";
+            responses[i]=data;
+          
+
+            i = 31;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 32;
+            data = "No more subgoals.	";
+            responses[i]=data;
+          
+
+            i = 33;
+            data = "<infomsg>ap_pr1_path_sig is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 34;
+            data = "1 subgoal (ID 235)	  	  A : Type	  B : A -> Type	  P : {x : _ & B x} -> Type	  u, v : {x : _ & P x}	  p : pr1 u.1 = pr1 v.1	  q : dpath B p (pr2 u.1) (pr2 v.1)	  r : dpath P (path_sig B u.1 v.1 p q) (pr2 u) (pr2 v)	  ============================	  ap (fun w : {x : _ & P x} => pr1 w.1)	    (path_sig P u v (path_sig B u.1 v.1 p q) r) = p	";
+            responses[i]=data;
+          
+
+            i = 35;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 36;
+            data = "1 subgoal (ID 271)	  	  A : Type	  B : A -> Type	  P : {x : _ & B x} -> Type	  u11 : A	  u12 : B u11	  u2 : P (u11; u12)	  v11 : A	  v12 : B v11	  v2 : P (v11; v12)	  p : pr1 ((u11; u12); u2).1 = pr1 ((v11; v12); v2).1	  q : dpath B p (pr2 ((u11; u12); u2).1) (pr2 ((v11; v12); v2).1)	  r : dpath P (path_sig B ((u11; u12); u2).1 ((v11; v12); v2).1 p q)	        (pr2 ((u11; u12); u2)) (pr2 ((v11; v12); v2))	  ============================	  ap (fun w : {x : _ & P x} => pr1 w.1)	    (path_sig P ((u11; u12); u2) ((v11; v12); v2)	       (path_sig B ((u11; u12); u2).1 ((v11; v12); v2).1 p q) r) = p	";
+            responses[i]=data;
+          
+
+            i = 37;
+            data = "No more subgoals.	";
+            responses[i]=data;
+          
+
+            i = 38;
+            data = "<infomsg>ap_pr1_pr1_path_sig is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 39;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 40;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 41;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 42;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 43;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 44;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 45;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 46;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 47;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 48;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 49;
+            data = "";
+            responses[i]=data;
+          
+        };
+        
+        function get_response(id) {
+          return responses[id];
+        };
+
+        function set_response(response, scene) {
+          goalId = "goal"+scene;
+          elById = document.getElementById(goalId);
+          if(elById){ 
+            goalSpan = elById.getElementsByTagName("span")[0];
+            goalSpan.innerHTML = response.replace(/	/g , '\n');
+          }
+        };
+      </script>
+</head>
+<body onload="set_array()"><div id="page" scenenumber="0" class="doc">
+<div id="header" scenenumber="1" class="doc">
+</div>
+<div id="main" scenenumber="3" class="doc">
+<h1 class="libtitle">Library HoTT.Cubical.DPath</h1>
+<div scenenumber="3" class="code">
+<span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(6, '0_3_3');
+      ">
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.Basics.html#"><span class="id" title="library">HoTT.Basics</span></a> <a class="idref" href="HoTT.Types.html#"><span class="id" title="library">HoTT.Types</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(7, '0_3_3');
+      "><br>
+<br>
+<br>
+<span class="id" title="keyword">Definition</span> <a name="dpath"><span class="id" title="definition">dpath</span></a> {<span class="id" title="var">A</span>} (<span class="id" title="var">P</span> : <a class="idref" href="HoTT.Cubical.DPath.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) {<span class="id" title="var">x</span> <span class="id" title="var">y</span> : <a class="idref" href="HoTT.Cubical.DPath.html#A"><span class="id" title="variable">A</span></a>}<br>
+           (<span class="id" title="var">p</span> : <a class="idref" href="HoTT.Cubical.DPath.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#y"><span class="id" title="variable">y</span></a>) (<span class="id" title="var">u</span> : <a class="idref" href="HoTT.Cubical.DPath.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#x"><span class="id" title="variable">x</span></a>) (<span class="id" title="var">v</span> : <a class="idref" href="HoTT.Cubical.DPath.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#y"><span class="id" title="variable">y</span></a>) : <span class="id" title="keyword">Type</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(8, '0_3_3');
+      "><br>
+<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(9, '0_3_3');
+      "><br>
+  <span class="id" title="tactic">destruct</span> <span class="id" title="var">p</span>; <span class="id" title="tactic">exact</span> (<span class="id" title="var">u</span><a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a><span class="id" title="var">v</span>).</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(10, '0_3_3');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(11, '0_3_3');
+      "><br>
+<br>
+<span class="id" title="keyword">Definition</span> <a name="dpath_compose"><span class="id" title="definition">dpath_compose</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>} (<span class="id" title="var">f</span> : <a class="idref" href="HoTT.Cubical.DPath.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#B"><span class="id" title="variable">B</span></a>) (<span class="id" title="var">P</span> : <a class="idref" href="HoTT.Cubical.DPath.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) {<span class="id" title="var">x</span> <span class="id" title="var">y</span> : <a class="idref" href="HoTT.Cubical.DPath.html#A"><span class="id" title="variable">A</span></a>}<br>
+           (<span class="id" title="var">p</span> : <a class="idref" href="HoTT.Cubical.DPath.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#y"><span class="id" title="variable">y</span></a>) (<span class="id" title="var">u</span> : <a class="idref" href="HoTT.Cubical.DPath.html#P"><span class="id" title="variable">P</span></a> (<a class="idref" href="HoTT.Cubical.DPath.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#x"><span class="id" title="variable">x</span></a>)) (<span class="id" title="var">v</span> : <a class="idref" href="HoTT.Cubical.DPath.html#P"><span class="id" title="variable">P</span></a> (<a class="idref" href="HoTT.Cubical.DPath.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#y"><span class="id" title="variable">y</span></a>))<br>
+  : <a class="idref" href="HoTT.Cubical.DPath.html#dpath"><span class="id" title="definition">dpath</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#P"><span class="id" title="variable">P</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#p"><span class="id" title="variable">p</span></a>) <a class="idref" href="HoTT.Cubical.DPath.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#dpath"><span class="id" title="definition">dpath</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">x</span> ⇒ <a class="idref" href="HoTT.Cubical.DPath.html#P"><span class="id" title="variable">P</span></a> (<a class="idref" href="HoTT.Cubical.DPath.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#x"><span class="id" title="variable">x</span></a>)) <a class="idref" href="HoTT.Cubical.DPath.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#v"><span class="id" title="variable">v</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(12, '0_3_3');
+      "><br>
+<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(13, '0_3_3');
+      "><br>
+  <span class="id" title="tactic">destruct</span> <span class="id" title="var">p</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Equivalences.html#equiv_idmap"><span class="id" title="definition">equiv_idmap</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(14, '0_3_3');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(15, '0_3_3');
+      "><br>
+<br>
+<br>
+<span class="id" title="keyword">Definition</span> <a name="dpath_prod"><span class="id" title="definition">dpath_prod</span></a> {<span class="id" title="var">A</span>} (<span class="id" title="var">P</span> <span class="id" title="var">Q</span> : <a class="idref" href="HoTT.Cubical.DPath.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>)<br>
+           {<span class="id" title="var">x</span> <span class="id" title="var">y</span> : <a class="idref" href="HoTT.Cubical.DPath.html#A"><span class="id" title="variable">A</span></a>} (<span class="id" title="var">p</span> : <a class="idref" href="HoTT.Cubical.DPath.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#y"><span class="id" title="variable">y</span></a>)<br>
+           (<span class="id" title="var">u</span> : <a class="idref" href="HoTT.Cubical.DPath.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#x"><span class="id" title="variable">x</span></a>) (<span class="id" title="var">v</span> : <a class="idref" href="HoTT.Cubical.DPath.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#y"><span class="id" title="variable">y</span></a>) (<span class="id" title="var">r</span> : <a class="idref" href="HoTT.Cubical.DPath.html#Q"><span class="id" title="variable">Q</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#x"><span class="id" title="variable">x</span></a>) (<span class="id" title="var">s</span> : <a class="idref" href="HoTT.Cubical.DPath.html#Q"><span class="id" title="variable">Q</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#y"><span class="id" title="variable">y</span></a>)<br>
+           (<span class="id" title="var">h</span> : <a class="idref" href="HoTT.Cubical.DPath.html#dpath"><span class="id" title="definition">dpath</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#v"><span class="id" title="variable">v</span></a>) (<span class="id" title="var">k</span> : <a class="idref" href="HoTT.Cubical.DPath.html#dpath"><span class="id" title="definition">dpath</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#Q"><span class="id" title="variable">Q</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#s"><span class="id" title="variable">s</span></a>)<br>
+  : <a class="idref" href="HoTT.Cubical.DPath.html#dpath"><span class="id" title="definition">dpath</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">x</span> ⇒ <a class="idref" href="HoTT.Cubical.DPath.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="Coq.Init.Datatypes.html#11c698c8685bb8ab1cf725545c085ac4"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#Q"><span class="id" title="variable">Q</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#x"><span class="id" title="variable">x</span></a>) <a class="idref" href="HoTT.Cubical.DPath.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Cubical.DPath.html#u"><span class="id" title="variable">u</span></a><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a><a class="idref" href="HoTT.Cubical.DPath.html#r"><span class="id" title="variable">r</span></a><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">)</span></a> <a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Cubical.DPath.html#v"><span class="id" title="variable">v</span></a><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a><a class="idref" href="HoTT.Cubical.DPath.html#s"><span class="id" title="variable">s</span></a><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">)</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(16, '0_3_3');
+      "><br>
+<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(17, '0_3_3');
+      "><br>
+  <span class="id" title="tactic">destruct</span> <span class="id" title="var">p</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Types.Prod.html#path_prod"><span class="id" title="definition">path_prod</span></a>; <span class="id" title="tactic">assumption</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(18, '0_3_3');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(19, '0_3_3');
+      "><br>
+<br>
+<br>
+<span class="id" title="keyword">Definition</span> <a name="dpath_forall_const"><span class="id" title="definition">dpath_forall_const</span></a> `{<a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="class">Funext</span></a>} {<span class="id" title="var">A</span> <span class="id" title="var">B</span>} (<span class="id" title="var">P</span> : <a class="idref" href="HoTT.Cubical.DPath.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>)<br>
+           {<span class="id" title="var">x</span> <span class="id" title="var">y</span> : <a class="idref" href="HoTT.Cubical.DPath.html#A"><span class="id" title="variable">A</span></a>} (<span class="id" title="var">p</span> : <a class="idref" href="HoTT.Cubical.DPath.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#y"><span class="id" title="variable">y</span></a>)<br>
+           (<span class="id" title="var">u</span> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <span class="id" title="var">b</span><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#b"><span class="id" title="variable">b</span></a>) (<span class="id" title="var">v</span> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <span class="id" title="var">b</span><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#y"><span class="id" title="variable">y</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#b"><span class="id" title="variable">b</span></a>)<br>
+           (<span class="id" title="var">h</span> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <span class="id" title="var">b</span><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#dpath"><span class="id" title="definition">dpath</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">a</span> ⇒ <a class="idref" href="HoTT.Cubical.DPath.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#a"><span class="id" title="variable">a</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#b"><span class="id" title="variable">b</span></a>) <a class="idref" href="HoTT.Cubical.DPath.html#p"><span class="id" title="variable">p</span></a> (<a class="idref" href="HoTT.Cubical.DPath.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#b"><span class="id" title="variable">b</span></a>) (<a class="idref" href="HoTT.Cubical.DPath.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#b"><span class="id" title="variable">b</span></a>))<br>
+  : <a class="idref" href="HoTT.Cubical.DPath.html#dpath"><span class="id" title="definition">dpath</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">a</span> ⇒ <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <span class="id" title="var">b</span><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#a"><span class="id" title="variable">a</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#b"><span class="id" title="variable">b</span></a>) <a class="idref" href="HoTT.Cubical.DPath.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#v"><span class="id" title="variable">v</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(20, '0_3_3');
+      "><br>
+<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(21, '0_3_3');
+      "><br>
+  <span class="id" title="tactic">destruct</span> <span class="id" title="var">p</span>; <span class="id" title="var">cbn</span> <span class="id" title="tactic">in</span> ×.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(22, '0_3_3');
+      "><br>
+  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#path_forall"><span class="id" title="definition">path_forall</span></a>; <span class="id" title="tactic">assumption</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(23, '0_3_3');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(24, '0_3_3');
+      "><br>
+<br>
+<br>
+<span class="id" title="keyword">Definition</span> <a name="path_sig_uncurried"><span class="id" title="definition">path_sig_uncurried</span></a> {<span class="id" title="var">A</span> : <span class="id" title="keyword">Type</span>} (<span class="id" title="var">P</span> : <a class="idref" href="HoTT.Cubical.DPath.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) (<span class="id" title="var">u</span> <span class="id" title="var">v</span> : <a class="idref" href="Coq.Init.Specif.html#sig"><span class="id" title="record">sig</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#P"><span class="id" title="variable">P</span></a>)<br>
+           (<span class="id" title="var">pq</span> : <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">{</span></a><span class="id" title="var">p</span> <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">:</span></a> <a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">&amp;</span></a><br>
+                      <a class="idref" href="HoTT.Cubical.DPath.html#dpath"><span class="id" title="definition">dpath</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#p"><span class="id" title="variable">p</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#pr2"><span class="id" title="abbreviation">pr2</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#u"><span class="id" title="variable">u</span></a>) (<a class="idref" href="HoTT.Basics.Overture.html#pr2"><span class="id" title="abbreviation">pr2</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#v"><span class="id" title="variable">v</span></a>)<a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">}</span></a>)<br>
+: <a class="idref" href="HoTT.Cubical.DPath.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#v"><span class="id" title="variable">v</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(25, '0_3_3');
+      "><br>
+<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(26, '0_3_3');
+      "><br>
+  <span class="id" title="tactic">destruct</span> <span class="id" title="var">u</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">u1</span> <span class="id" title="var">u2</span>]; <span class="id" title="tactic">destruct</span> <span class="id" title="var">v</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">v1</span> <span class="id" title="var">v2</span>]; <span class="id" title="tactic">destruct</span> <span class="id" title="var">pq</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">p</span> <span class="id" title="var">q</span>].</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(27, '0_3_3');
+      "><br>
+  <span class="id" title="var">cbn</span> <span class="id" title="tactic">in</span> *; <span class="id" title="tactic">destruct</span> <span class="id" title="var">p</span>; <span class="id" title="var">cbn</span> <span class="id" title="tactic">in</span> *; <span class="id" title="tactic">destruct</span> <span class="id" title="var">q</span>; <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(28, '0_3_3');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(29, '0_3_3');
+      "><br>
+<br>
+<span class="id" title="keyword">Definition</span> <a name="path_sig"><span class="id" title="definition">path_sig</span></a> {<span class="id" title="var">A</span> : <span class="id" title="keyword">Type</span>} (<span class="id" title="var">P</span> : <a class="idref" href="HoTT.Cubical.DPath.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) (<span class="id" title="var">u</span> <span class="id" title="var">v</span> : <a class="idref" href="Coq.Init.Specif.html#sig"><span class="id" title="record">sig</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#P"><span class="id" title="variable">P</span></a>)<br>
+           (<span class="id" title="var">p</span> : <a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#v"><span class="id" title="variable">v</span></a>) (<span class="id" title="var">q</span> : <a class="idref" href="HoTT.Cubical.DPath.html#dpath"><span class="id" title="definition">dpath</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#p"><span class="id" title="variable">p</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#pr2"><span class="id" title="abbreviation">pr2</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#u"><span class="id" title="variable">u</span></a>) (<a class="idref" href="HoTT.Basics.Overture.html#pr2"><span class="id" title="abbreviation">pr2</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#v"><span class="id" title="variable">v</span></a>))<br>
+: <a class="idref" href="HoTT.Cubical.DPath.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#v"><span class="id" title="variable">v</span></a><br>
+  := <a class="idref" href="HoTT.Cubical.DPath.html#path_sig_uncurried"><span class="id" title="definition">path_sig_uncurried</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#v"><span class="id" title="variable">v</span></a> (<a class="idref" href="Coq.Init.Specif.html#exist"><span class="id" title="constructor">exist</span></a> <span class="id" title="var">_</span> <a class="idref" href="HoTT.Cubical.DPath.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#q"><span class="id" title="variable">q</span></a>).</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(30, '0_3_3');
+      "><br>
+<br>
+<span class="id" title="keyword">Definition</span> <a name="ap_pr1_path_sig"><span class="id" title="definition">ap_pr1_path_sig</span></a> {<span class="id" title="var">A</span> : <span class="id" title="keyword">Type</span>} (<span class="id" title="var">P</span> : <a class="idref" href="HoTT.Cubical.DPath.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) (<span class="id" title="var">u</span> <span class="id" title="var">v</span> : <a class="idref" href="Coq.Init.Specif.html#sig"><span class="id" title="record">sig</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#P"><span class="id" title="variable">P</span></a>)<br>
+           (<span class="id" title="var">p</span> : <a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#v"><span class="id" title="variable">v</span></a>) (<span class="id" title="var">q</span> : <a class="idref" href="HoTT.Cubical.DPath.html#dpath"><span class="id" title="definition">dpath</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#p"><span class="id" title="variable">p</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#pr2"><span class="id" title="abbreviation">pr2</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#u"><span class="id" title="variable">u</span></a>) (<a class="idref" href="HoTT.Basics.Overture.html#pr2"><span class="id" title="abbreviation">pr2</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#v"><span class="id" title="variable">v</span></a>))<br>
+: <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> <a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a> (<a class="idref" href="HoTT.Cubical.DPath.html#path_sig"><span class="id" title="definition">path_sig</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#q"><span class="id" title="variable">q</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#p"><span class="id" title="variable">p</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(31, '0_3_3');
+      "><br>
+<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(32, '0_3_3');
+      "><br>
+  <span class="id" title="tactic">destruct</span> <span class="id" title="var">u</span>, <span class="id" title="var">v</span>; <span class="id" title="var">cbn</span> <span class="id" title="tactic">in</span> *; <span class="id" title="tactic">destruct</span> <span class="id" title="var">p</span>; <span class="id" title="var">cbn</span> <span class="id" title="tactic">in</span> *; <span class="id" title="tactic">destruct</span> <span class="id" title="var">q</span>; <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(33, '0_3_3');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(34, '0_3_3');
+      "><br>
+<br>
+<span class="id" title="keyword">Definition</span> <a name="ap_pr1_pr1_path_sig"><span class="id" title="definition">ap_pr1_pr1_path_sig</span></a> {<span class="id" title="var">A</span> : <span class="id" title="keyword">Type</span>} (<span class="id" title="var">B</span> : <a class="idref" href="HoTT.Cubical.DPath.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) (<span class="id" title="var">P</span> : <a class="idref" href="Coq.Init.Specif.html#sig"><span class="id" title="record">sig</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>)<br>
+           (<span class="id" title="var">u</span> <span class="id" title="var">v</span> : <a class="idref" href="Coq.Init.Specif.html#sig"><span class="id" title="record">sig</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#P"><span class="id" title="variable">P</span></a>)<br>
+           (<span class="id" title="var">p</span> : <a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#u"><span class="id" title="variable">u</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#v"><span class="id" title="variable">v</span></a>))<br>
+           (<span class="id" title="var">q</span> : <a class="idref" href="HoTT.Cubical.DPath.html#dpath"><span class="id" title="definition">dpath</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#p"><span class="id" title="variable">p</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#pr2"><span class="id" title="abbreviation">pr2</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#u"><span class="id" title="variable">u</span></a>)) (<a class="idref" href="HoTT.Basics.Overture.html#pr2"><span class="id" title="abbreviation">pr2</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#v"><span class="id" title="variable">v</span></a>)))<br>
+           (<span class="id" title="var">r</span> : <a class="idref" href="HoTT.Cubical.DPath.html#dpath"><span class="id" title="definition">dpath</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#P"><span class="id" title="variable">P</span></a> (<a class="idref" href="HoTT.Cubical.DPath.html#path_sig"><span class="id" title="definition">path_sig</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#B"><span class="id" title="variable">B</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#u"><span class="id" title="variable">u</span></a>) (<a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#v"><span class="id" title="variable">v</span></a>) <a class="idref" href="HoTT.Cubical.DPath.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#q"><span class="id" title="variable">q</span></a>) (<a class="idref" href="HoTT.Basics.Overture.html#pr2"><span class="id" title="abbreviation">pr2</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#u"><span class="id" title="variable">u</span></a>) (<a class="idref" href="HoTT.Basics.Overture.html#pr2"><span class="id" title="abbreviation">pr2</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#v"><span class="id" title="variable">v</span></a>))<br>
+  : <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">w</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#w"><span class="id" title="variable">w</span></a>)) (<a class="idref" href="HoTT.Cubical.DPath.html#path_sig"><span class="id" title="definition">path_sig</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#v"><span class="id" title="variable">v</span></a> (<a class="idref" href="HoTT.Cubical.DPath.html#path_sig"><span class="id" title="definition">path_sig</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#B"><span class="id" title="variable">B</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#u"><span class="id" title="variable">u</span></a>) (<a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#v"><span class="id" title="variable">v</span></a>) <a class="idref" href="HoTT.Cubical.DPath.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#q"><span class="id" title="variable">q</span></a>) <a class="idref" href="HoTT.Cubical.DPath.html#r"><span class="id" title="variable">r</span></a>)<br>
+    <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#p"><span class="id" title="variable">p</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(35, '0_3_3');
+      "><br>
+<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(36, '0_3_3');
+      "><br>
+  <span class="id" title="tactic">destruct</span> <span class="id" title="var">u</span> <span class="id" title="keyword">as</span> [[<span class="id" title="var">u11</span> <span class="id" title="var">u12</span>] <span class="id" title="var">u2</span>]; <span class="id" title="tactic">destruct</span> <span class="id" title="var">v</span> <span class="id" title="keyword">as</span> [[<span class="id" title="var">v11</span> <span class="id" title="var">v12</span>] <span class="id" title="var">v2</span>].</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(37, '0_3_3');
+      "><br>
+  <span class="id" title="var">cbn</span> <span class="id" title="tactic">in</span> *; <span class="id" title="tactic">destruct</span> <span class="id" title="var">p</span>; <span class="id" title="var">cbn</span> <span class="id" title="tactic">in</span> *; <span class="id" title="tactic">destruct</span> <span class="id" title="var">q</span>; <span class="id" title="var">cbn</span> <span class="id" title="tactic">in</span> *; <span class="id" title="tactic">destruct</span> <span class="id" title="var">r</span>; <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(38, '0_3_3');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(39, '0_3_3');
+      "><br>
+</span>
+</div>
+<div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
+</div>
+<div id="footer" scenenumber="5" class="doc">
+<hr>
+<a href="index.html">Index</a><hr>This page has been generated by <a href="http://coq.inria.fr/">coqdoc</a>
+</div>
+</div></body>
+</html>

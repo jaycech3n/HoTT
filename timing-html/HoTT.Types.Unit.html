@@ -39,7 +39,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Unit.v
 Line: 3
-Time: 0.019s">
+Time: 0.017s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.Basics.</pre>
 </div>
@@ -89,8 +89,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Unit.v
 Line: 15
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5.8823529411765%"></div>
 <pre>Definition path_unit_uncurried (z z' : Unit) : Unit -&gt; z = z'
   := fun _ =&gt; match z, z' with tt, tt =&gt; 1 end.</pre>
 </div>
@@ -121,8 +121,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Unit.v
 Line: 23
-Time: 0.001s">
-<div class="time" style="width: 5.2631578947368%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   destruct p.</pre>
 </div>
@@ -156,7 +156,7 @@ Global Instance isequiv_path_unit (z z' : Unit) : IsEquiv (path_unit_uncurried z
 <div class="code" title="File: Unit.v
 Line: 27
 Time: 0.002s">
-<div class="time" style="width: 10.526315789474%"></div>
+<div class="time" style="width: 11.764705882353%"></div>
 <pre>
   refine (BuildIsEquiv _ _ (path_unit_uncurried z z') (fun _ =&gt; tt)
     (fun p:z=z' =&gt;
@@ -170,14 +170,14 @@ Time: 0.002s">
 <div class="code" title="File: Unit.v
 Line: 35
 Time: 0.002s">
-<div class="time" style="width: 10.526315789474%"></div>
+<div class="time" style="width: 11.764705882353%"></div>
 <pre>
   intros []; destruct z, z'; reflexivity.</pre>
 </div>
 <div class="code" title="File: Unit.v
 Line: 36
-Time: 0.002s">
-<div class="time" style="width: 10.526315789474%"></div>
+Time: 0.003s">
+<div class="time" style="width: 17.647058823529%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -212,8 +212,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Unit.v
 Line: 48
-Time: 0.003s">
-<div class="time" style="width: 15.789473684211%"></div>
+Time: 0.002s">
+<div class="time" style="width: 11.764705882353%"></div>
 <pre>
 
 Global Instance isequiv_unit_ind `{Funext} (A : Unit -&gt; Type)
@@ -226,8 +226,8 @@ Global Instance isequiv_unit_ind `{Funext} (A : Unit -&gt; Type)
 </div>
 <div class="code" title="File: Unit.v
 Line: 56
-Time: 0.001s">
-<div class="time" style="width: 5.2631578947368%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Global Instance isequiv_unit_rec `{Funext} (A : Type)
@@ -237,7 +237,7 @@ Global Instance isequiv_unit_rec `{Funext} (A : Type)
 <div class="code" title="File: Unit.v
 Line: 60
 Time: 0.003s">
-<div class="time" style="width: 15.789473684211%"></div>
+<div class="time" style="width: 17.647058823529%"></div>
 <pre>
 
 Definition equiv_unit_rec `{Funext} (A : Type)
@@ -393,7 +393,7 @@ Time: 0s">
 <div class="code" title="File: Unit.v
 Line: 84
 Time: 0.001s">
-<div class="time" style="width: 5.2631578947368%"></div>
+<div class="time" style="width: 5.8823529411765%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -453,7 +453,7 @@ Proof.</pre>
 <div class="code" title="File: Unit.v
 Line: 102
 Time: 0.001s">
-<div class="time" style="width: 5.2631578947368%"></div>
+<div class="time" style="width: 5.8823529411765%"></div>
 <pre>
   refine (BuildEquiv _ _
     (fun (_ : A) =&gt; tt)
@@ -472,7 +472,7 @@ Time: 0s">
 <div class="code" title="File: Unit.v
 Line: 109
 Time: 0.001s">
-<div class="time" style="width: 5.2631578947368%"></div>
+<div class="time" style="width: 5.8823529411765%"></div>
 <pre> symmetry; apply ap_const.</pre>
 </div>
 <div class="code" title="File: Unit.v
@@ -493,7 +493,7 @@ Time: 0s">
 <div class="code" title="File: Unit.v
 Line: 112
 Time: 0.004s">
-<div class="time" style="width: 21.052631578947%"></div>
+<div class="time" style="width: 23.529411764706%"></div>
 <pre>Global Instance contr_equiv_unit (A : Type) (f : A &lt;~&gt; Unit) : Contr A | 10000
   := BuildContr A (f^-1 tt)
   (fun a =&gt; ap f^-1 (contr (f a)) @ eissect f a).</pre>
