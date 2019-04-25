@@ -40,14 +40,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 4
-Time: 0.034s">
+Time: 0.033s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.Universe.</pre>
 </div>
 <div class="code" title="File: Int.v
 Line: 4
 Time: 0.008s">
-<div class="time" style="width: 23.529411764706%"></div>
+<div class="time" style="width: 24.242424242424%"></div>
 <pre>
 Require Import HSet.</pre>
 </div>
@@ -71,16 +71,16 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 10
-Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Inductive Pos : Type0 :=
 | one : Pos
 | succ_pos : Pos -&gt; Pos.</pre>
 </div>
 <div class="code" title="File: Int.v
 Line: 12
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>
 
 Definition one_neq_succ_pos (z : Pos) : ~ (one = succ_pos z)
@@ -88,8 +88,8 @@ Definition one_neq_succ_pos (z : Pos) : ~ (one = succ_pos z)
 </div>
 <div class="code" title="File: Int.v
 Line: 15
-Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition succ_pos_injective {z w : Pos} (p : succ_pos z = succ_pos w) : z = w
@@ -107,8 +107,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 21
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>Inductive Int : Type0 :=
 | neg : Pos -&gt; Int
 | zero : Int
@@ -125,8 +125,8 @@ Definition neg_injective {z w : Pos} (p : neg z = neg w) : z = w
 </div>
 <div class="code" title="File: Int.v
 Line: 27
-Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition pos_injective {z w : Pos} (p : pos z = pos w) : z = w
@@ -134,8 +134,8 @@ Definition pos_injective {z w : Pos} (p : pos z = pos w) : z = w
 </div>
 <div class="code" title="File: Int.v
 Line: 30
-Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition neg_neq_zero {z : Pos} : ~ (neg z = zero)
@@ -143,8 +143,8 @@ Definition neg_neq_zero {z : Pos} : ~ (neg z = zero)
 </div>
 <div class="code" title="File: Int.v
 Line: 33
-Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition pos_neq_zero {z : Pos} : ~ (pos z = zero)
@@ -152,8 +152,8 @@ Definition pos_neq_zero {z : Pos} : ~ (pos z = zero)
 </div>
 <div class="code" title="File: Int.v
 Line: 36
-Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition neg_neq_pos {z w : Pos} : ~ (neg z = pos w)
@@ -185,7 +185,7 @@ Proof.</pre>
 <div class="code" title="File: Int.v
 Line: 43
 Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>
   intros [n | | n] [m | | m].</pre>
 </div>
@@ -198,8 +198,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 45
-Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> revert m; induction n as [|n IHn]; intros m; induction m as [|m IHm].</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -237,8 +237,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 48
-Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> exact (inr (fun p =&gt; one_neq_succ_pos _ (symmetry _ _ (neg_injective p)))).</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -250,8 +250,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 49
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.030303030303%"></div>
 <pre> destruct (IHn m) as [p | np].</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -263,8 +263,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 50
-Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> exact (inl (ap neg (ap succ_pos (neg_injective p)))).</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -276,8 +276,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 51
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.030303030303%"></div>
 <pre> exact (inr (fun p =&gt; np (ap neg (succ_pos_injective (neg_injective p))))).</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -316,7 +316,7 @@ Time: 0s">
 <div class="code" title="File: Int.v
 Line: 54
 Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre> exact (inr (neg_neq_zero o symmetry _ _)).</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -342,7 +342,7 @@ Time: 0s">
 <div class="code" title="File: Int.v
 Line: 56
 Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre> exact (inr (pos_neq_zero o symmetry _ _)).</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -354,8 +354,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 57
-Time: 0.002s">
-<div class="time" style="width: 5.8823529411765%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.030303030303%"></div>
 <pre> exact (inr (neg_neq_pos o symmetry _ _)).</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -380,8 +380,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 59
-Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> revert m; induction n as [|n IHn]; intros m; induction m as [|m IHm].</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -406,8 +406,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 61
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.030303030303%"></div>
 <pre> exact (inr (fun p =&gt; one_neq_succ_pos _ (pos_injective p))).</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -420,7 +420,7 @@ Time: 0s">
 <div class="code" title="File: Int.v
 Line: 62
 Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre> exact (inr (fun p =&gt; one_neq_succ_pos _ (symmetry _ _ (pos_injective p)))).</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -433,7 +433,7 @@ Time: 0s">
 <div class="code" title="File: Int.v
 Line: 63
 Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre> destruct (IHn m) as [p | np].</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -458,14 +458,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 65
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.030303030303%"></div>
 <pre> exact (inr (fun p =&gt; np (ap pos (succ_pos_injective (pos_injective p))))).</pre>
 </div>
 <div class="code" title="File: Int.v
 Line: 65
 Time: 0.006s">
-<div class="time" style="width: 17.647058823529%"></div>
+<div class="time" style="width: 18.181818181818%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -487,14 +487,14 @@ Proof.</pre>
 <div class="code" title="File: Int.v
 Line: 69
 Time: 0.003s">
-<div class="time" style="width: 8.8235294117647%"></div>
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre>
   exact _.</pre>
 </div>
 <div class="code" title="File: Int.v
 Line: 70
 Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -566,7 +566,7 @@ Time: 0s">
 <div class="code" title="File: Int.v
 Line: 93
 Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre> intros [[|n] | | [|n]]; reflexivity.</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -579,7 +579,7 @@ Time: 0s">
 <div class="code" title="File: Int.v
 Line: 94
 Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre> intros [[|n] | | [|n]]; reflexivity.</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -616,8 +616,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 101
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>
 
   Fixpoint iter_pos (n : Pos) : A -&gt; A
@@ -640,7 +640,7 @@ Time: 0s">
 <div class="code" title="File: Int.v
 Line: 112
 Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>
 
   Fixpoint iter_pos_succ_r (n : Pos) (a : A)
@@ -691,8 +691,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 127
-Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Definition iter_int (n : Int) : A -&gt; A
@@ -720,8 +720,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 138
-Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     destruct n as [[|n]| |n]; cbn.</pre>
 </div>
@@ -735,7 +735,7 @@ Time: 0s">
 <div class="code" title="File: Int.v
 Line: 140
 Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre> symmetry; apply eisretr.</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -753,8 +753,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 141
-Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> symmetry; apply eisretr.</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -827,7 +827,7 @@ Time: 0s">
 <div class="code" title="File: Int.v
 Line: 148
 Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>
     destruct n as [[|n]| |n]; cbn.</pre>
 </div>
@@ -840,8 +840,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 150
-Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> symmetry; apply eissect.</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -880,7 +880,7 @@ Time: 0s">
 <div class="code" title="File: Int.v
 Line: 153
 Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>
       symmetry; apply eissect.</pre>
 </div>
@@ -937,8 +937,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 157
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.030303030303%"></div>
 <pre> symmetry; apply iter_pos_succ_l.</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -957,7 +957,7 @@ Time: 0s">
 <div class="code" title="File: Int.v
 Line: 158
 Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -980,7 +980,7 @@ Time: 0s">
 <div class="code" title="File: Int.v
 Line: 163
 Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>
     destruct n as [n| |[|n]]; cbn.</pre>
 </div>
@@ -1031,8 +1031,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 167
-Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> symmetry; apply eissect.</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -1050,8 +1050,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 168
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.030303030303%"></div>
 <pre> symmetry; apply eissect.</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -1063,8 +1063,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 169
-Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Defined.</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -1085,8 +1085,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 173
-Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     destruct n as [n| |[|n]]; cbn.</pre>
 </div>
@@ -1099,8 +1099,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 175
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.030303030303%"></div>
 <pre> etransitivity.</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -1118,8 +1118,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 176
-Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> symmetry; apply iter_pos_succ_l.</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -1182,8 +1182,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 180
-Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> refine (_ @ iter_pos_succ_l f n (f^-1 a)).</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -1202,8 +1202,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 182
-Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       symmetry; apply eisretr.</pre>
 </div>
@@ -1217,13 +1217,13 @@ Time: 0s">
 <div class="code" title="File: Int.v
 Line: 184
 Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>Defined.</pre>
 </div>
 <div class="code" title="File: Int.v
 Line: 184
 Time: 0.004s">
-<div class="time" style="width: 11.764705882353%"></div>
+<div class="time" style="width: 12.121212121212%"></div>
 <pre>
 
 End Iteration.</pre>
@@ -1241,7 +1241,7 @@ Time: 0s">
 <div class="code" title="File: Int.v
 Line: 189
 Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>Fixpoint loopexp_pos {A : Type} {x : A} (p : x = x) (n : Pos) : (x = x)
   := match n with
        | one =&gt; p
@@ -1251,7 +1251,7 @@ Time: 0.001s">
 <div class="code" title="File: Int.v
 Line: 193
 Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>
 
 Definition loopexp {A : Type} {x : A} (p : x = x) (z : Int) : (x = x)
@@ -1264,7 +1264,7 @@ Definition loopexp {A : Type} {x : A} (p : x = x) (z : Int) : (x = x)
 <div class="code" title="File: Int.v
 Line: 200
 Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>
 
 Definition ap_loopexp {A B} (f : A -&gt; B) {x : A} (p : x = x) (z : Int)
@@ -1280,7 +1280,7 @@ Proof.</pre>
 <div class="code" title="File: Int.v
 Line: 204
 Time: 0.002s">
-<div class="time" style="width: 5.8823529411765%"></div>
+<div class="time" style="width: 6.0606060606061%"></div>
 <pre>
   destruct z as [n| |n]; try reflexivity.</pre>
 </div>
@@ -1294,7 +1294,7 @@ Time: 0s">
 <div class="code" title="File: Int.v
 Line: 206
 Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre> induction n as [|n IH]; simpl.</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -1320,13 +1320,13 @@ Time: 0s">
 <div class="code" title="File: Int.v
 Line: 208
 Time: 0.002s">
-<div class="time" style="width: 5.8823529411765%"></div>
+<div class="time" style="width: 6.0606060606061%"></div>
 <pre> rewrite ap_pp, IH.</pre>
 </div>
 <div class="code" title="File: Int.v
 Line: 208
 Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>
       apply whiskerL, ap_V.</pre>
 </div>
@@ -1340,20 +1340,20 @@ Time: 0s">
 <div class="code" title="File: Int.v
 Line: 210
 Time: 0.002s">
-<div class="time" style="width: 5.8823529411765%"></div>
+<div class="time" style="width: 6.0606060606061%"></div>
 <pre> induction n as [|n IH]; try reflexivity; simpl.</pre>
 </div>
 <div class="code" title="File: Int.v
 Line: 210
 Time: 0.002s">
-<div class="time" style="width: 5.8823529411765%"></div>
+<div class="time" style="width: 6.0606060606061%"></div>
 <pre>
     rewrite ap_pp, IH; reflexivity.</pre>
 </div>
 <div class="code" title="File: Int.v
 Line: 211
 Time: 0.003s">
-<div class="time" style="width: 8.8235294117647%"></div>
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -1370,7 +1370,7 @@ Time: 0s">
 <div class="code" title="File: Int.v
 Line: 215
 Time: 0.002s">
-<div class="time" style="width: 5.8823529411765%"></div>
+<div class="time" style="width: 6.0606060606061%"></div>
 <pre>Definition equiv_path_loopexp `{Univalence}
            {A : Type} (p : A = A) (z : Int) (a : A)
   : equiv_path A A (loopexp p z) a = iter_int (equiv_path A A p) z a.</pre>
@@ -1385,35 +1385,35 @@ Proof.</pre>
 <div class="code" title="File: Int.v
 Line: 218
 Time: 0.002s">
-<div class="time" style="width: 5.8823529411765%"></div>
+<div class="time" style="width: 6.0606060606061%"></div>
 <pre>
   destruct z as [n| |n]; try reflexivity.</pre>
 </div>
 <div class="code" title="File: Int.v
 Line: 219
 Time: 0.004s">
-<div class="time" style="width: 11.764705882353%"></div>
+<div class="time" style="width: 12.121212121212%"></div>
 <pre>
   all:induction n as [|n IH]; try reflexivity; cbn in *.</pre>
 </div>
 <div class="code" title="File: Int.v
 Line: 220
-Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+Time: 0.002s">
+<div class="time" style="width: 6.0606060606061%"></div>
 <pre>
   all:refine (transport_pp _ _ _ _ @ _); apply ap, IH.</pre>
 </div>
 <div class="code" title="File: Int.v
 Line: 221
 Time: 0.003s">
-<div class="time" style="width: 8.8235294117647%"></div>
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Int.v
 Line: 222
-Time: 0.003s">
-<div class="time" style="width: 8.8235294117647%"></div>
+Time: 0.002s">
+<div class="time" style="width: 6.0606060606061%"></div>
 <pre>
 
 Definition loopexp_path_universe `{Univalence}
@@ -1437,8 +1437,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Int.v
 Line: 229
-Time: 0.003s">
-<div class="time" style="width: 8.8235294117647%"></div>
+Time: 0.002s">
+<div class="time" style="width: 6.0606060606061%"></div>
 <pre> equiv_intro (equiv_path A A) p.</pre>
 </div>
 <div class="code" title="File: Int.v
@@ -1451,7 +1451,7 @@ Time: 0s">
 <div class="code" title="File: Int.v
 Line: 230
 Time: 0.001s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>
   refine (ap (fun q =&gt; equiv_path A A (loopexp q z) a) _).</pre>
 </div>
@@ -1465,7 +1465,7 @@ Time: 0s">
 <div class="code" title="File: Int.v
 Line: 232
 Time: 0.002s">
-<div class="time" style="width: 5.8823529411765%"></div>
+<div class="time" style="width: 6.0606060606061%"></div>
 <pre>
 Defined.</pre>
 </div>

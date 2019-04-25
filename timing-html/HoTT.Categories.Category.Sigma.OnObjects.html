@@ -56,8 +56,8 @@ Require Functor.Composition.Core Functor.Identity.</pre>
 </div>
 <div class="code" title="File: OnObjects.v
 Line: 3
-Time: 0.013s">
-<div class="time" style="width: 86.666666666667%"></div>
+Time: 0.014s">
+<div class="time" style="width: 93.333333333333%"></div>
 <pre>
 Require Import Functor.Paths.</pre>
 </div>
@@ -270,27 +270,41 @@ Time: 0.013s">
 </div>
 <div class="code" title="File: OnObjects.v
 Line: 67
-Time: 0.011s">
-<div class="time" style="width: 73.333333333333%"></div>
+Time: 0.002s">
+<div class="time" style="width: 13.333333333333%"></div>
 <pre>
-    repeat (intros [] || intro || apply path_forall).</pre>
+    apply path_forall; intros [].</pre>
 </div>
 <div class="code" title="File: OnObjects.v
 Line: 68
+Time: 0.003s">
+<div class="time" style="width: 20%"></div>
+<pre>
+    apply path_forall; intros [].</pre>
+</div>
+<div class="code" title="File: OnObjects.v
+Line: 69
+Time: 0.004s">
+<div class="time" style="width: 26.666666666667%"></div>
+<pre>
+    apply path_forall; intros [? []].</pre>
+</div>
+<div class="code" title="File: OnObjects.v
+Line: 70
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     reflexivity.</pre>
 </div>
 <div class="code" title="File: OnObjects.v
-Line: 69
-Time: 0.011s">
-<div class="time" style="width: 73.333333333333%"></div>
+Line: 71
+Time: 0.012s">
+<div class="time" style="width: 80%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: OnObjects.v
-Line: 70
+Line: 72
 Time: 0.007s">
 <div class="time" style="width: 46.666666666667%"></div>
 <pre>
@@ -299,19 +313,11 @@ Time: 0.007s">
     := idpath.</pre>
 </div>
 <div class="code" title="File: OnObjects.v
-Line: 73
-Time: 0.01s">
-<div class="time" style="width: 66.666666666667%"></div>
+Line: 75
+Time: 0.011s">
+<div class="time" style="width: 73.333333333333%"></div>
 <pre>
 End sigT_obj.</pre>
-</div>
-<div class="code" title="File: OnObjects.v
-Line: 74
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-Arguments pr1_obj {A Pobj}.</pre>
 </div>
 <div class="code" title="File: OnObjects.v
 Line: 76
@@ -319,24 +325,32 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-Module Export CategorySigmaOnObjectsNotations.</pre>
+Arguments pr1_obj {A Pobj}.</pre>
 </div>
 <div class="code" title="File: OnObjects.v
 Line: 78
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+
+Module Export CategorySigmaOnObjectsNotations.</pre>
+</div>
+<div class="code" title="File: OnObjects.v
+Line: 80
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
   Notation "{ x : A | P }" := (sigT_obj A (fun x =&gt; P)) : category_scope.</pre>
 </div>
 <div class="code" title="File: OnObjects.v
-Line: 79
+Line: 81
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 End CategorySigmaOnObjectsNotations.</pre>
 </div>
 <div class="code" title="File: OnObjects.v
-Line: 81
+Line: 83
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

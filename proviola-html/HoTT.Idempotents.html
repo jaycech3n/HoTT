@@ -553,12 +553,12 @@
           
 
             i = 107;
-            data = "1 subgoal (ID 153)	  	  X : Type	  Y : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  f : X -> Y	  g : A -> Y	  p : (fun x : X => g (r x)) == f	  y : Y	  a : A	  q : g a = y	  ============================	  transport (fun x : A => g x = y) (H a)	    (p (s a) @ (((p (s a))^ @ ap g (H a)) @ q)) = q	";
+            data = "1 subgoal (ID 153)	  	  X : Type	  Y : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  f : X -> Y	  g : A -> Y	  p : (fun x : X => g (r x)) == f	  y : Y	  a : A	  q : g a = y	  ============================	  transport (fun x : A => g x = y) (H a)	    (p (s a) @ (((p (s a))^ @ ap g (H a)) @ q)) = q	No more subgoals.	";
             responses[i]=data;
           
 
             i = 108;
-            data = "No more subgoals.	<infomsg>retractof_hfiber is defined</infomsg>	";
+            data = "<infomsg>retractof_hfiber is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -643,12 +643,12 @@
           
 
             i = 125;
-            data = "1 subgoal (ID 113)	  	  X : Type	  ============================	  {A : Type & {r : X -> A & {s : A -> X & (fun x : A => r (s x)) == idmap}}} <~>	  RetractOf X	";
+            data = "1 subgoal (ID 113)	  	  X : Type	  ============================	  {A : Type & {r : X -> A & {s : A -> X & (fun x : A => r (s x)) == idmap}}} <~>	  RetractOf X	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 114)		subgoal 1 (ID 114) is:	 {A : Type &	 {rs : (X -> A) * (A -> X) & (fun x : A => fst rs (snd rs x)) == idmap}} <~>	 {A : Type & {r : X -> A & {s : A -> X & (fun x : A => r (s x)) == idmap}}}	";
             responses[i]=data;
           
 
             i = 126;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 114)		subgoal 1 (ID 114) is:	 {A : Type &	 {rs : (X -> A) * (A -> X) & (fun x : A => fst rs (snd rs x)) == idmap}} <~>	 {A : Type & {r : X -> A & {s : A -> X & (fun x : A => r (s x)) == idmap}}}	1 subgoal (ID 114)	  	  X : Type	  ============================	  {A : Type &	  {rs : (X -> A) * (A -> X) & (fun x : A => fst rs (snd rs x)) == idmap}} <~>	  {A : Type & {r : X -> A & {s : A -> X & (fun x : A => r (s x)) == idmap}}}	1 subgoal (ID 171)	  	  X : Type	  A : Type	  ============================	  {rs : (X -> A) * (A -> X) & (fun x : A => fst rs (snd rs x)) == idmap} <~>	  {r : X -> 1 A & {s : 1 A -> X & (fun x : 1 A => r (s x)) == idmap}}	";
+            data = "1 subgoal (ID 114)	  	  X : Type	  ============================	  {A : Type &	  {rs : (X -> A) * (A -> X) & (fun x : A => fst rs (snd rs x)) == idmap}} <~>	  {A : Type & {r : X -> A & {s : A -> X & (fun x : A => r (s x)) == idmap}}}	1 subgoal (ID 171)	  	  X : Type	  A : Type	  ============================	  {rs : (X -> A) * (A -> X) & (fun x : A => fst rs (snd rs x)) == idmap} <~>	  {r : X -> 1 A & {s : 1 A -> X & (fun x : 1 A => r (s x)) == idmap}}	";
             responses[i]=data;
           
 
@@ -898,12 +898,12 @@
           
 
             i = 176;
-            data = "1 subgoal (ID 629)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap (r' x)) == r	  sp : (fun x : A => s' (_^-1 x)) == s	  Hp : forall a : A,	       ap Ap (H' (_^-1 a)) @ eisretr _ a =	       (rp (s' (_^-1 a)) @ ap r (sp a)) @ H a	  a : A	  ============================	  (ap (fun x : (X -> A) * (A -> X) => fst x (snd x a))	     (transport_prod (path_universe_uncurried Ap) (r', s')))^ @	  transportD (fun x : Type => (X -> x) * (x -> X))	    (fun (x : Type) (y : (X -> x) * (x -> X)) =>	     forall x0 : x, fst y (snd y x0) = x0) (path_universe_uncurried Ap)	    (r', s') H' a =	  ((transport_arrow_fromconst (path_universe_uncurried Ap) r'	      (transport (fun Z : Type => Z -> X) (path_universe_uncurried Ap) s' a) @	    ap (transport idmap (path_universe_uncurried Ap) o r')	      (transport_arrow_toconst (path_universe_uncurried Ap) s' a)) @	   ap (transport idmap (path_universe_uncurried Ap))	     (H' (transport idmap (path_universe_uncurried Ap)^ a))) @	  transport_pV idmap (path_universe_uncurried Ap) a	";
+            data = "1 subgoal (ID 629)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap (r' x)) == r	  sp : (fun x : A => s' (_^-1 x)) == s	  Hp : forall a : A,	       ap Ap (H' (_^-1 a)) @ eisretr _ a =	       (rp (s' (_^-1 a)) @ ap r (sp a)) @ H a	  a : A	  ============================	  (ap (fun x : (X -> A) * (A -> X) => fst x (snd x a))	     (transport_prod (path_universe_uncurried Ap) (r', s')))^ @	  transportD (fun x : Type => (X -> x) * (x -> X))	    (fun (x : Type) (y : (X -> x) * (x -> X)) =>	     forall x0 : x, fst y (snd y x0) = x0) (path_universe_uncurried Ap)	    (r', s') H' a =	  ((transport_arrow_fromconst (path_universe_uncurried Ap) r'	      (transport (fun Z : Type => Z -> X) (path_universe_uncurried Ap) s' a) @	    ap (transport idmap (path_universe_uncurried Ap) o r')	      (transport_arrow_toconst (path_universe_uncurried Ap) s' a)) @	   ap (transport idmap (path_universe_uncurried Ap))	     (H' (transport idmap (path_universe_uncurried Ap)^ a))) @	  transport_pV idmap (path_universe_uncurried Ap) a	1 subgoal (ID 634)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap (r' x)) == r	  sp : (fun x : A => s' (_^-1 x)) == s	  Hp : forall a : A,	       ap Ap (H' (_^-1 a)) @ eisretr _ a =	       (rp (s' (_^-1 a)) @ ap r (sp a)) @ H a	  a : A	  ============================	  forall p : A' = A,	  (ap (fun x : (X -> A) * (A -> X) => fst x (snd x a))	     (transport_prod p (r', s')))^ @	  transportD (fun x : Type => (X -> x) * (x -> X))	    (fun (x : Type) (y : (X -> x) * (x -> X)) =>	     forall x0 : x, fst y (snd y x0) = x0) p (r', s') H' a =	  ((transport_arrow_fromconst p r'	      (transport (fun Z : Type => Z -> X) p s' a) @	    ap (fun x : X => transport idmap p (r' x))	      (transport_arrow_toconst p s' a)) @	   ap (transport idmap p) (H' (transport idmap p^ a))) @	  transport_pV idmap p a	";
             responses[i]=data;
           
 
             i = 177;
-            data = "1 subgoal (ID 634)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap (r' x)) == r	  sp : (fun x : A => s' (_^-1 x)) == s	  Hp : forall a : A,	       ap Ap (H' (_^-1 a)) @ eisretr _ a =	       (rp (s' (_^-1 a)) @ ap r (sp a)) @ H a	  a : A	  ============================	  forall p : A' = A,	  (ap (fun x : (X -> A) * (A -> X) => fst x (snd x a))	     (transport_prod p (r', s')))^ @	  transportD (fun x : Type => (X -> x) * (x -> X))	    (fun (x : Type) (y : (X -> x) * (x -> X)) =>	     forall x0 : x, fst y (snd y x0) = x0) p (r', s') H' a =	  ((transport_arrow_fromconst p r'	      (transport (fun Z : Type => Z -> X) p s' a) @	    ap (fun x : X => transport idmap p (r' x))	      (transport_arrow_toconst p s' a)) @	   ap (transport idmap p) (H' (transport idmap p^ a))) @	  transport_pV idmap p a	1 subgoal (ID 665)	  	  ua : Univalence	  X : Type	  A' : Type	  r : X -> A'	  s : A' -> X	  H : (fun x : A' => r (s x)) == idmap	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A'	  rp : (fun x : X => Ap (r' x)) == r	  sp : (fun x : A' => s' (_^-1 x)) == s	  Hp : forall a : A',	       ap Ap (H' (_^-1 a)) @ eisretr _ a =	       (rp (s' (_^-1 a)) @ ap r (sp a)) @ H a	  a : A'	  ============================	  1 @ H' a = (1 @ ap (transport idmap 1) (H' a)) @ transport_pV idmap 1 a	";
+            data = "1 subgoal (ID 665)	  	  ua : Univalence	  X : Type	  A' : Type	  r : X -> A'	  s : A' -> X	  H : (fun x : A' => r (s x)) == idmap	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A'	  rp : (fun x : X => Ap (r' x)) == r	  sp : (fun x : A' => s' (_^-1 x)) == s	  Hp : forall a : A',	       ap Ap (H' (_^-1 a)) @ eisretr _ a =	       (rp (s' (_^-1 a)) @ ap r (sp a)) @ H a	  a : A'	  ============================	  1 @ H' a = (1 @ ap (transport idmap 1) (H' a)) @ transport_pV idmap 1 a	";
             responses[i]=data;
           
 
@@ -3168,12 +3168,12 @@
           
 
             i = 630;
-            data = "1 subgoal (ID 512)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  a' := (fun n : nat => f (a n.+1); fun n : nat => ap f (pr2 a n.+1))	   : split_idem	  n : nat	  ============================	  ap f (ap f (pr2 a n.+1)) @ I (a n.+1) =	  ap f (I (a n.+2)) @ ap f (pr2 a n.+1)	";
+            data = "1 subgoal (ID 512)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  a' := (fun n : nat => f (a n.+1); fun n : nat => ap f (pr2 a n.+1))	   : split_idem	  n : nat	  ============================	  ap f (ap f (pr2 a n.+1)) @ I (a n.+1) =	  ap f (I (a n.+2)) @ ap f (pr2 a n.+1)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 513)		subgoal 1 (ID 513) is:	 f (pr1 a n.+1) = pr1 a n	subgoal 2 (ID 514) is:	 ap f (pr2 a n.+1) @ ?Goal = ap f ?Goal@{n:=n.+1} @ pr2 a n	";
             responses[i]=data;
           
 
             i = 631;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 513)		subgoal 1 (ID 513) is:	 f (pr1 a n.+1) = pr1 a n	subgoal 2 (ID 514) is:	 ap f (pr2 a n.+1) @ ?Goal = ap f ?Goal@{n:=n.+1} @ pr2 a n	1 subgoal (ID 513)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  a' := (fun n : nat => f (a n.+1); fun n : nat => ap f (pr2 a n.+1))	   : split_idem	  n : nat	  ============================	  f (pr1 a n.+1) = pr1 a n	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 514)		subgoal 1 (ID 514) is:	 ap f (pr2 a n.+1) @ pr2 a n = ap f (pr2 a n.+1) @ pr2 a n	";
+            data = "1 subgoal (ID 513)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  a' := (fun n : nat => f (a n.+1); fun n : nat => ap f (pr2 a n.+1))	   : split_idem	  n : nat	  ============================	  f (pr1 a n.+1) = pr1 a n	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 514)		subgoal 1 (ID 514) is:	 ap f (pr2 a n.+1) @ pr2 a n = ap f (pr2 a n.+1) @ pr2 a n	";
             responses[i]=data;
           
 

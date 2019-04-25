@@ -213,12 +213,12 @@
           
 
             i = 39;
-            data = "1 subgoal (ID 19)	  	  T : Type	  t : T	  l : ne_list	  IHl : l = from_list (head l) (tail l)	  ============================	  cons t l = from_list (head (cons t l)) (tail (cons t l))	1 subgoal (ID 32)	  	  T : Type	  t, t0 : T	  l : ne_list	  IHl : cons t0 l = from_list (head (cons t0 l)) (tail (cons t0 l))	  ============================	  cons t (cons t0 l) =	  from_list (head (cons t (cons t0 l))) (tail (cons t (cons t0 l)))	1 subgoal (ID 38)	  	  T : Type	  t, t0 : T	  l : ne_list	  IHl : cons t0 l = from_list t0 (to_list l)	  ============================	  cons t (cons t0 l) = cons t (from_list t0 (to_list l))	";
+            data = "1 subgoal (ID 19)	  	  T : Type	  t : T	  l : ne_list	  IHl : l = from_list (head l) (tail l)	  ============================	  cons t l = from_list (head (cons t l)) (tail (cons t l))	";
             responses[i]=data;
           
 
             i = 40;
-            data = "No more subgoals.	<infomsg>decomp_eq is defined</infomsg>	";
+            data = "1 subgoal (ID 32)	  	  T : Type	  t, t0 : T	  l : ne_list	  IHl : cons t0 l = from_list (head (cons t0 l)) (tail (cons t0 l))	  ============================	  cons t (cons t0 l) =	  from_list (head (cons t (cons t0 l))) (tail (cons t (cons t0 l)))	1 subgoal (ID 38)	  	  T : Type	  t, t0 : T	  l : ne_list	  IHl : cons t0 l = from_list t0 (to_list l)	  ============================	  cons t (cons t0 l) = cons t (from_list t0 (to_list l))	No more subgoals.	<infomsg>decomp_eq is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -258,12 +258,12 @@
           
 
             i = 48;
-            data = "1 subgoal (ID 30)	  	  T : Type	  P : ne_list → Type	  Pone : ∀ x : T, P (one x)	  Ptwo : ∀ x y : T, P (cons x (one y))	  Pmore : ∀ (x y : T) (z : ne_list),	          P z → (∀ y' : T, P (cons y' z)) → P (cons x (cons y z))	  ============================	  (∀ l : ne_list, P l ∧ (∀ x : T, P (cons x l))) → ∀ l : ne_list, P l	1 subgoal (ID 33)	  	  T : Type	  P : ne_list → Type	  Pone : ∀ x : T, P (one x)	  Ptwo : ∀ x y : T, P (cons x (one y))	  Pmore : ∀ (x y : T) (z : ne_list),	          P z → (∀ y' : T, P (cons y' z)) → P (cons x (cons y z))	  X : ∀ l : ne_list, P l ∧ (∀ x : T, P (cons x l))	  l : ne_list	  ============================	  P l	";
+            data = "1 subgoal (ID 30)	  	  T : Type	  P : ne_list → Type	  Pone : ∀ x : T, P (one x)	  Ptwo : ∀ x y : T, P (cons x (one y))	  Pmore : ∀ (x y : T) (z : ne_list),	          P z → (∀ y' : T, P (cons y' z)) → P (cons x (cons y z))	  ============================	  (∀ l : ne_list, P l ∧ (∀ x : T, P (cons x l))) → ∀ l : ne_list, P l	";
             responses[i]=data;
           
 
             i = 49;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 31)		subgoal 1 (ID 31) is:	 ∀ l : ne_list, P l ∧ (∀ x : T, P (cons x l))	";
+            data = "1 subgoal (ID 33)	  	  T : Type	  P : ne_list → Type	  Pone : ∀ x : T, P (one x)	  Ptwo : ∀ x y : T, P (cons x (one y))	  Pmore : ∀ (x y : T) (z : ne_list),	          P z → (∀ y' : T, P (cons y' z)) → P (cons x (cons y z))	  X : ∀ l : ne_list, P l ∧ (∀ x : T, P (cons x l))	  l : ne_list	  ============================	  P l	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 31)		subgoal 1 (ID 31) is:	 ∀ l : ne_list, P l ∧ (∀ x : T, P (cons x l))	";
             responses[i]=data;
           
 
