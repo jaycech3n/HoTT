@@ -55,7 +55,7 @@ Time: 0s">
 <div class="code" title="File: Decimal.v
 Line: 18
 Time: 0.009s">
-<div class="time" style="width: 100%"></div>
+<div class="time" style="width: 81.818181818182%"></div>
 <pre>Require Import Datatypes.</pre>
 </div>
 <div class="code" title="File: Decimal.v
@@ -71,8 +71,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Decimal.v
 Line: 22
-Time: 0.002s">
-<div class="time" style="width: 22.222222222222%"></div>
+Time: 0.004s">
+<div class="time" style="width: 36.363636363636%"></div>
 <pre>Inductive uint :=
  | Nil
  | D0 (_:uint)
@@ -116,8 +116,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Decimal.v
 Line: 41
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.011s">
+<div class="time" style="width: 100%"></div>
 <pre>Variant int := Pos (d:uint) | Neg (d:uint).</pre>
 </div>
 <div class="code" title="File: Decimal.v
@@ -210,7 +210,7 @@ Register decimal as num.decimal.type.</pre>
 <div class="code" title="File: Decimal.v
 Line: 61
 Time: 0.001s">
-<div class="time" style="width: 11.111111111111%"></div>
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre>
 
 Fixpoint nb_digits d :=
@@ -237,8 +237,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Decimal.v
 Line: 76
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre>Fixpoint nzhead d :=
   match d with
   | D0 d =&gt; nzhead d
@@ -257,8 +257,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Decimal.v
 Line: 83
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre>Definition unorm d :=
   match nzhead d with
   | Nil =&gt; zero
@@ -277,8 +277,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Decimal.v
 Line: 90
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre>Definition norm d :=
   match d with
   | Pos d =&gt; Pos (unorm d)
@@ -302,8 +302,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Decimal.v
 Line: 102
-Time: 0.001s">
-<div class="time" style="width: 11.111111111111%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition opp (d:int) :=
   match d with
   | Pos d =&gt; Neg d
@@ -324,7 +324,7 @@ Time: 0s">
 <div class="code" title="File: Decimal.v
 Line: 110
 Time: 0.001s">
-<div class="time" style="width: 11.111111111111%"></div>
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre>Fixpoint revapp (d d' : uint) :=
   match d with
   | Nil =&gt; d'
@@ -358,8 +358,8 @@ Definition app d d' := revapp (rev d) d'.</pre>
 </div>
 <div class="code" title="File: Decimal.v
 Line: 127
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.002s">
+<div class="time" style="width: 18.181818181818%"></div>
 <pre>
 
 Definition app_int d1 d2 :=
@@ -379,7 +379,7 @@ Time: 0s">
 <div class="code" title="File: Decimal.v
 Line: 134
 Time: 0.002s">
-<div class="time" style="width: 22.222222222222%"></div>
+<div class="time" style="width: 18.181818181818%"></div>
 <pre>Definition nztail d :=
   let fix aux d_rev :=
     match d_rev with
@@ -390,8 +390,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Decimal.v
 Line: 140
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.002s">
+<div class="time" style="width: 18.181818181818%"></div>
 <pre>
 
 Definition nztail_int d :=
@@ -420,8 +420,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Decimal.v
 Line: 151
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.005s">
+<div class="time" style="width: 45.454545454545%"></div>
 <pre>Fixpoint succ d :=
   match d with
   | Nil =&gt; D1 Nil
@@ -449,8 +449,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Decimal.v
 Line: 167
-Time: 0.004s">
-<div class="time" style="width: 44.444444444444%"></div>
+Time: 0.003s">
+<div class="time" style="width: 27.272727272727%"></div>
 <pre>Fixpoint double d :=
   match d with
   | Nil =&gt; Nil
