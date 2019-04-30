@@ -203,7 +203,7 @@
           
 
             i = 37;
-            data = "1 subgoal (ID 46)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  ============================	  {eta : NaturalTransformation 1 (G o F) &	  {eps : NaturalTransformation (F o G) 1 &	  {_ : forall Y : C, eps (F _0 Y)%object o F _1 (eta Y) = 1 &	  forall X : D, G _1 (eps X) o eta (G _0 X)%object = 1}}} <~> 	  Adjunction F G	";
+            data = "1 subgoal (ID 46)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  ============================	  {eta : NaturalTransformation 1 (G o F) &	  {eps : NaturalTransformation (F o G) 1 &	  {_ : forall Y : C, (eps (F _0 Y)%object o F _1 (eta Y))%morphism = 1 &	  forall X : D, (G _1 (eps X) o eta (G _0 X)%object)%morphism = 1}}} <~>	  F -| G	";
             responses[i]=data;
           
 
@@ -258,7 +258,7 @@
           
 
             i = 48;
-            data = "1 subgoal (ID 49)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  ============================	  IsHSet (Adjunction F G)	";
+            data = "1 subgoal (ID 49)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  ============================	  IsHSet (F -| G)	";
             responses[i]=data;
           
 
@@ -268,7 +268,7 @@
           
 
             i = 50;
-            data = "1 subgoal (ID 52)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  ============================	  IsHSet	    {eta : NaturalTransformation 1 (G o F) &	    {eps : NaturalTransformation (F o G) 1 &	    {_ : forall Y : C, eps (F _0 Y)%object o F _1 (eta Y) = 1 &	    forall X : D, G _1 (eps X) o eta (G _0 X)%object = 1}}}	";
+            data = "1 subgoal (ID 52)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  ============================	  IsHSet	    {eta : NaturalTransformation 1 (G o F) &	    {eps : NaturalTransformation (F o G) 1 &	    {_ : forall Y : C, (eps (F _0 Y)%object o F _1 (eta Y))%morphism = 1 &	    forall X : D, (G _1 (eps X) o eta (G _0 X)%object)%morphism = 1}}}	";
             responses[i]=data;
           
 
@@ -318,7 +318,7 @@
           
 
             i = 60;
-            data = "1 subgoal (ID 78)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A, A' : Adjunction F G	  ============================	  unit A = unit A' -> counit A = counit A' -> A = A'	";
+            data = "1 subgoal (ID 78)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A, A' : F -| G	  ============================	  unit A = unit A' -> counit A = counit A' -> A = A'	";
             responses[i]=data;
           
 
@@ -328,17 +328,17 @@
           
 
             i = 62;
-            data = "1 subgoal (ID 80)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A, A' : Adjunction F G	  X : unit A = unit A'	  X0 : counit A = counit A'	  ============================	  A = A'	";
+            data = "1 subgoal (ID 80)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A, A' : F -| G	  X : unit A = unit A'	  X0 : counit A = counit A'	  ============================	  A = A'	";
             responses[i]=data;
           
 
             i = 63;
-            data = "1 subgoal (ID 124)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  unit : NaturalTransformation 1 (G o F)	  counit : NaturalTransformation (F o G) 1	  unit_counit_equation_1 : forall Y : C,	                           counit (F _0 Y)%object o F _1 (unit Y) = 1	  unit_counit_equation_2 : forall X : D,	                           G _1 (counit X) o unit (G _0 X)%object = 1	  unit0 : NaturalTransformation 1 (G o F)	  counit0 : NaturalTransformation (F o G) 1	  unit_counit_equation_0 : forall Y : C,	                           counit0 (F _0 Y)%object o F _1 (unit0 Y) = 1	  unit_counit_equation_3 : forall X : D,	                           G _1 (counit0 X) o unit0 (G _0 X)%object = 1	  X : unit = unit0	  X0 : counit = counit0	  ============================	  {|	  unit := unit;	  counit := counit;	  unit_counit_equation_1 := unit_counit_equation_1;	  unit_counit_equation_2 := unit_counit_equation_2 |} =	  {|	  unit := unit0;	  counit := counit0;	  unit_counit_equation_1 := unit_counit_equation_0;	  unit_counit_equation_2 := unit_counit_equation_3 |}	";
+            data = "1 subgoal (ID 110)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  unit : NaturalTransformation 1 (G o F)	  counit : NaturalTransformation (F o G) 1	  unit_counit_equation_1 : forall Y : C,	                           (counit (F _0 Y)%object o F _1 (unit Y))%morphism =	                           1	  unit_counit_equation_2 : forall X : D,	                           (G _1 (counit X) o unit (G _0 X)%object)%morphism =	                           1	  unit0 : NaturalTransformation 1 (G o F)	  counit0 : NaturalTransformation (F o G) 1	  unit_counit_equation_0 : forall Y : C,	                           (counit0 (F _0 Y)%object o F _1 (unit0 Y))%morphism =	                           1	  unit_counit_equation_3 : forall X : D,	                           (G _1 (counit0 X) o unit0 (G _0 X)%object)%morphism =	                           1	  X : unit = unit0	  X0 : counit = counit0	  ============================	  {|	  unit := unit;	  counit := counit;	  unit_counit_equation_1 := unit_counit_equation_1;	  unit_counit_equation_2 := unit_counit_equation_2 |} =	  {|	  unit := unit0;	  counit := counit0;	  unit_counit_equation_1 := unit_counit_equation_0;	  unit_counit_equation_2 := unit_counit_equation_3 |}	";
             responses[i]=data;
           
 
             i = 64;
-            data = "1 subgoal (ID 146)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  unit : NaturalTransformation 1 (G o F)	  counit : NaturalTransformation (F o G) 1	  unit_counit_equation_1 : forall Y : C,	                           counit (F _0 Y)%object o F _1 (unit Y) = 1	  unit_counit_equation_2 : forall X : D,	                           G _1 (counit X) o unit (G _0 X)%object = 1	  unit_counit_equation_0 : forall Y : C,	                           counit (F _0 Y)%object o F _1 (unit Y) = 1	  unit_counit_equation_3 : forall X : D,	                           G _1 (counit X) o unit (G _0 X)%object = 1	  ============================	  {|	  unit := unit;	  counit := counit;	  unit_counit_equation_1 := unit_counit_equation_1;	  unit_counit_equation_2 := unit_counit_equation_2 |} =	  {|	  unit := unit;	  counit := counit;	  unit_counit_equation_1 := unit_counit_equation_0;	  unit_counit_equation_2 := unit_counit_equation_3 |}	";
+            data = "1 subgoal (ID 132)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  unit : NaturalTransformation 1 (G o F)	  counit : NaturalTransformation (F o G) 1	  unit_counit_equation_1 : forall Y : C,	                           (counit (F _0 Y)%object o F _1 (unit Y))%morphism =	                           1	  unit_counit_equation_2 : forall X : D,	                           (G _1 (counit X) o unit (G _0 X)%object)%morphism =	                           1	  unit_counit_equation_0 : forall Y : C,	                           (counit (F _0 Y)%object o F _1 (unit Y))%morphism =	                           1	  unit_counit_equation_3 : forall X : D,	                           (G _1 (counit X) o unit (G _0 X)%object)%morphism =	                           1	  ============================	  {|	  unit := unit;	  counit := counit;	  unit_counit_equation_1 := unit_counit_equation_1;	  unit_counit_equation_2 := unit_counit_equation_2 |} =	  {|	  unit := unit;	  counit := counit;	  unit_counit_equation_1 := unit_counit_equation_0;	  unit_counit_equation_2 := unit_counit_equation_3 |}	";
             responses[i]=data;
           
 
@@ -388,7 +388,7 @@
           
 
             i = 74;
-            data = "1 subgoal (ID 123)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A, A' : Adjunction F G	  ============================	  unit A == unit A' -> counit A == counit A' -> A = A'	";
+            data = "1 subgoal (ID 123)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A, A' : F -| G	  ============================	  unit A == unit A' -> counit A == counit A' -> A = A'	";
             responses[i]=data;
           
 
@@ -398,7 +398,7 @@
           
 
             i = 76;
-            data = "1 subgoal (ID 125)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A, A' : Adjunction F G	  X : unit A == unit A'	  X0 : counit A == counit A'	  ============================	  A = A'	";
+            data = "1 subgoal (ID 125)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A, A' : F -| G	  X : unit A == unit A'	  X0 : counit A == counit A'	  ============================	  A = A'	";
             responses[i]=data;
           
 

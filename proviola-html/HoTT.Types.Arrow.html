@@ -548,7 +548,7 @@
           
 
             i = 106;
-            data = "1 subgoal (ID 165)	  	  H : Funext	  A : Type	  B : A -> Type	  C : A -> Type	  x1, x2 : A	  p : x1 = x2	  f : B x1 -> C x1	  y : B x2	  ============================	  transport (fun x : A => B x -> C x) p f y =	  transport C p (f (transport B p^ y))	";
+            data = "1 subgoal (ID 160)	  	  H : Funext	  A : Type	  B : A -> Type	  C : A -> Type	  x1, x2 : A	  p : x1 = x2	  f : B x1 -> C x1	  y : B x2	  ============================	  transport (fun x : A => B x -> C x) p f y =	  transport C p (f (transport B p^ y))	";
             responses[i]=data;
           
 
@@ -568,7 +568,7 @@
           
 
             i = 110;
-            data = "1 subgoal (ID 190)	  	  H : Funext	  A : Type	  B : A -> Type	  C : Type	  x1, x2 : A	  p : x1 = x2	  f : B x1 -> C	  y : B x2	  ============================	  transport (fun x : A => B x -> C) p f y = f (transport B p^ y)	";
+            data = "1 subgoal (ID 185)	  	  H : Funext	  A : Type	  B : A -> Type	  C : Type	  x1, x2 : A	  p : x1 = x2	  f : B x1 -> C	  y : B x2	  ============================	  transport (fun x : A => B x -> C) p f y = f (transport B p^ y)	";
             responses[i]=data;
           
 
@@ -588,7 +588,7 @@
           
 
             i = 114;
-            data = "1 subgoal (ID 212)	  	  H : Funext	  A : Type	  B : Type	  C : A -> Type	  x1, x2 : A	  p : x1 = x2	  f : B -> C x1	  y : B	  ============================	  transport (fun x : A => B -> C x) p f y = transport C p (f y)	";
+            data = "1 subgoal (ID 207)	  	  H : Funext	  A : Type	  B : Type	  C : A -> Type	  x1, x2 : A	  p : x1 = x2	  f : B -> C x1	  y : B	  ============================	  transport (fun x : A => B -> C x) p f y = transport C p (f y)	";
             responses[i]=data;
           
 
@@ -628,7 +628,7 @@
           
 
             i = 122;
-            data = "1 subgoal (ID 269)	  	  H : Funext	  A : Type	  B : A -> Type	  C : Type	  x1, x2 : A	  p : x1 = x2	  f : B x1 -> C	  y1, y2 : B x2	  q : y1 = y2	  ============================	  ap (transport (fun x : A => B x -> C) p f) q @	  transport_arrow_toconst p f y2 =	  transport_arrow_toconst p f y1 @	  ap (fun y : B x2 => f (transport B p^ y)) q	";
+            data = "1 subgoal (ID 264)	  	  H : Funext	  A : Type	  B : A -> Type	  C : Type	  x1, x2 : A	  p : x1 = x2	  f : B x1 -> C	  y1, y2 : B x2	  q : y1 = y2	  ============================	  ap (transport (fun x : A => B x -> C) p f) q @	  transport_arrow_toconst p f y2 =	  transport_arrow_toconst p f y1 @	  ap (fun y : B x2 => f (transport B p^ y)) q	";
             responses[i]=data;
           
 
@@ -853,7 +853,7 @@
           
 
             i = 167;
-            data = "1 subgoal (ID 294)	  	  H : Funext	  A : Type	  B : A -> Type	  C : A -> Type	  x1, x2 : A	  p : x1 = x2	  f : B x1 -> C x1	  g : B x2 -> C x2	  ============================	  (forall y1 : B x1, transport C p (f y1) = g (transport B p y1)) <~>	  transport (fun x : A => B x -> C x) p f = g	";
+            data = "1 subgoal (ID 289)	  	  H : Funext	  A : Type	  B : A -> Type	  C : A -> Type	  x1, x2 : A	  p : x1 = x2	  f : B x1 -> C x1	  g : B x2 -> C x2	  ============================	  (forall y1 : B x1, transport C p (f y1) = g (transport B p y1)) <~>	  transport (fun x : A => B x -> C x) p f = g	";
             responses[i]=data;
           
 
@@ -863,7 +863,7 @@
           
 
             i = 169;
-            data = "1 subgoal (ID 301)	  	  H : Funext	  A : Type	  B : A -> Type	  C : A -> Type	  x1 : A	  f, g : B x1 -> C x1	  ============================	  (forall y1 : B x1, transport C 1 (f y1) = g (transport B 1 y1)) <~>	  transport (fun x : A => B x -> C x) 1 f = g	";
+            data = "1 subgoal (ID 296)	  	  H : Funext	  A : Type	  B : A -> Type	  C : A -> Type	  x1 : A	  f, g : B x1 -> C x1	  ============================	  (forall y1 : B x1, transport C 1 (f y1) = g (transport B 1 y1)) <~>	  transport (fun x : A => B x -> C x) 1 f = g	";
             responses[i]=data;
           
 
@@ -878,7 +878,7 @@
           
 
             i = 172;
-            data = "1 subgoal (ID 361)	  	  H : Funext	  A : Type	  B : A -> Type	  C : A -> Type	  x1, x2 : A	  p : x1 = x2	  f : B x1 -> C x1	  g : B x2 -> C x2	  h : forall y1 : B x1, transport C p (f y1) = g (transport B p y1)	  u : B x1	  ============================	  ap10 (dpath_arrow B C p f g h) (transport B p u) =	  (transport_arrow p f (transport B p u) @	   ap (fun x : B x1 => transport C p (f x)) (transport_Vp B p u)) @ 	  h u	";
+            data = "1 subgoal (ID 356)	  	  H : Funext	  A : Type	  B : A -> Type	  C : A -> Type	  x1, x2 : A	  p : x1 = x2	  f : B x1 -> C x1	  g : B x2 -> C x2	  h : forall y1 : B x1, transport C p (f y1) = g (transport B p y1)	  u : B x1	  ============================	  ap10 (dpath_arrow B C p f g h) (transport B p u) =	  (transport_arrow p f (transport B p u) @	   ap (fun x : B x1 => transport C p (f x)) (transport_Vp B p u)) @ 	  h u	";
             responses[i]=data;
           
 
@@ -888,7 +888,7 @@
           
 
             i = 174;
-            data = "1 subgoal (ID 374)	  	  H : Funext	  A : Type	  B : A -> Type	  C : A -> Type	  x1 : A	  f, g : B x1 -> C x1	  h : forall y1 : B x1, transport C 1 (f y1) = g (transport B 1 y1)	  u : B x1	  ============================	  apD10 (path_forall (fun x : B x1 => f x) (fun x : B x1 => g x) h) u =	  1 @ h u	";
+            data = "1 subgoal (ID 371)	  	  H : Funext	  A : Type	  B : A -> Type	  C : A -> Type	  x1 : A	  f, g : B x1 -> C x1	  h : forall y1 : B x1, transport C 1 (f y1) = g (transport B 1 y1)	  u : B x1	  ============================	  apD10 (path_forall (fun x : B x1 => f x) (fun x : B x1 => g x) h) u =	  1 @ h u	";
             responses[i]=data;
           
 
@@ -988,7 +988,7 @@
           
 
             i = 194;
-            data = "1 subgoal (ID 501)	  	  H : Funext	  A : Type	  B : Type	  C : Type	  x, y : A	  p : x = y	  M : A -> B -> C	  ============================	  ap (fun (a : A) (b : B) => M a b) p =	  path_arrow (fun b : B => (fun a : A => M a b) x)	    (fun b : B => (fun a : A => M a b) y)	    (fun b : B => ap (fun a : A => M a b) p)	";
+            data = "1 subgoal (ID 496)	  	  H : Funext	  A : Type	  B : Type	  C : Type	  x, y : A	  p : x = y	  M : A -> B -> C	  ============================	  ap (fun (a : A) (b : B) => M a b) p =	  path_arrow (fun b : B => (fun a : A => M a b) x)	    (fun b : B => (fun a : A => M a b) y)	    (fun b : B => ap (fun a : A => M a b) p)	";
             responses[i]=data;
           
 

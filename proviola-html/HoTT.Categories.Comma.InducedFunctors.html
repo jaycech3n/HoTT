@@ -228,7 +228,7 @@
           
 
             i = 42;
-            data = "1 subgoal (ID 91)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  C : PreCategory	  s : (A -> C)^op * (B -> C)	  x : fst s / snd s	  ============================	  comma_category_induced_functor_object_of 1 x = x	";
+            data = "1 subgoal (ID 91)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  C : PreCategory	  s : ((A -> C)^op * (B -> C))%category	  x : fst s / snd s	  ============================	  comma_category_induced_functor_object_of 1 x = x	";
             responses[i]=data;
           
 
@@ -238,12 +238,12 @@
           
 
             i = 44;
-            data = "1 subgoal (ID 101)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  C : PreCategory	  s : (A -> C)^op * (B -> C)	  x : fst s / snd s	  ============================	  transport	    (fun X : A =>	     morphism C ((fst s) _0 X)%object ((snd s) _0 (CommaCategory.b x))%object)	    1	    (transport	       (fun Y : B =>	        morphism C	          ((fst s)	           _0 (CommaCategory.a (comma_category_induced_functor_object_of 1 x)))%object	          ((snd s) _0 Y)%object) 1	       (CommaCategory.f (comma_category_induced_functor_object_of 1 x))) =	  CommaCategory.f x	";
+            data = "1 subgoal (ID 101)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  C : PreCategory	  s : ((A -> C)^op * (B -> C))%category	  x : fst s / snd s	  ============================	  transport	    (fun X : A =>	     morphism C ((fst s) _0 X)%object ((snd s) _0 (CommaCategory.b x))%object)	    1	    (transport	       (fun Y : B =>	        morphism C	          ((fst s)	           _0 (CommaCategory.a (comma_category_induced_functor_object_of 1 x)))%object	          ((snd s) _0 Y)%object) 1	       (CommaCategory.f (comma_category_induced_functor_object_of 1 x))) =	  CommaCategory.f x	";
             responses[i]=data;
           
 
             i = 45;
-            data = "1 subgoal (ID 102)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  C : PreCategory	  s : (A -> C)^op * (B -> C)	  x : fst s / snd s	  ============================	  (1 o CommaCategory.f x o 1)%morphism = CommaCategory.f x	";
+            data = "1 subgoal (ID 103)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  C : PreCategory	  s : ((A -> C)^op * (B -> C))%category	  x : fst s / snd s	  ============================	  (1 o CommaCategory.f x o 1)%morphism = CommaCategory.f x	";
             responses[i]=data;
           
 
@@ -258,7 +258,7 @@
           
 
             i = 48;
-            data = "1 subgoal (ID 122)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  C : PreCategory	  s, d, d' : (A -> C)^op * (B -> C)	  m : morphism ((A -> C)^op * (B -> C)) d d'	  m' : morphism ((A -> C)^op * (B -> C)) s d	  x : fst s / snd s	  ============================	  comma_category_induced_functor_object_of (m o m') x =	  comma_category_induced_functor_object_of m	    (comma_category_induced_functor_object_of m' x)	";
+            data = "1 subgoal (ID 122)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  C : PreCategory	  s, d, d' : ((A -> C)^op * (B -> C))%category	  m : morphism ((A -> C)^op * (B -> C)) d d'	  m' : morphism ((A -> C)^op * (B -> C)) s d	  x : fst s / snd s	  ============================	  comma_category_induced_functor_object_of (m o m') x =	  comma_category_induced_functor_object_of m	    (comma_category_induced_functor_object_of m' x)	";
             responses[i]=data;
           
 
@@ -268,7 +268,7 @@
           
 
             i = 50;
-            data = "1 subgoal (ID 132)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  C : PreCategory	  s, d, d' : (A -> C)^op * (B -> C)	  m : morphism ((A -> C)^op * (B -> C)) d d'	  m' : morphism ((A -> C)^op * (B -> C)) s d	  x : fst s / snd s	  ============================	  transport	    (fun X : A =>	     morphism C ((fst d') _0 X)%object	       ((snd d')	        _0 (CommaCategory.b	              (comma_category_induced_functor_object_of m	                 (comma_category_induced_functor_object_of m' x))))%object) 1	    (transport	       (fun Y : B =>	        morphism C	          ((fst d')	           _0 (CommaCategory.a	                 (comma_category_induced_functor_object_of (m o m') x)))%object	          ((snd d') _0 Y)%object) 1	       (CommaCategory.f (comma_category_induced_functor_object_of (m o m') x))) =	  CommaCategory.f	    (comma_category_induced_functor_object_of m	       (comma_category_induced_functor_object_of m' x))	";
+            data = "1 subgoal (ID 132)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  C : PreCategory	  s, d, d' : ((A -> C)^op * (B -> C))%category	  m : morphism ((A -> C)^op * (B -> C)) d d'	  m' : morphism ((A -> C)^op * (B -> C)) s d	  x : fst s / snd s	  ============================	  transport	    (fun X : A =>	     morphism C ((fst d') _0 X)%object	       ((snd d')	        _0 (CommaCategory.b	              (comma_category_induced_functor_object_of m	                 (comma_category_induced_functor_object_of m' x))))%object) 1	    (transport	       (fun Y : B =>	        morphism C	          ((fst d')	           _0 (CommaCategory.a	                 (comma_category_induced_functor_object_of (m o m') x)))%object	          ((snd d') _0 Y)%object) 1	       (CommaCategory.f (comma_category_induced_functor_object_of (m o m') x))) =	  CommaCategory.f	    (comma_category_induced_functor_object_of m	       (comma_category_induced_functor_object_of m' x))	";
             responses[i]=data;
           
 
@@ -293,12 +293,12 @@
           
 
             i = 55;
-            data = "1 subgoal (ID 185)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  C : PreCategory	  s, d : CC_Functor' A C * CC_Functor' B C	  m : morphism ((A -> C)^op * (B -> C)) s d	  s0, d0 : fst s / snd s	  m0 : morphism (fst s / snd s) s0 d0	  ============================	  CommaCategory.morphism (comma_category_induced_functor_object_of m s0)	    (comma_category_induced_functor_object_of m d0)	";
+            data = "1 subgoal (ID 186)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  C : PreCategory	  s, d : CC_Functor' A C * CC_Functor' B C	  m : morphism ((A -> C)^op * (B -> C)) s d	  s0, d0 : fst s / snd s	  m0 : morphism (fst s / snd s) s0 d0	  ============================	  CommaCategory.morphism (comma_category_induced_functor_object_of m s0)	    (comma_category_induced_functor_object_of m d0)	";
             responses[i]=data;
           
 
             i = 56;
-            data = "1 subgoal (ID 219)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  s, d : Functor A C * Functor B C	  m : NaturalTransformation (fst d) (fst s) *	      NaturalTransformation (snd s) (snd d)	  s0, d0 : CommaCategory.object (fst s) (snd s)	  m0 : CommaCategory.morphism s0 d0	  ============================	  ((snd d) _1 (CommaCategory.h m0)	   o (snd m (CommaCategory.b s0) o CommaCategory.f s0	      o fst m (CommaCategory.a s0)))%morphism =	  (snd m (CommaCategory.b d0) o CommaCategory.f d0	   o fst m (CommaCategory.a d0) o (fst d) _1 (CommaCategory.g m0))%morphism	";
+            data = "1 subgoal (ID 212)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  s, d : Functor A C * Functor B C	  m : NaturalTransformation (fst d) (fst s) *	      NaturalTransformation (snd s) (snd d)	  s0, d0 : CommaCategory.object (fst s) (snd s)	  m0 : CommaCategory.morphism s0 d0	  ============================	  ((snd d) _1 (CommaCategory.h m0)	   o (snd m (CommaCategory.b s0) o CommaCategory.f s0	      o fst m (CommaCategory.a s0)))%morphism =	  (snd m (CommaCategory.b d0) o CommaCategory.f d0	   o fst m (CommaCategory.a d0) o (fst d) _1 (CommaCategory.g m0))%morphism	";
             responses[i]=data;
           
 
@@ -313,7 +313,7 @@
           
 
             i = 59;
-            data = "1 subgoal (ID 224)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  C : PreCategory	  s, d : (A -> C)^op * (B -> C)	  m : morphism ((A -> C)^op * (B -> C)) s d	  ============================	  Functor (fst s / snd s) (fst d / snd d)	";
+            data = "1 subgoal (ID 224)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  C : PreCategory	  s, d : ((A -> C)^op * (B -> C))%category	  m : morphism ((A -> C)^op * (B -> C)) s d	  ============================	  Functor (fst s / snd s) (fst d / snd d)	";
             responses[i]=data;
           
 
@@ -458,7 +458,7 @@
           
 
             i = 88;
-            data = "1 subgoal (ID 106)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  s, d : D	  m : morphism D s d	  ============================	  NaturalTransformation !s !d	";
+            data = "1 subgoal (ID 52)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  s, d : D	  m : morphism D s d	  ============================	  NaturalTransformation !s !d	";
             responses[i]=data;
           
 

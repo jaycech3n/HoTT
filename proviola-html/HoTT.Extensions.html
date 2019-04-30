@@ -668,7 +668,7 @@
           
 
             i = 130;
-            data = "1 subgoal (ID 54)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  ============================	  ExtensionAlong f (fun y : B => pr1 ext y = pr1 ext' y)	    (fun x : A => pr2 ext x @ (pr2 ext' x)^) <~> ext = ext'	";
+            data = "1 subgoal (ID 54)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  ============================	  ExtensionAlong f (fun y : B => ext.1 y = ext'.1 y)	    (fun x : A => ext.2 x @ (ext'.2 x)^) <~> ext = ext'	";
             responses[i]=data;
           
 
@@ -678,92 +678,92 @@
           
 
             i = 132;
-            data = "1 subgoal (ID 67)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  ============================	  ExtensionAlong f (fun y : B => pr1 ext y = pr1 ext' y)	    (fun x : A => pr2 ext x @ (pr2 ext' x)^) <~>	  {p : pr1 ext = pr1 ext' &	  transport (fun s : forall y : B, P y => forall x : A, s (f x) = d x) p	    (pr2 ext) = pr2 ext'}	";
+            data = "1 subgoal (ID 68)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  ============================	  ExtensionAlong f (fun y : B => ext.1 y = ext'.1 y)	    (fun x : A => ext.2 x @ (ext'.2 x)^) <~>	  {p : ext.1 = ext'.1 &	  transport (fun s : forall y : B, P y => forall x : A, s (f x) = d x) p	    ext.2 = ext'.2}	";
             responses[i]=data;
           
 
             i = 133;
-            data = "1 subgoal (ID 81)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  ============================	  forall a : pr1 ext == pr1 ext',	  (forall x : A, a (f x) = pr2 ext x @ (pr2 ext' x)^) <~>	  transport (fun s : forall y : B, P y => forall x : A, s (f x) = d x)	    (equiv_path_forall (pr1 ext) (pr1 ext') a) (pr2 ext) = 	  pr2 ext'	";
+            data = "1 subgoal (ID 83)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  ============================	  forall a : ext.1 == ext'.1,	  (forall x : A, a (f x) = ext.2 x @ (ext'.2 x)^) <~>	  transport (fun s : forall y : B, P y => forall x : A, s (f x) = d x)	    (equiv_path_forall ext.1 ext'.1 a) ext.2 = ext'.2	";
             responses[i]=data;
           
 
             i = 134;
-            data = "1 subgoal (ID 82)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : pr1 ext == pr1 ext'	  ============================	  (forall x : A, p (f x) = pr2 ext x @ (pr2 ext' x)^) <~>	  transport (fun s : forall y : B, P y => forall x : A, s (f x) = d x)	    (equiv_path_forall (pr1 ext) (pr1 ext') p) (pr2 ext) = 	  pr2 ext'	";
+            data = "1 subgoal (ID 84)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : ext.1 == ext'.1	  ============================	  (forall x : A, p (f x) = ext.2 x @ (ext'.2 x)^) <~>	  transport (fun s : forall y : B, P y => forall x : A, s (f x) = d x)	    (equiv_path_forall ext.1 ext'.1 p) ext.2 = ext'.2	";
             responses[i]=data;
           
 
             i = 135;
-            data = "1 subgoal (ID 95)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : pr1 ext == pr1 ext'	  ============================	  (forall x : A, p (f x) = pr2 ext x @ (pr2 ext' x)^) <~>	  transport (fun s : forall y : B, P y => forall x : A, s (f x) = d x)	    (equiv_path_forall (pr1 ext) (pr1 ext') p) (pr2 ext) == 	  pr2 ext'	";
+            data = "1 subgoal (ID 98)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : ext.1 == ext'.1	  ============================	  (forall x : A, p (f x) = ext.2 x @ (ext'.2 x)^) <~>	  transport (fun s : forall y : B, P y => forall x : A, s (f x) = d x)	    (equiv_path_forall ext.1 ext'.1 p) ext.2 == ext'.2	";
             responses[i]=data;
           
 
             i = 136;
-            data = "1 subgoal (ID 96)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : pr1 ext == pr1 ext'	  ============================	  (forall x : A, p (f x) = pr2 ext x @ (pr2 ext' x)^) <~>	  (forall x : A,	   transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0)	     (equiv_path_forall (pr1 ext) (pr1 ext') p) (pr2 ext) x = 	   pr2 ext' x)	";
+            data = "1 subgoal (ID 100)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : ext.1 == ext'.1	  ============================	  (forall x : A, p (f x) = ext.2 x @ (ext'.2 x)^) <~>	  (forall x : A,	   transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0)	     (equiv_path_forall ext.1 ext'.1 p) ext.2 x = 	   ext'.2 x)	";
             responses[i]=data;
           
 
             i = 137;
-            data = "1 subgoal (ID 105)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : pr1 ext == pr1 ext'	  ============================	  forall b : A,	  p (f (1 b)) = pr2 ext (1 b) @ (pr2 ext' (1 b))^ <~>	  transport (fun s : forall y : B, P y => forall x : A, s (f x) = d x)	    (equiv_path_forall (pr1 ext) (pr1 ext') p) (pr2 ext) b = 	  pr2 ext' b	";
+            data = "1 subgoal (ID 110)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : ext.1 == ext'.1	  ============================	  forall b : A,	  p (f (1%equiv b)) = ext.2 (1%equiv b) @ (ext'.2 (1%equiv b))^ <~>	  transport (fun s : forall y : B, P y => forall x : A, s (f x) = d x)	    (equiv_path_forall ext.1 ext'.1 p) ext.2 b = ext'.2 b	";
             responses[i]=data;
           
 
             i = 138;
-            data = "1 subgoal (ID 106)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : pr1 ext == pr1 ext'	  x : A	  ============================	  p (f (1 x)) = pr2 ext (1 x) @ (pr2 ext' (1 x))^ <~>	  transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0)	    (equiv_path_forall (pr1 ext) (pr1 ext') p) (pr2 ext) x = 	  pr2 ext' x	";
+            data = "1 subgoal (ID 111)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : ext.1 == ext'.1	  x : A	  ============================	  p (f (1%equiv x)) = ext.2 (1%equiv x) @ (ext'.2 (1%equiv x))^ <~>	  transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0)	    (equiv_path_forall ext.1 ext'.1 p) ext.2 x = ext'.2 x	";
             responses[i]=data;
           
 
             i = 139;
-            data = "2 subgoals (ID 126)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : pr1 ext == pr1 ext'	  x : A	  ============================	  (p (f x))^ @ pr2 ext x = pr2 ext' x <~>	  transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0)	    (equiv_path_forall (pr1 ext) (pr1 ext') p) (pr2 ext) x = 	  pr2 ext' x		subgoal 2 (ID 127) is:	 p (f (1 x)) = pr2 ext (1 x) @ (pr2 ext' (1 x))^ <~>	 (p (f x))^ @ pr2 ext x = pr2 ext' x	";
+            data = "2 subgoals (ID 132)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : ext.1 == ext'.1	  x : A	  ============================	  (p (f x))^ @ ext.2 x = ext'.2 x <~>	  transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0)	    (equiv_path_forall ext.1 ext'.1 p) ext.2 x = ext'.2 x		subgoal 2 (ID 134) is:	 p (f (1%equiv x)) = ext.2 (1%equiv x) @ (ext'.2 (1%equiv x))^ <~>	 (p (f x))^ @ ext.2 x = ext'.2 x	";
             responses[i]=data;
           
 
             i = 140;
-            data = "1 subgoal (ID 126)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : pr1 ext == pr1 ext'	  x : A	  ============================	  (p (f x))^ @ pr2 ext x = pr2 ext' x <~>	  transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0)	    (equiv_path_forall (pr1 ext) (pr1 ext') p) (pr2 ext) x = 	  pr2 ext' x	1 subgoal (ID 135)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : pr1 ext == pr1 ext'	  x : A	  ============================	  transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0)	    (equiv_path_forall (pr1 ext) (pr1 ext') p) (pr2 ext) x =	  (p (f x))^ @ pr2 ext x	";
+            data = "1 subgoal (ID 132)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : ext.1 == ext'.1	  x : A	  ============================	  (p (f x))^ @ ext.2 x = ext'.2 x <~>	  transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0)	    (equiv_path_forall ext.1 ext'.1 p) ext.2 x = ext'.2 x	1 subgoal (ID 143)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : ext.1 == ext'.1	  x : A	  ============================	  transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0)	    (equiv_path_forall ext.1 ext'.1 p) ext.2 x = (p (f x))^ @ ext.2 x	";
             responses[i]=data;
           
 
             i = 141;
-            data = "2 subgoals (ID 177)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : pr1 ext == pr1 ext'	  x : A	  ============================	  transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0)	    (equiv_path_forall (pr1 ext) (pr1 ext') p) (pr2 ext) x =	  (apD10 (path_forall (pr1 ext) (pr1 ext') p) (f x))^ @ pr2 ext x		subgoal 2 (ID 178) is:	 (apD10 (path_forall (pr1 ext) (pr1 ext') p) (f x))^ @ pr2 ext x =	 (p (f x))^ @ pr2 ext x	";
+            data = "2 subgoals (ID 179)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : ext.1 == ext'.1	  x : A	  ============================	  transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0)	    (equiv_path_forall ext.1 ext'.1 p) ext.2 x =	  (apD10 (path_forall ext.1 ext'.1 p) (f x))^ @ ext.2 x		subgoal 2 (ID 181) is:	 (apD10 (path_forall ext.1 ext'.1 p) (f x))^ @ ext.2 x = (p (f x))^ @ ext.2 x	";
             responses[i]=data;
           
 
             i = 142;
-            data = "1 subgoal (ID 177)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : pr1 ext == pr1 ext'	  x : A	  ============================	  transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0)	    (equiv_path_forall (pr1 ext) (pr1 ext') p) (pr2 ext) x =	  (apD10 (path_forall (pr1 ext) (pr1 ext') p) (f x))^ @ pr2 ext x	2 subgoals (ID 207)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : pr1 ext == pr1 ext'	  x : A	  ============================	  forall p0 : pr1 ext = pr1 ext',	  transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0) p0	    (pr2 ext) x = (apD10 p0 (f x))^ @ pr2 ext x		subgoal 2 (ID 209) is:	 transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0)	   (equiv_path_forall (pr1 ext) (pr1 ext') p) (pr2 ext) x =	 (apD10 (path_forall (pr1 ext) (pr1 ext') p) (f x))^ @ pr2 ext x	";
+            data = "1 subgoal (ID 179)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : ext.1 == ext'.1	  x : A	  ============================	  transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0)	    (equiv_path_forall ext.1 ext'.1 p) ext.2 x =	  (apD10 (path_forall ext.1 ext'.1 p) (f x))^ @ ext.2 x	2 subgoals (ID 210)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : ext.1 == ext'.1	  x : A	  ============================	  forall p0 : ext.1 = ext'.1,	  transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0) p0	    ext.2 x = (apD10 p0 (f x))^ @ ext.2 x		subgoal 2 (ID 212) is:	 transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0)	   (equiv_path_forall ext.1 ext'.1 p) ext.2 x =	 (apD10 (path_forall ext.1 ext'.1 p) (f x))^ @ ext.2 x	";
             responses[i]=data;
           
 
             i = 143;
-            data = "1 subgoal (ID 207)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : pr1 ext == pr1 ext'	  x : A	  ============================	  forall p0 : pr1 ext = pr1 ext',	  transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0) p0	    (pr2 ext) x = (apD10 p0 (f x))^ @ pr2 ext x	1 subgoal (ID 232)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  g : forall y : B, P y	  gd : forall x : A, g (f x) = d x	  g' : forall y : B, P y	  gd' : forall x : A, g' (f x) = d x	  p : pr1 (g; gd) == pr1 (g'; gd')	  x : A	  ============================	  forall p0 : g = g',	  transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0) p0	    gd x = (apD10 p0 (f x))^ @ gd x	";
+            data = "1 subgoal (ID 210)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : ext.1 == ext'.1	  x : A	  ============================	  forall p0 : ext.1 = ext'.1,	  transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0) p0	    ext.2 x = (apD10 p0 (f x))^ @ ext.2 x	1 subgoal (ID 236)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  g : forall y : B, P y	  gd : forall x : A, g (f x) = d x	  g' : forall y : B, P y	  gd' : forall x : A, g' (f x) = d x	  p : (g; gd).1 == (g'; gd').1	  x : A	  ============================	  forall p0 : g = g',	  transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0) p0	    gd x = (apD10 p0 (f x))^ @ gd x	";
             responses[i]=data;
           
 
             i = 144;
-            data = "1 subgoal (ID 245)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  g : forall y : B, P y	  gd, gd' : forall x : A, g (f x) = d x	  p : pr1 (g; gd) == pr1 (g; gd')	  x : A	  ============================	  gd x = 1 @ gd x	";
+            data = "1 subgoal (ID 250)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  g : forall y : B, P y	  gd, gd' : forall x : A, g (f x) = d x	  p : (g; gd).1 == (g; gd').1	  x : A	  ============================	  gd x = 1 @ gd x	";
             responses[i]=data;
           
 
             i = 145;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	3 subgoals (ID 209)		subgoal 1 (ID 209) is:	 transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0)	   (equiv_path_forall (pr1 ext) (pr1 ext') p) (pr2 ext) x =	 (apD10 (path_forall (pr1 ext) (pr1 ext') p) (f x))^ @ pr2 ext x	subgoal 2 (ID 178) is:	 (apD10 (path_forall (pr1 ext) (pr1 ext') p) (f x))^ @ pr2 ext x =	 (p (f x))^ @ pr2 ext x	subgoal 3 (ID 127) is:	 p (f (1 x)) = pr2 ext (1 x) @ (pr2 ext' (1 x))^ <~>	 (p (f x))^ @ pr2 ext x = pr2 ext' x	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	3 subgoals (ID 212)		subgoal 1 (ID 212) is:	 transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0)	   (equiv_path_forall ext.1 ext'.1 p) ext.2 x =	 (apD10 (path_forall ext.1 ext'.1 p) (f x))^ @ ext.2 x	subgoal 2 (ID 181) is:	 (apD10 (path_forall ext.1 ext'.1 p) (f x))^ @ ext.2 x = (p (f x))^ @ ext.2 x	subgoal 3 (ID 134) is:	 p (f (1%equiv x)) = ext.2 (1%equiv x) @ (ext'.2 (1%equiv x))^ <~>	 (p (f x))^ @ ext.2 x = ext'.2 x	";
             responses[i]=data;
           
 
             i = 146;
-            data = "1 subgoal (ID 209)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : pr1 ext == pr1 ext'	  x : A	  transp_extension : forall p : pr1 ext = pr1 ext',	                     transport	                       (fun s : forall y : B, P y =>	                        forall x : A, s (f x) = d x) p 	                       (pr2 ext) x = (apD10 p (f x))^ @ pr2 ext x	  ============================	  transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0)	    (equiv_path_forall (pr1 ext) (pr1 ext') p) (pr2 ext) x =	  (apD10 (path_forall (pr1 ext) (pr1 ext') p) (f x))^ @ pr2 ext x	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 178)		subgoal 1 (ID 178) is:	 (apD10 (path_forall (pr1 ext) (pr1 ext') p) (f x))^ @ pr2 ext x =	 (p (f x))^ @ pr2 ext x	subgoal 2 (ID 127) is:	 p (f (1 x)) = pr2 ext (1 x) @ (pr2 ext' (1 x))^ <~>	 (p (f x))^ @ pr2 ext x = pr2 ext' x	";
+            data = "1 subgoal (ID 212)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : ext.1 == ext'.1	  x : A	  transp_extension : forall p : ext.1 = ext'.1,	                     transport	                       (fun s : forall y : B, P y =>	                        forall x : A, s (f x) = d x) p ext.2 x =	                     (apD10 p (f x))^ @ ext.2 x	  ============================	  transport (fun s : forall y : B, P y => forall x0 : A, s (f x0) = d x0)	    (equiv_path_forall ext.1 ext'.1 p) ext.2 x =	  (apD10 (path_forall ext.1 ext'.1 p) (f x))^ @ ext.2 x	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 181)		subgoal 1 (ID 181) is:	 (apD10 (path_forall ext.1 ext'.1 p) (f x))^ @ ext.2 x = (p (f x))^ @ ext.2 x	subgoal 2 (ID 134) is:	 p (f (1%equiv x)) = ext.2 (1%equiv x) @ (ext'.2 (1%equiv x))^ <~>	 (p (f x))^ @ ext.2 x = ext'.2 x	";
             responses[i]=data;
           
 
             i = 147;
-            data = "1 subgoal (ID 178)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : pr1 ext == pr1 ext'	  x : A	  ============================	  (apD10 (path_forall (pr1 ext) (pr1 ext') p) (f x))^ @ pr2 ext x =	  (p (f x))^ @ pr2 ext x	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 127)		subgoal 1 (ID 127) is:	 p (f (1 x)) = pr2 ext (1 x) @ (pr2 ext' (1 x))^ <~>	 (p (f x))^ @ pr2 ext x = pr2 ext' x	";
+            data = "1 subgoal (ID 181)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : ext.1 == ext'.1	  x : A	  ============================	  (apD10 (path_forall ext.1 ext'.1 p) (f x))^ @ ext.2 x =	  (p (f x))^ @ ext.2 x	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 134)		subgoal 1 (ID 134) is:	 p (f (1%equiv x)) = ext.2 (1%equiv x) @ (ext'.2 (1%equiv x))^ <~>	 (p (f x))^ @ ext.2 x = ext'.2 x	";
             responses[i]=data;
           
 
             i = 148;
-            data = "1 subgoal (ID 127)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : pr1 ext == pr1 ext'	  x : A	  ============================	  p (f (1 x)) = pr2 ext (1 x) @ (pr2 ext' (1 x))^ <~>	  (p (f x))^ @ pr2 ext x = pr2 ext' x	1 subgoal (ID 281)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : pr1 ext == pr1 ext'	  x : A	  ============================	  p (f (1 x)) = pr2 ext (1 x) @ (pr2 ext' (1 x))^ <~>	  pr2 ext x = p (f x) @ pr2 ext' x	";
+            data = "1 subgoal (ID 134)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : ext.1 == ext'.1	  x : A	  ============================	  p (f (1%equiv x)) = ext.2 (1%equiv x) @ (ext'.2 (1%equiv x))^ <~>	  (p (f x))^ @ ext.2 x = ext'.2 x	1 subgoal (ID 287)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : ext.1 == ext'.1	  x : A	  ============================	  p (f (1%equiv x)) = ext.2 (1%equiv x) @ (ext'.2 (1%equiv x))^ <~>	  ext.2 x = p (f x) @ ext'.2 x	";
             responses[i]=data;
           
 
             i = 149;
-            data = "1 subgoal (ID 297)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : pr1 ext == pr1 ext'	  x : A	  ============================	  p (f (1 x)) = pr2 ext (1 x) @ (pr2 ext' (1 x))^ <~>	  pr2 ext x @ (pr2 ext' x)^ = p (f x)	";
+            data = "1 subgoal (ID 304)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  p : ext.1 == ext'.1	  x : A	  ============================	  p (f (1%equiv x)) = ext.2 (1%equiv x) @ (ext'.2 (1%equiv x))^ <~>	  ext.2 x @ (ext'.2 x)^ = p (f x)	";
             responses[i]=data;
           
 
@@ -1048,47 +1048,47 @@
           
 
             i = 206;
-            data = "2 subgoals (ID 175)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        ExtendableAlong n f C <~>	        PathSplit n (fun g : forall b : B, C b => g oD f)	  C : B -> Type	  ============================	  (forall g : forall a : A, C (f a), ExtensionAlong f C g) <~>	  (forall a : forall x : A, C (f x),	   hfiber (fun g : forall b : B, C b => g oD f) a)		subgoal 2 (ID 176) is:	 (forall h k : forall b : B, C b,	  (fix	   ExtendableAlong (n0 : nat) (A0 B0 : Type) (f0 : A0 -> B0)	                   (C0 : B0 -> Type) {struct n0} : Type :=	     match n0 with	     | 0 => Unit	     | n1.+1 =>	         (forall g : forall a : A0, C0 (f0 a), ExtensionAlong f0 C0 g) *	         (forall h0 k0 : forall b : B0, C0 b,	          ExtendableAlong n1 A0 B0 f0 (fun b : B0 => h0 b = k0 b))	     end) n A B f (fun b : B => h b = k b)) <~>	 (forall x y : forall b : B, C b,	  (fix PathSplit (n0 : nat) (A0 B0 : Type) (f0 : A0 -> B0) {struct n0} :	     Type :=	     match n0 with	     | 0 => Unit	     | n1.+1 =>	         (forall a : B0, hfiber f0 a) *	         (forall x0 y0 : A0, PathSplit n1 (x0 = y0) (f0 x0 = f0 y0) (ap f0))	     end) n (x = y) (x oD f = y oD f)	    (ap (fun g : forall b : B, C b => g oD f)))	";
+            data = "2 subgoals (ID 178)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        ExtendableAlong n f C <~>	        PathSplit n (fun g : forall b : B, C b => g oD f)	  C : B -> Type	  ============================	  (forall g : forall a : A, C (f a), ExtensionAlong f C g) <~>	  (forall a : forall x : A, C (f x),	   hfiber (fun g : forall b : B, C b => g oD f) a)		subgoal 2 (ID 180) is:	 (forall h k : forall b : B, C b,	  (fix	   ExtendableAlong (n0 : nat) (A0 B0 : Type) (f0 : A0 -> B0)	                   (C0 : B0 -> Type) {struct n0} : Type :=	     match n0 with	     | 0 => Unit	     | n1.+1 =>	         (forall g : forall a : A0, C0 (f0 a), ExtensionAlong f0 C0 g) *	         (forall h0 k0 : forall b : B0, C0 b,	          ExtendableAlong n1 A0 B0 f0 (fun b : B0 => h0 b = k0 b))	     end) n A B f (fun b : B => h b = k b)) <~>	 (forall x y : forall b : B, C b,	  (fix PathSplit (n0 : nat) (A0 B0 : Type) (f0 : A0 -> B0) {struct n0} :	     Type :=	     match n0 with	     | 0 => Unit	     | n1.+1 =>	         (forall a : B0, hfiber f0 a) *	         (forall x0 y0 : A0, PathSplit n1 (x0 = y0) (f0 x0 = f0 y0) (ap f0))	     end) n (x = y) (x oD f = y oD f)	    (ap (fun g : forall b : B, C b => g oD f)))	";
             responses[i]=data;
           
 
             i = 207;
-            data = "1 subgoal (ID 175)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        ExtendableAlong n f C <~>	        PathSplit n (fun g : forall b : B, C b => g oD f)	  C : B -> Type	  ============================	  (forall g : forall a : A, C (f a), ExtensionAlong f C g) <~>	  (forall a : forall x : A, C (f x),	   hfiber (fun g : forall b : B, C b => g oD f) a)	1 subgoal (ID 187)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        ExtendableAlong n f C <~>	        PathSplit n (fun g : forall b : B, C b => g oD f)	  C : B -> Type	  g : forall a : A, C (f a)	  ============================	  ExtensionAlong f C g <~> hfiber (fun g0 : forall b : B, C b => g0 oD f) g	";
+            data = "1 subgoal (ID 178)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        ExtendableAlong n f C <~>	        PathSplit n (fun g : forall b : B, C b => g oD f)	  C : B -> Type	  ============================	  (forall g : forall a : A, C (f a), ExtensionAlong f C g) <~>	  (forall a : forall x : A, C (f x),	   hfiber (fun g : forall b : B, C b => g oD f) a)	1 subgoal (ID 193)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        ExtendableAlong n f C <~>	        PathSplit n (fun g : forall b : B, C b => g oD f)	  C : B -> Type	  g : forall a : A, C (f a)	  ============================	  ExtensionAlong f C g <~> hfiber (fun g0 : forall b : B, C b => g0 oD f) g	";
             responses[i]=data;
           
 
             i = 208;
-            data = "1 subgoal (ID 196)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        ExtendableAlong n f C <~>	        PathSplit n (fun g : forall b : B, C b => g oD f)	  C : B -> Type	  g : forall a : A, C (f a)	  rec : forall y : B, C y	  ============================	  (forall x : A, rec (f x) = g x) <~> 1 rec oD f = g	";
+            data = "1 subgoal (ID 203)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        ExtendableAlong n f C <~>	        PathSplit n (fun g : forall b : B, C b => g oD f)	  C : B -> Type	  g : forall a : A, C (f a)	  rec : forall y : B, C y	  ============================	  (forall x : A, rec (f x) = g x) <~> 1%equiv rec oD f = g	";
             responses[i]=data;
           
 
             i = 209;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 176)		subgoal 1 (ID 176) is:	 (forall h k : forall b : B, C b,	  (fix	   ExtendableAlong (n0 : nat) (A0 B0 : Type) (f0 : A0 -> B0)	                   (C0 : B0 -> Type) {struct n0} : Type :=	     match n0 with	     | 0 => Unit	     | n1.+1 =>	         (forall g : forall a : A0, C0 (f0 a), ExtensionAlong f0 C0 g) *	         (forall h0 k0 : forall b : B0, C0 b,	          ExtendableAlong n1 A0 B0 f0 (fun b : B0 => h0 b = k0 b))	     end) n A B f (fun b : B => h b = k b)) <~>	 (forall x y : forall b : B, C b,	  (fix PathSplit (n0 : nat) (A0 B0 : Type) (f0 : A0 -> B0) {struct n0} :	     Type :=	     match n0 with	     | 0 => Unit	     | n1.+1 =>	         (forall a : B0, hfiber f0 a) *	         (forall x0 y0 : A0, PathSplit n1 (x0 = y0) (f0 x0 = f0 y0) (ap f0))	     end) n (x = y) (x oD f = y oD f)	    (ap (fun g : forall b : B, C b => g oD f)))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 180)		subgoal 1 (ID 180) is:	 (forall h k : forall b : B, C b,	  (fix	   ExtendableAlong (n0 : nat) (A0 B0 : Type) (f0 : A0 -> B0)	                   (C0 : B0 -> Type) {struct n0} : Type :=	     match n0 with	     | 0 => Unit	     | n1.+1 =>	         (forall g : forall a : A0, C0 (f0 a), ExtensionAlong f0 C0 g) *	         (forall h0 k0 : forall b : B0, C0 b,	          ExtendableAlong n1 A0 B0 f0 (fun b : B0 => h0 b = k0 b))	     end) n A B f (fun b : B => h b = k b)) <~>	 (forall x y : forall b : B, C b,	  (fix PathSplit (n0 : nat) (A0 B0 : Type) (f0 : A0 -> B0) {struct n0} :	     Type :=	     match n0 with	     | 0 => Unit	     | n1.+1 =>	         (forall a : B0, hfiber f0 a) *	         (forall x0 y0 : A0, PathSplit n1 (x0 = y0) (f0 x0 = f0 y0) (ap f0))	     end) n (x = y) (x oD f = y oD f)	    (ap (fun g : forall b : B, C b => g oD f)))	";
             responses[i]=data;
           
 
             i = 210;
-            data = "1 subgoal (ID 176)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        ExtendableAlong n f C <~>	        PathSplit n (fun g : forall b : B, C b => g oD f)	  C : B -> Type	  ============================	  (forall h k : forall b : B, C b,	   (fix	    ExtendableAlong (n0 : nat) (A0 B0 : Type) (f0 : A0 -> B0)	                    (C0 : B0 -> Type) {struct n0} : Type :=	      match n0 with	      | 0 => Unit	      | n1.+1 =>	          (forall g : forall a : A0, C0 (f0 a), ExtensionAlong f0 C0 g) *	          (forall h0 k0 : forall b : B0, C0 b,	           ExtendableAlong n1 A0 B0 f0 (fun b : B0 => h0 b = k0 b))	      end) n A B f (fun b : B => h b = k b)) <~>	  (forall x y : forall b : B, C b,	   (fix PathSplit (n0 : nat) (A0 B0 : Type) (f0 : A0 -> B0) {struct n0} :	      Type :=	      match n0 with	      | 0 => Unit	      | n1.+1 =>	          (forall a : B0, hfiber f0 a) *	          (forall x0 y0 : A0, PathSplit n1 (x0 = y0) (f0 x0 = f0 y0) (ap f0))	      end) n (x = y) (x oD f = y oD f)	     (ap (fun g : forall b : B, C b => g oD f)))	1 subgoal (ID 209)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        ExtendableAlong n f C <~>	        PathSplit n (fun g : forall b : B, C b => g oD f)	  C : B -> Type	  h : forall b : B, C b	  ============================	  (forall k : forall b : B, C b,	   (fix	    ExtendableAlong (n0 : nat) (A0 B0 : Type) (f0 : A0 -> B0)	                    (C0 : B0 -> Type) {struct n0} : Type :=	      match n0 with	      | 0 => Unit	      | n1.+1 =>	          (forall g : forall a : A0, C0 (f0 a), ExtensionAlong f0 C0 g) *	          (forall h0 k0 : forall b : B0, C0 b,	           ExtendableAlong n1 A0 B0 f0 (fun b : B0 => h0 b = k0 b))	      end) n A B f (fun b : B => 1 h b = k b)) <~>	  (forall y : forall b : B, C b,	   (fix PathSplit (n0 : nat) (A0 B0 : Type) (f0 : A0 -> B0) {struct n0} :	      Type :=	      match n0 with	      | 0 => Unit	      | n1.+1 =>	          (forall a : B0, hfiber f0 a) *	          (forall x y0 : A0, PathSplit n1 (x = y0) (f0 x = f0 y0) (ap f0))	      end) n (h = y) (h oD f = y oD f)	     (ap (fun g : forall b : B, C b => g oD f)))	";
+            data = "1 subgoal (ID 180)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        ExtendableAlong n f C <~>	        PathSplit n (fun g : forall b : B, C b => g oD f)	  C : B -> Type	  ============================	  (forall h k : forall b : B, C b,	   (fix	    ExtendableAlong (n0 : nat) (A0 B0 : Type) (f0 : A0 -> B0)	                    (C0 : B0 -> Type) {struct n0} : Type :=	      match n0 with	      | 0 => Unit	      | n1.+1 =>	          (forall g : forall a : A0, C0 (f0 a), ExtensionAlong f0 C0 g) *	          (forall h0 k0 : forall b : B0, C0 b,	           ExtendableAlong n1 A0 B0 f0 (fun b : B0 => h0 b = k0 b))	      end) n A B f (fun b : B => h b = k b)) <~>	  (forall x y : forall b : B, C b,	   (fix PathSplit (n0 : nat) (A0 B0 : Type) (f0 : A0 -> B0) {struct n0} :	      Type :=	      match n0 with	      | 0 => Unit	      | n1.+1 =>	          (forall a : B0, hfiber f0 a) *	          (forall x0 y0 : A0, PathSplit n1 (x0 = y0) (f0 x0 = f0 y0) (ap f0))	      end) n (x = y) (x oD f = y oD f)	     (ap (fun g : forall b : B, C b => g oD f)))	1 subgoal (ID 217)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        ExtendableAlong n f C <~>	        PathSplit n (fun g : forall b : B, C b => g oD f)	  C : B -> Type	  h : forall b : B, C b	  ============================	  (forall k : forall b : B, C b,	   (fix	    ExtendableAlong (n0 : nat) (A0 B0 : Type) (f0 : A0 -> B0)	                    (C0 : B0 -> Type) {struct n0} : Type :=	      match n0 with	      | 0 => Unit	      | n1.+1 =>	          (forall g : forall a : A0, C0 (f0 a), ExtensionAlong f0 C0 g) *	          (forall h0 k0 : forall b : B0, C0 b,	           ExtendableAlong n1 A0 B0 f0 (fun b : B0 => h0 b = k0 b))	      end) n A B f (fun b : B => 1%equiv h b = k b)) <~>	  (forall y : forall b : B, C b,	   (fix PathSplit (n0 : nat) (A0 B0 : Type) (f0 : A0 -> B0) {struct n0} :	      Type :=	      match n0 with	      | 0 => Unit	      | n1.+1 =>	          (forall a : B0, hfiber f0 a) *	          (forall x y0 : A0, PathSplit n1 (x = y0) (f0 x = f0 y0) (ap f0))	      end) n (h = y) (h oD f = y oD f)	     (ap (fun g : forall b : B, C b => g oD f)))	";
             responses[i]=data;
           
 
             i = 211;
-            data = "1 subgoal (ID 220)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        ExtendableAlong n f C <~>	        PathSplit n (fun g : forall b : B, C b => g oD f)	  C : B -> Type	  h, k : forall b : B, C b	  ============================	  (fix	   ExtendableAlong (n0 : nat) (A0 B0 : Type) (f0 : A0 -> B0)	                   (C0 : B0 -> Type) {struct n0} : Type :=	     match n0 with	     | 0 => Unit	     | n1.+1 =>	         (forall g : forall a : A0, C0 (f0 a), ExtensionAlong f0 C0 g) *	         (forall h0 k0 : forall b : B0, C0 b,	          ExtendableAlong n1 A0 B0 f0 (fun b : B0 => h0 b = k0 b))	     end) n A B f (fun b : B => h b = k b) <~>	  (fix PathSplit (n0 : nat) (A0 B0 : Type) (f0 : A0 -> B0) {struct n0} :	     Type :=	     match n0 with	     | 0 => Unit	     | n1.+1 =>	         (forall a : B0, hfiber f0 a) *	         (forall x y : A0, PathSplit n1 (x = y) (f0 x = f0 y) (ap f0))	     end) n (h = k) (h oD f = k oD f)	    (ap (fun g : forall b : B, C b => g oD f))	";
+            data = "1 subgoal (ID 230)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        ExtendableAlong n f C <~>	        PathSplit n (fun g : forall b : B, C b => g oD f)	  C : B -> Type	  h, k : forall b : B, C b	  ============================	  (fix	   ExtendableAlong (n0 : nat) (A0 B0 : Type) (f0 : A0 -> B0)	                   (C0 : B0 -> Type) {struct n0} : Type :=	     match n0 with	     | 0 => Unit	     | n1.+1 =>	         (forall g : forall a : A0, C0 (f0 a), ExtensionAlong f0 C0 g) *	         (forall h0 k0 : forall b : B0, C0 b,	          ExtendableAlong n1 A0 B0 f0 (fun b : B0 => h0 b = k0 b))	     end) n A B f (fun b : B => h b = k b) <~>	  (fix PathSplit (n0 : nat) (A0 B0 : Type) (f0 : A0 -> B0) {struct n0} :	     Type :=	     match n0 with	     | 0 => Unit	     | n1.+1 =>	         (forall a : B0, hfiber f0 a) *	         (forall x y : A0, PathSplit n1 (x = y) (f0 x = f0 y) (ap f0))	     end) n (h = k) (h oD f = k oD f)	    (ap (fun g : forall b : B, C b => g oD f))	";
             responses[i]=data;
           
 
             i = 212;
-            data = "1 subgoal (ID 229)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        ExtendableAlong n f C <~>	        PathSplit n (fun g : forall b : B, C b => g oD f)	  C : B -> Type	  h, k : forall b : B, C b	  ============================	  PathSplit n (fun g : forall b : B, h b = k b => g oD f) <~>	  (fix PathSplit (n0 : nat) (A0 B0 : Type) (f0 : A0 -> B0) {struct n0} :	     Type :=	     match n0 with	     | 0 => Unit	     | n1.+1 =>	         (forall a : B0, hfiber f0 a) *	         (forall x y : A0, PathSplit n1 (x = y) (f0 x = f0 y) (ap f0))	     end) n (h = k) (h oD f = k oD f)	    (ap (fun g : forall b : B, C b => g oD f))	";
+            data = "1 subgoal (ID 240)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        ExtendableAlong n f C <~>	        PathSplit n (fun g : forall b : B, C b => g oD f)	  C : B -> Type	  h, k : forall b : B, C b	  ============================	  PathSplit n (fun g : forall b : B, h b = k b => g oD f) <~>	  (fix PathSplit (n0 : nat) (A0 B0 : Type) (f0 : A0 -> B0) {struct n0} :	     Type :=	     match n0 with	     | 0 => Unit	     | n1.+1 =>	         (forall a : B0, hfiber f0 a) *	         (forall x y : A0, PathSplit n1 (x = y) (f0 x = f0 y) (ap f0))	     end) n (h = k) (h oD f = k oD f)	    (ap (fun g : forall b : B, C b => g oD f))	";
             responses[i]=data;
           
 
             i = 213;
-            data = "1 subgoal (ID 232)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        ExtendableAlong n f C <~>	        PathSplit n (fun g : forall b : B, C b => g oD f)	  C : B -> Type	  h, k : forall b : B, C b	  ============================	  (fix PathSplit (n0 : nat) (A0 B0 : Type) (f0 : A0 -> B0) {struct n0} :	     Type :=	     match n0 with	     | 0 => Unit	     | n1.+1 =>	         (forall a : B0, hfiber f0 a) *	         (forall x y : A0, PathSplit n1 (x = y) (f0 x = f0 y) (ap f0))	     end) n (h = k) (h oD f = k oD f)	    (ap (fun g : forall b : B, C b => g oD f)) <~>	  PathSplit n (fun g : forall b : B, h b = k b => g oD f)	";
+            data = "1 subgoal (ID 243)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        ExtendableAlong n f C <~>	        PathSplit n (fun g : forall b : B, C b => g oD f)	  C : B -> Type	  h, k : forall b : B, C b	  ============================	  (fix PathSplit (n0 : nat) (A0 B0 : Type) (f0 : A0 -> B0) {struct n0} :	     Type :=	     match n0 with	     | 0 => Unit	     | n1.+1 =>	         (forall a : B0, hfiber f0 a) *	         (forall x y : A0, PathSplit n1 (x = y) (f0 x = f0 y) (ap f0))	     end) n (h = k) (h oD f = k oD f)	    (ap (fun g : forall b : B, C b => g oD f)) <~>	  PathSplit n (fun g : forall b : B, h b = k b => g oD f)	";
             responses[i]=data;
           
 
             i = 214;
-            data = "1 subgoal (ID 260)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        ExtendableAlong n f C <~>	        PathSplit n (fun g : forall b : B, C b => g oD f)	  C : B -> Type	  h, k : forall b : B, C b	  ============================	  (fun x : h = k => equiv_apD10 C h k x oD f) ==	  (fun x : h = k =>	   equiv_apD10 (fun x0 : A => C (f x0)) (h oD f) (k oD f)	     (ap (fun g : forall b : B, C b => g oD f) x))	";
+            data = "1 subgoal (ID 272)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        ExtendableAlong n f C <~>	        PathSplit n (fun g : forall b : B, C b => g oD f)	  C : B -> Type	  h, k : forall b : B, C b	  ============================	  (fun x : h = k => equiv_apD10 C h k x oD f) ==	  (fun x : h = k =>	   equiv_apD10 (fun x0 : A => C (f x0)) (h oD f) (k oD f)	     (ap (fun g : forall b : B, C b => g oD f) x))	";
             responses[i]=data;
           
 
@@ -1138,17 +1138,17 @@
           
 
             i = 224;
-            data = "2 focused subgoals	(shelved: 1) (ID 209)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  C : B -> Type	  f : A -> B	  ============================	  ExtendableAlong n.+2 f C <~> ?Goal		subgoal 2 (ID 210) is:	 ?Goal <~> IsEquiv (fun g : forall b : B, C b => g oD f)	";
+            data = "2 focused subgoals	(shelved: 1) (ID 213)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  C : B -> Type	  f : A -> B	  ============================	  ExtendableAlong n.+2 f C <~> ?Goal		subgoal 2 (ID 215) is:	 ?Goal <~> IsEquiv (fun g : forall b : B, C b => g oD f)	";
             responses[i]=data;
           
 
             i = 225;
-            data = "1 focused subgoal	(shelved: 1) (ID 209)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  C : B -> Type	  f : A -> B	  ============================	  ExtendableAlong n.+2 f C <~> ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 210)		subgoal 1 (ID 210) is:	 PathSplit n.+2 (fun g : forall b : B, C b => g oD f) <~>	 IsEquiv (fun g : forall b : B, C b => g oD f)	";
+            data = "1 focused subgoal	(shelved: 1) (ID 213)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  C : B -> Type	  f : A -> B	  ============================	  ExtendableAlong n.+2 f C <~> ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 215)		subgoal 1 (ID 215) is:	 PathSplit n.+2 (fun g : forall b : B, C b => g oD f) <~>	 IsEquiv (fun g : forall b : B, C b => g oD f)	";
             responses[i]=data;
           
 
             i = 226;
-            data = "1 subgoal (ID 210)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  C : B -> Type	  f : A -> B	  ============================	  PathSplit n.+2 (fun g : forall b : B, C b => g oD f) <~>	  IsEquiv (fun g : forall b : B, C b => g oD f)	No more subgoals.	";
+            data = "1 subgoal (ID 215)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  C : B -> Type	  f : A -> B	  ============================	  PathSplit n.+2 (fun g : forall b : B, C b => g oD f) <~>	  IsEquiv (fun g : forall b : B, C b => g oD f)	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1193,52 +1193,52 @@
           
 
             i = 235;
-            data = "2 subgoals (ID 234)	  	  A : Type	  B : Type	  f : A -> B	  C : B -> Type	  D : B -> Type	  g : forall b : B, D b <~> C b	  ============================	  Unit -> Unit		subgoal 2 (ID 237) is:	 (forall g0 : forall a : A, D (f a), ExtensionAlong f D g0) *	 (forall h k : forall b : B, D b,	  ExtendableAlong n f (fun b : B => h b = k b)) ->	 (forall g0 : forall a : A, C (f a), ExtensionAlong f C g0) *	 (forall h k : forall b : B, C b,	  ExtendableAlong n f (fun b : B => h b = k b))	";
+            data = "2 subgoals (ID 235)	  	  A : Type	  B : Type	  f : A -> B	  C : B -> Type	  D : B -> Type	  g : forall b : B, D b <~> C b	  ============================	  Unit -> Unit		subgoal 2 (ID 239) is:	 (forall g0 : forall a : A, D (f a), ExtensionAlong f D g0) *	 (forall h k : forall b : B, D b,	  ExtendableAlong n f (fun b : B => h b = k b)) ->	 (forall g0 : forall a : A, C (f a), ExtensionAlong f C g0) *	 (forall h k : forall b : B, C b,	  ExtendableAlong n f (fun b : B => h b = k b))	";
             responses[i]=data;
           
 
             i = 236;
-            data = "1 subgoal (ID 237)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IH : forall D C : B -> Type,	       (forall b : B, C b <~> D b) ->	       ExtendableAlong n f C -> ExtendableAlong n f D	  C : B -> Type	  D : B -> Type	  g : forall b : B, D b <~> C b	  ============================	  (forall g0 : forall a : A, D (f a), ExtensionAlong f D g0) *	  (forall h k : forall b : B, D b,	   ExtendableAlong n f (fun b : B => h b = k b)) ->	  (forall g0 : forall a : A, C (f a), ExtensionAlong f C g0) *	  (forall h k : forall b : B, C b,	   ExtendableAlong n f (fun b : B => h b = k b))	";
+            data = "1 subgoal (ID 239)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IH : forall D C : B -> Type,	       (forall b : B, C b <~> D b) ->	       ExtendableAlong n f C -> ExtendableAlong n f D	  C : B -> Type	  D : B -> Type	  g : forall b : B, D b <~> C b	  ============================	  (forall g0 : forall a : A, D (f a), ExtensionAlong f D g0) *	  (forall h k : forall b : B, D b,	   ExtendableAlong n f (fun b : B => h b = k b)) ->	  (forall g0 : forall a : A, C (f a), ExtensionAlong f C g0) *	  (forall h k : forall b : B, C b,	   ExtendableAlong n f (fun b : B => h b = k b))	";
             responses[i]=data;
           
 
             i = 237;
-            data = "2 subgoals (ID 247)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IH : forall D C : B -> Type,	       (forall b : B, C b <~> D b) ->	       ExtendableAlong n f C -> ExtendableAlong n f D	  C : B -> Type	  D : B -> Type	  g : forall b : B, D b <~> C b	  ============================	  (forall g0 : forall a : A, D (f a), ExtensionAlong f D g0) ->	  forall g0 : forall a : A, C (f a), ExtensionAlong f C g0		subgoal 2 (ID 248) is:	 (forall h k : forall b : B, D b,	  ExtendableAlong n f (fun b : B => h b = k b)) ->	 forall h k : forall b : B, C b, ExtendableAlong n f (fun b : B => h b = k b)	";
+            data = "2 subgoals (ID 250)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IH : forall D C : B -> Type,	       (forall b : B, C b <~> D b) ->	       ExtendableAlong n f C -> ExtendableAlong n f D	  C : B -> Type	  D : B -> Type	  g : forall b : B, D b <~> C b	  ============================	  (forall g0 : forall a : A, D (f a), ExtensionAlong f D g0) ->	  forall g0 : forall a : A, C (f a), ExtensionAlong f C g0		subgoal 2 (ID 252) is:	 (forall h k : forall b : B, D b,	  ExtendableAlong n f (fun b : B => h b = k b)) ->	 forall h k : forall b : B, C b, ExtendableAlong n f (fun b : B => h b = k b)	";
             responses[i]=data;
           
 
             i = 238;
-            data = "1 subgoal (ID 247)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IH : forall D C : B -> Type,	       (forall b : B, C b <~> D b) ->	       ExtendableAlong n f C -> ExtendableAlong n f D	  C : B -> Type	  D : B -> Type	  g : forall b : B, D b <~> C b	  ============================	  (forall g0 : forall a : A, D (f a), ExtensionAlong f D g0) ->	  forall g0 : forall a : A, C (f a), ExtensionAlong f C g0	1 subgoal (ID 279)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IH : forall D C : B -> Type,	       (forall b : B, C b <~> D b) ->	       ExtendableAlong n f C -> ExtendableAlong n f D	  C : B -> Type	  D : B -> Type	  g : forall b : B, D b <~> C b	  h : forall a : A, C (f a)	  ============================	  ExtensionAlong f D (functor_forall idmap (fun a : A => _^-1) h) ->	  ExtensionAlong f C h	";
+            data = "1 subgoal (ID 250)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IH : forall D C : B -> Type,	       (forall b : B, C b <~> D b) ->	       ExtendableAlong n f C -> ExtendableAlong n f D	  C : B -> Type	  D : B -> Type	  g : forall b : B, D b <~> C b	  ============================	  (forall g0 : forall a : A, D (f a), ExtensionAlong f D g0) ->	  forall g0 : forall a : A, C (f a), ExtensionAlong f C g0	1 subgoal (ID 277)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IH : forall D C : B -> Type,	       (forall b : B, C b <~> D b) ->	       ExtendableAlong n f C -> ExtendableAlong n f D	  C : B -> Type	  D : B -> Type	  g : forall b : B, D b <~> C b	  h : forall a : A, C (f a)	  ============================	  ExtensionAlong f D (functor_forall idmap (fun a : A => _^-1) h) ->	  ExtensionAlong f C h	";
             responses[i]=data;
           
 
             i = 239;
-            data = "1 subgoal (ID 292)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IH : forall D C : B -> Type,	       (forall b : B, C b <~> D b) ->	       ExtendableAlong n f C -> ExtendableAlong n f D	  C : B -> Type	  D : B -> Type	  g : forall b : B, D b <~> C b	  h : forall a : A, C (f a)	  k : forall a : B, D a	  ============================	  (forall x : A, k (f x) = functor_forall idmap (fun a : A => _^-1) h x) ->	  forall x : A, functor_forall idmap (fun b : B => g b) k (f x) = h x	";
+            data = "1 subgoal (ID 291)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IH : forall D C : B -> Type,	       (forall b : B, C b <~> D b) ->	       ExtendableAlong n f C -> ExtendableAlong n f D	  C : B -> Type	  D : B -> Type	  g : forall b : B, D b <~> C b	  h : forall a : A, C (f a)	  k : forall a : B, D a	  ============================	  (forall x : A, k (f x) = functor_forall idmap (fun a : A => _^-1) h x) ->	  forall x : A, functor_forall idmap (fun b : B => g b) k (f x) = h x	";
             responses[i]=data;
           
 
             i = 240;
-            data = "1 subgoal (ID 303)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IH : forall D C : B -> Type,	       (forall b : B, C b <~> D b) ->	       ExtendableAlong n f C -> ExtendableAlong n f D	  C : B -> Type	  D : B -> Type	  g : forall b : B, D b <~> C b	  h : forall a : A, C (f a)	  k : forall a : B, D a	  a : A	  ============================	  k (f a) = _^-1 (h a) -> g (f a) (k (f a)) = h a	";
+            data = "1 subgoal (ID 305)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IH : forall D C : B -> Type,	       (forall b : B, C b <~> D b) ->	       ExtendableAlong n f C -> ExtendableAlong n f D	  C : B -> Type	  D : B -> Type	  g : forall b : B, D b <~> C b	  h : forall a : A, C (f a)	  k : forall a : B, D a	  a : A	  ============================	  k (f a) = _^-1 (h a) -> g (f a) (k (f a)) = h a	";
             responses[i]=data;
           
 
             i = 241;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 248)		subgoal 1 (ID 248) is:	 (forall h k : forall b : B, D b,	  ExtendableAlong n f (fun b : B => h b = k b)) ->	 forall h k : forall b : B, C b, ExtendableAlong n f (fun b : B => h b = k b)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 252)		subgoal 1 (ID 252) is:	 (forall h k : forall b : B, D b,	  ExtendableAlong n f (fun b : B => h b = k b)) ->	 forall h k : forall b : B, C b, ExtendableAlong n f (fun b : B => h b = k b)	";
             responses[i]=data;
           
 
             i = 242;
-            data = "1 subgoal (ID 248)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IH : forall D C : B -> Type,	       (forall b : B, C b <~> D b) ->	       ExtendableAlong n f C -> ExtendableAlong n f D	  C : B -> Type	  D : B -> Type	  g : forall b : B, D b <~> C b	  ============================	  (forall h k : forall b : B, D b,	   ExtendableAlong n f (fun b : B => h b = k b)) ->	  forall h k : forall b : B, C b,	  ExtendableAlong n f (fun b : B => h b = k b)	1 subgoal (ID 337)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IH : forall D C : B -> Type,	       (forall b : B, C b <~> D b) ->	       ExtendableAlong n f C -> ExtendableAlong n f D	  C : B -> Type	  D : B -> Type	  g : forall b : B, D b <~> C b	  h : forall a : B, C a	  ============================	  (forall k : forall b : B, D b,	   ExtendableAlong n f	     (fun b : B => functor_forall idmap (fun b0 : B => _^-1) h b = k b)) ->	  forall k : forall b : B, C b, ExtendableAlong n f (fun b : B => h b = k b)	";
+            data = "1 subgoal (ID 252)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IH : forall D C : B -> Type,	       (forall b : B, C b <~> D b) ->	       ExtendableAlong n f C -> ExtendableAlong n f D	  C : B -> Type	  D : B -> Type	  g : forall b : B, D b <~> C b	  ============================	  (forall h k : forall b : B, D b,	   ExtendableAlong n f (fun b : B => h b = k b)) ->	  forall h k : forall b : B, C b,	  ExtendableAlong n f (fun b : B => h b = k b)	1 subgoal (ID 332)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IH : forall D C : B -> Type,	       (forall b : B, C b <~> D b) ->	       ExtendableAlong n f C -> ExtendableAlong n f D	  C : B -> Type	  D : B -> Type	  g : forall b : B, D b <~> C b	  h : forall a : B, C a	  ============================	  (forall k : forall b : B, D b,	   ExtendableAlong n f	     (fun b : B => functor_forall idmap (fun b0 : B => _^-1) h b = k b)) ->	  forall k : forall b : B, C b, ExtendableAlong n f (fun b : B => h b = k b)	";
             responses[i]=data;
           
 
             i = 243;
-            data = "1 subgoal (ID 370)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IH : forall D C : B -> Type,	       (forall b : B, C b <~> D b) ->	       ExtendableAlong n f C -> ExtendableAlong n f D	  C : B -> Type	  D : B -> Type	  g : forall b : B, D b <~> C b	  h, k : forall a : B, C a	  ============================	  ExtendableAlong n f (fun b : B => _^-1 (h b) = _^-1 (k b)) ->	  ExtendableAlong n f (fun b : B => h b = k b)	";
+            data = "1 subgoal (ID 359)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IH : forall D C : B -> Type,	       (forall b : B, C b <~> D b) ->	       ExtendableAlong n f C -> ExtendableAlong n f D	  C : B -> Type	  D : B -> Type	  g : forall b : B, D b <~> C b	  h, k : forall a : B, C a	  ============================	  ExtendableAlong n f (fun b : B => _^-1 (h b) = _^-1 (k b)) ->	  ExtendableAlong n f (fun b : B => h b = k b)	";
             responses[i]=data;
           
 
             i = 244;
-            data = "1 subgoal (ID 378)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IH : forall D C : B -> Type,	       (forall b : B, C b <~> D b) ->	       ExtendableAlong n f C -> ExtendableAlong n f D	  C : B -> Type	  D : B -> Type	  g : forall b : B, D b <~> C b	  h, k : forall a : B, C a	  b : B	  ============================	  _^-1 (h b) = _^-1 (k b) <~> h b = k b	";
+            data = "1 subgoal (ID 368)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IH : forall D C : B -> Type,	       (forall b : B, C b <~> D b) ->	       ExtendableAlong n f C -> ExtendableAlong n f D	  C : B -> Type	  D : B -> Type	  g : forall b : B, D b <~> C b	  h, k : forall a : B, C a	  b : B	  ============================	  _^-1 (h b) = _^-1 (k b) <~> h b = k b	";
             responses[i]=data;
           
 
@@ -1298,12 +1298,12 @@
           
 
             i = 256;
-            data = "1 subgoal (ID 286)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extf : ExtendableAlong n.+1 f (fun b : B => P (g b))	  h : forall a : A, P (g (f a))	  a : A	  ============================	  pr1 (fst extg (pr1 (fst extf h))) (g (f a)) = h a	";
+            data = "1 subgoal (ID 286)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extf : ExtendableAlong n.+1 f (fun b : B => P (g b))	  h : forall a : A, P (g (f a))	  a : A	  ============================	  (fst extg (fst extf h).1).1 (g (f a)) = h a	";
             responses[i]=data;
           
 
             i = 257;
-            data = "1 subgoal (ID 301)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extf : ExtendableAlong n.+1 f (fun b : B => P (g b))	  h : forall a : A, P (g (f a))	  a : A	  ============================	  pr1 (fst extf h) (f a) = h a	";
+            data = "1 subgoal (ID 302)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extf : ExtendableAlong n.+1 f (fun b : B => P (g b))	  h : forall a : A, P (g (f a))	  a : A	  ============================	  (fst extf h).1 (f a) = h a	";
             responses[i]=data;
           
 
@@ -1313,22 +1313,22 @@
           
 
             i = 259;
-            data = "1 subgoal (ID 274)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extf : ExtendableAlong n.+1 f (fun b : B => P (g b))	  ============================	  forall h k : forall b : C, P b,	  ExtendableAlong n (fun x : A => g (f x)) (fun b : C => h b = k b)	1 subgoal (ID 307)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extf : ExtendableAlong n.+1 f (fun b : B => P (g b))	  h, k : forall b : C, P b	  ============================	  ExtendableAlong n (fun x : A => g (f x)) (fun b : C => h b = k b)	";
+            data = "1 subgoal (ID 274)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extf : ExtendableAlong n.+1 f (fun b : B => P (g b))	  ============================	  forall h k : forall b : C, P b,	  ExtendableAlong n (fun x : A => g (f x)) (fun b : C => h b = k b)	1 subgoal (ID 308)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extf : ExtendableAlong n.+1 f (fun b : B => P (g b))	  h, k : forall b : C, P b	  ============================	  ExtendableAlong n (fun x : A => g (f x)) (fun b : C => h b = k b)	";
             responses[i]=data;
           
 
             i = 260;
-            data = "2 subgoals (ID 308)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extf : ExtendableAlong n.+1 f (fun b : B => P (g b))	  h, k : forall b : C, P b	  ============================	  ExtendableAlong n g (fun b : C => h b = k b)		subgoal 2 (ID 309) is:	 ExtendableAlong n f (fun b : B => h (g b) = k (g b))	";
+            data = "2 subgoals (ID 309)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extf : ExtendableAlong n.+1 f (fun b : B => P (g b))	  h, k : forall b : C, P b	  ============================	  ExtendableAlong n g (fun b : C => h b = k b)		subgoal 2 (ID 310) is:	 ExtendableAlong n f (fun b : B => h (g b) = k (g b))	";
             responses[i]=data;
           
 
             i = 261;
-            data = "1 subgoal (ID 308)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extf : ExtendableAlong n.+1 f (fun b : B => P (g b))	  h, k : forall b : C, P b	  ============================	  ExtendableAlong n g (fun b : C => h b = k b)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 309)		subgoal 1 (ID 309) is:	 ExtendableAlong n f (fun b : B => h (g b) = k (g b))	";
+            data = "1 subgoal (ID 309)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extf : ExtendableAlong n.+1 f (fun b : B => P (g b))	  h, k : forall b : C, P b	  ============================	  ExtendableAlong n g (fun b : C => h b = k b)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 310)		subgoal 1 (ID 310) is:	 ExtendableAlong n f (fun b : B => h (g b) = k (g b))	";
             responses[i]=data;
           
 
             i = 262;
-            data = "1 subgoal (ID 309)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extf : ExtendableAlong n.+1 f (fun b : B => P (g b))	  h, k : forall b : C, P b	  ============================	  ExtendableAlong n f (fun b : B => h (g b) = k (g b))	No more subgoals.	";
+            data = "1 subgoal (ID 310)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extf : ExtendableAlong n.+1 f (fun b : B => P (g b))	  h, k : forall b : C, P b	  ============================	  ExtendableAlong n f (fun b : B => h (g b) = k (g b))	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1378,7 +1378,7 @@
           
 
             i = 272;
-            data = "1 subgoal (ID 309)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n (fun x : A => g (f x)) P ->	        ExtendableAlong n f (fun b : B => P (g b))	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h : forall a : A, P (g (f a))	  a : A	  ============================	  (pr1 (fst extgf h) oD g) (f a) = h a	";
+            data = "1 subgoal (ID 309)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n (fun x : A => g (f x)) P ->	        ExtendableAlong n f (fun b : B => P (g b))	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h : forall a : A, P (g (f a))	  a : A	  ============================	  ((fst extgf h).1 oD g) (f a) = h a	";
             responses[i]=data;
           
 
@@ -1393,32 +1393,32 @@
           
 
             i = 275;
-            data = "1 subgoal (ID 320)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n (fun x : A => g (f x)) P ->	        ExtendableAlong n f (fun b : B => P (g b))	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h, k : forall b : B, P (g b)	  h' := pr1 (fst extg h) : forall y : C, P y	  ============================	  ExtendableAlong n f (fun b : B => h b = k b)	";
+            data = "1 subgoal (ID 320)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n (fun x : A => g (f x)) P ->	        ExtendableAlong n f (fun b : B => P (g b))	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h, k : forall b : B, P (g b)	  h' := (fst extg h).1 : forall y : C, P y	  ============================	  ExtendableAlong n f (fun b : B => h b = k b)	";
             responses[i]=data;
           
 
             i = 276;
-            data = "1 subgoal (ID 325)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n (fun x : A => g (f x)) P ->	        ExtendableAlong n f (fun b : B => P (g b))	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h, k : forall b : B, P (g b)	  h' := pr1 (fst extg h) : forall y : C, P y	  k' := pr1 (fst extg k) : forall y : C, P y	  ============================	  ExtendableAlong n f (fun b : B => h b = k b)	";
+            data = "1 subgoal (ID 325)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n (fun x : A => g (f x)) P ->	        ExtendableAlong n f (fun b : B => P (g b))	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h, k : forall b : B, P (g b)	  h' := (fst extg h).1 : forall y : C, P y	  k' := (fst extg k).1 : forall y : C, P y	  ============================	  ExtendableAlong n f (fun b : B => h b = k b)	";
             responses[i]=data;
           
 
             i = 277;
-            data = "2 subgoals (ID 337)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n (fun x : A => g (f x)) P ->	        ExtendableAlong n f (fun b : B => P (g b))	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h, k : forall b : B, P (g b)	  h' := pr1 (fst extg h) : forall y : C, P y	  k' := pr1 (fst extg k) : forall y : C, P y	  ============================	  forall b : B, h' (g b) = k' (g b) <~> h b = k b		subgoal 2 (ID 338) is:	 ExtendableAlong n f (fun b : B => h' (g b) = k' (g b))	";
+            data = "2 subgoals (ID 338)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n (fun x : A => g (f x)) P ->	        ExtendableAlong n f (fun b : B => P (g b))	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h, k : forall b : B, P (g b)	  h' := (fst extg h).1 : forall y : C, P y	  k' := (fst extg k).1 : forall y : C, P y	  ============================	  forall b : B, h' (g b) = k' (g b) <~> h b = k b		subgoal 2 (ID 340) is:	 ExtendableAlong n f (fun b : B => h' (g b) = k' (g b))	";
             responses[i]=data;
           
 
             i = 278;
-            data = "1 subgoal (ID 337)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n (fun x : A => g (f x)) P ->	        ExtendableAlong n f (fun b : B => P (g b))	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h, k : forall b : B, P (g b)	  h' := pr1 (fst extg h) : forall y : C, P y	  k' := pr1 (fst extg k) : forall y : C, P y	  ============================	  forall b : B, h' (g b) = k' (g b) <~> h b = k b	1 subgoal (ID 339)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n (fun x : A => g (f x)) P ->	        ExtendableAlong n f (fun b : B => P (g b))	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h, k : forall b : B, P (g b)	  h' := pr1 (fst extg h) : forall y : C, P y	  k' := pr1 (fst extg k) : forall y : C, P y	  b : B	  ============================	  h' (g b) = k' (g b) <~> h b = k b	";
+            data = "1 subgoal (ID 338)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n (fun x : A => g (f x)) P ->	        ExtendableAlong n f (fun b : B => P (g b))	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h, k : forall b : B, P (g b)	  h' := (fst extg h).1 : forall y : C, P y	  k' := (fst extg k).1 : forall y : C, P y	  ============================	  forall b : B, h' (g b) = k' (g b) <~> h b = k b	1 subgoal (ID 341)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n (fun x : A => g (f x)) P ->	        ExtendableAlong n f (fun b : B => P (g b))	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h, k : forall b : B, P (g b)	  h' := (fst extg h).1 : forall y : C, P y	  k' := (fst extg k).1 : forall y : C, P y	  b : B	  ============================	  h' (g b) = k' (g b) <~> h b = k b	";
             responses[i]=data;
           
 
             i = 279;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 338)		subgoal 1 (ID 338) is:	 ExtendableAlong n f (fun b : B => h' (g b) = k' (g b))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 340)		subgoal 1 (ID 340) is:	 ExtendableAlong n f (fun b : B => h' (g b) = k' (g b))	";
             responses[i]=data;
           
 
             i = 280;
-            data = "1 subgoal (ID 338)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n (fun x : A => g (f x)) P ->	        ExtendableAlong n f (fun b : B => P (g b))	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h, k : forall b : B, P (g b)	  h' := pr1 (fst extg h) : forall y : C, P y	  k' := pr1 (fst extg k) : forall y : C, P y	  ============================	  ExtendableAlong n f (fun b : B => h' (g b) = k' (g b))	No more subgoals.	";
+            data = "1 subgoal (ID 340)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n g P ->	        ExtendableAlong n (fun x : A => g (f x)) P ->	        ExtendableAlong n f (fun b : B => P (g b))	  P : C -> Type	  extg : ExtendableAlong n.+1 g P	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h, k : forall b : B, P (g b)	  h' := (fst extg h).1 : forall y : C, P y	  k' := (fst extg k).1 : forall y : C, P y	  ============================	  ExtendableAlong n f (fun b : B => h' (g b) = k' (g b))	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1448,12 +1448,12 @@
           
 
             i = 286;
-            data = "1 subgoal (ID 333)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n.+1 f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P -> ExtendableAlong n g P	  P : C -> Type	  extf : ExtendableAlong n.+2 f (fun b : B => P (g b))	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h : forall a : B, P (g a)	  b : B	  ============================	  pr1 (fst extgf (h oD f)) (g b) = h b	";
+            data = "1 subgoal (ID 333)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n.+1 f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P -> ExtendableAlong n g P	  P : C -> Type	  extf : ExtendableAlong n.+2 f (fun b : B => P (g b))	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h : forall a : B, P (g a)	  b : B	  ============================	  (fst extgf (h oD f)).1 (g b) = h b	";
             responses[i]=data;
           
 
             i = 287;
-            data = "1 subgoal (ID 353)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n.+1 f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P -> ExtendableAlong n g P	  P : C -> Type	  extf : ExtendableAlong n.+2 f (fun b : B => P (g b))	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h : forall a : B, P (g a)	  b : B	  a : A	  ============================	  (pr1 (fst extgf (h oD f)) oD g) (f a) = h (f a)	";
+            data = "1 subgoal (ID 354)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n.+1 f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P -> ExtendableAlong n g P	  P : C -> Type	  extf : ExtendableAlong n.+2 f (fun b : B => P (g b))	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h : forall a : B, P (g a)	  b : B	  a : A	  ============================	  ((fst extgf (h oD f)).1 oD g) (f a) = h (f a)	";
             responses[i]=data;
           
 
@@ -1463,22 +1463,22 @@
           
 
             i = 289;
-            data = "1 subgoal (ID 322)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n.+1 f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P -> ExtendableAlong n g P	  P : C -> Type	  extf : ExtendableAlong n.+2 f (fun b : B => P (g b))	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  ============================	  forall h k : forall b : C, P b,	  ExtendableAlong n g (fun b : C => h b = k b)	1 subgoal (ID 362)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n.+1 f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P -> ExtendableAlong n g P	  P : C -> Type	  extf : ExtendableAlong n.+2 f (fun b : B => P (g b))	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h, k : forall b : C, P b	  ============================	  ExtendableAlong n g (fun b : C => h b = k b)	";
+            data = "1 subgoal (ID 322)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n.+1 f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P -> ExtendableAlong n g P	  P : C -> Type	  extf : ExtendableAlong n.+2 f (fun b : B => P (g b))	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  ============================	  forall h k : forall b : C, P b,	  ExtendableAlong n g (fun b : C => h b = k b)	1 subgoal (ID 363)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n.+1 f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P -> ExtendableAlong n g P	  P : C -> Type	  extf : ExtendableAlong n.+2 f (fun b : B => P (g b))	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h, k : forall b : C, P b	  ============================	  ExtendableAlong n g (fun b : C => h b = k b)	";
             responses[i]=data;
           
 
             i = 290;
-            data = "2 subgoals (ID 363)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n.+1 f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P -> ExtendableAlong n g P	  P : C -> Type	  extf : ExtendableAlong n.+2 f (fun b : B => P (g b))	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h, k : forall b : C, P b	  ============================	  ExtendableAlong n.+1 f (fun b : B => h (g b) = k (g b))		subgoal 2 (ID 364) is:	 ExtendableAlong n (fun x : A => g (f x)) (fun b : C => h b = k b)	";
+            data = "2 subgoals (ID 364)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n.+1 f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P -> ExtendableAlong n g P	  P : C -> Type	  extf : ExtendableAlong n.+2 f (fun b : B => P (g b))	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h, k : forall b : C, P b	  ============================	  ExtendableAlong n.+1 f (fun b : B => h (g b) = k (g b))		subgoal 2 (ID 365) is:	 ExtendableAlong n (fun x : A => g (f x)) (fun b : C => h b = k b)	";
             responses[i]=data;
           
 
             i = 291;
-            data = "1 subgoal (ID 363)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n.+1 f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P -> ExtendableAlong n g P	  P : C -> Type	  extf : ExtendableAlong n.+2 f (fun b : B => P (g b))	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h, k : forall b : C, P b	  ============================	  ExtendableAlong n.+1 f (fun b : B => h (g b) = k (g b))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 364)		subgoal 1 (ID 364) is:	 ExtendableAlong n (fun x : A => g (f x)) (fun b : C => h b = k b)	";
+            data = "1 subgoal (ID 364)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n.+1 f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P -> ExtendableAlong n g P	  P : C -> Type	  extf : ExtendableAlong n.+2 f (fun b : B => P (g b))	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h, k : forall b : C, P b	  ============================	  ExtendableAlong n.+1 f (fun b : B => h (g b) = k (g b))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 365)		subgoal 1 (ID 365) is:	 ExtendableAlong n (fun x : A => g (f x)) (fun b : C => h b = k b)	";
             responses[i]=data;
           
 
             i = 292;
-            data = "1 subgoal (ID 364)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n.+1 f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P -> ExtendableAlong n g P	  P : C -> Type	  extf : ExtendableAlong n.+2 f (fun b : B => P (g b))	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h, k : forall b : C, P b	  ============================	  ExtendableAlong n (fun x : A => g (f x)) (fun b : C => h b = k b)	No more subgoals.	";
+            data = "1 subgoal (ID 365)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  n : nat	  IHn : forall P : C -> Type,	        ExtendableAlong n.+1 f (fun b : B => P (g b)) ->	        ExtendableAlong n (fun x : A => g (f x)) P -> ExtendableAlong n g P	  P : C -> Type	  extf : ExtendableAlong n.+2 f (fun b : B => P (g b))	  extgf : ExtendableAlong n.+1 (fun x : A => g (f x)) P	  h, k : forall b : C, P b	  ============================	  ExtendableAlong n (fun x : A => g (f x)) (fun b : C => h b = k b)	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1528,17 +1528,17 @@
           
 
             i = 302;
-            data = "1 subgoal (ID 351)	  	  A : Type	  B : Type	  f, g : A -> B	  p : f == g	  n : nat	  IHn : forall C : B -> Type, ExtendableAlong n f C -> ExtendableAlong n g C	  C : B -> Type	  extf : ExtendableAlong n.+1 f C	  h : forall a : A, C (g a)	  a : A	  ============================	  pr1 (fst extf (fun a0 : A => transport C (p a0)^ (h a0))) (g a) = h a	";
+            data = "1 subgoal (ID 351)	  	  A : Type	  B : Type	  f, g : A -> B	  p : f == g	  n : nat	  IHn : forall C : B -> Type, ExtendableAlong n f C -> ExtendableAlong n g C	  C : B -> Type	  extf : ExtendableAlong n.+1 f C	  h : forall a : A, C (g a)	  a : A	  ============================	  (fst extf (fun a0 : A => transport C (p a0)^ (h a0))).1 (g a) = h a	";
             responses[i]=data;
           
 
             i = 303;
-            data = "1 subgoal (ID 378)	  	  A : Type	  B : Type	  f, g : A -> B	  p : f == g	  n : nat	  IHn : forall C : B -> Type, ExtendableAlong n f C -> ExtendableAlong n g C	  C : B -> Type	  extf : ExtendableAlong n.+1 f C	  h : forall a : A, C (g a)	  a : A	  ============================	  transport C (p a)	    (pr1 (fst extf (fun a0 : A => transport C (p a0)^ (h a0))) (f a)) = 	  h a	";
+            data = "1 subgoal (ID 379)	  	  A : Type	  B : Type	  f, g : A -> B	  p : f == g	  n : nat	  IHn : forall C : B -> Type, ExtendableAlong n f C -> ExtendableAlong n g C	  C : B -> Type	  extf : ExtendableAlong n.+1 f C	  h : forall a : A, C (g a)	  a : A	  ============================	  transport C (p a)	    ((fst extf (fun a0 : A => transport C (p a0)^ (h a0))).1 (f a)) = 	  h a	";
             responses[i]=data;
           
 
             i = 304;
-            data = "1 subgoal (ID 380)	  	  A : Type	  B : Type	  f, g : A -> B	  p : f == g	  n : nat	  IHn : forall C : B -> Type, ExtendableAlong n f C -> ExtendableAlong n g C	  C : B -> Type	  extf : ExtendableAlong n.+1 f C	  h : forall a : A, C (g a)	  a : A	  ============================	  pr1 (fst extf (fun a0 : A => transport C (p a0)^ (h a0))) (f a) =	  transport C (p a)^ (h a)	";
+            data = "1 subgoal (ID 381)	  	  A : Type	  B : Type	  f, g : A -> B	  p : f == g	  n : nat	  IHn : forall C : B -> Type, ExtendableAlong n f C -> ExtendableAlong n g C	  C : B -> Type	  extf : ExtendableAlong n.+1 f C	  h : forall a : A, C (g a)	  a : A	  ============================	  (fst extf (fun a0 : A => transport C (p a0)^ (h a0))).1 (f a) =	  transport C (p a)^ (h a)	";
             responses[i]=data;
           
 
@@ -1548,7 +1548,7 @@
           
 
             i = 306;
-            data = "1 subgoal (ID 334)	  	  A : Type	  B : Type	  f, g : A -> B	  p : f == g	  n : nat	  IHn : forall C : B -> Type, ExtendableAlong n f C -> ExtendableAlong n g C	  C : B -> Type	  extf : ExtendableAlong n.+1 f C	  ============================	  forall h k : forall b : B, C b,	  ExtendableAlong n g (fun b : B => h b = k b)	1 subgoal (ID 395)	  	  A : Type	  B : Type	  f, g : A -> B	  p : f == g	  n : nat	  IHn : forall C : B -> Type, ExtendableAlong n f C -> ExtendableAlong n g C	  C : B -> Type	  extf : ExtendableAlong n.+1 f C	  h, k : forall b : B, C b	  ============================	  ExtendableAlong n g (fun b : B => h b = k b)	";
+            data = "1 subgoal (ID 334)	  	  A : Type	  B : Type	  f, g : A -> B	  p : f == g	  n : nat	  IHn : forall C : B -> Type, ExtendableAlong n f C -> ExtendableAlong n g C	  C : B -> Type	  extf : ExtendableAlong n.+1 f C	  ============================	  forall h k : forall b : B, C b,	  ExtendableAlong n g (fun b : B => h b = k b)	1 subgoal (ID 396)	  	  A : Type	  B : Type	  f, g : A -> B	  p : f == g	  n : nat	  IHn : forall C : B -> Type, ExtendableAlong n f C -> ExtendableAlong n g C	  C : B -> Type	  extf : ExtendableAlong n.+1 f C	  h, k : forall b : B, C b	  ============================	  ExtendableAlong n g (fun b : B => h b = k b)	";
             responses[i]=data;
           
 
@@ -1608,12 +1608,12 @@
           
 
             i = 318;
-            data = "1 subgoal (ID 381)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  n : nat	  IHn : forall C : B -> Type, ExtendableAlong n f C	  C : B -> Type	  h : forall a : A, C (f a)	  a : A	  ============================	  transport C (ap f (eissect _ a)) (h (_^-1 (f a))) = h a	";
+            data = "1 subgoal (ID 382)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  n : nat	  IHn : forall C : B -> Type, ExtendableAlong n f C	  C : B -> Type	  h : forall a : A, C (f a)	  a : A	  ============================	  transport C (ap f (eissect _ a)) (h (_^-1 (f a))) = h a	";
             responses[i]=data;
           
 
             i = 319;
-            data = "1 subgoal (ID 399)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  n : nat	  IHn : forall C : B -> Type, ExtendableAlong n f C	  C : B -> Type	  h : forall a : A, C (f a)	  a : A	  ============================	  transport (fun x : A => C (f x)) (eissect _ a) (h (_^-1 (f a))) = h a	";
+            data = "1 subgoal (ID 401)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  n : nat	  IHn : forall C : B -> Type, ExtendableAlong n f C	  C : B -> Type	  h : forall a : A, C (f a)	  a : A	  ============================	  transport (fun x : A => C (f x)) (eissect _ a) (h (_^-1 (f a))) = h a	";
             responses[i]=data;
           
 
@@ -1623,7 +1623,7 @@
           
 
             i = 321;
-            data = "1 subgoal (ID 345)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  n : nat	  IHn : forall C : B -> Type, ExtendableAlong n f C	  C : B -> Type	  ============================	  forall h k : forall b : B, C b,	  ExtendableAlong n f (fun b : B => h b = k b)	1 subgoal (ID 408)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  n : nat	  IHn : forall C : B -> Type, ExtendableAlong n f C	  C : B -> Type	  h, k : forall b : B, C b	  ============================	  ExtendableAlong n f (fun b : B => h b = k b)	";
+            data = "1 subgoal (ID 345)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  n : nat	  IHn : forall C : B -> Type, ExtendableAlong n f C	  C : B -> Type	  ============================	  forall h k : forall b : B, C b,	  ExtendableAlong n f (fun b : B => h b = k b)	1 subgoal (ID 410)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  n : nat	  IHn : forall C : B -> Type, ExtendableAlong n f C	  C : B -> Type	  h, k : forall b : B, C b	  ============================	  ExtendableAlong n f (fun b : B => h b = k b)	";
             responses[i]=data;
           
 
@@ -1678,7 +1678,7 @@
           
 
             i = 332;
-            data = "1 subgoal (ID 375)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        (forall b : B, Contr (C b)) -> ExtendableAlong n f C	  C : B -> Type	  H : forall b : B, Contr (C b)	  h : forall a : A, C (f a)	  a : A	  ============================	  center _ = h a	";
+            data = "1 subgoal (ID 367)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        (forall b : B, Contr (C b)) -> ExtendableAlong n f C	  C : B -> Type	  H : forall b : B, Contr (C b)	  h : forall a : A, C (f a)	  a : A	  ============================	  center _ = h a	";
             responses[i]=data;
           
 
@@ -1688,7 +1688,7 @@
           
 
             i = 334;
-            data = "1 subgoal (ID 357)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        (forall b : B, Contr (C b)) -> ExtendableAlong n f C	  C : B -> Type	  H : forall b : B, Contr (C b)	  ============================	  forall h k : forall b : B, C b,	  ExtendableAlong n f (fun b : B => h b = k b)	1 subgoal (ID 379)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        (forall b : B, Contr (C b)) -> ExtendableAlong n f C	  C : B -> Type	  H : forall b : B, Contr (C b)	  h, k : forall b : B, C b	  ============================	  ExtendableAlong n f (fun b : B => h b = k b)	";
+            data = "1 subgoal (ID 357)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        (forall b : B, Contr (C b)) -> ExtendableAlong n f C	  C : B -> Type	  H : forall b : B, Contr (C b)	  ============================	  forall h k : forall b : B, C b,	  ExtendableAlong n f (fun b : B => h b = k b)	1 subgoal (ID 371)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        (forall b : B, Contr (C b)) -> ExtendableAlong n f C	  C : B -> Type	  H : forall b : B, Contr (C b)	  h, k : forall b : B, C b	  ============================	  ExtendableAlong n f (fun b : B => h b = k b)	";
             responses[i]=data;
           
 
@@ -1948,7 +1948,7 @@
           
 
             i = 386;
-            data = "1 subgoal (ID 406)	  	  H : Funext	  A : Type	  B : Type	  C : B -> Type	  f : A -> B	  n : nat	  ============================	  ExtendableAlong (1 n) f C <~>	  PathSplit n (fun g : forall b : B, C b => g oD f)	";
+            data = "1 subgoal (ID 407)	  	  H : Funext	  A : Type	  B : Type	  C : B -> Type	  f : A -> B	  n : nat	  ============================	  ExtendableAlong (1%equiv n) f C <~>	  PathSplit n (fun g : forall b : B, C b => g oD f)	";
             responses[i]=data;
           
 
@@ -2148,17 +2148,17 @@
           
 
             i = 426;
-            data = "1 subgoal (ID 603)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        (forall b : B, ooExtendableAlong (const tt) (unit_name (C b))) ->	        ExtendableAlong n f C	  C : B -> Type	  orth : forall b : B, ooExtendableAlong (const tt) (unit_name (C b))	  g : forall a : A, C (f a)	  ============================	  forall x : A,	  pr1	    (fst (orth (f x) 1)	       (fun x0 : hfiber f (f x) => transport C (pr2 x0) (g (pr1 x0)))) tt =	  g x	";
+            data = "1 subgoal (ID 603)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        (forall b : B, ooExtendableAlong (const tt) (unit_name (C b))) ->	        ExtendableAlong n f C	  C : B -> Type	  orth : forall b : B, ooExtendableAlong (const tt) (unit_name (C b))	  g : forall a : A, C (f a)	  ============================	  forall x : A,	  (fst (orth (f x) 1) (fun x0 : hfiber f (f x) => transport C x0.2 (g x0.1))).1	    tt = g x	";
             responses[i]=data;
           
 
             i = 427;
-            data = "1 subgoal (ID 604)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        (forall b : B, ooExtendableAlong (const tt) (unit_name (C b))) ->	        ExtendableAlong n f C	  C : B -> Type	  orth : forall b : B, ooExtendableAlong (const tt) (unit_name (C b))	  g : forall a : A, C (f a)	  a : A	  ============================	  pr1	    (fst (orth (f a) 1)	       (fun x : hfiber f (f a) => transport C (pr2 x) (g (pr1 x)))) tt = 	  g a	";
+            data = "1 subgoal (ID 604)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        (forall b : B, ooExtendableAlong (const tt) (unit_name (C b))) ->	        ExtendableAlong n f C	  C : B -> Type	  orth : forall b : B, ooExtendableAlong (const tt) (unit_name (C b))	  g : forall a : A, C (f a)	  a : A	  ============================	  (fst (orth (f a) 1) (fun x : hfiber f (f a) => transport C x.2 (g x.1))).1	    tt = g a	";
             responses[i]=data;
           
 
             i = 428;
-            data = "1 subgoal (ID 607)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        (forall b : B, ooExtendableAlong (const tt) (unit_name (C b))) ->	        ExtendableAlong n f C	  C : B -> Type	  orth : forall b : B, ooExtendableAlong (const tt) (unit_name (C b))	  g : forall a : A, C (f a)	  a : A	  ============================	  pr1	    (fst (orth (f a) 1)	       (fun x : hfiber f (f a) => transport C (pr2 x) (g (pr1 x))))	    (const tt a) = g a	";
+            data = "1 subgoal (ID 607)	  	  A : Type	  B : Type	  f : A -> B	  n : nat	  IHn : forall C : B -> Type,	        (forall b : B, ooExtendableAlong (const tt) (unit_name (C b))) ->	        ExtendableAlong n f C	  C : B -> Type	  orth : forall b : B, ooExtendableAlong (const tt) (unit_name (C b))	  g : forall a : A, C (f a)	  a : A	  ============================	  (fst (orth (f a) 1) (fun x : hfiber f (f a) => transport C x.2 (g x.1))).1	    (const tt a) = g a	";
             responses[i]=data;
           
 

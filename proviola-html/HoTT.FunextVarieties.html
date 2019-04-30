@@ -308,7 +308,7 @@
           
 
             i = 58;
-            data = "1 subgoal (ID 33)	  	  fe : forall (A : Type) (P : A -> Type) (f g : forall x : A, P x),	       IsEquiv apD10	  A : Type	  P : A -> Type	  f, g : forall x : A, P x	  h : forall x : A, f x = g x	  ============================	  f = g	";
+            data = "1 subgoal (ID 28)	  	  fe : forall (A : Type) (P : A -> Type) (f g : forall x : A, P x),	       IsEquiv apD10	  A : Type	  P : A -> Type	  f, g : forall x : A, P x	  h : forall x : A, f x = g x	  ============================	  f = g	";
             responses[i]=data;
           
 
@@ -338,12 +338,12 @@
           
 
             i = 64;
-            data = "1 subgoal (ID 36)	  	  nf : NaiveFunext	  A : Type	  P : A -> Type	  Pc : forall x : A, Contr (P x)	  ============================	  forall y : forall x : A, P x, (fun x : A => center _) = y	";
+            data = "1 subgoal (ID 32)	  	  nf : NaiveFunext	  A : Type	  P : A -> Type	  Pc : forall x : A, Contr (P x)	  ============================	  forall y : forall x : A, P x, (fun x : A => center _) = y	";
             responses[i]=data;
           
 
             i = 65;
-            data = "1 subgoal (ID 39)	  	  nf : NaiveFunext	  A : Type	  P : A -> Type	  Pc : forall x : A, Contr (P x)	  f : forall x : A, P x	  x : A	  ============================	  center _ = f x	";
+            data = "1 subgoal (ID 35)	  	  nf : NaiveFunext	  A : Type	  P : A -> Type	  Pc : forall x : A, Contr (P x)	  f : forall x : A, P x	  x : A	  ============================	  center _ = f x	";
             responses[i]=data;
           
 
@@ -503,27 +503,27 @@
           
 
             i = 97;
-            data = "1 subgoal (ID 64)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  idhtpy := fun x : A => 1 : f == f	  g : forall x : A, B x	  h : f == g	  r := fun k : forall x : A, {x0 : _ & f x = x0} =>	       (fun x : A => pr1 (k x); fun x : A => pr2 (k x))	   : (forall x : A, {x0 : _ & f x = x0}) -> {g : forall x : A, B x & f == g}	  ============================	  (f; idhtpy) = (g; h)	";
+            data = "1 subgoal (ID 64)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  idhtpy := fun x : A => 1 : f == f	  g : forall x : A, B x	  h : f == g	  r := fun k : forall x : A, {x0 : _ & f x = x0} =>	       (fun x : A => (k x).1; fun x : A => (k x).2)	   : (forall x : A, {x0 : _ & f x = x0}) -> {g : forall x : A, B x & f == g}	  ============================	  (f; idhtpy) = (g; h)	";
             responses[i]=data;
           
 
             i = 98;
-            data = "1 subgoal (ID 72)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  idhtpy := fun x : A => 1 : f == f	  g : forall x : A, B x	  h : f == g	  r := fun k : forall x : A, {x0 : _ & f x = x0} =>	       (fun x : A => pr1 (k x); fun x : A => pr2 (k x))	   : (forall x : A, {x0 : _ & f x = x0}) -> {g : forall x : A, B x & f == g}	  s := fun (g : forall x : A, B x) (h : f == g) (x : A) => (g x; h x)	   : forall g : forall x : A, B x,	     f == g -> forall x : A, {x0 : _ & f x = x0}	  ============================	  (f; idhtpy) = (g; h)	";
+            data = "1 subgoal (ID 72)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  idhtpy := fun x : A => 1 : f == f	  g : forall x : A, B x	  h : f == g	  r := fun k : forall x : A, {x0 : _ & f x = x0} =>	       (fun x : A => (k x).1; fun x : A => (k x).2)	   : (forall x : A, {x0 : _ & f x = x0}) -> {g : forall x : A, B x & f == g}	  s := fun (g : forall x : A, B x) (h : f == g) (x : A) => (g x; h x)	   : forall g : forall x : A, B x,	     f == g -> forall x : A, {x0 : _ & f x = x0}	  ============================	  (f; idhtpy) = (g; h)	";
             responses[i]=data;
           
 
             i = 99;
-            data = "1 subgoal (ID 80)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  idhtpy := fun x : A => 1 : f == f	  g : forall x : A, B x	  h : f == g	  r := fun k : forall x : A, {x0 : _ & f x = x0} =>	       (fun x : A => pr1 (k x); fun x : A => pr2 (k x))	   : (forall x : A, {x0 : _ & f x = x0}) -> {g : forall x : A, B x & f == g}	  s := fun (g : forall x : A, B x) (h : f == g) (x : A) => (g x; h x)	   : forall g : forall x : A, B x,	     f == g -> forall x : A, {x0 : _ & f x = x0}	  ============================	  r (fun x : A => (f x; 1)) = r (s g h)	";
+            data = "1 subgoal (ID 81)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  idhtpy := fun x : A => 1 : f == f	  g : forall x : A, B x	  h : f == g	  r := fun k : forall x : A, {x0 : _ & f x = x0} =>	       (fun x : A => (k x).1; fun x : A => (k x).2)	   : (forall x : A, {x0 : _ & f x = x0}) -> {g : forall x : A, B x & f == g}	  s := fun (g : forall x : A, B x) (h : f == g) (x : A) => (g x; h x)	   : forall g : forall x : A, B x,	     f == g -> forall x : A, {x0 : _ & f x = x0}	  ============================	  r (fun x : A => (f x; 1)) = r (s g h)	";
             responses[i]=data;
           
 
             i = 100;
-            data = "1 subgoal (ID 151)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  idhtpy := fun x : A => 1 : f == f	  g : forall x : A, B x	  h : f == g	  r := fun k : forall x : A, {x0 : _ & f x = x0} =>	       (fun x : A => pr1 (k x); fun x : A => pr2 (k x))	   : (forall x : A, {x0 : _ & f x = x0}) -> {g : forall x : A, B x & f == g}	  s := fun (g : forall x : A, B x) (h : f == g) (x : A) => (g x; h x)	   : forall g : forall x : A, B x,	     f == g -> forall x : A, {x0 : _ & f x = x0}	  ============================	  Contr (forall x : A, {x0 : _ & f x = x0})	";
+            data = "1 subgoal (ID 113)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  idhtpy := fun x : A => 1 : f == f	  g : forall x : A, B x	  h : f == g	  r := fun k : forall x : A, {x0 : _ & f x = x0} =>	       (fun x : A => (k x).1; fun x : A => (k x).2)	   : (forall x : A, {x0 : _ & f x = x0}) -> {g : forall x : A, B x & f == g}	  s := fun (g : forall x : A, B x) (h : f == g) (x : A) => (g x; h x)	   : forall g : forall x : A, B x,	     f == g -> forall x : A, {x0 : _ & f x = x0}	  ============================	  Contr (forall x : A, {x0 : _ & f x = x0})	";
             responses[i]=data;
           
 
             i = 101;
-            data = "1 subgoal (ID 152)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  idhtpy := fun x : A => 1 : f == f	  g : forall x : A, B x	  h : f == g	  r := fun k : forall x : A, {x0 : _ & f x = x0} =>	       (fun x : A => pr1 (k x); fun x : A => pr2 (k x))	   : (forall x : A, {x0 : _ & f x = x0}) -> {g : forall x : A, B x & f == g}	  s := fun (g : forall x : A, B x) (h : f == g) (x : A) => (g x; h x)	   : forall g : forall x : A, B x,	     f == g -> forall x : A, {x0 : _ & f x = x0}	  ============================	  forall x : A, Contr {x0 : _ & f x = x0}	";
+            data = "1 subgoal (ID 114)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  idhtpy := fun x : A => 1 : f == f	  g : forall x : A, B x	  h : f == g	  r := fun k : forall x : A, {x0 : _ & f x = x0} =>	       (fun x : A => (k x).1; fun x : A => (k x).2)	   : (forall x : A, {x0 : _ & f x = x0}) -> {g : forall x : A, B x & f == g}	  s := fun (g : forall x : A, B x) (h : f == g) (x : A) => (g x; h x)	   : forall g : forall x : A, B x,	     f == g -> forall x : A, {x0 : _ & f x = x0}	  ============================	  forall x : A, Contr {x0 : _ & f x = x0}	";
             responses[i]=data;
           
 
@@ -633,27 +633,27 @@
           
 
             i = 123;
-            data = "1 subgoal (ID 33)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  ============================	  IsEquiv apD10	";
+            data = "1 subgoal (ID 34)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  ============================	  IsEquiv apD10	";
             responses[i]=data;
           
 
             i = 124;
-            data = "2 subgoals (ID 48)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  ============================	  Sect	    (htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 g)	    apD10		subgoal 2 (ID 49) is:	 Sect apD10	   (htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 g)	";
+            data = "2 subgoals (ID 50)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  ============================	  Sect	    (htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 g)	    apD10		subgoal 2 (ID 52) is:	 Sect apD10	   (htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 g)	";
             responses[i]=data;
           
 
             i = 125;
-            data = "1 subgoal (ID 48)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  ============================	  Sect	    (htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 g)	    apD10	1 subgoal (ID 60)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  apD10	    (htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 f	       (fun x : A => 1)) = (fun x : A => 1)	";
+            data = "1 subgoal (ID 50)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  ============================	  Sect	    (htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 g)	    apD10	1 subgoal (ID 64)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  apD10	    (htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 f	       (fun x : A => 1)) = (fun x : A => 1)	";
             responses[i]=data;
           
 
             i = 126;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 49)		subgoal 1 (ID 49) is:	 Sect apD10	   (htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 g)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 52)		subgoal 1 (ID 52) is:	 Sect apD10	   (htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 g)	";
             responses[i]=data;
           
 
             i = 127;
-            data = "1 subgoal (ID 49)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  ============================	  Sect apD10	    (htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 g)	1 subgoal (ID 80)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 f	    (apD10 1) = 1	";
+            data = "1 subgoal (ID 52)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  ============================	  Sect apD10	    (htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 g)	1 subgoal (ID 84)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 f	    (apD10 1) = 1	";
             responses[i]=data;
           
 
@@ -1003,7 +1003,7 @@
           
 
             i = 197;
-            data = "1 subgoal (ID 110)	  	  ============================	  NaiveNondepFunext -> WeakFunext	";
+            data = "1 subgoal (ID 105)	  	  ============================	  NaiveNondepFunext -> WeakFunext	";
             responses[i]=data;
           
 
@@ -1013,27 +1013,27 @@
           
 
             i = 199;
-            data = "1 subgoal (ID 115)	  	  nf : NaiveNondepFunext	  X : Type	  P : X -> Type	  H : forall x : X, Contr (P x)	  ============================	  Contr (forall x : X, P x)	";
+            data = "1 subgoal (ID 110)	  	  nf : NaiveNondepFunext	  X : Type	  P : X -> Type	  H : forall x : X, Contr (P x)	  ============================	  Contr (forall x : X, P x)	";
             responses[i]=data;
           
 
             i = 200;
-            data = "1 subgoal (ID 124)	  	  nf : NaiveNondepFunext	  X : Type	  P : X -> Type	  H : forall x : X, Contr (P x)	  T := hfiber (equiv_postcompose_from_NaiveNondepFunext nf (equiv_pr1 P))	         idmap : Type	  ============================	  Contr (forall x : X, P x)	";
+            data = "1 subgoal (ID 119)	  	  nf : NaiveNondepFunext	  X : Type	  P : X -> Type	  H : forall x : X, Contr (P x)	  T := hfiber (equiv_postcompose_from_NaiveNondepFunext nf (equiv_pr1 P))	         idmap : Type	  ============================	  Contr (forall x : X, P x)	";
             responses[i]=data;
           
 
             i = 201;
-            data = "2 subgoals (ID 125)	  	  nf : NaiveNondepFunext	  X : Type	  P : X -> Type	  H : forall x : X, Contr (P x)	  T := hfiber (equiv_postcompose_from_NaiveNondepFunext nf (equiv_pr1 P))	         idmap : Type	  ============================	  Contr T		subgoal 2 (ID 127) is:	 Contr (forall x : X, P x)	";
+            data = "2 subgoals (ID 120)	  	  nf : NaiveNondepFunext	  X : Type	  P : X -> Type	  H : forall x : X, Contr (P x)	  T := hfiber (equiv_postcompose_from_NaiveNondepFunext nf (equiv_pr1 P))	         idmap : Type	  ============================	  Contr T		subgoal 2 (ID 122) is:	 Contr (forall x : X, P x)	";
             responses[i]=data;
           
 
             i = 202;
-            data = "1 subgoal (ID 125)	  	  nf : NaiveNondepFunext	  X : Type	  P : X -> Type	  H : forall x : X, Contr (P x)	  T := hfiber (equiv_postcompose_from_NaiveNondepFunext nf (equiv_pr1 P))	         idmap : Type	  ============================	  Contr T	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 127)		subgoal 1 (ID 127) is:	 Contr (forall x : X, P x)	1 subgoal (ID 127)	  	  nf : NaiveNondepFunext	  X : Type	  P : X -> Type	  H : forall x : X, Contr (P x)	  T := hfiber (equiv_postcompose_from_NaiveNondepFunext nf (equiv_pr1 P))	         idmap : Type	  X1 : Contr T	  ============================	  Contr (forall x : X, P x)	";
+            data = "1 subgoal (ID 120)	  	  nf : NaiveNondepFunext	  X : Type	  P : X -> Type	  H : forall x : X, Contr (P x)	  T := hfiber (equiv_postcompose_from_NaiveNondepFunext nf (equiv_pr1 P))	         idmap : Type	  ============================	  Contr T	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 122)		subgoal 1 (ID 122) is:	 Contr (forall x : X, P x)	1 subgoal (ID 122)	  	  nf : NaiveNondepFunext	  X : Type	  P : X -> Type	  H : forall x : X, Contr (P x)	  T := hfiber (equiv_postcompose_from_NaiveNondepFunext nf (equiv_pr1 P))	         idmap : Type	  X1 : Contr T	  ============================	  Contr (forall x : X, P x)	No more subgoals.	";
             responses[i]=data;
           
 
             i = 203;
-            data = "No more subgoals.	<infomsg>NaiveNondepFunext_implies_WeakFunext is defined</infomsg>	";
+            data = "<infomsg>NaiveNondepFunext_implies_WeakFunext is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -1158,7 +1158,7 @@
           
 
             i = 228;
-            data = "1 subgoal (ID 121)	  	  H : Funext_type	  ============================	  Funext_type	";
+            data = "1 subgoal (ID 116)	  	  H : Funext_type	  ============================	  Funext_type	";
             responses[i]=data;
           
 
@@ -1168,22 +1168,22 @@
           
 
             i = 230;
-            data = "1 subgoal (ID 122)	  	  H : Funext_type	  ============================	  NaiveFunext	";
+            data = "1 subgoal (ID 117)	  	  H : Funext_type	  ============================	  NaiveFunext	";
             responses[i]=data;
           
 
             i = 231;
-            data = "1 subgoal (ID 123)	  	  H : NaiveFunext	  ============================	  NaiveFunext	";
+            data = "1 subgoal (ID 118)	  	  H : NaiveFunext	  ============================	  NaiveFunext	";
             responses[i]=data;
           
 
             i = 232;
-            data = "1 subgoal (ID 126)	  	  H : forall (A : Type) (P : A -> Type) (f g : forall x : A, P x),	      (forall x : A, f x = g x) -> f = g	  ============================	  forall (A : Type) (P : A -> Type) (f g : forall x : A, P x),	  (forall x : A, f x = g x) -> f = g	";
+            data = "1 subgoal (ID 121)	  	  H : forall (A : Type) (P : A -> Type) (f g : forall x : A, P x),	      (forall x : A, f x = g x) -> f = g	  ============================	  forall (A : Type) (P : A -> Type) (f g : forall x : A, P x),	  (forall x : A, f x = g x) -> f = g	";
             responses[i]=data;
           
 
             i = 233;
-            data = "1 subgoal (ID 131)	  	  H : forall (A : Type) (P : A -> Type) (f g : forall x : A, P x),	      (forall x : A, f x = g x) -> f = g	  A : Type	  P : A -> Type	  f, g : forall x : A, P x	  H' : forall x : A, f x = g x	  ============================	  f = g	";
+            data = "1 subgoal (ID 126)	  	  H : forall (A : Type) (P : A -> Type) (f g : forall x : A, P x),	      (forall x : A, f x = g x) -> f = g	  A : Type	  P : A -> Type	  f, g : forall x : A, P x	  H' : forall x : A, f x = g x	  ============================	  f = g	";
             responses[i]=data;
           
 
@@ -1238,7 +1238,7 @@
           
 
             i = 244;
-            data = "1 subgoal (ID 139)	  	  H : forall (A : Type) (P : A -> Type) (f g : forall x : A, P x),	      (forall x : A, f x = g x) -> f = g	  A : Type	  P : A -> Type	  f, g : forall x : A, P x	  H' : forall x : A, f x = g x	  ============================	  f = f	";
+            data = "1 subgoal (ID 134)	  	  H : forall (A : Type) (P : A -> Type) (f g : forall x : A, P x),	      (forall x : A, f x = g x) -> f = g	  A : Type	  P : A -> Type	  f, g : forall x : A, P x	  H' : forall x : A, f x = g x	  ============================	  f = f	";
             responses[i]=data;
           
 
@@ -1283,7 +1283,7 @@
           
 
             i = 253;
-            data = "1 subgoal (ID 131)	  	  H : Funext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  Contr {g : forall x : A, B x & f == g}	";
+            data = "1 subgoal (ID 126)	  	  H : Funext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  Contr {g : forall x : A, B x & f == g}	";
             responses[i]=data;
           
 
@@ -1293,17 +1293,17 @@
           
 
             i = 255;
-            data = "1 subgoal (ID 132)	  	  H : Funext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  WeakFunext	";
+            data = "1 subgoal (ID 127)	  	  H : Funext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  WeakFunext	";
             responses[i]=data;
           
 
             i = 256;
-            data = "1 subgoal (ID 133)	  	  H : Funext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  NaiveFunext	";
+            data = "1 subgoal (ID 128)	  	  H : Funext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  NaiveFunext	";
             responses[i]=data;
           
 
             i = 257;
-            data = "1 subgoal (ID 134)	  	  H : Funext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  Funext_type	";
+            data = "1 subgoal (ID 129)	  	  H : Funext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  Funext_type	";
             responses[i]=data;
           
 

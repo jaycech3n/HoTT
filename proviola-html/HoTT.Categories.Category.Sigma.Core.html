@@ -253,7 +253,7 @@
           
 
             i = 47;
-            data = "1 subgoal (ID 321)	  	  A : PreCategory	  Pobj : A -> Type	  Pmor : forall s d : obj, morphism A (pr1 s) (pr1 d) -> Type	  HPmor : forall s d : obj, IsHSet (mor s d)	  Pidentity : forall x : obj, Pmor x x 1	  Pcompose : forall (s d d' : obj) (m1 : morphism A (pr1 d) (pr1 d'))	             (m2 : morphism A (pr1 s) (pr1 d)),	             Pmor d d' m1 -> Pmor s d m2 -> Pmor s d' (m1 o m2)	  P_associativity : forall (x1 x2 x3 x4 : obj) (m1 : mor x1 x2)	                    (m2 : mor x2 x3) (m3 : mor x3 x4),	                    compose (pr1 m3 o pr1 m2; Pcompose (pr2 m3) (pr2 m2)) m1 =	                    compose m3 (pr1 m2 o pr1 m1; Pcompose (pr2 m2) (pr2 m1))	  P_left_identity : forall (a b : obj) (f : mor a b),	                    compose (1; Pidentity b) f = f	  P_right_identity : forall (a b : obj) (f : mor a b),	                     compose f (1; Pidentity a) = f	  ============================	  PreCategory	";
+            data = "1 subgoal (ID 321)	  	  A : PreCategory	  Pobj : A -> Type	  Pmor : forall s d : obj, morphism A s.1 d.1 -> Type	  HPmor : forall s d : obj, IsHSet (mor s d)	  Pidentity : forall x : obj, Pmor x x 1	  Pcompose : forall (s d d' : obj) (m1 : morphism A d.1 d'.1)	             (m2 : morphism A s.1 d.1),	             Pmor d d' m1 -> Pmor s d m2 -> Pmor s d' (m1 o m2)	  P_associativity : forall (x1 x2 x3 x4 : obj) (m1 : mor x1 x2)	                    (m2 : mor x2 x3) (m3 : mor x3 x4),	                    compose (compose m3 m2) m1 = compose m3 (compose m2 m1)	  P_left_identity : forall (a b : obj) (f : mor a b),	                    compose (identity b) f = f	  P_right_identity : forall (a b : obj) (f : mor a b),	                     compose f (identity a) = f	  ============================	  PreCategory	";
             responses[i]=data;
           
 
@@ -418,7 +418,7 @@
           
 
             i = 80;
-            data = "1 subgoal (ID 231)	  	  A : PreCategory	  Pobj : A -> Type	  Pmor : forall s d : obj,	         morphism A (Overture.pr1 s) (Overture.pr1 d) -> Type	  HPmor : forall (s d : obj)	          (m : morphism A (Overture.pr1 s) (Overture.pr1 d)),	          IsHProp (Pmor s d m)	  Pidentity : forall x : obj, Pmor x x 1	  Pcompose : forall (s d d' : obj)	             (m1 : morphism A (Overture.pr1 d) (Overture.pr1 d'))	             (m2 : morphism A (Overture.pr1 s) (Overture.pr1 d)),	             Pmor d d' m1 -> Pmor s d m2 -> Pmor s d' (m1 o m2)	  ============================	  forall (x1 x2 x3 x4 : obj) (m1 : mor x1 x2) (m2 : mor x2 x3)	  (m3 : mor x3 x4),	  compose (Overture.pr1 m3 o Overture.pr1 m2; Pcompose (pr2 m3) (pr2 m2)) m1 =	  compose m3 (Overture.pr1 m2 o Overture.pr1 m1; Pcompose (pr2 m2) (pr2 m1))	";
+            data = "1 subgoal (ID 231)	  	  A : PreCategory	  Pobj : A -> Type	  Pmor : forall s d : obj, morphism A s.1 d.1 -> Type	  HPmor : forall (s d : obj) (m : morphism A s.1 d.1), IsHProp (Pmor s d m)	  Pidentity : forall x : obj, Pmor x x 1	  Pcompose : forall (s d d' : obj) (m1 : morphism A d.1 d'.1)	             (m2 : morphism A s.1 d.1),	             Pmor d d' m1 -> Pmor s d m2 -> Pmor s d' (m1 o m2)	  ============================	  forall (x1 x2 x3 x4 : obj) (m1 : mor x1 x2) (m2 : mor x2 x3)	  (m3 : mor x3 x4), compose (compose m3 m2) m1 = compose m3 (compose m2 m1)	";
             responses[i]=data;
           
 
@@ -438,7 +438,7 @@
           
 
             i = 84;
-            data = "1 subgoal (ID 277)	  	  A : PreCategory	  Pobj : A -> Type	  Pmor : forall s d : obj,	         morphism A (Overture.pr1 s) (Overture.pr1 d) -> Type	  HPmor : forall (s d : obj)	          (m : morphism A (Overture.pr1 s) (Overture.pr1 d)),	          IsHProp (Pmor s d m)	  Pidentity : forall x : obj, Pmor x x 1	  Pcompose : forall (s d d' : obj)	             (m1 : morphism A (Overture.pr1 d) (Overture.pr1 d'))	             (m2 : morphism A (Overture.pr1 s) (Overture.pr1 d)),	             Pmor d d' m1 -> Pmor s d m2 -> Pmor s d' (m1 o m2)	  P_associativity := P_associativity_core_subproof	   : forall (x1 x2 x3 x4 : obj) (m1 : mor x1 x2) (m2 : mor x2 x3)	     (m3 : mor x3 x4),	     compose (Overture.pr1 m3 o Overture.pr1 m2; Pcompose (pr2 m3) (pr2 m2))	       m1 =	     compose m3	       (Overture.pr1 m2 o Overture.pr1 m1; Pcompose (pr2 m2) (pr2 m1))	  ============================	  forall (a b : obj) (f : mor a b), compose (1; Pidentity b) f = f	";
+            data = "1 subgoal (ID 277)	  	  A : PreCategory	  Pobj : A -> Type	  Pmor : forall s d : obj, morphism A s.1 d.1 -> Type	  HPmor : forall (s d : obj) (m : morphism A s.1 d.1), IsHProp (Pmor s d m)	  Pidentity : forall x : obj, Pmor x x 1	  Pcompose : forall (s d d' : obj) (m1 : morphism A d.1 d'.1)	             (m2 : morphism A s.1 d.1),	             Pmor d d' m1 -> Pmor s d m2 -> Pmor s d' (m1 o m2)	  P_associativity := P_associativity_core_subproof	   : forall (x1 x2 x3 x4 : obj) (m1 : mor x1 x2) (m2 : mor x2 x3)	     (m3 : mor x3 x4),	     compose (compose m3 m2) m1 = compose m3 (compose m2 m1)	  ============================	  forall (a b : obj) (f : mor a b), compose (identity b) f = f	";
             responses[i]=data;
           
 
@@ -448,7 +448,7 @@
           
 
             i = 86;
-            data = "1 subgoal (ID 278)	  	  A : PreCategory	  Pobj : A -> Type	  Pmor : forall s d : obj,	         morphism A (Overture.pr1 s) (Overture.pr1 d) -> Type	  HPmor : forall (s d : obj)	          (m : morphism A (Overture.pr1 s) (Overture.pr1 d)),	          IsHProp (Pmor s d m)	  Pidentity : forall x : obj, Pmor x x 1	  Pcompose : forall (s d d' : obj)	             (m1 : morphism A (Overture.pr1 d) (Overture.pr1 d'))	             (m2 : morphism A (Overture.pr1 s) (Overture.pr1 d)),	             Pmor d d' m1 -> Pmor s d m2 -> Pmor s d' (m1 o m2)	  ============================	  forall (a b : obj) (f : mor a b), compose (1; Pidentity b) f = f	";
+            data = "1 subgoal (ID 278)	  	  A : PreCategory	  Pobj : A -> Type	  Pmor : forall s d : obj, morphism A s.1 d.1 -> Type	  HPmor : forall (s d : obj) (m : morphism A s.1 d.1), IsHProp (Pmor s d m)	  Pidentity : forall x : obj, Pmor x x 1	  Pcompose : forall (s d d' : obj) (m1 : morphism A d.1 d'.1)	             (m2 : morphism A s.1 d.1),	             Pmor d d' m1 -> Pmor s d m2 -> Pmor s d' (m1 o m2)	  ============================	  forall (a b : obj) (f : mor a b), compose (identity b) f = f	";
             responses[i]=data;
           
 
@@ -463,7 +463,7 @@
           
 
             i = 89;
-            data = "1 subgoal (ID 323)	  	  A : PreCategory	  Pobj : A -> Type	  Pmor : forall s d : obj,	         morphism A (Overture.pr1 s) (Overture.pr1 d) -> Type	  HPmor : forall (s d : obj)	          (m : morphism A (Overture.pr1 s) (Overture.pr1 d)),	          IsHProp (Pmor s d m)	  Pidentity : forall x : obj, Pmor x x 1	  Pcompose : forall (s d d' : obj)	             (m1 : morphism A (Overture.pr1 d) (Overture.pr1 d'))	             (m2 : morphism A (Overture.pr1 s) (Overture.pr1 d)),	             Pmor d d' m1 -> Pmor s d m2 -> Pmor s d' (m1 o m2)	  P_associativity := P_associativity_core_subproof	   : forall (x1 x2 x3 x4 : obj) (m1 : mor x1 x2) (m2 : mor x2 x3)	     (m3 : mor x3 x4),	     compose (Overture.pr1 m3 o Overture.pr1 m2; Pcompose (pr2 m3) (pr2 m2))	       m1 =	     compose m3	       (Overture.pr1 m2 o Overture.pr1 m1; Pcompose (pr2 m2) (pr2 m1))	  P_left_identity := P_left_identity_core_subproof	   : forall (a b : obj) (f : mor a b), compose (1; Pidentity b) f = f	  ============================	  forall (a b : obj) (f : mor a b), compose f (1; Pidentity a) = f	";
+            data = "1 subgoal (ID 323)	  	  A : PreCategory	  Pobj : A -> Type	  Pmor : forall s d : obj, morphism A s.1 d.1 -> Type	  HPmor : forall (s d : obj) (m : morphism A s.1 d.1), IsHProp (Pmor s d m)	  Pidentity : forall x : obj, Pmor x x 1	  Pcompose : forall (s d d' : obj) (m1 : morphism A d.1 d'.1)	             (m2 : morphism A s.1 d.1),	             Pmor d d' m1 -> Pmor s d m2 -> Pmor s d' (m1 o m2)	  P_associativity := P_associativity_core_subproof	   : forall (x1 x2 x3 x4 : obj) (m1 : mor x1 x2) (m2 : mor x2 x3)	     (m3 : mor x3 x4),	     compose (compose m3 m2) m1 = compose m3 (compose m2 m1)	  P_left_identity := P_left_identity_core_subproof	   : forall (a b : obj) (f : mor a b), compose (identity b) f = f	  ============================	  forall (a b : obj) (f : mor a b), compose f (identity a) = f	";
             responses[i]=data;
           
 
@@ -473,7 +473,7 @@
           
 
             i = 91;
-            data = "1 subgoal (ID 324)	  	  A : PreCategory	  Pobj : A -> Type	  Pmor : forall s d : obj,	         morphism A (Overture.pr1 s) (Overture.pr1 d) -> Type	  HPmor : forall (s d : obj)	          (m : morphism A (Overture.pr1 s) (Overture.pr1 d)),	          IsHProp (Pmor s d m)	  Pidentity : forall x : obj, Pmor x x 1	  Pcompose : forall (s d d' : obj)	             (m1 : morphism A (Overture.pr1 d) (Overture.pr1 d'))	             (m2 : morphism A (Overture.pr1 s) (Overture.pr1 d)),	             Pmor d d' m1 -> Pmor s d m2 -> Pmor s d' (m1 o m2)	  ============================	  forall (a b : obj) (f : mor a b), compose f (1; Pidentity a) = f	";
+            data = "1 subgoal (ID 324)	  	  A : PreCategory	  Pobj : A -> Type	  Pmor : forall s d : obj, morphism A s.1 d.1 -> Type	  HPmor : forall (s d : obj) (m : morphism A s.1 d.1), IsHProp (Pmor s d m)	  Pidentity : forall x : obj, Pmor x x 1	  Pcompose : forall (s d d' : obj) (m1 : morphism A d.1 d'.1)	             (m2 : morphism A s.1 d.1),	             Pmor d d' m1 -> Pmor s d m2 -> Pmor s d' (m1 o m2)	  ============================	  forall (a b : obj) (f : mor a b), compose f (identity a) = f	";
             responses[i]=data;
           
 

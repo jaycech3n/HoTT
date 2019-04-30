@@ -213,12 +213,12 @@
           
 
             i = 39;
-            data = "1 subgoal (ID 19)	  	  T : Type	  t : T	  l : ne_list	  IHl : l = from_list (head l) (tail l)	  ============================	  cons t l = from_list (head (cons t l)) (tail (cons t l))	";
+            data = "1 subgoal (ID 19)	  	  T : Type	  t : T	  l : ne_list	  IHl : l = from_list (head l) (tail l)	  ============================	  cons t l = from_list (head (cons t l)) (tail (cons t l))	1 subgoal (ID 32)	  	  T : Type	  t, t0 : T	  l : ne_list	  IHl : cons t0 l = from_list (head (cons t0 l)) (tail (cons t0 l))	  ============================	  cons t (cons t0 l) =	  from_list (head (cons t (cons t0 l))) (tail (cons t (cons t0 l)))	1 subgoal (ID 34)	  	  T : Type	  t, t0 : T	  l : ne_list	  IHl : cons t0 l = from_list t0 (to_list l)	  ============================	  cons t (cons t0 l) = cons t (from_list t0 (to_list l))	";
             responses[i]=data;
           
 
             i = 40;
-            data = "1 subgoal (ID 32)	  	  T : Type	  t, t0 : T	  l : ne_list	  IHl : cons t0 l = from_list (head (cons t0 l)) (tail (cons t0 l))	  ============================	  cons t (cons t0 l) =	  from_list (head (cons t (cons t0 l))) (tail (cons t (cons t0 l)))	1 subgoal (ID 38)	  	  T : Type	  t, t0 : T	  l : ne_list	  IHl : cons t0 l = from_list t0 (to_list l)	  ============================	  cons t (cons t0 l) = cons t (from_list t0 (to_list l))	No more subgoals.	<infomsg>decomp_eq is defined</infomsg>	";
+            data = "No more subgoals.	<infomsg>decomp_eq is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -243,7 +243,7 @@
           
 
             i = 45;
-            data = "1 subgoal (ID 27)	  	  T : Type	  P : ne_list → Type	  Pone : ∀ x : T, P (one x)	  Ptwo : ∀ x y : T, P (cons x (one y))	  Pmore : ∀ (x y : T) (z : ne_list),	          P z → (∀ y' : T, P (cons y' z)) → P (cons x (cons y z))	  ============================	  ∀ l : ne_list, P l	";
+            data = "1 subgoal (ID 27)	  	  T : Type	  P : ne_list → Type	  Pone : forall x : T, P (one x)	  Ptwo : forall x y : T, P (cons x (one y))	  Pmore : forall (x y : T) (z : ne_list),	          P z → (forall y' : T, P (cons y' z)) → P (cons x (cons y z))	  ============================	  forall l : ne_list, P l	";
             responses[i]=data;
           
 
@@ -253,42 +253,42 @@
           
 
             i = 47;
-            data = "2 subgoals (ID 30)	  	  T : Type	  P : ne_list → Type	  Pone : ∀ x : T, P (one x)	  Ptwo : ∀ x y : T, P (cons x (one y))	  Pmore : ∀ (x y : T) (z : ne_list),	          P z → (∀ y' : T, P (cons y' z)) → P (cons x (cons y z))	  ============================	  (∀ l : ne_list, P l ∧ (∀ x : T, P (cons x l))) → ∀ l : ne_list, P l		subgoal 2 (ID 31) is:	 ∀ l : ne_list, P l ∧ (∀ x : T, P (cons x l))	";
+            data = "2 subgoals (ID 30)	  	  T : Type	  P : ne_list → Type	  Pone : forall x : T, P (one x)	  Ptwo : forall x y : T, P (cons x (one y))	  Pmore : forall (x y : T) (z : ne_list),	          P z → (forall y' : T, P (cons y' z)) → P (cons x (cons y z))	  ============================	  (forall l : ne_list, P l ∧ (forall x : T, P (cons x l)))	  → forall l : ne_list, P l		subgoal 2 (ID 31) is:	 forall l : ne_list, P l ∧ (forall x : T, P (cons x l))	";
             responses[i]=data;
           
 
             i = 48;
-            data = "1 subgoal (ID 30)	  	  T : Type	  P : ne_list → Type	  Pone : ∀ x : T, P (one x)	  Ptwo : ∀ x y : T, P (cons x (one y))	  Pmore : ∀ (x y : T) (z : ne_list),	          P z → (∀ y' : T, P (cons y' z)) → P (cons x (cons y z))	  ============================	  (∀ l : ne_list, P l ∧ (∀ x : T, P (cons x l))) → ∀ l : ne_list, P l	";
+            data = "1 subgoal (ID 30)	  	  T : Type	  P : ne_list → Type	  Pone : forall x : T, P (one x)	  Ptwo : forall x y : T, P (cons x (one y))	  Pmore : forall (x y : T) (z : ne_list),	          P z → (forall y' : T, P (cons y' z)) → P (cons x (cons y z))	  ============================	  (forall l : ne_list, P l ∧ (forall x : T, P (cons x l)))	  → forall l : ne_list, P l	1 subgoal (ID 33)	  	  T : Type	  P : ne_list → Type	  Pone : forall x : T, P (one x)	  Ptwo : forall x y : T, P (cons x (one y))	  Pmore : forall (x y : T) (z : ne_list),	          P z → (forall y' : T, P (cons y' z)) → P (cons x (cons y z))	  X : forall l : ne_list, P l ∧ (forall x : T, P (cons x l))	  l : ne_list	  ============================	  P l	";
             responses[i]=data;
           
 
             i = 49;
-            data = "1 subgoal (ID 33)	  	  T : Type	  P : ne_list → Type	  Pone : ∀ x : T, P (one x)	  Ptwo : ∀ x y : T, P (cons x (one y))	  Pmore : ∀ (x y : T) (z : ne_list),	          P z → (∀ y' : T, P (cons y' z)) → P (cons x (cons y z))	  X : ∀ l : ne_list, P l ∧ (∀ x : T, P (cons x l))	  l : ne_list	  ============================	  P l	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 31)		subgoal 1 (ID 31) is:	 ∀ l : ne_list, P l ∧ (∀ x : T, P (cons x l))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 31)		subgoal 1 (ID 31) is:	 forall l : ne_list, P l ∧ (forall x : T, P (cons x l))	";
             responses[i]=data;
           
 
             i = 50;
-            data = "1 subgoal (ID 31)	  	  T : Type	  P : ne_list → Type	  Pone : ∀ x : T, P (one x)	  Ptwo : ∀ x y : T, P (cons x (one y))	  Pmore : ∀ (x y : T) (z : ne_list),	          P z → (∀ y' : T, P (cons y' z)) → P (cons x (cons y z))	  ============================	  ∀ l : ne_list, P l ∧ (∀ x : T, P (cons x l))	1 subgoal (ID 44)	  	  T : Type	  P : ne_list → Type	  Pone : ∀ x : T, P (one x)	  Ptwo : ∀ x y : T, P (cons x (one y))	  Pmore : ∀ (x y : T) (z : ne_list),	          P z → (∀ y' : T, P (cons y' z)) → P (cons x (cons y z))	  t : T	  l : ne_list	  ============================	  P (cons t l) ∧ (∀ x : T, P (cons x (cons t l)))	1 subgoal (ID 51)	  	  T : Type	  P : ne_list → Type	  Pone : ∀ x : T, P (one x)	  Ptwo : ∀ x y : T, P (cons x (one y))	  Pmore : ∀ (x y : T) (z : ne_list),	          P z → (∀ y' : T, P (cons y' z)) → P (cons x (cons y z))	  l : ne_list	  ============================	  ∀ t : T, P (cons t l) ∧ (∀ x : T, P (cons x (cons t l)))	";
+            data = "1 subgoal (ID 31)	  	  T : Type	  P : ne_list → Type	  Pone : forall x : T, P (one x)	  Ptwo : forall x y : T, P (cons x (one y))	  Pmore : forall (x y : T) (z : ne_list),	          P z → (forall y' : T, P (cons y' z)) → P (cons x (cons y z))	  ============================	  forall l : ne_list, P l ∧ (forall x : T, P (cons x l))	1 subgoal (ID 44)	  	  T : Type	  P : ne_list → Type	  Pone : forall x : T, P (one x)	  Ptwo : forall x y : T, P (cons x (one y))	  Pmore : forall (x y : T) (z : ne_list),	          P z → (forall y' : T, P (cons y' z)) → P (cons x (cons y z))	  t : T	  l : ne_list	  ============================	  P (cons t l) ∧ (forall x : T, P (cons x (cons t l)))	1 subgoal (ID 51)	  	  T : Type	  P : ne_list → Type	  Pone : forall x : T, P (one x)	  Ptwo : forall x y : T, P (cons x (one y))	  Pmore : forall (x y : T) (z : ne_list),	          P z → (forall y' : T, P (cons y' z)) → P (cons x (cons y z))	  l : ne_list	  ============================	  forall t : T, P (cons t l) ∧ (forall x : T, P (cons x (cons t l)))	";
             responses[i]=data;
           
 
             i = 51;
-            data = "1 subgoal (ID 60)	  	  T : Type	  P : ne_list → Type	  Pone : ∀ x : T, P (one x)	  Ptwo : ∀ x y : T, P (cons x (one y))	  Pmore : ∀ (x y : T) (z : ne_list),	          P z → (∀ y' : T, P (cons y' z)) → P (cons x (cons y z))	  t : T	  l : ne_list	  IHl : ∀ t : T, P (cons t l) ∧ (∀ x : T, P (cons x (cons t l)))	  ============================	  ∀ t0 : T,	  P (cons t0 (cons t l)) ∧ (∀ x : T, P (cons x (cons t0 (cons t l))))	1 subgoal (ID 73)	  	  T : Type	  P : ne_list → Type	  Pone : ∀ x : T, P (one x)	  Ptwo : ∀ x y : T, P (cons x (one y))	  Pmore : ∀ (x y : T) (z : ne_list),	          P z → (∀ y' : T, P (cons y' z)) → P (cons x (cons y z))	  t : T	  l : ne_list	  IHl : ∀ t : T, P (cons t l) ∧ (∀ x : T, P (cons x (cons t l)))	  t0 : T	  ============================	  P (cons t0 (cons t l)) ∧ (∀ x : T, P (cons x (cons t0 (cons t l))))	";
+            data = "1 subgoal (ID 60)	  	  T : Type	  P : ne_list → Type	  Pone : forall x : T, P (one x)	  Ptwo : forall x y : T, P (cons x (one y))	  Pmore : forall (x y : T) (z : ne_list),	          P z → (forall y' : T, P (cons y' z)) → P (cons x (cons y z))	  t : T	  l : ne_list	  IHl : forall t : T, P (cons t l) ∧ (forall x : T, P (cons x (cons t l)))	  ============================	  forall t0 : T,	  P (cons t0 (cons t l)) ∧ (forall x : T, P (cons x (cons t0 (cons t l))))	1 subgoal (ID 73)	  	  T : Type	  P : ne_list → Type	  Pone : forall x : T, P (one x)	  Ptwo : forall x y : T, P (cons x (one y))	  Pmore : forall (x y : T) (z : ne_list),	          P z → (forall y' : T, P (cons y' z)) → P (cons x (cons y z))	  t : T	  l : ne_list	  IHl : forall t : T, P (cons t l) ∧ (forall x : T, P (cons x (cons t l)))	  t0 : T	  ============================	  P (cons t0 (cons t l)) ∧ (forall x : T, P (cons x (cons t0 (cons t l))))	";
             responses[i]=data;
           
 
             i = 52;
-            data = "2 subgoals (ID 75)	  	  T : Type	  P : ne_list → Type	  Pone : ∀ x : T, P (one x)	  Ptwo : ∀ x y : T, P (cons x (one y))	  Pmore : ∀ (x y : T) (z : ne_list),	          P z → (∀ y' : T, P (cons y' z)) → P (cons x (cons y z))	  t : T	  l : ne_list	  IHl : ∀ t : T, P (cons t l) ∧ (∀ x : T, P (cons x (cons t l)))	  t0 : T	  ============================	  P (cons t0 (cons t l))		subgoal 2 (ID 76) is:	 ∀ x : T, P (cons x (cons t0 (cons t l)))	";
+            data = "2 subgoals (ID 75)	  	  T : Type	  P : ne_list → Type	  Pone : forall x : T, P (one x)	  Ptwo : forall x y : T, P (cons x (one y))	  Pmore : forall (x y : T) (z : ne_list),	          P z → (forall y' : T, P (cons y' z)) → P (cons x (cons y z))	  t : T	  l : ne_list	  IHl : forall t : T, P (cons t l) ∧ (forall x : T, P (cons x (cons t l)))	  t0 : T	  ============================	  P (cons t0 (cons t l))		subgoal 2 (ID 76) is:	 forall x : T, P (cons x (cons t0 (cons t l)))	";
             responses[i]=data;
           
 
             i = 53;
-            data = "1 subgoal (ID 75)	  	  T : Type	  P : ne_list → Type	  Pone : ∀ x : T, P (one x)	  Ptwo : ∀ x y : T, P (cons x (one y))	  Pmore : ∀ (x y : T) (z : ne_list),	          P z → (∀ y' : T, P (cons y' z)) → P (cons x (cons y z))	  t : T	  l : ne_list	  IHl : ∀ t : T, P (cons t l) ∧ (∀ x : T, P (cons x (cons t l)))	  t0 : T	  ============================	  P (cons t0 (cons t l))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 76)		subgoal 1 (ID 76) is:	 ∀ x : T, P (cons x (cons t0 (cons t l)))	";
+            data = "1 subgoal (ID 75)	  	  T : Type	  P : ne_list → Type	  Pone : forall x : T, P (one x)	  Ptwo : forall x y : T, P (cons x (one y))	  Pmore : forall (x y : T) (z : ne_list),	          P z → (forall y' : T, P (cons y' z)) → P (cons x (cons y z))	  t : T	  l : ne_list	  IHl : forall t : T, P (cons t l) ∧ (forall x : T, P (cons x (cons t l)))	  t0 : T	  ============================	  P (cons t0 (cons t l))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 76)		subgoal 1 (ID 76) is:	 forall x : T, P (cons x (cons t0 (cons t l)))	";
             responses[i]=data;
           
 
             i = 54;
-            data = "1 subgoal (ID 76)	  	  T : Type	  P : ne_list → Type	  Pone : ∀ x : T, P (one x)	  Ptwo : ∀ x y : T, P (cons x (one y))	  Pmore : ∀ (x y : T) (z : ne_list),	          P z → (∀ y' : T, P (cons y' z)) → P (cons x (cons y z))	  t : T	  l : ne_list	  IHl : ∀ t : T, P (cons t l) ∧ (∀ x : T, P (cons x (cons t l)))	  t0 : T	  ============================	  ∀ x : T, P (cons x (cons t0 (cons t l)))	1 subgoal (ID 81)	  	  T : Type	  P : ne_list → Type	  Pone : ∀ x : T, P (one x)	  Ptwo : ∀ x y : T, P (cons x (one y))	  Pmore : ∀ (x y : T) (z : ne_list),	          P z → (∀ y' : T, P (cons y' z)) → P (cons x (cons y z))	  t : T	  l : ne_list	  IHl : ∀ t : T, P (cons t l) ∧ (∀ x : T, P (cons x (cons t l)))	  t0, x : T	  ============================	  P (cons x (cons t0 (cons t l)))	";
+            data = "1 subgoal (ID 76)	  	  T : Type	  P : ne_list → Type	  Pone : forall x : T, P (one x)	  Ptwo : forall x y : T, P (cons x (one y))	  Pmore : forall (x y : T) (z : ne_list),	          P z → (forall y' : T, P (cons y' z)) → P (cons x (cons y z))	  t : T	  l : ne_list	  IHl : forall t : T, P (cons t l) ∧ (forall x : T, P (cons x (cons t l)))	  t0 : T	  ============================	  forall x : T, P (cons x (cons t0 (cons t l)))	1 subgoal (ID 81)	  	  T : Type	  P : ne_list → Type	  Pone : forall x : T, P (one x)	  Ptwo : forall x y : T, P (cons x (one y))	  Pmore : forall (x y : T) (z : ne_list),	          P z → (forall y' : T, P (cons y' z)) → P (cons x (cons y z))	  t : T	  l : ne_list	  IHl : forall t : T, P (cons t l) ∧ (forall x : T, P (cons x (cons t l)))	  t0, x : T	  ============================	  P (cons x (cons t0 (cons t l)))	";
             responses[i]=data;
           
 
@@ -348,27 +348,27 @@
           
 
             i = 66;
-            data = "2 subgoals (ID 30)	  	  T : Type0	  t : T	  x : ne_list T	  ============================	  (one t = x) + False → le (length (to_list x)) 1		subgoal 2 (ID 31) is:	 (cons t y = x) + InList x (to_list (tails y))	 → le (length (to_list x)) (length (to_list y)).+1	";
+            data = "2 subgoals (ID 31)	  	  T : Type0	  t : T	  x : ne_list T	  ============================	  (one t = x) + False → le (length (to_list x)) 1		subgoal 2 (ID 33) is:	 (cons t y = x) + InList x (to_list (tails y))	 → le (length (to_list x)) (length (to_list y)).+1	";
             responses[i]=data;
           
 
             i = 67;
-            data = "1 subgoal (ID 30)	  	  T : Type0	  t : T	  x : ne_list T	  ============================	  (one t = x) + False → le (length (to_list x)) 1	2 subgoals (ID 39)	  	  T : Type0	  t : T	  x : ne_list T	  ============================	  le (length (to_list (one t))) 1		subgoal 2 (ID 40) is:	 le (length (to_list x)) 1	";
+            data = "1 subgoal (ID 31)	  	  T : Type0	  t : T	  x : ne_list T	  ============================	  (one t = x) + False → le (length (to_list x)) 1	2 subgoals (ID 41)	  	  T : Type0	  t : T	  x : ne_list T	  ============================	  le (length (to_list (one t))) 1		subgoal 2 (ID 42) is:	 le (length (to_list x)) 1	";
             responses[i]=data;
           
 
             i = 68;
-            data = "1 subgoal (ID 39)	  	  T : Type0	  t : T	  x : ne_list T	  ============================	  le (length (to_list (one t))) 1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 40)		subgoal 1 (ID 40) is:	 le (length (to_list x)) 1	subgoal 2 (ID 31) is:	 (cons t y = x) + InList x (to_list (tails y))	 → le (length (to_list x)) (length (to_list y)).+1	";
+            data = "1 subgoal (ID 41)	  	  T : Type0	  t : T	  x : ne_list T	  ============================	  le (length (to_list (one t))) 1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 42)		subgoal 1 (ID 42) is:	 le (length (to_list x)) 1	subgoal 2 (ID 33) is:	 (cons t y = x) + InList x (to_list (tails y))	 → le (length (to_list x)) (length (to_list y)).+1	";
             responses[i]=data;
           
 
             i = 69;
-            data = "1 subgoal (ID 40)	  	  T : Type0	  t : T	  x : ne_list T	  C : False	  ============================	  le (length (to_list x)) 1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 31)		subgoal 1 (ID 31) is:	 (cons t y = x) + InList x (to_list (tails y))	 → le (length (to_list x)) (length (to_list y)).+1	";
+            data = "1 subgoal (ID 42)	  	  T : Type0	  t : T	  x : ne_list T	  C : False	  ============================	  le (length (to_list x)) 1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 33)		subgoal 1 (ID 33) is:	 (cons t y = x) + InList x (to_list (tails y))	 → le (length (to_list x)) (length (to_list y)).+1	";
             responses[i]=data;
           
 
             i = 70;
-            data = "1 subgoal (ID 31)	  	  T : Type0	  t : T	  y, x : ne_list T	  IHy : InList x (to_list (tails y))	        → le (length (to_list x)) (length (to_list y))	  ============================	  (cons t y = x) + InList x (to_list (tails y))	  → le (length (to_list x)) (length (to_list y)).+1	No more subgoals.	<infomsg>tails_are_shorter is defined</infomsg>	";
+            data = "1 subgoal (ID 33)	  	  T : Type0	  t : T	  y, x : ne_list T	  IHy : InList x (to_list (tails y))	        → le (length (to_list x)) (length (to_list y))	  ============================	  (cons t y = x) + InList x (to_list (tails y))	  → le (length (to_list x)) (length (to_list y)).+1	No more subgoals.	<infomsg>tails_are_shorter is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -398,12 +398,12 @@
           
 
             i = 76;
-            data = "1 subgoal (ID 47)	  	  A : Type	  B : Type	  f : A → B	  t : A	  l : ne_list A	  IHl : to_list (map f l) = list.map f (to_list l)	  ============================	  to_list (map f (cons t l)) = list.map f (to_list (cons t l))	1 subgoal (ID 49)	  	  A : Type	  B : Type	  f : A → B	  t : A	  l : ne_list A	  IHl : to_list (map f l) = list.map f (to_list l)	  ============================	  f t :: to_list (map f l) = f t :: list.map f (to_list l)	";
+            data = "1 subgoal (ID 47)	  	  A : Type	  B : Type	  f : A → B	  t : A	  l : ne_list A	  IHl : to_list (map f l) = list.map f (to_list l)	  ============================	  to_list (map f (cons t l)) = list.map f (to_list (cons t l))	1 subgoal (ID 50)	  	  A : Type	  B : Type	  f : A → B	  t : A	  l : ne_list A	  IHl : to_list (map f l) = list.map f (to_list l)	  ============================	  f t :: to_list (map f l) = f t :: list.map f (to_list l)	";
             responses[i]=data;
           
 
             i = 77;
-            data = "1 subgoal (ID 50)	  	  A : Type	  B : Type	  f : A → B	  t : A	  l : ne_list A	  IHl : to_list (map f l) = list.map f (to_list l)	  ============================	  f t :: to_list (map f l) = f t :: to_list (map f l)	";
+            data = "1 subgoal (ID 51)	  	  A : Type	  B : Type	  f : A → B	  t : A	  l : ne_list A	  IHl : to_list (map f l) = list.map f (to_list l)	  ============================	  f t :: to_list (map f l) = f t :: to_list (map f l)	";
             responses[i]=data;
           
 

@@ -518,7 +518,7 @@
           
 
             i = 100;
-            data = "1 subgoal (ID 27)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  H : Funext	  n : trunc_index	  IsTruncAlgebra0 : IsTruncAlgebra n.+1 B	  w : SymbolType σ	  α : Operation A w	  β : Operation B w	  ============================	  IsTrunc n (OpPreserving α β)	";
+            data = "1 subgoal (ID 27)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  H : Funext	  n : trunc_index	  IsTruncAlgebra0 : IsTruncAlgebra n.+1 B	  w : SymbolType σ	  α : Operation A w	  β : Operation B w	  ============================	  IsTrunc n (OpPreserving α β)	";
             responses[i]=data;
           
 
@@ -783,7 +783,7 @@
           
 
             i = 153;
-            data = "1 subgoal (ID 32)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  H : Funext	  n : trunc_index	  IsTruncAlgebra0 : IsTruncAlgebra n.+1 B	  ============================	  IsTrunc n IsHomomorphism	";
+            data = "1 subgoal (ID 32)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  H : Funext	  n : trunc_index	  IsTruncAlgebra0 : IsTruncAlgebra n.+1 B	  ============================	  IsTrunc n IsHomomorphism	";
             responses[i]=data;
           
 
@@ -953,7 +953,7 @@
           
 
             i = 187;
-            data = "1 subgoal (ID 14)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f, g : Homomorphism A B	  ============================	  f = g → ∀ s : Sort σ, f s == g s	";
+            data = "1 subgoal (ID 14)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f, g : Homomorphism A B	  ============================	  f = g → forall s : Sort σ, f s == g s	";
             responses[i]=data;
           
 
@@ -963,7 +963,7 @@
           
 
             i = 189;
-            data = "1 subgoal (ID 15)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f, g : Homomorphism A B	  p : f = g	  ============================	  ∀ s : Sort σ, f s == g s	";
+            data = "1 subgoal (ID 15)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f, g : Homomorphism A B	  p : f = g	  ============================	  forall s : Sort σ, f s == g s	";
             responses[i]=data;
           
 
@@ -993,7 +993,7 @@
           
 
             i = 195;
-            data = "1 subgoal (ID 28)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  ============================	  (∃ def_hom0 : ∀ s : Sort σ, A s → B s, IsHomomorphism def_hom0) <~>	  Homomorphism A B	";
+            data = "1 subgoal (ID 29)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  ============================	  (∃ def_hom0 : forall s : Sort σ, A s → B s, IsHomomorphism def_hom0) <~>	  Homomorphism A B	";
             responses[i]=data;
           
 
@@ -1128,12 +1128,12 @@
           
 
             i = 222;
-            data = "1 subgoal (ID 93)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  def_hom0 : ∀ s : Sort σ, A s → B s	  is_homomorphism_hom0 : IsHomomorphism def_hom0	  def_hom1 : ∀ s : Sort σ, A s → B s	  is_homomorphism_hom1 : IsHomomorphism def_hom1	  p : {| def_hom := def_hom0; is_homomorphism_hom := is_homomorphism_hom0 |} =	      {| def_hom := def_hom1; is_homomorphism_hom := is_homomorphism_hom1 |}	  q : transport IsHomomorphism p	        (is_homomorphism_hom	           {|	           def_hom := def_hom0;	           is_homomorphism_hom := is_homomorphism_hom0 |}) =	      is_homomorphism_hom	        {|	        def_hom := def_hom1;	        is_homomorphism_hom := is_homomorphism_hom1 |}	  ============================	  {| def_hom := def_hom0; is_homomorphism_hom := is_homomorphism_hom0 |} =	  {| def_hom := def_hom1; is_homomorphism_hom := is_homomorphism_hom1 |}	";
+            data = "1 subgoal (ID 93)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  def_hom0 : forall s : Sort σ, A s → B s	  is_homomorphism_hom0 : IsHomomorphism def_hom0	  def_hom1 : forall s : Sort σ, A s → B s	  is_homomorphism_hom1 : IsHomomorphism def_hom1	  p : {| def_hom := def_hom0; is_homomorphism_hom := is_homomorphism_hom0 |} =	      {| def_hom := def_hom1; is_homomorphism_hom := is_homomorphism_hom1 |}	  q : transport IsHomomorphism p	        (is_homomorphism_hom	           {|	           def_hom := def_hom0;	           is_homomorphism_hom := is_homomorphism_hom0 |}) =	      is_homomorphism_hom	        {|	        def_hom := def_hom1;	        is_homomorphism_hom := is_homomorphism_hom1 |}	  ============================	  {| def_hom := def_hom0; is_homomorphism_hom := is_homomorphism_hom0 |} =	  {| def_hom := def_hom1; is_homomorphism_hom := is_homomorphism_hom1 |}	";
             responses[i]=data;
           
 
             i = 223;
-            data = "1 subgoal (ID 103)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  def_hom0 : ∀ s : Sort σ, A s → B s	  is_homomorphism_hom0 : IsHomomorphism def_hom0	  def_hom1 : ∀ s : Sort σ, A s → B s	  is_homomorphism_hom1 : IsHomomorphism def_hom1	  p : def_hom0 = def_hom1	  q : transport IsHomomorphism p is_homomorphism_hom0 = is_homomorphism_hom1	  ============================	  {| def_hom := def_hom0; is_homomorphism_hom := is_homomorphism_hom0 |} =	  {| def_hom := def_hom1; is_homomorphism_hom := is_homomorphism_hom1 |}	";
+            data = "1 subgoal (ID 95)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  def_hom0 : forall s : Sort σ, A s → B s	  is_homomorphism_hom0 : IsHomomorphism def_hom0	  def_hom1 : forall s : Sort σ, A s → B s	  is_homomorphism_hom1 : IsHomomorphism def_hom1	  p : def_hom0 = def_hom1	  q : transport IsHomomorphism p is_homomorphism_hom0 = is_homomorphism_hom1	  ============================	  {| def_hom := def_hom0; is_homomorphism_hom := is_homomorphism_hom0 |} =	  {| def_hom := def_hom1; is_homomorphism_hom := is_homomorphism_hom1 |}	";
             responses[i]=data;
           
 
@@ -1683,7 +1683,7 @@
           
 
             i = 333;
-            data = "1 subgoal (ID 103)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  ============================	  ∀ s : Sort σ, A s <~> B s	";
+            data = "1 subgoal (ID 103)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  ============================	  forall s : Sort σ, A s <~> B s	";
             responses[i]=data;
           
 
@@ -1693,7 +1693,7 @@
           
 
             i = 335;
-            data = "1 subgoal (ID 104)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  s : Sort σ	  ============================	  A s <~> B s	";
+            data = "1 subgoal (ID 104)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  s : Sort σ	  ============================	  A s <~> B s	";
             responses[i]=data;
           
 
@@ -1708,7 +1708,7 @@
           
 
             i = 338;
-            data = "1 subgoal (ID 118)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  ============================	  IsHProp (IsIsomorphism f)	";
+            data = "1 subgoal (ID 118)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  ============================	  IsHProp (IsIsomorphism f)	";
             responses[i]=data;
           
 
@@ -1738,7 +1738,7 @@
           
 
             i = 344;
-            data = "1 subgoal (ID 147)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  w : SymbolType σ	  a : FamilyProd A (dom_symboltype w)	  α : Operation A w	  β : Operation B w	  P : OpPreserving f α β	  ============================	  f (cod_symboltype w) (ap_operation α a) =	  ap_operation β (map_family_prod f a)	";
+            data = "1 subgoal (ID 147)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  w : SymbolType σ	  a : FamilyProd A (dom_symboltype w)	  α : Operation A w	  β : Operation B w	  P : OpPreserving f α β	  ============================	  f (cod_symboltype w) (ap_operation α a) =	  ap_operation β (map_family_prod f a)	";
             responses[i]=data;
           
 
@@ -1748,22 +1748,22 @@
           
 
             i = 346;
-            data = "2 subgoals (ID 166)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  t : Sort σ	  a : FamilyProd A (dom_symboltype [:t:])	  α : Operation A [:t:]	  β : Operation B [:t:]	  P : OpPreserving f α β	  ============================	  f (cod_symboltype [:t:]) (ap_operation α a) =	  ap_operation β (map_family_prod f a)		subgoal 2 (ID 177) is:	 f (cod_symboltype (t ::: w)) (ap_operation α a) =	 ap_operation β (map_family_prod f a)	";
+            data = "2 subgoals (ID 166)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  t : Sort σ	  a : FamilyProd A (dom_symboltype [:t:])	  α : Operation A [:t:]	  β : Operation B [:t:]	  P : OpPreserving f α β	  ============================	  f (cod_symboltype [:t:]) (ap_operation α a) =	  ap_operation β (map_family_prod f a)		subgoal 2 (ID 177) is:	 f (cod_symboltype (t ::: w)) (ap_operation α a) =	 ap_operation β (map_family_prod f a)	";
             responses[i]=data;
           
 
             i = 347;
-            data = "1 subgoal (ID 166)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  t : Sort σ	  a : FamilyProd A (dom_symboltype [:t:])	  α : Operation A [:t:]	  β : Operation B [:t:]	  P : OpPreserving f α β	  ============================	  f (cod_symboltype [:t:]) (ap_operation α a) =	  ap_operation β (map_family_prod f a)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 177)		subgoal 1 (ID 177) is:	 f (cod_symboltype (t ::: w)) (ap_operation α a) =	 ap_operation β (map_family_prod f a)	";
+            data = "1 subgoal (ID 166)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  t : Sort σ	  a : FamilyProd A (dom_symboltype [:t:])	  α : Operation A [:t:]	  β : Operation B [:t:]	  P : OpPreserving f α β	  ============================	  f (cod_symboltype [:t:]) (ap_operation α a) =	  ap_operation β (map_family_prod f a)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 177)		subgoal 1 (ID 177) is:	 f (cod_symboltype (t ::: w)) (ap_operation α a) =	 ap_operation β (map_family_prod f a)	";
             responses[i]=data;
           
 
             i = 348;
-            data = "1 subgoal (ID 177)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  t : Sort σ	  w : ne_list (Sort σ)	  a : FamilyProd A (dom_symboltype (t ::: w))	  α : Operation A (t ::: w)	  β : Operation B (t ::: w)	  P : OpPreserving f α β	  IHw : ∀ (a : FamilyProd A (dom_symboltype w)) (α : Operation A w)	        (β : Operation B w),	        OpPreserving f α β	        → f (cod_symboltype w) (ap_operation α a) =	          ap_operation β (map_family_prod f a)	  ============================	  f (cod_symboltype (t ::: w)) (ap_operation α a) =	  ap_operation β (map_family_prod f a)	1 subgoal (ID 188)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  t : Sort σ	  w : ne_list (Sort σ)	  x : A t	  a : list.fold_right (λ (i : Sort σ) (A0 : Type), A i ∧ A0) Unit	        (dom_symboltype w)	  α : Operation A (t ::: w)	  β : Operation B (t ::: w)	  P : OpPreserving f α β	  IHw : ∀ (a : FamilyProd A (dom_symboltype w)) (α : Operation A w)	        (β : Operation B w),	        OpPreserving f α β	        → f (cod_symboltype w) (ap_operation α a) =	          ap_operation β (map_family_prod f a)	  ============================	  f (cod_symboltype (t ::: w)) (ap_operation α (x, a)) =	  ap_operation β (map_family_prod f (x, a))	";
+            data = "1 subgoal (ID 177)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  t : Sort σ	  w : ne_list (Sort σ)	  a : FamilyProd A (dom_symboltype (t ::: w))	  α : Operation A (t ::: w)	  β : Operation B (t ::: w)	  P : OpPreserving f α β	  IHw : forall (a : FamilyProd A (dom_symboltype w)) 	        (α : Operation A w) (β : Operation B w),	        OpPreserving f α β	        → f (cod_symboltype w) (ap_operation α a) =	          ap_operation β (map_family_prod f a)	  ============================	  f (cod_symboltype (t ::: w)) (ap_operation α a) =	  ap_operation β (map_family_prod f a)	1 subgoal (ID 188)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  t : Sort σ	  w : ne_list (Sort σ)	  x : A t	  a : list.fold_right (λ (i : Sort σ) (A0 : Type), A i ∧ A0) Unit	        (dom_symboltype w)	  α : Operation A (t ::: w)	  β : Operation B (t ::: w)	  P : OpPreserving f α β	  IHw : forall (a : FamilyProd A (dom_symboltype w)) 	        (α : Operation A w) (β : Operation B w),	        OpPreserving f α β	        → f (cod_symboltype w) (ap_operation α a) =	          ap_operation β (map_family_prod f a)	  ============================	  f (cod_symboltype (t ::: w)) (ap_operation α (x, a)) =	  ap_operation β (map_family_prod f (x, a))	";
             responses[i]=data;
           
 
             i = 349;
-            data = "1 subgoal (ID 189)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  t : Sort σ	  w : ne_list (Sort σ)	  x : A t	  a : list.fold_right (λ (i : Sort σ) (A0 : Type), A i ∧ A0) Unit	        (dom_symboltype w)	  α : Operation A (t ::: w)	  β : Operation B (t ::: w)	  P : OpPreserving f α β	  IHw : ∀ (a : FamilyProd A (dom_symboltype w)) (α : Operation A w)	        (β : Operation B w),	        OpPreserving f α β	        → f (cod_symboltype w) (ap_operation α a) =	          ap_operation β (map_family_prod f a)	  ============================	  OpPreserving f (α x) (β (fst (map_family_prod f (x, a))))	";
+            data = "1 subgoal (ID 189)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  t : Sort σ	  w : ne_list (Sort σ)	  x : A t	  a : list.fold_right (λ (i : Sort σ) (A0 : Type), A i ∧ A0) Unit	        (dom_symboltype w)	  α : Operation A (t ::: w)	  β : Operation B (t ::: w)	  P : OpPreserving f α β	  IHw : forall (a : FamilyProd A (dom_symboltype w)) 	        (α : Operation A w) (β : Operation B w),	        OpPreserving f α β	        → f (cod_symboltype w) (ap_operation α a) =	          ap_operation β (map_family_prod f a)	  ============================	  OpPreserving f (α x) (β (fst (map_family_prod f (x, a))))	";
             responses[i]=data;
           
 
@@ -2078,7 +2078,7 @@
           
 
             i = 412;
-            data = "1 subgoal (ID 171)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  ============================	  ∀ (u : Symbol σ) (a : FamilyProd A (dom_symboltype (σ u))),	  f (cod_symboltype (σ u)) (ap_operation (u ^^ A) a) =	  ap_operation (u ^^ B) (map_family_prod f a)	";
+            data = "1 subgoal (ID 171)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  ============================	  forall (u : Symbol σ) (a : FamilyProd A (dom_symboltype (σ u))),	  f (cod_symboltype (σ u)) (ap_operation (u ^^ A) a) =	  ap_operation (u ^^ B) (map_family_prod f a)	";
             responses[i]=data;
           
 
@@ -2088,7 +2088,7 @@
           
 
             i = 414;
-            data = "1 subgoal (ID 173)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  u : Symbol σ	  a : FamilyProd A (dom_symboltype (σ u))	  ============================	  f (cod_symboltype (σ u)) (ap_operation (u ^^ A) a) =	  ap_operation (u ^^ B) (map_family_prod f a)	";
+            data = "1 subgoal (ID 173)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  u : Symbol σ	  a : FamilyProd A (dom_symboltype (σ u))	  ============================	  f (cod_symboltype (σ u)) (ap_operation (u ^^ A) a) =	  ap_operation (u ^^ B) (map_family_prod f a)	";
             responses[i]=data;
           
 
@@ -2193,7 +2193,7 @@
           
 
             i = 435;
-            data = "1 subgoal (ID 128)	  	  σ : Signature	  A : Algebra σ	  u : Symbol σ	  ============================	  ∀ o : Operation A (σ u), OpPreserving (λ (s : Sort σ) (x : A s), x) o o	";
+            data = "1 subgoal (ID 128)	  	  σ : Signature	  A : Algebra σ	  u : Symbol σ	  ============================	  forall o : Operation A (σ u),	  OpPreserving (λ (s : Sort σ) (x : A s), x) o o	";
             responses[i]=data;
           
 
@@ -2213,7 +2213,7 @@
           
 
             i = 439;
-            data = "1 subgoal (ID 147)	  	  σ : Signature	  A : Algebra σ	  u : Symbol σ	  t : Sort σ	  s : ne_list (Sort σ)	  w : Operation A (t ::: s)	  IHs : ∀ w : Operation A s, OpPreserving (λ (s : Sort σ) (x : A s), x) w w	  ============================	  OpPreserving (λ (s0 : Sort σ) (x : A s0), x) w w	No more subgoals.	";
+            data = "1 subgoal (ID 147)	  	  σ : Signature	  A : Algebra σ	  u : Symbol σ	  t : Sort σ	  s : ne_list (Sort σ)	  w : Operation A (t ::: s)	  IHs : forall w : Operation A s,	        OpPreserving (λ (s : Sort σ) (x : A s), x) w w	  ============================	  OpPreserving (λ (s0 : Sort σ) (x : A s0), x) w w	No more subgoals.	";
             responses[i]=data;
           
 
@@ -2418,7 +2418,7 @@
           
 
             i = 480;
-            data = "1 subgoal (ID 150)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  ============================	  IsHomomorphism (λ s : Sort σ, _^-1)	";
+            data = "1 subgoal (ID 138)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  ============================	  IsHomomorphism (λ s : Sort σ, _^-1)	";
             responses[i]=data;
           
 
@@ -2428,42 +2428,42 @@
           
 
             i = 482;
-            data = "1 subgoal (ID 152)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  u : Symbol σ	  ============================	  OpPreserving (λ s : Sort σ, _^-1) (u ^^ B) (u ^^ A)	";
+            data = "1 subgoal (ID 140)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  u : Symbol σ	  ============================	  OpPreserving (λ s : Sort σ, _^-1) (u ^^ B) (u ^^ A)	";
             responses[i]=data;
           
 
             i = 483;
-            data = "1 subgoal (ID 159)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  u : Symbol σ	  ============================	  ∀ (o : Operation A (σ u)) (o0 : Operation B (σ u)),	  OpPreserving f o o0 → OpPreserving (λ s : Sort σ, _^-1) o0 o	";
+            data = "1 subgoal (ID 147)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  u : Symbol σ	  ============================	  forall (o : Operation A (σ u)) (o0 : Operation B (σ u)),	  OpPreserving f o o0 → OpPreserving (λ s : Sort σ, _^-1) o0 o	";
             responses[i]=data;
           
 
             i = 484;
-            data = "1 subgoal (ID 162)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  u : Symbol σ	  a : Operation A (σ u)	  b : Operation B (σ u)	  P : OpPreserving f a b	  ============================	  OpPreserving (λ s : Sort σ, _^-1) b a	";
+            data = "1 subgoal (ID 150)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  u : Symbol σ	  a : Operation A (σ u)	  b : Operation B (σ u)	  P : OpPreserving f a b	  ============================	  OpPreserving (λ s : Sort σ, _^-1) b a	";
             responses[i]=data;
           
 
             i = 485;
-            data = "2 subgoals (ID 181)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  u : Symbol σ	  t : Sort σ	  a : Operation A [:t:]	  b : Operation B [:t:]	  P : OpPreserving f a b	  ============================	  OpPreserving (λ s : Sort σ, _^-1) b a		subgoal 2 (ID 190) is:	 OpPreserving (λ s0 : Sort σ, _^-1) b a	";
+            data = "2 subgoals (ID 169)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  u : Symbol σ	  t : Sort σ	  a : Operation A [:t:]	  b : Operation B [:t:]	  P : OpPreserving f a b	  ============================	  OpPreserving (λ s : Sort σ, _^-1) b a		subgoal 2 (ID 178) is:	 OpPreserving (λ s0 : Sort σ, _^-1) b a	";
             responses[i]=data;
           
 
             i = 486;
-            data = "1 subgoal (ID 181)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  u : Symbol σ	  t : Sort σ	  a : Operation A [:t:]	  b : Operation B [:t:]	  P : OpPreserving f a b	  ============================	  OpPreserving (λ s : Sort σ, _^-1) b a	1 subgoal (ID 196)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  u : Symbol σ	  t : Sort σ	  a : Operation A [:t:]	  ============================	  OpPreserving (λ s : Sort σ, _^-1) (f t a) a	";
+            data = "1 subgoal (ID 169)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  u : Symbol σ	  t : Sort σ	  a : Operation A [:t:]	  b : Operation B [:t:]	  P : OpPreserving f a b	  ============================	  OpPreserving (λ s : Sort σ, _^-1) b a	1 subgoal (ID 184)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  u : Symbol σ	  t : Sort σ	  a : Operation A [:t:]	  ============================	  OpPreserving (λ s : Sort σ, _^-1) (f t a) a	";
             responses[i]=data;
           
 
             i = 487;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 190)		subgoal 1 (ID 190) is:	 OpPreserving (λ s0 : Sort σ, _^-1) b a	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 178)		subgoal 1 (ID 178) is:	 OpPreserving (λ s0 : Sort σ, _^-1) b a	";
             responses[i]=data;
           
 
             i = 488;
-            data = "1 subgoal (ID 190)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  u : Symbol σ	  t : Sort σ	  s : ne_list (Sort σ)	  a : Operation A (t ::: s)	  b : Operation B (t ::: s)	  P : OpPreserving f a b	  IHs : ∀ (a : Operation A s) (b : Operation B s),	        OpPreserving f a b → OpPreserving (λ s : Sort σ, _^-1) b a	  ============================	  OpPreserving (λ s0 : Sort σ, _^-1) b a	1 subgoal (ID 202)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  u : Symbol σ	  t : Sort σ	  s : ne_list (Sort σ)	  a : Operation A (t ::: s)	  b : Operation B (t ::: s)	  P : OpPreserving f a b	  IHs : ∀ (a : Operation A s) (b : Operation B s),	        OpPreserving f a b → OpPreserving (λ s : Sort σ, _^-1) b a	  x : B t	  ============================	  OpPreserving (λ s0 : Sort σ, _^-1) (b x) (a (_^-1 x))	";
+            data = "1 subgoal (ID 178)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  u : Symbol σ	  t : Sort σ	  s : ne_list (Sort σ)	  a : Operation A (t ::: s)	  b : Operation B (t ::: s)	  P : OpPreserving f a b	  IHs : forall (a : Operation A s) (b : Operation B s),	        OpPreserving f a b → OpPreserving (λ s : Sort σ, _^-1) b a	  ============================	  OpPreserving (λ s0 : Sort σ, _^-1) b a	1 subgoal (ID 190)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  u : Symbol σ	  t : Sort σ	  s : ne_list (Sort σ)	  a : Operation A (t ::: s)	  b : Operation B (t ::: s)	  P : OpPreserving f a b	  IHs : forall (a : Operation A s) (b : Operation B s),	        OpPreserving f a b → OpPreserving (λ s : Sort σ, _^-1) b a	  x : B t	  ============================	  OpPreserving (λ s0 : Sort σ, _^-1) (b x) (a (_^-1 x))	";
             responses[i]=data;
           
 
             i = 489;
-            data = "1 subgoal (ID 203)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  u : Symbol σ	  t : Sort σ	  s : ne_list (Sort σ)	  a : Operation A (t ::: s)	  b : Operation B (t ::: s)	  P : OpPreserving f a b	  IHs : ∀ (a : Operation A s) (b : Operation B s),	        OpPreserving f a b → OpPreserving (λ s : Sort σ, _^-1) b a	  x : B t	  ============================	  OpPreserving f (a (_^-1 x)) (b x)	";
+            data = "1 subgoal (ID 191)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  u : Symbol σ	  t : Sort σ	  s : ne_list (Sort σ)	  a : Operation A (t ::: s)	  b : Operation B (t ::: s)	  P : OpPreserving f a b	  IHs : forall (a : Operation A s) (b : Operation B s),	        OpPreserving f a b → OpPreserving (λ s : Sort σ, _^-1) b a	  x : B t	  ============================	  OpPreserving f (a (_^-1 x)) (b x)	";
             responses[i]=data;
           
 
@@ -2478,7 +2478,7 @@
           
 
             i = 492;
-            data = "1 subgoal (ID 180)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  ============================	  IsIsomorphism (λ s : Sort σ, _^-1)	";
+            data = "1 subgoal (ID 156)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  ============================	  IsIsomorphism (λ s : Sort σ, _^-1)	";
             responses[i]=data;
           
 
@@ -2488,7 +2488,7 @@
           
 
             i = 494;
-            data = "1 subgoal (ID 182)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  s : Sort σ	  ============================	  IsEquiv _^-1	";
+            data = "1 subgoal (ID 158)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H : IsIsomorphism f	  s : Sort σ	  ============================	  IsEquiv _^-1	";
             responses[i]=data;
           
 
@@ -2843,7 +2843,7 @@
           
 
             i = 565;
-            data = "1 subgoal (ID 163)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  C : Algebra σ	  g : ∀ s : Sort σ, B s → C s	  IsHomomorphism0 : IsHomomorphism g	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism1 : IsHomomorphism f	  w : SymbolType σ	  α : Operation A w	  β : Operation B w	  γ : Operation C w	  G : OpPreserving g β γ	  F : OpPreserving f α β	  ============================	  OpPreserving (λ s : Sort σ, g s o f s) α γ	";
+            data = "1 subgoal (ID 163)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  C : Algebra σ	  g : forall s : Sort σ, B s → C s	  IsHomomorphism0 : IsHomomorphism g	  f : forall s : Sort σ, A s → B s	  IsHomomorphism1 : IsHomomorphism f	  w : SymbolType σ	  α : Operation A w	  β : Operation B w	  γ : Operation C w	  G : OpPreserving g β γ	  F : OpPreserving f α β	  ============================	  OpPreserving (λ s : Sort σ, g s o f s) α γ	";
             responses[i]=data;
           
 
@@ -2853,17 +2853,17 @@
           
 
             i = 567;
-            data = "2 subgoals (ID 219)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  C : Algebra σ	  g : ∀ s : Sort σ, B s → C s	  IsHomomorphism0 : IsHomomorphism g	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism1 : IsHomomorphism f	  t : Sort σ	  α : A t	  β : B t	  γ : C t	  G : g t β = γ	  F : f t α = β	  ============================	  g t (f t α) = γ		subgoal 2 (ID 242) is:	 ∀ x : A t,	 OpPreserving (λ (s : Sort σ) (x0 : A s), g s (f s x0)) 	   (α x) (γ (g t (f t x)))	";
+            data = "2 subgoals (ID 206)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  C : Algebra σ	  g : forall s : Sort σ, B s → C s	  IsHomomorphism0 : IsHomomorphism g	  f : forall s : Sort σ, A s → B s	  IsHomomorphism1 : IsHomomorphism f	  t : Sort σ	  α : A t	  β : B t	  γ : C t	  G : g t β = γ	  F : f t α = β	  ============================	  g t (f t α) = γ		subgoal 2 (ID 214) is:	 forall x : A t,	 OpPreserving (λ (s : Sort σ) (x0 : A s), g s (f s x0)) 	   (α x) (γ (g t (f t x)))	";
             responses[i]=data;
           
 
             i = 568;
-            data = "1 subgoal (ID 219)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  C : Algebra σ	  g : ∀ s : Sort σ, B s → C s	  IsHomomorphism0 : IsHomomorphism g	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism1 : IsHomomorphism f	  t : Sort σ	  α : A t	  β : B t	  γ : C t	  G : g t β = γ	  F : f t α = β	  ============================	  g t (f t α) = γ	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 242)		subgoal 1 (ID 242) is:	 ∀ x : A t,	 OpPreserving (λ (s : Sort σ) (x0 : A s), g s (f s x0)) 	   (α x) (γ (g t (f t x)))	";
+            data = "1 subgoal (ID 206)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  C : Algebra σ	  g : forall s : Sort σ, B s → C s	  IsHomomorphism0 : IsHomomorphism g	  f : forall s : Sort σ, A s → B s	  IsHomomorphism1 : IsHomomorphism f	  t : Sort σ	  α : A t	  β : B t	  γ : C t	  G : g t β = γ	  F : f t α = β	  ============================	  g t (f t α) = γ	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 214)		subgoal 1 (ID 214) is:	 forall x : A t,	 OpPreserving (λ (s : Sort σ) (x0 : A s), g s (f s x0)) 	   (α x) (γ (g t (f t x)))	";
             responses[i]=data;
           
 
             i = 569;
-            data = "1 subgoal (ID 242)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  C : Algebra σ	  g : ∀ s : Sort σ, B s → C s	  IsHomomorphism0 : IsHomomorphism g	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism1 : IsHomomorphism f	  t : Sort σ	  w : ne_list (Sort σ)	  α : A t → Operation A w	  β : B t → Operation B w	  γ : C t → Operation C w	  G : ∀ x : B t, OpPreserving g (β x) (γ (g t x))	  F : ∀ x : A t, OpPreserving f (α x) (β (f t x))	  IHw : ∀ (α : Operation A w) (β : Operation B w) 	        (γ : Operation C w),	        OpPreserving g β γ	        → OpPreserving f α β	          → OpPreserving (λ (s : Sort σ) (x : A s), g s (f s x)) α γ	  ============================	  ∀ x : A t,	  OpPreserving (λ (s : Sort σ) (x0 : A s), g s (f s x0)) 	    (α x) (γ (g t (f t x)))	1 subgoal (ID 255)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  C : Algebra σ	  g : ∀ s : Sort σ, B s → C s	  IsHomomorphism0 : IsHomomorphism g	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism1 : IsHomomorphism f	  t : Sort σ	  w : ne_list (Sort σ)	  α : A t → Operation A w	  β : B t → Operation B w	  γ : C t → Operation C w	  G : ∀ x : B t, OpPreserving g (β x) (γ (g t x))	  F : ∀ x : A t, OpPreserving f (α x) (β (f t x))	  IHw : ∀ (α : Operation A w) (β : Operation B w) 	        (γ : Operation C w),	        OpPreserving g β γ	        → OpPreserving f α β	          → OpPreserving (λ (s : Sort σ) (x : A s), g s (f s x)) α γ	  x : A t	  ============================	  OpPreserving (λ (s : Sort σ) (x0 : A s), g s (f s x0)) 	    (α x) (γ (g t (f t x)))	";
+            data = "1 subgoal (ID 214)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  C : Algebra σ	  g : forall s : Sort σ, B s → C s	  IsHomomorphism0 : IsHomomorphism g	  f : forall s : Sort σ, A s → B s	  IsHomomorphism1 : IsHomomorphism f	  t : Sort σ	  w : ne_list (Sort σ)	  α : A t → Operation A w	  β : B t → Operation B w	  γ : C t → Operation C w	  G : forall x : B t, OpPreserving g (β x) (γ (g t x))	  F : forall x : A t, OpPreserving f (α x) (β (f t x))	  IHw : forall (α : Operation A w) (β : Operation B w) 	        (γ : Operation C w),	        OpPreserving g β γ	        → OpPreserving f α β	          → OpPreserving (λ (s : Sort σ) (x : A s), g s (f s x)) α γ	  ============================	  forall x : A t,	  OpPreserving (λ (s : Sort σ) (x0 : A s), g s (f s x0)) 	    (α x) (γ (g t (f t x)))	1 subgoal (ID 227)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  C : Algebra σ	  g : forall s : Sort σ, B s → C s	  IsHomomorphism0 : IsHomomorphism g	  f : forall s : Sort σ, A s → B s	  IsHomomorphism1 : IsHomomorphism f	  t : Sort σ	  w : ne_list (Sort σ)	  α : A t → Operation A w	  β : B t → Operation B w	  γ : C t → Operation C w	  G : forall x : B t, OpPreserving g (β x) (γ (g t x))	  F : forall x : A t, OpPreserving f (α x) (β (f t x))	  IHw : forall (α : Operation A w) (β : Operation B w) 	        (γ : Operation C w),	        OpPreserving g β γ	        → OpPreserving f α β	          → OpPreserving (λ (s : Sort σ) (x : A s), g s (f s x)) α γ	  x : A t	  ============================	  OpPreserving (λ (s : Sort σ) (x0 : A s), g s (f s x0)) 	    (α x) (γ (g t (f t x)))	";
             responses[i]=data;
           
 
@@ -2878,7 +2878,7 @@
           
 
             i = 572;
-            data = "1 subgoal (ID 189)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  C : Algebra σ	  g : ∀ s : Sort σ, B s → C s	  IsHomomorphism0 : IsHomomorphism g	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism1 : IsHomomorphism f	  ============================	  IsHomomorphism (λ s : Sort σ, g s o f s)	";
+            data = "1 subgoal (ID 189)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  C : Algebra σ	  g : forall s : Sort σ, B s → C s	  IsHomomorphism0 : IsHomomorphism g	  f : forall s : Sort σ, A s → B s	  IsHomomorphism1 : IsHomomorphism f	  ============================	  IsHomomorphism (λ s : Sort σ, g s o f s)	";
             responses[i]=data;
           
 
@@ -2888,7 +2888,7 @@
           
 
             i = 574;
-            data = "1 subgoal (ID 191)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  C : Algebra σ	  g : ∀ s : Sort σ, B s → C s	  IsHomomorphism0 : IsHomomorphism g	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism1 : IsHomomorphism f	  u : Symbol σ	  ============================	  OpPreserving (λ (s : Sort σ) (x : A s), g s (f s x)) (u ^^ A) (u ^^ C)	";
+            data = "1 subgoal (ID 191)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  C : Algebra σ	  g : forall s : Sort σ, B s → C s	  IsHomomorphism0 : IsHomomorphism g	  f : forall s : Sort σ, A s → B s	  IsHomomorphism1 : IsHomomorphism f	  u : Symbol σ	  ============================	  OpPreserving (λ (s : Sort σ) (x : A s), g s (f s x)) (u ^^ A) (u ^^ C)	";
             responses[i]=data;
           
 
@@ -2903,7 +2903,7 @@
           
 
             i = 577;
-            data = "1 subgoal (ID 238)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  C : Algebra σ	  g : ∀ s : Sort σ, B s → C s	  IsHomomorphism0 : IsHomomorphism g	  H : IsIsomorphism g	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism1 : IsHomomorphism f	  H0 : IsIsomorphism f	  ============================	  IsIsomorphism (λ s : Sort σ, g s o f s)	";
+            data = "1 subgoal (ID 220)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  C : Algebra σ	  g : forall s : Sort σ, B s → C s	  IsHomomorphism0 : IsHomomorphism g	  H : IsIsomorphism g	  f : forall s : Sort σ, A s → B s	  IsHomomorphism1 : IsHomomorphism f	  H0 : IsIsomorphism f	  ============================	  IsIsomorphism (λ s : Sort σ, g s o f s)	";
             responses[i]=data;
           
 
@@ -2913,7 +2913,7 @@
           
 
             i = 579;
-            data = "1 subgoal (ID 240)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  C : Algebra σ	  g : ∀ s : Sort σ, B s → C s	  IsHomomorphism0 : IsHomomorphism g	  H : IsIsomorphism g	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism1 : IsHomomorphism f	  H0 : IsIsomorphism f	  s : Sort σ	  ============================	  IsEquiv (λ x : A s, g s (f s x))	";
+            data = "1 subgoal (ID 222)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  C : Algebra σ	  g : forall s : Sort σ, B s → C s	  IsHomomorphism0 : IsHomomorphism g	  H : IsIsomorphism g	  f : forall s : Sort σ, A s → B s	  IsHomomorphism1 : IsHomomorphism f	  H0 : IsIsomorphism f	  s : Sort σ	  ============================	  IsEquiv (λ x : A s, g s (f s x))	";
             responses[i]=data;
           
 
@@ -3433,7 +3433,7 @@
           
 
             i = 683;
-            data = "1 subgoal (ID 191)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  w : SymbolType σ	  α : Operation A w	  β : Operation B w	  f : ∀ s : Sort σ, A s <~> B s	  P : OpPreserving (λ s : Sort σ, f s) α β	  ============================	  transport (λ C : Carriers σ, Operation C w)	    (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	";
+            data = "1 subgoal (ID 157)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  w : SymbolType σ	  α : Operation A w	  β : Operation B w	  f : forall s : Sort σ, A s <~> B s	  P : OpPreserving (λ s : Sort σ, f s) α β	  ============================	  transport (λ C : Carriers σ, Operation C w)	    (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	";
             responses[i]=data;
           
 
@@ -3443,52 +3443,52 @@
           
 
             i = 685;
-            data = "2 subgoals (ID 236)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  t : Sort σ	  α : A t	  β : B t	  f : ∀ s : Sort σ, A s <~> B s	  P : f t α = β	  ============================	  transport (λ C : Carriers σ, C t)	    (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β		subgoal 2 (ID 253) is:	 transport (λ C : Carriers σ, C t → Operation C w)	   (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	";
+            data = "2 subgoals (ID 194)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  t : Sort σ	  α : A t	  β : B t	  f : forall s : Sort σ, A s <~> B s	  P : f t α = β	  ============================	  transport (λ C : Carriers σ, C t)	    (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β		subgoal 2 (ID 201) is:	 transport (λ C : Carriers σ, C t → Operation C w)	   (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	";
             responses[i]=data;
           
 
             i = 686;
-            data = "1 subgoal (ID 236)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  t : Sort σ	  α : A t	  β : B t	  f : ∀ s : Sort σ, A s <~> B s	  P : f t α = β	  ============================	  transport (λ C : Carriers σ, C t)	    (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	1 subgoal (ID 279)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  t : Sort σ	  α : A t	  β : B t	  f : ∀ s : Sort σ, A s <~> B s	  P : f t α = β	  ============================	  transport idmap (path_universe (f t)) α = β	";
+            data = "1 subgoal (ID 194)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  t : Sort σ	  α : A t	  β : B t	  f : forall s : Sort σ, A s <~> B s	  P : f t α = β	  ============================	  transport (λ C : Carriers σ, C t)	    (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	1 subgoal (ID 230)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  t : Sort σ	  α : A t	  β : B t	  f : forall s : Sort σ, A s <~> B s	  P : f t α = β	  ============================	  transport idmap (path_universe (f t)) α = β	";
             responses[i]=data;
           
 
             i = 687;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 253)		subgoal 1 (ID 253) is:	 transport (λ C : Carriers σ, C t → Operation C w)	   (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 201)		subgoal 1 (ID 201) is:	 transport (λ C : Carriers σ, C t → Operation C w)	   (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	";
             responses[i]=data;
           
 
             i = 688;
-            data = "1 subgoal (ID 253)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  α : A t → Operation A w	  β : B t → Operation B w	  f : ∀ s : Sort σ, A s <~> B s	  P : ∀ x : A t, OpPreserving (λ s : Sort σ, f s) (α x) (β (f t x))	  IHw : ∀ (α : Operation A w) (β : Operation B w),	        OpPreserving (λ s : Sort σ, f s) α β	        → transport (λ C : Carriers σ, Operation C w)	            (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	  ============================	  transport (λ C : Carriers σ, C t → Operation C w)	    (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	1 subgoal (ID 329)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  α : A t → Operation A w	  β : B t → Operation B w	  f : ∀ s : Sort σ, A s <~> B s	  P : ∀ x : A t, OpPreserving (λ s : Sort σ, f s) (α x) (β (f t x))	  IHw : ∀ (α : Operation A w) (β : Operation B w),	        OpPreserving (λ s : Sort σ, f s) α β	        → transport (λ C : Carriers σ, Operation C w)	            (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	  y : B t	  ============================	  transport (λ C : Carriers σ, C t → Operation C w)	    (path_forall A B (λ i : Sort σ, path_universe (f i))) α y = 	  β y	";
+            data = "1 subgoal (ID 201)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  α : A t → Operation A w	  β : B t → Operation B w	  f : forall s : Sort σ, A s <~> B s	  P : forall x : A t, OpPreserving (λ s : Sort σ, f s) (α x) (β (f t x))	  IHw : forall (α : Operation A w) (β : Operation B w),	        OpPreserving (λ s : Sort σ, f s) α β	        → transport (λ C : Carriers σ, Operation C w)	            (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	  ============================	  transport (λ C : Carriers σ, C t → Operation C w)	    (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	1 subgoal (ID 260)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  α : A t → Operation A w	  β : B t → Operation B w	  f : forall s : Sort σ, A s <~> B s	  P : forall x : A t, OpPreserving (λ s : Sort σ, f s) (α x) (β (f t x))	  IHw : forall (α : Operation A w) (β : Operation B w),	        OpPreserving (λ s : Sort σ, f s) α β	        → transport (λ C : Carriers σ, Operation C w)	            (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	  y : B t	  ============================	  transport (λ C : Carriers σ, C t → Operation C w)	    (path_forall A B (λ i : Sort σ, path_universe (f i))) α y = 	  β y	";
             responses[i]=data;
           
 
             i = 689;
-            data = "1 subgoal (ID 350)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  α : A t → Operation A w	  β : B t → Operation B w	  f : ∀ s : Sort σ, A s <~> B s	  P : ∀ x : A t, OpPreserving (λ s : Sort σ, f s) (α x) (β (f t x))	  IHw : ∀ (α : Operation A w) (β : Operation B w),	        OpPreserving (λ s : Sort σ, f s) α β	        → transport (λ C : Carriers σ, Operation C w)	            (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	  y : B t	  ============================	  transport (λ x : Carriers σ, B t → Operation x w)	    (path_forall A B (λ i : Sort σ, path_universe (f i)))	    (transport (λ y0 : Type, y0 → Operation A w) (path_universe (f t)) α) y =	  β y	";
+            data = "1 subgoal (ID 284)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  α : A t → Operation A w	  β : B t → Operation B w	  f : forall s : Sort σ, A s <~> B s	  P : forall x : A t, OpPreserving (λ s : Sort σ, f s) (α x) (β (f t x))	  IHw : forall (α : Operation A w) (β : Operation B w),	        OpPreserving (λ s : Sort σ, f s) α β	        → transport (λ C : Carriers σ, Operation C w)	            (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	  y : B t	  ============================	  transport (λ x : Carriers σ, B t → Operation x w)	    (path_forall A B (λ i : Sort σ, path_universe (f i)))	    (transport (λ y0 : Type, y0 → Operation A w) (path_universe (f t)) α) y =	  β y	";
             responses[i]=data;
           
 
             i = 690;
-            data = "1 subgoal (ID 372)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  α : A t → Operation A w	  β : B t → Operation B w	  f : ∀ s : Sort σ, A s <~> B s	  P : ∀ x : A t, OpPreserving (λ s : Sort σ, f s) (α x) (β (f t x))	  IHw : ∀ (α : Operation A w) (β : Operation B w),	        OpPreserving (λ s : Sort σ, f s) α β	        → transport (λ C : Carriers σ, Operation C w)	            (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	  y : B t	  ============================	  transport (λ x : Carriers σ, Operation x w)	    (path_forall A B (λ i : Sort σ, path_universe (f i)))	    (transport (λ y0 : Type, y0 → Operation A w) (path_universe (f t)) α y) =	  β y	";
+            data = "1 subgoal (ID 306)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  α : A t → Operation A w	  β : B t → Operation B w	  f : forall s : Sort σ, A s <~> B s	  P : forall x : A t, OpPreserving (λ s : Sort σ, f s) (α x) (β (f t x))	  IHw : forall (α : Operation A w) (β : Operation B w),	        OpPreserving (λ s : Sort σ, f s) α β	        → transport (λ C : Carriers σ, Operation C w)	            (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	  y : B t	  ============================	  transport (λ x : Carriers σ, Operation x w)	    (path_forall A B (λ i : Sort σ, path_universe (f i)))	    (transport (λ y0 : Type, y0 → Operation A w) (path_universe (f t)) α y) =	  β y	";
             responses[i]=data;
           
 
             i = 691;
-            data = "1 subgoal (ID 383)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  α : A t → Operation A w	  β : B t → Operation B w	  f : ∀ s : Sort σ, A s <~> B s	  P : ∀ x : A t, OpPreserving (λ s : Sort σ, f s) (α x) (β (f t x))	  IHw : ∀ (α : Operation A w) (β : Operation B w),	        OpPreserving (λ s : Sort σ, f s) α β	        → transport (λ C : Carriers σ, Operation C w)	            (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	  y : B t	  ============================	  transport (λ x : Carriers σ, Operation x w)	    (path_forall A B (λ i : Sort σ, path_universe (f i)))	    (α (transport idmap (path_universe (f t))^ y)) = 	  β y	";
+            data = "1 subgoal (ID 317)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  α : A t → Operation A w	  β : B t → Operation B w	  f : forall s : Sort σ, A s <~> B s	  P : forall x : A t, OpPreserving (λ s : Sort σ, f s) (α x) (β (f t x))	  IHw : forall (α : Operation A w) (β : Operation B w),	        OpPreserving (λ s : Sort σ, f s) α β	        → transport (λ C : Carriers σ, Operation C w)	            (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	  y : B t	  ============================	  transport (λ x : Carriers σ, Operation x w)	    (path_forall A B (λ i : Sort σ, path_universe (f i)))	    (α (transport idmap (path_universe (f t))^ y)) = 	  β y	";
             responses[i]=data;
           
 
             i = 692;
-            data = "1 subgoal (ID 421)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  α : A t → Operation A w	  β : B t → Operation B w	  f : ∀ s : Sort σ, A s <~> B s	  P : ∀ x : A t, OpPreserving (λ s : Sort σ, f s) (α x) (β (f t x))	  IHw : ∀ (α : Operation A w) (β : Operation B w),	        OpPreserving (λ s : Sort σ, f s) α β	        → transport (λ C : Carriers σ, Operation C w)	            (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	  y : B t	  ============================	  transport (λ x : Carriers σ, Operation x w)	    (path_forall A B (λ i : Sort σ, path_universe (f i))) 	    (α (_^-1 y)) = β y	";
+            data = "1 subgoal (ID 333)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  α : A t → Operation A w	  β : B t → Operation B w	  f : forall s : Sort σ, A s <~> B s	  P : forall x : A t, OpPreserving (λ s : Sort σ, f s) (α x) (β (f t x))	  IHw : forall (α : Operation A w) (β : Operation B w),	        OpPreserving (λ s : Sort σ, f s) α β	        → transport (λ C : Carriers σ, Operation C w)	            (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	  y : B t	  ============================	  transport (λ x : Carriers σ, Operation x w)	    (path_forall A B (λ i : Sort σ, path_universe (f i))) 	    (α (_^-1 y)) = β y	";
             responses[i]=data;
           
 
             i = 693;
-            data = "1 subgoal (ID 427)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  α : A t → Operation A w	  β : B t → Operation B w	  f : ∀ s : Sort σ, A s <~> B s	  P : ∀ x : A t, OpPreserving (λ s : Sort σ, f s) (α x) (β (f t x))	  IHw : ∀ (α : Operation A w) (β : Operation B w),	        OpPreserving (λ s : Sort σ, f s) α β	        → transport (λ C : Carriers σ, Operation C w)	            (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	  y : B t	  ============================	  OpPreserving (λ s : Sort σ, f s) (α (_^-1 y)) (β y)	";
+            data = "1 subgoal (ID 339)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  α : A t → Operation A w	  β : B t → Operation B w	  f : forall s : Sort σ, A s <~> B s	  P : forall x : A t, OpPreserving (λ s : Sort σ, f s) (α x) (β (f t x))	  IHw : forall (α : Operation A w) (β : Operation B w),	        OpPreserving (λ s : Sort σ, f s) α β	        → transport (λ C : Carriers σ, Operation C w)	            (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	  y : B t	  ============================	  OpPreserving (λ s : Sort σ, f s) (α (_^-1 y)) (β y)	";
             responses[i]=data;
           
 
             i = 694;
-            data = "1 subgoal (ID 461)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  α : A t → Operation A w	  β : B t → Operation B w	  f : ∀ s : Sort σ, A s <~> B s	  y : B t	  P : OpPreserving (λ s : Sort σ, f s) (α (_^-1 y)) (β (f t (_^-1 y)))	  IHw : ∀ (α : Operation A w) (β : Operation B w),	        OpPreserving (λ s : Sort σ, f s) α β	        → transport (λ C : Carriers σ, Operation C w)	            (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	  ============================	  OpPreserving (λ s : Sort σ, f s) (α (_^-1 y)) (β y)	";
+            data = "1 subgoal (ID 351)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  α : A t → Operation A w	  β : B t → Operation B w	  f : forall s : Sort σ, A s <~> B s	  y : B t	  P : OpPreserving (λ s : Sort σ, f s) (α (_^-1 y)) (β (f t (_^-1 y)))	  IHw : forall (α : Operation A w) (β : Operation B w),	        OpPreserving (λ s : Sort σ, f s) α β	        → transport (λ C : Carriers σ, Operation C w)	            (path_forall A B (λ i : Sort σ, path_universe (f i))) α = β	  ============================	  OpPreserving (λ s : Sort σ, f s) (α (_^-1 y)) (β y)	";
             responses[i]=data;
           
 
@@ -4033,7 +4033,7 @@
           
 
             i = 803;
-            data = "1 subgoal (ID 262)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H0 : IsIsomorphism f	  u : Symbol σ	  ============================	  transport (λ C : Carriers σ, Operation C (σ u))	    (path_forall A B (λ i : Sort σ, path_universe (equiv_isomorphism f i)))	    (u ^^ A) = u ^^ B	";
+            data = "1 subgoal (ID 198)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H0 : IsIsomorphism f	  u : Symbol σ	  ============================	  transport (λ C : Carriers σ, Operation C (σ u))	    (path_forall A B (λ i : Sort σ, path_universe (equiv_isomorphism f i)))	    (u ^^ A) = u ^^ B	";
             responses[i]=data;
           
 
@@ -4193,7 +4193,7 @@
           
 
             i = 835;
-            data = "1 subgoal (ID 270)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H0 : IsIsomorphism f	  ============================	  A = B	";
+            data = "1 subgoal (ID 206)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H0 : IsIsomorphism f	  ============================	  A = B	";
             responses[i]=data;
           
 
@@ -4203,7 +4203,7 @@
           
 
             i = 837;
-            data = "1 subgoal (ID 328)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : ∀ s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H0 : IsIsomorphism f	  ============================	  transport (λ X : Carriers σ, ∀ u : Symbol σ, Operation X (σ u))	    (path_forall A B (λ i : Sort σ, path_universe (equiv_isomorphism f i)))	    (operations A) = operations B	";
+            data = "1 subgoal (ID 238)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  H0 : IsIsomorphism f	  ============================	  transport (λ X : Carriers σ, forall u : Symbol σ, Operation X (σ u))	    (path_forall A B (λ i : Sort σ, path_universe (equiv_isomorphism f i)))	    (operations A) = operations B	";
             responses[i]=data;
           
 

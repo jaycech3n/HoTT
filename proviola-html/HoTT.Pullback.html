@@ -208,17 +208,17 @@
           
 
             i = 38;
-            data = "1 subgoal (ID 170)	  	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  ============================	  {b : C & {a : B & f a = g b}} <~> Pullback g f	";
+            data = "1 subgoal (ID 171)	  	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  ============================	  {b : C & {a : B & f a = g b}} <~> Pullback g f	";
             responses[i]=data;
           
 
             i = 39;
-            data = "1 subgoal (ID 179)	  	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  c : C	  ============================	  {a : B & f a = g c} <~> {c0 : B & g (1 c) = f c0}	";
+            data = "1 subgoal (ID 181)	  	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  c : C	  ============================	  {a : B & f a = g c} <~> {c0 : B & g (1%equiv c) = f c0}	";
             responses[i]=data;
           
 
             i = 40;
-            data = "1 subgoal (ID 188)	  	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  c : C	  b : B	  ============================	  f b = g c <~> g (1 c) = f (1 b)	";
+            data = "1 subgoal (ID 191)	  	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  c : C	  b : B	  ============================	  f b = g c <~> g (1%equiv c) = f (1%equiv b)	";
             responses[i]=data;
           
 
@@ -278,32 +278,32 @@
           
 
             i = 52;
-            data = "1 subgoal (ID 168)	  	  A : Type	  B : Type	  ============================	  Pullback (const tt) (const tt) -> A * B	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals (ID 170)		subgoal 1 (ID 170) is:	 A * B -> Pullback (const tt) (const tt)	subgoal 2 (ID 172) is:	 Sect ?g	   (fun X : Pullback (const tt) (const tt) =>	    (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	     (fun (b : B) (_ : const tt a = const tt b) => (a, b)) 	       (pr1 proj2_sig) (pr2 proj2_sig)) (pr1 X) (pr2 X))	subgoal 3 (ID 174) is:	 Sect	   (fun X : Pullback (const tt) (const tt) =>	    (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	     (fun (b : B) (_ : const tt a = const tt b) => (a, b)) 	       (pr1 proj2_sig) (pr2 proj2_sig)) (pr1 X) (pr2 X)) 	   ?g	";
+            data = "1 subgoal (ID 168)	  	  A : Type	  B : Type	  ============================	  Pullback (const tt) (const tt) -> A * B	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals (ID 170)		subgoal 1 (ID 170) is:	 A * B -> Pullback (const tt) (const tt)	subgoal 2 (ID 172) is:	 Sect ?g	   (fun X : Pullback (const tt) (const tt) =>	    (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	     (fun (b : B) (_ : const tt a = const tt b) => (a, b)) proj2_sig.1	       proj2_sig.2) X.1 X.2)	subgoal 3 (ID 174) is:	 Sect	   (fun X : Pullback (const tt) (const tt) =>	    (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	     (fun (b : B) (_ : const tt a = const tt b) => (a, b)) proj2_sig.1	       proj2_sig.2) X.1 X.2) ?g	";
             responses[i]=data;
           
 
             i = 53;
-            data = "1 subgoal (ID 170)	  	  A : Type	  B : Type	  ============================	  A * B -> Pullback (const tt) (const tt)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 172)		subgoal 1 (ID 172) is:	 Sect (fun X : A * B => (fun (a : A) (b : B) => (a; b; 1)) (fst X) (snd X))	   (fun X : Pullback (const tt) (const tt) =>	    (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	     (fun (b : B) (_ : const tt a = const tt b) => (a, b)) 	       (pr1 proj2_sig) (pr2 proj2_sig)) (pr1 X) (pr2 X))	subgoal 2 (ID 174) is:	 Sect	   (fun X : Pullback (const tt) (const tt) =>	    (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	     (fun (b : B) (_ : const tt a = const tt b) => (a, b)) 	       (pr1 proj2_sig) (pr2 proj2_sig)) (pr1 X) (pr2 X))	   (fun X : A * B => (fun (a : A) (b : B) => (a; b; 1)) (fst X) (snd X))	";
+            data = "1 subgoal (ID 170)	  	  A : Type	  B : Type	  ============================	  A * B -> Pullback (const tt) (const tt)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 172)		subgoal 1 (ID 172) is:	 Sect (fun X : A * B => (fun (a : A) (b : B) => (a; b; 1)) (fst X) (snd X))	   (fun X : Pullback (const tt) (const tt) =>	    (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	     (fun (b : B) (_ : const tt a = const tt b) => (a, b)) proj2_sig.1	       proj2_sig.2) X.1 X.2)	subgoal 2 (ID 174) is:	 Sect	   (fun X : Pullback (const tt) (const tt) =>	    (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	     (fun (b : B) (_ : const tt a = const tt b) => (a, b)) proj2_sig.1	       proj2_sig.2) X.1 X.2)	   (fun X : A * B => (fun (a : A) (b : B) => (a; b; 1)) (fst X) (snd X))	";
             responses[i]=data;
           
 
             i = 54;
-            data = "1 subgoal (ID 172)	  	  A : Type	  B : Type	  ============================	  Sect (fun X : A * B => (fun (a : A) (b : B) => (a; b; 1)) (fst X) (snd X))	    (fun X : Pullback (const tt) (const tt) =>	     (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	      (fun (b : B) (_ : const tt a = const tt b) => (a, b)) 	        (pr1 proj2_sig) (pr2 proj2_sig)) (pr1 X) (pr2 X))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 174)		subgoal 1 (ID 174) is:	 Sect	   (fun X : Pullback (const tt) (const tt) =>	    (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	     (fun (b : B) (_ : const tt a = const tt b) => (a, b)) 	       (pr1 proj2_sig) (pr2 proj2_sig)) (pr1 X) (pr2 X))	   (fun X : A * B => (fun (a : A) (b : B) => (a; b; 1)) (fst X) (snd X))	";
+            data = "1 subgoal (ID 172)	  	  A : Type	  B : Type	  ============================	  Sect (fun X : A * B => (fun (a : A) (b : B) => (a; b; 1)) (fst X) (snd X))	    (fun X : Pullback (const tt) (const tt) =>	     (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	      (fun (b : B) (_ : const tt a = const tt b) => (a, b)) proj2_sig.1	        proj2_sig.2) X.1 X.2)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 174)		subgoal 1 (ID 174) is:	 Sect	   (fun X : Pullback (const tt) (const tt) =>	    (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	     (fun (b : B) (_ : const tt a = const tt b) => (a, b)) proj2_sig.1	       proj2_sig.2) X.1 X.2)	   (fun X : A * B => (fun (a : A) (b : B) => (a; b; 1)) (fst X) (snd X))	";
             responses[i]=data;
           
 
             i = 55;
-            data = "1 subgoal (ID 174)	  	  A : Type	  B : Type	  ============================	  Sect	    (fun X : Pullback (const tt) (const tt) =>	     (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	      (fun (b : B) (_ : const tt a = const tt b) => (a, b)) 	        (pr1 proj2_sig) (pr2 proj2_sig)) (pr1 X) (pr2 X))	    (fun X : A * B => (fun (a : A) (b : B) => (a; b; 1)) (fst X) (snd X))	1 subgoal (ID 218)	  	  A : Type	  B : Type	  a : A	  b : B	  p : const tt a = const tt b	  ============================	  (a; b; 1) = (a; b; p)	";
+            data = "1 subgoal (ID 174)	  	  A : Type	  B : Type	  ============================	  Sect	    (fun X : Pullback (const tt) (const tt) =>	     (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	      (fun (b : B) (_ : const tt a = const tt b) => (a, b)) proj2_sig.1	        proj2_sig.2) X.1 X.2)	    (fun X : A * B => (fun (a : A) (b : B) => (a; b; 1)) (fst X) (snd X))	1 subgoal (ID 219)	  	  A : Type	  B : Type	  a : A	  b : B	  p : const tt a = const tt b	  ============================	  (a; b; 1) = (a; b; p)	";
             responses[i]=data;
           
 
             i = 56;
-            data = "1 subgoal (ID 229)	  	  A : Type	  B : Type	  a : A	  b : B	  p : const tt a = const tt b	  ============================	  (b; 1) = (b; p)	";
+            data = "1 subgoal (ID 231)	  	  A : Type	  B : Type	  a : A	  b : B	  p : const tt a = const tt b	  ============================	  (b; 1) = (b; p)	";
             responses[i]=data;
           
 
             i = 57;
-            data = "1 subgoal (ID 240)	  	  A : Type	  B : Type	  a : A	  b : B	  p : const tt a = const tt b	  ============================	  1 = p	";
+            data = "1 subgoal (ID 243)	  	  A : Type	  B : Type	  a : A	  b : B	  p : const tt a = const tt b	  ============================	  1 = p	";
             responses[i]=data;
           
 
@@ -383,32 +383,32 @@
           
 
             i = 73;
-            data = "1 subgoal (ID 224)	  	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  b : B	  ============================	  {x : {b0 : B & {c : C & f b0 = g c}} & (f ^*) g x = b} <~>	  {x : C & g x = f b}	";
+            data = "1 subgoal (ID 225)	  	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  b : B	  ============================	  {x : {b0 : B & {c : C & f b0 = g c}} & (f ^*) g x = b} <~>	  {x : C & g x = f b}	";
             responses[i]=data;
           
 
             i = 74;
-            data = "1 subgoal (ID 245)	  	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  b : B	  ============================	  {a : B & {p : {c : C & f a = g c} & (f ^*) g (a; p) = b}} <~>	  {x : C & g x = f b}	";
+            data = "1 subgoal (ID 247)	  	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  b : B	  ============================	  {a : B & {p : {c : C & f a = g c} & (f ^*) g (a; p) = b}} <~>	  {x : C & g x = f b}	";
             responses[i]=data;
           
 
             i = 75;
-            data = "1 subgoal (ID 246)	  	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  b : B	  ============================	  {a : B & {_ : {c : C & f a = g c} & a = b}} <~> {x : C & g x = f b}	";
+            data = "1 subgoal (ID 249)	  	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  b : B	  ============================	  {a : B & {_ : {c : C & f a = g c} & a = b}} <~> {x : C & g x = f b}	";
             responses[i]=data;
           
 
             i = 76;
-            data = "1 subgoal (ID 273)	  	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  b : B	  ============================	  {b' : B & {_ : b' = b & {c : C & f b' = g c}}} <~> {x : C & g x = f b}	";
+            data = "1 subgoal (ID 277)	  	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  b : B	  ============================	  {b' : B & {_ : b' = b & {c : C & f b' = g c}}} <~> {x : C & g x = f b}	";
             responses[i]=data;
           
 
             i = 77;
-            data = "1 subgoal (ID 290)	  	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  b : B	  ============================	  {b'p : {a : B & a = b} & {c : C & f (pr1 b'p) = g c}} <~>	  {x : C & g x = f b}	";
+            data = "1 subgoal (ID 295)	  	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  b : B	  ============================	  {b'p : {a : B & a = b} & {c : C & f b'p.1 = g c}} <~> {x : C & g x = f b}	";
             responses[i]=data;
           
 
             i = 78;
-            data = "1 subgoal (ID 350)	  	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  b : B	  ============================	  {c : C & f (pr1 (center _)) = g c} <~> {x : C & g x = f b}	";
+            data = "1 subgoal (ID 326)	  	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  b : B	  ============================	  {c : C & f (center _).1 = g c} <~> {x : C & g x = f b}	";
             responses[i]=data;
           
 
@@ -468,42 +468,42 @@
           
 
             i = 90;
-            data = "1 subgoal (ID 252)	  	  A : Type	  B : Type	  C : Type	  g : C -> A	  f : B -> A	  c : C	  ============================	  {x : {b : B & {c0 : C & f b = g c0}} & (g ^*') f x = c} <~>	  {x : B & f x = g c}	";
+            data = "1 subgoal (ID 253)	  	  A : Type	  B : Type	  C : Type	  g : C -> A	  f : B -> A	  c : C	  ============================	  {x : {b : B & {c0 : C & f b = g c0}} & (g ^*') f x = c} <~>	  {x : B & f x = g c}	";
             responses[i]=data;
           
 
             i = 91;
-            data = "1 subgoal (ID 273)	  	  A : Type	  B : Type	  C : Type	  g : C -> A	  f : B -> A	  c : C	  ============================	  {a : B & {p : {c0 : C & f a = g c0} & (g ^*') f (a; p) = c}} <~>	  {x : B & f x = g c}	";
+            data = "1 subgoal (ID 275)	  	  A : Type	  B : Type	  C : Type	  g : C -> A	  f : B -> A	  c : C	  ============================	  {a : B & {p : {c0 : C & f a = g c0} & (g ^*') f (a; p) = c}} <~>	  {x : B & f x = g c}	";
             responses[i]=data;
           
 
             i = 92;
-            data = "1 subgoal (ID 282)	  	  A : Type	  B : Type	  C : Type	  g : C -> A	  f : B -> A	  c : C	  b : B	  ============================	  {p : {c0 : C & f b = g c0} & (g ^*') f (b; p) = c} <~> f (1 b) = g c	";
+            data = "1 subgoal (ID 285)	  	  A : Type	  B : Type	  C : Type	  g : C -> A	  f : B -> A	  c : C	  b : B	  ============================	  {p : {c0 : C & f b = g c0} & (g ^*') f (b; p) = c} <~> f (1%equiv b) = g c	";
             responses[i]=data;
           
 
             i = 93;
-            data = "1 subgoal (ID 305)	  	  A : Type	  B : Type	  C : Type	  g : C -> A	  f : B -> A	  c : C	  b : B	  ============================	  {a : C & {p : f b = g a & (g ^*') f (b; a; p) = c}} <~> f (1 b) = g c	";
+            data = "1 subgoal (ID 309)	  	  A : Type	  B : Type	  C : Type	  g : C -> A	  f : B -> A	  c : C	  b : B	  ============================	  {a : C & {p : f b = g a & (g ^*') f (b; a; p) = c}} <~> f (1%equiv b) = g c	";
             responses[i]=data;
           
 
             i = 94;
-            data = "1 subgoal (ID 306)	  	  A : Type	  B : Type	  C : Type	  g : C -> A	  f : B -> A	  c : C	  b : B	  ============================	  {a : C & {_ : f b = g a & a = c}} <~> f b = g c	";
+            data = "1 subgoal (ID 311)	  	  A : Type	  B : Type	  C : Type	  g : C -> A	  f : B -> A	  c : C	  b : B	  ============================	  {a : C & {_ : f b = g a & a = c}} <~> f b = g c	";
             responses[i]=data;
           
 
             i = 95;
-            data = "1 subgoal (ID 330)	  	  A : Type	  B : Type	  C : Type	  g : C -> A	  f : B -> A	  c : C	  b : B	  ============================	  {c' : C & {_ : c' = c & f b = g c'}} <~> f b = g c	";
+            data = "1 subgoal (ID 336)	  	  A : Type	  B : Type	  C : Type	  g : C -> A	  f : B -> A	  c : C	  b : B	  ============================	  {c' : C & {_ : c' = c & f b = g c'}} <~> f b = g c	";
             responses[i]=data;
           
 
             i = 96;
-            data = "1 subgoal (ID 346)	  	  A : Type	  B : Type	  C : Type	  g : C -> A	  f : B -> A	  c : C	  b : B	  ============================	  {c'p : {a : C & a = c} & f b = g (pr1 c'p)} <~> f b = g c	";
+            data = "1 subgoal (ID 353)	  	  A : Type	  B : Type	  C : Type	  g : C -> A	  f : B -> A	  c : C	  b : B	  ============================	  {c'p : {a : C & a = c} & f b = g c'p.1} <~> f b = g c	";
             responses[i]=data;
           
 
             i = 97;
-            data = "1 subgoal (ID 412)	  	  A : Type	  B : Type	  C : Type	  g : C -> A	  f : B -> A	  c : C	  b : B	  ============================	  f b = g (pr1 (center _)) <~> f b = g c	";
+            data = "1 subgoal (ID 384)	  	  A : Type	  B : Type	  C : Type	  g : C -> A	  f : B -> A	  c : C	  b : B	  ============================	  f b = g (center _).1 <~> f b = g c	";
             responses[i]=data;
           
 
@@ -533,7 +533,7 @@
           
 
             i = 103;
-            data = "1 subgoal (ID 380)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  z : Pullback f2 g2	  ============================	  hfiber functor_pullback z <~>	  Pullback (transport (hfiber h) (pr2 z.2) o functor_hfiber p (pr1 z))	    (functor_hfiber q (pr1 z.2))	";
+            data = "1 subgoal (ID 380)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  z : Pullback f2 g2	  ============================	  hfiber functor_pullback z <~>	  Pullback (transport (hfiber h) (z.2).2 o functor_hfiber p z.1)	    (functor_hfiber q (z.2).1)	";
             responses[i]=data;
           
 
@@ -543,107 +543,107 @@
           
 
             i = 105;
-            data = "1 subgoal (ID 389)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  ============================	  hfiber functor_pullback (b2; c2; e2) <~>	  Pullback	    (fun x : hfiber k (pr1 (b2; c2; e2)) =>	     transport (hfiber h) (pr2 (b2; c2; e2).2)	       (functor_hfiber p (pr1 (b2; c2; e2)) x))	    (functor_hfiber q (pr1 (b2; c2; e2).2))	";
+            data = "1 subgoal (ID 389)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  ============================	  hfiber functor_pullback (b2; c2; e2) <~>	  Pullback	    (fun x : hfiber k (b2; c2; e2).1 =>	     transport (hfiber h) ((b2; c2; e2).2).2	       (functor_hfiber p (b2; c2; e2).1 x))	    (functor_hfiber q ((b2; c2; e2).2).1)	";
             responses[i]=data;
           
 
             i = 106;
-            data = "1 subgoal (ID 409)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  ============================	  {w : hfiber k b2 &	  hfiber	    (functor_sigma l	       (fun (c1 : C1) (e1 : f1 (pr1 w) = g1 c1) =>	        (p (pr1 w) @ ap h e1) @ (q c1)^))	    (transport (fun b : B2 => {c : C2 & f2 b = g2 c}) (pr2 w)^ (c2; e2))} <~>	  Pullback	    (fun x : hfiber k (pr1 (b2; c2; e2)) =>	     transport (hfiber h) (pr2 (b2; c2; e2).2)	       (functor_hfiber p (pr1 (b2; c2; e2)) x))	    (functor_hfiber q (pr1 (b2; c2; e2).2))	";
+            data = "1 subgoal (ID 410)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  ============================	  {w : hfiber k b2 &	  hfiber	    (functor_sigma l	       (fun (c1 : C1) (e1 : f1 w.1 = g1 c1) => (p w.1 @ ap h e1) @ (q c1)^))	    (transport (fun b : B2 => {c : C2 & f2 b = g2 c}) (w.2)^ (c2; e2))} <~>	  Pullback	    (fun x : hfiber k (b2; c2; e2).1 =>	     transport (hfiber h) ((b2; c2; e2).2).2	       (functor_hfiber p (b2; c2; e2).1 x))	    (functor_hfiber q ((b2; c2; e2).2).1)	";
             responses[i]=data;
           
 
             i = 107;
-            data = "1 subgoal (ID 417)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  ============================	  forall a : hfiber k b2,	  hfiber	    (functor_sigma l	       (fun (c1 : C1) (e1 : f1 (pr1 a) = g1 c1) =>	        (p (pr1 a) @ ap h e1) @ (q c1)^))	    (transport (fun b : B2 => {c : C2 & f2 b = g2 c}) (pr2 a)^ (c2; e2)) <~>	  {c : hfiber l (pr1 (b2; c2; e2).2) &	  transport (hfiber h) (pr2 (b2; c2; e2).2)	    (functor_hfiber p (pr1 (b2; c2; e2)) (1 a)) =	  functor_hfiber q (pr1 (b2; c2; e2).2) c}	";
+            data = "1 subgoal (ID 419)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  ============================	  forall a : hfiber k b2,	  hfiber	    (functor_sigma l	       (fun (c1 : C1) (e1 : f1 a.1 = g1 c1) => (p a.1 @ ap h e1) @ (q c1)^))	    (transport (fun b : B2 => {c : C2 & f2 b = g2 c}) (a.2)^ (c2; e2)) <~>	  {c : hfiber l ((b2; c2; e2).2).1 &	  transport (hfiber h) ((b2; c2; e2).2).2	    (functor_hfiber p (b2; c2; e2).1 (1%equiv a)) =	  functor_hfiber q ((b2; c2; e2).2).1 c}	";
             responses[i]=data;
           
 
             i = 108;
-            data = "1 subgoal (ID 423)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  ============================	  hfiber	    (functor_sigma l	       (fun (c1 : C1) (e0 : f1 b1 = g1 c1) => (p b1 @ ap h e0) @ (q c1)^))	    (transport (fun b : B2 => {c : C2 & f2 b = g2 c}) e1^ (c2; e2)) <~>	  {c : hfiber l c2 &	  transport (hfiber h) e2 (functor_hfiber p b2 (b1; e1)) =	  functor_hfiber q c2 c}	";
+            data = "1 subgoal (ID 426)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  ============================	  hfiber	    (functor_sigma l	       (fun (c1 : C1) (e0 : f1 b1 = g1 c1) => (p b1 @ ap h e0) @ (q c1)^))	    (transport (fun b : B2 => {c : C2 & f2 b = g2 c}) e1^ (c2; e2)) <~>	  {c : hfiber l c2 &	  transport (hfiber h) e2 (functor_hfiber p b2 (b1; e1)) =	  functor_hfiber q c2 c}	";
             responses[i]=data;
           
 
             i = 109;
-            data = "1 subgoal (ID 455)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  ============================	  hfiber	    (functor_sigma l	       (fun (c1 : C1) (e0 : f1 b1 = g1 c1) => (p b1 @ ap h e0) @ (q c1)^))	    (pr1 (c2; e2);	    transport (fun x : B2 => f2 x = g2 (pr1 (c2; e2))) e1^ (pr2 (c2; e2))) <~>	  {c : hfiber l c2 &	  transport (hfiber h) e2 (functor_hfiber p b2 (b1; e1)) =	  functor_hfiber q c2 c}	";
+            data = "1 subgoal (ID 459)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  ============================	  hfiber	    (functor_sigma l	       (fun (c1 : C1) (e0 : f1 b1 = g1 c1) => (p b1 @ ap h e0) @ (q c1)^))	    ((c2; e2).1;	    transport (fun x : B2 => f2 x = g2 (c2; e2).1) e1^ (c2; e2).2) <~>	  {c : hfiber l c2 &	  transport (hfiber h) e2 (functor_hfiber p b2 (b1; e1)) =	  functor_hfiber q c2 c}	";
             responses[i]=data;
           
 
             i = 110;
-            data = "1 subgoal (ID 476)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  ============================	  {w : hfiber l c2 &	  hfiber (fun e0 : f1 b1 = g1 (pr1 w) => (p b1 @ ap h e0) @ (q (pr1 w))^)	    (transport (fun y : C2 => f2 (k b1) = g2 y) (pr2 w)^	       (transport (fun x : B2 => f2 x = g2 c2) e1^ e2))} <~>	  {c : hfiber l c2 &	  transport (hfiber h) e2 (functor_hfiber p b2 (b1; e1)) =	  functor_hfiber q c2 c}	";
+            data = "1 subgoal (ID 482)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  ============================	  {w : hfiber l c2 &	  hfiber (fun e0 : f1 b1 = g1 w.1 => (p b1 @ ap h e0) @ (q w.1)^)	    (transport (fun y : C2 => f2 (k b1) = g2 y) (w.2)^	       (transport (fun x : B2 => f2 x = g2 c2) e1^ e2))} <~>	  {c : hfiber l c2 &	  transport (hfiber h) e2 (functor_hfiber p b2 (b1; e1)) =	  functor_hfiber q c2 c}	";
             responses[i]=data;
           
 
             i = 111;
-            data = "1 subgoal (ID 484)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  ============================	  forall a : hfiber l c2,	  hfiber (fun e0 : f1 b1 = g1 (pr1 a) => (p b1 @ ap h e0) @ (q (pr1 a))^)	    (transport (fun y : C2 => f2 (k b1) = g2 y) (pr2 a)^	       (transport (fun x : B2 => f2 x = g2 c2) e1^ e2)) <~>	  transport (hfiber h) e2 (functor_hfiber p b2 (b1; e1)) =	  functor_hfiber q c2 (1 a)	";
+            data = "1 subgoal (ID 491)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  ============================	  forall a : hfiber l c2,	  hfiber (fun e0 : f1 b1 = g1 a.1 => (p b1 @ ap h e0) @ (q a.1)^)	    (transport (fun y : C2 => f2 (k b1) = g2 y) (a.2)^	       (transport (fun x : B2 => f2 x = g2 c2) e1^ e2)) <~>	  transport (hfiber h) e2 (functor_hfiber p b2 (b1; e1)) =	  functor_hfiber q c2 (1%equiv a)	";
             responses[i]=data;
           
 
             i = 112;
-            data = "1 subgoal (ID 490)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  ============================	  hfiber (fun e0 : f1 b1 = g1 c1 => (p b1 @ ap h e0) @ (q c1)^)	    (transport (fun y : C2 => f2 (k b1) = g2 y) e3^	       (transport (fun x : B2 => f2 x = g2 c2) e1^ e2)) <~>	  transport (hfiber h) e2 (functor_hfiber p b2 (b1; e1)) =	  functor_hfiber q c2 (c1; e3)	";
+            data = "1 subgoal (ID 498)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  ============================	  hfiber (fun e0 : f1 b1 = g1 c1 => (p b1 @ ap h e0) @ (q c1)^)	    (transport (fun y : C2 => f2 (k b1) = g2 y) e3^	       (transport (fun x : B2 => f2 x = g2 c2) e1^ e2)) <~>	  transport (hfiber h) e2 (functor_hfiber p b2 (b1; e1)) =	  functor_hfiber q c2 (c1; e3)	";
             responses[i]=data;
           
 
             i = 113;
-            data = "1 subgoal (ID 544)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  ============================	  hfiber (fun e0 : f1 b1 = g1 c1 => (p b1 @ ap h e0) @ (q c1)^)	    (transport (fun y : C2 => f2 (k b1) = g2 y) e3^ ((ap f2 e1^)^ @ e2)) <~>	  transport (hfiber h) e2 (functor_hfiber p b2 (b1; e1)) =	  functor_hfiber q c2 (c1; e3)	";
+            data = "1 subgoal (ID 553)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  ============================	  hfiber (fun e0 : f1 b1 = g1 c1 => (p b1 @ ap h e0) @ (q c1)^)	    (transport (fun y : C2 => f2 (k b1) = g2 y) e3^ ((ap f2 e1^)^ @ e2)) <~>	  transport (hfiber h) e2 (functor_hfiber p b2 (b1; e1)) =	  functor_hfiber q c2 (c1; e3)	";
             responses[i]=data;
           
 
             i = 114;
-            data = "1 subgoal (ID 586)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  ============================	  hfiber (fun e0 : f1 b1 = g1 c1 => (p b1 @ ap h e0) @ (q c1)^)	    (((ap f2 e1^)^ @ e2) @ ap g2 e3^) <~>	  transport (hfiber h) e2 (functor_hfiber p b2 (b1; e1)) =	  functor_hfiber q c2 (c1; e3)	";
+            data = "1 subgoal (ID 596)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  ============================	  hfiber (fun e0 : f1 b1 = g1 c1 => (p b1 @ ap h e0) @ (q c1)^)	    (((ap f2 e1^)^ @ e2) @ ap g2 e3^) <~>	  transport (hfiber h) e2 (functor_hfiber p b2 (b1; e1)) =	  functor_hfiber q c2 (c1; e3)	";
             responses[i]=data;
           
 
             i = 115;
-            data = "1 subgoal (ID 588)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  ============================	  hfiber (fun e0 : f1 b1 = g1 c1 => (p b1 @ ap h e0) @ (q c1)^)	    (((ap f2 e1^)^ @ e2) @ ap g2 e3^) <~>	  transport (hfiber h) e2	    (functor_sigma f1 (fun (a : B1) (e : k a = b2) => (p a)^ @ ap f2 e)	       (b1; e1)) =	  functor_sigma g1 (fun (a : C1) (e : l a = c2) => (q a)^ @ ap g2 e) (c1; e3)	";
+            data = "1 subgoal (ID 600)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  ============================	  hfiber (fun e0 : f1 b1 = g1 c1 => (p b1 @ ap h e0) @ (q c1)^)	    (((ap f2 e1^)^ @ e2) @ ap g2 e3^) <~>	  transport (hfiber h) e2	    (functor_sigma f1 (fun (a : B1) (e : k a = b2) => (p a)^ @ ap f2 e)	       (b1; e1)) =	  functor_sigma g1 (fun (a : C1) (e : l a = c2) => (q a)^ @ ap g2 e) (c1; e3)	";
             responses[i]=data;
           
 
             i = 116;
-            data = "1 subgoal (ID 607)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  ============================	  hfiber (fun e0 : f1 b1 = g1 c1 => (p b1 @ ap h e0) @ (q c1)^)	    (((ap f2 e1^)^ @ e2) @ ap g2 e3^) <~>	  (f1 b1; transport (fun x : A2 => h (f1 b1) = x) e2 ((p b1)^ @ ap f2 e1)) =	  functor_sigma g1 (fun (a : C1) (e : l a = c2) => (q a)^ @ ap g2 e) (c1; e3)	";
+            data = "1 subgoal (ID 621)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  ============================	  hfiber (fun e0 : f1 b1 = g1 c1 => (p b1 @ ap h e0) @ (q c1)^)	    (((ap f2 e1^)^ @ e2) @ ap g2 e3^) <~>	  (f1 b1; transport (fun x : A2 => h (f1 b1) = x) e2 ((p b1)^ @ ap f2 e1)) =	  functor_sigma g1 (fun (a : C1) (e : l a = c2) => (q a)^ @ ap g2 e) (c1; e3)	";
             responses[i]=data;
           
 
             i = 117;
-            data = "1 subgoal (ID 621)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  ============================	  hfiber (fun e0 : f1 b1 = g1 c1 => (p b1 @ ap h e0) @ (q c1)^)	    (((ap f2 e1^)^ @ e2) @ ap g2 e3^) <~>	  {p0 : f1 b1 = g1 c1 &	  transport (fun y : A1 => h y = g2 c2) p0	    (transport (fun x : A2 => h (f1 b1) = x) e2 ((p b1)^ @ ap f2 e1)) =	  (q c1)^ @ ap g2 e3}	";
+            data = "1 subgoal (ID 637)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  ============================	  hfiber (fun e0 : f1 b1 = g1 c1 => (p b1 @ ap h e0) @ (q c1)^)	    (((ap f2 e1^)^ @ e2) @ ap g2 e3^) <~>	  {p0 : f1 b1 = g1 c1 &	  transport (fun y : A1 => h y = g2 c2) p0	    (transport (fun x : A2 => h (f1 b1) = x) e2 ((p b1)^ @ ap f2 e1)) =	  (q c1)^ @ ap g2 e3}	";
             responses[i]=data;
           
 
             i = 118;
-            data = "1 subgoal (ID 631)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  e0 : f1 b1 = g1 c1	  ============================	  (p b1 @ ap h e0) @ (q c1)^ = ((ap f2 e1^)^ @ e2) @ ap g2 e3^ <~>	  transport (fun y : A1 => h y = g2 c2) e0	    (transport (fun x : A2 => h (f1 b1) = x) e2 ((p b1)^ @ ap f2 e1)) =	  (q c1)^ @ ap g2 e3	";
+            data = "1 subgoal (ID 649)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  e0 : f1 b1 = g1 c1	  ============================	  (p b1 @ ap h e0) @ (q c1)^ = ((ap f2 e1^)^ @ e2) @ ap g2 e3^ <~>	  transport (fun y : A1 => h y = g2 c2) e0	    (transport (fun x : A2 => h (f1 b1) = x) e2 ((p b1)^ @ ap f2 e1)) =	  (q c1)^ @ ap g2 e3	";
             responses[i]=data;
           
 
             i = 119;
-            data = "1 subgoal (ID 650)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  e0 : f1 b1 = g1 c1	  ============================	  (p b1 @ ap h e0) @ (q c1)^ = ((ap f2 e1^)^ @ e2) @ ap g2 e3^ <~>	  (ap h e0)^ @	  transport (fun x : A2 => h (f1 b1) = x) e2 ((p b1)^ @ ap f2 e1) =	  (q c1)^ @ ap g2 e3	";
+            data = "1 subgoal (ID 669)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  e0 : f1 b1 = g1 c1	  ============================	  (p b1 @ ap h e0) @ (q c1)^ = ((ap f2 e1^)^ @ e2) @ ap g2 e3^ <~>	  (ap h e0)^ @	  transport (fun x : A2 => h (f1 b1) = x) e2 ((p b1)^ @ ap f2 e1) =	  (q c1)^ @ ap g2 e3	";
             responses[i]=data;
           
 
             i = 120;
-            data = "1 subgoal (ID 680)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  e0 : f1 b1 = g1 c1	  ============================	  (p b1 @ ap h e0) @ (q c1)^ = ((ap f2 e1^)^ @ e2) @ ap g2 e3^ <~>	  (ap h e0)^ @ (((p b1)^ @ ap f2 e1) @ e2) = (q c1)^ @ ap g2 e3	";
+            data = "1 subgoal (ID 700)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  e0 : f1 b1 = g1 c1	  ============================	  (p b1 @ ap h e0) @ (q c1)^ = ((ap f2 e1^)^ @ e2) @ ap g2 e3^ <~>	  (ap h e0)^ @ (((p b1)^ @ ap f2 e1) @ e2) = (q c1)^ @ ap g2 e3	";
             responses[i]=data;
           
 
             i = 121;
-            data = "1 subgoal (ID 696)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  e0 : f1 b1 = g1 c1	  ============================	  (p b1 @ ap h e0) @ (q c1)^ = ((ap f2 e1^)^ @ e2) @ ap g2 e3^ <~>	  ((p b1)^ @ ap f2 e1) @ e2 = ap h e0 @ ((q c1)^ @ ap g2 e3)	";
+            data = "1 subgoal (ID 717)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  e0 : f1 b1 = g1 c1	  ============================	  (p b1 @ ap h e0) @ (q c1)^ = ((ap f2 e1^)^ @ e2) @ ap g2 e3^ <~>	  ((p b1)^ @ ap f2 e1) @ e2 = ap h e0 @ ((q c1)^ @ ap g2 e3)	";
             responses[i]=data;
           
 
             i = 122;
-            data = "1 subgoal (ID 718)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  e0 : f1 b1 = g1 c1	  ============================	  (p b1 @ ap h e0) @ (q c1)^ = ((ap f2 e1^)^ @ e2) @ ap g2 e3^ <~>	  (p b1)^ @ (ap f2 e1 @ e2) = ap h e0 @ ((q c1)^ @ ap g2 e3)	";
+            data = "1 subgoal (ID 740)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  e0 : f1 b1 = g1 c1	  ============================	  (p b1 @ ap h e0) @ (q c1)^ = ((ap f2 e1^)^ @ e2) @ ap g2 e3^ <~>	  (p b1)^ @ (ap f2 e1 @ e2) = ap h e0 @ ((q c1)^ @ ap g2 e3)	";
             responses[i]=data;
           
 
             i = 123;
-            data = "1 subgoal (ID 734)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  e0 : f1 b1 = g1 c1	  ============================	  (p b1 @ ap h e0) @ (q c1)^ = ((ap f2 e1^)^ @ e2) @ ap g2 e3^ <~>	  ap f2 e1 @ e2 = p b1 @ (ap h e0 @ ((q c1)^ @ ap g2 e3))	";
+            data = "1 subgoal (ID 757)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  e0 : f1 b1 = g1 c1	  ============================	  (p b1 @ ap h e0) @ (q c1)^ = ((ap f2 e1^)^ @ e2) @ ap g2 e3^ <~>	  ap f2 e1 @ e2 = p b1 @ (ap h e0 @ ((q c1)^ @ ap g2 e3))	";
             responses[i]=data;
           
 
             i = 124;
-            data = "1 subgoal (ID 778)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  e0 : f1 b1 = g1 c1	  ============================	  (p b1 @ ap h e0) @ (q c1)^ = ((ap f2 e1^)^ @ e2) @ ap g2 e3^ <~>	  ap f2 e1 @ e2 = ((p b1 @ ap h e0) @ (q c1)^) @ ap g2 e3	";
+            data = "1 subgoal (ID 803)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  e0 : f1 b1 = g1 c1	  ============================	  (p b1 @ ap h e0) @ (q c1)^ = ((ap f2 e1^)^ @ e2) @ ap g2 e3^ <~>	  ap f2 e1 @ e2 = ((p b1 @ ap h e0) @ (q c1)^) @ ap g2 e3	";
             responses[i]=data;
           
 
             i = 125;
-            data = "1 subgoal (ID 794)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  e0 : f1 b1 = g1 c1	  ============================	  (p b1 @ ap h e0) @ (q c1)^ = ((ap f2 e1^)^ @ e2) @ ap g2 e3^ <~>	  (ap f2 e1 @ e2) @ (ap g2 e3)^ = (p b1 @ ap h e0) @ (q c1)^	";
+            data = "1 subgoal (ID 820)	  	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  b2 : B2	  c2 : C2	  e2 : f2 b2 = g2 c2	  b1 : B1	  e1 : k b1 = b2	  c1 : C1	  e3 : l c1 = c2	  e0 : f1 b1 = g1 c1	  ============================	  (p b1 @ ap h e0) @ (q c1)^ = ((ap f2 e1^)^ @ e2) @ ap g2 e3^ <~>	  (ap f2 e1 @ e2) @ (ap g2 e3)^ = (p b1 @ ap h e0) @ (q c1)^	";
             responses[i]=data;
           
 

@@ -123,7 +123,7 @@
           
 
             i = 21;
-            data = "1 subgoal (ID 111)	  	  H : Funext	  A : Type	  B : Type	  P : A -> B -> Type	  x : A	  u, v : forall b : B, P x b	  h : forall b : B, u b = v b	  ============================	  u = v	";
+            data = "1 subgoal (ID 104)	  	  H : Funext	  A : Type	  B : Type	  P : A -> B -> Type	  x : A	  u, v : forall b : B, P x b	  h : forall b : B, u b = v b	  ============================	  u = v	";
             responses[i]=data;
           
 
@@ -138,7 +138,7 @@
           
 
             i = 24;
-            data = "1 subgoal (ID 117)	  	  A : Type	  P : A -> Type	  u, v : {x : _ & P x}	  pq : {p : pr1 u = pr1 v & dpath P p (pr2 u) (pr2 v)}	  ============================	  u = v	";
+            data = "1 subgoal (ID 117)	  	  A : Type	  P : A -> Type	  u, v : {x : _ & P x}	  pq : {p : u.1 = v.1 & dpath P p u.2 v.2}	  ============================	  u = v	";
             responses[i]=data;
           
 
@@ -148,7 +148,7 @@
           
 
             i = 26;
-            data = "1 subgoal (ID 140)	  	  A : Type	  P : A -> Type	  u1 : A	  u2 : P u1	  v1 : A	  v2 : P v1	  p : pr1 (u1; u2) = pr1 (v1; v2)	  q : dpath P p (pr2 (u1; u2)) (pr2 (v1; v2))	  ============================	  (u1; u2) = (v1; v2)	";
+            data = "1 subgoal (ID 140)	  	  A : Type	  P : A -> Type	  u1 : A	  u2 : P u1	  v1 : A	  v2 : P v1	  p : (u1; u2).1 = (v1; v2).1	  q : dpath P p (u1; u2).2 (v1; v2).2	  ============================	  (u1; u2) = (v1; v2)	";
             responses[i]=data;
           
 
@@ -168,7 +168,7 @@
           
 
             i = 30;
-            data = "1 subgoal (ID 169)	  	  A : Type	  P : A -> Type	  u, v : {x : _ & P x}	  p : pr1 u = pr1 v	  q : dpath P p (pr2 u) (pr2 v)	  ============================	  ap pr1 (path_sig P u v p q) = p	";
+            data = "1 subgoal (ID 169)	  	  A : Type	  P : A -> Type	  u, v : {x : _ & P x}	  p : u.1 = v.1	  q : dpath P p u.2 v.2	  ============================	  ap pr1 (path_sig P u v p q) = p	";
             responses[i]=data;
           
 
@@ -188,7 +188,7 @@
           
 
             i = 34;
-            data = "1 subgoal (ID 235)	  	  A : Type	  B : A -> Type	  P : {x : _ & B x} -> Type	  u, v : {x : _ & P x}	  p : pr1 u.1 = pr1 v.1	  q : dpath B p (pr2 u.1) (pr2 v.1)	  r : dpath P (path_sig B u.1 v.1 p q) (pr2 u) (pr2 v)	  ============================	  ap (fun w : {x : _ & P x} => pr1 w.1)	    (path_sig P u v (path_sig B u.1 v.1 p q) r) = p	";
+            data = "1 subgoal (ID 235)	  	  A : Type	  B : A -> Type	  P : {x : _ & B x} -> Type	  u, v : {x : _ & P x}	  p : (u.1).1 = (v.1).1	  q : dpath B p (u.1).2 (v.1).2	  r : dpath P (path_sig B u.1 v.1 p q) u.2 v.2	  ============================	  ap (fun w : {x : _ & P x} => (w.1).1)	    (path_sig P u v (path_sig B u.1 v.1 p q) r) = p	";
             responses[i]=data;
           
 
@@ -198,7 +198,7 @@
           
 
             i = 36;
-            data = "1 subgoal (ID 271)	  	  A : Type	  B : A -> Type	  P : {x : _ & B x} -> Type	  u11 : A	  u12 : B u11	  u2 : P (u11; u12)	  v11 : A	  v12 : B v11	  v2 : P (v11; v12)	  p : pr1 ((u11; u12); u2).1 = pr1 ((v11; v12); v2).1	  q : dpath B p (pr2 ((u11; u12); u2).1) (pr2 ((v11; v12); v2).1)	  r : dpath P (path_sig B ((u11; u12); u2).1 ((v11; v12); v2).1 p q)	        (pr2 ((u11; u12); u2)) (pr2 ((v11; v12); v2))	  ============================	  ap (fun w : {x : _ & P x} => pr1 w.1)	    (path_sig P ((u11; u12); u2) ((v11; v12); v2)	       (path_sig B ((u11; u12); u2).1 ((v11; v12); v2).1 p q) r) = p	";
+            data = "1 subgoal (ID 271)	  	  A : Type	  B : A -> Type	  P : {x : _ & B x} -> Type	  u11 : A	  u12 : B u11	  u2 : P (u11; u12)	  v11 : A	  v12 : B v11	  v2 : P (v11; v12)	  p : (((u11; u12); u2).1).1 = (((v11; v12); v2).1).1	  q : dpath B p (((u11; u12); u2).1).2 (((v11; v12); v2).1).2	  r : dpath P (path_sig B ((u11; u12); u2).1 ((v11; v12); v2).1 p q)	        ((u11; u12); u2).2 ((v11; v12); v2).2	  ============================	  ap (fun w : {x : _ & P x} => (w.1).1)	    (path_sig P ((u11; u12); u2) ((v11; v12); v2)	       (path_sig B ((u11; u12); u2).1 ((v11; v12); v2).1 p q) r) = p	";
             responses[i]=data;
           
 

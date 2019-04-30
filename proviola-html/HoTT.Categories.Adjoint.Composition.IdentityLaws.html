@@ -183,7 +183,7 @@
           
 
             i = 33;
-            data = "1 subgoal (ID 37)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : Adjunction F G	  ============================	  (((Functor.Identity.identity D o F)%functor,	   (G o Functor.Identity.identity D)%functor); 1 o A) = 	  ((F, G); A)	";
+            data = "1 subgoal (ID 37)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : F -| G	  ============================	  (((Functor.Identity.identity D o F)%functor,	   (G o Functor.Identity.identity D)%functor); 1 o A) = 	  ((F, G); A)	";
             responses[i]=data;
           
 
@@ -193,12 +193,12 @@
           
 
             i = 35;
-            data = "1 subgoal (ID 40)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : Adjunction F G	  ============================	  {p	  : ((Functor.Identity.identity D o F)%functor,	    (G o Functor.Identity.identity D)%functor) = (F, G) &	  transport	    (fun fg : Functor C D * Functor D C => Adjunction (fst fg) (snd fg)) p	    (1 o A) = A}	";
+            data = "1 subgoal (ID 41)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : F -| G	  ============================	  {p	  : ((Functor.Identity.identity D o F)%functor,	    (G o Functor.Identity.identity D)%functor) = (F, G) &	  transport (fun fg : Functor C D * Functor D C => fst fg -| snd fg) p	    (1 o A) = A}	";
             responses[i]=data;
           
 
             i = 36;
-            data = "1 subgoal (ID 58)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : Adjunction F G	  ============================	  transport	    (fun fg : Functor C D * Functor D C => Adjunction (fst fg) (snd fg))	    (path_prod' (left_identity F) (right_identity G)) 	    (1 o A) = A	";
+            data = "1 subgoal (ID 59)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : F -| G	  ============================	  transport (fun fg : Functor C D * Functor D C => fst fg -| snd fg)	    (path_prod' (left_identity F) (right_identity G)) 	    (1 o A) = A	";
             responses[i]=data;
           
 
@@ -213,7 +213,7 @@
           
 
             i = 39;
-            data = "1 subgoal (ID 72)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : Adjunction F G	  ============================	  (((F o Functor.Identity.identity C)%functor,	   (Functor.Identity.identity C o G)%functor); A o 1) = 	  ((F, G); A)	";
+            data = "1 subgoal (ID 72)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : F -| G	  ============================	  (((F o Functor.Identity.identity C)%functor,	   (Functor.Identity.identity C o G)%functor); A o 1) = 	  ((F, G); A)	";
             responses[i]=data;
           
 
@@ -223,12 +223,12 @@
           
 
             i = 41;
-            data = "1 subgoal (ID 75)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : Adjunction F G	  ============================	  {p	  : ((F o Functor.Identity.identity C)%functor,	    (Functor.Identity.identity C o G)%functor) = (F, G) &	  transport	    (fun fg : Functor C D * Functor D C => Adjunction (fst fg) (snd fg)) p	    (A o 1) = A}	";
+            data = "1 subgoal (ID 76)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : F -| G	  ============================	  {p	  : ((F o Functor.Identity.identity C)%functor,	    (Functor.Identity.identity C o G)%functor) = (F, G) &	  transport (fun fg : Functor C D * Functor D C => fst fg -| snd fg) p	    (A o 1) = A}	";
             responses[i]=data;
           
 
             i = 42;
-            data = "1 subgoal (ID 93)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : Adjunction F G	  ============================	  transport	    (fun fg : Functor C D * Functor D C => Adjunction (fst fg) (snd fg))	    (path_prod' (right_identity F) (Functor.Composition.Laws.left_identity G))	    (A o 1) = A	";
+            data = "1 subgoal (ID 94)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : F -| G	  ============================	  transport (fun fg : Functor C D * Functor D C => fst fg -| snd fg)	    (path_prod' (right_identity F) (Functor.Composition.Laws.left_identity G))	    (A o 1) = A	";
             responses[i]=data;
           
 
