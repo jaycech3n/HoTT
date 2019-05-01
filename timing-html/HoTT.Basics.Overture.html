@@ -176,8 +176,8 @@ Class Reflexive {A} (R : relation A) :=
 </div>
 <div class="code" title="File: Overture.v
 Line: 27
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>
 
 Class Symmetric {A} (R : relation A) :=
@@ -185,8 +185,8 @@ Class Symmetric {A} (R : relation A) :=
 </div>
 <div class="code" title="File: Overture.v
 Line: 30
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>
 
 Class Transitive {A} (R : relation A) :=
@@ -202,8 +202,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 35
-Time: 0.001s">
-<div class="time" style="width: 50%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Class PreOrder {A} (R : relation A) :=
   { PreOrder_Reflexive : Reflexive R | 2 ;
     PreOrder_Transitive : Transitive R | 2 }.</pre>
@@ -744,8 +744,8 @@ Notation "x .2" := (pr2 x) : fibration_scope.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 145
-Time: 0.001s">
-<div class="time" style="width: 50%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition uncurry {A B C} (f: A -&gt; B -&gt; C) (p: A * B): C := f (fst p) (snd p).</pre>
@@ -808,8 +808,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 159
-Time: 0.002s">
-<div class="time" style="width: 100%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>Instance iff_compose : Transitive iff | 1
   := fun A B C f g =&gt; (fst g o fst f , snd f o snd g).</pre>
 </div>
@@ -830,8 +830,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 163
-Time: 0.001s">
-<div class="time" style="width: 50%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Instance iff_inverse : Symmetric iff | 1
   := fun A B f =&gt; (snd f , fst f).</pre>
 </div>
@@ -1525,8 +1525,8 @@ Global Arguments ap11 {A B}%type_scope {f g}%function_scope h%path_scope {x y} p
 </div>
 <div class="code" title="File: Overture.v
 Line: 325
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>
 
 Definition ap2 {A B C} (f : A -&gt; B -&gt; C) {x1 x2 y1 y2}:
@@ -1541,8 +1541,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 329
-Time: 0.001s">
-<div class="time" style="width: 50%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 intros H1 H2;destruct H1,H2;reflexivity.</pre>
 </div>
@@ -1699,8 +1699,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 378
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>Record Equiv A B := BuildEquiv {
   equiv_fun : A -&gt; B ;
   equiv_isequiv : IsEquiv equiv_fun
@@ -1781,8 +1781,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 398
-Time: 0.001s">
-<div class="time" style="width: 50%"></div>
+Time: 0.002s">
+<div class="time" style="width: 100%"></div>
 <pre>Definition ap10_equiv {A B : Type} {f g : A &lt;~&gt; B} (h : f = g) : f == g
   := ap10 (ap equiv_fun h).</pre>
 </div>
@@ -2198,8 +2198,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 515
-Time: 0.001s">
-<div class="time" style="width: 50%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Hint Extern 10 =&gt;
 progress match goal with
            | [ H : forall x y : ?T, IsTrunc ?n (x = y) |- _ ]
@@ -2328,8 +2328,8 @@ Global Existing Instance isequiv_apD10.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 560
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>
 
 Definition path_forall `{Funext} {A : Type} {P : A -&gt; Type} (f g : forall x : A, P x) :
@@ -2347,8 +2347,8 @@ Global Arguments path_forall {_ A%type_scope P} (f g)%function_scope _.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 567
-Time: 0.002s">
-<div class="time" style="width: 100%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>
 
 Definition path_forall2 `{Funext} {A B : Type} {P : A -&gt; B -&gt; Type} (f g : forall x y, P x y) :
@@ -2701,8 +2701,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 672
-Time: 0.001s">
-<div class="time" style="width: 50%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Ltac rapply' p :=
   refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
   refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
@@ -3021,8 +3021,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 794
-Time: 0.001s">
-<div class="time" style="width: 50%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Ltac atomic x :=
   idtac;
   match x with
@@ -3048,8 +3048,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 809
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>Ltac revert_opaque x :=
   revert x;
   match goal with

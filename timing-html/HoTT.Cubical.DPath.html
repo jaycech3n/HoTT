@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: DPath.v
 Line: 1
-Time: 0.042s">
+Time: 0.045s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
@@ -60,8 +60,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: DPath.v
 Line: 6
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.2222222222222%"></div>
 <pre>
   destruct p; exact (u=v).</pre>
 </div>
@@ -75,7 +75,7 @@ Defined.</pre>
 <div class="code" title="File: DPath.v
 Line: 8
 Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+<div class="time" style="width: 2.2222222222222%"></div>
 <pre>
 
 Definition dpath_compose {A B} (f : A -&gt; B) (P : B -&gt; Type) {x y : A}
@@ -91,8 +91,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: DPath.v
 Line: 13
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   destruct p; apply equiv_idmap.</pre>
 </div>
@@ -116,7 +116,7 @@ Time: 0s">
 <div class="code" title="File: DPath.v
 Line: 18
 Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+<div class="time" style="width: 2.2222222222222%"></div>
 <pre>Definition dpath_prod {A} (P Q : A -&gt; Type)
            {x y : A} (p : x = y)
            (u : P x) (v : P y) (r : Q x) (s : Q y)
@@ -133,14 +133,14 @@ Proof.</pre>
 <div class="code" title="File: DPath.v
 Line: 23
 Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+<div class="time" style="width: 2.2222222222222%"></div>
 <pre>
   destruct p; apply path_prod; assumption.</pre>
 </div>
 <div class="code" title="File: DPath.v
 Line: 24
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.2222222222222%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -157,7 +157,7 @@ Time: 0s">
 <div class="code" title="File: DPath.v
 Line: 28
 Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+<div class="time" style="width: 2.2222222222222%"></div>
 <pre>Definition dpath_forall_const `{Funext} {A B} (P : A -&gt; B -&gt; Type)
            {x y : A} (p : x = y)
            (u : forall b, P x b) (v : forall b, P y b)
@@ -173,8 +173,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: DPath.v
 Line: 33
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   destruct p; cbn in *.</pre>
 </div>
@@ -187,8 +187,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: DPath.v
 Line: 35
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.2222222222222%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -205,7 +205,7 @@ Time: 0s">
 <div class="code" title="File: DPath.v
 Line: 39
 Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+<div class="time" style="width: 2.2222222222222%"></div>
 <pre>Definition path_sig_uncurried {A : Type} (P : A -&gt; Type) (u v : sig P)
            (pq : {p : pr1 u = pr1 v &amp;
                       dpath P p (pr2 u) (pr2 v)})
@@ -220,29 +220,29 @@ Proof.</pre>
 </div>
 <div class="code" title="File: DPath.v
 Line: 43
-Time: 0.002s">
-<div class="time" style="width: 4.7619047619048%"></div>
+Time: 0.003s">
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>
   destruct u as [u1 u2]; destruct v as [v1 v2]; destruct pq as [p q].</pre>
 </div>
 <div class="code" title="File: DPath.v
 Line: 44
-Time: 0.002s">
-<div class="time" style="width: 4.7619047619048%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.2222222222222%"></div>
 <pre>
   cbn in *; destruct p; cbn in *; destruct q; reflexivity.</pre>
 </div>
 <div class="code" title="File: DPath.v
 Line: 45
 Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+<div class="time" style="width: 2.2222222222222%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: DPath.v
 Line: 46
 Time: 0.002s">
-<div class="time" style="width: 4.7619047619048%"></div>
+<div class="time" style="width: 4.4444444444444%"></div>
 <pre>  
 
 Definition path_sig {A : Type} (P : A -&gt; Type) (u v : sig P)
@@ -253,7 +253,7 @@ Definition path_sig {A : Type} (P : A -&gt; Type) (u v : sig P)
 <div class="code" title="File: DPath.v
 Line: 51
 Time: 0.002s">
-<div class="time" style="width: 4.7619047619048%"></div>
+<div class="time" style="width: 4.4444444444444%"></div>
 <pre>
 
 Definition ap_pr1_path_sig {A : Type} (P : A -&gt; Type) (u v : sig P)
@@ -270,21 +270,21 @@ Proof.</pre>
 <div class="code" title="File: DPath.v
 Line: 56
 Time: 0.005s">
-<div class="time" style="width: 11.904761904762%"></div>
+<div class="time" style="width: 11.111111111111%"></div>
 <pre>
   destruct u, v; cbn in *; destruct p; cbn in *; destruct q; reflexivity.</pre>
 </div>
 <div class="code" title="File: DPath.v
 Line: 57
 Time: 0.002s">
-<div class="time" style="width: 4.7619047619048%"></div>
+<div class="time" style="width: 4.4444444444444%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: DPath.v
 Line: 58
 Time: 0.005s">
-<div class="time" style="width: 11.904761904762%"></div>
+<div class="time" style="width: 11.111111111111%"></div>
 <pre>
 
 Definition ap_pr1_pr1_path_sig {A : Type} (B : A -&gt; Type) (P : sig B -&gt; Type)
@@ -305,21 +305,21 @@ Proof.</pre>
 <div class="code" title="File: DPath.v
 Line: 67
 Time: 0.007s">
-<div class="time" style="width: 16.666666666667%"></div>
+<div class="time" style="width: 15.555555555556%"></div>
 <pre>
   destruct u as [[u11 u12] u2]; destruct v as [[v11 v12] v2].</pre>
 </div>
 <div class="code" title="File: DPath.v
 Line: 68
-Time: 0.007s">
-<div class="time" style="width: 16.666666666667%"></div>
+Time: 0.008s">
+<div class="time" style="width: 17.777777777778%"></div>
 <pre>
   cbn in *; destruct p; cbn in *; destruct q; cbn in *; destruct r; reflexivity.</pre>
 </div>
 <div class="code" title="File: DPath.v
 Line: 69
 Time: 0.006s">
-<div class="time" style="width: 14.285714285714%"></div>
+<div class="time" style="width: 13.333333333333%"></div>
 <pre>
 Defined.</pre>
 </div>
