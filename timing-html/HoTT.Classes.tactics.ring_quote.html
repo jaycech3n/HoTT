@@ -30,13 +30,13 @@ pre {
 
 <div class="code" title="File: ring_quote.v
 Line: 1
-Time: 0.031s">
-<div class="time" style="width: 7.808564231738%"></div>
+Time: 0.03s">
+<div class="time" style="width: 7.6142131979695%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.Bool.</pre>
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 1
-Time: 0.397s">
+Time: 0.394s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Require Import HoTT.Classes.theory.rings
@@ -46,15 +46,15 @@ Require Import HoTT.Classes.theory.rings
 <div class="code" title="File: ring_quote.v
 Line: 4
 Time: 0.002s">
-<div class="time" style="width: 0.50377833753149%"></div>
+<div class="time" style="width: 0.50761421319797%"></div>
 <pre>
 
 Class AlmostNegate A := almost_negate : A -&gt; A.</pre>
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 6
-Time: 0.003s">
-<div class="time" style="width: 0.75566750629723%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.0152284263959%"></div>
 <pre>
 
 Class AlmostRing A {Aplus : Plus A} {Amult : Mult A}
@@ -82,7 +82,7 @@ Context {A B : Type} {Aplus : Plus A} {Bplus : Plus B}
 <div class="code" title="File: ring_quote.v
 Line: 16
 Time: 0.003s">
-<div class="time" style="width: 0.75566750629723%"></div>
+<div class="time" style="width: 0.76142131979695%"></div>
 <pre>
 
 Class AlmostRingPreserving (f : A -&gt; B) :=
@@ -92,7 +92,7 @@ Class AlmostRingPreserving (f : A -&gt; B) :=
 <div class="code" title="File: ring_quote.v
 Line: 20
 Time: 0.002s">
-<div class="time" style="width: 0.50377833753149%"></div>
+<div class="time" style="width: 0.50761421319797%"></div>
 <pre>
 End almostring_mor.</pre>
 </div>
@@ -107,7 +107,7 @@ Module Quoting.</pre>
 <div class="code" title="File: ring_quote.v
 Line: 23
 Time: 0.001s">
-<div class="time" style="width: 0.25188916876574%"></div>
+<div class="time" style="width: 0.25380710659898%"></div>
 <pre>
 
 Inductive Expr (V:Type0) :=
@@ -129,15 +129,15 @@ Arguments Var [V] v.</pre>
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 34
-Time: 0.005s">
-<div class="time" style="width: 1.2594458438287%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Arguments Zero [V].</pre>
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 35
-Time: 0.007s">
-<div class="time" style="width: 1.7632241813602%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Arguments One [V].</pre>
 </div>
@@ -179,8 +179,8 @@ Universe U.</pre>
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 42
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.25380710659898%"></div>
 <pre>
 Context (R:Type@{U}) `{AlmostRing R}.</pre>
 </div>
@@ -195,7 +195,7 @@ Notation Vars V := (V -&gt; R).</pre>
 <div class="code" title="File: ring_quote.v
 Line: 45
 Time: 0.002s">
-<div class="time" style="width: 0.50377833753149%"></div>
+<div class="time" style="width: 0.50761421319797%"></div>
 <pre>
 
 Fixpoint eval {V:Type0} (vs : Vars V) (e : Expr V) : R :=
@@ -227,15 +227,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 60
-Time: 0.005s">
-<div class="time" style="width: 1.2594458438287%"></div>
+Time: 0.006s">
+<div class="time" style="width: 1.5228426395939%"></div>
 <pre>
 intros E e;induction e;simpl;auto;apply ap2;auto.</pre>
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 61
 Time: 0.001s">
-<div class="time" style="width: 0.25188916876574%"></div>
+<div class="time" style="width: 0.25380710659898%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -294,7 +294,7 @@ Section Lookup.</pre>
 <div class="code" title="File: ring_quote.v
 Line: 72
 Time: 0.001s">
-<div class="time" style="width: 0.25188916876574%"></div>
+<div class="time" style="width: 0.25380710659898%"></div>
 <pre>
 
   Class Lookup {A:Type0 } (x: R) (f: Vars A)
@@ -423,8 +423,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 94
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.0152284263959%"></div>
 <pre>
 
 End Lookup.</pre>
@@ -432,7 +432,7 @@ End Lookup.</pre>
 <div class="code" title="File: ring_quote.v
 Line: 96
 Time: 0.001s">
-<div class="time" style="width: 0.25188916876574%"></div>
+<div class="time" style="width: 0.25380710659898%"></div>
 <pre>
 
 Fixpoint expr_map {V W:Type0 } (f : V -&gt; W) (e : Expr V) : Expr W :=
@@ -464,14 +464,14 @@ Proof.</pre>
 <div class="code" title="File: ring_quote.v
 Line: 110
 Time: 0.007s">
-<div class="time" style="width: 1.7632241813602%"></div>
+<div class="time" style="width: 1.7766497461929%"></div>
 <pre>
 induction e;simpl;try reflexivity;apply ap2;auto.</pre>
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 111
 Time: 0.002s">
-<div class="time" style="width: 0.50377833753149%"></div>
+<div class="time" style="width: 0.50761421319797%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -486,7 +486,7 @@ Section Quote.</pre>
 <div class="code" title="File: ring_quote.v
 Line: 114
 Time: 0.002s">
-<div class="time" style="width: 0.50377833753149%"></div>
+<div class="time" style="width: 0.50761421319797%"></div>
 <pre>
 
   Class Quote {V:Type0 } (l: Vars V) (n: R) {V':Type0 } (r: Vars V') :=
@@ -526,7 +526,7 @@ Time: 0s">
 <div class="code" title="File: ring_quote.v
 Line: 124
 Time: 0.002s">
-<div class="time" style="width: 0.50377833753149%"></div>
+<div class="time" style="width: 0.50761421319797%"></div>
 <pre>
   intros [[?|?]|?];auto.</pre>
 </div>
@@ -554,8 +554,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 129
-Time: 0.001s">
-<div class="time" style="width: 0.25188916876574%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.50761421319797%"></div>
 <pre>
   intros [?|?];auto.</pre>
 </div>
@@ -641,7 +641,7 @@ Time: 0s">
 <div class="code" title="File: ring_quote.v
 Line: 143
 Time: 0.004s">
-<div class="time" style="width: 1.007556675063%"></div>
+<div class="time" style="width: 1.0152284263959%"></div>
 <pre>
 
   Lemma quote_plus_ok (V:Type0) (v: Vars V) n
@@ -668,7 +668,7 @@ Time: 0s">
 <div class="code" title="File: ring_quote.v
 Line: 152
 Time: 0.005s">
-<div class="time" style="width: 1.2594458438287%"></div>
+<div class="time" style="width: 1.2690355329949%"></div>
 <pre>
   rewrite &lt;-(eval_quote n), &lt;-(eval_quote m),
     2!eval_map.</pre>
@@ -676,7 +676,7 @@ Time: 0.005s">
 <div class="code" title="File: ring_quote.v
 Line: 154
 Time: 0.001s">
-<div class="time" style="width: 0.25188916876574%"></div>
+<div class="time" style="width: 0.25380710659898%"></div>
 <pre>
   apply ap2;apply eval_ext.</pre>
 </div>
@@ -703,20 +703,20 @@ Time: 0s">
 <div class="code" title="File: ring_quote.v
 Line: 157
 Time: 0.001s">
-<div class="time" style="width: 0.25188916876574%"></div>
+<div class="time" style="width: 0.25380710659898%"></div>
 <pre> intros [[?|?]|?];reflexivity.</pre>
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 157
 Time: 0.004s">
-<div class="time" style="width: 1.007556675063%"></div>
+<div class="time" style="width: 1.0152284263959%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 158
 Time: 0.001s">
-<div class="time" style="width: 0.25188916876574%"></div>
+<div class="time" style="width: 0.25380710659898%"></div>
 <pre>
 
   Global Instance quote_plus (V:Type0) (v: Vars V) n
@@ -739,8 +739,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 164
-Time: 0.001s">
-<div class="time" style="width: 0.25188916876574%"></div>
+Time: 0.006s">
+<div class="time" style="width: 1.5228426395939%"></div>
 <pre> apply quote_plus_ok.</pre>
 </div>
 <div class="code" title="File: ring_quote.v
@@ -753,7 +753,7 @@ Time: 0s">
 <div class="code" title="File: ring_quote.v
 Line: 165
 Time: 0.004s">
-<div class="time" style="width: 1.007556675063%"></div>
+<div class="time" style="width: 1.0152284263959%"></div>
 <pre>
 
   Lemma quote_mult_ok (V:Type0) (v: Vars V) n
@@ -780,7 +780,7 @@ Time: 0s">
 <div class="code" title="File: ring_quote.v
 Line: 174
 Time: 0.005s">
-<div class="time" style="width: 1.2594458438287%"></div>
+<div class="time" style="width: 1.2690355329949%"></div>
 <pre>
   rewrite &lt;-(eval_quote n), &lt;-(eval_quote m),
     2!eval_map.</pre>
@@ -788,7 +788,7 @@ Time: 0.005s">
 <div class="code" title="File: ring_quote.v
 Line: 176
 Time: 0.001s">
-<div class="time" style="width: 0.25188916876574%"></div>
+<div class="time" style="width: 0.25380710659898%"></div>
 <pre>
   apply ap2;apply eval_ext.</pre>
 </div>
@@ -815,20 +815,20 @@ Time: 0s">
 <div class="code" title="File: ring_quote.v
 Line: 179
 Time: 0.001s">
-<div class="time" style="width: 0.25188916876574%"></div>
+<div class="time" style="width: 0.25380710659898%"></div>
 <pre> intros [[?|?]|?];reflexivity.</pre>
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 179
 Time: 0.004s">
-<div class="time" style="width: 1.007556675063%"></div>
+<div class="time" style="width: 1.0152284263959%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 180
 Time: 0.001s">
-<div class="time" style="width: 0.25188916876574%"></div>
+<div class="time" style="width: 0.25380710659898%"></div>
 <pre>
 
   Global Instance quote_mult (V:Type0) (v: Vars V) n
@@ -852,8 +852,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 187
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.25380710659898%"></div>
 <pre> apply quote_mult_ok.</pre>
 </div>
 <div class="code" title="File: ring_quote.v
@@ -866,7 +866,7 @@ Time: 0s">
 <div class="code" title="File: ring_quote.v
 Line: 188
 Time: 0.001s">
-<div class="time" style="width: 0.25188916876574%"></div>
+<div class="time" style="width: 0.25380710659898%"></div>
 <pre>
 
   Lemma quote_neg_ok@{} (V:Type0) (v : Vars V) n (V':Type0) (v' : Vars V')
@@ -1015,7 +1015,7 @@ Time: 0s">
 <div class="code" title="File: ring_quote.v
 Line: 217
 Time: 0.002s">
-<div class="time" style="width: 0.50377833753149%"></div>
+<div class="time" style="width: 0.50761421319797%"></div>
 <pre>
 
 End Quote.</pre>
@@ -1031,8 +1031,8 @@ Definition quote': forall x {V':Type0 } {v: Vars V'} {d: Quote noVars x v}, Expr
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 222
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.25380710659898%"></div>
 <pre>
 
 Definition eval_quote': forall x {V':Type0} {v: Vars V'} {d: Quote noVars x v},
@@ -1042,7 +1042,7 @@ Definition eval_quote': forall x {V':Type0} {v: Vars V'} {d: Quote noVars x v},
 <div class="code" title="File: ring_quote.v
 Line: 226
 Time: 0.003s">
-<div class="time" style="width: 0.75566750629723%"></div>
+<div class="time" style="width: 0.76142131979695%"></div>
 <pre>
 
 Class EqQuote {V:Type0 } (l: Vars V) (n m: R) {V':Type0 } (r: Vars V') :=
@@ -1053,8 +1053,8 @@ Class EqQuote {V:Type0 } (l: Vars V) (n m: R) {V':Type0 } (r: Vars V') :=
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 232
-Time: 0.003s">
-<div class="time" style="width: 0.75566750629723%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.0152284263959%"></div>
 <pre>
 
 Lemma eq_quote_ok (V:Type0) (v: Vars V) n
@@ -1081,14 +1081,14 @@ intros E.</pre>
 <div class="code" title="File: ring_quote.v
 Line: 241
 Time: 0.001s">
-<div class="time" style="width: 0.25188916876574%"></div>
+<div class="time" style="width: 0.25380710659898%"></div>
 <pre>
 rewrite &lt;-(eval_quote n), &lt;-(eval_quote m).</pre>
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 242
-Time: 0.009s">
-<div class="time" style="width: 2.2670025188917%"></div>
+Time: 0.01s">
+<div class="time" style="width: 2.5380710659898%"></div>
 <pre>
 path_via (eval (merge v (merge v' v'')) (expr_map sum_aux (quote n)));
 [|path_via (eval (merge v (merge v' v'')) (expr_map sum_assoc (quote m)))].</pre>
@@ -1103,7 +1103,7 @@ Time: 0s">
 <div class="code" title="File: ring_quote.v
 Line: 245
 Time: 0.001s">
-<div class="time" style="width: 0.25188916876574%"></div>
+<div class="time" style="width: 0.25380710659898%"></div>
 <pre> rewrite eval_map.</pre>
 </div>
 <div class="code" title="File: ring_quote.v
@@ -1129,7 +1129,7 @@ Time: 0s">
 <div class="code" title="File: ring_quote.v
 Line: 247
 Time: 0.001s">
-<div class="time" style="width: 0.25188916876574%"></div>
+<div class="time" style="width: 0.25380710659898%"></div>
 <pre> rewrite eval_map.</pre>
 </div>
 <div class="code" title="File: ring_quote.v
@@ -1141,14 +1141,14 @@ Time: 0s">
 <div class="code" title="File: ring_quote.v
 Line: 247
 Time: 0.001s">
-<div class="time" style="width: 0.25188916876574%"></div>
+<div class="time" style="width: 0.25380710659898%"></div>
 <pre>
   intros [[?|?]|?];reflexivity.</pre>
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 248
 Time: 0.003s">
-<div class="time" style="width: 0.75566750629723%"></div>
+<div class="time" style="width: 0.76142131979695%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -1193,8 +1193,8 @@ apply (@eq_quote_ok _ _ _ _ _ _ _ _ Quote0 Quote1).</pre>
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 258
-Time: 0.002s">
-<div class="time" style="width: 0.50377833753149%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.76142131979695%"></div>
 <pre>
 etransitivity;[etransitivity;[|exact E]|].</pre>
 </div>
@@ -1208,7 +1208,7 @@ Time: 0s">
 <div class="code" title="File: ring_quote.v
 Line: 260
 Time: 0.002s">
-<div class="time" style="width: 0.50377833753149%"></div>
+<div class="time" style="width: 0.50761421319797%"></div>
 <pre> rewrite 2!eval_map.</pre>
 </div>
 <div class="code" title="File: ring_quote.v
@@ -1220,7 +1220,7 @@ Time: 0s">
 <div class="code" title="File: ring_quote.v
 Line: 260
 Time: 0.001s">
-<div class="time" style="width: 0.25188916876574%"></div>
+<div class="time" style="width: 0.25380710659898%"></div>
 <pre> intros [?|?];reflexivity.</pre>
 </div>
 <div class="code" title="File: ring_quote.v
@@ -1232,8 +1232,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 261
-Time: 0.003s">
-<div class="time" style="width: 0.75566750629723%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.50761421319797%"></div>
 <pre> rewrite (eval_map sum_assoc).</pre>
 </div>
 <div class="code" title="File: ring_quote.v
@@ -1246,13 +1246,13 @@ Time: 0s">
 <div class="code" title="File: ring_quote.v
 Line: 262
 Time: 0.001s">
-<div class="time" style="width: 0.25188916876574%"></div>
+<div class="time" style="width: 0.25380710659898%"></div>
 <pre> intros [[?|?]|?];reflexivity.</pre>
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 262
 Time: 0.005s">
-<div class="time" style="width: 1.2594458438287%"></div>
+<div class="time" style="width: 1.2690355329949%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1288,7 +1288,7 @@ Defined.</pre>
 <div class="code" title="File: ring_quote.v
 Line: 268
 Time: 0.002s">
-<div class="time" style="width: 0.50377833753149%"></div>
+<div class="time" style="width: 0.50761421319797%"></div>
 <pre>
 
 Lemma quote_equality {V:Type0} {v: Vars V}
@@ -1314,21 +1314,21 @@ intros ? E.</pre>
 <div class="code" title="File: ring_quote.v
 Line: 276
 Time: 0.001s">
-<div class="time" style="width: 0.25188916876574%"></div>
+<div class="time" style="width: 0.25380710659898%"></div>
 <pre>
 rewrite &lt;-(eval_quote l),&lt;-(eval_quote r).</pre>
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 277
 Time: 0.003s">
-<div class="time" style="width: 0.75566750629723%"></div>
+<div class="time" style="width: 0.76142131979695%"></div>
 <pre>
 path_via (eval heap (expr_map sum_forget (quote l))).</pre>
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 278
 Time: 0.001s">
-<div class="time" style="width: 0.25188916876574%"></div>
+<div class="time" style="width: 0.25380710659898%"></div>
 <pre>
 rewrite eval_map.</pre>
 </div>
@@ -1354,14 +1354,14 @@ Time: 0s">
 <div class="code" title="File: ring_quote.v
 Line: 280
 Time: 0.001s">
-<div class="time" style="width: 0.25188916876574%"></div>
+<div class="time" style="width: 0.25380710659898%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: ring_quote.v
 Line: 281
 Time: 0.046s">
-<div class="time" style="width: 11.586901763224%"></div>
+<div class="time" style="width: 11.675126903553%"></div>
 <pre>
 
 End contents.</pre>
@@ -1369,7 +1369,7 @@ End contents.</pre>
 <div class="code" title="File: ring_quote.v
 Line: 283
 Time: 0.001s">
-<div class="time" style="width: 0.25188916876574%"></div>
+<div class="time" style="width: 0.25380710659898%"></div>
 <pre>
 
 End Quoting.</pre>
