@@ -1288,12 +1288,12 @@
           
 
             i = 254;
-            data = "2 subgoals (ID 365)	  	  n, m : nat	  e : Fin n + Unit <~> Fin m + Unit	  p : e (inr tt) = inr tt	  p' : _^-1 (inr tt) = inr tt	  ============================	  forall b : Unit, is_inr (e (inr b))		subgoal 2 (ID 367) is:	 (fun b : Fin n <~> Fin m => fin_equiv' n m (inr tt, b) == e)	   (equiv_unfunctor_sum_l e	      (fun a : Fin n =>	       let s := is_inl_or_is_inr (e (inl a)) in	       match s with	       | inl l => l	       | inr r =>	           let q := inr_un_inr (e (inl a)) r in	           let q0 := moveR_equiv_V (inr (un_inr (e (inl a)) r)) (inl a) q in	           let s0 :=	             (q0^ @ ap (_^-1 o inr) (path_unit (un_inr (e (inl a)) r) tt)) @	             p' in	           Overture.Empty_rec (is_inl (e (inl a))) (inl_ne_inr a tt s0)	       end) ?Hb)	1 subgoal (ID 365)	  	  n, m : nat	  e : Fin n + Unit <~> Fin m + Unit	  p : e (inr tt) = inr tt	  p' : _^-1 (inr tt) = inr tt	  ============================	  forall b : Unit, is_inr (e (inr b))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 367)		subgoal 1 (ID 367) is:	 (fun b : Fin n <~> Fin m => fin_equiv' n m (inr tt, b) == e)	   (equiv_unfunctor_sum_l e	      (fun a : Fin n =>	       let s := is_inl_or_is_inr (e (inl a)) in	       match s with	       | inl l => l	       | inr r =>	           let q := inr_un_inr (e (inl a)) r in	           let q0 := moveR_equiv_V (inr (un_inr (e (inl a)) r)) (inl a) q in	           let s0 :=	             (q0^ @ ap (_^-1 o inr) (path_unit (un_inr (e (inl a)) r) tt)) @	             p' in	           Overture.Empty_rec (is_inl (e (inl a))) (inl_ne_inr a tt s0)	       end)	      (fun b : Unit =>	       match b as u return (is_inr (e (inr u))) with	       | tt => transport is_inr p^ tt	       end))	";
+            data = "2 subgoals (ID 365)	  	  n, m : nat	  e : Fin n + Unit <~> Fin m + Unit	  p : e (inr tt) = inr tt	  p' : _^-1 (inr tt) = inr tt	  ============================	  forall b : Unit, is_inr (e (inr b))		subgoal 2 (ID 367) is:	 (fun b : Fin n <~> Fin m => fin_equiv' n m (inr tt, b) == e)	   (equiv_unfunctor_sum_l e	      (fun a : Fin n =>	       let s := is_inl_or_is_inr (e (inl a)) in	       match s with	       | inl l => l	       | inr r =>	           let q := inr_un_inr (e (inl a)) r in	           let q0 := moveR_equiv_V (inr (un_inr (e (inl a)) r)) (inl a) q in	           let s0 :=	             (q0^ @ ap (_^-1 o inr) (path_unit (un_inr (e (inl a)) r) tt)) @	             p' in	           Overture.Empty_rec (is_inl (e (inl a))) (inl_ne_inr a tt s0)	       end) ?Hb)	1 subgoal (ID 365)	  	  n, m : nat	  e : Fin n + Unit <~> Fin m + Unit	  p : e (inr tt) = inr tt	  p' : _^-1 (inr tt) = inr tt	  ============================	  forall b : Unit, is_inr (e (inr b))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	";
             responses[i]=data;
           
 
             i = 255;
-            data = "1 subgoal (ID 367)	  	  n, m : nat	  e : Fin n + Unit <~> Fin m + Unit	  p : e (inr tt) = inr tt	  p' : _^-1 (inr tt) = inr tt	  ============================	  (fun b : Fin n <~> Fin m => fin_equiv' n m (inr tt, b) == e)	    (equiv_unfunctor_sum_l e	       (fun a : Fin n =>	        let s := is_inl_or_is_inr (e (inl a)) in	        match s with	        | inl l => l	        | inr r =>	            let q := inr_un_inr (e (inl a)) r in	            let q0 := moveR_equiv_V (inr (un_inr (e (inl a)) r)) (inl a) q in	            let s0 :=	              (q0^ @ ap (_^-1 o inr) (path_unit (un_inr (e (inl a)) r) tt)) @	              p' in	            Overture.Empty_rec (is_inl (e (inl a))) (inl_ne_inr a tt s0)	        end)	       (fun b : Unit =>	        match b as u return (is_inr (e (inr u))) with	        | tt => transport is_inr p^ tt	        end))	1 subgoal (ID 453)	  	  n, m : nat	  e : Fin n + Unit <~> Fin m + Unit	  p : e (inr tt) = inr tt	  p' : _^-1 (inr tt) = inr tt	  x : Fin n.+1	  ============================	  fin_equiv' n m	    (inr tt,	    equiv_unfunctor_sum_l e	      (fun a : Fin n =>	       let s := is_inl_or_is_inr (e (inl a)) in	       match s with	       | inl l => l	       | inr r =>	           let q := inr_un_inr (e (inl a)) r in	           let q0 := moveR_equiv_V (inr (un_inr (e (inl a)) r)) (inl a) q in	           let s0 :=	             (q0^ @	              ap (fun x0 : Unit => _^-1 (inr x0))	                (path_unit (un_inr (e (inl a)) r) tt)) @ p' in	           Overture.Empty_rec (is_inl (e (inl a))) (inl_ne_inr a tt s0)	       end)	      (fun b : Unit =>	       match b as u return (is_inr (e (inr u))) with	       | tt => transport is_inr p^ tt	       end)) x = e x	";
+            data = "1 subgoal (ID 367)		subgoal 1 (ID 367) is:	 (fun b : Fin n <~> Fin m => fin_equiv' n m (inr tt, b) == e)	   (equiv_unfunctor_sum_l e	      (fun a : Fin n =>	       let s := is_inl_or_is_inr (e (inl a)) in	       match s with	       | inl l => l	       | inr r =>	           let q := inr_un_inr (e (inl a)) r in	           let q0 := moveR_equiv_V (inr (un_inr (e (inl a)) r)) (inl a) q in	           let s0 :=	             (q0^ @ ap (_^-1 o inr) (path_unit (un_inr (e (inl a)) r) tt)) @	             p' in	           Overture.Empty_rec (is_inl (e (inl a))) (inl_ne_inr a tt s0)	       end)	      (fun b : Unit =>	       match b as u return (is_inr (e (inr u))) with	       | tt => transport is_inr p^ tt	       end))	1 subgoal (ID 367)	  	  n, m : nat	  e : Fin n + Unit <~> Fin m + Unit	  p : e (inr tt) = inr tt	  p' : _^-1 (inr tt) = inr tt	  ============================	  (fun b : Fin n <~> Fin m => fin_equiv' n m (inr tt, b) == e)	    (equiv_unfunctor_sum_l e	       (fun a : Fin n =>	        let s := is_inl_or_is_inr (e (inl a)) in	        match s with	        | inl l => l	        | inr r =>	            let q := inr_un_inr (e (inl a)) r in	            let q0 := moveR_equiv_V (inr (un_inr (e (inl a)) r)) (inl a) q in	            let s0 :=	              (q0^ @ ap (_^-1 o inr) (path_unit (un_inr (e (inl a)) r) tt)) @	              p' in	            Overture.Empty_rec (is_inl (e (inl a))) (inl_ne_inr a tt s0)	        end)	       (fun b : Unit =>	        match b as u return (is_inr (e (inr u))) with	        | tt => transport is_inr p^ tt	        end))	1 subgoal (ID 453)	  	  n, m : nat	  e : Fin n + Unit <~> Fin m + Unit	  p : e (inr tt) = inr tt	  p' : _^-1 (inr tt) = inr tt	  x : Fin n.+1	  ============================	  fin_equiv' n m	    (inr tt,	    equiv_unfunctor_sum_l e	      (fun a : Fin n =>	       let s := is_inl_or_is_inr (e (inl a)) in	       match s with	       | inl l => l	       | inr r =>	           let q := inr_un_inr (e (inl a)) r in	           let q0 := moveR_equiv_V (inr (un_inr (e (inl a)) r)) (inl a) q in	           let s0 :=	             (q0^ @	              ap (fun x0 : Unit => _^-1 (inr x0))	                (path_unit (un_inr (e (inl a)) r) tt)) @ p' in	           Overture.Empty_rec (is_inl (e (inl a))) (inl_ne_inr a tt s0)	       end)	      (fun b : Unit =>	       match b as u return (is_inr (e (inr u))) with	       | tt => transport is_inr p^ tt	       end)) x = e x	";
             responses[i]=data;
           
 
@@ -3388,17 +3388,17 @@
           
 
             i = 674;
-            data = "1 subgoal (ID 1227)	  	  H : Funext	  X : Type	  Y : X -> Type	  H0 : Finite X	  H1 : forall x : X, Finite (Y x)	  Y' : Fin 0 -> Type	  X0 : forall x : Fin 0, Finite (Y' x)	  ============================	  Finite (forall x : Fin 0, Y' x)	";
+            data = "1 subgoal (ID 1227)	  	  H : Funext	  X : Type	  Y : X -> Type	  H0 : Finite X	  H1 : forall x : X, Finite (Y x)	  Y' : Fin 0 -> Type	  X0 : forall x : Fin 0, Finite (Y' x)	  ============================	  Finite (forall x : Fin 0, Y' x)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1233)		subgoal 1 (ID 1233) is:	 Finite (forall x : Fin n.+1, Y' x)	";
             responses[i]=data;
           
 
             i = 675;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1233)		subgoal 1 (ID 1233) is:	 Finite (forall x : Fin n.+1, Y' x)	1 subgoal (ID 1233)	  	  H : Funext	  X : Type	  Y : X -> Type	  H0 : Finite X	  H1 : forall x : X, Finite (Y x)	  n : nat	  Y' : Fin n.+1 -> Type	  X0 : forall x : Fin n.+1, Finite (Y' x)	  IH : forall Y' : Fin n -> Type,	       (forall x : Fin n, Finite (Y' x)) -> Finite (forall x : Fin n, Y' x)	  ============================	  Finite (forall x : Fin n.+1, Y' x)	1 subgoal (ID 1525)	  	  H : Funext	  X : Type	  Y : X -> Type	  H0 : Finite X	  H1 : forall x : X, Finite (Y x)	  n : nat	  Y' : Fin n.+1 -> Type	  X0 : forall x : Fin n.+1, Finite (Y' x)	  IH : forall Y' : Fin n -> Type,	       (forall x : Fin n, Finite (Y' x)) -> Finite (forall x : Fin n, Y' x)	  ============================	  Finite	    ((forall	      a : (fix Fin (n0 : nat) : Type :=	             match n0 with	             | 0 => Empty	             | n1.+1 => (Fin n1 + Unit)%type	             end) n, Y' (inl a)) * (forall b : Unit, Y' (inr b)))	";
+            data = "1 subgoal (ID 1233)	  	  H : Funext	  X : Type	  Y : X -> Type	  H0 : Finite X	  H1 : forall x : X, Finite (Y x)	  n : nat	  Y' : Fin n.+1 -> Type	  X0 : forall x : Fin n.+1, Finite (Y' x)	  IH : forall Y' : Fin n -> Type,	       (forall x : Fin n, Finite (Y' x)) -> Finite (forall x : Fin n, Y' x)	  ============================	  Finite (forall x : Fin n.+1, Y' x)	";
             responses[i]=data;
           
 
             i = 676;
-            data = "2 subgoals (ID 1526)	  	  H : Funext	  X : Type	  Y : X -> Type	  H0 : Finite X	  H1 : forall x : X, Finite (Y x)	  n : nat	  Y' : Fin n.+1 -> Type	  X0 : forall x : Fin n.+1, Finite (Y' x)	  IH : forall Y' : Fin n -> Type,	       (forall x : Fin n, Finite (Y' x)) -> Finite (forall x : Fin n, Y' x)	  ============================	  Finite	    (forall	     a : (fix Fin (n0 : nat) : Type :=	            match n0 with	            | 0 => Empty	            | n1.+1 => (Fin n1 + Unit)%type	            end) n, Y' (inl a))		subgoal 2 (ID 1527) is:	 Finite (forall b : Unit, Y' (inr b))	";
+            data = "1 subgoal (ID 1525)	  	  H : Funext	  X : Type	  Y : X -> Type	  H0 : Finite X	  H1 : forall x : X, Finite (Y x)	  n : nat	  Y' : Fin n.+1 -> Type	  X0 : forall x : Fin n.+1, Finite (Y' x)	  IH : forall Y' : Fin n -> Type,	       (forall x : Fin n, Finite (Y' x)) -> Finite (forall x : Fin n, Y' x)	  ============================	  Finite	    ((forall	      a : (fix Fin (n0 : nat) : Type :=	             match n0 with	             | 0 => Empty	             | n1.+1 => (Fin n1 + Unit)%type	             end) n, Y' (inl a)) * (forall b : Unit, Y' (inr b)))	2 subgoals (ID 1526)	  	  H : Funext	  X : Type	  Y : X -> Type	  H0 : Finite X	  H1 : forall x : X, Finite (Y x)	  n : nat	  Y' : Fin n.+1 -> Type	  X0 : forall x : Fin n.+1, Finite (Y' x)	  IH : forall Y' : Fin n -> Type,	       (forall x : Fin n, Finite (Y' x)) -> Finite (forall x : Fin n, Y' x)	  ============================	  Finite	    (forall	     a : (fix Fin (n0 : nat) : Type :=	            match n0 with	            | 0 => Empty	            | n1.+1 => (Fin n1 + Unit)%type	            end) n, Y' (inl a))		subgoal 2 (ID 1527) is:	 Finite (forall b : Unit, Y' (inr b))	";
             responses[i]=data;
           
 
@@ -4463,17 +4463,17 @@
           
 
             i = 889;
-            data = "1 subgoal (ID 1781)	  	  X : Type	  Y : Type	  H : Finite X	  H0 : Finite Y	  f : X -> Y	  IsEmbedding0 : IsEmbedding f	  y : Y	  e : merely (hfiber f y <~> Fin 0)	  ============================	  Decidable (hfiber f y)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1783)		subgoal 1 (ID 1783) is:	 Decidable (hfiber f y)	";
+            data = "1 subgoal (ID 1781)	  	  X : Type	  Y : Type	  H : Finite X	  H0 : Finite Y	  f : X -> Y	  IsEmbedding0 : IsEmbedding f	  y : Y	  e : merely (hfiber f y <~> Fin 0)	  ============================	  Decidable (hfiber f y)	";
             responses[i]=data;
           
 
             i = 890;
-            data = "1 subgoal (ID 1783)	  	  X : Type	  Y : Type	  H : Finite X	  H0 : Finite Y	  f : X -> Y	  IsEmbedding0 : IsEmbedding f	  y : Y	  n : nat	  e : merely (hfiber f y <~> Fin n.+1)	  ============================	  Decidable (hfiber f y)	No more subgoals.	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1783)		subgoal 1 (ID 1783) is:	 Decidable (hfiber f y)	1 subgoal (ID 1783)	  	  X : Type	  Y : Type	  H : Finite X	  H0 : Finite Y	  f : X -> Y	  IsEmbedding0 : IsEmbedding f	  y : Y	  n : nat	  e : merely (hfiber f y <~> Fin n.+1)	  ============================	  Decidable (hfiber f y)	";
             responses[i]=data;
           
 
             i = 891;
-            data = "<infomsg>detachable_image_finite is defined</infomsg>	";
+            data = "No more subgoals.	<infomsg>detachable_image_finite is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -5293,12 +5293,12 @@
           
 
             i = 1055;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 subgoals (ID 2606)		subgoal 1 (ID 2606) is:	 is_inr (h (inr tt))	subgoal 2 (ID 2594) is:	 n.+1 <= m.+1	1 subgoal (ID 2606)	  	  H : Funext	  X : Type	  Y : Type	  n : nat	  f : X -> Y	  X0 : MapIn (-1)%trunc f	  IHn : forall (m : nat) (g : Fin n -> Fin m), MapIn (-1)%trunc g -> n <= m	  m : nat	  g : Fin n.+1 -> Fin m.+1	  X1 : MapIn (-1)%trunc g	  i : isinj g	  h := _^-1 o g : Fin n.+1 -> Fin m.+1	  X2 : MapIn (-1)%trunc h	  Ha : forall a : Fin n, is_inl (h (inl a))	  q : h (inr tt) = inr tt	  ============================	  is_inr (h (inr tt))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 2594)		subgoal 1 (ID 2594) is:	 n.+1 <= m.+1	1 subgoal (ID 2594)	  	  H : Funext	  X : Type	  Y : Type	  n : nat	  f : X -> Y	  X0 : MapIn (-1)%trunc f	  IHn : forall (m : nat) (g : Fin n -> Fin m), MapIn (-1)%trunc g -> n <= m	  m : nat	  g : Fin n.+1 -> Fin m.+1	  X1 : MapIn (-1)%trunc g	  i : isinj g	  h := _^-1 o g : Fin n.+1 -> Fin m.+1	  X2 : MapIn (-1)%trunc h	  Ha : forall a : Fin n, is_inl (h (inl a))	  Hb : forall b : Unit, is_inr (h (inr b))	  ============================	  n.+1 <= m.+1	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 subgoals (ID 2606)		subgoal 1 (ID 2606) is:	 is_inr (h (inr tt))	subgoal 2 (ID 2594) is:	 n.+1 <= m.+1	";
             responses[i]=data;
           
 
             i = 1056;
-            data = "No more subgoals.	<infomsg>leq_inj_finite is defined</infomsg>	";
+            data = "1 subgoal (ID 2606)	  	  H : Funext	  X : Type	  Y : Type	  n : nat	  f : X -> Y	  X0 : MapIn (-1)%trunc f	  IHn : forall (m : nat) (g : Fin n -> Fin m), MapIn (-1)%trunc g -> n <= m	  m : nat	  g : Fin n.+1 -> Fin m.+1	  X1 : MapIn (-1)%trunc g	  i : isinj g	  h := _^-1 o g : Fin n.+1 -> Fin m.+1	  X2 : MapIn (-1)%trunc h	  Ha : forall a : Fin n, is_inl (h (inl a))	  q : h (inr tt) = inr tt	  ============================	  is_inr (h (inr tt))	";
             responses[i]=data;
           
 
@@ -5338,12 +5338,12 @@
           
 
             i = 1064;
-            data = "1 subgoal (ID 1714)	  	  n : nat	  k : Fin n	  ============================	  nat	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 2594)		subgoal 1 (ID 2594) is:	 n.+1 <= m.+1	1 subgoal (ID 2594)	  	  H : Funext	  X : Type	  Y : Type	  n : nat	  f : X -> Y	  X0 : MapIn (-1)%trunc f	  IHn : forall (m : nat) (g : Fin n -> Fin m), MapIn (-1)%trunc g -> n <= m	  m : nat	  g : Fin n.+1 -> Fin m.+1	  X1 : MapIn (-1)%trunc g	  i : isinj g	  h := _^-1 o g : Fin n.+1 -> Fin m.+1	  X2 : MapIn (-1)%trunc h	  Ha : forall a : Fin n, is_inl (h (inl a))	  Hb : forall b : Unit, is_inr (h (inr b))	  ============================	  n.+1 <= m.+1	No more subgoals.	";
             responses[i]=data;
           
 
             i = 1065;
-            data = "";
+            data = "<infomsg>leq_inj_finite is defined</infomsg>	1 subgoal (ID 1714)	  	  n : nat	  k : Fin n	  ============================	  nat	";
             responses[i]=data;
           
 
@@ -5753,12 +5753,12 @@
           
 
             i = 1147;
-            data = "";
+            data = "<infomsg>FinIndOn is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 1148;
-            data = "";
+            data = "<infomsg>FinInd is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -5803,6 +5803,16 @@
           
 
             i = 1157;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 1158;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 1159;
             data = "";
             responses[i]=data;
           
@@ -10289,6 +10299,25 @@ Therefore, the cardinality of <span class="inlinecode"><a class="idref" href="Ho
       mouseout('0_3_219');
       " onmouseover="
       mouseover(1147, '0_3_219');
+      "><br>
+<br>
+<span class="id" title="keyword">Ltac</span> <span class="id" title="var">FinIndOn</span> <span class="id" title="var">X</span> := <span class="id" title="tactic">repeat</span><br>
+  <span class="id" title="keyword">match</span> <span class="id" title="keyword">type</span> <span class="id" title="keyword">of</span> <span class="id" title="var">X</span> <span class="id" title="keyword">with</span><br>
+  | <a class="idref" href="HoTT.Spaces.Finite.html#Fin"><span class="id" title="definition">Fin</span></a> 0 ⇒ <span class="id" title="tactic">destruct</span> <span class="id" title="var">X</span><br>
+  | <a class="idref" href="HoTT.Basics.Overture.html#Empty"><span class="id" title="inductive">Empty</span></a> ⇒ <span class="id" title="tactic">destruct</span> <span class="id" title="var">X</span><br>
+  | <a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a> ⇒ <span class="id" title="tactic">destruct</span> <span class="id" title="var">X</span><br>
+  | <a class="idref" href="HoTT.Spaces.Finite.html#Fin"><span class="id" title="definition">Fin</span></a> ?<span class="id" title="var">n</span> ⇒ <span class="id" title="tactic">destruct</span> <span class="id" title="var">X</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">X</span>|<span class="id" title="var">X</span>]<br>
+  | ?<span class="id" title="var">L</span> <a class="idref" href="Coq.Init.Peano.html#0dacc1786c5ba797d47dd85006231633"><span class="id" title="notation">+</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a> ⇒ <span class="id" title="tactic">destruct</span> <span class="id" title="var">X</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">X</span>|<span class="id" title="var">X</span>]<br>
+  <span class="id" title="keyword">end</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_219');
+      " onmouseover="
+      mouseover(1148, '0_3_219');
+      "><br>
+<br>
+<span class="id" title="keyword">Ltac</span> <span class="id" title="var">FinInd</span> := <span class="id" title="keyword">let</span> <span class="id" title="var">X</span> := <span class="id" title="tactic">fresh</span> "X" <span class="id" title="tactic">in</span> <span class="id" title="tactic">intro</span> <span class="id" title="var">X</span>; <span class="id" title="var">FinIndOn</span> <span class="id" title="var">X</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_219');
+      " onmouseover="
+      mouseover(1149, '0_3_219');
       "><br>
 </span>
 </div>
