@@ -778,7 +778,7 @@
           
 
             i = 152;
-            data = "1 subgoal (ID 625)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  p, q : F = G	  ============================	  ap object_of p = ap object_of q -> _^-1 p = _^-1 q	";
+            data = "1 subgoal (ID 625)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  p, q : F = G	  ============================	  ap object_of p = ap object_of q ->	  (path_functor_uncurried F G)^-1 p = (path_functor_uncurried F G)^-1 q	";
             responses[i]=data;
           
 
@@ -808,7 +808,7 @@
           
 
             i = 158;
-            data = "1 subgoal (ID 286)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  p, q : F = G	  ============================	  IsEquiv	    (fun x : ap object_of p = ap object_of q =>	     _^-1	       (path_sigma_uncurried	          (fun HO : F = G =>	           transport	             (fun GO : C -> D =>	              forall s d : C, morphism C s d -> morphism D (GO s) (GO d)) HO	             (morphism_of F) = morphism_of G) (_^-1 p) 	          (_^-1 q) (_^-1 x)))	";
+            data = "1 subgoal (ID 286)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  p, q : F = G	  ============================	  IsEquiv	    (fun x : ap object_of p = ap object_of q =>	     (ap (path_functor_uncurried F G)^-1)^-1	       (path_sigma_uncurried	          (fun HO : F = G =>	           transport	             (fun GO : C -> D =>	              forall s d : C, morphism C s d -> morphism D (GO s) (GO d)) HO	             (morphism_of F) = morphism_of G)	          ((path_functor_uncurried F G)^-1 p)	          ((path_functor_uncurried F G)^-1 q) (pr1^-1 x)))	";
             responses[i]=data;
           
 

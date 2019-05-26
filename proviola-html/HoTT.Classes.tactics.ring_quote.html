@@ -233,7 +233,7 @@
           
 
             i = 43;
-            data = "1 subgoal (ID 46)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  x : R	  A, B : Type0	  va : Vars A	  vb : Vars B	  Lookup0 : Lookup x va	  ============================	  merge va vb (inl (lookup _ _)) = x	";
+            data = "1 subgoal (ID 46)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  x : R	  A, B : Type0	  va : Vars A	  vb : Vars B	  Lookup0 : Lookup x va	  ============================	  merge va vb (inl (lookup x va)) = x	";
             responses[i]=data;
           
 
@@ -258,7 +258,7 @@
           
 
             i = 48;
-            data = "1 subgoal (ID 52)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  x : R	  A, B : Type0	  va : Vars A	  vb : Vars B	  Lookup0 : Lookup x vb	  ============================	  merge va vb (inr (lookup _ _)) = x	";
+            data = "1 subgoal (ID 52)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  x : R	  A, B : Type0	  va : Vars A	  vb : Vars B	  Lookup0 : Lookup x vb	  ============================	  merge va vb (inr (lookup x vb)) = x	";
             responses[i]=data;
           
 
@@ -438,7 +438,7 @@
           
 
             i = 84;
-            data = "1 subgoal (ID 145)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  ============================	  eval (merge v (merge v' v''))	    (Plus (expr_map sum_aux (quote _)) (expr_map sum_assoc (quote _))) =	  n + m	";
+            data = "1 subgoal (ID 145)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  ============================	  eval (merge v (merge v' v''))	    (Plus (expr_map sum_aux (quote n)) (expr_map sum_assoc (quote m))) =	  n + m	";
             responses[i]=data;
           
 
@@ -448,12 +448,12 @@
           
 
             i = 86;
-            data = "1 subgoal (ID 152)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  ============================	  eval (merge v (merge v' v'')) (expr_map sum_aux (quote _)) +	  eval (merge v (merge v' v'')) (expr_map sum_assoc (quote _)) = 	  n + m	";
+            data = "1 subgoal (ID 152)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  ============================	  eval (merge v (merge v' v'')) (expr_map sum_aux (quote n)) +	  eval (merge v (merge v' v'')) (expr_map sum_assoc (quote m)) = 	  n + m	";
             responses[i]=data;
           
 
             i = 87;
-            data = "1 subgoal (ID 180)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  ============================	  eval (merge v (merge v' v'') ∘ sum_aux) (quote _) +	  eval (merge v (merge v' v'') ∘ sum_assoc) (quote _) =	  eval (merge v v') (quote _) + eval (merge (merge v v') v'') (quote _)	";
+            data = "1 subgoal (ID 180)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  ============================	  eval (merge v (merge v' v'') ∘ sum_aux) (quote n) +	  eval (merge v (merge v' v'') ∘ sum_assoc) (quote m) =	  eval (merge v v') (quote n) + eval (merge (merge v v') v'') (quote m)	";
             responses[i]=data;
           
 
@@ -503,7 +503,7 @@
           
 
             i = 97;
-            data = "1 subgoal (ID 219)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  ============================	  eval (merge v (merge v' v''))	    (Mult (expr_map sum_aux (quote _)) (expr_map sum_assoc (quote _))) =	  n * m	";
+            data = "1 subgoal (ID 219)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  ============================	  eval (merge v (merge v' v''))	    (Mult (expr_map sum_aux (quote n)) (expr_map sum_assoc (quote m))) =	  n * m	";
             responses[i]=data;
           
 
@@ -513,12 +513,12 @@
           
 
             i = 99;
-            data = "1 subgoal (ID 226)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  ============================	  eval (merge v (merge v' v'')) (expr_map sum_aux (quote _)) *	  eval (merge v (merge v' v'')) (expr_map sum_assoc (quote _)) = 	  n * m	";
+            data = "1 subgoal (ID 226)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  ============================	  eval (merge v (merge v' v'')) (expr_map sum_aux (quote n)) *	  eval (merge v (merge v' v'')) (expr_map sum_assoc (quote m)) = 	  n * m	";
             responses[i]=data;
           
 
             i = 100;
-            data = "1 subgoal (ID 254)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  ============================	  eval (merge v (merge v' v'') ∘ sum_aux) (quote _) *	  eval (merge v (merge v' v'') ∘ sum_assoc) (quote _) =	  eval (merge v v') (quote _) * eval (merge (merge v v') v'') (quote _)	";
+            data = "1 subgoal (ID 254)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  ============================	  eval (merge v (merge v' v'') ∘ sum_aux) (quote n) *	  eval (merge v (merge v' v'') ∘ sum_assoc) (quote m) =	  eval (merge v v') (quote n) * eval (merge (merge v v') v'') (quote m)	";
             responses[i]=data;
           
 
@@ -568,7 +568,7 @@
           
 
             i = 110;
-            data = "1 subgoal (ID 267)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  Quote0 : Quote v n v'	  ============================	  eval (merge v v') (Neg (quote _)) = almost_negate n	";
+            data = "1 subgoal (ID 267)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  Quote0 : Quote v n v'	  ============================	  eval (merge v v') (Neg (quote n)) = almost_negate n	";
             responses[i]=data;
           
 
@@ -578,7 +578,7 @@
           
 
             i = 112;
-            data = "1 subgoal (ID 274)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  Quote0 : Quote v n v'	  ============================	  almost_negate (eval (merge v v') (quote _)) = almost_negate n	";
+            data = "1 subgoal (ID 274)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  Quote0 : Quote v n v'	  ============================	  almost_negate (eval (merge v v') (quote n)) = almost_negate n	";
             responses[i]=data;
           
 
@@ -603,7 +603,7 @@
           
 
             i = 117;
-            data = "1 subgoal (ID 291)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  Quote0 : Quote v n v'	  ============================	  eval (merge v v') (Neg (quote _)) = almost_negate n	";
+            data = "1 subgoal (ID 291)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  Quote0 : Quote v n v'	  ============================	  eval (merge v v') (Neg (quote n)) = almost_negate n	";
             responses[i]=data;
           
 
@@ -628,7 +628,7 @@
           
 
             i = 122;
-            data = "1 subgoal (ID 299)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  x : R	  i : Lookup x v	  ============================	  eval (merge v noVars) (Var (inl (lookup _ _))) = x	";
+            data = "1 subgoal (ID 299)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  x : R	  i : Lookup x v	  ============================	  eval (merge v noVars) (Var (inl (lookup x v))) = x	";
             responses[i]=data;
           
 
@@ -688,7 +688,7 @@
           
 
             i = 134;
-            data = "1 subgoal (ID 147)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  ============================	  eval (merge v (merge v' v'')) (expr_map sum_aux (quote _)) =	  eval (merge v (merge v' v'')) (expr_map sum_assoc (quote _)) -> 	  n = m	";
+            data = "1 subgoal (ID 147)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  ============================	  eval (merge v (merge v' v'')) (expr_map sum_aux (quote n)) =	  eval (merge v (merge v' v'')) (expr_map sum_assoc (quote m)) -> 	  n = m	";
             responses[i]=data;
           
 
@@ -698,42 +698,42 @@
           
 
             i = 136;
-            data = "1 subgoal (ID 148)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge v (merge v' v'')) (expr_map sum_aux (quote _)) =	      eval (merge v (merge v' v'')) (expr_map sum_assoc (quote _))	  ============================	  n = m	";
+            data = "1 subgoal (ID 148)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge v (merge v' v'')) (expr_map sum_aux (quote n)) =	      eval (merge v (merge v' v'')) (expr_map sum_assoc (quote m))	  ============================	  n = m	";
             responses[i]=data;
           
 
             i = 137;
-            data = "1 subgoal (ID 165)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge v (merge v' v'')) (expr_map sum_aux (quote _)) =	      eval (merge v (merge v' v'')) (expr_map sum_assoc (quote _))	  ============================	  eval (merge v v') (quote _) = eval (merge (merge v v') v'') (quote _)	";
+            data = "1 subgoal (ID 165)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge v (merge v' v'')) (expr_map sum_aux (quote n)) =	      eval (merge v (merge v' v'')) (expr_map sum_assoc (quote m))	  ============================	  eval (merge v v') (quote n) = eval (merge (merge v v') v'') (quote m)	";
             responses[i]=data;
           
 
             i = 138;
-            data = "2 subgoals (ID 186)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge v (merge v' v'')) (expr_map sum_aux (quote _)) =	      eval (merge v (merge v' v'')) (expr_map sum_assoc (quote _))	  ============================	  eval (merge v v') (quote _) =	  eval (merge v (merge v' v'')) (expr_map sum_aux (quote _))		subgoal 2 (ID 214) is:	 eval (merge v (merge v' v'')) (expr_map sum_assoc (quote _)) =	 eval (merge (merge v v') v'') (quote _)	";
+            data = "2 subgoals (ID 186)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge v (merge v' v'')) (expr_map sum_aux (quote n)) =	      eval (merge v (merge v' v'')) (expr_map sum_assoc (quote m))	  ============================	  eval (merge v v') (quote n) =	  eval (merge v (merge v' v'')) (expr_map sum_aux (quote n))		subgoal 2 (ID 214) is:	 eval (merge v (merge v' v'')) (expr_map sum_assoc (quote m)) =	 eval (merge (merge v v') v'') (quote m)	";
             responses[i]=data;
           
 
             i = 139;
-            data = "1 subgoal (ID 186)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge v (merge v' v'')) (expr_map sum_aux (quote _)) =	      eval (merge v (merge v' v'')) (expr_map sum_assoc (quote _))	  ============================	  eval (merge v v') (quote _) =	  eval (merge v (merge v' v'')) (expr_map sum_aux (quote _))	1 subgoal (ID 222)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge v (merge v' v'')) (expr_map sum_aux (quote _)) =	      eval (merge v (merge v' v'')) (expr_map sum_assoc (quote _))	  ============================	  eval (merge v v') (quote _) =	  eval (merge v (merge v' v'') ∘ sum_aux) (quote _)	";
+            data = "1 subgoal (ID 186)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge v (merge v' v'')) (expr_map sum_aux (quote n)) =	      eval (merge v (merge v' v'')) (expr_map sum_assoc (quote m))	  ============================	  eval (merge v v') (quote n) =	  eval (merge v (merge v' v'')) (expr_map sum_aux (quote n))	1 subgoal (ID 222)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge v (merge v' v'')) (expr_map sum_aux (quote n)) =	      eval (merge v (merge v' v'')) (expr_map sum_assoc (quote m))	  ============================	  eval (merge v v') (quote n) =	  eval (merge v (merge v' v'') ∘ sum_aux) (quote n)	";
             responses[i]=data;
           
 
             i = 140;
-            data = "1 subgoal (ID 226)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge v (merge v' v'')) (expr_map sum_aux (quote _)) =	      eval (merge v (merge v' v'')) (expr_map sum_assoc (quote _))	  ============================	  merge v v' == merge v (merge v' v'') ∘ sum_aux	";
+            data = "1 subgoal (ID 226)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge v (merge v' v'')) (expr_map sum_aux (quote n)) =	      eval (merge v (merge v' v'')) (expr_map sum_assoc (quote m))	  ============================	  merge v v' == merge v (merge v' v'') ∘ sum_aux	";
             responses[i]=data;
           
 
             i = 141;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 214)		subgoal 1 (ID 214) is:	 eval (merge v (merge v' v'')) (expr_map sum_assoc (quote _)) =	 eval (merge (merge v v') v'') (quote _)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 214)		subgoal 1 (ID 214) is:	 eval (merge v (merge v' v'')) (expr_map sum_assoc (quote m)) =	 eval (merge (merge v v') v'') (quote m)	";
             responses[i]=data;
           
 
             i = 142;
-            data = "1 subgoal (ID 214)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge v (merge v' v'')) (expr_map sum_aux (quote _)) =	      eval (merge v (merge v' v'')) (expr_map sum_assoc (quote _))	  ============================	  eval (merge v (merge v' v'')) (expr_map sum_assoc (quote _)) =	  eval (merge (merge v v') v'') (quote _)	1 subgoal (ID 239)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge v (merge v' v'')) (expr_map sum_aux (quote _)) =	      eval (merge v (merge v' v'')) (expr_map sum_assoc (quote _))	  ============================	  eval (merge v (merge v' v'') ∘ sum_assoc) (quote _) =	  eval (merge (merge v v') v'') (quote _)	";
+            data = "1 subgoal (ID 214)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge v (merge v' v'')) (expr_map sum_aux (quote n)) =	      eval (merge v (merge v' v'')) (expr_map sum_assoc (quote m))	  ============================	  eval (merge v (merge v' v'')) (expr_map sum_assoc (quote m)) =	  eval (merge (merge v v') v'') (quote m)	1 subgoal (ID 239)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge v (merge v' v'')) (expr_map sum_aux (quote n)) =	      eval (merge v (merge v' v'')) (expr_map sum_assoc (quote m))	  ============================	  eval (merge v (merge v' v'') ∘ sum_assoc) (quote m) =	  eval (merge (merge v v') v'') (quote m)	";
             responses[i]=data;
           
 
             i = 143;
-            data = "1 subgoal (ID 243)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge v (merge v' v'')) (expr_map sum_aux (quote _)) =	      eval (merge v (merge v' v'')) (expr_map sum_assoc (quote _))	  ============================	  merge v (merge v' v'') ∘ sum_assoc == merge (merge v v') v''	";
+            data = "1 subgoal (ID 243)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge v (merge v' v'')) (expr_map sum_aux (quote n)) =	      eval (merge v (merge v' v'')) (expr_map sum_assoc (quote m))	  ============================	  merge v (merge v' v'') ∘ sum_assoc == merge (merge v v') v''	";
             responses[i]=data;
           
 
@@ -768,37 +768,37 @@
           
 
             i = 150;
-            data = "1 focused subgoal	(shelved: 2) (ID 192)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge (merge v v') v'') (expr_map inl ?eqquote_l) =	      eval (merge (merge v v') v'') ?eqquote_r	  ============================	  eval (merge v (merge v' v'')) (expr_map sum_aux (quote _)) =	  eval (merge v (merge v' v'')) (expr_map sum_assoc (quote _))	";
+            data = "1 focused subgoal	(shelved: 2) (ID 192)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge (merge v v') v'') (expr_map inl ?eqquote_l) =	      eval (merge (merge v v') v'') ?eqquote_r	  ============================	  eval (merge v (merge v' v'')) (expr_map sum_aux (quote n)) =	  eval (merge v (merge v' v'')) (expr_map sum_assoc (quote m))	";
             responses[i]=data;
           
 
             i = 151;
-            data = "2 focused subgoals	(shelved: 2) (ID 236)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge (merge v v') v'') (expr_map inl ?eqquote_l) =	      eval (merge (merge v v') v'') ?eqquote_r	  ============================	  eval (merge v (merge v' v'')) (expr_map sum_aux (quote _)) =	  eval (merge (merge v v') v'') (expr_map inl ?eqquote_l)		subgoal 2 (ID 215) is:	 eval (merge (merge v v') v'') ?eqquote_r =	 eval (merge v (merge v' v'')) (expr_map sum_assoc (quote _))	";
+            data = "2 focused subgoals	(shelved: 2) (ID 236)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge (merge v v') v'') (expr_map inl ?eqquote_l) =	      eval (merge (merge v v') v'') ?eqquote_r	  ============================	  eval (merge v (merge v' v'')) (expr_map sum_aux (quote n)) =	  eval (merge (merge v v') v'') (expr_map inl ?eqquote_l)		subgoal 2 (ID 215) is:	 eval (merge (merge v v') v'') ?eqquote_r =	 eval (merge v (merge v' v'')) (expr_map sum_assoc (quote m))	";
             responses[i]=data;
           
 
             i = 152;
-            data = "1 focused subgoal	(shelved: 2) (ID 236)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge (merge v v') v'') (expr_map inl ?eqquote_l) =	      eval (merge (merge v v') v'') ?eqquote_r	  ============================	  eval (merge v (merge v' v'')) (expr_map sum_aux (quote _)) =	  eval (merge (merge v v') v'') (expr_map inl ?eqquote_l)	1 focused subgoal	(shelved: 2) (ID 244)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge (merge v v') v'') (expr_map inl ?eqquote_l) =	      eval (merge (merge v v') v'') ?eqquote_r	  ============================	  eval (merge v (merge v' v'') ∘ sum_aux) (quote _) =	  eval (merge (merge v v') v'' ∘ inl) ?eqquote_l	";
+            data = "1 focused subgoal	(shelved: 2) (ID 236)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge (merge v v') v'') (expr_map inl ?eqquote_l) =	      eval (merge (merge v v') v'') ?eqquote_r	  ============================	  eval (merge v (merge v' v'')) (expr_map sum_aux (quote n)) =	  eval (merge (merge v v') v'') (expr_map inl ?eqquote_l)	1 focused subgoal	(shelved: 2) (ID 244)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge (merge v v') v'') (expr_map inl ?eqquote_l) =	      eval (merge (merge v v') v'') ?eqquote_r	  ============================	  eval (merge v (merge v' v'') ∘ sum_aux) (quote n) =	  eval (merge (merge v v') v'' ∘ inl) ?eqquote_l	";
             responses[i]=data;
           
 
             i = 153;
-            data = "1 focused subgoal	(shelved: 1) (ID 248)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge (merge v v') v'') (expr_map inl (quote _)) =	      eval (merge (merge v v') v'') ?eqquote_r	  ============================	  merge v (merge v' v'') ∘ sum_aux == merge (merge v v') v'' ∘ inl	";
+            data = "1 focused subgoal	(shelved: 1) (ID 248)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge (merge v v') v'') (expr_map inl (quote n)) =	      eval (merge (merge v v') v'') ?eqquote_r	  ============================	  merge v (merge v' v'') ∘ sum_aux == merge (merge v v') v'' ∘ inl	";
             responses[i]=data;
           
 
             i = 154;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal	(shelved: 1) (ID 215)		subgoal 1 (ID 215) is:	 eval (merge (merge v v') v'') ?eqquote_r =	 eval (merge v (merge v' v'')) (expr_map sum_assoc (quote _))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal	(shelved: 1) (ID 215)		subgoal 1 (ID 215) is:	 eval (merge (merge v v') v'') ?eqquote_r =	 eval (merge v (merge v' v'')) (expr_map sum_assoc (quote m))	";
             responses[i]=data;
           
 
             i = 155;
-            data = "1 focused subgoal	(shelved: 1) (ID 215)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge (merge v v') v'') (expr_map inl (quote _)) =	      eval (merge (merge v v') v'') ?eqquote_r	  ============================	  eval (merge (merge v v') v'') ?eqquote_r =	  eval (merge v (merge v' v'')) (expr_map sum_assoc (quote _))	1 focused subgoal	(shelved: 1) (ID 264)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge (merge v v') v'') (expr_map inl (quote _)) =	      eval (merge (merge v v') v'') ?eqquote_r	  ============================	  eval (merge (merge v v') v'') ?eqquote_r =	  eval (merge v (merge v' v'') ∘ sum_assoc) (quote _)	";
+            data = "1 focused subgoal	(shelved: 1) (ID 215)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge (merge v v') v'') (expr_map inl (quote n)) =	      eval (merge (merge v v') v'') ?eqquote_r	  ============================	  eval (merge (merge v v') v'') ?eqquote_r =	  eval (merge v (merge v' v'')) (expr_map sum_assoc (quote m))	1 focused subgoal	(shelved: 1) (ID 264)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge (merge v v') v'') (expr_map inl (quote n)) =	      eval (merge (merge v v') v'') ?eqquote_r	  ============================	  eval (merge (merge v v') v'') ?eqquote_r =	  eval (merge v (merge v' v'') ∘ sum_assoc) (quote m)	";
             responses[i]=data;
           
 
             i = 156;
-            data = "1 subgoal (ID 271)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge (merge v v') v'') (expr_map inl (quote _)) =	      eval (merge (merge v v') v'') (quote _)	  ============================	  merge (merge v v') v'' == merge v (merge v' v'') ∘ sum_assoc	";
+            data = "1 subgoal (ID 271)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  n : R	  V' : Type0	  v' : Vars V'	  m : R	  V'' : Type0	  v'' : Vars V''	  Quote0 : Quote v n v'	  Quote1 : Quote (merge v v') m v''	  E : eval (merge (merge v v') v'') (expr_map inl (quote n)) =	      eval (merge (merge v v') v'') (quote m)	  ============================	  merge (merge v v') v'' == merge v (merge v' v'') ∘ sum_assoc	";
             responses[i]=data;
           
 
@@ -833,7 +833,7 @@
           
 
             i = 163;
-            data = "1 subgoal (ID 210)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  V' : Type0	  v' : Vars V'	  l, r : R	  Quote0 : Quote noVars l v	  Quote1 : Quote v r v'	  ============================	  let heap := merge v v' in	  eval heap (expr_map sum_forget (quote _)) = eval heap (quote _) -> l = r	";
+            data = "1 subgoal (ID 210)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  V' : Type0	  v' : Vars V'	  l, r : R	  Quote0 : Quote noVars l v	  Quote1 : Quote v r v'	  ============================	  let heap := merge v v' in	  eval heap (expr_map sum_forget (quote l)) = eval heap (quote r) -> l = r	";
             responses[i]=data;
           
 
@@ -843,32 +843,32 @@
           
 
             i = 165;
-            data = "1 subgoal (ID 212)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  V' : Type0	  v' : Vars V'	  l, r : R	  Quote0 : Quote noVars l v	  Quote1 : Quote v r v'	  heap := merge v v' : Vars (V + V')	  E : eval heap (expr_map sum_forget (quote _)) = eval heap (quote _)	  ============================	  l = r	";
+            data = "1 subgoal (ID 212)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  V' : Type0	  v' : Vars V'	  l, r : R	  Quote0 : Quote noVars l v	  Quote1 : Quote v r v'	  heap := merge v v' : Vars (V + V')	  E : eval heap (expr_map sum_forget (quote l)) = eval heap (quote r)	  ============================	  l = r	";
             responses[i]=data;
           
 
             i = 166;
-            data = "1 subgoal (ID 229)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  V' : Type0	  v' : Vars V'	  l, r : R	  Quote0 : Quote noVars l v	  Quote1 : Quote v r v'	  heap := merge v v' : Vars (V + V')	  E : eval heap (expr_map sum_forget (quote _)) = eval heap (quote _)	  ============================	  eval (merge noVars v) (quote _) = eval (merge v v') (quote _)	";
+            data = "1 subgoal (ID 229)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  V' : Type0	  v' : Vars V'	  l, r : R	  Quote0 : Quote noVars l v	  Quote1 : Quote v r v'	  heap := merge v v' : Vars (V + V')	  E : eval heap (expr_map sum_forget (quote l)) = eval heap (quote r)	  ============================	  eval (merge noVars v) (quote l) = eval (merge v v') (quote r)	";
             responses[i]=data;
           
 
             i = 167;
-            data = "1 subgoal (ID 245)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  V' : Type0	  v' : Vars V'	  l, r : R	  Quote0 : Quote noVars l v	  Quote1 : Quote v r v'	  heap := merge v v' : Vars (V + V')	  E : eval heap (expr_map sum_forget (quote _)) = eval heap (quote _)	  ============================	  eval (merge noVars v) (quote _) = eval heap (expr_map sum_forget (quote _))	";
+            data = "1 subgoal (ID 245)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  V' : Type0	  v' : Vars V'	  l, r : R	  Quote0 : Quote noVars l v	  Quote1 : Quote v r v'	  heap := merge v v' : Vars (V + V')	  E : eval heap (expr_map sum_forget (quote l)) = eval heap (quote r)	  ============================	  eval (merge noVars v) (quote l) = eval heap (expr_map sum_forget (quote l))	";
             responses[i]=data;
           
 
             i = 168;
-            data = "1 subgoal (ID 254)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  V' : Type0	  v' : Vars V'	  l, r : R	  Quote0 : Quote noVars l v	  Quote1 : Quote v r v'	  heap := merge v v' : Vars (V + V')	  E : eval heap (expr_map sum_forget (quote _)) = eval heap (quote _)	  ============================	  eval (merge noVars v) (quote _) = eval (heap ∘ sum_forget) (quote _)	";
+            data = "1 subgoal (ID 254)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  V' : Type0	  v' : Vars V'	  l, r : R	  Quote0 : Quote noVars l v	  Quote1 : Quote v r v'	  heap := merge v v' : Vars (V + V')	  E : eval heap (expr_map sum_forget (quote l)) = eval heap (quote r)	  ============================	  eval (merge noVars v) (quote l) = eval (heap ∘ sum_forget) (quote l)	";
             responses[i]=data;
           
 
             i = 169;
-            data = "1 subgoal (ID 258)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  V' : Type0	  v' : Vars V'	  l, r : R	  Quote0 : Quote noVars l v	  Quote1 : Quote v r v'	  heap := merge v v' : Vars (V + V')	  E : eval heap (expr_map sum_forget (quote _)) = eval heap (quote _)	  ============================	  merge noVars v == heap ∘ sum_forget	";
+            data = "1 subgoal (ID 258)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  V' : Type0	  v' : Vars V'	  l, r : R	  Quote0 : Quote noVars l v	  Quote1 : Quote v r v'	  heap := merge v v' : Vars (V + V')	  E : eval heap (expr_map sum_forget (quote l)) = eval heap (quote r)	  ============================	  merge noVars v == heap ∘ sum_forget	";
             responses[i]=data;
           
 
             i = 170;
-            data = "1 subgoal (ID 266)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  V' : Type0	  v' : Vars V'	  l, r : R	  Quote0 : Quote noVars l v	  Quote1 : Quote v r v'	  heap := merge v v' : Vars (V + V')	  E : eval heap (expr_map sum_forget (quote _)) = eval heap (quote _)	  v0 : V	  ============================	  merge noVars v (inr v0) = (heap ∘ sum_forget) (inr v0)	";
+            data = "1 subgoal (ID 266)	  	  R : Type	  Aplus : canonical_names.Plus R	  Amult : canonical_names.Mult R	  Azero : canonical_names.Zero R	  Aone : canonical_names.One R	  Anegate : AlmostNegate R	  H : AlmostRing R	  V : Type0	  v : Vars V	  V' : Type0	  v' : Vars V'	  l, r : R	  Quote0 : Quote noVars l v	  Quote1 : Quote v r v'	  heap := merge v v' : Vars (V + V')	  E : eval heap (expr_map sum_forget (quote l)) = eval heap (quote r)	  v0 : V	  ============================	  merge noVars v (inr v0) = (heap ∘ sum_forget) (inr v0)	";
             responses[i]=data;
           
 

@@ -283,12 +283,12 @@
           
 
             i = 53;
-            data = "1 subgoal (ID 43)	  	  H : Univalence	  A : Type	  Contr0 : Contr (BAut A)	  f : point (BAut A) = point (BAut A)	  ============================	  forall g : A <~> A, _^-1 f == g	";
+            data = "1 subgoal (ID 43)	  	  H : Univalence	  A : Type	  Contr0 : Contr (BAut A)	  f : point (BAut A) = point (BAut A)	  ============================	  forall g : A <~> A, (path_baut (point (BAut A)) (point (BAut A)))^-1 f == g	";
             responses[i]=data;
           
 
             i = 54;
-            data = "1 subgoal (ID 64)	  	  H : Univalence	  A : Type	  Contr0 : Contr (BAut A)	  f : point (BAut A) = point (BAut A)	  g : point (BAut A) = point (BAut A)	  ============================	  _^-1 f == _^-1 g	";
+            data = "1 subgoal (ID 64)	  	  H : Univalence	  A : Type	  Contr0 : Contr (BAut A)	  f : point (BAut A) = point (BAut A)	  g : point (BAut A) = point (BAut A)	  ============================	  (path_baut (point (BAut A)) (point (BAut A)))^-1 f ==	  (path_baut (point (BAut A)) (point (BAut A)))^-1 g	";
             responses[i]=data;
           
 
@@ -688,12 +688,12 @@
           
 
             i = 134;
-            data = "1 subgoal (ID 1035)	  	  H : Univalence	  X : Type	  A : Type	  n : trunc_index	  H0 : IsTrunc n.+1 X	  H1 : IsRigid A	  H2 : IsConnected n.+1 A	  L := fun e : point (BAut X) <~> point (BAut X) => equiv_functor_prod_r e	   : point (BAut X) <~> point (BAut X) ->	     point (BAut X) * A <~> point (BAut X) * A	  a0 : A	  M := fun (f : X * A -> X * A) (x : X) => fst (f (x, a0))	   : (X * A -> X * A) -> X -> X	  MH : forall (a : A) (f : X * A -> X * A) (x : X),	       fst (f (x, a)) = fst (f (x, a0))	  MC : forall f g : X * A -> X * A, M (g o f) == M g o M f	  M' := aut_homomorphism_end M (fun x : X => 1) MC	   : X * A <~> X * A -> X <~> X	  Mker : forall f : X * A <~> X * A, M' f == 1%equiv -> f == 1%equiv	  f, g : X * A <~> X * A	  p : M' f == M' g	  z : X * A	  ============================	  _^-1 (f z) = z	";
+            data = "1 subgoal (ID 1035)	  	  H : Univalence	  X : Type	  A : Type	  n : trunc_index	  H0 : IsTrunc n.+1 X	  H1 : IsRigid A	  H2 : IsConnected n.+1 A	  L := fun e : point (BAut X) <~> point (BAut X) => equiv_functor_prod_r e	   : point (BAut X) <~> point (BAut X) ->	     point (BAut X) * A <~> point (BAut X) * A	  a0 : A	  M := fun (f : X * A -> X * A) (x : X) => fst (f (x, a0))	   : (X * A -> X * A) -> X -> X	  MH : forall (a : A) (f : X * A -> X * A) (x : X),	       fst (f (x, a)) = fst (f (x, a0))	  MC : forall f g : X * A -> X * A, M (g o f) == M g o M f	  M' := aut_homomorphism_end M (fun x : X => 1) MC	   : X * A <~> X * A -> X <~> X	  Mker : forall f : X * A <~> X * A, M' f == 1%equiv -> f == 1%equiv	  f, g : X * A <~> X * A	  p : M' f == M' g	  z : X * A	  ============================	  g^-1 (f z) = z	";
             responses[i]=data;
           
 
             i = 135;
-            data = "1 subgoal (ID 1037)	  	  H : Univalence	  X : Type	  A : Type	  n : trunc_index	  H0 : IsTrunc n.+1 X	  H1 : IsRigid A	  H2 : IsConnected n.+1 A	  L := fun e : point (BAut X) <~> point (BAut X) => equiv_functor_prod_r e	   : point (BAut X) <~> point (BAut X) ->	     point (BAut X) * A <~> point (BAut X) * A	  a0 : A	  M := fun (f : X * A -> X * A) (x : X) => fst (f (x, a0))	   : (X * A -> X * A) -> X -> X	  MH : forall (a : A) (f : X * A -> X * A) (x : X),	       fst (f (x, a)) = fst (f (x, a0))	  MC : forall f g : X * A -> X * A, M (g o f) == M g o M f	  M' := aut_homomorphism_end M (fun x : X => 1) MC	   : X * A <~> X * A -> X <~> X	  Mker : forall f : X * A <~> X * A, M' f == 1%equiv -> f == 1%equiv	  f, g : X * A <~> X * A	  p : M' f == M' g	  ============================	  forall z : X * A, _^-1 (f z) = z	";
+            data = "1 subgoal (ID 1037)	  	  H : Univalence	  X : Type	  A : Type	  n : trunc_index	  H0 : IsTrunc n.+1 X	  H1 : IsRigid A	  H2 : IsConnected n.+1 A	  L := fun e : point (BAut X) <~> point (BAut X) => equiv_functor_prod_r e	   : point (BAut X) <~> point (BAut X) ->	     point (BAut X) * A <~> point (BAut X) * A	  a0 : A	  M := fun (f : X * A -> X * A) (x : X) => fst (f (x, a0))	   : (X * A -> X * A) -> X -> X	  MH : forall (a : A) (f : X * A -> X * A) (x : X),	       fst (f (x, a)) = fst (f (x, a0))	  MC : forall f g : X * A -> X * A, M (g o f) == M g o M f	  M' := aut_homomorphism_end M (fun x : X => 1) MC	   : X * A <~> X * A -> X <~> X	  Mker : forall f : X * A <~> X * A, M' f == 1%equiv -> f == 1%equiv	  f, g : X * A <~> X * A	  p : M' f == M' g	  ============================	  forall z : X * A, g^-1 (f z) = z	";
             responses[i]=data;
           
 
@@ -708,12 +708,12 @@
           
 
             i = 138;
-            data = "1 subgoal (ID 1063)	  	  H : Univalence	  X : Type	  A : Type	  n : trunc_index	  H0 : IsTrunc n.+1 X	  H1 : IsRigid A	  H2 : IsConnected n.+1 A	  L := fun e : point (BAut X) <~> point (BAut X) => equiv_functor_prod_r e	   : point (BAut X) <~> point (BAut X) ->	     point (BAut X) * A <~> point (BAut X) * A	  a0 : A	  M := fun (f : X * A -> X * A) (x : X) => fst (f (x, a0))	   : (X * A -> X * A) -> X -> X	  MH : forall (a : A) (f : X * A -> X * A) (x : X),	       fst (f (x, a)) = fst (f (x, a0))	  MC : forall f g : X * A -> X * A, M (g o f) == M g o M f	  M' := aut_homomorphism_end M (fun x : X => 1) MC	   : X * A <~> X * A -> X <~> X	  Mker : forall f : X * A <~> X * A, M' f == 1%equiv -> f == 1%equiv	  f, g : X * A <~> X * A	  p : M' f == M' g	  x : X	  ============================	  M _^-1 (M f x) = 1%equiv x	";
+            data = "1 subgoal (ID 1063)	  	  H : Univalence	  X : Type	  A : Type	  n : trunc_index	  H0 : IsTrunc n.+1 X	  H1 : IsRigid A	  H2 : IsConnected n.+1 A	  L := fun e : point (BAut X) <~> point (BAut X) => equiv_functor_prod_r e	   : point (BAut X) <~> point (BAut X) ->	     point (BAut X) * A <~> point (BAut X) * A	  a0 : A	  M := fun (f : X * A -> X * A) (x : X) => fst (f (x, a0))	   : (X * A -> X * A) -> X -> X	  MH : forall (a : A) (f : X * A -> X * A) (x : X),	       fst (f (x, a)) = fst (f (x, a0))	  MC : forall f g : X * A -> X * A, M (g o f) == M g o M f	  M' := aut_homomorphism_end M (fun x : X => 1) MC	   : X * A <~> X * A -> X <~> X	  Mker : forall f : X * A <~> X * A, M' f == 1%equiv -> f == 1%equiv	  f, g : X * A <~> X * A	  p : M' f == M' g	  x : X	  ============================	  M g^-1 (M f x) = 1%equiv x	";
             responses[i]=data;
           
 
             i = 139;
-            data = "1 subgoal (ID 1077)	  	  H : Univalence	  X : Type	  A : Type	  n : trunc_index	  H0 : IsTrunc n.+1 X	  H1 : IsRigid A	  H2 : IsConnected n.+1 A	  L := fun e : point (BAut X) <~> point (BAut X) => equiv_functor_prod_r e	   : point (BAut X) <~> point (BAut X) ->	     point (BAut X) * A <~> point (BAut X) * A	  a0 : A	  M := fun (f : X * A -> X * A) (x : X) => fst (f (x, a0))	   : (X * A -> X * A) -> X -> X	  MH : forall (a : A) (f : X * A -> X * A) (x : X),	       fst (f (x, a)) = fst (f (x, a0))	  MC : forall f g : X * A -> X * A, M (g o f) == M g o M f	  M' := aut_homomorphism_end M (fun x : X => 1) MC	   : X * A <~> X * A -> X <~> X	  Mker : forall f : X * A <~> X * A, M' f == 1%equiv -> f == 1%equiv	  f, g : X * A <~> X * A	  p : M' f == M' g	  x : X	  ============================	  _^-1 (M f x) = x	";
+            data = "1 subgoal (ID 1077)	  	  H : Univalence	  X : Type	  A : Type	  n : trunc_index	  H0 : IsTrunc n.+1 X	  H1 : IsRigid A	  H2 : IsConnected n.+1 A	  L := fun e : point (BAut X) <~> point (BAut X) => equiv_functor_prod_r e	   : point (BAut X) <~> point (BAut X) ->	     point (BAut X) * A <~> point (BAut X) * A	  a0 : A	  M := fun (f : X * A -> X * A) (x : X) => fst (f (x, a0))	   : (X * A -> X * A) -> X -> X	  MH : forall (a : A) (f : X * A -> X * A) (x : X),	       fst (f (x, a)) = fst (f (x, a0))	  MC : forall f g : X * A -> X * A, M (g o f) == M g o M f	  M' := aut_homomorphism_end M (fun x : X => 1) MC	   : X * A <~> X * A -> X <~> X	  Mker : forall f : X * A <~> X * A, M' f == 1%equiv -> f == 1%equiv	  f, g : X * A <~> X * A	  p : M' f == M' g	  x : X	  ============================	  (M' g)^-1 (M f x) = x	";
             responses[i]=data;
           
 

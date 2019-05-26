@@ -2338,27 +2338,27 @@
           
 
             i = 464;
-            data = "2 subgoals (ID 1826)	  	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A -> B	  H : IsEquiv f	  g : forall x : A, P x -> Q (f x)	  H0 : forall a : A, IsEquiv (g a)	  x : B	  y : Q x	  ============================	  functor_sigma f g	    (functor_sigma _^-1	       (fun (x0 : B) (y0 : Q x0) => _^-1 (transport Q (eisretr _ x0)^ y0))	       (x; y)) = (x; y)		subgoal 2 (ID 1832) is:	 functor_sigma _^-1	   (fun (x0 : B) (y0 : Q x0) => _^-1 (transport Q (eisretr _ x0)^ y0))	   (functor_sigma f g (x; y)) = (x; y)	";
+            data = "2 subgoals (ID 1826)	  	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A -> B	  H : IsEquiv f	  g : forall x : A, P x -> Q (f x)	  H0 : forall a : A, IsEquiv (g a)	  x : B	  y : Q x	  ============================	  functor_sigma f g	    (functor_sigma f^-1	       (fun (x0 : B) (y0 : Q x0) =>	        (g (f^-1 x0))^-1 (transport Q (eisretr f x0)^ y0)) 	       (x; y)) = (x; y)		subgoal 2 (ID 1832) is:	 functor_sigma f^-1	   (fun (x0 : B) (y0 : Q x0) =>	    (g (f^-1 x0))^-1 (transport Q (eisretr f x0)^ y0))	   (functor_sigma f g (x; y)) = (x; y)	";
             responses[i]=data;
           
 
             i = 465;
-            data = "1 subgoal (ID 1826)	  	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A -> B	  H : IsEquiv f	  g : forall x : A, P x -> Q (f x)	  H0 : forall a : A, IsEquiv (g a)	  x : B	  y : Q x	  ============================	  functor_sigma f g	    (functor_sigma _^-1	       (fun (x0 : B) (y0 : Q x0) => _^-1 (transport Q (eisretr _ x0)^ y0))	       (x; y)) = (x; y)	1 subgoal (ID 1848)	  	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A -> B	  H : IsEquiv f	  g : forall x : A, P x -> Q (f x)	  H0 : forall a : A, IsEquiv (g a)	  x : B	  y : Q x	  ============================	  transport Q (eisretr _ x)	    (g (_^-1 x) (_^-1 (transport Q (eisretr _ x)^ y))) = y	";
+            data = "1 subgoal (ID 1826)	  	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A -> B	  H : IsEquiv f	  g : forall x : A, P x -> Q (f x)	  H0 : forall a : A, IsEquiv (g a)	  x : B	  y : Q x	  ============================	  functor_sigma f g	    (functor_sigma f^-1	       (fun (x0 : B) (y0 : Q x0) =>	        (g (f^-1 x0))^-1 (transport Q (eisretr f x0)^ y0)) 	       (x; y)) = (x; y)	1 subgoal (ID 1848)	  	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A -> B	  H : IsEquiv f	  g : forall x : A, P x -> Q (f x)	  H0 : forall a : A, IsEquiv (g a)	  x : B	  y : Q x	  ============================	  transport Q (eisretr f x)	    (g (f^-1 x) ((g (f^-1 x))^-1 (transport Q (eisretr f x)^ y))) = y	";
             responses[i]=data;
           
 
             i = 466;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1832)		subgoal 1 (ID 1832) is:	 functor_sigma _^-1	   (fun (x0 : B) (y0 : Q x0) => _^-1 (transport Q (eisretr _ x0)^ y0))	   (functor_sigma f g (x; y)) = (x; y)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1832)		subgoal 1 (ID 1832) is:	 functor_sigma f^-1	   (fun (x0 : B) (y0 : Q x0) =>	    (g (f^-1 x0))^-1 (transport Q (eisretr f x0)^ y0))	   (functor_sigma f g (x; y)) = (x; y)	";
             responses[i]=data;
           
 
             i = 467;
-            data = "1 subgoal (ID 1832)	  	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A -> B	  H : IsEquiv f	  g : forall x : A, P x -> Q (f x)	  H0 : forall a : A, IsEquiv (g a)	  x : A	  y : P x	  ============================	  functor_sigma _^-1	    (fun (x0 : B) (y0 : Q x0) => _^-1 (transport Q (eisretr _ x0)^ y0))	    (functor_sigma f g (x; y)) = (x; y)	1 subgoal (ID 1896)	  	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A -> B	  H : IsEquiv f	  g : forall x : A, P x -> Q (f x)	  H0 : forall a : A, IsEquiv (g a)	  x : A	  y : P x	  ============================	  transport P (eissect _ x) (_^-1 (transport Q (eisretr _ (f x))^ (g x y))) =	  y	";
+            data = "1 subgoal (ID 1832)	  	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A -> B	  H : IsEquiv f	  g : forall x : A, P x -> Q (f x)	  H0 : forall a : A, IsEquiv (g a)	  x : A	  y : P x	  ============================	  functor_sigma f^-1	    (fun (x0 : B) (y0 : Q x0) =>	     (g (f^-1 x0))^-1 (transport Q (eisretr f x0)^ y0))	    (functor_sigma f g (x; y)) = (x; y)	1 subgoal (ID 1896)	  	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A -> B	  H : IsEquiv f	  g : forall x : A, P x -> Q (f x)	  H0 : forall a : A, IsEquiv (g a)	  x : A	  y : P x	  ============================	  transport P (eissect f x)	    ((g (f^-1 (f x)))^-1 (transport Q (eisretr f (f x))^ (g x y))) = y	";
             responses[i]=data;
           
 
             i = 468;
-            data = "1 subgoal (ID 1931)	  	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A -> B	  H : IsEquiv f	  g : forall x : A, P x -> Q (f x)	  H0 : forall a : A, IsEquiv (g a)	  x : A	  y : P x	  ============================	  _^-1	    (transport (fun x' : A => Q (f x')) (eissect _ x)	       (transport Q (eisretr _ (f x))^ (g x y))) = y	";
+            data = "1 subgoal (ID 1931)	  	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A -> B	  H : IsEquiv f	  g : forall x : A, P x -> Q (f x)	  H0 : forall a : A, IsEquiv (g a)	  x : A	  y : P x	  ============================	  (g x)^-1	    (transport (fun x' : A => Q (f x')) (eissect f x)	       (transport Q (eisretr f (f x))^ (g x y))) = y	";
             responses[i]=data;
           
 
@@ -2418,17 +2418,17 @@
           
 
             i = 480;
-            data = "2 subgoals (ID 1856)	  	  A : Type	  P : A -> Type	  H : forall a : A, Contr (P a)	  ============================	  Sect (fun a : A => (a; center _)) pr1		subgoal 2 (ID 1858) is:	 Sect pr1 (fun a : A => (a; center _))	";
+            data = "2 subgoals (ID 1856)	  	  A : Type	  P : A -> Type	  H : forall a : A, Contr (P a)	  ============================	  Sect (fun a : A => (a; center (P a))) pr1		subgoal 2 (ID 1858) is:	 Sect pr1 (fun a : A => (a; center (P a)))	";
             responses[i]=data;
           
 
             i = 481;
-            data = "1 subgoal (ID 1856)	  	  A : Type	  P : A -> Type	  H : forall a : A, Contr (P a)	  ============================	  Sect (fun a : A => (a; center _)) pr1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1858)		subgoal 1 (ID 1858) is:	 Sect pr1 (fun a : A => (a; center _))	";
+            data = "1 subgoal (ID 1856)	  	  A : Type	  P : A -> Type	  H : forall a : A, Contr (P a)	  ============================	  Sect (fun a : A => (a; center (P a))) pr1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1858)		subgoal 1 (ID 1858) is:	 Sect pr1 (fun a : A => (a; center (P a)))	";
             responses[i]=data;
           
 
             i = 482;
-            data = "1 subgoal (ID 1858)	  	  A : Type	  P : A -> Type	  H : forall a : A, Contr (P a)	  ============================	  Sect pr1 (fun a : A => (a; center _))	1 subgoal (ID 1867)	  	  A : Type	  P : A -> Type	  H : forall a : A, Contr (P a)	  a : A	  p : P a	  ============================	  ((a; p).1; center _) = (a; p)	";
+            data = "1 subgoal (ID 1858)	  	  A : Type	  P : A -> Type	  H : forall a : A, Contr (P a)	  ============================	  Sect pr1 (fun a : A => (a; center (P a)))	1 subgoal (ID 1867)	  	  A : Type	  P : A -> Type	  H : forall a : A, Contr (P a)	  a : A	  p : P a	  ============================	  ((a; p).1; center (P (a; p).1)) = (a; p)	";
             responses[i]=data;
           
 
@@ -2468,7 +2468,7 @@
           
 
             i = 490;
-            data = "1 subgoal (ID 1862)	  	  A : Type	  P : A -> Type	  Contr0 : Contr A	  ============================	  {x : A & P x} <~> P (center _)	";
+            data = "1 subgoal (ID 1862)	  	  A : Type	  P : A -> Type	  Contr0 : Contr A	  ============================	  {x : A & P x} <~> P (center A)	";
             responses[i]=data;
           
 
@@ -2478,22 +2478,22 @@
           
 
             i = 492;
-            data = "2 subgoals (ID 1901)	  	  A : Type	  P : A -> Type	  Contr0 : Contr A	  ============================	  Sect (fun p : P (center _) => (center _; p))	    (fun xp : {x : A & P x} =>	     transport (fun x : A => P x) (contr xp.1)^ xp.2)		subgoal 2 (ID 1903) is:	 Sect	   (fun xp : {x : A & P x} => transport (fun x : A => P x) (contr xp.1)^ xp.2)	   (fun p : P (center _) => (center _; p))	";
+            data = "2 subgoals (ID 1901)	  	  A : Type	  P : A -> Type	  Contr0 : Contr A	  ============================	  Sect (fun p : P (center A) => (center A; p))	    (fun xp : {x : A & P x} =>	     transport (fun x : A => P x) (contr xp.1)^ xp.2)		subgoal 2 (ID 1903) is:	 Sect	   (fun xp : {x : A & P x} => transport (fun x : A => P x) (contr xp.1)^ xp.2)	   (fun p : P (center A) => (center A; p))	";
             responses[i]=data;
           
 
             i = 493;
-            data = "1 subgoal (ID 1901)	  	  A : Type	  P : A -> Type	  Contr0 : Contr A	  ============================	  Sect (fun p : P (center _) => (center _; p))	    (fun xp : {x : A & P x} =>	     transport (fun x : A => P x) (contr xp.1)^ xp.2)	1 subgoal (ID 1907)	  	  A : Type	  P : A -> Type	  Contr0 : Contr A	  p : P (center _)	  ============================	  transport (fun x : A => P x) (contr (center _))^ p = p	";
+            data = "1 subgoal (ID 1901)	  	  A : Type	  P : A -> Type	  Contr0 : Contr A	  ============================	  Sect (fun p : P (center A) => (center A; p))	    (fun xp : {x : A & P x} =>	     transport (fun x : A => P x) (contr xp.1)^ xp.2)	1 subgoal (ID 1907)	  	  A : Type	  P : A -> Type	  Contr0 : Contr A	  p : P (center A)	  ============================	  transport (fun x : A => P x) (contr (center A))^ p = p	";
             responses[i]=data;
           
 
             i = 494;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1903)		subgoal 1 (ID 1903) is:	 Sect	   (fun xp : {x : A & P x} => transport (fun x : A => P x) (contr xp.1)^ xp.2)	   (fun p : P (center _) => (center _; p))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1903)		subgoal 1 (ID 1903) is:	 Sect	   (fun xp : {x : A & P x} => transport (fun x : A => P x) (contr xp.1)^ xp.2)	   (fun p : P (center A) => (center A; p))	";
             responses[i]=data;
           
 
             i = 495;
-            data = "1 subgoal (ID 1903)	  	  A : Type	  P : A -> Type	  Contr0 : Contr A	  ============================	  Sect	    (fun xp : {x : A & P x} =>	     transport (fun x : A => P x) (contr xp.1)^ xp.2)	    (fun p : P (center _) => (center _; p))	1 subgoal (ID 1943)	  	  A : Type	  P : A -> Type	  Contr0 : Contr A	  a : A	  p : P a	  ============================	  (center _; transport (fun x : A => P x) (contr (a; p).1)^ (a; p).2) =	  (a; p)	";
+            data = "1 subgoal (ID 1903)	  	  A : Type	  P : A -> Type	  Contr0 : Contr A	  ============================	  Sect	    (fun xp : {x : A & P x} =>	     transport (fun x : A => P x) (contr xp.1)^ xp.2)	    (fun p : P (center A) => (center A; p))	1 subgoal (ID 1943)	  	  A : Type	  P : A -> Type	  Contr0 : Contr A	  a : A	  p : P a	  ============================	  (center A; transport (fun x : A => P x) (contr (a; p).1)^ (a; p).2) =	  (a; p)	";
             responses[i]=data;
           
 
@@ -2808,12 +2808,12 @@
           
 
             i = 558;
-            data = "1 subgoal (ID 2212)	  	  A : Type	  P : A -> Type	  ac : Contr A	  Pc : forall a : A, Contr (P a)	  ============================	  Contr {x : _ & P x}	1 subgoal (ID 2229)	  	  A : Type	  P : A -> Type	  ac : Contr A	  Pc : forall a : A, Contr (P a)	  ============================	  forall y : {x : _ & P x}, (center _; center _) = y	";
+            data = "1 subgoal (ID 2212)	  	  A : Type	  P : A -> Type	  ac : Contr A	  Pc : forall a : A, Contr (P a)	  ============================	  Contr {x : _ & P x}	1 subgoal (ID 2229)	  	  A : Type	  P : A -> Type	  ac : Contr A	  Pc : forall a : A, Contr (P a)	  ============================	  forall y : {x : _ & P x}, (center A; center (P (center A))) = y	";
             responses[i]=data;
           
 
             i = 559;
-            data = "1 subgoal (ID 2234)	  	  A : Type	  P : A -> Type	  ac : Contr A	  Pc : forall a : A, Contr (P a)	  a : A	  proj2_sig : P a	  ============================	  (center _; center _) = (a; proj2_sig)	";
+            data = "1 subgoal (ID 2234)	  	  A : Type	  P : A -> Type	  ac : Contr A	  Pc : forall a : A, Contr (P a)	  a : A	  proj2_sig : P a	  ============================	  (center A; center (P (center A))) = (a; proj2_sig)	";
             responses[i]=data;
           
 
@@ -3068,12 +3068,12 @@
           
 
             i = 610;
-            data = "1 subgoal (ID 2344)	  	  A : Type	  P : A -> Type	  H : forall x : A, IsHProp (P x)	  u : {x : _ & P x}	  ============================	  path_sigma_uncurried P u u (_^-1 1) = 1	";
+            data = "1 subgoal (ID 2344)	  	  A : Type	  P : A -> Type	  H : forall x : A, IsHProp (P x)	  u : {x : _ & P x}	  ============================	  path_sigma_uncurried P u u (pr1^-1 1) = 1	";
             responses[i]=data;
           
 
             i = 611;
-            data = "1 subgoal (ID 2348)	  	  A : Type	  P : A -> Type	  H : forall x : A, IsHProp (P x)	  u : {x : _ & P x}	  ============================	  match center _ in (_ = v2) return (u = (u.1; v2)) with	  | 1 => 1	  end = 1	";
+            data = "1 subgoal (ID 2348)	  	  A : Type	  P : A -> Type	  H : forall x : A, IsHProp (P x)	  u : {x : _ & P x}	  ============================	  match center (u.2 = u.2) in (_ = v2) return (u = (u.1; v2)) with	  | 1 => 1	  end = 1	";
             responses[i]=data;
           
 

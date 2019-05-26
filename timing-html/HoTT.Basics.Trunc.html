@@ -39,8 +39,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 3
-Time: 0.013s">
-<div class="time" style="width: 86.666666666667%"></div>
+Time: 0.014s">
+<div class="time" style="width: 93.333333333333%"></div>
 <pre>Require Import Overture PathGroupoids Contractible Equivalences.</pre>
 </div>
 <div class="code" title="File: Trunc.v
@@ -127,8 +127,8 @@ Notation "m &lt;= n" := (trunc_index_leq m n) : trunc_scope.</pre>
 </div>
 <div class="code" title="File: Trunc.v
 Line: 25
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>
 
 Fixpoint trunc_index_inc (n : nat) (k : trunc_index) : trunc_index
@@ -161,8 +161,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 35
-Time: 0.001s">
-<div class="time" style="width: 6.6666666666667%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Global Instance trunc_succ `{IsTrunc n A} : IsTrunc n.+1 A | 1000.</pre>
 </div>
 <div class="code" title="File: Trunc.v
@@ -181,8 +181,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 37
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>
   simple_induction n n IH; simpl; intros A H x y.</pre>
 </div>
@@ -229,8 +229,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 43
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>Definition trunc_leq {m n} (Hmn : m &lt;= n) `{IsTrunc m A} : IsTrunc n A.</pre>
 </div>
 <div class="code" title="File: Trunc.v
@@ -249,8 +249,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 45
-Time: 0.001s">
-<div class="time" style="width: 6.6666666666667%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   simple_induction n n' IH;
     intros [ | m'] Hmn A ? .</pre>
@@ -327,8 +327,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 51
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>intros x y; apply (IH m');
                      auto with typeclass_instances.</pre>
 </div>
@@ -351,15 +351,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 56
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>Definition trunc_contr {n} {A} `{Contr A} : IsTrunc n.+1 A
   := (@trunc_leq -2 n.+1 tt _ _).</pre>
 </div>
 <div class="code" title="File: Trunc.v
 Line: 57
-Time: 0.001s">
-<div class="time" style="width: 6.6666666666667%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition trunc_hprop {n} {A} `{IsHProp A} : IsTrunc n.+2 A
@@ -414,8 +414,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 71
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>Definition trunc_equiv A {B} (f : A -&gt; B)
   `{IsTrunc n A} `{IsEquiv A B f}
   : IsTrunc n B.</pre>
@@ -450,8 +450,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 77
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre> exact (contr_equiv _ f).</pre>
 </div>
 <div class="code" title="File: Trunc.v
@@ -476,8 +476,8 @@ Time: 0.015s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 79
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -503,8 +503,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 87
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>Class IsTruncMap (n : trunc_index) {X Y : Type} (f : X -&gt; Y) :=
   istruncmap_fiber : forall y:Y, IsTrunc n (hfiber f y).</pre>
 </div>
@@ -704,8 +704,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 130
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>Global Instance hprop_inhabited_contr (A : Type) : (A -&gt; Contr A) -&gt; IsHProp A | 10000.</pre>
 </div>
 <div class="code" title="File: Trunc.v
@@ -731,8 +731,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 133
-Time: 0.001s">
-<div class="time" style="width: 6.6666666666667%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   apply contr_paths_contr.</pre>
 </div>
@@ -845,8 +845,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Trunc.v
 Line: 151
-Time: 0.001s">
-<div class="time" style="width: 6.6666666666667%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   apply (isequiv_adjointify f g);
     intros ?; apply path_ishprop.</pre>
@@ -883,8 +883,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 159
-Time: 0.001s">
-<div class="time" style="width: 6.6666666666667%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   apply (equiv_adjointify (fst fg) (snd fg));
     intros ?; apply path_ishprop.</pre>

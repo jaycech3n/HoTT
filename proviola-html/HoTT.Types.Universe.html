@@ -168,7 +168,7 @@
           
 
             i = 30;
-            data = "1 subgoal (ID 134)	  	  H : Funext	  A : Type	  ============================	  {| equiv_fun := transport idmap 1; equiv_isequiv := isequiv_path 1 |} =	  {|	  equiv_fun := _^-1;	  equiv_isequiv := isequiv_inverse	                     {|	                     equiv_fun := transport idmap 1;	                     equiv_isequiv := isequiv_path 1 |} |}	";
+            data = "1 subgoal (ID 134)	  	  H : Funext	  A : Type	  ============================	  {| equiv_fun := transport idmap 1; equiv_isequiv := isequiv_path 1 |} =	  {|	  equiv_fun := {|	               equiv_fun := transport idmap 1;	               equiv_isequiv := isequiv_path 1 |}^-1;	  equiv_isequiv := isequiv_inverse	                     {|	                     equiv_fun := transport idmap 1;	                     equiv_isequiv := isequiv_path 1 |} |}	";
             responses[i]=data;
           
 
@@ -553,7 +553,7 @@
           
 
             i = 107;
-            data = "1 subgoal (ID 468)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  p : A = B	  ============================	  path_universe_uncurried ((_^-1)%function p)^-1 =	  (path_universe_uncurried ((_^-1)%function p))^	";
+            data = "1 subgoal (ID 468)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  p : A = B	  ============================	  path_universe_uncurried (((equiv_path_universe A B)^-1)%function p)^-1 =	  (path_universe_uncurried (((equiv_path_universe A B)^-1)%function p))^	";
             responses[i]=data;
           
 
@@ -1093,7 +1093,7 @@
           
 
             i = 215;
-            data = "1 subgoal (ID 674)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  ============================	  transport idmap (path_universe_uncurried f)^ z = _^-1 z	";
+            data = "1 subgoal (ID 674)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  ============================	  transport idmap (path_universe_uncurried f)^ z = f^-1 z	";
             responses[i]=data;
           
 
@@ -1103,12 +1103,12 @@
           
 
             i = 217;
-            data = "1 subgoal (ID 676)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  z : B	  ============================	  forall f : A <~> B, transport idmap (path_universe_uncurried f)^ z = _^-1 z	";
+            data = "1 subgoal (ID 676)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  z : B	  ============================	  forall f : A <~> B, transport idmap (path_universe_uncurried f)^ z = f^-1 z	";
             responses[i]=data;
           
 
             i = 218;
-            data = "1 subgoal (ID 686)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  z : B	  p : A = B	  ============================	  transport idmap (path_universe_uncurried (equiv_path A B p))^ z = _^-1 z	";
+            data = "1 subgoal (ID 686)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  z : B	  p : A = B	  ============================	  transport idmap (path_universe_uncurried (equiv_path A B p))^ z =	  (equiv_path A B p)^-1 z	";
             responses[i]=data;
           
 
@@ -1153,7 +1153,7 @@
           
 
             i = 227;
-            data = "1 subgoal (ID 788)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : A	  ============================	  (ap (transport idmap (path_universe f)^) (transport_path_universe f z) @	   transport_path_universe_V f (f z)) @ eissect _ z =	  transport_Vp idmap (path_universe f) z	";
+            data = "1 subgoal (ID 788)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : A	  ============================	  (ap (transport idmap (path_universe f)^) (transport_path_universe f z) @	   transport_path_universe_V f (f z)) @ eissect f z =	  transport_Vp idmap (path_universe f) z	";
             responses[i]=data;
           
 
@@ -1163,42 +1163,42 @@
           
 
             i = 229;
-            data = "1 subgoal (ID 790)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : A	  ============================	  (fun e : A <~> B =>	   (ap (transport idmap (path_universe e)^) (transport_path_universe e z) @	    transport_path_universe_V e (e z)) @ eissect _ z =	   transport_Vp idmap (path_universe e) z) f	";
+            data = "1 subgoal (ID 790)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : A	  ============================	  (fun e : A <~> B =>	   (ap (transport idmap (path_universe e)^) (transport_path_universe e z) @	    transport_path_universe_V e (e z)) @ eissect e z =	   transport_Vp idmap (path_universe e) z) f	";
             responses[i]=data;
           
 
             i = 230;
-            data = "1 subgoal (ID 804)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : A	  p : A = B	  ============================	  (ap (transport idmap (path_universe (equiv_path A B p))^)	     (transport_path_universe (equiv_path A B p) z) @	   transport_path_universe_V (equiv_path A B p) (equiv_path A B p z)) @	  eissect _ z = transport_Vp idmap (path_universe (equiv_path A B p)) z	";
+            data = "1 subgoal (ID 804)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : A	  p : A = B	  ============================	  (ap (transport idmap (path_universe (equiv_path A B p))^)	     (transport_path_universe (equiv_path A B p) z) @	   transport_path_universe_V (equiv_path A B p) (equiv_path A B p z)) @	  eissect (equiv_path A B p) z =	  transport_Vp idmap (path_universe (equiv_path A B p)) z	";
             responses[i]=data;
           
 
             i = 231;
-            data = "1 subgoal (ID 820)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : A	  p : A = B	  ============================	  (ap (transport idmap (path_universe (equiv_path A B p))^)	     (transport_path_universe (equiv_path A B p) z) @	   transport_path_universe_V (equiv_path A B p) (equiv_path A B p z)) @	  eissect _ z =	  (ap (transport idmap (path_universe (equiv_path A B p))^)	     (ap (fun s : A = B => transport idmap s z) (eissect _ p)) @	   ap (fun s : B = A => transport idmap s (transport idmap p z))	     (inverse2 (eissect _ p))) @ transport_Vp idmap p z	";
+            data = "1 subgoal (ID 820)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : A	  p : A = B	  ============================	  (ap (transport idmap (path_universe (equiv_path A B p))^)	     (transport_path_universe (equiv_path A B p) z) @	   transport_path_universe_V (equiv_path A B p) (equiv_path A B p z)) @	  eissect (equiv_path A B p) z =	  (ap (transport idmap (path_universe (equiv_path A B p))^)	     (ap (fun s : A = B => transport idmap s z) (eissect (equiv_path A B) p)) @	   ap (fun s : B = A => transport idmap s (transport idmap p z))	     (inverse2 (eissect (equiv_path A B) p))) @ transport_Vp idmap p z	";
             responses[i]=data;
           
 
             i = 232;
-            data = "1 subgoal (ID 827)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : A	  p : A = B	  ============================	  ap (transport idmap (path_universe (equiv_path A B p))^)	    (transport_path_universe (equiv_path A B p) z) @	  transport_path_universe_V (equiv_path A B p) (equiv_path A B p z) =	  ap (transport idmap (path_universe (equiv_path A B p))^)	    (ap (fun s : A = B => transport idmap s z) (eissect _ p)) @	  ap (fun s : B = A => transport idmap s (transport idmap p z))	    (inverse2 (eissect _ p))	";
+            data = "1 subgoal (ID 827)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : A	  p : A = B	  ============================	  ap (transport idmap (path_universe (equiv_path A B p))^)	    (transport_path_universe (equiv_path A B p) z) @	  transport_path_universe_V (equiv_path A B p) (equiv_path A B p z) =	  ap (transport idmap (path_universe (equiv_path A B p))^)	    (ap (fun s : A = B => transport idmap s z) (eissect (equiv_path A B) p)) @	  ap (fun s : B = A => transport idmap s (transport idmap p z))	    (inverse2 (eissect (equiv_path A B) p))	";
             responses[i]=data;
           
 
             i = 233;
-            data = "2 subgoals (ID 836)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : A	  p : A = B	  ============================	  ap (transport idmap (path_universe (equiv_path A B p))^)	    (transport_path_universe (equiv_path A B p) z) =	  ap (transport idmap (path_universe (equiv_path A B p))^)	    (ap (fun s : A = B => transport idmap s z) (eissect _ p))		subgoal 2 (ID 837) is:	 transport_path_universe_V (equiv_path A B p) (equiv_path A B p z) =	 ap (fun s : B = A => transport idmap s (transport idmap p z))	   (inverse2 (eissect _ p))	";
+            data = "2 subgoals (ID 836)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : A	  p : A = B	  ============================	  ap (transport idmap (path_universe (equiv_path A B p))^)	    (transport_path_universe (equiv_path A B p) z) =	  ap (transport idmap (path_universe (equiv_path A B p))^)	    (ap (fun s : A = B => transport idmap s z) (eissect (equiv_path A B) p))		subgoal 2 (ID 837) is:	 transport_path_universe_V (equiv_path A B p) (equiv_path A B p z) =	 ap (fun s : B = A => transport idmap s (transport idmap p z))	   (inverse2 (eissect (equiv_path A B) p))	";
             responses[i]=data;
           
 
             i = 234;
-            data = "1 subgoal (ID 836)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : A	  p : A = B	  ============================	  ap (transport idmap (path_universe (equiv_path A B p))^)	    (transport_path_universe (equiv_path A B p) z) =	  ap (transport idmap (path_universe (equiv_path A B p))^)	    (ap (fun s : A = B => transport idmap s z) (eissect _ p))	1 subgoal (ID 840)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : A	  p : A = B	  ============================	  transport_path_universe (equiv_path A B p) z =	  ap (fun s : A = B => transport idmap s z) (eissect _ p)	";
+            data = "1 subgoal (ID 836)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : A	  p : A = B	  ============================	  ap (transport idmap (path_universe (equiv_path A B p))^)	    (transport_path_universe (equiv_path A B p) z) =	  ap (transport idmap (path_universe (equiv_path A B p))^)	    (ap (fun s : A = B => transport idmap s z) (eissect (equiv_path A B) p))	1 subgoal (ID 840)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : A	  p : A = B	  ============================	  transport_path_universe (equiv_path A B p) z =	  ap (fun s : A = B => transport idmap s z) (eissect (equiv_path A B) p)	";
             responses[i]=data;
           
 
             i = 235;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 837)		subgoal 1 (ID 837) is:	 transport_path_universe_V (equiv_path A B p) (equiv_path A B p z) =	 ap (fun s : B = A => transport idmap s (transport idmap p z))	   (inverse2 (eissect _ p))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 837)		subgoal 1 (ID 837) is:	 transport_path_universe_V (equiv_path A B p) (equiv_path A B p z) =	 ap (fun s : B = A => transport idmap s (transport idmap p z))	   (inverse2 (eissect (equiv_path A B) p))	";
             responses[i]=data;
           
 
             i = 236;
-            data = "1 subgoal (ID 837)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : A	  p : A = B	  ============================	  transport_path_universe_V (equiv_path A B p) (equiv_path A B p z) =	  ap (fun s : B = A => transport idmap s (transport idmap p z))	    (inverse2 (eissect _ p))	No more subgoals.	";
+            data = "1 subgoal (ID 837)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : A	  p : A = B	  ============================	  transport_path_universe_V (equiv_path A B p) (equiv_path A B p z) =	  ap (fun s : B = A => transport idmap s (transport idmap p z))	    (inverse2 (eissect (equiv_path A B) p))	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1293,12 +1293,12 @@
           
 
             i = 255;
-            data = "1 subgoal (ID 888)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  ============================	  ap _^-1	    ((1 @	      ap	        (fun u : {f0 : A -> B & IsEquiv f0} =>	         {| equiv_fun := u.1; equiv_isequiv := u.2 |})	        (path_sigma_hprop (f; equiv_isequiv f) (f; equiv_isequiv f)	           (path_forall f f (fun x : A => 1)))) @ 1) = 1	";
+            data = "1 subgoal (ID 888)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  ============================	  ap (equiv_path A B)^-1	    ((1 @	      ap	        (fun u : {f0 : A -> B & IsEquiv f0} =>	         {| equiv_fun := u.1; equiv_isequiv := u.2 |})	        (path_sigma_hprop (f; equiv_isequiv f) (f; equiv_isequiv f)	           (path_forall f f (fun x : A => 1)))) @ 1) = 1	";
             responses[i]=data;
           
 
             i = 256;
-            data = "1 subgoal (ID 913)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  ============================	  ap _^-1	    (ap	       (fun u : {f0 : A -> B & IsEquiv f0} =>	        {| equiv_fun := u.1; equiv_isequiv := u.2 |}) 1) = 1	";
+            data = "1 subgoal (ID 913)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  ============================	  ap (equiv_path A B)^-1	    (ap	       (fun u : {f0 : A -> B & IsEquiv f0} =>	        {| equiv_fun := u.1; equiv_isequiv := u.2 |}) 1) = 1	";
             responses[i]=data;
           
 
@@ -1483,37 +1483,37 @@
           
 
             i = 293;
-            data = "1 subgoal (ID 1040)	  	  H : Univalence	  H0 : Funext	  A : Type	  C : Type	  p : forall a : A, a = a	  g : A <~> C	  ============================	  equiv_path2_universe g g (fun a : A => ap g (p a)) =	  ((eta_path_universe (path_universe g))^ @	   equiv_path2_universe (equiv_path A C (path_universe g))	     (equiv_path A C (path_universe g))	     (fun a : A => ap (equiv_path A C (path_universe g)) (p a))) @	  eta_path_universe (path_universe g)	1 subgoal (ID 1076)	  	  H : Univalence	  H0 : Funext	  A : Type	  C : Type	  p : forall a : A, a = a	  g : A <~> C	  ============================	  transport (fun g' : A <~> C => path_universe g' = path_universe g')	    (eisretr _ g)	    (equiv_path2_universe (equiv_path A C (_^-1 g)) 	       (equiv_path A C (_^-1 g))	       (fun a : A => ap (equiv_path A C (_^-1 g)) (p a))) =	  ((eta_path_universe (path_universe g))^ @	   equiv_path2_universe (equiv_path A C (path_universe g))	     (equiv_path A C (path_universe g))	     (fun a : A => ap (equiv_path A C (path_universe g)) (p a))) @	  eta_path_universe (path_universe g)	";
+            data = "1 subgoal (ID 1040)	  	  H : Univalence	  H0 : Funext	  A : Type	  C : Type	  p : forall a : A, a = a	  g : A <~> C	  ============================	  equiv_path2_universe g g (fun a : A => ap g (p a)) =	  ((eta_path_universe (path_universe g))^ @	   equiv_path2_universe (equiv_path A C (path_universe g))	     (equiv_path A C (path_universe g))	     (fun a : A => ap (equiv_path A C (path_universe g)) (p a))) @	  eta_path_universe (path_universe g)	1 subgoal (ID 1076)	  	  H : Univalence	  H0 : Funext	  A : Type	  C : Type	  p : forall a : A, a = a	  g : A <~> C	  ============================	  transport (fun g' : A <~> C => path_universe g' = path_universe g')	    (eisretr (equiv_path A C) g)	    (equiv_path2_universe (equiv_path A C ((equiv_path A C)^-1 g))	       (equiv_path A C ((equiv_path A C)^-1 g))	       (fun a : A => ap (equiv_path A C ((equiv_path A C)^-1 g)) (p a))) =	  ((eta_path_universe (path_universe g))^ @	   equiv_path2_universe (equiv_path A C (path_universe g))	     (equiv_path A C (path_universe g))	     (fun a : A => ap (equiv_path A C (path_universe g)) (p a))) @	  eta_path_universe (path_universe g)	";
             responses[i]=data;
           
 
             i = 294;
-            data = "1 subgoal (ID 1095)	  	  H : Univalence	  H0 : Funext	  A : Type	  C : Type	  p : forall a : A, a = a	  g : A <~> C	  ============================	  ((ap path_universe_uncurried (eisretr _ g))^ @	   equiv_path2_universe (equiv_path A C (_^-1 g)) 	     (equiv_path A C (_^-1 g))	     (fun a : A => ap (equiv_path A C (_^-1 g)) (p a))) @	  ap path_universe_uncurried (eisretr _ g) =	  ((eta_path_universe (path_universe g))^ @	   equiv_path2_universe (equiv_path A C (path_universe g))	     (equiv_path A C (path_universe g))	     (fun a : A => ap (equiv_path A C (path_universe g)) (p a))) @	  eta_path_universe (path_universe g)	";
+            data = "1 subgoal (ID 1095)	  	  H : Univalence	  H0 : Funext	  A : Type	  C : Type	  p : forall a : A, a = a	  g : A <~> C	  ============================	  ((ap path_universe_uncurried (eisretr (equiv_path A C) g))^ @	   equiv_path2_universe (equiv_path A C ((equiv_path A C)^-1 g))	     (equiv_path A C ((equiv_path A C)^-1 g))	     (fun a : A => ap (equiv_path A C ((equiv_path A C)^-1 g)) (p a))) @	  ap path_universe_uncurried (eisretr (equiv_path A C) g) =	  ((eta_path_universe (path_universe g))^ @	   equiv_path2_universe (equiv_path A C (path_universe g))	     (equiv_path A C (path_universe g))	     (fun a : A => ap (equiv_path A C (path_universe g)) (p a))) @	  eta_path_universe (path_universe g)	";
             responses[i]=data;
           
 
             i = 295;
-            data = "2 subgoals (ID 1104)	  	  H : Univalence	  H0 : Funext	  A : Type	  C : Type	  p : forall a : A, a = a	  g : A <~> C	  ============================	  (ap path_universe_uncurried (eisretr _ g))^ @	  equiv_path2_universe (equiv_path A C (_^-1 g)) (equiv_path A C (_^-1 g))	    (fun a : A => ap (equiv_path A C (_^-1 g)) (p a)) =	  (eta_path_universe (path_universe g))^ @	  equiv_path2_universe (equiv_path A C (path_universe g))	    (equiv_path A C (path_universe g))	    (fun a : A => ap (equiv_path A C (path_universe g)) (p a))		subgoal 2 (ID 1105) is:	 ap path_universe_uncurried (eisretr _ g) =	 eta_path_universe (path_universe g)	";
+            data = "2 subgoals (ID 1104)	  	  H : Univalence	  H0 : Funext	  A : Type	  C : Type	  p : forall a : A, a = a	  g : A <~> C	  ============================	  (ap path_universe_uncurried (eisretr (equiv_path A C) g))^ @	  equiv_path2_universe (equiv_path A C ((equiv_path A C)^-1 g))	    (equiv_path A C ((equiv_path A C)^-1 g))	    (fun a : A => ap (equiv_path A C ((equiv_path A C)^-1 g)) (p a)) =	  (eta_path_universe (path_universe g))^ @	  equiv_path2_universe (equiv_path A C (path_universe g))	    (equiv_path A C (path_universe g))	    (fun a : A => ap (equiv_path A C (path_universe g)) (p a))		subgoal 2 (ID 1105) is:	 ap path_universe_uncurried (eisretr (equiv_path A C) g) =	 eta_path_universe (path_universe g)	";
             responses[i]=data;
           
 
             i = 296;
-            data = "1 subgoal (ID 1104)	  	  H : Univalence	  H0 : Funext	  A : Type	  C : Type	  p : forall a : A, a = a	  g : A <~> C	  ============================	  (ap path_universe_uncurried (eisretr _ g))^ @	  equiv_path2_universe (equiv_path A C (_^-1 g)) (equiv_path A C (_^-1 g))	    (fun a : A => ap (equiv_path A C (_^-1 g)) (p a)) =	  (eta_path_universe (path_universe g))^ @	  equiv_path2_universe (equiv_path A C (path_universe g))	    (equiv_path A C (path_universe g))	    (fun a : A => ap (equiv_path A C (path_universe g)) (p a))	1 subgoal (ID 1112)	  	  H : Univalence	  H0 : Funext	  A : Type	  C : Type	  p : forall a : A, a = a	  g : A <~> C	  ============================	  (ap path_universe_uncurried (eisretr _ g))^ =	  (eta_path_universe (path_universe g))^	";
+            data = "1 subgoal (ID 1104)	  	  H : Univalence	  H0 : Funext	  A : Type	  C : Type	  p : forall a : A, a = a	  g : A <~> C	  ============================	  (ap path_universe_uncurried (eisretr (equiv_path A C) g))^ @	  equiv_path2_universe (equiv_path A C ((equiv_path A C)^-1 g))	    (equiv_path A C ((equiv_path A C)^-1 g))	    (fun a : A => ap (equiv_path A C ((equiv_path A C)^-1 g)) (p a)) =	  (eta_path_universe (path_universe g))^ @	  equiv_path2_universe (equiv_path A C (path_universe g))	    (equiv_path A C (path_universe g))	    (fun a : A => ap (equiv_path A C (path_universe g)) (p a))	1 subgoal (ID 1112)	  	  H : Univalence	  H0 : Funext	  A : Type	  C : Type	  p : forall a : A, a = a	  g : A <~> C	  ============================	  (ap path_universe_uncurried (eisretr (equiv_path A C) g))^ =	  (eta_path_universe (path_universe g))^	";
             responses[i]=data;
           
 
             i = 297;
-            data = "1 subgoal (ID 1124)	  	  H : Univalence	  H0 : Funext	  A : Type	  C : Type	  p : forall a : A, a = a	  g : A <~> C	  ============================	  eta_path_universe (path_universe g) =	  ap path_universe_uncurried (eisretr _ g)	";
+            data = "1 subgoal (ID 1124)	  	  H : Univalence	  H0 : Funext	  A : Type	  C : Type	  p : forall a : A, a = a	  g : A <~> C	  ============================	  eta_path_universe (path_universe g) =	  ap path_universe_uncurried (eisretr (equiv_path A C) g)	";
             responses[i]=data;
           
 
             i = 298;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 1105)		subgoal 1 (ID 1105) is:	 ap path_universe_uncurried (eisretr _ g) =	 eta_path_universe (path_universe g)	subgoal 2 (ID 1042) is:	 ((eta_path_universe (path_universe g))^ @	  equiv_path2_universe (equiv_path A C (path_universe g))	    (equiv_path A C (path_universe g))	    (fun a : A => ap (equiv_path A C (path_universe g)) (p a))) @	 eta_path_universe (path_universe g) =	 ((((concat_1p (path_universe g))^ @	    whiskerR path_universe_1^ (path_universe g)) @	   whiskerR (equiv_path2_universe 1 1 p) (path_universe g)) @	  whiskerR path_universe_1 (path_universe g)) @ concat_1p (path_universe g)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 1105)		subgoal 1 (ID 1105) is:	 ap path_universe_uncurried (eisretr (equiv_path A C) g) =	 eta_path_universe (path_universe g)	subgoal 2 (ID 1042) is:	 ((eta_path_universe (path_universe g))^ @	  equiv_path2_universe (equiv_path A C (path_universe g))	    (equiv_path A C (path_universe g))	    (fun a : A => ap (equiv_path A C (path_universe g)) (p a))) @	 eta_path_universe (path_universe g) =	 ((((concat_1p (path_universe g))^ @	    whiskerR path_universe_1^ (path_universe g)) @	   whiskerR (equiv_path2_universe 1 1 p) (path_universe g)) @	  whiskerR path_universe_1 (path_universe g)) @ concat_1p (path_universe g)	";
             responses[i]=data;
           
 
             i = 299;
-            data = "1 subgoal (ID 1105)	  	  H : Univalence	  H0 : Funext	  A : Type	  C : Type	  p : forall a : A, a = a	  g : A <~> C	  ============================	  ap path_universe_uncurried (eisretr _ g) =	  eta_path_universe (path_universe g)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1042)		subgoal 1 (ID 1042) is:	 ((eta_path_universe (path_universe g))^ @	  equiv_path2_universe (equiv_path A C (path_universe g))	    (equiv_path A C (path_universe g))	    (fun a : A => ap (equiv_path A C (path_universe g)) (p a))) @	 eta_path_universe (path_universe g) =	 ((((concat_1p (path_universe g))^ @	    whiskerR path_universe_1^ (path_universe g)) @	   whiskerR (equiv_path2_universe 1 1 p) (path_universe g)) @	  whiskerR path_universe_1 (path_universe g)) @ concat_1p (path_universe g)	";
+            data = "1 subgoal (ID 1105)	  	  H : Univalence	  H0 : Funext	  A : Type	  C : Type	  p : forall a : A, a = a	  g : A <~> C	  ============================	  ap path_universe_uncurried (eisretr (equiv_path A C) g) =	  eta_path_universe (path_universe g)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1042)		subgoal 1 (ID 1042) is:	 ((eta_path_universe (path_universe g))^ @	  equiv_path2_universe (equiv_path A C (path_universe g))	    (equiv_path A C (path_universe g))	    (fun a : A => ap (equiv_path A C (path_universe g)) (p a))) @	 eta_path_universe (path_universe g) =	 ((((concat_1p (path_universe g))^ @	    whiskerR path_universe_1^ (path_universe g)) @	   whiskerR (equiv_path2_universe 1 1 p) (path_universe g)) @	  whiskerR path_universe_1 (path_universe g)) @ concat_1p (path_universe g)	";
             responses[i]=data;
           
 
@@ -1533,27 +1533,27 @@
           
 
             i = 303;
-            data = "1 subgoal (ID 1177)	  	  H : Univalence	  H0 : Funext	  A : Type	  p : forall a : A, a = a	  g : A <~> A	  ============================	  ((eta_path_universe 1)^ @	   ap _^-1	     (equiv_path_equiv (equiv_path A A 1) (equiv_path A A 1)	        (path_forall (transport idmap 1) (transport idmap 1)	           (fun a : A => ap (transport idmap 1) (p a))))) @	  eta_path_universe 1 =	  (((1 @ whiskerR path_universe_1^ 1) @	    whiskerR (ap _^-1 (equiv_path_equiv 1 1 (path_forall idmap idmap p))) 1) @	   whiskerR path_universe_1 1) @ 1	";
+            data = "1 subgoal (ID 1177)	  	  H : Univalence	  H0 : Funext	  A : Type	  p : forall a : A, a = a	  g : A <~> A	  ============================	  ((eta_path_universe 1)^ @	   ap (equiv_path A A)^-1	     (equiv_path_equiv (equiv_path A A 1) (equiv_path A A 1)	        (path_forall (transport idmap 1) (transport idmap 1)	           (fun a : A => ap (transport idmap 1) (p a))))) @	  eta_path_universe 1 =	  (((1 @ whiskerR path_universe_1^ 1) @	    whiskerR	      (ap (equiv_path A A)^-1	         (equiv_path_equiv 1 1 (path_forall idmap idmap p))) 1) @	   whiskerR path_universe_1 1) @ 1	";
             responses[i]=data;
           
 
             i = 304;
-            data = "1 subgoal (ID 1191)	  	  H : Univalence	  H0 : Funext	  A : Type	  p : forall a : A, a = a	  g : A <~> A	  ============================	  ((eta_path_universe 1)^ @	   ap _^-1	     (equiv_path_equiv (equiv_path A A 1) (equiv_path A A 1)	        (path_forall (transport idmap 1) (transport idmap 1)	           (fun a : A => ap (transport idmap 1) (p a))))) @	  eta_path_universe 1 =	  (whiskerR path_universe_1^ 1 @	   whiskerR (ap _^-1 (equiv_path_equiv 1 1 (path_forall idmap idmap p))) 1) @	  whiskerR path_universe_1 1	";
+            data = "1 subgoal (ID 1191)	  	  H : Univalence	  H0 : Funext	  A : Type	  p : forall a : A, a = a	  g : A <~> A	  ============================	  ((eta_path_universe 1)^ @	   ap (equiv_path A A)^-1	     (equiv_path_equiv (equiv_path A A 1) (equiv_path A A 1)	        (path_forall (transport idmap 1) (transport idmap 1)	           (fun a : A => ap (transport idmap 1) (p a))))) @	  eta_path_universe 1 =	  (whiskerR path_universe_1^ 1 @	   whiskerR	     (ap (equiv_path A A)^-1	        (equiv_path_equiv 1 1 (path_forall idmap idmap p))) 1) @	  whiskerR path_universe_1 1	";
             responses[i]=data;
           
 
             i = 305;
-            data = "1 subgoal (ID 1230)	  	  H : Univalence	  H0 : Funext	  A : Type	  p : forall a : A, a = a	  g : A <~> A	  ============================	  ((eta_path_universe 1)^ @	   ap _^-1	     (equiv_path_equiv (equiv_path A A 1) (equiv_path A A 1)	        (path_forall (transport idmap 1) (transport idmap 1)	           (fun a : A => ap (transport idmap 1) (p a))))) @	  eta_path_universe 1 =	  whiskerR	    (path_universe_1^ @	     ap _^-1 (equiv_path_equiv 1 1 (path_forall idmap idmap p))) 1 @	  whiskerR path_universe_1 1	";
+            data = "1 subgoal (ID 1230)	  	  H : Univalence	  H0 : Funext	  A : Type	  p : forall a : A, a = a	  g : A <~> A	  ============================	  ((eta_path_universe 1)^ @	   ap (equiv_path A A)^-1	     (equiv_path_equiv (equiv_path A A 1) (equiv_path A A 1)	        (path_forall (transport idmap 1) (transport idmap 1)	           (fun a : A => ap (transport idmap 1) (p a))))) @	  eta_path_universe 1 =	  whiskerR	    (path_universe_1^ @	     ap (equiv_path A A)^-1	       (equiv_path_equiv 1 1 (path_forall idmap idmap p))) 1 @	  whiskerR path_universe_1 1	";
             responses[i]=data;
           
 
             i = 306;
-            data = "1 subgoal (ID 1250)	  	  H : Univalence	  H0 : Funext	  A : Type	  p : forall a : A, a = a	  g : A <~> A	  ============================	  ((eta_path_universe 1)^ @	   ap _^-1	     (equiv_path_equiv (equiv_path A A 1) (equiv_path A A 1)	        (path_forall (transport idmap 1) (transport idmap 1)	           (fun a : A => ap (transport idmap 1) (p a))))) @	  eta_path_universe 1 =	  whiskerR	    ((path_universe_1^ @	      ap _^-1 (equiv_path_equiv 1 1 (path_forall idmap idmap p))) @	     path_universe_1) 1	";
+            data = "1 subgoal (ID 1250)	  	  H : Univalence	  H0 : Funext	  A : Type	  p : forall a : A, a = a	  g : A <~> A	  ============================	  ((eta_path_universe 1)^ @	   ap (equiv_path A A)^-1	     (equiv_path_equiv (equiv_path A A 1) (equiv_path A A 1)	        (path_forall (transport idmap 1) (transport idmap 1)	           (fun a : A => ap (transport idmap 1) (p a))))) @	  eta_path_universe 1 =	  whiskerR	    ((path_universe_1^ @	      ap (equiv_path A A)^-1	        (equiv_path_equiv 1 1 (path_forall idmap idmap p))) @ path_universe_1)	    1	";
             responses[i]=data;
           
 
             i = 307;
-            data = "1 subgoal (ID 1265)	  	  H : Univalence	  H0 : Funext	  A : Type	  p : forall a : A, a = a	  g : A <~> A	  ============================	  ((eta_path_universe 1)^ @	   ap _^-1	     (equiv_path_equiv (equiv_path A A 1) (equiv_path A A 1)	        (path_forall (transport idmap 1) (transport idmap 1)	           (fun a : A => ap (transport idmap 1) (p a))))) @	  eta_path_universe 1 =	  (path_universe_1^ @	   ap _^-1 (equiv_path_equiv 1 1 (path_forall idmap idmap p))) @	  path_universe_1	";
+            data = "1 subgoal (ID 1265)	  	  H : Univalence	  H0 : Funext	  A : Type	  p : forall a : A, a = a	  g : A <~> A	  ============================	  ((eta_path_universe 1)^ @	   ap (equiv_path A A)^-1	     (equiv_path_equiv (equiv_path A A 1) (equiv_path A A 1)	        (path_forall (transport idmap 1) (transport idmap 1)	           (fun a : A => ap (transport idmap 1) (p a))))) @	  eta_path_universe 1 =	  (path_universe_1^ @	   ap (equiv_path A A)^-1 (equiv_path_equiv 1 1 (path_forall idmap idmap p))) @	  path_universe_1	";
             responses[i]=data;
           
 
@@ -1588,37 +1588,37 @@
           
 
             i = 314;
-            data = "1 subgoal (ID 1114)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  p : forall b : B, b = b	  g : A <~> B	  ============================	  equiv_path2_universe g g (fun a : A => p (g a)) =	  ((eta_path_universe (path_universe g))^ @	   equiv_path2_universe (equiv_path A B (path_universe g))	     (equiv_path A B (path_universe g))	     (fun a : A => p (equiv_path A B (path_universe g) a))) @	  eta_path_universe (path_universe g)	1 subgoal (ID 1144)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  p : forall b : B, b = b	  g : A <~> B	  ============================	  transport (fun g' : A <~> B => path_universe g' = path_universe g')	    (eisretr _ g)	    (equiv_path2_universe (equiv_path A B (_^-1 g)) 	       (equiv_path A B (_^-1 g)) (fun a : A => p (equiv_path A B (_^-1 g) a))) =	  ((eta_path_universe (path_universe g))^ @	   equiv_path2_universe (equiv_path A B (path_universe g))	     (equiv_path A B (path_universe g))	     (fun a : A => p (equiv_path A B (path_universe g) a))) @	  eta_path_universe (path_universe g)	";
+            data = "1 subgoal (ID 1114)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  p : forall b : B, b = b	  g : A <~> B	  ============================	  equiv_path2_universe g g (fun a : A => p (g a)) =	  ((eta_path_universe (path_universe g))^ @	   equiv_path2_universe (equiv_path A B (path_universe g))	     (equiv_path A B (path_universe g))	     (fun a : A => p (equiv_path A B (path_universe g) a))) @	  eta_path_universe (path_universe g)	1 subgoal (ID 1144)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  p : forall b : B, b = b	  g : A <~> B	  ============================	  transport (fun g' : A <~> B => path_universe g' = path_universe g')	    (eisretr (equiv_path A B) g)	    (equiv_path2_universe (equiv_path A B ((equiv_path A B)^-1 g))	       (equiv_path A B ((equiv_path A B)^-1 g))	       (fun a : A => p (equiv_path A B ((equiv_path A B)^-1 g) a))) =	  ((eta_path_universe (path_universe g))^ @	   equiv_path2_universe (equiv_path A B (path_universe g))	     (equiv_path A B (path_universe g))	     (fun a : A => p (equiv_path A B (path_universe g) a))) @	  eta_path_universe (path_universe g)	";
             responses[i]=data;
           
 
             i = 315;
-            data = "1 subgoal (ID 1163)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  p : forall b : B, b = b	  g : A <~> B	  ============================	  ((ap path_universe_uncurried (eisretr _ g))^ @	   equiv_path2_universe (equiv_path A B (_^-1 g)) 	     (equiv_path A B (_^-1 g)) (fun a : A => p (equiv_path A B (_^-1 g) a))) @	  ap path_universe_uncurried (eisretr _ g) =	  ((eta_path_universe (path_universe g))^ @	   equiv_path2_universe (equiv_path A B (path_universe g))	     (equiv_path A B (path_universe g))	     (fun a : A => p (equiv_path A B (path_universe g) a))) @	  eta_path_universe (path_universe g)	";
+            data = "1 subgoal (ID 1163)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  p : forall b : B, b = b	  g : A <~> B	  ============================	  ((ap path_universe_uncurried (eisretr (equiv_path A B) g))^ @	   equiv_path2_universe (equiv_path A B ((equiv_path A B)^-1 g))	     (equiv_path A B ((equiv_path A B)^-1 g))	     (fun a : A => p (equiv_path A B ((equiv_path A B)^-1 g) a))) @	  ap path_universe_uncurried (eisretr (equiv_path A B) g) =	  ((eta_path_universe (path_universe g))^ @	   equiv_path2_universe (equiv_path A B (path_universe g))	     (equiv_path A B (path_universe g))	     (fun a : A => p (equiv_path A B (path_universe g) a))) @	  eta_path_universe (path_universe g)	";
             responses[i]=data;
           
 
             i = 316;
-            data = "2 subgoals (ID 1172)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  p : forall b : B, b = b	  g : A <~> B	  ============================	  (ap path_universe_uncurried (eisretr _ g))^ @	  equiv_path2_universe (equiv_path A B (_^-1 g)) (equiv_path A B (_^-1 g))	    (fun a : A => p (equiv_path A B (_^-1 g) a)) =	  (eta_path_universe (path_universe g))^ @	  equiv_path2_universe (equiv_path A B (path_universe g))	    (equiv_path A B (path_universe g))	    (fun a : A => p (equiv_path A B (path_universe g) a))		subgoal 2 (ID 1173) is:	 ap path_universe_uncurried (eisretr _ g) =	 eta_path_universe (path_universe g)	";
+            data = "2 subgoals (ID 1172)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  p : forall b : B, b = b	  g : A <~> B	  ============================	  (ap path_universe_uncurried (eisretr (equiv_path A B) g))^ @	  equiv_path2_universe (equiv_path A B ((equiv_path A B)^-1 g))	    (equiv_path A B ((equiv_path A B)^-1 g))	    (fun a : A => p (equiv_path A B ((equiv_path A B)^-1 g) a)) =	  (eta_path_universe (path_universe g))^ @	  equiv_path2_universe (equiv_path A B (path_universe g))	    (equiv_path A B (path_universe g))	    (fun a : A => p (equiv_path A B (path_universe g) a))		subgoal 2 (ID 1173) is:	 ap path_universe_uncurried (eisretr (equiv_path A B) g) =	 eta_path_universe (path_universe g)	";
             responses[i]=data;
           
 
             i = 317;
-            data = "1 subgoal (ID 1172)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  p : forall b : B, b = b	  g : A <~> B	  ============================	  (ap path_universe_uncurried (eisretr _ g))^ @	  equiv_path2_universe (equiv_path A B (_^-1 g)) (equiv_path A B (_^-1 g))	    (fun a : A => p (equiv_path A B (_^-1 g) a)) =	  (eta_path_universe (path_universe g))^ @	  equiv_path2_universe (equiv_path A B (path_universe g))	    (equiv_path A B (path_universe g))	    (fun a : A => p (equiv_path A B (path_universe g) a))	1 subgoal (ID 1180)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  p : forall b : B, b = b	  g : A <~> B	  ============================	  (ap path_universe_uncurried (eisretr _ g))^ =	  (eta_path_universe (path_universe g))^	";
+            data = "1 subgoal (ID 1172)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  p : forall b : B, b = b	  g : A <~> B	  ============================	  (ap path_universe_uncurried (eisretr (equiv_path A B) g))^ @	  equiv_path2_universe (equiv_path A B ((equiv_path A B)^-1 g))	    (equiv_path A B ((equiv_path A B)^-1 g))	    (fun a : A => p (equiv_path A B ((equiv_path A B)^-1 g) a)) =	  (eta_path_universe (path_universe g))^ @	  equiv_path2_universe (equiv_path A B (path_universe g))	    (equiv_path A B (path_universe g))	    (fun a : A => p (equiv_path A B (path_universe g) a))	1 subgoal (ID 1180)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  p : forall b : B, b = b	  g : A <~> B	  ============================	  (ap path_universe_uncurried (eisretr (equiv_path A B) g))^ =	  (eta_path_universe (path_universe g))^	";
             responses[i]=data;
           
 
             i = 318;
-            data = "1 subgoal (ID 1192)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  p : forall b : B, b = b	  g : A <~> B	  ============================	  eta_path_universe (path_universe g) =	  ap path_universe_uncurried (eisretr _ g)	";
+            data = "1 subgoal (ID 1192)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  p : forall b : B, b = b	  g : A <~> B	  ============================	  eta_path_universe (path_universe g) =	  ap path_universe_uncurried (eisretr (equiv_path A B) g)	";
             responses[i]=data;
           
 
             i = 319;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 1173)		subgoal 1 (ID 1173) is:	 ap path_universe_uncurried (eisretr _ g) =	 eta_path_universe (path_universe g)	subgoal 2 (ID 1116) is:	 ((eta_path_universe (path_universe g))^ @	  equiv_path2_universe (equiv_path A B (path_universe g))	    (equiv_path A B (path_universe g))	    (fun a : A => p (equiv_path A B (path_universe g) a))) @	 eta_path_universe (path_universe g) =	 ((((concat_p1 (path_universe g))^ @	    whiskerL (path_universe g) path_universe_1^) @	   whiskerL (path_universe g) (equiv_path2_universe 1 1 p)) @	  whiskerL (path_universe g) path_universe_1) @ concat_p1 (path_universe g)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 1173)		subgoal 1 (ID 1173) is:	 ap path_universe_uncurried (eisretr (equiv_path A B) g) =	 eta_path_universe (path_universe g)	subgoal 2 (ID 1116) is:	 ((eta_path_universe (path_universe g))^ @	  equiv_path2_universe (equiv_path A B (path_universe g))	    (equiv_path A B (path_universe g))	    (fun a : A => p (equiv_path A B (path_universe g) a))) @	 eta_path_universe (path_universe g) =	 ((((concat_p1 (path_universe g))^ @	    whiskerL (path_universe g) path_universe_1^) @	   whiskerL (path_universe g) (equiv_path2_universe 1 1 p)) @	  whiskerL (path_universe g) path_universe_1) @ concat_p1 (path_universe g)	";
             responses[i]=data;
           
 
             i = 320;
-            data = "1 subgoal (ID 1173)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  p : forall b : B, b = b	  g : A <~> B	  ============================	  ap path_universe_uncurried (eisretr _ g) =	  eta_path_universe (path_universe g)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1116)		subgoal 1 (ID 1116) is:	 ((eta_path_universe (path_universe g))^ @	  equiv_path2_universe (equiv_path A B (path_universe g))	    (equiv_path A B (path_universe g))	    (fun a : A => p (equiv_path A B (path_universe g) a))) @	 eta_path_universe (path_universe g) =	 ((((concat_p1 (path_universe g))^ @	    whiskerL (path_universe g) path_universe_1^) @	   whiskerL (path_universe g) (equiv_path2_universe 1 1 p)) @	  whiskerL (path_universe g) path_universe_1) @ concat_p1 (path_universe g)	";
+            data = "1 subgoal (ID 1173)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  p : forall b : B, b = b	  g : A <~> B	  ============================	  ap path_universe_uncurried (eisretr (equiv_path A B) g) =	  eta_path_universe (path_universe g)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1116)		subgoal 1 (ID 1116) is:	 ((eta_path_universe (path_universe g))^ @	  equiv_path2_universe (equiv_path A B (path_universe g))	    (equiv_path A B (path_universe g))	    (fun a : A => p (equiv_path A B (path_universe g) a))) @	 eta_path_universe (path_universe g) =	 ((((concat_p1 (path_universe g))^ @	    whiskerL (path_universe g) path_universe_1^) @	   whiskerL (path_universe g) (equiv_path2_universe 1 1 p)) @	  whiskerL (path_universe g) path_universe_1) @ concat_p1 (path_universe g)	";
             responses[i]=data;
           
 
@@ -1638,27 +1638,27 @@
           
 
             i = 324;
-            data = "1 subgoal (ID 1248)	  	  H : Univalence	  H0 : Funext	  A : Type	  p : forall b : A, b = b	  g : A <~> A	  ============================	  ((eta_path_universe 1)^ @	   ap _^-1	     (equiv_path_equiv (equiv_path A A 1) (equiv_path A A 1)	        (path_forall (transport idmap 1) (transport idmap 1)	           (fun a : A => p a)))) @ eta_path_universe 1 =	  (((1 @ whiskerL 1 path_universe_1^) @	    whiskerL 1 (ap _^-1 (equiv_path_equiv 1 1 (path_forall idmap idmap p)))) @	   whiskerL 1 path_universe_1) @ 1	";
+            data = "1 subgoal (ID 1248)	  	  H : Univalence	  H0 : Funext	  A : Type	  p : forall b : A, b = b	  g : A <~> A	  ============================	  ((eta_path_universe 1)^ @	   ap (equiv_path A A)^-1	     (equiv_path_equiv (equiv_path A A 1) (equiv_path A A 1)	        (path_forall (transport idmap 1) (transport idmap 1)	           (fun a : A => p a)))) @ eta_path_universe 1 =	  (((1 @ whiskerL 1 path_universe_1^) @	    whiskerL 1	      (ap (equiv_path A A)^-1	         (equiv_path_equiv 1 1 (path_forall idmap idmap p)))) @	   whiskerL 1 path_universe_1) @ 1	";
             responses[i]=data;
           
 
             i = 325;
-            data = "1 subgoal (ID 1252)	  	  H : Univalence	  H0 : Funext	  A : Type	  p : forall b : A, b = b	  g : A <~> A	  ============================	  ((eta_path_universe 1)^ @	   ap _^-1	     (equiv_path_equiv (equiv_path A A 1) (equiv_path A A 1)	        (path_forall (transport idmap 1) (transport idmap 1)	           (fun a : A => p a)))) @ eta_path_universe 1 =	  ((1 @ whiskerL 1 path_universe_1^) @	   whiskerL 1 (ap _^-1 (equiv_path_equiv 1 1 (path_forall idmap idmap p)))) @	  whiskerL 1 path_universe_1	";
+            data = "1 subgoal (ID 1252)	  	  H : Univalence	  H0 : Funext	  A : Type	  p : forall b : A, b = b	  g : A <~> A	  ============================	  ((eta_path_universe 1)^ @	   ap (equiv_path A A)^-1	     (equiv_path_equiv (equiv_path A A 1) (equiv_path A A 1)	        (path_forall (transport idmap 1) (transport idmap 1)	           (fun a : A => p a)))) @ eta_path_universe 1 =	  ((1 @ whiskerL 1 path_universe_1^) @	   whiskerL 1	     (ap (equiv_path A A)^-1	        (equiv_path_equiv 1 1 (path_forall idmap idmap p)))) @	  whiskerL 1 path_universe_1	";
             responses[i]=data;
           
 
             i = 326;
-            data = "1 subgoal (ID 1304)	  	  H : Univalence	  H0 : Funext	  A : Type	  p : forall b : A, b = b	  g : A <~> A	  ============================	  ((eta_path_universe 1)^ @	   ap _^-1	     (equiv_path_equiv (equiv_path A A 1) (equiv_path A A 1)	        (path_forall (transport idmap 1) (transport idmap 1)	           (fun a : A => p a)))) @ eta_path_universe 1 =	  (whiskerL 1 path_universe_1^ @	   whiskerL 1 (ap _^-1 (equiv_path_equiv 1 1 (path_forall idmap idmap p)))) @	  whiskerL 1 path_universe_1	";
+            data = "1 subgoal (ID 1304)	  	  H : Univalence	  H0 : Funext	  A : Type	  p : forall b : A, b = b	  g : A <~> A	  ============================	  ((eta_path_universe 1)^ @	   ap (equiv_path A A)^-1	     (equiv_path_equiv (equiv_path A A 1) (equiv_path A A 1)	        (path_forall (transport idmap 1) (transport idmap 1)	           (fun a : A => p a)))) @ eta_path_universe 1 =	  (whiskerL 1 path_universe_1^ @	   whiskerL 1	     (ap (equiv_path A A)^-1	        (equiv_path_equiv 1 1 (path_forall idmap idmap p)))) @	  whiskerL 1 path_universe_1	";
             responses[i]=data;
           
 
             i = 327;
-            data = "1 subgoal (ID 1335)	  	  H : Univalence	  H0 : Funext	  A : Type	  p : forall b : A, b = b	  g : A <~> A	  ============================	  ((eta_path_universe 1)^ @	   ap _^-1	     (equiv_path_equiv (equiv_path A A 1) (equiv_path A A 1)	        (path_forall (transport idmap 1) (transport idmap 1)	           (fun a : A => p a)))) @ eta_path_universe 1 =	  whiskerL 1	    (path_universe_1^ @	     ap _^-1 (equiv_path_equiv 1 1 (path_forall idmap idmap p))) @	  whiskerL 1 path_universe_1	";
+            data = "1 subgoal (ID 1335)	  	  H : Univalence	  H0 : Funext	  A : Type	  p : forall b : A, b = b	  g : A <~> A	  ============================	  ((eta_path_universe 1)^ @	   ap (equiv_path A A)^-1	     (equiv_path_equiv (equiv_path A A 1) (equiv_path A A 1)	        (path_forall (transport idmap 1) (transport idmap 1)	           (fun a : A => p a)))) @ eta_path_universe 1 =	  whiskerL 1	    (path_universe_1^ @	     ap (equiv_path A A)^-1	       (equiv_path_equiv 1 1 (path_forall idmap idmap p))) @	  whiskerL 1 path_universe_1	";
             responses[i]=data;
           
 
             i = 328;
-            data = "1 subgoal (ID 1355)	  	  H : Univalence	  H0 : Funext	  A : Type	  p : forall b : A, b = b	  g : A <~> A	  ============================	  ((eta_path_universe 1)^ @	   ap _^-1	     (equiv_path_equiv (equiv_path A A 1) (equiv_path A A 1)	        (path_forall (transport idmap 1) (transport idmap 1)	           (fun a : A => p a)))) @ eta_path_universe 1 =	  whiskerL 1	    ((path_universe_1^ @	      ap _^-1 (equiv_path_equiv 1 1 (path_forall idmap idmap p))) @	     path_universe_1)	";
+            data = "1 subgoal (ID 1355)	  	  H : Univalence	  H0 : Funext	  A : Type	  p : forall b : A, b = b	  g : A <~> A	  ============================	  ((eta_path_universe 1)^ @	   ap (equiv_path A A)^-1	     (equiv_path_equiv (equiv_path A A 1) (equiv_path A A 1)	        (path_forall (transport idmap 1) (transport idmap 1)	           (fun a : A => p a)))) @ eta_path_universe 1 =	  whiskerL 1	    ((path_universe_1^ @	      ap (equiv_path A A)^-1	        (equiv_path_equiv 1 1 (path_forall idmap idmap p))) @ path_universe_1)	";
             responses[i]=data;
           
 
@@ -1738,12 +1738,12 @@
           
 
             i = 344;
-            data = "1 subgoal (ID 970)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f, g : A <~> B	  p, q : f == g	  ============================	  equiv_path_equiv f g (equiv_path_arrow f g p) =	  equiv_path_equiv f g (equiv_path_arrow f g q) <~>	  (equiv_ap _^-1 f g oE equiv_path_equiv f g oE equiv_path_arrow f g) p =	  (equiv_ap _^-1 f g oE equiv_path_equiv f g oE equiv_path_arrow f g) q	";
+            data = "1 subgoal (ID 970)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f, g : A <~> B	  p, q : f == g	  ============================	  equiv_path_equiv f g (equiv_path_arrow f g p) =	  equiv_path_equiv f g (equiv_path_arrow f g q) <~>	  (equiv_ap (equiv_path A B)^-1 f g oE equiv_path_equiv f g	   oE equiv_path_arrow f g) p =	  (equiv_ap (equiv_path A B)^-1 f g oE equiv_path_equiv f g	   oE equiv_path_arrow f g) q	";
             responses[i]=data;
           
 
             i = 345;
-            data = "1 subgoal (ID 972)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f, g : A <~> B	  p, q : f == g	  ============================	  (1 @	   ap	     (fun u : {f0 : A -> B & IsEquiv f0} =>	      {| equiv_fun := u.1; equiv_isequiv := u.2 |})	     (path_sigma_hprop (f; equiv_isequiv f) (g; equiv_isequiv g)	        (path_forall f g p))) @ 1 =	  (1 @	   ap	     (fun u : {f0 : A -> B & IsEquiv f0} =>	      {| equiv_fun := u.1; equiv_isequiv := u.2 |})	     (path_sigma_hprop (f; equiv_isequiv f) (g; equiv_isequiv g)	        (path_forall f g q))) @ 1 <~>	  ap _^-1	    ((1 @	      ap	        (fun u : {f0 : A -> B & IsEquiv f0} =>	         {| equiv_fun := u.1; equiv_isequiv := u.2 |})	        (path_sigma_hprop (f; equiv_isequiv f) (g; equiv_isequiv g)	           (path_forall f g p))) @ 1) =	  ap _^-1	    ((1 @	      ap	        (fun u : {f0 : A -> B & IsEquiv f0} =>	         {| equiv_fun := u.1; equiv_isequiv := u.2 |})	        (path_sigma_hprop (f; equiv_isequiv f) (g; equiv_isequiv g)	           (path_forall f g q))) @ 1)	";
+            data = "1 subgoal (ID 972)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f, g : A <~> B	  p, q : f == g	  ============================	  (1 @	   ap	     (fun u : {f0 : A -> B & IsEquiv f0} =>	      {| equiv_fun := u.1; equiv_isequiv := u.2 |})	     (path_sigma_hprop (f; equiv_isequiv f) (g; equiv_isequiv g)	        (path_forall f g p))) @ 1 =	  (1 @	   ap	     (fun u : {f0 : A -> B & IsEquiv f0} =>	      {| equiv_fun := u.1; equiv_isequiv := u.2 |})	     (path_sigma_hprop (f; equiv_isequiv f) (g; equiv_isequiv g)	        (path_forall f g q))) @ 1 <~>	  ap (equiv_path A B)^-1	    ((1 @	      ap	        (fun u : {f0 : A -> B & IsEquiv f0} =>	         {| equiv_fun := u.1; equiv_isequiv := u.2 |})	        (path_sigma_hprop (f; equiv_isequiv f) (g; equiv_isequiv g)	           (path_forall f g p))) @ 1) =	  ap (equiv_path A B)^-1	    ((1 @	      ap	        (fun u : {f0 : A -> B & IsEquiv f0} =>	         {| equiv_fun := u.1; equiv_isequiv := u.2 |})	        (path_sigma_hprop (f; equiv_isequiv f) (g; equiv_isequiv g)	           (path_forall f g q))) @ 1)	";
             responses[i]=data;
           
 
@@ -1763,7 +1763,7 @@
           
 
             i = 349;
-            data = "1 subgoal (ID 1000)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  ============================	  (transport_path_universe f (transport idmap (path_universe f)^ z) @	   ap f (transport_path_universe_V f z)) @ eisretr _ z =	  transport_pV idmap (path_universe f) z	";
+            data = "1 subgoal (ID 1000)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  ============================	  (transport_path_universe f (transport idmap (path_universe f)^ z) @	   ap f (transport_path_universe_V f z)) @ eisretr f z =	  transport_pV idmap (path_universe f) z	";
             responses[i]=data;
           
 
@@ -1773,57 +1773,57 @@
           
 
             i = 351;
-            data = "1 subgoal (ID 1002)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  ============================	  (fun e : A <~> B =>	   (transport_path_universe e (transport idmap (path_universe e)^ z) @	    ap e (transport_path_universe_V e z)) @ eisretr _ z =	   transport_pV idmap (path_universe e) z) f	";
+            data = "1 subgoal (ID 1002)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  ============================	  (fun e : A <~> B =>	   (transport_path_universe e (transport idmap (path_universe e)^ z) @	    ap e (transport_path_universe_V e z)) @ eisretr e z =	   transport_pV idmap (path_universe e) z) f	";
             responses[i]=data;
           
 
             i = 352;
-            data = "1 subgoal (ID 1016)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  p : A = B	  ============================	  (transport_path_universe (equiv_path A B p)	     (transport idmap (path_universe (equiv_path A B p))^ z) @	   ap (equiv_path A B p) (transport_path_universe_V (equiv_path A B p) z)) @	  eisretr _ z = transport_pV idmap (path_universe (equiv_path A B p)) z	";
+            data = "1 subgoal (ID 1016)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  p : A = B	  ============================	  (transport_path_universe (equiv_path A B p)	     (transport idmap (path_universe (equiv_path A B p))^ z) @	   ap (equiv_path A B p) (transport_path_universe_V (equiv_path A B p) z)) @	  eisretr (equiv_path A B p) z =	  transport_pV idmap (path_universe (equiv_path A B p)) z	";
             responses[i]=data;
           
 
             i = 353;
-            data = "1 subgoal (ID 1032)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  p : A = B	  ============================	  (transport_path_universe (equiv_path A B p)	     (transport idmap (path_universe (equiv_path A B p))^ z) @	   ap (equiv_path A B p) (transport_path_universe_V (equiv_path A B p) z)) @	  eisretr _ z =	  (ap (transport idmap (path_universe (equiv_path A B p)))	     (ap (fun s : A = B => transport idmap s^ z) (eissect _ p)) @	   ap (fun s : A = B => transport idmap s (transport idmap p^ z))	     (eissect _ p)) @ transport_pV idmap p z	";
+            data = "1 subgoal (ID 1032)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  p : A = B	  ============================	  (transport_path_universe (equiv_path A B p)	     (transport idmap (path_universe (equiv_path A B p))^ z) @	   ap (equiv_path A B p) (transport_path_universe_V (equiv_path A B p) z)) @	  eisretr (equiv_path A B p) z =	  (ap (transport idmap (path_universe (equiv_path A B p)))	     (ap (fun s : A = B => transport idmap s^ z) (eissect (equiv_path A B) p)) @	   ap (fun s : A = B => transport idmap s (transport idmap p^ z))	     (eissect (equiv_path A B) p)) @ transport_pV idmap p z	";
             responses[i]=data;
           
 
             i = 354;
-            data = "1 subgoal (ID 1039)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  p : A = B	  ============================	  transport_path_universe (equiv_path A B p)	    (transport idmap (path_universe (equiv_path A B p))^ z) @	  ap (equiv_path A B p) (transport_path_universe_V (equiv_path A B p) z) =	  ap (transport idmap (path_universe (equiv_path A B p)))	    (ap (fun s : A = B => transport idmap s^ z) (eissect _ p)) @	  ap (fun s : A = B => transport idmap s (transport idmap p^ z))	    (eissect _ p)	";
+            data = "1 subgoal (ID 1039)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  p : A = B	  ============================	  transport_path_universe (equiv_path A B p)	    (transport idmap (path_universe (equiv_path A B p))^ z) @	  ap (equiv_path A B p) (transport_path_universe_V (equiv_path A B p) z) =	  ap (transport idmap (path_universe (equiv_path A B p)))	    (ap (fun s : A = B => transport idmap s^ z) (eissect (equiv_path A B) p)) @	  ap (fun s : A = B => transport idmap s (transport idmap p^ z))	    (eissect (equiv_path A B) p)	";
             responses[i]=data;
           
 
             i = 355;
-            data = "1 subgoal (ID 1060)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  p : A = B	  ============================	  ap (transport idmap (path_universe (equiv_path A B p)))	    (transport_path_universe_V (equiv_path A B p) z) @	  transport_path_universe (equiv_path A B p) (_^-1 z) =	  ap (transport idmap (path_universe (equiv_path A B p)))	    (ap (fun s : A = B => transport idmap s^ z) (eissect _ p)) @	  ap (fun s : A = B => transport idmap s (transport idmap p^ z))	    (eissect _ p)	";
+            data = "1 subgoal (ID 1060)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  p : A = B	  ============================	  ap (transport idmap (path_universe (equiv_path A B p)))	    (transport_path_universe_V (equiv_path A B p) z) @	  transport_path_universe (equiv_path A B p) ((equiv_path A B p)^-1 z) =	  ap (transport idmap (path_universe (equiv_path A B p)))	    (ap (fun s : A = B => transport idmap s^ z) (eissect (equiv_path A B) p)) @	  ap (fun s : A = B => transport idmap s (transport idmap p^ z))	    (eissect (equiv_path A B) p)	";
             responses[i]=data;
           
 
             i = 356;
-            data = "2 subgoals (ID 1069)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  p : A = B	  ============================	  ap (transport idmap (path_universe (equiv_path A B p)))	    (transport_path_universe_V (equiv_path A B p) z) =	  ap (transport idmap (path_universe (equiv_path A B p)))	    (ap (fun s : A = B => transport idmap s^ z) (eissect _ p))		subgoal 2 (ID 1070) is:	 transport_path_universe (equiv_path A B p) (_^-1 z) =	 ap (fun s : A = B => transport idmap s (transport idmap p^ z)) (eissect _ p)	";
+            data = "2 subgoals (ID 1069)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  p : A = B	  ============================	  ap (transport idmap (path_universe (equiv_path A B p)))	    (transport_path_universe_V (equiv_path A B p) z) =	  ap (transport idmap (path_universe (equiv_path A B p)))	    (ap (fun s : A = B => transport idmap s^ z) (eissect (equiv_path A B) p))		subgoal 2 (ID 1070) is:	 transport_path_universe (equiv_path A B p) ((equiv_path A B p)^-1 z) =	 ap (fun s : A = B => transport idmap s (transport idmap p^ z))	   (eissect (equiv_path A B) p)	";
             responses[i]=data;
           
 
             i = 357;
-            data = "1 subgoal (ID 1069)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  p : A = B	  ============================	  ap (transport idmap (path_universe (equiv_path A B p)))	    (transport_path_universe_V (equiv_path A B p) z) =	  ap (transport idmap (path_universe (equiv_path A B p)))	    (ap (fun s : A = B => transport idmap s^ z) (eissect _ p))	1 subgoal (ID 1073)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  p : A = B	  ============================	  transport_path_universe_V (equiv_path A B p) z =	  ap (fun s : A = B => transport idmap s^ z) (eissect _ p)	";
+            data = "1 subgoal (ID 1069)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  p : A = B	  ============================	  ap (transport idmap (path_universe (equiv_path A B p)))	    (transport_path_universe_V (equiv_path A B p) z) =	  ap (transport idmap (path_universe (equiv_path A B p)))	    (ap (fun s : A = B => transport idmap s^ z) (eissect (equiv_path A B) p))	1 subgoal (ID 1073)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  p : A = B	  ============================	  transport_path_universe_V (equiv_path A B p) z =	  ap (fun s : A = B => transport idmap s^ z) (eissect (equiv_path A B) p)	";
             responses[i]=data;
           
 
             i = 358;
-            data = "1 subgoal (ID 1088)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  p : A = B	  ============================	  ap (fun s : B = A => transport idmap s z) (inverse2 (eissect _ p)) =	  ap (fun s : A = B => transport idmap s^ z) (eissect _ p)	";
+            data = "1 subgoal (ID 1088)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  p : A = B	  ============================	  ap (fun s : B = A => transport idmap s z)	    (inverse2 (eissect (equiv_path A B) p)) =	  ap (fun s : A = B => transport idmap s^ z) (eissect (equiv_path A B) p)	";
             responses[i]=data;
           
 
             i = 359;
-            data = "1 subgoal (ID 1090)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  p : A = B	  ============================	  ap (fun s : B = A => transport idmap s z) (ap inverse (eissect _ p)) =	  ap (fun s : A = B => transport idmap s^ z) (eissect _ p)	";
+            data = "1 subgoal (ID 1090)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  p : A = B	  ============================	  ap (fun s : B = A => transport idmap s z)	    (ap inverse (eissect (equiv_path A B) p)) =	  ap (fun s : A = B => transport idmap s^ z) (eissect (equiv_path A B) p)	";
             responses[i]=data;
           
 
             i = 360;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1070)		subgoal 1 (ID 1070) is:	 transport_path_universe (equiv_path A B p) (_^-1 z) =	 ap (fun s : A = B => transport idmap s (transport idmap p^ z)) (eissect _ p)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1070)		subgoal 1 (ID 1070) is:	 transport_path_universe (equiv_path A B p) ((equiv_path A B p)^-1 z) =	 ap (fun s : A = B => transport idmap s (transport idmap p^ z))	   (eissect (equiv_path A B) p)	";
             responses[i]=data;
           
 
             i = 361;
-            data = "1 subgoal (ID 1070)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  p : A = B	  ============================	  transport_path_universe (equiv_path A B p) (_^-1 z) =	  ap (fun s : A = B => transport idmap s (transport idmap p^ z))	    (eissect _ p)	No more subgoals.	";
+            data = "1 subgoal (ID 1070)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  f : A <~> B	  z : B	  p : A = B	  ============================	  transport_path_universe (equiv_path A B p) ((equiv_path A B p)^-1 z) =	  ap (fun s : A = B => transport idmap s (transport idmap p^ z))	    (eissect (equiv_path A B) p)	No more subgoals.	";
             responses[i]=data;
           
 

@@ -223,37 +223,37 @@
           
 
             i = 41;
-            data = "1 subgoal (ID 28)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : IsEquiv f	  b : B	  ============================	  forall y : {a : A & f a = b}, (_^-1 b; eisretr _ b) = y	";
+            data = "1 subgoal (ID 28)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : IsEquiv f	  b : B	  ============================	  forall y : {a : A & f a = b}, (f^-1 b; eisretr f b) = y	";
             responses[i]=data;
           
 
             i = 42;
-            data = "1 subgoal (ID 33)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : IsEquiv f	  b : B	  a : A	  p : f a = b	  ============================	  (_^-1 b; eisretr _ b) = (a; p)	";
+            data = "1 subgoal (ID 33)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : IsEquiv f	  b : B	  a : A	  p : f a = b	  ============================	  (f^-1 b; eisretr f b) = (a; p)	";
             responses[i]=data;
           
 
             i = 43;
-            data = "1 subgoal (ID 64)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : IsEquiv f	  b : B	  a : A	  p : f a = b	  ============================	  transport (fun a0 : A => f a0 = b) ((ap _^-1 p)^ @ eissect _ a)	    (eisretr _ b) = p	";
+            data = "1 subgoal (ID 64)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : IsEquiv f	  b : B	  a : A	  p : f a = b	  ============================	  transport (fun a0 : A => f a0 = b) ((ap f^-1 p)^ @ eissect f a)	    (eisretr f b) = p	";
             responses[i]=data;
           
 
             i = 44;
-            data = "1 subgoal (ID 94)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : IsEquiv f	  b : B	  a : A	  p : f a = b	  ============================	  (ap f ((ap _^-1 p)^ @ eissect _ a))^ @ eisretr _ b = p	";
+            data = "1 subgoal (ID 94)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : IsEquiv f	  b : B	  a : A	  p : f a = b	  ============================	  (ap f ((ap f^-1 p)^ @ eissect f a))^ @ eisretr f b = p	";
             responses[i]=data;
           
 
             i = 45;
-            data = "1 subgoal (ID 130)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : IsEquiv f	  b : B	  a : A	  p : f a = b	  ============================	  (ap f (eissect _ a))^ @ (ap (fun x : B => f (_^-1 x)) p @ eisretr _ b) = p	";
+            data = "1 subgoal (ID 130)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : IsEquiv f	  b : B	  a : A	  p : f a = b	  ============================	  (ap f (eissect f a))^ @ (ap (fun x : B => f (f^-1 x)) p @ eisretr f b) = p	";
             responses[i]=data;
           
 
             i = 46;
-            data = "1 subgoal (ID 143)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : IsEquiv f	  b : B	  a : A	  p : f a = b	  ============================	  (ap f (eissect _ a))^ @ (eisretr _ (f a) @ p) = p	";
+            data = "1 subgoal (ID 143)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : IsEquiv f	  b : B	  a : A	  p : f a = b	  ============================	  (ap f (eissect f a))^ @ (eisretr f (f a) @ p) = p	";
             responses[i]=data;
           
 
             i = 47;
-            data = "1 subgoal (ID 153)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : IsEquiv f	  b : B	  a : A	  p : f a = b	  ============================	  (ap f (eissect _ a))^ @ (ap f (eissect _ a) @ p) = p	";
+            data = "1 subgoal (ID 153)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : IsEquiv f	  b : B	  a : A	  p : f a = b	  ============================	  (ap f (eissect f a))^ @ (ap f (eissect f a) @ p) = p	";
             responses[i]=data;
           
 
@@ -283,22 +283,22 @@
           
 
             i = 53;
-            data = "1 subgoal (ID 64)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : forall b : B, Contr {a : A & f a = b}	  ============================	  forall x : A, (center _).2 = ap f (contr (x; 1)) ..1	";
+            data = "1 subgoal (ID 64)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : forall b : B, Contr {a : A & f a = b}	  ============================	  forall x : A, (center {a : A & f a = f x}).2 = ap f (contr (x; 1)) ..1	";
             responses[i]=data;
           
 
             i = 54;
-            data = "1 subgoal (ID 65)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : forall b : B, Contr {a : A & f a = b}	  a : A	  ============================	  (center _).2 = ap f (contr (a; 1)) ..1	";
+            data = "1 subgoal (ID 65)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : forall b : B, Contr {a : A & f a = b}	  a : A	  ============================	  (center {a0 : A & f a0 = f a}).2 = ap f (contr (a; 1)) ..1	";
             responses[i]=data;
           
 
             i = 55;
-            data = "1 subgoal (ID 69)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : forall b : B, Contr {a : A & f a = b}	  a : A	  ============================	  (ap f (contr (a; 1)) ..1)^ @ (center _).2 = 1	";
+            data = "1 subgoal (ID 69)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : forall b : B, Contr {a : A & f a = b}	  a : A	  ============================	  (ap f (contr (a; 1)) ..1)^ @ (center {a0 : A & f a0 = f a}).2 = 1	";
             responses[i]=data;
           
 
             i = 56;
-            data = "1 subgoal (ID 83)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : forall b : B, Contr {a : A & f a = b}	  a : A	  ============================	  transport (fun x : A => f x = f a) (contr (a; 1)) ..1 (center _).2 = 1	";
+            data = "1 subgoal (ID 83)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : forall b : B, Contr {a : A & f a = b}	  a : A	  ============================	  transport (fun x : A => f x = f a) (contr (a; 1)) ..1	    (center {a0 : A & f a0 = f a}).2 = 1	";
             responses[i]=data;
           
 
@@ -1683,27 +1683,27 @@
           
 
             i = 333;
-            data = "1 subgoal (ID 160)	  	  A : Type	  B : Type	  e : A <~> B	  b : B	  ============================	  forall y : {a : A & e a = b}, (_^-1 b; eisretr _ b) = y	";
+            data = "1 subgoal (ID 160)	  	  A : Type	  B : Type	  e : A <~> B	  b : B	  ============================	  forall y : {a : A & e a = b}, (e^-1 b; eisretr e b) = y	";
             responses[i]=data;
           
 
             i = 334;
-            data = "1 subgoal (ID 165)	  	  A : Type	  B : Type	  e : A <~> B	  b : B	  a : A	  H : e a = b	  ============================	  (_^-1 b; eisretr _ b) = (a; H)	";
+            data = "1 subgoal (ID 165)	  	  A : Type	  B : Type	  e : A <~> B	  b : B	  a : A	  H : e a = b	  ============================	  (e^-1 b; eisretr e b) = (a; H)	";
             responses[i]=data;
           
 
             i = 335;
-            data = "1 subgoal (ID 169)	  	  A : Type	  B : Type	  e : A <~> B	  a : A	  ============================	  (_^-1 (e a); eisretr _ (e a)) = (a; 1)	";
+            data = "1 subgoal (ID 169)	  	  A : Type	  B : Type	  e : A <~> B	  a : A	  ============================	  (e^-1 (e a); eisretr e (e a)) = (a; 1)	";
             responses[i]=data;
           
 
             i = 336;
-            data = "2 subgoals (ID 178)	  	  A : Type	  B : Type	  e : A <~> B	  a : A	  ============================	  (_^-1 (e a); eisretr _ (e a)).1 = (a; 1).1		subgoal 2 (ID 180) is:	 transport (fun a0 : A => e a0 = e a) ?p (_^-1 (e a); eisretr _ (e a)).2 =	 (a; 1).2	";
+            data = "2 subgoals (ID 178)	  	  A : Type	  B : Type	  e : A <~> B	  a : A	  ============================	  (e^-1 (e a); eisretr e (e a)).1 = (a; 1).1		subgoal 2 (ID 180) is:	 transport (fun a0 : A => e a0 = e a) ?p (e^-1 (e a); eisretr e (e a)).2 =	 (a; 1).2	";
             responses[i]=data;
           
 
             i = 337;
-            data = "1 subgoal (ID 178)	  	  A : Type	  B : Type	  e : A <~> B	  a : A	  ============================	  (_^-1 (e a); eisretr _ (e a)).1 = (a; 1).1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 180)		subgoal 1 (ID 180) is:	 transport (fun a0 : A => e a0 = e a) (eissect e a)	   (_^-1 (e a); eisretr _ (e a)).2 = (a; 1).2	1 subgoal (ID 180)	  	  A : Type	  B : Type	  e : A <~> B	  a : A	  ============================	  transport (fun a0 : A => e a0 = e a) (eissect e a)	    (_^-1 (e a); eisretr _ (e a)).2 = (a; 1).2	1 subgoal (ID 180)	  	  A : Type	  B : Type	  e : A <~> B	  a : A	  ============================	  transport (fun a0 : A => e a0 = e a) (eissect e a)	    (_^-1 (e a); eisretr _ (e a)).2 = (a; 1).2	1 subgoal (ID 186)	  	  A : Type	  B : Type	  e : A <~> B	  a : A	  ============================	  transport (fun a0 : A => e a0 = e a) (eissect e a) (eisretr _ (e a)) = 1	";
+            data = "1 subgoal (ID 178)	  	  A : Type	  B : Type	  e : A <~> B	  a : A	  ============================	  (e^-1 (e a); eisretr e (e a)).1 = (a; 1).1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 180)		subgoal 1 (ID 180) is:	 transport (fun a0 : A => e a0 = e a) (eissect e a)	   (e^-1 (e a); eisretr e (e a)).2 = (a; 1).2	1 subgoal (ID 180)	  	  A : Type	  B : Type	  e : A <~> B	  a : A	  ============================	  transport (fun a0 : A => e a0 = e a) (eissect e a)	    (e^-1 (e a); eisretr e (e a)).2 = (a; 1).2	1 subgoal (ID 180)	  	  A : Type	  B : Type	  e : A <~> B	  a : A	  ============================	  transport (fun a0 : A => e a0 = e a) (eissect e a)	    (e^-1 (e a); eisretr e (e a)).2 = (a; 1).2	1 subgoal (ID 186)	  	  A : Type	  B : Type	  e : A <~> B	  a : A	  ============================	  transport (fun a0 : A => e a0 = e a) (eissect e a) (eisretr e (e a)) = 1	";
             responses[i]=data;
           
 
@@ -1728,17 +1728,17 @@
           
 
             i = 342;
-            data = "2 subgoals (ID 57)	  	  A : Type	  B : Type	  e : RelEquiv A B	  x : B	  ============================	  (center _).1 = x		subgoal 2 (ID 59) is:	 (center _).1 = x	";
+            data = "2 subgoals (ID 57)	  	  A : Type	  B : Type	  e : RelEquiv A B	  x : B	  ============================	  (center {b : B & equiv_rel e (center {a : A & equiv_rel e a x}).1 b}).1 = x		subgoal 2 (ID 59) is:	 (center {a : A & equiv_rel e a (center {b : B & equiv_rel e x b}).1}).1 = x	";
             responses[i]=data;
           
 
             i = 343;
-            data = "1 subgoal (ID 57)	  	  A : Type	  B : Type	  e : RelEquiv A B	  x : B	  ============================	  (center _).1 = x	1 subgoal (ID 84)	  	  A : Type	  B : Type	  e : RelEquiv A B	  x : B	  ============================	  equiv_rel e (center _).1 x	";
+            data = "1 subgoal (ID 57)	  	  A : Type	  B : Type	  e : RelEquiv A B	  x : B	  ============================	  (center {b : B & equiv_rel e (center {a : A & equiv_rel e a x}).1 b}).1 = x	1 subgoal (ID 84)	  	  A : Type	  B : Type	  e : RelEquiv A B	  x : B	  ============================	  equiv_rel e (center {a : A & equiv_rel e a x}).1 x	";
             responses[i]=data;
           
 
             i = 344;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 59)		subgoal 1 (ID 59) is:	 (center _).1 = x	1 subgoal (ID 59)	  	  A : Type	  B : Type	  e : RelEquiv A B	  x : A	  ============================	  (center _).1 = x	1 subgoal (ID 59)	  	  A : Type	  B : Type	  e : RelEquiv A B	  x : A	  ============================	  (center _).1 = x	1 subgoal (ID 115)	  	  A : Type	  B : Type	  e : RelEquiv A B	  x : A	  ============================	  equiv_rel e x (center _).1	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 59)		subgoal 1 (ID 59) is:	 (center {a : A & equiv_rel e a (center {b : B & equiv_rel e x b}).1}).1 = x	1 subgoal (ID 59)	  	  A : Type	  B : Type	  e : RelEquiv A B	  x : A	  ============================	  (center {a : A & equiv_rel e a (center {b : B & equiv_rel e x b}).1}).1 = x	1 subgoal (ID 59)	  	  A : Type	  B : Type	  e : RelEquiv A B	  x : A	  ============================	  (center {a : A & equiv_rel e a (center {b : B & equiv_rel e x b}).1}).1 = x	1 subgoal (ID 115)	  	  A : Type	  B : Type	  e : RelEquiv A B	  x : A	  ============================	  equiv_rel e x (center {b : B & equiv_rel e x b}).1	";
             responses[i]=data;
           
 

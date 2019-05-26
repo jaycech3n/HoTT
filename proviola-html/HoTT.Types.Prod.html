@@ -1103,32 +1103,32 @@
           
 
             i = 217;
-            data = "1 subgoal (ID 829)	  	  A : Type	  A' : Type	  f : A -> A'	  H : IsEquiv f	  B : Type	  B' : Type	  g : B -> B'	  H0 : IsEquiv g	  ============================	  forall x : A * B,	  path_prod' (eisretr _ (fst (functor_prod f g x)))	    (eisretr _ (snd (functor_prod f g x))) @ eta_prod (functor_prod f g x) =	  ap (functor_prod f g)	    (path_prod' (eissect _ (fst x)) (eissect _ (snd x)) @ eta_prod x)	";
+            data = "1 subgoal (ID 829)	  	  A : Type	  A' : Type	  f : A -> A'	  H : IsEquiv f	  B : Type	  B' : Type	  g : B -> B'	  H0 : IsEquiv g	  ============================	  forall x : A * B,	  path_prod' (eisretr f (fst (functor_prod f g x)))	    (eisretr g (snd (functor_prod f g x))) @ eta_prod (functor_prod f g x) =	  ap (functor_prod f g)	    (path_prod' (eissect f (fst x)) (eissect g (snd x)) @ eta_prod x)	";
             responses[i]=data;
           
 
             i = 218;
-            data = "1 subgoal (ID 836)	  	  A : Type	  A' : Type	  f : A -> A'	  H : IsEquiv f	  B : Type	  B' : Type	  g : B -> B'	  H0 : IsEquiv g	  a : A	  b : B	  ============================	  path_prod' (eisretr _ (f a)) (eisretr _ (g b)) @ 1 =	  ap (functor_prod f g) (path_prod' (eissect _ a) (eissect _ b) @ 1)	";
+            data = "1 subgoal (ID 836)	  	  A : Type	  A' : Type	  f : A -> A'	  H : IsEquiv f	  B : Type	  B' : Type	  g : B -> B'	  H0 : IsEquiv g	  a : A	  b : B	  ============================	  path_prod' (eisretr f (f a)) (eisretr g (g b)) @ 1 =	  ap (functor_prod f g) (path_prod' (eissect f a) (eissect g b) @ 1)	";
             responses[i]=data;
           
 
             i = 219;
-            data = "1 subgoal (ID 838)	  	  A : Type	  A' : Type	  f : A -> A'	  H : IsEquiv f	  B : Type	  B' : Type	  g : B -> B'	  H0 : IsEquiv g	  a : A	  b : B	  ============================	  path_prod (f (_^-1 (f a)), g (_^-1 (g b))) (f a, g b) 	    (eisretr _ (f a)) (eisretr _ (g b)) @ 1 =	  ap (functor_prod f g)	    (path_prod (_^-1 (f a), _^-1 (g b)) (a, b) (eissect _ a) (eissect _ b) @	     1)	";
+            data = "1 subgoal (ID 838)	  	  A : Type	  A' : Type	  f : A -> A'	  H : IsEquiv f	  B : Type	  B' : Type	  g : B -> B'	  H0 : IsEquiv g	  a : A	  b : B	  ============================	  path_prod (f (f^-1 (f a)), g (g^-1 (g b))) (f a, g b) 	    (eisretr f (f a)) (eisretr g (g b)) @ 1 =	  ap (functor_prod f g)	    (path_prod (f^-1 (f a), g^-1 (g b)) (a, b) (eissect f a) (eissect g b) @	     1)	";
             responses[i]=data;
           
 
             i = 220;
-            data = "1 subgoal (ID 846)	  	  A : Type	  A' : Type	  f : A -> A'	  H : IsEquiv f	  B : Type	  B' : Type	  g : B -> B'	  H0 : IsEquiv g	  a : A	  b : B	  ============================	  path_prod (f (_^-1 (f a)), g (_^-1 (g b))) (f a, g b) 	    (eisretr _ (f a)) (eisretr _ (g b)) =	  ap (functor_prod f g)	    (path_prod (_^-1 (f a), _^-1 (g b)) (a, b) (eissect _ a) (eissect _ b))	";
+            data = "1 subgoal (ID 846)	  	  A : Type	  A' : Type	  f : A -> A'	  H : IsEquiv f	  B : Type	  B' : Type	  g : B -> B'	  H0 : IsEquiv g	  a : A	  b : B	  ============================	  path_prod (f (f^-1 (f a)), g (g^-1 (g b))) (f a, g b) 	    (eisretr f (f a)) (eisretr g (g b)) =	  ap (functor_prod f g)	    (path_prod (f^-1 (f a), g^-1 (g b)) (a, b) (eissect f a) (eissect g b))	";
             responses[i]=data;
           
 
             i = 221;
-            data = "1 subgoal (ID 857)	  	  A : Type	  A' : Type	  f : A -> A'	  H : IsEquiv f	  B : Type	  B' : Type	  g : B -> B'	  H0 : IsEquiv g	  a : A	  b : B	  ============================	  path_prod (f (_^-1 (f a)), g (_^-1 (g b))) (f a, g b) 	    (eisretr _ (f a)) (eisretr _ (g b)) =	  path_prod (functor_prod f g (_^-1 (f a), _^-1 (g b)))	    (functor_prod f g (a, b)) (ap f (eissect _ a)) 	    (ap g (eissect _ b))	";
+            data = "1 subgoal (ID 857)	  	  A : Type	  A' : Type	  f : A -> A'	  H : IsEquiv f	  B : Type	  B' : Type	  g : B -> B'	  H0 : IsEquiv g	  a : A	  b : B	  ============================	  path_prod (f (f^-1 (f a)), g (g^-1 (g b))) (f a, g b) 	    (eisretr f (f a)) (eisretr g (g b)) =	  path_prod (functor_prod f g (f^-1 (f a), g^-1 (g b)))	    (functor_prod f g (a, b)) (ap f (eissect f a)) 	    (ap g (eissect g b))	";
             responses[i]=data;
           
 
             i = 222;
-            data = "1 subgoal (ID 867)	  	  A : Type	  A' : Type	  f : A -> A'	  H : IsEquiv f	  B : Type	  B' : Type	  g : B -> B'	  H0 : IsEquiv g	  a : A	  b : B	  ============================	  path_prod (f (_^-1 (f a)), g (_^-1 (g b))) (f a, g b) 	    (ap f (eissect _ a)) (ap g (eissect _ b)) =	  path_prod (functor_prod f g (_^-1 (f a), _^-1 (g b)))	    (functor_prod f g (a, b)) (ap f (eissect _ a)) 	    (ap g (eissect _ b))	";
+            data = "1 subgoal (ID 867)	  	  A : Type	  A' : Type	  f : A -> A'	  H : IsEquiv f	  B : Type	  B' : Type	  g : B -> B'	  H0 : IsEquiv g	  a : A	  b : B	  ============================	  path_prod (f (f^-1 (f a)), g (g^-1 (g b))) (f a, g b) 	    (ap f (eissect f a)) (ap g (eissect g b)) =	  path_prod (functor_prod f g (f^-1 (f a), g^-1 (g b)))	    (functor_prod f g (a, b)) (ap f (eissect f a)) 	    (ap g (eissect g b))	";
             responses[i]=data;
           
 
@@ -1588,7 +1588,7 @@
           
 
             i = 314;
-            data = "1 subgoal (ID 1023)	  	  A : Type	  H : Contr A	  B : Type	  H0 : Contr B	  ============================	  Contr (A * B)	1 subgoal (ID 1038)	  	  A : Type	  H : Contr A	  B : Type	  H0 : Contr B	  ============================	  forall y : A * B, (center _, center _) = y	";
+            data = "1 subgoal (ID 1023)	  	  A : Type	  H : Contr A	  B : Type	  H0 : Contr B	  ============================	  Contr (A * B)	1 subgoal (ID 1038)	  	  A : Type	  H : Contr A	  B : Type	  H0 : Contr B	  ============================	  forall y : A * B, (center A, center B) = y	";
             responses[i]=data;
           
 

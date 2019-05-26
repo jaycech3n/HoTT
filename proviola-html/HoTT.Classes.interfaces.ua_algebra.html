@@ -2153,7 +2153,7 @@
           
 
             i = 427;
-            data = "1 subgoal (ID 203)	  	  σ : Signature	  A, B : Algebra σ	  p, q : A = B	  r : ap _^-1 p = ap _^-1 q	  ============================	  p = q	";
+            data = "1 subgoal (ID 203)	  	  σ : Signature	  A, B : Algebra σ	  p, q : A = B	  r : ap (issig_algebra σ)^-1 p = ap (issig_algebra σ)^-1 q	  ============================	  p = q	";
             responses[i]=data;
           
 
@@ -2163,7 +2163,7 @@
           
 
             i = 429;
-            data = "1 subgoal (ID 216)	  	  σ : Signature	  A, B : Algebra σ	  p, q : A = B	  r : ap _^-1 p = ap _^-1 q	  e := Paths.equiv_ap _^-1 A B : A = B <~> _^-1 A = _^-1 B	  ============================	  p = q	";
+            data = "1 subgoal (ID 216)	  	  σ : Signature	  A, B : Algebra σ	  p, q : A = B	  r : ap (issig_algebra σ)^-1 p = ap (issig_algebra σ)^-1 q	  e := Paths.equiv_ap (issig_algebra σ)^-1 A B	   : A = B <~> (issig_algebra σ)^-1 A = (issig_algebra σ)^-1 B	  ============================	  p = q	";
             responses[i]=data;
           
 
@@ -2388,27 +2388,27 @@
           
 
             i = 474;
-            data = "1 subgoal (ID 235)	  	  H : Funext	  σ : Signature	  A, B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  p, q : A = B	  r : ap carriers p = ap carriers q	  ============================	  ap _^-1 p = ap _^-1 q	";
+            data = "1 subgoal (ID 235)	  	  H : Funext	  σ : Signature	  A, B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  p, q : A = B	  r : ap carriers p = ap carriers q	  ============================	  ap (issig_algebra σ)^-1 p = ap (issig_algebra σ)^-1 q	";
             responses[i]=data;
           
 
             i = 475;
-            data = "2 subgoals (ID 237)	  	  H : Funext	  σ : Signature	  A, B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  p, q : A = B	  r : ap carriers p = ap carriers q	  ============================	  (ap _^-1 p) ..1 = (ap _^-1 q) ..1		subgoal 2 (ID 238) is:	 transport	   (λ x : (_^-1 A).1 = (_^-1 B).1,	    transport (λ c : Carriers σ, forall u : Symbol σ, Operation c (σ u)) x	      (_^-1 A).2 = (_^-1 B).2) ?r (ap _^-1 p) ..2 = 	 (ap _^-1 q) ..2	";
+            data = "2 subgoals (ID 237)	  	  H : Funext	  σ : Signature	  A, B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  p, q : A = B	  r : ap carriers p = ap carriers q	  ============================	  (ap (issig_algebra σ)^-1 p) ..1 = (ap (issig_algebra σ)^-1 q) ..1		subgoal 2 (ID 238) is:	 transport	   (λ x : ((issig_algebra σ)^-1 A).1 = ((issig_algebra σ)^-1 B).1,	    transport (λ c : Carriers σ, forall u : Symbol σ, Operation c (σ u)) x	      ((issig_algebra σ)^-1 A).2 = ((issig_algebra σ)^-1 B).2) 	   ?r (ap (issig_algebra σ)^-1 p) ..2 = (ap (issig_algebra σ)^-1 q) ..2	";
             responses[i]=data;
           
 
             i = 476;
-            data = "1 subgoal (ID 237)	  	  H : Funext	  σ : Signature	  A, B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  p, q : A = B	  r : ap carriers p = ap carriers q	  ============================	  (ap _^-1 p) ..1 = (ap _^-1 q) ..1	1 subgoal (ID 263)	  	  H : Funext	  σ : Signature	  A, B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  p, q : A = B	  r : ap carriers p = ap carriers q	  ============================	  ap carriers p = (ap _^-1 q) ..1	";
+            data = "1 subgoal (ID 237)	  	  H : Funext	  σ : Signature	  A, B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  p, q : A = B	  r : ap carriers p = ap carriers q	  ============================	  (ap (issig_algebra σ)^-1 p) ..1 = (ap (issig_algebra σ)^-1 q) ..1	1 subgoal (ID 263)	  	  H : Funext	  σ : Signature	  A, B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  p, q : A = B	  r : ap carriers p = ap carriers q	  ============================	  ap carriers p = (ap (issig_algebra σ)^-1 q) ..1	";
             responses[i]=data;
           
 
             i = 477;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 238)		subgoal 1 (ID 238) is:	 transport	   (λ x : (_^-1 A).1 = (_^-1 B).1,	    transport (λ c : Carriers σ, forall u : Symbol σ, Operation c (σ u)) x	      (_^-1 A).2 = (_^-1 B).2)	   (match	      p as p0 in (_ = y)	      return	        (IsHSetAlgebra y	         → forall q0 : A = y,	           ap carriers p0 = ap carriers q0	           → (ap _^-1 p0) ..1 = ap carriers p0)	    with	    | 1 =>	        λ (_ : IsHSetAlgebra A) (q0 : A = A)	        (_ : ap carriers 1 = ap carriers q0), 1	    end IsHSetAlgebra0 q r @	    (r @	     match	       q as p0 in (_ = y)	       return	         (IsHSetAlgebra y	          → forall p1 : A = y,	            ap carriers p1 = ap carriers p0	            → ap carriers p0 = (ap _^-1 p0) ..1)	     with	     | 1 =>	         λ (_ : IsHSetAlgebra A) (p0 : A = A)	         (_ : ap carriers p0 = ap carriers 1), 1	     end IsHSetAlgebra0 p r)) (ap _^-1 p) ..2 = (ap _^-1 q) ..2	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 238)		subgoal 1 (ID 238) is:	 transport	   (λ x : ((issig_algebra σ)^-1 A).1 = ((issig_algebra σ)^-1 B).1,	    transport (λ c : Carriers σ, forall u : Symbol σ, Operation c (σ u)) x	      ((issig_algebra σ)^-1 A).2 = ((issig_algebra σ)^-1 B).2)	   (match	      p as p0 in (_ = y)	      return	        (IsHSetAlgebra y	         → forall q0 : A = y,	           ap carriers p0 = ap carriers q0	           → (ap (issig_algebra σ)^-1 p0) ..1 = ap carriers p0)	    with	    | 1 =>	        λ (_ : IsHSetAlgebra A) (q0 : A = A)	        (_ : ap carriers 1 = ap carriers q0), 1	    end IsHSetAlgebra0 q r @	    (r @	     match	       q as p0 in (_ = y)	       return	         (IsHSetAlgebra y	          → forall p1 : A = y,	            ap carriers p1 = ap carriers p0	            → ap carriers p0 = (ap (issig_algebra σ)^-1 p0) ..1)	     with	     | 1 =>	         λ (_ : IsHSetAlgebra A) (p0 : A = A)	         (_ : ap carriers p0 = ap carriers 1), 1	     end IsHSetAlgebra0 p r)) (ap (issig_algebra σ)^-1 p) ..2 =	 (ap (issig_algebra σ)^-1 q) ..2	";
             responses[i]=data;
           
 
             i = 478;
-            data = "1 subgoal (ID 238)	  	  H : Funext	  σ : Signature	  A, B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  p, q : A = B	  r : ap carriers p = ap carriers q	  ============================	  transport	    (λ x : (_^-1 A).1 = (_^-1 B).1,	     transport (λ c : Carriers σ, forall u : Symbol σ, Operation c (σ u)) x	       (_^-1 A).2 = (_^-1 B).2)	    (match	       p as p0 in (_ = y)	       return	         (IsHSetAlgebra y	          → forall q0 : A = y,	            ap carriers p0 = ap carriers q0	            → (ap _^-1 p0) ..1 = ap carriers p0)	     with	     | 1 =>	         λ (_ : IsHSetAlgebra A) (q0 : A = A)	         (_ : ap carriers 1 = ap carriers q0), 1	     end IsHSetAlgebra0 q r @	     (r @	      match	        q as p0 in (_ = y)	        return	          (IsHSetAlgebra y	           → forall p1 : A = y,	             ap carriers p1 = ap carriers p0	             → ap carriers p0 = (ap _^-1 p0) ..1)	      with	      | 1 =>	          λ (_ : IsHSetAlgebra A) (p0 : A = A)	          (_ : ap carriers p0 = ap carriers 1), 1	      end IsHSetAlgebra0 p r)) (ap _^-1 p) ..2 = (ap _^-1 q) ..2	1 subgoal (ID 319)	  	  H : Funext	  σ : Signature	  A, B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  p, q : A = B	  r : ap carriers p = ap carriers q	  ============================	  forall	  x	   y : transport (λ c : Carriers σ, forall u : Symbol σ, Operation c (σ u))	         (ap _^-1 q) ..1 (_^-1 A).2 = (_^-1 B).2, 	  x = y	";
+            data = "1 subgoal (ID 238)	  	  H : Funext	  σ : Signature	  A, B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  p, q : A = B	  r : ap carriers p = ap carriers q	  ============================	  transport	    (λ x : ((issig_algebra σ)^-1 A).1 = ((issig_algebra σ)^-1 B).1,	     transport (λ c : Carriers σ, forall u : Symbol σ, Operation c (σ u)) x	       ((issig_algebra σ)^-1 A).2 = ((issig_algebra σ)^-1 B).2)	    (match	       p as p0 in (_ = y)	       return	         (IsHSetAlgebra y	          → forall q0 : A = y,	            ap carriers p0 = ap carriers q0	            → (ap (issig_algebra σ)^-1 p0) ..1 = ap carriers p0)	     with	     | 1 =>	         λ (_ : IsHSetAlgebra A) (q0 : A = A)	         (_ : ap carriers 1 = ap carriers q0), 1	     end IsHSetAlgebra0 q r @	     (r @	      match	        q as p0 in (_ = y)	        return	          (IsHSetAlgebra y	           → forall p1 : A = y,	             ap carriers p1 = ap carriers p0	             → ap carriers p0 = (ap (issig_algebra σ)^-1 p0) ..1)	      with	      | 1 =>	          λ (_ : IsHSetAlgebra A) (p0 : A = A)	          (_ : ap carriers p0 = ap carriers 1), 1	      end IsHSetAlgebra0 p r)) (ap (issig_algebra σ)^-1 p) ..2 =	  (ap (issig_algebra σ)^-1 q) ..2	1 subgoal (ID 319)	  	  H : Funext	  σ : Signature	  A, B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  p, q : A = B	  r : ap carriers p = ap carriers q	  ============================	  forall	  x	   y : transport (λ c : Carriers σ, forall u : Symbol σ, Operation c (σ u))	         (ap (issig_algebra σ)^-1 q) ..1 ((issig_algebra σ)^-1 A).2 =	       ((issig_algebra σ)^-1 B).2, x = y	";
             responses[i]=data;
           
 

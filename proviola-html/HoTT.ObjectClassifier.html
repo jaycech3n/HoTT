@@ -153,7 +153,7 @@
           
 
             i = 27;
-            data = "1 subgoal (ID 46)	  	  ua : Univalence	  A : Type	  U : Type	  V : Type	  w : U <~> V	  ============================	  forall f : U -> A,	  transport (fun I : Type => I -> A) (path_universe w) f = f o _^-1	";
+            data = "1 subgoal (ID 46)	  	  ua : Univalence	  A : Type	  U : Type	  V : Type	  w : U <~> V	  ============================	  forall f : U -> A,	  transport (fun I : Type => I -> A) (path_universe w) f = f o w^-1	";
             responses[i]=data;
           
 
@@ -163,17 +163,17 @@
           
 
             i = 29;
-            data = "1 subgoal (ID 56)	  	  ua : Univalence	  A : Type	  U : Type	  V : Type	  w : U <~> V	  f : U -> A	  y : V	  ============================	  transport (fun I : Type => I -> A) (path_universe w) f y = f (_^-1 y)	";
+            data = "1 subgoal (ID 56)	  	  ua : Univalence	  A : Type	  U : Type	  V : Type	  w : U <~> V	  f : U -> A	  y : V	  ============================	  transport (fun I : Type => I -> A) (path_universe w) f y = f (w^-1 y)	";
             responses[i]=data;
           
 
             i = 30;
-            data = "1 subgoal (ID 75)	  	  ua : Univalence	  A : Type	  U : Type	  V : Type	  w : U <~> V	  f : U -> A	  y : V	  ============================	  f (transport idmap (path_universe w)^ y) = f (_^-1 y)	";
+            data = "1 subgoal (ID 75)	  	  ua : Univalence	  A : Type	  U : Type	  V : Type	  w : U <~> V	  f : U -> A	  y : V	  ============================	  f (transport idmap (path_universe w)^ y) = f (w^-1 y)	";
             responses[i]=data;
           
 
             i = 31;
-            data = "1 subgoal (ID 78)	  	  ua : Univalence	  A : Type	  U : Type	  V : Type	  w : U <~> V	  f : U -> A	  y : V	  ============================	  transport idmap (path_universe w)^ y = _^-1 y	";
+            data = "1 subgoal (ID 78)	  	  ua : Univalence	  A : Type	  U : Type	  V : Type	  w : U <~> V	  f : U -> A	  y : V	  ============================	  transport idmap (path_universe w)^ y = w^-1 y	";
             responses[i]=data;
           
 
@@ -558,7 +558,7 @@
           
 
             i = 108;
-            data = "1 subgoal (ID 144)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  P : A -> {X : Type & isP X}	  a : A	  ============================	  f2p A (p2f A (fun x : A => (P x).1)) a = (P a).1	1 subgoal (ID 155)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  P : A -> {X : Type & isP X}	  a : A	  p := eissect _ : Sect (FamequivPow A) _^-1	  ============================	  f2p A (p2f A (fun x : A => (P x).1)) a = (P a).1	";
+            data = "1 subgoal (ID 144)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  P : A -> {X : Type & isP X}	  a : A	  ============================	  f2p A (p2f A (fun x : A => (P x).1)) a = (P a).1	1 subgoal (ID 155)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  P : A -> {X : Type & isP X}	  a : A	  p := eissect (FamequivPow A) : Sect (FamequivPow A) (FamequivPow A)^-1	  ============================	  f2p A (p2f A (fun x : A => (P x).1)) a = (P a).1	";
             responses[i]=data;
           
 

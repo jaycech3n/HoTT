@@ -198,7 +198,7 @@
           
 
             i = 36;
-            data = "1 subgoal (ID 49)	  	  H : Funext	  C : PreCategory	  s, d : C	  m1, m2 : morphism C s d	  p : m1 = m2	  Fs : PreCategory	  Fd : PreCategory	  Fm : morphism C s d -> Functor Fs Fd	  s' : Fs	  d' : Fd	  u : morphism Fd ((Fm m1) _0 s')%object d'	  ============================	  transport (fun m : morphism C s d => morphism Fd ((Fm m) _0 s')%object d')	    p u = u o _^-1 s'	";
+            data = "1 subgoal (ID 49)	  	  H : Funext	  C : PreCategory	  s, d : C	  m1, m2 : morphism C s d	  p : m1 = m2	  Fs : PreCategory	  Fd : PreCategory	  Fm : morphism C s d -> Functor Fs Fd	  s' : Fs	  d' : Fd	  u : morphism Fd ((Fm m1) _0 s')%object d'	  ============================	  transport (fun m : morphism C s d => morphism Fd ((Fm m) _0 s')%object d')	    p u = u o (idtoiso (Fs -> Fd) (ap Fm p))^-1 s'	";
             responses[i]=data;
           
 

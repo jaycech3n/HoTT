@@ -358,7 +358,7 @@
           
 
             i = 68;
-            data = "1 subgoal (ID 89)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionUnit F G	  s, d : D	  m : morphism D s d	  eta := A.1 : NaturalTransformation 1 (G o F)	  eps := fun X : D => (center _).1	   : forall x : D, morphism D (F _0 (G _0 x))%object x	  ============================	  G _1 (eps d o F _1 (G _1 m)) o eta (G _0 s)%object = G _1 m ->	  G _1 (m o eps s) o eta (G _0 s)%object = G _1 m ->	  eps d o F _1 (G _1 m) = m o eps s	";
+            data = "1 subgoal (ID 89)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionUnit F G	  s, d : D	  m : morphism D s d	  eta := A.1 : NaturalTransformation 1 (G o F)	  eps := fun X : D =>	         (center	            {g : morphism D (F _0 (G _0 X))%object X &	            G _1 g o A.1 (G _0 X)%object = 1}).1	   : forall x : D, morphism D (F _0 (G _0 x))%object x	  ============================	  G _1 (eps d o F _1 (G _1 m)) o eta (G _0 s)%object = G _1 m ->	  G _1 (m o eps s) o eta (G _0 s)%object = G _1 m ->	  eps d o F _1 (G _1 m) = m o eps s	";
             responses[i]=data;
           
 
@@ -368,7 +368,7 @@
           
 
             i = 70;
-            data = "1 subgoal (ID 91)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionUnit F G	  s, d : D	  m : morphism D s d	  eta := A.1 : NaturalTransformation 1 (G o F)	  eps := fun X : D => (center _).1	   : forall x : D, morphism D (F _0 (G _0 x))%object x	  X : G _1 (eps d o F _1 (G _1 m)) o eta (G _0 s)%object = G _1 m	  X0 : G _1 (m o eps s) o eta (G _0 s)%object = G _1 m	  ============================	  eps d o F _1 (G _1 m) = m o eps s	";
+            data = "1 subgoal (ID 91)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionUnit F G	  s, d : D	  m : morphism D s d	  eta := A.1 : NaturalTransformation 1 (G o F)	  eps := fun X : D =>	         (center	            {g : morphism D (F _0 (G _0 X))%object X &	            G _1 g o A.1 (G _0 X)%object = 1}).1	   : forall x : D, morphism D (F _0 (G _0 x))%object x	  X : G _1 (eps d o F _1 (G _1 m)) o eta (G _0 s)%object = G _1 m	  X0 : G _1 (m o eps s) o eta (G _0 s)%object = G _1 m	  ============================	  eps d o F _1 (G _1 m) = m o eps s	";
             responses[i]=data;
           
 
@@ -393,7 +393,7 @@
           
 
             i = 75;
-            data = "1 subgoal (ID 121)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionUnit F G	  ============================	  forall (s d : D) (m : morphism D s d),	  (center _).1 o (F o G) _1 m = 1 _1 m o (center _).1	";
+            data = "1 subgoal (ID 121)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionUnit F G	  ============================	  forall (s d : D) (m : morphism D s d),	  (center	     {g : morphism D (F _0 (G _0 d))%object d &	     G _1 g o A.1 (G _0 d)%object = 1}).1 o (F o G) _1 m =	  1 _1 m	  o (center	       {g : morphism D (F _0 (G _0 s))%object s &	       G _1 g o A.1 (G _0 s)%object = 1}).1	";
             responses[i]=data;
           
 
@@ -408,7 +408,7 @@
           
 
             i = 78;
-            data = "1 subgoal (ID 154)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionUnit F G	  Y : C	  eta := A.1 : NaturalTransformation 1 (G o F)	  eps := fun X : D => (center _).1	   : forall x : D, morphism D (F _0 (G _0 x))%object x	  ============================	  G _1 (eps (F _0 Y)%object o F _1 (eta Y)) o eta Y = eta Y ->	  eps (F _0 Y)%object o F _1 (eta Y) = 1	";
+            data = "1 subgoal (ID 154)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionUnit F G	  Y : C	  eta := A.1 : NaturalTransformation 1 (G o F)	  eps := fun X : D =>	         (center	            {g : morphism D (F _0 (G _0 X))%object X &	            G _1 g o A.1 (G _0 X)%object = 1}).1	   : forall x : D, morphism D (F _0 (G _0 x))%object x	  ============================	  G _1 (eps (F _0 Y)%object o F _1 (eta Y)) o eta Y = eta Y ->	  eps (F _0 Y)%object o F _1 (eta Y) = 1	";
             responses[i]=data;
           
 
@@ -418,17 +418,17 @@
           
 
             i = 80;
-            data = "1 subgoal (ID 155)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionUnit F G	  Y : C	  eta := A.1 : NaturalTransformation 1 (G o F)	  eps := fun X : D => (center _).1	   : forall x : D, morphism D (F _0 (G _0 x))%object x	  X : G _1 (eps (F _0 Y)%object o F _1 (eta Y)) o eta Y = eta Y	  ============================	  eps (F _0 Y)%object o F _1 (eta Y) = 1	";
+            data = "1 subgoal (ID 155)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionUnit F G	  Y : C	  eta := A.1 : NaturalTransformation 1 (G o F)	  eps := fun X : D =>	         (center	            {g : morphism D (F _0 (G _0 X))%object X &	            G _1 g o A.1 (G _0 X)%object = 1}).1	   : forall x : D, morphism D (F _0 (G _0 x))%object x	  X : G _1 (eps (F _0 Y)%object o F _1 (eta Y)) o eta Y = eta Y	  ============================	  eps (F _0 Y)%object o F _1 (eta Y) = 1	";
             responses[i]=data;
           
 
             i = 81;
-            data = "1 subgoal (ID 250)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionUnit F G	  Y : C	  eta := A.1 : NaturalTransformation 1 (G o F)	  eps := fun X : D => (center _).1	   : forall x : D, morphism D (F _0 (G _0 x))%object x	  X : G _1 (eps (F _0 Y)%object o F _1 (eta Y)) o eta Y = eta Y	  ============================	  G _1 1 o A.1 Y = A.1 Y	";
+            data = "1 subgoal (ID 250)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionUnit F G	  Y : C	  eta := A.1 : NaturalTransformation 1 (G o F)	  eps := fun X : D =>	         (center	            {g : morphism D (F _0 (G _0 X))%object X &	            G _1 g o A.1 (G _0 X)%object = 1}).1	   : forall x : D, morphism D (F _0 (G _0 x))%object x	  X : G _1 (eps (F _0 Y)%object o F _1 (eta Y)) o eta Y = eta Y	  ============================	  G _1 1 o A.1 Y = A.1 Y	";
             responses[i]=data;
           
 
             i = 82;
-            data = "1 subgoal (ID 252)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionUnit F G	  Y : C	  eta := A.1 : NaturalTransformation 1 (G o F)	  eps := fun X : D => (center _).1	   : forall x : D, morphism D (F _0 (G _0 x))%object x	  X : G _1 (eps (F _0 Y)%object o F _1 (eta Y)) o eta Y = eta Y	  ============================	  G _1 1 o A.1 Y = A.1 Y	";
+            data = "1 subgoal (ID 252)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionUnit F G	  Y : C	  eta := A.1 : NaturalTransformation 1 (G o F)	  eps := fun X : D =>	         (center	            {g : morphism D (F _0 (G _0 X))%object X &	            G _1 g o A.1 (G _0 X)%object = 1}).1	   : forall x : D, morphism D (F _0 (G _0 x))%object x	  X : G _1 (eps (F _0 Y)%object o F _1 (eta Y)) o eta Y = eta Y	  ============================	  G _1 1 o A.1 Y = A.1 Y	";
             responses[i]=data;
           
 
@@ -453,7 +453,7 @@
           
 
             i = 87;
-            data = "1 subgoal (ID 174)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionUnit F G	  Y : C	  ============================	  (center _).1 o F _1 (A.1 Y) = 1	";
+            data = "1 subgoal (ID 174)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionUnit F G	  Y : C	  ============================	  (center	     {g : morphism D (F _0 (G _0 (F _0 Y)))%object (F _0 Y)%object &	     G _1 g o A.1 (G _0 (F _0 Y))%object = 1}).1 o 	  F _1 (A.1 Y) = 1	";
             responses[i]=data;
           
 
