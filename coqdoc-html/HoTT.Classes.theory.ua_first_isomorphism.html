@@ -141,11 +141,16 @@ The next section defines an "in image predicate", <span class="inlinecode"><a cl
 &nbsp;&nbsp;<span class="id" title="keyword">Qed</span>.<br/>
 
 <br/>
-&nbsp;&nbsp;<span class="id" title="keyword">Global Instance</span> <a name="is_closed_under_ops_in_image_hom"><span class="id" title="instance">is_closed_under_ops_in_image_hom</span></a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;: <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#IsClosedUnderOps"><span class="id" title="class">IsClosedUnderOps</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom.B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom"><span class="id" title="definition">in_image_hom</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="is_closed_under_ops_in_image_hom"><span class="id" title="lemma">is_closed_under_ops_in_image_hom</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;: <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#IsClosedUnderOps"><span class="id" title="definition">IsClosedUnderOps</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom.B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom"><span class="id" title="definition">in_image_hom</span></a>.<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">intro</span> <span class="id" title="var">u</span>. <span class="id" title="tactic">eapply</span> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#closed_under_op_in_image_hom"><span class="id" title="lemma">closed_under_op_in_image_hom</span></a>, <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom.hom"><span class="id" title="variable">hom</span></a>.<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Qed</span>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Global Instance</span> <a name="is_subalgebra_predicate_in_image_hom"><span class="id" title="instance">is_subalgebra_predicate_in_image_hom</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;: <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#IsSubalgebraPredicate"><span class="id" title="class">IsSubalgebraPredicate</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom.B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom"><span class="id" title="definition">in_image_hom</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#BuildIsSubalgebraPredicate"><span class="id" title="constructor">BuildIsSubalgebraPredicate</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#is_closed_under_ops_in_image_hom"><span class="id" title="lemma">is_closed_under_ops_in_image_hom</span></a>.<br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom"><span class="id" title="section">in_image_hom</span></a>.<br/>
 
 <br/>
@@ -294,7 +299,7 @@ The next section gives a specialization of the first isomorphism
 &nbsp;&nbsp;<span class="id" title="keyword">Global Instance</span> <a name="is_isomorphism_inc_first_isomorphism_surjection"><span class="id" title="instance">is_isomorphism_inc_first_isomorphism_surjection</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;: <a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#IsIsomorphism"><span class="id" title="class">IsIsomorphism</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra"><span class="id" title="definition">hom_inc_subalgebra</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_surjection.B"><span class="id" title="variable">B</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom"><span class="id" title="definition">in_image_hom</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_surjection.f"><span class="id" title="variable">f</span></a>)).<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#is_isomorphism_inc_improper_subalgebra"><span class="id" title="lemma">is_isomorphism_inc_improper_subalgebra</span></a>; [<span class="id" title="tactic">exact</span> <span class="id" title="var">_</span> | <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_surjection.S"><span class="id" title="variable">S</span></a>].<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#is_isomorphism_inc_improper_subalgebra"><span class="id" title="lemma">is_isomorphism_inc_improper_subalgebra</span></a>. <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_surjection.S"><span class="id" title="variable">S</span></a>.<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Qed</span>.<br/>
 
 <br/>
@@ -325,6 +330,57 @@ The homomorphism <span class="inlinecode"><a class="idref" href="HoTT.Classes.th
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Classes.theory.ua_isomorphic.html#id_isomorphic"><span class="id" title="lemma">id_isomorphic</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#isomorphic_first_isomorphism_surjection"><span class="id" title="lemma">isomorphic_first_isomorphism_surjection</span></a>).<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Qed</span>.<br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_surjection"><span class="id" title="section">first_isomorphism_surjection</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+The next section specializes the first isomorphism theorem to the
+    case where the homomorphism is injective. It proves that an
+    injective homomorphism is an isomorphism between its domain
+    and its image. 
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Section</span> <a name="first_isomorphism_inj"><span class="id" title="section">first_isomorphism_inj</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Context</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;`{<a class="idref" href="HoTT.Types.Universe.html#Univalence"><span class="id" title="class">Univalence</span></a>} {σ} {<span class="id" title="var">A</span> <span class="id" title="var">B</span> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Algebra"><span class="id" title="record">Algebra</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#3122c41ebe889f745cb9bbe1c92165c3"><span class="id" title="variable">σ</span></a>} `{<a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#IsHSetAlgebra"><span class="id" title="abbreviation">IsHSetAlgebra</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#B"><span class="id" title="variable">B</span></a>}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="var">f</span> : <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <span class="id" title="var">s</span><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#s"><span class="id" title="variable">s</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#s"><span class="id" title="variable">s</span></a>) `{!<a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#IsHomomorphism"><span class="id" title="class">IsHomomorphism</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#f"><span class="id" title="variable">f</span></a>} (<span class="id" title="var">inj</span> : <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <span class="id" title="var">s</span><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.HSet.html#isinj"><span class="id" title="definition">isinj</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#s"><span class="id" title="variable">s</span></a>)).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Global Instance</span> <a name="is_isomorphism_quotient_first_isomorphism_inj"><span class="id" title="instance">is_isomorphism_quotient_first_isomorphism_inj</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;: <a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#IsIsomorphism"><span class="id" title="class">IsIsomorphism</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#hom_quotient"><span class="id" title="definition">hom_quotient</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#cong_ker"><span class="id" title="definition">cong_ker</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.f"><span class="id" title="variable">f</span></a>)).<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#is_isomorphism_quotient"><span class="id" title="instance">is_isomorphism_quotient</span></a>. <span class="id" title="tactic">intros</span> <span class="id" title="var">s</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">p</span>. <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.inj"><span class="id" title="variable">inj</span></a>, <span class="id" title="var">p</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Qed</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+The homomorphism <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#hom_first_isomorphism_inj"><span class="id" title="definition">hom_first_isomorphism_inj</span></a></span> is the
+    composition of two isomorphisms, so it is an isomorphism. 
+</div>
+<div class="code">
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Definition</span> <a name="hom_first_isomorphism_inj"><span class="id" title="definition">hom_first_isomorphism_inj</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;: <a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#Homomorphism"><span class="id" title="record">Homomorphism</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.A"><span class="id" title="variable">A</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#49322a039dee1d0f09806d7c0ca9fc90"><span class="id" title="notation">&amp;</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom"><span class="id" title="definition">in_image_hom</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.f"><span class="id" title="variable">f</span></a>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#hom_compose"><span class="id" title="definition">hom_compose</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#hom_first_isomorphism"><span class="id" title="definition">hom_first_isomorphism</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.f"><span class="id" title="variable">f</span></a>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#hom_quotient"><span class="id" title="definition">hom_quotient</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#cong_ker"><span class="id" title="definition">cong_ker</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.f"><span class="id" title="variable">f</span></a>)).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Definition</span> <a name="isomorphic_first_isomorphism_inj"><span class="id" title="definition">isomorphic_first_isomorphism_inj</span></a> : <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_isomorphic.html#1ea868b91187e76780e9fa7b002c59d6"><span class="id" title="notation">≅</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#49322a039dee1d0f09806d7c0ca9fc90"><span class="id" title="notation">&amp;</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom"><span class="id" title="definition">in_image_hom</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.f"><span class="id" title="variable">f</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <a class="idref" href="HoTT.Classes.theory.ua_isomorphic.html#BuildIsomorphic"><span class="id" title="constructor">BuildIsomorphic</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#hom_first_isomorphism_inj"><span class="id" title="definition">hom_first_isomorphism_inj</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Definition</span> <a name="id_first_isomorphism_inj"><span class="id" title="definition">id_first_isomorphism_inj</span></a> : <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#49322a039dee1d0f09806d7c0ca9fc90"><span class="id" title="notation">&amp;</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom"><span class="id" title="definition">in_image_hom</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.f"><span class="id" title="variable">f</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <a class="idref" href="HoTT.Classes.theory.ua_isomorphic.html#id_isomorphic"><span class="id" title="lemma">id_isomorphic</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#isomorphic_first_isomorphism_inj"><span class="id" title="definition">isomorphic_first_isomorphism_inj</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj"><span class="id" title="section">first_isomorphism_inj</span></a>.<br/>
 </div>
 </div>
 

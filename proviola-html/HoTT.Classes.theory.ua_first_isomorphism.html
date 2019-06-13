@@ -343,7 +343,7 @@
           
 
             i = 65;
-            data = "1 subgoal (ID 19)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  w : SymbolType σ	  α : Operation A w	  β : Operation B w	  P : OpPreserving f α β	  ============================	  ClosedUnderOp B in_image_hom β	";
+            data = "1 subgoal (ID 19)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  w : SymbolType σ	  α : Operation A w	  β : Operation B w	  P : OpPreserving f α β	  ============================	  ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom s y) β	";
             responses[i]=data;
           
 
@@ -353,32 +353,32 @@
           
 
             i = 67;
-            data = "2 subgoals (ID 35)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  α : Operation A (ne_list.one t)	  β : Operation B (ne_list.one t)	  P : OpPreserving f α β	  ============================	  ClosedUnderOp B in_image_hom β		subgoal 2 (ID 44) is:	 ClosedUnderOp B in_image_hom β	";
+            data = "2 subgoals (ID 35)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  α : Operation A (ne_list.one t)	  β : Operation B (ne_list.one t)	  P : OpPreserving f α β	  ============================	  ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom s y) β		subgoal 2 (ID 44) is:	 ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom s y) β	";
             responses[i]=data;
           
 
             i = 68;
-            data = "1 subgoal (ID 35)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  α : Operation A (ne_list.one t)	  β : Operation B (ne_list.one t)	  P : OpPreserving f α β	  ============================	  ClosedUnderOp B in_image_hom β	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 44)		subgoal 1 (ID 44) is:	 ClosedUnderOp B in_image_hom β	";
+            data = "1 subgoal (ID 35)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  α : Operation A (ne_list.one t)	  β : Operation B (ne_list.one t)	  P : OpPreserving f α β	  ============================	  ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom s y) β	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 44)		subgoal 1 (ID 44) is:	 ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom s y) β	";
             responses[i]=data;
           
 
             i = 69;
-            data = "1 subgoal (ID 44)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  w : ne_list.notations.ne_list (Sort σ)	  α : Operation A (ne_list.cons t w)	  β : Operation B (ne_list.cons t w)	  P : OpPreserving f α β	  IHw : forall (α : Operation A w) (β : Operation B w),	        OpPreserving f α β → ClosedUnderOp B in_image_hom β	  ============================	  ClosedUnderOp B in_image_hom β	1 subgoal (ID 54)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  w : ne_list.notations.ne_list (Sort σ)	  α : Operation A (ne_list.cons t w)	  β : Operation B (ne_list.cons t w)	  P : OpPreserving f α β	  IHw : forall (α : Operation A w) (β : Operation B w),	        OpPreserving f α β → ClosedUnderOp B in_image_hom β	  y : B t	  ============================	  in_image_hom t y → ClosedUnderOp B in_image_hom (β y)	";
+            data = "1 subgoal (ID 44)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  w : ne_list.notations.ne_list (Sort σ)	  α : Operation A (ne_list.cons t w)	  β : Operation B (ne_list.cons t w)	  P : OpPreserving f α β	  IHw : forall (α : Operation A w) (β : Operation B w),	        OpPreserving f α β	        → ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom s y) β	  ============================	  ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom s y) β	1 subgoal (ID 54)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  w : ne_list.notations.ne_list (Sort σ)	  α : Operation A (ne_list.cons t w)	  β : Operation B (ne_list.cons t w)	  P : OpPreserving f α β	  IHw : forall (α : Operation A w) (β : Operation B w),	        OpPreserving f α β	        → ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom s y) β	  y : B t	  ============================	  in_image_hom t y	  → ClosedUnderOp B (λ (s : Sort σ) (y0 : B s), in_image_hom s y0) (β y)	";
             responses[i]=data;
           
 
             i = 70;
-            data = "1 subgoal (ID 70)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  w : ne_list.notations.ne_list (Sort σ)	  α : Operation A (ne_list.cons t w)	  β : Operation B (ne_list.cons t w)	  P : OpPreserving f α β	  IHw : forall (α : Operation A w) (β : Operation B w),	        OpPreserving f α β → ClosedUnderOp B in_image_hom β	  y : B t	  ============================	  hfiber (f t) y → ClosedUnderOp B in_image_hom (β y)	";
+            data = "1 subgoal (ID 101)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  w : ne_list.notations.ne_list (Sort σ)	  α : Operation A (ne_list.cons t w)	  β : Operation B (ne_list.cons t w)	  P : OpPreserving f α β	  IHw : forall (α : Operation A w) (β : Operation B w),	        OpPreserving f α β	        → ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom s y) β	  y : B t	  ============================	  hfiber (f t) y	  → ClosedUnderOp B (λ (s : Sort σ) (y0 : B s), in_image_hom s y0) (β y)	";
             responses[i]=data;
           
 
             i = 71;
-            data = "1 subgoal (ID 75)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  w : ne_list.notations.ne_list (Sort σ)	  α : Operation A (ne_list.cons t w)	  β : Operation B (ne_list.cons t w)	  P : OpPreserving f α β	  IHw : forall (α : Operation A w) (β : Operation B w),	        OpPreserving f α β → ClosedUnderOp B in_image_hom β	  y : B t	  x : A t	  p : f t x = y	  ============================	  ClosedUnderOp B in_image_hom (β y)	";
+            data = "1 subgoal (ID 106)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  w : ne_list.notations.ne_list (Sort σ)	  α : Operation A (ne_list.cons t w)	  β : Operation B (ne_list.cons t w)	  P : OpPreserving f α β	  IHw : forall (α : Operation A w) (β : Operation B w),	        OpPreserving f α β	        → ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom s y) β	  y : B t	  x : A t	  p : f t x = y	  ============================	  ClosedUnderOp B (λ (s : Sort σ) (y0 : B s), in_image_hom s y0) (β y)	";
             responses[i]=data;
           
 
             i = 72;
-            data = "1 subgoal (ID 76)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  w : ne_list.notations.ne_list (Sort σ)	  α : Operation A (ne_list.cons t w)	  β : Operation B (ne_list.cons t w)	  P : OpPreserving f α β	  IHw : forall (α : Operation A w) (β : Operation B w),	        OpPreserving f α β → ClosedUnderOp B in_image_hom β	  y : B t	  x : A t	  p : f t x = y	  ============================	  OpPreserving f (α x) (β y)	";
+            data = "1 subgoal (ID 107)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  w : ne_list.notations.ne_list (Sort σ)	  α : Operation A (ne_list.cons t w)	  β : Operation B (ne_list.cons t w)	  P : OpPreserving f α β	  IHw : forall (α : Operation A w) (β : Operation B w),	        OpPreserving f α β	        → ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom s y) β	  y : B t	  x : A t	  p : f t x = y	  ============================	  OpPreserving f (α x) (β y)	";
             responses[i]=data;
           
 
@@ -393,7 +393,7 @@
           
 
             i = 75;
-            data = "1 subgoal (ID 21)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  ============================	  IsClosedUnderOps B in_image_hom	";
+            data = "1 subgoal (ID 21)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  ============================	  IsClosedUnderOps B (λ (s : Sort σ) (y : B s), in_image_hom s y)	";
             responses[i]=data;
           
 
@@ -403,7 +403,7 @@
           
 
             i = 77;
-            data = "1 subgoal (ID 23)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  u : Symbol σ	  ============================	  ClosedUnderOp B in_image_hom (u ^^ B)	";
+            data = "1 subgoal (ID 23)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  u : Symbol σ	  ============================	  ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom s y) (u ^^ B)	";
             responses[i]=data;
           
 
@@ -418,7 +418,7 @@
           
 
             i = 80;
-            data = "";
+            data = "<infomsg>is_subalgebra_predicate_in_image_hom is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -468,12 +468,12 @@
           
 
             i = 90;
-            data = "<infomsg>H is declared</infomsg>	<infomsg>σ is declared</infomsg>	<infomsg>A is declared</infomsg>	<infomsg>B is declared</infomsg>	<infomsg>IsHSetAlgebra0 is declared</infomsg>	<infomsg>f is declared</infomsg>	<infomsg>hom is declared</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
             i = 91;
-            data = "";
+            data = "<infomsg>H is declared</infomsg>	<infomsg>σ is declared</infomsg>	<infomsg>A is declared</infomsg>	<infomsg>B is declared</infomsg>	<infomsg>IsHSetAlgebra0 is declared</infomsg>	<infomsg>f is declared</infomsg>	<infomsg>hom is declared</infomsg>	";
             responses[i]=data;
           
 
@@ -533,322 +533,322 @@
           
 
             i = 103;
-            data = "1 subgoal (ID 39)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  ============================	  (A / cong_ker f) s → (B & in_image_hom f) s	";
+            data = "";
             responses[i]=data;
           
 
             i = 104;
-            data = "";
+            data = "1 subgoal (ID 39)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  ============================	  (A / cong_ker f) s	  → (B & (λ (s0 : Sort σ) (y : B s0), in_image_hom f s0 y)) s	";
             responses[i]=data;
           
 
             i = 105;
-            data = "1 subgoal (ID 298)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  ============================	  forall x y : A s,	  cong_ker f s x y → (f s x; tr (x; 1)) = (f s y; tr (y; 1))	";
+            data = "";
             responses[i]=data;
           
 
             i = 106;
-            data = "1 subgoal (ID 301)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  x, y : A s	  p : cong_ker f s x y	  ============================	  (f s x; tr (x; 1)) = (f s y; tr (y; 1))	";
+            data = "1 subgoal (ID 506)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  ============================	  forall x y : A s,	  cong_ker f s x y → (f s x; tr (x; 1)) = (f s y; tr (y; 1))	";
             responses[i]=data;
           
 
             i = 107;
-            data = "No more subgoals.	";
+            data = "1 subgoal (ID 509)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  x, y : A s	  p : cong_ker f s x y	  ============================	  (f s x; tr (x; 1)) = (f s y; tr (y; 1))	";
             responses[i]=data;
           
 
             i = 108;
-            data = "<infomsg>def_first_isomorphism is defined</infomsg>	";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 
             i = 109;
-            data = "1 subgoal (ID 91)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  w : SymbolType σ	  α : Operation A w	  β : Operation B w	  γ : Operation (A / cong_ker f) w	  C : ClosedUnderOp B (in_image_hom f) β	  P : OpPreserving f α β	  G : ComputeOpQuotient A (cong_ker f) α γ	  ============================	  OpPreserving def_first_isomorphism γ (op_subalgebra B (in_image_hom f) β C)	";
+            data = "<infomsg>def_first_isomorphism is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 110;
-            data = "";
+            data = "1 subgoal (ID 91)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  w : SymbolType σ	  α : Operation A w	  β : Operation B w	  γ : Operation (A / cong_ker f) w	  C : ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β	  P : OpPreserving f α β	  G : ComputeOpQuotient A (cong_ker f) α γ	  ============================	  OpPreserving def_first_isomorphism γ	    (op_subalgebra B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β C)	";
             responses[i]=data;
           
 
             i = 111;
-            data = "2 subgoals (ID 116)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  α : Operation A (ne_list.one t)	  β : Operation B (ne_list.one t)	  γ : Operation (A / cong_ker f) (ne_list.one t)	  C : ClosedUnderOp B (in_image_hom f) β	  P : OpPreserving f α β	  G : ComputeOpQuotient A (cong_ker f) α γ	  ============================	  OpPreserving def_first_isomorphism γ (op_subalgebra B (in_image_hom f) β C)		subgoal 2 (ID 131) is:	 OpPreserving def_first_isomorphism γ (op_subalgebra B (in_image_hom f) β C)	";
+            data = "";
             responses[i]=data;
           
 
             i = 112;
-            data = "1 subgoal (ID 116)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  α : Operation A (ne_list.one t)	  β : Operation B (ne_list.one t)	  γ : Operation (A / cong_ker f) (ne_list.one t)	  C : ClosedUnderOp B (in_image_hom f) β	  P : OpPreserving f α β	  G : ComputeOpQuotient A (cong_ker f) α γ	  ============================	  OpPreserving def_first_isomorphism γ (op_subalgebra B (in_image_hom f) β C)	1 subgoal (ID 148)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  α : Operation A (ne_list.one t)	  β : Operation B (ne_list.one t)	  γ : Operation (A / cong_ker f) (ne_list.one t)	  C : ClosedUnderOp B (in_image_hom f) β	  P : OpPreserving f α β	  G : ComputeOpQuotient A (cong_ker f) α γ	  ============================	  (def_first_isomorphism t γ).1 = (op_subalgebra B (in_image_hom f) β C).1	";
+            data = "2 subgoals (ID 116)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  α : Operation A (ne_list.one t)	  β : Operation B (ne_list.one t)	  γ : Operation (A / cong_ker f) (ne_list.one t)	  C : ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β	  P : OpPreserving f α β	  G : ComputeOpQuotient A (cong_ker f) α γ	  ============================	  OpPreserving def_first_isomorphism γ	    (op_subalgebra B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β C)		subgoal 2 (ID 131) is:	 OpPreserving def_first_isomorphism γ	   (op_subalgebra B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β C)	";
             responses[i]=data;
           
 
             i = 113;
-            data = "1 subgoal (ID 150)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  α : Operation A (ne_list.one t)	  β : Operation B (ne_list.one t)	  C : ClosedUnderOp B (in_image_hom f) β	  P : OpPreserving f α β	  ============================	  forall γ : Operation (A / cong_ker f) (ne_list.one t),	  ComputeOpQuotient A (cong_ker f) α γ	  → (def_first_isomorphism t γ).1 = (op_subalgebra B (in_image_hom f) β C).1	";
+            data = "1 subgoal (ID 116)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  α : Operation A (ne_list.one t)	  β : Operation B (ne_list.one t)	  γ : Operation (A / cong_ker f) (ne_list.one t)	  C : ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β	  P : OpPreserving f α β	  G : ComputeOpQuotient A (cong_ker f) α γ	  ============================	  OpPreserving def_first_isomorphism γ	    (op_subalgebra B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β C)	1 subgoal (ID 148)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  α : Operation A (ne_list.one t)	  β : Operation B (ne_list.one t)	  γ : Operation (A / cong_ker f) (ne_list.one t)	  C : ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β	  P : OpPreserving f α β	  G : ComputeOpQuotient A (cong_ker f) α γ	  ============================	  (def_first_isomorphism t γ).1 =	  (op_subalgebra B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β C).1	";
             responses[i]=data;
           
 
             i = 114;
-            data = "1 subgoal (ID 238)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  α : Operation A (ne_list.one t)	  β : Operation B (ne_list.one t)	  C : ClosedUnderOp B (in_image_hom f) β	  P : OpPreserving f α β	  ============================	  forall x : A t,	  ComputeOpQuotient A (cong_ker f) α (class_of (cong_ker f t) x)	  → (def_first_isomorphism t (class_of (cong_ker f t) x)).1 =	    (op_subalgebra B (in_image_hom f) β C).1	";
+            data = "1 subgoal (ID 150)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  α : Operation A (ne_list.one t)	  β : Operation B (ne_list.one t)	  C : ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β	  P : OpPreserving f α β	  ============================	  forall γ : Operation (A / cong_ker f) (ne_list.one t),	  ComputeOpQuotient A (cong_ker f) α γ	  → (def_first_isomorphism t γ).1 =	    (op_subalgebra B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β C).1	";
             responses[i]=data;
           
 
             i = 115;
-            data = "1 subgoal (ID 240)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  α : Operation A (ne_list.one t)	  β : Operation B (ne_list.one t)	  C : ClosedUnderOp B (in_image_hom f) β	  P : OpPreserving f α β	  x : A t	  G : ComputeOpQuotient A (cong_ker f) α (class_of (cong_ker f t) x)	  ============================	  (def_first_isomorphism t (class_of (cong_ker f t) x)).1 =	  (op_subalgebra B (in_image_hom f) β C).1	";
+            data = "1 subgoal (ID 238)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  α : Operation A (ne_list.one t)	  β : Operation B (ne_list.one t)	  C : ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β	  P : OpPreserving f α β	  ============================	  forall x : A t,	  ComputeOpQuotient A (cong_ker f) α (class_of (cong_ker f t) x)	  → (def_first_isomorphism t (class_of (cong_ker f t) x)).1 =	    (op_subalgebra B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β C).1	";
             responses[i]=data;
           
 
             i = 116;
-            data = "1 subgoal (ID 250)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  α : Operation A (ne_list.one t)	  C : ClosedUnderOp B (in_image_hom f) (f t α)	  x : A t	  G : ComputeOpQuotient A (cong_ker f) α (class_of (cong_ker f t) x)	  ============================	  (def_first_isomorphism t (class_of (cong_ker f t) x)).1 =	  (op_subalgebra B (in_image_hom f) (f t α) C).1	";
+            data = "1 subgoal (ID 240)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  α : Operation A (ne_list.one t)	  β : Operation B (ne_list.one t)	  C : ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β	  P : OpPreserving f α β	  x : A t	  G : ComputeOpQuotient A (cong_ker f) α (class_of (cong_ker f t) x)	  ============================	  (def_first_isomorphism t (class_of (cong_ker f t) x)).1 =	  (op_subalgebra B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β C).1	";
             responses[i]=data;
           
 
             i = 117;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 131)		subgoal 1 (ID 131) is:	 OpPreserving def_first_isomorphism γ (op_subalgebra B (in_image_hom f) β C)	";
+            data = "1 subgoal (ID 250)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  α : Operation A (ne_list.one t)	  C : ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom f s y) (f t α)	  x : A t	  G : ComputeOpQuotient A (cong_ker f) α (class_of (cong_ker f t) x)	  ============================	  (def_first_isomorphism t (class_of (cong_ker f t) x)).1 =	  (op_subalgebra B (λ (s : Sort σ) (y : B s), in_image_hom f s y) (f t α) C).1	";
             responses[i]=data;
           
 
             i = 118;
-            data = "1 subgoal (ID 131)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  w : ne_list.notations.ne_list (Sort σ)	  α : Operation A (ne_list.cons t w)	  β : Operation B (ne_list.cons t w)	  γ : Operation (A / cong_ker f) (ne_list.cons t w)	  C : ClosedUnderOp B (in_image_hom f) β	  P : OpPreserving f α β	  G : ComputeOpQuotient A (cong_ker f) α γ	  IHw : forall (α : Operation A w) (β : Operation B w)	        (γ : Operation (A / cong_ker f) w)	        (C : ClosedUnderOp B (in_image_hom f) β),	        OpPreserving f α β	        → ComputeOpQuotient A (cong_ker f) α γ	          → OpPreserving def_first_isomorphism γ	              (op_subalgebra B (in_image_hom f) β C)	  ============================	  OpPreserving def_first_isomorphism γ (op_subalgebra B (in_image_hom f) β C)	1 subgoal (ID 331)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  w : ne_list.notations.ne_list (Sort σ)	  α : Operation A (ne_list.cons t w)	  β : Operation B (ne_list.cons t w)	  γ : Operation (A / cong_ker f) (ne_list.cons t w)	  C : ClosedUnderOp B (in_image_hom f) β	  P : OpPreserving f α β	  G : ComputeOpQuotient A (cong_ker f) α γ	  IHw : forall (α : Operation A w) (β : Operation B w)	        (γ : Operation (A / cong_ker f) w)	        (C : ClosedUnderOp B (in_image_hom f) β),	        OpPreserving f α β	        → ComputeOpQuotient A (cong_ker f) α γ	          → OpPreserving def_first_isomorphism γ	              (op_subalgebra B (in_image_hom f) β C)	  ============================	  forall x : A t,	  (fix OpPreserving (w0 : SymbolType σ) :	     Operation (A / cong_ker f) w0 → Operation (B & in_image_hom f) w0 → Type :=	     match	       w0 as w1	       return	         (Operation (A / cong_ker f) w1	          → Operation (B & in_image_hom f) w1 → Type)	     with	     | ne_list.one s =>	         λ (α0 : Operation (A / cong_ker f) (ne_list.one s))	         (β0 : Operation (B & in_image_hom f) (ne_list.one s)),	         def_first_isomorphism s α0 = β0	     | ne_list.cons s y =>	         λ (α0 : Operation (A / cong_ker f) (ne_list.cons s y))	         (β0 : Operation (B & in_image_hom f) (ne_list.cons s y)),	         forall x0 : (A / cong_ker f) s,	         OpPreserving y (α0 x0) (β0 (def_first_isomorphism s x0))	     end) w (γ (class_of (cong_ker f t) x))	    (op_subalgebra B (in_image_hom f) β C	       (def_first_isomorphism t (class_of (cong_ker f t) x)))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 131)		subgoal 1 (ID 131) is:	 OpPreserving def_first_isomorphism γ	   (op_subalgebra B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β C)	";
             responses[i]=data;
           
 
             i = 119;
-            data = "1 subgoal (ID 332)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  w : ne_list.notations.ne_list (Sort σ)	  α : Operation A (ne_list.cons t w)	  β : Operation B (ne_list.cons t w)	  γ : Operation (A / cong_ker f) (ne_list.cons t w)	  C : ClosedUnderOp B (in_image_hom f) β	  P : OpPreserving f α β	  G : ComputeOpQuotient A (cong_ker f) α γ	  IHw : forall (α : Operation A w) (β : Operation B w)	        (γ : Operation (A / cong_ker f) w)	        (C : ClosedUnderOp B (in_image_hom f) β),	        OpPreserving f α β	        → ComputeOpQuotient A (cong_ker f) α γ	          → OpPreserving def_first_isomorphism γ	              (op_subalgebra B (in_image_hom f) β C)	  x : A t	  ============================	  (fix OpPreserving (w0 : SymbolType σ) :	     Operation (A / cong_ker f) w0 → Operation (B & in_image_hom f) w0 → Type :=	     match	       w0 as w1	       return	         (Operation (A / cong_ker f) w1	          → Operation (B & in_image_hom f) w1 → Type)	     with	     | ne_list.one s =>	         λ (α0 : Operation (A / cong_ker f) (ne_list.one s))	         (β0 : Operation (B & in_image_hom f) (ne_list.one s)),	         def_first_isomorphism s α0 = β0	     | ne_list.cons s y =>	         λ (α0 : Operation (A / cong_ker f) (ne_list.cons s y))	         (β0 : Operation (B & in_image_hom f) (ne_list.cons s y)),	         forall x0 : (A / cong_ker f) s,	         OpPreserving y (α0 x0) (β0 (def_first_isomorphism s x0))	     end) w (γ (class_of (cong_ker f t) x))	    (op_subalgebra B (in_image_hom f) β C	       (def_first_isomorphism t (class_of (cong_ker f t) x)))	";
+            data = "1 subgoal (ID 131)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  w : ne_list.notations.ne_list (Sort σ)	  α : Operation A (ne_list.cons t w)	  β : Operation B (ne_list.cons t w)	  γ : Operation (A / cong_ker f) (ne_list.cons t w)	  C : ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β	  P : OpPreserving f α β	  G : ComputeOpQuotient A (cong_ker f) α γ	  IHw : forall (α : Operation A w) (β : Operation B w)	        (γ : Operation (A / cong_ker f) w)	        (C : ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β),	        OpPreserving f α β	        → ComputeOpQuotient A (cong_ker f) α γ	          → OpPreserving def_first_isomorphism γ	              (op_subalgebra B (λ (s : Sort σ) (y : B s), in_image_hom f s y)	                 β C)	  ============================	  OpPreserving def_first_isomorphism γ	    (op_subalgebra B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β C)	1 subgoal (ID 331)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  w : ne_list.notations.ne_list (Sort σ)	  α : Operation A (ne_list.cons t w)	  β : Operation B (ne_list.cons t w)	  γ : Operation (A / cong_ker f) (ne_list.cons t w)	  C : ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β	  P : OpPreserving f α β	  G : ComputeOpQuotient A (cong_ker f) α γ	  IHw : forall (α : Operation A w) (β : Operation B w)	        (γ : Operation (A / cong_ker f) w)	        (C : ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β),	        OpPreserving f α β	        → ComputeOpQuotient A (cong_ker f) α γ	          → OpPreserving def_first_isomorphism γ	              (op_subalgebra B (λ (s : Sort σ) (y : B s), in_image_hom f s y)	                 β C)	  ============================	  forall x : A t,	  (fix OpPreserving (w0 : SymbolType σ) :	     Operation (A / cong_ker f) w0	     → Operation (B & (λ (s : Sort σ) (y : B s), in_image_hom f s y)) w0	       → Type :=	     match	       w0 as w1	       return	         (Operation (A / cong_ker f) w1	          → Operation (B & (λ (s : Sort σ) (y : B s), in_image_hom f s y)) w1	            → Type)	     with	     | ne_list.one s =>	         λ (α0 : Operation (A / cong_ker f) (ne_list.one s))	         (β0 : Operation	                 (B & (λ (s0 : Sort σ) (y : B s0), in_image_hom f s0 y))	                 (ne_list.one s)), def_first_isomorphism s α0 = β0	     | ne_list.cons s y =>	         λ (α0 : Operation (A / cong_ker f) (ne_list.cons s y))	         (β0 : Operation	                 (B & (λ (s0 : Sort σ) (y0 : B s0), in_image_hom f s0 y0))	                 (ne_list.cons s y)),	         forall x0 : (A / cong_ker f) s,	         OpPreserving y (α0 x0) (β0 (def_first_isomorphism s x0))	     end) w (γ (class_of (cong_ker f t) x))	    (op_subalgebra B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β C	       (def_first_isomorphism t (class_of (cong_ker f t) x)))	";
             responses[i]=data;
           
 
             i = 120;
-            data = "2 subgoals (ID 337)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  w : ne_list.notations.ne_list (Sort σ)	  α : Operation A (ne_list.cons t w)	  β : Operation B (ne_list.cons t w)	  γ : Operation (A / cong_ker f) (ne_list.cons t w)	  C : ClosedUnderOp B (in_image_hom f) β	  P : OpPreserving f α β	  G : ComputeOpQuotient A (cong_ker f) α γ	  IHw : forall (α : Operation A w) (β : Operation B w)	        (γ : Operation (A / cong_ker f) w)	        (C : ClosedUnderOp B (in_image_hom f) β),	        OpPreserving f α β	        → ComputeOpQuotient A (cong_ker f) α γ	          → OpPreserving def_first_isomorphism γ	              (op_subalgebra B (in_image_hom f) β C)	  x : A t	  ============================	  OpPreserving f (α x) (β (f t x))		subgoal 2 (ID 338) is:	 ComputeOpQuotient A (cong_ker f) (α x) (γ (class_of (cong_ker f t) x))	";
+            data = "1 subgoal (ID 332)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  w : ne_list.notations.ne_list (Sort σ)	  α : Operation A (ne_list.cons t w)	  β : Operation B (ne_list.cons t w)	  γ : Operation (A / cong_ker f) (ne_list.cons t w)	  C : ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β	  P : OpPreserving f α β	  G : ComputeOpQuotient A (cong_ker f) α γ	  IHw : forall (α : Operation A w) (β : Operation B w)	        (γ : Operation (A / cong_ker f) w)	        (C : ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β),	        OpPreserving f α β	        → ComputeOpQuotient A (cong_ker f) α γ	          → OpPreserving def_first_isomorphism γ	              (op_subalgebra B (λ (s : Sort σ) (y : B s), in_image_hom f s y)	                 β C)	  x : A t	  ============================	  (fix OpPreserving (w0 : SymbolType σ) :	     Operation (A / cong_ker f) w0	     → Operation (B & (λ (s : Sort σ) (y : B s), in_image_hom f s y)) w0	       → Type :=	     match	       w0 as w1	       return	         (Operation (A / cong_ker f) w1	          → Operation (B & (λ (s : Sort σ) (y : B s), in_image_hom f s y)) w1	            → Type)	     with	     | ne_list.one s =>	         λ (α0 : Operation (A / cong_ker f) (ne_list.one s))	         (β0 : Operation	                 (B & (λ (s0 : Sort σ) (y : B s0), in_image_hom f s0 y))	                 (ne_list.one s)), def_first_isomorphism s α0 = β0	     | ne_list.cons s y =>	         λ (α0 : Operation (A / cong_ker f) (ne_list.cons s y))	         (β0 : Operation	                 (B & (λ (s0 : Sort σ) (y0 : B s0), in_image_hom f s0 y0))	                 (ne_list.cons s y)),	         forall x0 : (A / cong_ker f) s,	         OpPreserving y (α0 x0) (β0 (def_first_isomorphism s x0))	     end) w (γ (class_of (cong_ker f t) x))	    (op_subalgebra B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β C	       (def_first_isomorphism t (class_of (cong_ker f t) x)))	";
             responses[i]=data;
           
 
             i = 121;
-            data = "1 subgoal (ID 337)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  w : ne_list.notations.ne_list (Sort σ)	  α : Operation A (ne_list.cons t w)	  β : Operation B (ne_list.cons t w)	  γ : Operation (A / cong_ker f) (ne_list.cons t w)	  C : ClosedUnderOp B (in_image_hom f) β	  P : OpPreserving f α β	  G : ComputeOpQuotient A (cong_ker f) α γ	  IHw : forall (α : Operation A w) (β : Operation B w)	        (γ : Operation (A / cong_ker f) w)	        (C : ClosedUnderOp B (in_image_hom f) β),	        OpPreserving f α β	        → ComputeOpQuotient A (cong_ker f) α γ	          → OpPreserving def_first_isomorphism γ	              (op_subalgebra B (in_image_hom f) β C)	  x : A t	  ============================	  OpPreserving f (α x) (β (f t x))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 338)		subgoal 1 (ID 338) is:	 ComputeOpQuotient A (cong_ker f) (α x) (γ (class_of (cong_ker f t) x))	";
+            data = "2 subgoals (ID 337)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  w : ne_list.notations.ne_list (Sort σ)	  α : Operation A (ne_list.cons t w)	  β : Operation B (ne_list.cons t w)	  γ : Operation (A / cong_ker f) (ne_list.cons t w)	  C : ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β	  P : OpPreserving f α β	  G : ComputeOpQuotient A (cong_ker f) α γ	  IHw : forall (α : Operation A w) (β : Operation B w)	        (γ : Operation (A / cong_ker f) w)	        (C : ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β),	        OpPreserving f α β	        → ComputeOpQuotient A (cong_ker f) α γ	          → OpPreserving def_first_isomorphism γ	              (op_subalgebra B (λ (s : Sort σ) (y : B s), in_image_hom f s y)	                 β C)	  x : A t	  ============================	  OpPreserving f (α x) (β (f t x))		subgoal 2 (ID 338) is:	 ComputeOpQuotient A (cong_ker f) (α x) (γ (class_of (cong_ker f t) x))	";
             responses[i]=data;
           
 
             i = 122;
-            data = "1 subgoal (ID 338)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  w : ne_list.notations.ne_list (Sort σ)	  α : Operation A (ne_list.cons t w)	  β : Operation B (ne_list.cons t w)	  γ : Operation (A / cong_ker f) (ne_list.cons t w)	  C : ClosedUnderOp B (in_image_hom f) β	  P : OpPreserving f α β	  G : ComputeOpQuotient A (cong_ker f) α γ	  IHw : forall (α : Operation A w) (β : Operation B w)	        (γ : Operation (A / cong_ker f) w)	        (C : ClosedUnderOp B (in_image_hom f) β),	        OpPreserving f α β	        → ComputeOpQuotient A (cong_ker f) α γ	          → OpPreserving def_first_isomorphism γ	              (op_subalgebra B (in_image_hom f) β C)	  x : A t	  ============================	  ComputeOpQuotient A (cong_ker f) (α x) (γ (class_of (cong_ker f t) x))	1 subgoal (ID 340)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  w : ne_list.notations.ne_list (Sort σ)	  α : Operation A (ne_list.cons t w)	  β : Operation B (ne_list.cons t w)	  γ : Operation (A / cong_ker f) (ne_list.cons t w)	  C : ClosedUnderOp B (in_image_hom f) β	  P : OpPreserving f α β	  G : ComputeOpQuotient A (cong_ker f) α γ	  IHw : forall (α : Operation A w) (β : Operation B w)	        (γ : Operation (A / cong_ker f) w)	        (C : ClosedUnderOp B (in_image_hom f) β),	        OpPreserving f α β	        → ComputeOpQuotient A (cong_ker f) α γ	          → OpPreserving def_first_isomorphism γ	              (op_subalgebra B (in_image_hom f) β C)	  x : A t	  a : FamilyProd A (dom_symboltype w)	  ============================	  ap_operation (γ (class_of (cong_ker f t) x))	    (map_family_prod (λ s : Sort σ, class_of (cong_ker f s)) a) =	  class_of (cong_ker f (cod_symboltype w)) (ap_operation (α x) a)	";
+            data = "1 subgoal (ID 337)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  w : ne_list.notations.ne_list (Sort σ)	  α : Operation A (ne_list.cons t w)	  β : Operation B (ne_list.cons t w)	  γ : Operation (A / cong_ker f) (ne_list.cons t w)	  C : ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β	  P : OpPreserving f α β	  G : ComputeOpQuotient A (cong_ker f) α γ	  IHw : forall (α : Operation A w) (β : Operation B w)	        (γ : Operation (A / cong_ker f) w)	        (C : ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β),	        OpPreserving f α β	        → ComputeOpQuotient A (cong_ker f) α γ	          → OpPreserving def_first_isomorphism γ	              (op_subalgebra B (λ (s : Sort σ) (y : B s), in_image_hom f s y)	                 β C)	  x : A t	  ============================	  OpPreserving f (α x) (β (f t x))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 338)		subgoal 1 (ID 338) is:	 ComputeOpQuotient A (cong_ker f) (α x) (γ (class_of (cong_ker f t) x))	";
             responses[i]=data;
           
 
             i = 123;
-            data = "No more subgoals.	";
+            data = "1 subgoal (ID 338)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  w : ne_list.notations.ne_list (Sort σ)	  α : Operation A (ne_list.cons t w)	  β : Operation B (ne_list.cons t w)	  γ : Operation (A / cong_ker f) (ne_list.cons t w)	  C : ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β	  P : OpPreserving f α β	  G : ComputeOpQuotient A (cong_ker f) α γ	  IHw : forall (α : Operation A w) (β : Operation B w)	        (γ : Operation (A / cong_ker f) w)	        (C : ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β),	        OpPreserving f α β	        → ComputeOpQuotient A (cong_ker f) α γ	          → OpPreserving def_first_isomorphism γ	              (op_subalgebra B (λ (s : Sort σ) (y : B s), in_image_hom f s y)	                 β C)	  x : A t	  ============================	  ComputeOpQuotient A (cong_ker f) (α x) (γ (class_of (cong_ker f t) x))	1 subgoal (ID 340)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  t : Sort σ	  w : ne_list.notations.ne_list (Sort σ)	  α : Operation A (ne_list.cons t w)	  β : Operation B (ne_list.cons t w)	  γ : Operation (A / cong_ker f) (ne_list.cons t w)	  C : ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β	  P : OpPreserving f α β	  G : ComputeOpQuotient A (cong_ker f) α γ	  IHw : forall (α : Operation A w) (β : Operation B w)	        (γ : Operation (A / cong_ker f) w)	        (C : ClosedUnderOp B (λ (s : Sort σ) (y : B s), in_image_hom f s y) β),	        OpPreserving f α β	        → ComputeOpQuotient A (cong_ker f) α γ	          → OpPreserving def_first_isomorphism γ	              (op_subalgebra B (λ (s : Sort σ) (y : B s), in_image_hom f s y)	                 β C)	  x : A t	  a : FamilyProd A (dom_symboltype w)	  ============================	  ap_operation (γ (class_of (cong_ker f t) x))	    (map_family_prod (λ s : Sort σ, class_of (cong_ker f s)) a) =	  class_of (cong_ker f (cod_symboltype w)) (ap_operation (α x) a)	";
             responses[i]=data;
           
 
             i = 124;
-            data = "<infomsg>oppreserving_first_isomorphism is defined</infomsg>	";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 
             i = 125;
-            data = "1 subgoal (ID 95)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  ============================	  IsHomomorphism def_first_isomorphism	";
+            data = "<infomsg>oppreserving_first_isomorphism is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 126;
-            data = "";
+            data = "1 subgoal (ID 95)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  ============================	  IsHomomorphism def_first_isomorphism	";
             responses[i]=data;
           
 
             i = 127;
-            data = "1 subgoal (ID 97)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  u : Symbol σ	  ============================	  OpPreserving def_first_isomorphism (u ^^ A / cong_ker f)	    (u ^^ B & in_image_hom f)	";
+            data = "";
             responses[i]=data;
           
 
             i = 128;
-            data = "2 subgoals (ID 100)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  u : Symbol σ	  ============================	  OpPreserving f (u ^^ A) (u ^^ B)		subgoal 2 (ID 101) is:	 ComputeOpQuotient A (cong_ker f) (u ^^ A) (u ^^ A / cong_ker f)	";
+            data = "1 subgoal (ID 97)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  u : Symbol σ	  ============================	  OpPreserving def_first_isomorphism (u ^^ A / cong_ker f)	    (u ^^ B & (λ (s : Sort σ) (y : B s), in_image_hom f s y))	";
             responses[i]=data;
           
 
             i = 129;
-            data = "1 subgoal (ID 100)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  u : Symbol σ	  ============================	  OpPreserving f (u ^^ A) (u ^^ B)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 101)		subgoal 1 (ID 101) is:	 ComputeOpQuotient A (cong_ker f) (u ^^ A) (u ^^ A / cong_ker f)	";
+            data = "2 subgoals (ID 100)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  u : Symbol σ	  ============================	  OpPreserving f (u ^^ A) (u ^^ B)		subgoal 2 (ID 101) is:	 ComputeOpQuotient A (cong_ker f) (u ^^ A) (u ^^ A / cong_ker f)	";
             responses[i]=data;
           
 
             i = 130;
-            data = "1 subgoal (ID 101)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  u : Symbol σ	  ============================	  ComputeOpQuotient A (cong_ker f) (u ^^ A) (u ^^ A / cong_ker f)	No more subgoals.	";
+            data = "1 subgoal (ID 100)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  u : Symbol σ	  ============================	  OpPreserving f (u ^^ A) (u ^^ B)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 101)		subgoal 1 (ID 101) is:	 ComputeOpQuotient A (cong_ker f) (u ^^ A) (u ^^ A / cong_ker f)	";
             responses[i]=data;
           
 
             i = 131;
-            data = "<infomsg>is_homomorphism_first_isomorphism is defined</infomsg>	";
+            data = "1 subgoal (ID 101)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  u : Symbol σ	  ============================	  ComputeOpQuotient A (cong_ker f) (u ^^ A) (u ^^ A / cong_ker f)	No more subgoals.	";
             responses[i]=data;
           
 
             i = 132;
-            data = "<infomsg>hom_first_isomorphism is defined</infomsg>	";
+            data = "<infomsg>is_homomorphism_first_isomorphism is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 133;
-            data = "1 subgoal (ID 135)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  ============================	  IsEmbedding (hom_first_isomorphism s)	";
+            data = "<infomsg>hom_first_isomorphism is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 134;
-            data = "";
+            data = "1 subgoal (ID 135)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  ============================	  IsEmbedding (hom_first_isomorphism s)	";
             responses[i]=data;
           
 
             i = 135;
-            data = "1 subgoal (ID 149)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  ============================	  isinj (hom_first_isomorphism s)	";
+            data = "";
             responses[i]=data;
           
 
             i = 136;
-            data = "1 subgoal (ID 268)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  ============================	  forall (x : A s) (x1 : (A / cong_ker f) s),	  hom_first_isomorphism s (class_of (cong_ker f s) x) =	  hom_first_isomorphism s x1 → class_of (cong_ker f s) x = x1	";
+            data = "1 subgoal (ID 149)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  ============================	  isinj (hom_first_isomorphism s)	";
             responses[i]=data;
           
 
             i = 137;
-            data = "1 subgoal (ID 269)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  x : A s	  ============================	  forall x1 : (A / cong_ker f) s,	  hom_first_isomorphism s (class_of (cong_ker f s) x) =	  hom_first_isomorphism s x1 → class_of (cong_ker f s) x = x1	";
+            data = "1 subgoal (ID 268)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  ============================	  forall (x : A s) (x1 : (A / cong_ker f) s),	  hom_first_isomorphism s (class_of (cong_ker f s) x) =	  hom_first_isomorphism s x1 → class_of (cong_ker f s) x = x1	";
             responses[i]=data;
           
 
             i = 138;
-            data = "1 subgoal (ID 352)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  x : A s	  ============================	  forall x0 : A s,	  hom_first_isomorphism s (class_of (cong_ker f s) x) =	  hom_first_isomorphism s (class_of (cong_ker f s) x0)	  → class_of (cong_ker f s) x = class_of (cong_ker f s) x0	";
+            data = "1 subgoal (ID 269)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  x : A s	  ============================	  forall x1 : (A / cong_ker f) s,	  hom_first_isomorphism s (class_of (cong_ker f s) x) =	  hom_first_isomorphism s x1 → class_of (cong_ker f s) x = x1	";
             responses[i]=data;
           
 
             i = 139;
-            data = "1 subgoal (ID 354)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  x, y : A s	  p : hom_first_isomorphism s (class_of (cong_ker f s) x) =	      hom_first_isomorphism s (class_of (cong_ker f s) y)	  ============================	  class_of (cong_ker f s) x = class_of (cong_ker f s) y	";
+            data = "1 subgoal (ID 352)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  x : A s	  ============================	  forall x0 : A s,	  hom_first_isomorphism s (class_of (cong_ker f s) x) =	  hom_first_isomorphism s (class_of (cong_ker f s) x0)	  → class_of (cong_ker f s) x = class_of (cong_ker f s) x0	";
             responses[i]=data;
           
 
             i = 140;
-            data = "1 subgoal (ID 356)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  x, y : A s	  p : hom_first_isomorphism s (class_of (cong_ker f s) x) =	      hom_first_isomorphism s (class_of (cong_ker f s) y)	  ============================	  cong_ker f s x y	";
+            data = "1 subgoal (ID 354)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  x, y : A s	  p : hom_first_isomorphism s (class_of (cong_ker f s) x) =	      hom_first_isomorphism s (class_of (cong_ker f s) y)	  ============================	  class_of (cong_ker f s) x = class_of (cong_ker f s) y	";
             responses[i]=data;
           
 
             i = 141;
-            data = "No more subgoals.	";
+            data = "1 subgoal (ID 356)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  x, y : A s	  p : hom_first_isomorphism s (class_of (cong_ker f s) x) =	      hom_first_isomorphism s (class_of (cong_ker f s) y)	  ============================	  cong_ker f s x y	";
             responses[i]=data;
           
 
             i = 142;
-            data = "<infomsg>embedding_first_isomorphism is defined</infomsg>	";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 
             i = 143;
-            data = "1 subgoal (ID 139)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  ============================	  IsSurjection (hom_first_isomorphism s)	";
+            data = "<infomsg>embedding_first_isomorphism is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 144;
-            data = "";
+            data = "1 subgoal (ID 139)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  ============================	  IsSurjection (hom_first_isomorphism s)	";
             responses[i]=data;
           
 
             i = 145;
-            data = "1 subgoal (ID 142)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  ============================	  forall b : (B & in_image_hom f) s,	  merely (hfiber (hom_first_isomorphism s) b)	";
+            data = "";
             responses[i]=data;
           
 
             i = 146;
-            data = "1 subgoal (ID 147)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  x : B s	  M : in_image_hom f s x	  ============================	  merely (hfiber (hom_first_isomorphism s) (x; M))	";
+            data = "1 subgoal (ID 142)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  ============================	  forall b : (B & (λ (s0 : Sort σ) (y : B s0), in_image_hom f s0 y)) s,	  merely (hfiber (hom_first_isomorphism s) b)	";
             responses[i]=data;
           
 
             i = 147;
-            data = "1 subgoal (ID 156)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  x : B s	  M : in_image_hom f s x	  ============================	  hfiber (f s) x → merely (hfiber (hom_first_isomorphism s) (x; M))	";
+            data = "1 subgoal (ID 147)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  x : B s	  M : in_image_hom f s x	  ============================	  merely (hfiber (hom_first_isomorphism s) (x; M))	";
             responses[i]=data;
           
 
             i = 148;
-            data = "1 subgoal (ID 161)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  x : B s	  M : in_image_hom f s x	  y : A s	  Y : f s y = x	  ============================	  merely (hfiber (hom_first_isomorphism s) (x; M))	";
+            data = "1 subgoal (ID 156)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  x : B s	  M : in_image_hom f s x	  ============================	  hfiber (f s) x → merely (hfiber (hom_first_isomorphism s) (x; M))	";
             responses[i]=data;
           
 
             i = 149;
-            data = "1 subgoal (ID 164)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  x : B s	  M : in_image_hom f s x	  y : A s	  Y : f s y = x	  ============================	  hfiber (hom_first_isomorphism s) (x; M)	";
+            data = "1 subgoal (ID 161)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  x : B s	  M : in_image_hom f s x	  y : A s	  Y : f s y = x	  ============================	  merely (hfiber (hom_first_isomorphism s) (x; M))	";
             responses[i]=data;
           
 
             i = 150;
-            data = "1 subgoal (ID 170)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  x : B s	  M : in_image_hom f s x	  y : A s	  Y : f s y = x	  ============================	  hom_first_isomorphism s (class_of (cong_ker f s) y) = (x; M)	";
+            data = "1 subgoal (ID 164)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  x : B s	  M : in_image_hom f s x	  y : A s	  Y : f s y = x	  ============================	  hfiber (hom_first_isomorphism s) (x; M)	";
             responses[i]=data;
           
 
             i = 151;
-            data = "No more subgoals.	";
+            data = "1 subgoal (ID 170)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  x : B s	  M : in_image_hom f s x	  y : A s	  Y : f s y = x	  ============================	  hom_first_isomorphism s (class_of (cong_ker f s) y) = (x; M)	";
             responses[i]=data;
           
 
             i = 152;
-            data = "<infomsg>surjection_first_isomorphism is defined</infomsg>	";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 
             i = 153;
-            data = "1 subgoal (ID 144)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  ============================	  IsIsomorphism hom_first_isomorphism	";
+            data = "<infomsg>surjection_first_isomorphism is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 154;
-            data = "";
+            data = "1 subgoal (ID 144)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  ============================	  IsIsomorphism hom_first_isomorphism	";
             responses[i]=data;
           
 
             i = 155;
-            data = "1 subgoal (ID 146)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  ============================	  IsEquiv (hom_first_isomorphism s)	";
+            data = "";
             responses[i]=data;
           
 
             i = 156;
-            data = "No more subgoals.	";
+            data = "1 subgoal (ID 146)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  s : Sort σ	  ============================	  IsEquiv (hom_first_isomorphism s)	";
             responses[i]=data;
           
 
             i = 157;
-            data = "<infomsg>is_isomorphism_first_isomorphism is defined</infomsg>	";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 
             i = 158;
-            data = "1 subgoal (ID 177)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  ============================	  A / cong_ker f ≅ B & in_image_hom f	";
+            data = "<infomsg>is_isomorphism_first_isomorphism is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 159;
-            data = "";
+            data = "1 subgoal (ID 177)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  ============================	  A / cong_ker f ≅ B & (λ (s : Sort σ) (y : B s), in_image_hom f s y)	";
             responses[i]=data;
           
 
             i = 160;
-            data = "No more subgoals.	";
+            data = "";
             responses[i]=data;
           
 
             i = 161;
-            data = "<infomsg>isomorphic_first_isomorphism is defined</infomsg>	";
-            responses[i]=data;
-          
-
-            i = 162;
-            data = "1 subgoal (ID 211)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  ============================	  A / cong_ker f = B & in_image_hom f	";
-            responses[i]=data;
-          
-
-            i = 163;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 164;
             data = "No more subgoals.	";
             responses[i]=data;
           
 
+            i = 162;
+            data = "<infomsg>isomorphic_first_isomorphism is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 163;
+            data = "1 subgoal (ID 211)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  hom : IsHomomorphism f	  ============================	  A / cong_ker f = B & (λ (s : Sort σ) (y : B s), in_image_hom f s y)	";
+            responses[i]=data;
+          
+
+            i = 164;
+            data = "";
+            responses[i]=data;
+          
+
             i = 165;
-            data = "<infomsg>id_first_isomorphism is defined</infomsg>	";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 
             i = 166;
-            data = "";
+            data = "<infomsg>id_first_isomorphism is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -878,37 +878,37 @@
           
 
             i = 172;
-            data = "<infomsg>H is declared</infomsg>	<infomsg>σ is declared</infomsg>	<infomsg>A is declared</infomsg>	<infomsg>B is declared</infomsg>	<infomsg>IsHSetAlgebra0 is declared</infomsg>	<infomsg>f is declared</infomsg>	<infomsg>IsHomomorphism0 is declared</infomsg>	<infomsg>S is declared</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
             i = 173;
-            data = "1 subgoal (ID 28)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  S : forall s : Sort σ, IsSurjection (f s)	  ============================	  IsIsomorphism (hom_inc_subalgebra B (in_image_hom f))	";
+            data = "<infomsg>H is declared</infomsg>	<infomsg>σ is declared</infomsg>	<infomsg>A is declared</infomsg>	<infomsg>B is declared</infomsg>	<infomsg>IsHSetAlgebra0 is declared</infomsg>	<infomsg>f is declared</infomsg>	<infomsg>IsHomomorphism0 is declared</infomsg>	<infomsg>S is declared</infomsg>	";
             responses[i]=data;
           
 
             i = 174;
-            data = "";
+            data = "1 subgoal (ID 28)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  S : forall s : Sort σ, IsSurjection (f s)	  ============================	  IsIsomorphism	    (hom_inc_subalgebra B (λ (s : Sort σ) (y : B s), in_image_hom f s y))	";
             responses[i]=data;
           
 
             i = 175;
-            data = "No more subgoals.	";
+            data = "";
             responses[i]=data;
           
 
             i = 176;
-            data = "<infomsg>is_isomorphism_inc_first_isomorphism_surjection is defined</infomsg>	";
+            data = "1 subgoal (ID 30)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  S : forall s : Sort σ, IsSurjection (f s)	  ============================	  forall (s : Sort σ) (x : B s), in_image_hom f s x	";
             responses[i]=data;
           
 
             i = 177;
-            data = "";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 
             i = 178;
-            data = "";
+            data = "<infomsg>is_isomorphism_inc_first_isomorphism_surjection is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -933,57 +933,57 @@
           
 
             i = 183;
-            data = "<infomsg>hom_first_isomorphism_surjection is defined</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
             i = 184;
-            data = "1 subgoal (ID 80)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  S : forall s : Sort σ, IsSurjection (f s)	  ============================	  A / cong_ker f ≅ B	";
+            data = "";
             responses[i]=data;
           
 
             i = 185;
-            data = "";
+            data = "<infomsg>hom_first_isomorphism_surjection is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 186;
-            data = "No more subgoals.	";
+            data = "1 subgoal (ID 80)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  S : forall s : Sort σ, IsSurjection (f s)	  ============================	  A / cong_ker f ≅ B	";
             responses[i]=data;
           
 
             i = 187;
-            data = "<infomsg>isomorphic_first_isomorphism_surjection is defined</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
             i = 188;
-            data = "1 subgoal (ID 100)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  S : forall s : Sort σ, IsSurjection (f s)	  ============================	  A / cong_ker f = B	";
-            responses[i]=data;
-          
-
-            i = 189;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 190;
             data = "No more subgoals.	";
             responses[i]=data;
           
 
+            i = 189;
+            data = "<infomsg>isomorphic_first_isomorphism_surjection is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 190;
+            data = "1 subgoal (ID 100)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  S : forall s : Sort σ, IsSurjection (f s)	  ============================	  A / cong_ker f = B	";
+            responses[i]=data;
+          
+
             i = 191;
-            data = "<infomsg>id_first_isomorphism_surjection is defined</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
             i = 192;
-            data = "";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 
             i = 193;
-            data = "";
+            data = "<infomsg>id_first_isomorphism_surjection is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -1018,12 +1018,12 @@
           
 
             i = 200;
-            data = "";
+            data = "<infomsg>H is declared</infomsg>	<infomsg>σ is declared</infomsg>	<infomsg>A is declared</infomsg>	<infomsg>B is declared</infomsg>	<infomsg>IsHSetAlgebra0 is declared</infomsg>	<infomsg>f is declared</infomsg>	<infomsg>IsHomomorphism0 is declared</infomsg>	<infomsg>inj is declared</infomsg>	";
             responses[i]=data;
           
 
             i = 201;
-            data = "";
+            data = "1 subgoal (ID 32)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  inj : forall s : Sort σ, isinj (f s)	  ============================	  IsIsomorphism (hom_quotient (cong_ker f))	";
             responses[i]=data;
           
 
@@ -1033,6 +1033,126 @@
           
 
             i = 203;
+            data = "1 subgoal (ID 36)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  inj : forall s : Sort σ, isinj (f s)	  ============================	  forall (s : Sort σ) (x y : A s), cong_ker f s x y → x = y	";
+            responses[i]=data;
+          
+
+            i = 204;
+            data = "1 subgoal (ID 40)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  f : forall s : Sort σ, A s → B s	  IsHomomorphism0 : IsHomomorphism f	  inj : forall s : Sort σ, isinj (f s)	  s : Sort σ	  x, y : A s	  p : cong_ker f s x y	  ============================	  x = y	";
+            responses[i]=data;
+          
+
+            i = 205;
+            data = "No more subgoals.	";
+            responses[i]=data;
+          
+
+            i = 206;
+            data = "<infomsg>is_isomorphism_quotient_first_isomorphism_inj is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 207;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 208;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 209;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 210;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 211;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 212;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 213;
+            data = "<infomsg>hom_first_isomorphism_inj is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 214;
+            data = "<infomsg>isomorphic_first_isomorphism_inj is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 215;
+            data = "<infomsg>id_first_isomorphism_inj is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 216;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 217;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 218;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 219;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 220;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 221;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 222;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 223;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 224;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 225;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 226;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 227;
             data = "";
             responses[i]=data;
           
@@ -1365,8 +1485,8 @@ The next section defines an "in image predicate", <span class="inlinecode"><a cl
       mouseover(75, '0_3_15');
       "><br>
 <br>
-  <span class="id" title="keyword">Global Instance</span> <a name="is_closed_under_ops_in_image_hom"><span class="id" title="instance">is_closed_under_ops_in_image_hom</span></a><br>
-    : <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#IsClosedUnderOps"><span class="id" title="class">IsClosedUnderOps</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom.B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom"><span class="id" title="definition">in_image_hom</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Lemma</span> <a name="is_closed_under_ops_in_image_hom"><span class="id" title="lemma">is_closed_under_ops_in_image_hom</span></a><br>
+    : <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#IsClosedUnderOps"><span class="id" title="definition">IsClosedUnderOps</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom.B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom"><span class="id" title="definition">in_image_hom</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(76, '0_3_15');
@@ -1390,10 +1510,18 @@ The next section defines an "in image predicate", <span class="inlinecode"><a cl
       " onmouseover="
       mouseover(80, '0_3_15');
       "><br>
-<span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom"><span class="id" title="section">in_image_hom</span></a>.</span><span class="command" onmouseout="
+<br>
+  <span class="id" title="keyword">Global Instance</span> <a name="is_subalgebra_predicate_in_image_hom"><span class="id" title="instance">is_subalgebra_predicate_in_image_hom</span></a><br>
+    : <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#IsSubalgebraPredicate"><span class="id" title="class">IsSubalgebraPredicate</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom.B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom"><span class="id" title="definition">in_image_hom</span></a><br>
+    := <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#BuildIsSubalgebraPredicate"><span class="id" title="constructor">BuildIsSubalgebraPredicate</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#is_closed_under_ops_in_image_hom"><span class="id" title="lemma">is_closed_under_ops_in_image_hom</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(81, '0_3_15');
+      "><br>
+<span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom"><span class="id" title="section">in_image_hom</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(82, '0_3_15');
       "><br>
 <br>
 </span>
@@ -1408,20 +1536,20 @@ The folowing section proves the first isomorphism theorem,
 <span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(89, '0_3_19');
+      mouseover(90, '0_3_19');
       ">
 <br>
 <span class="id" title="keyword">Section</span> <a name="first_isomorphism"><span class="id" title="section">first_isomorphism</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(90, '0_3_19');
+      mouseover(91, '0_3_19');
       "><br>
   <span class="id" title="keyword">Context</span><br>
     `{<a class="idref" href="HoTT.Types.Universe.html#Univalence"><span class="id" title="class">Univalence</span></a>} {σ} {<span class="id" title="var">A</span> <span class="id" title="var">B</span> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Algebra"><span class="id" title="record">Algebra</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#3122c41ebe889f745cb9bbe1c92165c3"><span class="id" title="variable">σ</span></a>} `{<a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#IsHSetAlgebra"><span class="id" title="abbreviation">IsHSetAlgebra</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#B"><span class="id" title="variable">B</span></a>}<br>
     (<span class="id" title="var">f</span> : <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <span class="id" title="var">s</span><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#s"><span class="id" title="variable">s</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#s"><span class="id" title="variable">s</span></a>) {<span class="id" title="var">hom</span> : <a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#IsHomomorphism"><span class="id" title="class">IsHomomorphism</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#f"><span class="id" title="variable">f</span></a>}.</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(91, '0_3_19');
+      mouseover(92, '0_3_19');
       "><br>
 <br>
 </span>
@@ -1440,39 +1568,39 @@ The homomorphism <span class="inlinecode"><a class="idref" href="HoTT.Classes.th
 <span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(103, '0_3_23');
+      mouseover(104, '0_3_23');
       ">
 <br>
   <span class="id" title="keyword">Definition</span> <a name="def_first_isomorphism"><span class="id" title="definition">def_first_isomorphism</span></a> (<span class="id" title="var">s</span> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Sort"><span class="id" title="projection">Sort</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#48a4f1a066cf3d13d7878089137fe6c7"><span class="id" title="variable">σ</span></a>)<br>
     : (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#de18e5616782923a4a076af3f09480c3"><span class="id" title="notation">/</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#cong_ker"><span class="id" title="definition">cong_ker</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.f"><span class="id" title="variable">f</span></a>) <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#s"><span class="id" title="variable">s</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#49322a039dee1d0f09806d7c0ca9fc90"><span class="id" title="notation">&amp;</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom"><span class="id" title="definition">in_image_hom</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.f"><span class="id" title="variable">f</span></a>) <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#s"><span class="id" title="variable">s</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(104, '0_3_23');
+      mouseover(105, '0_3_23');
       "><br>
   <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(105, '0_3_23');
+      mouseover(106, '0_3_23');
       "><br>
     <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.quotient.html#quotient_rec"><span class="id" title="definition">quotient_rec</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#cong_ker"><span class="id" title="definition">cong_ker</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.f"><span class="id" title="variable">f</span></a> <span class="id" title="var">s</span>) (<a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <span class="id" title="var">x</span><a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Overture.html#9302c87983df9fcf813fed38017558ae"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.f"><span class="id" title="variable">f</span></a> <span class="id" title="var">s</span> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#x"><span class="id" title="variable">x</span></a><a class="idref" href="HoTT.Basics.Overture.html#9302c87983df9fcf813fed38017558ae"><span class="id" title="notation">;</span></a> <a class="idref" href="HoTT.HIT.Truncations.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> <a class="idref" href="HoTT.Basics.Overture.html#9302c87983df9fcf813fed38017558ae"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#x"><span class="id" title="variable">x</span></a><a class="idref" href="HoTT.Basics.Overture.html#9302c87983df9fcf813fed38017558ae"><span class="id" title="notation">;</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idpath"><span class="id" title="constructor">idpath</span></a><a class="idref" href="HoTT.Basics.Overture.html#9302c87983df9fcf813fed38017558ae"><span class="id" title="notation">))</span></a>) <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(106, '0_3_23');
+      mouseover(107, '0_3_23');
       "><br>
     <span class="id" title="tactic">intros</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">p</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(107, '0_3_23');
+      mouseover(108, '0_3_23');
       "><br>
     <span class="id" title="var">now</span> <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Types.Sigma.html#path_sigma_hprop"><span class="id" title="definition">path_sigma_hprop</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(108, '0_3_23');
+      mouseover(109, '0_3_23');
       "><br>
   <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(109, '0_3_23');
+      mouseover(110, '0_3_23');
       "><br>
 <br>
   <span class="id" title="keyword">Lemma</span> <a name="oppreserving_first_isomorphism"><span class="id" title="lemma">oppreserving_first_isomorphism</span></a> {<span class="id" title="var">w</span> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#SymbolType"><span class="id" title="definition">SymbolType</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#48a4f1a066cf3d13d7878089137fe6c7"><span class="id" title="variable">σ</span></a>}<br>
@@ -1486,79 +1614,79 @@ The homomorphism <span class="inlinecode"><a class="idref" href="HoTT.Classes.th
         (<a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#op_subalgebra"><span class="id" title="definition">op_subalgebra</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.B"><span class="id" title="variable">B</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom"><span class="id" title="definition">in_image_hom</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.f"><span class="id" title="variable">f</span></a>) <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#dc5233cb1d950ecad15b1e9b2514f665"><span class="id" title="variable">β</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#C"><span class="id" title="variable">C</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(110, '0_3_23');
+      mouseover(111, '0_3_23');
       "><br>
   <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(111, '0_3_23');
+      mouseover(112, '0_3_23');
       "><br>
     <span class="id" title="tactic">induction</span> <span class="id" title="var">w</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(112, '0_3_23');
+      mouseover(113, '0_3_23');
       "><br>
     - <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Types.Sigma.html#path_sigma_hprop"><span class="id" title="definition">path_sigma_hprop</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(113, '0_3_23');
+      mouseover(114, '0_3_23');
       "><br>
       <span class="id" title="tactic">generalize</span> <span class="id" title="tactic">dependent</span> <span class="id" title="var">γ</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(114, '0_3_23');
+      mouseover(115, '0_3_23');
       "><br>
       <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.quotient.html#quotient_ind_prop"><span class="id" title="lemma">quotient_ind_prop</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#cong_ker"><span class="id" title="definition">cong_ker</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.f"><span class="id" title="variable">f</span></a> <span class="id" title="var">t</span>) <span class="id" title="var">_</span> <span class="id" title="var">_</span>). </span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(115, '0_3_23');
-      "><span class="id" title="tactic">intros</span> <span class="id" title="var">x</span> <span class="id" title="var">G</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_23');
-      " onmouseover="
       mouseover(116, '0_3_23');
-      "><br>
-      <span class="id" title="tactic">destruct</span> <span class="id" title="var">P</span>.</span><span class="command" onmouseout="
+      "><span class="id" title="tactic">intros</span> <span class="id" title="var">x</span> <span class="id" title="var">G</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(117, '0_3_23');
       "><br>
-      <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.HIT.quotient.html#classes_eq_related"><span class="id" title="lemma">classes_eq_related</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#cong_ker"><span class="id" title="definition">cong_ker</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.f"><span class="id" title="variable">f</span></a> <span class="id" title="var">t</span>) <span class="id" title="var">_</span> <span class="id" title="var">_</span> (<span class="id" title="var">G</span> <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>)).</span><span class="command" onmouseout="
+      <span class="id" title="tactic">destruct</span> <span class="id" title="var">P</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(118, '0_3_23');
       "><br>
-    - <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.quotient.html#quotient_ind_prop"><span class="id" title="lemma">quotient_ind_prop</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#cong_ker"><span class="id" title="definition">cong_ker</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.f"><span class="id" title="variable">f</span></a> <span class="id" title="var">t</span>) <span class="id" title="var">_</span> <span class="id" title="var">_</span>). </span><span class="command" onmouseout="
+      <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.HIT.quotient.html#classes_eq_related"><span class="id" title="lemma">classes_eq_related</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#cong_ker"><span class="id" title="definition">cong_ker</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.f"><span class="id" title="variable">f</span></a> <span class="id" title="var">t</span>) <span class="id" title="var">_</span> <span class="id" title="var">_</span> (<span class="id" title="var">G</span> <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>)).</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(119, '0_3_23');
-      "><span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
+      "><br>
+    - <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.quotient.html#quotient_ind_prop"><span class="id" title="lemma">quotient_ind_prop</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#cong_ker"><span class="id" title="definition">cong_ker</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.f"><span class="id" title="variable">f</span></a> <span class="id" title="var">t</span>) <span class="id" title="var">_</span> <span class="id" title="var">_</span>). </span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(120, '0_3_23');
-      "><br>
-      <span class="id" title="tactic">apply</span> (<span class="id" title="var">IHw</span> (<span class="id" title="var">α</span> <span class="id" title="var">x</span>) (<span class="id" title="var">β</span> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.f"><span class="id" title="variable">f</span></a> <span class="id" title="var">t</span> <span class="id" title="var">x</span>)) (<span class="id" title="var">γ</span> (<a class="idref" href="HoTT.HIT.quotient.html#Quotient.class_of"><span class="id" title="constructor">class_of</span></a> <span class="id" title="var">_</span> <span class="id" title="var">x</span>))).</span><span class="command" onmouseout="
+      "><span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(121, '0_3_23');
       "><br>
-      + <span class="id" title="tactic">exact</span> (<span class="id" title="var">P</span> <span class="id" title="var">x</span>).</span><span class="command" onmouseout="
+      <span class="id" title="tactic">apply</span> (<span class="id" title="var">IHw</span> (<span class="id" title="var">α</span> <span class="id" title="var">x</span>) (<span class="id" title="var">β</span> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.f"><span class="id" title="variable">f</span></a> <span class="id" title="var">t</span> <span class="id" title="var">x</span>)) (<span class="id" title="var">γ</span> (<a class="idref" href="HoTT.HIT.quotient.html#Quotient.class_of"><span class="id" title="constructor">class_of</span></a> <span class="id" title="var">_</span> <span class="id" title="var">x</span>))).</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(122, '0_3_23');
       "><br>
-      + <span class="id" title="tactic">intro</span> <span class="id" title="var">a</span>. </span><span class="command" onmouseout="
+      + <span class="id" title="tactic">exact</span> (<span class="id" title="var">P</span> <span class="id" title="var">x</span>).</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(123, '0_3_23');
-      "><span class="id" title="tactic">exact</span> (<span class="id" title="var">G</span> <a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">(</span></a><span class="id" title="var">x</span><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a><span class="id" title="var">a</span><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">)</span></a>).</span><span class="command" onmouseout="
+      "><br>
+      + <span class="id" title="tactic">intro</span> <span class="id" title="var">a</span>. </span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(124, '0_3_23');
+      "><span class="id" title="tactic">exact</span> (<span class="id" title="var">G</span> <a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">(</span></a><span class="id" title="var">x</span><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a><span class="id" title="var">a</span><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">)</span></a>).</span><span class="command" onmouseout="
+      mouseout('0_3_23');
+      " onmouseover="
+      mouseover(125, '0_3_23');
       "><br>
   <span class="id" title="keyword">Qed</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(125, '0_3_23');
+      mouseover(126, '0_3_23');
       "><br>
 <br>
 <br>
@@ -1566,36 +1694,36 @@ The homomorphism <span class="inlinecode"><a class="idref" href="HoTT.Classes.th
     : <a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#IsHomomorphism"><span class="id" title="class">IsHomomorphism</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#def_first_isomorphism"><span class="id" title="definition">def_first_isomorphism</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(126, '0_3_23');
+      mouseover(127, '0_3_23');
       "><br>
   <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(127, '0_3_23');
+      mouseover(128, '0_3_23');
       "><br>
     <span class="id" title="tactic">intro</span> <span class="id" title="var">u</span>. </span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(128, '0_3_23');
-      "><span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#oppreserving_first_isomorphism"><span class="id" title="lemma">oppreserving_first_isomorphism</span></a> (<span class="id" title="var">u</span><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#e11c7cea9fb47a1f2a2927c4977af045"><span class="id" title="notation">^^</span></a><a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.A"><span class="id" title="variable">A</span></a>)).</span><span class="command" onmouseout="
-      mouseout('0_3_23');
-      " onmouseover="
       mouseover(129, '0_3_23');
-      "><br>
-    - <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.hom"><span class="id" title="variable">hom</span></a>.</span><span class="command" onmouseout="
+      "><span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#oppreserving_first_isomorphism"><span class="id" title="lemma">oppreserving_first_isomorphism</span></a> (<span class="id" title="var">u</span><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#e11c7cea9fb47a1f2a2927c4977af045"><span class="id" title="notation">^^</span></a><a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.A"><span class="id" title="variable">A</span></a>)).</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(130, '0_3_23');
       "><br>
-    - <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#compute_op_quotient"><span class="id" title="lemma">compute_op_quotient</span></a>.</span><span class="command" onmouseout="
+    - <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.hom"><span class="id" title="variable">hom</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(131, '0_3_23');
       "><br>
-  <span class="id" title="keyword">Qed</span>.</span><span class="command" onmouseout="
+    - <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#compute_op_quotient"><span class="id" title="lemma">compute_op_quotient</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(132, '0_3_23');
+      "><br>
+  <span class="id" title="keyword">Qed</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_23');
+      " onmouseover="
+      mouseover(133, '0_3_23');
       "><br>
 <br>
   <span class="id" title="keyword">Definition</span> <a name="hom_first_isomorphism"><span class="id" title="definition">hom_first_isomorphism</span></a><br>
@@ -1603,183 +1731,183 @@ The homomorphism <span class="inlinecode"><a class="idref" href="HoTT.Classes.th
     := <a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#BuildHomomorphism"><span class="id" title="constructor">BuildHomomorphism</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#def_first_isomorphism"><span class="id" title="definition">def_first_isomorphism</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(133, '0_3_23');
+      mouseover(134, '0_3_23');
       "><br>
 <br>
   <span class="id" title="keyword">Global Instance</span> <a name="embedding_first_isomorphism"><span class="id" title="instance">embedding_first_isomorphism</span></a> (<span class="id" title="var">s</span> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Sort"><span class="id" title="projection">Sort</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#48a4f1a066cf3d13d7878089137fe6c7"><span class="id" title="variable">σ</span></a>)<br>
     : <a class="idref" href="HoTT.Basics.Trunc.html#IsEmbedding"><span class="id" title="abbreviation">IsEmbedding</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#hom_first_isomorphism"><span class="id" title="definition">hom_first_isomorphism</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#s"><span class="id" title="variable">s</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(134, '0_3_23');
+      mouseover(135, '0_3_23');
       "><br>
   <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(135, '0_3_23');
+      mouseover(136, '0_3_23');
       "><br>
     <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HSet.html#isembedding_isinj_hset"><span class="id" title="lemma">isembedding_isinj_hset</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(136, '0_3_23');
+      mouseover(137, '0_3_23');
       "><br>
     <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.quotient.html#quotient_ind_prop"><span class="id" title="lemma">quotient_ind_prop</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#cong_ker"><span class="id" title="definition">cong_ker</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.f"><span class="id" title="variable">f</span></a> <span class="id" title="var">s</span>) <span class="id" title="var">_</span> <span class="id" title="var">_</span>). </span><span class="command" onmouseout="
-      mouseout('0_3_23');
-      " onmouseover="
-      mouseover(137, '0_3_23');
-      "><span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(138, '0_3_23');
+      "><span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_23');
+      " onmouseover="
+      mouseover(139, '0_3_23');
       "><br>
     <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.quotient.html#quotient_ind_prop"><span class="id" title="lemma">quotient_ind_prop</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#cong_ker"><span class="id" title="definition">cong_ker</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.f"><span class="id" title="variable">f</span></a> <span class="id" title="var">s</span>) <span class="id" title="var">_</span> <span class="id" title="var">_</span>). </span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(139, '0_3_23');
-      "><span class="id" title="tactic">intros</span> <span class="id" title="var">y</span> <span class="id" title="var">p</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_23');
-      " onmouseover="
       mouseover(140, '0_3_23');
-      "><br>
-    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.quotient.html#Quotient.related_classes_eq"><span class="id" title="axiom">related_classes_eq</span></a>.</span><span class="command" onmouseout="
+      "><span class="id" title="tactic">intros</span> <span class="id" title="var">y</span> <span class="id" title="var">p</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(141, '0_3_23');
       "><br>
-    <span class="id" title="tactic">exact</span> (<span class="id" title="var">p</span>..<a class="idref" href="HoTT.Types.Sigma.html#0214da69f75b0ea1f1455ef6ab703923"><span class="id" title="notation">1</span></a>).</span><span class="command" onmouseout="
+    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.quotient.html#Quotient.related_classes_eq"><span class="id" title="axiom">related_classes_eq</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(142, '0_3_23');
       "><br>
-  <span class="id" title="keyword">Qed</span>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">exact</span> (<span class="id" title="var">p</span>..<a class="idref" href="HoTT.Types.Sigma.html#0214da69f75b0ea1f1455ef6ab703923"><span class="id" title="notation">1</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(143, '0_3_23');
+      "><br>
+  <span class="id" title="keyword">Qed</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_23');
+      " onmouseover="
+      mouseover(144, '0_3_23');
       "><br>
 <br>
   <span class="id" title="keyword">Global Instance</span> <a name="surjection_first_isomorphism"><span class="id" title="instance">surjection_first_isomorphism</span></a> (<span class="id" title="var">s</span> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Sort"><span class="id" title="projection">Sort</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#48a4f1a066cf3d13d7878089137fe6c7"><span class="id" title="variable">σ</span></a>)<br>
     : <a class="idref" href="HoTT.HIT.Truncations.html#IsSurjection"><span class="id" title="abbreviation">IsSurjection</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#hom_first_isomorphism"><span class="id" title="definition">hom_first_isomorphism</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#s"><span class="id" title="variable">s</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(144, '0_3_23');
+      mouseover(145, '0_3_23');
       "><br>
   <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(145, '0_3_23');
+      mouseover(146, '0_3_23');
       "><br>
     <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Truncations.html#BuildIsSurjection"><span class="id" title="definition">BuildIsSurjection</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(146, '0_3_23');
+      mouseover(147, '0_3_23');
       "><br>
     <span class="id" title="tactic">intros</span> [<span class="id" title="var">x</span> <span class="id" title="var">M</span>].</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(147, '0_3_23');
+      mouseover(148, '0_3_23');
       "><br>
     <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Truncations.html#Trunc_rec"><span class="id" title="definition">Trunc_rec</span></a> <span class="id" title="var">_</span> <span class="id" title="var">M</span>). </span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(148, '0_3_23');
-      "><span class="id" title="tactic">intros</span> [<span class="id" title="var">y</span> <span class="id" title="var">Y</span>].</span><span class="command" onmouseout="
-      mouseout('0_3_23');
-      " onmouseover="
       mouseover(149, '0_3_23');
-      "><br>
-    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Truncations.html#Trunc.tr"><span class="id" title="constructor">tr</span></a>.</span><span class="command" onmouseout="
+      "><span class="id" title="tactic">intros</span> [<span class="id" title="var">y</span> <span class="id" title="var">Y</span>].</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(150, '0_3_23');
       "><br>
-    <span class="id" title="tactic">∃</span> (<a class="idref" href="HoTT.HIT.quotient.html#Quotient.class_of"><span class="id" title="constructor">class_of</span></a> <span class="id" title="var">_</span> <span class="id" title="var">y</span>).</span><span class="command" onmouseout="
+    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Truncations.html#Trunc.tr"><span class="id" title="constructor">tr</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(151, '0_3_23');
       "><br>
-    <span class="id" title="var">now</span> <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Types.Sigma.html#path_sigma_hprop"><span class="id" title="definition">path_sigma_hprop</span></a>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">∃</span> (<a class="idref" href="HoTT.HIT.quotient.html#Quotient.class_of"><span class="id" title="constructor">class_of</span></a> <span class="id" title="var">_</span> <span class="id" title="var">y</span>).</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(152, '0_3_23');
       "><br>
-  <span class="id" title="keyword">Qed</span>.</span><span class="command" onmouseout="
+    <span class="id" title="var">now</span> <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Types.Sigma.html#path_sigma_hprop"><span class="id" title="definition">path_sigma_hprop</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(153, '0_3_23');
+      "><br>
+  <span class="id" title="keyword">Qed</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_23');
+      " onmouseover="
+      mouseover(154, '0_3_23');
       "><br>
 <br>
   <span class="id" title="keyword">Global Instance</span> <a name="is_isomorphism_first_isomorphism"><span class="id" title="instance">is_isomorphism_first_isomorphism</span></a><br>
     : <a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#IsIsomorphism"><span class="id" title="class">IsIsomorphism</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#hom_first_isomorphism"><span class="id" title="definition">hom_first_isomorphism</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(154, '0_3_23');
+      mouseover(155, '0_3_23');
       "><br>
   <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(155, '0_3_23');
+      mouseover(156, '0_3_23');
       "><br>
     <span class="id" title="tactic">intro</span> <span class="id" title="var">s</span>. </span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(156, '0_3_23');
+      mouseover(157, '0_3_23');
       "><span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Truncations.html#isequiv_surj_emb"><span class="id" title="definition">isequiv_surj_emb</span></a>; <span class="id" title="tactic">exact</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(157, '0_3_23');
+      mouseover(158, '0_3_23');
       "><br>
   <span class="id" title="keyword">Qed</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(158, '0_3_23');
+      mouseover(159, '0_3_23');
       "><br>
 <br>
   <span class="id" title="keyword">Theorem</span> <a name="isomorphic_first_isomorphism"><span class="id" title="lemma">isomorphic_first_isomorphism</span></a><br>
     : <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#de18e5616782923a4a076af3f09480c3"><span class="id" title="notation">/</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#cong_ker"><span class="id" title="definition">cong_ker</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Classes.theory.ua_isomorphic.html#1ea868b91187e76780e9fa7b002c59d6"><span class="id" title="notation">≅</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#49322a039dee1d0f09806d7c0ca9fc90"><span class="id" title="notation">&amp;</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom"><span class="id" title="definition">in_image_hom</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.f"><span class="id" title="variable">f</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(159, '0_3_23');
+      mouseover(160, '0_3_23');
       "><br>
   <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(160, '0_3_23');
+      mouseover(161, '0_3_23');
       "><br>
     <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Classes.theory.ua_isomorphic.html#BuildIsomorphic"><span class="id" title="constructor">BuildIsomorphic</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#def_first_isomorphism"><span class="id" title="definition">def_first_isomorphism</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(161, '0_3_23');
+      mouseover(162, '0_3_23');
       "><br>
   <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(162, '0_3_23');
+      mouseover(163, '0_3_23');
       "><br>
 <br>
 <br>
   <span class="id" title="keyword">Corollary</span> <a name="id_first_isomorphism"><span class="id" title="lemma">id_first_isomorphism</span></a> : <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#de18e5616782923a4a076af3f09480c3"><span class="id" title="notation">/</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#cong_ker"><span class="id" title="definition">cong_ker</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#49322a039dee1d0f09806d7c0ca9fc90"><span class="id" title="notation">&amp;</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom"><span class="id" title="definition">in_image_hom</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism.f"><span class="id" title="variable">f</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(163, '0_3_23');
+      mouseover(164, '0_3_23');
       "><br>
   <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(164, '0_3_23');
+      mouseover(165, '0_3_23');
       "><br>
     <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Classes.theory.ua_isomorphic.html#id_isomorphic"><span class="id" title="lemma">id_isomorphic</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#isomorphic_first_isomorphism"><span class="id" title="lemma">isomorphic_first_isomorphism</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(165, '0_3_23');
+      mouseover(166, '0_3_23');
       "><br>
   <span class="id" title="keyword">Qed</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(166, '0_3_23');
+      mouseover(167, '0_3_23');
       "><br>
 <span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism"><span class="id" title="section">first_isomorphism</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(167, '0_3_23');
+      mouseover(168, '0_3_23');
       "><br>
 <br>
 </span>
@@ -1793,42 +1921,46 @@ The next section gives a specialization of the first isomorphism
 <span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(171, '0_3_27');
+      mouseover(172, '0_3_27');
       ">
 <br>
 <span class="id" title="keyword">Section</span> <a name="first_isomorphism_surjection"><span class="id" title="section">first_isomorphism_surjection</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(172, '0_3_27');
+      mouseover(173, '0_3_27');
       "><br>
   <span class="id" title="keyword">Context</span><br>
     `{<a class="idref" href="HoTT.Types.Universe.html#Univalence"><span class="id" title="class">Univalence</span></a>} {σ} {<span class="id" title="var">A</span> <span class="id" title="var">B</span> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Algebra"><span class="id" title="record">Algebra</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#3122c41ebe889f745cb9bbe1c92165c3"><span class="id" title="variable">σ</span></a>} `{<a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#IsHSetAlgebra"><span class="id" title="abbreviation">IsHSetAlgebra</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#B"><span class="id" title="variable">B</span></a>}<br>
     (<span class="id" title="var">f</span> : <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <span class="id" title="var">s</span><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#s"><span class="id" title="variable">s</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#s"><span class="id" title="variable">s</span></a>) `{!<a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#IsHomomorphism"><span class="id" title="class">IsHomomorphism</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#f"><span class="id" title="variable">f</span></a>} {<span class="id" title="var">S</span> : <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <span class="id" title="var">s</span><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.HIT.Truncations.html#IsSurjection"><span class="id" title="abbreviation">IsSurjection</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#s"><span class="id" title="variable">s</span></a>)}.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(173, '0_3_27');
+      mouseover(174, '0_3_27');
       "><br>
 <br>
   <span class="id" title="keyword">Global Instance</span> <a name="is_isomorphism_inc_first_isomorphism_surjection"><span class="id" title="instance">is_isomorphism_inc_first_isomorphism_surjection</span></a><br>
     : <a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#IsIsomorphism"><span class="id" title="class">IsIsomorphism</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra"><span class="id" title="definition">hom_inc_subalgebra</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_surjection.B"><span class="id" title="variable">B</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom"><span class="id" title="definition">in_image_hom</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_surjection.f"><span class="id" title="variable">f</span></a>)).</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(174, '0_3_27');
+      mouseover(175, '0_3_27');
       "><br>
   <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(175, '0_3_27');
+      mouseover(176, '0_3_27');
       "><br>
-    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#is_isomorphism_inc_improper_subalgebra"><span class="id" title="lemma">is_isomorphism_inc_improper_subalgebra</span></a>; [<span class="id" title="tactic">exact</span> <span class="id" title="var">_</span> | <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_surjection.S"><span class="id" title="variable">S</span></a>].</span><span class="command" onmouseout="
+    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#is_isomorphism_inc_improper_subalgebra"><span class="id" title="lemma">is_isomorphism_inc_improper_subalgebra</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(176, '0_3_27');
+      mouseover(177, '0_3_27');
+      "><span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_surjection.S"><span class="id" title="variable">S</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_27');
+      " onmouseover="
+      mouseover(178, '0_3_27');
       "><br>
   <span class="id" title="keyword">Qed</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(177, '0_3_27');
+      mouseover(179, '0_3_27');
       "><br>
 <br>
 </span>
@@ -1842,7 +1974,7 @@ The homomorphism <span class="inlinecode"><a class="idref" href="HoTT.Classes.th
 <span class="command" onmouseout="
       mouseout('0_3_31');
       " onmouseover="
-      mouseover(183, '0_3_31');
+      mouseover(185, '0_3_31');
       ">
 <br>
   <span class="id" title="keyword">Definition</span> <a name="hom_first_isomorphism_surjection"><span class="id" title="definition">hom_first_isomorphism_surjection</span></a><br>
@@ -1852,58 +1984,161 @@ The homomorphism <span class="inlinecode"><a class="idref" href="HoTT.Classes.th
           (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#hom_first_isomorphism"><span class="id" title="definition">hom_first_isomorphism</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_surjection.f"><span class="id" title="variable">f</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_31');
       " onmouseover="
-      mouseover(184, '0_3_31');
+      mouseover(186, '0_3_31');
       "><br>
 <br>
   <span class="id" title="keyword">Theorem</span> <a name="isomorphic_first_isomorphism_surjection"><span class="id" title="lemma">isomorphic_first_isomorphism_surjection</span></a> : <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_surjection.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#de18e5616782923a4a076af3f09480c3"><span class="id" title="notation">/</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#cong_ker"><span class="id" title="definition">cong_ker</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_surjection.f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Classes.theory.ua_isomorphic.html#1ea868b91187e76780e9fa7b002c59d6"><span class="id" title="notation">≅</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_surjection.B"><span class="id" title="variable">B</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_31');
       " onmouseover="
-      mouseover(185, '0_3_31');
+      mouseover(187, '0_3_31');
       "><br>
   <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_31');
       " onmouseover="
-      mouseover(186, '0_3_31');
+      mouseover(188, '0_3_31');
       "><br>
     <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Classes.theory.ua_isomorphic.html#BuildIsomorphic"><span class="id" title="constructor">BuildIsomorphic</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#hom_first_isomorphism_surjection"><span class="id" title="definition">hom_first_isomorphism_surjection</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_31');
       " onmouseover="
-      mouseover(187, '0_3_31');
+      mouseover(189, '0_3_31');
       "><br>
   <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_31');
       " onmouseover="
-      mouseover(188, '0_3_31');
+      mouseover(190, '0_3_31');
       "><br>
 <br>
   <span class="id" title="keyword">Corollary</span> <a name="id_first_isomorphism_surjection"><span class="id" title="lemma">id_first_isomorphism_surjection</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_surjection.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#de18e5616782923a4a076af3f09480c3"><span class="id" title="notation">/</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#cong_ker"><span class="id" title="definition">cong_ker</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_surjection.f"><span class="id" title="variable">f</span></a><a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_surjection.B"><span class="id" title="variable">B</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_31');
       " onmouseover="
-      mouseover(189, '0_3_31');
+      mouseover(191, '0_3_31');
       "><br>
   <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_31');
       " onmouseover="
-      mouseover(190, '0_3_31');
+      mouseover(192, '0_3_31');
       "><br>
     <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Classes.theory.ua_isomorphic.html#id_isomorphic"><span class="id" title="lemma">id_isomorphic</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#isomorphic_first_isomorphism_surjection"><span class="id" title="lemma">isomorphic_first_isomorphism_surjection</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_31');
       " onmouseover="
-      mouseover(191, '0_3_31');
+      mouseover(193, '0_3_31');
       "><br>
   <span class="id" title="keyword">Qed</span>.</span><span class="command" onmouseout="
       mouseout('0_3_31');
       " onmouseover="
-      mouseover(192, '0_3_31');
+      mouseover(194, '0_3_31');
       "><br>
 <span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_surjection"><span class="id" title="section">first_isomorphism_surjection</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_31');
       " onmouseover="
-      mouseover(193, '0_3_31');
+      mouseover(195, '0_3_31');
       "><br>
+<br>
 </span>
 </div>
 <div class="goal" id="goal0_3_31"><pre><span></span></pre></div>
+<div class="doc" scenenumber="33">
+The next section specializes the first isomorphism theorem to the
+    case where the homomorphism is injective. It proves that an
+    injective homomorphism is an isomorphism between its domain
+    and its image. 
+</div>
+<div scenenumber="35" class="code">
+<span class="command" onmouseout="
+      mouseout('0_3_35');
+      " onmouseover="
+      mouseover(199, '0_3_35');
+      ">
+<br>
+<span class="id" title="keyword">Section</span> <a name="first_isomorphism_inj"><span class="id" title="section">first_isomorphism_inj</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_35');
+      " onmouseover="
+      mouseover(200, '0_3_35');
+      "><br>
+  <span class="id" title="keyword">Context</span><br>
+    `{<a class="idref" href="HoTT.Types.Universe.html#Univalence"><span class="id" title="class">Univalence</span></a>} {σ} {<span class="id" title="var">A</span> <span class="id" title="var">B</span> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Algebra"><span class="id" title="record">Algebra</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#3122c41ebe889f745cb9bbe1c92165c3"><span class="id" title="variable">σ</span></a>} `{<a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#IsHSetAlgebra"><span class="id" title="abbreviation">IsHSetAlgebra</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#B"><span class="id" title="variable">B</span></a>}<br>
+    (<span class="id" title="var">f</span> : <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <span class="id" title="var">s</span><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#s"><span class="id" title="variable">s</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#s"><span class="id" title="variable">s</span></a>) `{!<a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#IsHomomorphism"><span class="id" title="class">IsHomomorphism</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#f"><span class="id" title="variable">f</span></a>} (<span class="id" title="var">inj</span> : <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <span class="id" title="var">s</span><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.HSet.html#isinj"><span class="id" title="definition">isinj</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#s"><span class="id" title="variable">s</span></a>)).</span><span class="command" onmouseout="
+      mouseout('0_3_35');
+      " onmouseover="
+      mouseover(201, '0_3_35');
+      "><br>
+<br>
+  <span class="id" title="keyword">Global Instance</span> <a name="is_isomorphism_quotient_first_isomorphism_inj"><span class="id" title="instance">is_isomorphism_quotient_first_isomorphism_inj</span></a><br>
+    : <a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#IsIsomorphism"><span class="id" title="class">IsIsomorphism</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#hom_quotient"><span class="id" title="definition">hom_quotient</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#cong_ker"><span class="id" title="definition">cong_ker</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.f"><span class="id" title="variable">f</span></a>)).</span><span class="command" onmouseout="
+      mouseout('0_3_35');
+      " onmouseover="
+      mouseover(202, '0_3_35');
+      "><br>
+  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_35');
+      " onmouseover="
+      mouseover(203, '0_3_35');
+      "><br>
+    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#is_isomorphism_quotient"><span class="id" title="instance">is_isomorphism_quotient</span></a>. </span><span class="command" onmouseout="
+      mouseout('0_3_35');
+      " onmouseover="
+      mouseover(204, '0_3_35');
+      "><span class="id" title="tactic">intros</span> <span class="id" title="var">s</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">p</span>. </span><span class="command" onmouseout="
+      mouseout('0_3_35');
+      " onmouseover="
+      mouseover(205, '0_3_35');
+      "><span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.inj"><span class="id" title="variable">inj</span></a>, <span class="id" title="var">p</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_35');
+      " onmouseover="
+      mouseover(206, '0_3_35');
+      "><br>
+  <span class="id" title="keyword">Qed</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_35');
+      " onmouseover="
+      mouseover(207, '0_3_35');
+      "><br>
+<br>
+</span>
+</div>
+<div class="goal" id="goal0_3_35"><pre><span></span></pre></div>
+<div class="doc" scenenumber="37">
+The homomorphism <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#hom_first_isomorphism_inj"><span class="id" title="definition">hom_first_isomorphism_inj</span></a></span> is the
+    composition of two isomorphisms, so it is an isomorphism. 
+</div>
+<div scenenumber="39" class="code">
+<span class="command" onmouseout="
+      mouseout('0_3_39');
+      " onmouseover="
+      mouseover(213, '0_3_39');
+      ">
+<br>
+  <span class="id" title="keyword">Definition</span> <a name="hom_first_isomorphism_inj"><span class="id" title="definition">hom_first_isomorphism_inj</span></a><br>
+    : <a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#Homomorphism"><span class="id" title="record">Homomorphism</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.A"><span class="id" title="variable">A</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#49322a039dee1d0f09806d7c0ca9fc90"><span class="id" title="notation">&amp;</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom"><span class="id" title="definition">in_image_hom</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.f"><span class="id" title="variable">f</span></a>)<br>
+    := <a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#hom_compose"><span class="id" title="definition">hom_compose</span></a><br>
+          (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#hom_first_isomorphism"><span class="id" title="definition">hom_first_isomorphism</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.f"><span class="id" title="variable">f</span></a>)<br>
+          (<a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#hom_quotient"><span class="id" title="definition">hom_quotient</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#cong_ker"><span class="id" title="definition">cong_ker</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.f"><span class="id" title="variable">f</span></a>)).</span><span class="command" onmouseout="
+      mouseout('0_3_39');
+      " onmouseover="
+      mouseover(214, '0_3_39');
+      "><br>
+<br>
+  <span class="id" title="keyword">Definition</span> <a name="isomorphic_first_isomorphism_inj"><span class="id" title="definition">isomorphic_first_isomorphism_inj</span></a> : <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_isomorphic.html#1ea868b91187e76780e9fa7b002c59d6"><span class="id" title="notation">≅</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#49322a039dee1d0f09806d7c0ca9fc90"><span class="id" title="notation">&amp;</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom"><span class="id" title="definition">in_image_hom</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.f"><span class="id" title="variable">f</span></a><br>
+    := <a class="idref" href="HoTT.Classes.theory.ua_isomorphic.html#BuildIsomorphic"><span class="id" title="constructor">BuildIsomorphic</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#hom_first_isomorphism_inj"><span class="id" title="definition">hom_first_isomorphism_inj</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_39');
+      " onmouseover="
+      mouseover(215, '0_3_39');
+      "><br>
+<br>
+  <span class="id" title="keyword">Definition</span> <a name="id_first_isomorphism_inj"><span class="id" title="definition">id_first_isomorphism_inj</span></a> : <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#49322a039dee1d0f09806d7c0ca9fc90"><span class="id" title="notation">&amp;</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#in_image_hom"><span class="id" title="definition">in_image_hom</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj.f"><span class="id" title="variable">f</span></a><br>
+    := <a class="idref" href="HoTT.Classes.theory.ua_isomorphic.html#id_isomorphic"><span class="id" title="lemma">id_isomorphic</span></a> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#isomorphic_first_isomorphism_inj"><span class="id" title="definition">isomorphic_first_isomorphism_inj</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_39');
+      " onmouseover="
+      mouseover(216, '0_3_39');
+      "><br>
+<br>
+<span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Classes.theory.ua_first_isomorphism.html#first_isomorphism_inj"><span class="id" title="section">first_isomorphism_inj</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_39');
+      " onmouseover="
+      mouseover(217, '0_3_39');
+      "><br>
+</span>
+</div>
+<div class="goal" id="goal0_3_39"><pre><span></span></pre></div>
 </div>
 <div id="footer" scenenumber="5" class="doc">
 <hr>

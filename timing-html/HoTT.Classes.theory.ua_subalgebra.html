@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: ua_subalgebra.v
 Line: 1
-Time: 0.493s">
+Time: 0.461s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import
   HoTT.Basics.Equivalences
@@ -62,7 +62,7 @@ Line: 12
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Context {σ} (A : Algebra σ) (P : ∀ (s : Sort σ), A s → hProp).</pre>
+  Context `{Funext} {σ} (A : Algebra σ) (P : ∀ s, A s → Type).</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
 Line: 13
@@ -90,7 +90,7 @@ Time: 0s">
 <div class="code" title="File: ua_subalgebra.v
 Line: 30
 Time: 0.002s">
-<div class="time" style="width: 0.40567951318458%"></div>
+<div class="time" style="width: 0.43383947939262%"></div>
 <pre>Fixpoint ClosedUnderOp {w : SymbolType σ} : Operation A w → Type :=
     match w with
     | [:s:] =&gt; P s
@@ -100,13 +100,13 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: ua_subalgebra.v
 Line: 35
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.21691973969631%"></div>
 <pre>
 
-  Global Instance hprop_closed_under_op `{Funext}
+  Global Instance trunc_closed_under_op {n} `{∀ s x, IsTrunc n (P s x)}
     {w : SymbolType σ} (α : Operation A w)
-    : IsHProp (ClosedUnderOp α).</pre>
+    : IsTrunc n (ClosedUnderOp α).</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
 Line: 39
@@ -117,8 +117,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_subalgebra.v
 Line: 40
-Time: 0.031s">
-<div class="time" style="width: 6.2880324543611%"></div>
+Time: 0.01s">
+<div class="time" style="width: 2.1691973969631%"></div>
 <pre>
     induction w; cbn; exact _.</pre>
 </div>
@@ -131,12 +131,12 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_subalgebra.v
 Line: 42
-Time: 0.003s">
-<div class="time" style="width: 0.60851926977688%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
-  Class IsClosedUnderOps : Type
-    := closed_under_ops : ∀ (u : Symbol σ), ClosedUnderOp (u^^A).</pre>
+  Definition IsClosedUnderOps : Type
+    := ∀ (u : Symbol σ), ClosedUnderOp (u^^A).</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
 Line: 45
@@ -144,39 +144,142 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-  Global Instance hprop_is_closed_under_ops `{Funext}
-    : IsHProp IsClosedUnderOps.</pre>
+  Global Instance trunc_is_closed_under_ops
+    {n} `{∀ s x, IsTrunc n (P s x)}
+    : IsTrunc n IsClosedUnderOps.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 48
+Line: 49
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 49
-Time: 0.015s">
-<div class="time" style="width: 3.0425963488844%"></div>
+Line: 50
+Time: 0.004s">
+<div class="time" style="width: 0.86767895878525%"></div>
 <pre>
     apply trunc_forall.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 50
+Line: 51
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 51
-Time: 0.004s">
-<div class="time" style="width: 0.81135902636917%"></div>
+Line: 52
+Time: 0.001s">
+<div class="time" style="width: 0.21691973969631%"></div>
 <pre>
 End closed_under_op.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 52
+Line: 53
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** [P : ∀ s, A s → Type] is a subalgebra predicate if it is closed
+    under operations [IsClosedUnderOps A P] and [P s x] is an h-prop. *)
+
+</pre>
+</div>
+<div class="code" title="File: ua_subalgebra.v
+Line: 57
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Section subalgebra_predicate.</pre>
+</div>
+<div class="code" title="File: ua_subalgebra.v
+Line: 57
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Context  {σ} (A : Algebra σ) (P : ∀ s, A s → Type).</pre>
+</div>
+<div class="code" title="File: ua_subalgebra.v
+Line: 58
+Time: 0.002s">
+<div class="time" style="width: 0.43383947939262%"></div>
+<pre>
+
+  Class IsSubalgebraPredicate
+    := BuildIsSubalgebraPredicate
+    { hprop_subalgebra_predicate : ∀ s x, IsHProp (P s x);
+      is_closed_under_ops_subalgebra_predicate : IsClosedUnderOps A P }.</pre>
+</div>
+<div class="code" title="File: ua_subalgebra.v
+Line: 63
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+  Global Instance hprop_is_subalgebra_predicate `{Funext}
+    : IsHProp IsSubalgebraPredicate.</pre>
+</div>
+<div class="code" title="File: ua_subalgebra.v
+Line: 66
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Proof.</pre>
+</div>
+<div class="code" title="File: ua_subalgebra.v
+Line: 67
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    apply hprop_allpath.</pre>
+</div>
+<div class="code" title="File: ua_subalgebra.v
+Line: 68
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    intros [x1 x2] [y1 y2].</pre>
+</div>
+<div class="code" title="File: ua_subalgebra.v
+Line: 69
+Time: 0.059s">
+<div class="time" style="width: 12.798264642082%"></div>
+<pre>
+    by destruct (path_ishprop x1 y1), (path_ishprop x2 y2).</pre>
+</div>
+<div class="code" title="File: ua_subalgebra.v
+Line: 70
+Time: 0.001s">
+<div class="time" style="width: 0.21691973969631%"></div>
+<pre>
+  Defined.</pre>
+</div>
+<div class="code" title="File: ua_subalgebra.v
+Line: 71
+Time: 0.002s">
+<div class="time" style="width: 0.43383947939262%"></div>
+<pre>
+End subalgebra_predicate.</pre>
+</div>
+<div class="code" title="File: ua_subalgebra.v
+Line: 72
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Global Arguments BuildIsSubalgebraPredicate {σ A P hprop_subalgebra_predicate}.</pre>
+</div>
+<div class="code" title="File: ua_subalgebra.v
+Line: 74
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Global Existing Instance hprop_subalgebra_predicate.</pre>
+</div>
+<div class="code" title="File: ua_subalgebra.v
+Line: 76
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -186,22 +289,22 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 55
+Line: 79
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Section subalgebra.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 55
+Line: 79
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Context
     {σ : Signature} (A : Algebra σ)
-    (P : ∀ s, A s → hProp) `{!IsClosedUnderOps A P}.</pre>
+    (P : ∀ s, A s → Type) `{!IsSubalgebraPredicate A P}.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 58
+Line: 82
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -211,14 +314,14 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 62
+Line: 86
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition carriers_subalgebra : Carriers σ
     := λ (s : Sort σ), {x | P s x}.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 63
+Line: 87
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -237,9 +340,9 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 76
+Line: 100
 Time: 0.004s">
-<div class="time" style="width: 0.81135902636917%"></div>
+<div class="time" style="width: 0.86767895878525%"></div>
 <pre>Fixpoint op_subalgebra {w : SymbolType σ}
     : ∀ (α : Operation A w),
       ClosedUnderOp A P α → Operation carriers_subalgebra w
@@ -249,7 +352,7 @@ Time: 0.004s">
        end.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 82
+Line: 106
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -260,15 +363,15 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 87
+Line: 111
 Time: 0.001s">
-<div class="time" style="width: 0.20283975659229%"></div>
+<div class="time" style="width: 0.21691973969631%"></div>
 <pre>Definition ops_subalgebra (u : Symbol σ)
     : Operation carriers_subalgebra (σ u)
-    := op_subalgebra (u^^A) (closed_under_ops A P u).</pre>
+    := op_subalgebra (u^^A) (is_closed_under_ops_subalgebra_predicate A P u).</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 89
+Line: 113
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -277,82 +380,90 @@ Time: 0s">
     := BuildAlgebra carriers_subalgebra ops_subalgebra.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 92
+Line: 116
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-  Global Instance trunc_subalgebra {n : trunc_index} `{!IsTruncAlgebra n.+1 A}
+  Global Instance trunc_subalgebra {n : trunc_index}
+    `{!IsTruncAlgebra n.+1 A}
     : IsTruncAlgebra n.+1 Subalgebra.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 95
+Line: 120
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 96
+Line: 121
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    pose proof (hprop_subalgebra_predicate A P).</pre>
+</div>
+<div class="code" title="File: ua_subalgebra.v
+Line: 122
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     intro s.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 97
+Line: 123
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply @trunc_sigma.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 97
+Line: 123
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     -</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 98
+Line: 124
 Time: 0.001s">
-<div class="time" style="width: 0.20283975659229%"></div>
+<div class="time" style="width: 0.21691973969631%"></div>
 <pre> exact _.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 98
+Line: 124
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     -</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 99
+Line: 125
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intro.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 99
-Time: 0.018s">
-<div class="time" style="width: 3.6511156186613%"></div>
+Line: 125
+Time: 0.004s">
+<div class="time" style="width: 0.86767895878525%"></div>
 <pre> induction n; exact _.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 99
+Line: 125
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 100
+Line: 126
 Time: 0.001s">
-<div class="time" style="width: 0.20283975659229%"></div>
+<div class="time" style="width: 0.21691973969631%"></div>
 <pre>
 End subalgebra.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 101
+Line: 127
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -360,7 +471,7 @@ Time: 0s">
 Module subalgebra_notations.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 103
+Line: 129
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -369,14 +480,14 @@ Time: 0s">
                       : Algebra_scope.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 106
+Line: 132
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 End subalgebra_notations.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 107
+Line: 133
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -384,7 +495,7 @@ Time: 0s">
 Import subalgebra_notations.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 109
+Line: 135
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -395,33 +506,33 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 113
+Line: 139
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Section hom_inc_subalgebra.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 113
-Time: 0.001s">
-<div class="time" style="width: 0.20283975659229%"></div>
+Line: 139
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Context
     {σ : Signature} (A : Algebra σ)
-    (P : ∀ s, A s → hProp) `{!IsClosedUnderOps A P}.</pre>
+    (P : ∀ s, A s → Type) `{!IsSubalgebraPredicate A P}.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 116
+Line: 142
 Time: 0.001s">
-<div class="time" style="width: 0.20283975659229%"></div>
+<div class="time" style="width: 0.21691973969631%"></div>
 <pre>
 
   Definition def_inc_subalgebra (s : Sort σ) : (A&amp;P) s → A s
     := pr1.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 119
+Line: 145
 Time: 0.001s">
-<div class="time" style="width: 0.20283975659229%"></div>
+<div class="time" style="width: 0.21691973969631%"></div>
 <pre>
 
   Lemma oppreserving_inc_subalgebra {w : SymbolType σ}
@@ -429,60 +540,60 @@ Time: 0.001s">
     : OpPreserving def_inc_subalgebra (op_subalgebra A P α C) α.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 123
+Line: 149
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 124
-Time: 0.001s">
-<div class="time" style="width: 0.20283975659229%"></div>
+Line: 150
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     induction w.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 125
+Line: 151
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     -</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 126
+Line: 152
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 126
+Line: 152
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     -</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 127
+Line: 153
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros x.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 127
+Line: 153
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply IHw.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 127
+Line: 153
 Time: 0.001s">
-<div class="time" style="width: 0.20283975659229%"></div>
+<div class="time" style="width: 0.21691973969631%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 128
+Line: 154
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -491,126 +602,126 @@ Time: 0s">
     : IsHomomorphism def_inc_subalgebra.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 131
+Line: 157
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 132
+Line: 158
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     intro u.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 133
+Line: 159
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply oppreserving_inc_subalgebra.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 133
+Line: 159
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 134
+Line: 160
 Time: 0.001s">
-<div class="time" style="width: 0.20283975659229%"></div>
+<div class="time" style="width: 0.21691973969631%"></div>
 <pre>
 
   Definition hom_inc_subalgebra : Homomorphism (A&amp;P) A
     := BuildHomomorphism def_inc_subalgebra.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 137
-Time: 0.001s">
-<div class="time" style="width: 0.20283975659229%"></div>
+Line: 163
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Lemma is_isomorphism_inc_improper_subalgebra
-    `{!IsHSetAlgebra A} (improper : ∀ s (x : A s), P s x)
+    (improper : ∀ s (x : A s), P s x)
     : IsIsomorphism hom_inc_subalgebra.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 141
+Line: 167
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 142
+Line: 168
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     intro s.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 143
+Line: 169
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     refine (isequiv_adjointify _ (λ x, (x; improper s x)) _ _).</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 144
+Line: 170
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     -</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 145
+Line: 171
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intro x.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 145
+Line: 171
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 145
+Line: 171
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     -</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 146
+Line: 172
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intro x.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 146
-Time: 0.015s">
-<div class="time" style="width: 3.0425963488844%"></div>
+Line: 172
+Time: 0.005s">
+<div class="time" style="width: 1.0845986984816%"></div>
 <pre> by apply path_sigma_hprop.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 146
-Time: 0.001s">
-<div class="time" style="width: 0.20283975659229%"></div>
+Line: 172
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 147
+Line: 173
 Time: 0.002s">
-<div class="time" style="width: 0.40567951318458%"></div>
+<div class="time" style="width: 0.43383947939262%"></div>
 <pre>
 End hom_inc_subalgebra.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 148
+Line: 174
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -622,110 +733,110 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 153
+Line: 179
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Section path_subalgebra.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 153
+Line: 179
 Time: 0.001s">
-<div class="time" style="width: 0.20283975659229%"></div>
+<div class="time" style="width: 0.21691973969631%"></div>
 <pre>
   Context
     {σ : Signature} (A : Algebra σ)
-    (P : ∀ s, A s → hProp) {CP : IsClosedUnderOps A P}
-    (Q : ∀ s, A s → hProp) {CQ : IsClosedUnderOps A Q}.</pre>
+    (P : ∀ s, A s → Type) {CP : IsSubalgebraPredicate A P}
+    (Q : ∀ s, A s → Type) {CQ : IsSubalgebraPredicate A Q}.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 157
+Line: 183
 Time: 0.001s">
-<div class="time" style="width: 0.20283975659229%"></div>
+<div class="time" style="width: 0.21691973969631%"></div>
 <pre>
 
   Lemma path_subalgebra `{Funext} (p : P = Q) : A&amp;P = A&amp;Q.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 159
+Line: 185
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 160
-Time: 0.005s">
-<div class="time" style="width: 1.0141987829615%"></div>
+Line: 186
+Time: 0.006s">
+<div class="time" style="width: 1.3015184381779%"></div>
 <pre>
     by destruct p, (path_ishprop CP CQ).</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 161
+Line: 187
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 162
+Line: 188
 Time: 0.001s">
-<div class="time" style="width: 0.20283975659229%"></div>
+<div class="time" style="width: 0.21691973969631%"></div>
 <pre>
 
   Lemma path_subalgebra_iff `{Univalence} (R : ∀ s x, P s x &lt;-&gt; Q s x)
     : A&amp;P = A&amp;Q.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 165
+Line: 191
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 166
+Line: 192
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     apply path_subalgebra.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 167
-Time: 0.002s">
-<div class="time" style="width: 0.40567951318458%"></div>
+Line: 193
+Time: 0.001s">
+<div class="time" style="width: 0.21691973969631%"></div>
 <pre>
     funext s x.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 168
+Line: 194
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    apply equiv_path_trunctype.</pre>
+    apply (@path_universe _ _ _ (fst (R s x))).</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 169
-Time: 0.006s">
-<div class="time" style="width: 1.2170385395538%"></div>
+Line: 195
+Time: 0.007s">
+<div class="time" style="width: 1.5184381778742%"></div>
 <pre>
     apply (equiv_equiv_iff_hprop _ _ (R s x)).</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 170
+Line: 196
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 171
+Line: 197
 Time: 0.001s">
-<div class="time" style="width: 0.20283975659229%"></div>
+<div class="time" style="width: 0.21691973969631%"></div>
 <pre>
 End path_subalgebra.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
-Line: 173
+Line: 199
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
