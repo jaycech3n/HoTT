@@ -518,12 +518,12 @@
           
 
             i = 100;
-            data = "1 subgoal (ID 64)	  	  H : Funext	  A : Type	  P : forall B : Type, B <~> A -> Type	  Q : forall (B : Type) (e : B <~> A), P B e -> Type	  HP : RespectsEquivalenceR A P	  HQ : forall a : P A 1,	       RespectsEquivalenceR A	         (fun (B : Type) (e : B <~> A) =>	          Q B e (respects_equivalenceR.1 B e a))	  B : Type	  e : B <~> A	  ============================	  (fun (B0 : Type) (e0 : B0 <~> A) => forall x : P B0 e0, Q B0 e0 x) A 1 <~>	  (fun (B0 : Type) (e0 : B0 <~> A) => forall x : P B0 e0, Q B0 e0 x) B e	1 subgoal (ID 83)	  	  H : Funext	  A : Type	  P : forall B : Type, B <~> A -> Type	  Q : forall (B : Type) (e : B <~> A), P B e -> Type	  HP : RespectsEquivalenceR A P	  HQ : forall a : P A 1,	       RespectsEquivalenceR A	         (fun (B : Type) (e : B <~> A) =>	          Q B e (respects_equivalenceR.1 B e a))	  B : Type	  e : B <~> A	  b : P B e	  ============================	  Q A 1 ((respects_equivalenceR.1 B e)^-1 b) <~> Q B e b	";
+            data = "1 subgoal (ID 64)	  	  H : Funext	  A : Type	  P : forall B : Type, B <~> A -> Type	  Q : forall (B : Type) (e : B <~> A), P B e -> Type	  HP : RespectsEquivalenceR A P	  HQ : forall a : P A 1,	       RespectsEquivalenceR A	         (fun (B : Type) (e : B <~> A) =>	          Q B e (respects_equivalenceR.1 B e a))	  B : Type	  e : B <~> A	  ============================	  (fun (B0 : Type) (e0 : B0 <~> A) => forall x : P B0 e0, Q B0 e0 x) A 1 <~>	  (fun (B0 : Type) (e0 : B0 <~> A) => forall x : P B0 e0, Q B0 e0 x) B e	";
             responses[i]=data;
           
 
             i = 101;
-            data = "1 subgoal (ID 128)	  	  H : Funext	  A : Type	  P : forall B : Type, B <~> A -> Type	  Q : forall (B : Type) (e : B <~> A), P B e -> Type	  HP : RespectsEquivalenceR A P	  HQ : forall a : P A 1,	       RespectsEquivalenceR A	         (fun (B : Type) (e : B <~> A) =>	          Q B e (respects_equivalenceR.1 B e a))	  B : Type	  e : B <~> A	  b : P B e	  ============================	  (respects_equivalenceR.1 B e)^-1 b =	  respects_equivalenceR.1 A 1 ((respects_equivalenceR.1 B e)^-1 b)	";
+            data = "1 subgoal (ID 83)	  	  H : Funext	  A : Type	  P : forall B : Type, B <~> A -> Type	  Q : forall (B : Type) (e : B <~> A), P B e -> Type	  HP : RespectsEquivalenceR A P	  HQ : forall a : P A 1,	       RespectsEquivalenceR A	         (fun (B : Type) (e : B <~> A) =>	          Q B e (respects_equivalenceR.1 B e a))	  B : Type	  e : B <~> A	  b : P B e	  ============================	  Q A 1 ((respects_equivalenceR.1 B e)^-1 b) <~> Q B e b	1 subgoal (ID 128)	  	  H : Funext	  A : Type	  P : forall B : Type, B <~> A -> Type	  Q : forall (B : Type) (e : B <~> A), P B e -> Type	  HP : RespectsEquivalenceR A P	  HQ : forall a : P A 1,	       RespectsEquivalenceR A	         (fun (B : Type) (e : B <~> A) =>	          Q B e (respects_equivalenceR.1 B e a))	  B : Type	  e : B <~> A	  b : P B e	  ============================	  (respects_equivalenceR.1 B e)^-1 b =	  respects_equivalenceR.1 A 1 ((respects_equivalenceR.1 B e)^-1 b)	";
             responses[i]=data;
           
 
@@ -533,12 +533,12 @@
           
 
             i = 103;
-            data = "1 subgoal (ID 66)	  	  H : Funext	  A : Type	  P : forall B : Type, B <~> A -> Type	  Q : forall (B : Type) (e : B <~> A), P B e -> Type	  HP : RespectsEquivalenceR A P	  HQ : forall a : P A 1,	       RespectsEquivalenceR A	         (fun (B : Type) (e : B <~> A) =>	          Q B e (respects_equivalenceR.1 B e a))	  ============================	  (fun	     e' : forall (B : Type) (e : B <~> A),	          (fun (B0 : Type) (e0 : B0 <~> A) => forall x : P B0 e0, Q B0 e0 x)	            A 1 <~>	          (fun (B0 : Type) (e0 : B0 <~> A) => forall x : P B0 e0, Q B0 e0 x)	            B e => Funext -> 1 = e' A 1)	    (fun (B : Type) (e : B <~> A) =>	     equiv_functor_forall' (respects_equivalenceR.1 B e)^-1	       (fun b : P B e =>	        equiv_path	          (Q B e	             (respects_equivalenceR.1 B e	                (((respects_equivalenceR.1 B e)^-1)%function b))) 	          (Q B e b) (ap (Q B e) (eisretr (respects_equivalenceR.1 B e) b))	        oE ((HQ ((respects_equivalenceR.1 B e)^-1 b)).1 B e	            oE equiv_path (Q A 1 ((respects_equivalenceR.1 B e)^-1 b))	                 (Q A 1	                    (respects_equivalenceR.1 A 1	                       ((respects_equivalenceR.1 B e)^-1 b)))	                 (ap (Q A 1)	                    (ap10 (ap equiv_fun (respects_equivalenceR.2 H))	                       (((respects_equivalenceR.1 B e)^-1)%function b))))))	1 subgoal (ID 66)	  	  H : Funext	  A : Type	  P : forall B : Type, B <~> A -> Type	  Q : forall (B : Type) (e : B <~> A), P B e -> Type	  HP : RespectsEquivalenceR A P	  HQ : forall a : P A 1,	       RespectsEquivalenceR A	         (fun (B : Type) (e : B <~> A) =>	          Q B e (respects_equivalenceR.1 B e a))	  ============================	  (fun	     e' : forall (B : Type) (e : B <~> A),	          (fun (B0 : Type) (e0 : B0 <~> A) => forall x : P B0 e0, Q B0 e0 x)	            A 1 <~>	          (fun (B0 : Type) (e0 : B0 <~> A) => forall x : P B0 e0, Q B0 e0 x)	            B e => Funext -> 1 = e' A 1)	    (fun (B : Type) (e : B <~> A) =>	     equiv_functor_forall' (respects_equivalenceR.1 B e)^-1	       (fun b : P B e =>	        equiv_path	          (Q B e	             (respects_equivalenceR.1 B e	                (((respects_equivalenceR.1 B e)^-1)%function b))) 	          (Q B e b) (ap (Q B e) (eisretr (respects_equivalenceR.1 B e) b))	        oE ((HQ ((respects_equivalenceR.1 B e)^-1 b)).1 B e	            oE equiv_path (Q A 1 ((respects_equivalenceR.1 B e)^-1 b))	                 (Q A 1	                    (respects_equivalenceR.1 A 1	                       ((respects_equivalenceR.1 B e)^-1 b)))	                 (ap (Q A 1)	                    (ap10 (ap equiv_fun (respects_equivalenceR.2 H))	                       (((respects_equivalenceR.1 B e)^-1)%function b))))))	No more subgoals.	No more subgoals.	";
+            data = "1 subgoal (ID 66)	  	  H : Funext	  A : Type	  P : forall B : Type, B <~> A -> Type	  Q : forall (B : Type) (e : B <~> A), P B e -> Type	  HP : RespectsEquivalenceR A P	  HQ : forall a : P A 1,	       RespectsEquivalenceR A	         (fun (B : Type) (e : B <~> A) =>	          Q B e (respects_equivalenceR.1 B e a))	  ============================	  (fun	     e' : forall (B : Type) (e : B <~> A),	          (fun (B0 : Type) (e0 : B0 <~> A) => forall x : P B0 e0, Q B0 e0 x)	            A 1 <~>	          (fun (B0 : Type) (e0 : B0 <~> A) => forall x : P B0 e0, Q B0 e0 x)	            B e => Funext -> 1 = e' A 1)	    (fun (B : Type) (e : B <~> A) =>	     equiv_functor_forall' (respects_equivalenceR.1 B e)^-1	       (fun b : P B e =>	        equiv_path	          (Q B e	             (respects_equivalenceR.1 B e	                (((respects_equivalenceR.1 B e)^-1)%function b))) 	          (Q B e b) (ap (Q B e) (eisretr (respects_equivalenceR.1 B e) b))	        oE ((HQ ((respects_equivalenceR.1 B e)^-1 b)).1 B e	            oE equiv_path (Q A 1 ((respects_equivalenceR.1 B e)^-1 b))	                 (Q A 1	                    (respects_equivalenceR.1 A 1	                       ((respects_equivalenceR.1 B e)^-1 b)))	                 (ap (Q A 1)	                    (ap10 (ap equiv_fun (respects_equivalenceR.2 H))	                       (((respects_equivalenceR.1 B e)^-1)%function b))))))	1 subgoal (ID 66)	  	  H : Funext	  A : Type	  P : forall B : Type, B <~> A -> Type	  Q : forall (B : Type) (e : B <~> A), P B e -> Type	  HP : RespectsEquivalenceR A P	  HQ : forall a : P A 1,	       RespectsEquivalenceR A	         (fun (B : Type) (e : B <~> A) =>	          Q B e (respects_equivalenceR.1 B e a))	  ============================	  (fun	     e' : forall (B : Type) (e : B <~> A),	          (fun (B0 : Type) (e0 : B0 <~> A) => forall x : P B0 e0, Q B0 e0 x)	            A 1 <~>	          (fun (B0 : Type) (e0 : B0 <~> A) => forall x : P B0 e0, Q B0 e0 x)	            B e => Funext -> 1 = e' A 1)	    (fun (B : Type) (e : B <~> A) =>	     equiv_functor_forall' (respects_equivalenceR.1 B e)^-1	       (fun b : P B e =>	        equiv_path	          (Q B e	             (respects_equivalenceR.1 B e	                (((respects_equivalenceR.1 B e)^-1)%function b))) 	          (Q B e b) (ap (Q B e) (eisretr (respects_equivalenceR.1 B e) b))	        oE ((HQ ((respects_equivalenceR.1 B e)^-1 b)).1 B e	            oE equiv_path (Q A 1 ((respects_equivalenceR.1 B e)^-1 b))	                 (Q A 1	                    (respects_equivalenceR.1 A 1	                       ((respects_equivalenceR.1 B e)^-1 b)))	                 (ap (Q A 1)	                    (ap10 (ap equiv_fun (respects_equivalenceR.2 H))	                       (((respects_equivalenceR.1 B e)^-1)%function b))))))	";
             responses[i]=data;
           
 
             i = 104;
-            data = "<infomsg>forall_respects_equivalenceR is defined</infomsg>	";
+            data = "No more subgoals.	No more subgoals.	<infomsg>forall_respects_equivalenceR is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -563,22 +563,22 @@
           
 
             i = 109;
-            data = "1 subgoal (ID 56)	  	  H : Funext	  A : Type	  P : forall B : Type, A <~> B -> Type	  Q : forall (B : Type) (e : A <~> B), P B e -> Type	  HP : RespectsEquivalenceL A P	  HQ : forall a : P A 1,	       RespectsEquivalenceL A	         (fun (B : Type) (e : A <~> B) =>	          Q B e (respects_equivalenceL.1 B e a))	  B : Type	  e : A <~> B	  b : P A 1	  ============================	  Q A 1 b <~> Q B e (respects_equivalenceL.1 B e b)	";
+            data = "1 subgoal (ID 56)	  	  H : Funext	  A : Type	  P : forall B : Type, A <~> B -> Type	  Q : forall (B : Type) (e : A <~> B), P B e -> Type	  HP : RespectsEquivalenceL A P	  HQ : forall a : P A 1,	       RespectsEquivalenceL A	         (fun (B : Type) (e : A <~> B) =>	          Q B e (respects_equivalenceL.1 B e a))	  B : Type	  e : A <~> B	  b : P A 1	  ============================	  Q A 1 b <~> Q B e (respects_equivalenceL.1 B e b)	1 subgoal (ID 77)	  	  H : Funext	  A : Type	  P : forall B : Type, A <~> B -> Type	  Q : forall (B : Type) (e : A <~> B), P B e -> Type	  HP : RespectsEquivalenceL A P	  HQ : forall a : P A 1,	       RespectsEquivalenceL A	         (fun (B : Type) (e : A <~> B) =>	          Q B e (respects_equivalenceL.1 B e a))	  B : Type	  e : A <~> B	  b : P A 1	  ============================	  b = respects_equivalenceL.1 A 1 b	";
             responses[i]=data;
           
 
             i = 110;
-            data = "1 subgoal (ID 77)	  	  H : Funext	  A : Type	  P : forall B : Type, A <~> B -> Type	  Q : forall (B : Type) (e : A <~> B), P B e -> Type	  HP : RespectsEquivalenceL A P	  HQ : forall a : P A 1,	       RespectsEquivalenceL A	         (fun (B : Type) (e : A <~> B) =>	          Q B e (respects_equivalenceL.1 B e a))	  B : Type	  e : A <~> B	  b : P A 1	  ============================	  b = respects_equivalenceL.1 A 1 b	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 58)		subgoal 1 (ID 58) is:	 (fun	    e' : forall (B : Type) (e : A <~> B),	         (fun (B0 : Type) (e0 : A <~> B0) => {x : _ & Q B0 e0 x}) A 1 <~>	         (fun (B0 : Type) (e0 : A <~> B0) => {x : _ & Q B0 e0 x}) B e =>	  Funext -> 1 = e' A 1)	   (fun (B : Type) (e : A <~> B) =>	    equiv_functor_sigma' (respects_equivalenceL.1 B e)	      (fun b : P A 1 =>	       (HQ b).1 B e	       oE equiv_path (Q A 1 b) (Q A 1 (respects_equivalenceL.1 A 1 b))	            (ap (Q A 1) (ap10 (ap equiv_fun (respects_equivalenceL.2 H)) b))))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 58)		subgoal 1 (ID 58) is:	 (fun	    e' : forall (B : Type) (e : A <~> B),	         (fun (B0 : Type) (e0 : A <~> B0) => {x : _ & Q B0 e0 x}) A 1 <~>	         (fun (B0 : Type) (e0 : A <~> B0) => {x : _ & Q B0 e0 x}) B e =>	  Funext -> 1 = e' A 1)	   (fun (B : Type) (e : A <~> B) =>	    equiv_functor_sigma' (respects_equivalenceL.1 B e)	      (fun b : P A 1 =>	       (HQ b).1 B e	       oE equiv_path (Q A 1 b) (Q A 1 (respects_equivalenceL.1 A 1 b))	            (ap (Q A 1) (ap10 (ap equiv_fun (respects_equivalenceL.2 H)) b))))	";
             responses[i]=data;
           
 
             i = 111;
-            data = "1 subgoal (ID 58)	  	  H : Funext	  A : Type	  P : forall B : Type, A <~> B -> Type	  Q : forall (B : Type) (e : A <~> B), P B e -> Type	  HP : RespectsEquivalenceL A P	  HQ : forall a : P A 1,	       RespectsEquivalenceL A	         (fun (B : Type) (e : A <~> B) =>	          Q B e (respects_equivalenceL.1 B e a))	  ============================	  (fun	     e' : forall (B : Type) (e : A <~> B),	          (fun (B0 : Type) (e0 : A <~> B0) => {x : _ & Q B0 e0 x}) A 1 <~>	          (fun (B0 : Type) (e0 : A <~> B0) => {x : _ & Q B0 e0 x}) B e =>	   Funext -> 1 = e' A 1)	    (fun (B : Type) (e : A <~> B) =>	     equiv_functor_sigma' (respects_equivalenceL.1 B e)	       (fun b : P A 1 =>	        (HQ b).1 B e	        oE equiv_path (Q A 1 b) (Q A 1 (respects_equivalenceL.1 A 1 b))	             (ap (Q A 1) (ap10 (ap equiv_fun (respects_equivalenceL.2 H)) b))))	1 subgoal (ID 58)	  	  H : Funext	  A : Type	  P : forall B : Type, A <~> B -> Type	  Q : forall (B : Type) (e : A <~> B), P B e -> Type	  HP : RespectsEquivalenceL A P	  HQ : forall a : P A 1,	       RespectsEquivalenceL A	         (fun (B : Type) (e : A <~> B) =>	          Q B e (respects_equivalenceL.1 B e a))	  ============================	  (fun	     e' : forall (B : Type) (e : A <~> B),	          (fun (B0 : Type) (e0 : A <~> B0) => {x : _ & Q B0 e0 x}) A 1 <~>	          (fun (B0 : Type) (e0 : A <~> B0) => {x : _ & Q B0 e0 x}) B e =>	   Funext -> 1 = e' A 1)	    (fun (B : Type) (e : A <~> B) =>	     equiv_functor_sigma' (respects_equivalenceL.1 B e)	       (fun b : P A 1 =>	        (HQ b).1 B e	        oE equiv_path (Q A 1 b) (Q A 1 (respects_equivalenceL.1 A 1 b))	             (ap (Q A 1) (ap10 (ap equiv_fun (respects_equivalenceL.2 H)) b))))	No more subgoals.	No more subgoals.	";
+            data = "1 subgoal (ID 58)	  	  H : Funext	  A : Type	  P : forall B : Type, A <~> B -> Type	  Q : forall (B : Type) (e : A <~> B), P B e -> Type	  HP : RespectsEquivalenceL A P	  HQ : forall a : P A 1,	       RespectsEquivalenceL A	         (fun (B : Type) (e : A <~> B) =>	          Q B e (respects_equivalenceL.1 B e a))	  ============================	  (fun	     e' : forall (B : Type) (e : A <~> B),	          (fun (B0 : Type) (e0 : A <~> B0) => {x : _ & Q B0 e0 x}) A 1 <~>	          (fun (B0 : Type) (e0 : A <~> B0) => {x : _ & Q B0 e0 x}) B e =>	   Funext -> 1 = e' A 1)	    (fun (B : Type) (e : A <~> B) =>	     equiv_functor_sigma' (respects_equivalenceL.1 B e)	       (fun b : P A 1 =>	        (HQ b).1 B e	        oE equiv_path (Q A 1 b) (Q A 1 (respects_equivalenceL.1 A 1 b))	             (ap (Q A 1) (ap10 (ap equiv_fun (respects_equivalenceL.2 H)) b))))	1 subgoal (ID 58)	  	  H : Funext	  A : Type	  P : forall B : Type, A <~> B -> Type	  Q : forall (B : Type) (e : A <~> B), P B e -> Type	  HP : RespectsEquivalenceL A P	  HQ : forall a : P A 1,	       RespectsEquivalenceL A	         (fun (B : Type) (e : A <~> B) =>	          Q B e (respects_equivalenceL.1 B e a))	  ============================	  (fun	     e' : forall (B : Type) (e : A <~> B),	          (fun (B0 : Type) (e0 : A <~> B0) => {x : _ & Q B0 e0 x}) A 1 <~>	          (fun (B0 : Type) (e0 : A <~> B0) => {x : _ & Q B0 e0 x}) B e =>	   Funext -> 1 = e' A 1)	    (fun (B : Type) (e : A <~> B) =>	     equiv_functor_sigma' (respects_equivalenceL.1 B e)	       (fun b : P A 1 =>	        (HQ b).1 B e	        oE equiv_path (Q A 1 b) (Q A 1 (respects_equivalenceL.1 A 1 b))	             (ap (Q A 1) (ap10 (ap equiv_fun (respects_equivalenceL.2 H)) b))))	No more subgoals.	No more subgoals.	<infomsg>sigma_respects_equivalenceL is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 112;
-            data = "<infomsg>sigma_respects_equivalenceL is defined</infomsg>	1 subgoal (ID 56)	  	  H : Funext	  A : Type	  P : forall B : Type, B <~> A -> Type	  Q : forall (B : Type) (e : B <~> A), P B e -> Type	  HP : RespectsEquivalenceR A P	  HQ : forall a : P A 1,	       RespectsEquivalenceR A	         (fun (B : Type) (e : B <~> A) =>	          Q B e (respects_equivalenceR.1 B e a))	  ============================	  RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => {x : _ & Q B e x})	";
+            data = "1 subgoal (ID 56)	  	  H : Funext	  A : Type	  P : forall B : Type, B <~> A -> Type	  Q : forall (B : Type) (e : B <~> A), P B e -> Type	  HP : RespectsEquivalenceR A P	  HQ : forall a : P A 1,	       RespectsEquivalenceR A	         (fun (B : Type) (e : B <~> A) =>	          Q B e (respects_equivalenceR.1 B e a))	  ============================	  RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => {x : _ & Q B e x})	";
             responses[i]=data;
           
 
@@ -623,7 +623,7 @@
           
 
             i = 121;
-            data = "1 subgoal (ID 33)	  	  A, A' : Type	  P : forall B : Type, A <~> B -> Type	  P' : forall B : Type, A' <~> B -> Type	  eA : A <~> A'	  eP : forall (B : Type) (e : A' <~> B), P B (e oE eA) <~> P' B e	  HP : RespectsEquivalenceL A P	  ============================	  RespectsEquivalenceL A' P'	";
+            data = "1 subgoal (ID 33)	  	  A : Type	  A' : Type	  P : forall B : Type, A <~> B -> Type	  P' : forall B : Type, A' <~> B -> Type	  eA : A <~> A'	  eP : forall (B : Type) (e : A' <~> B), P B (e oE eA) <~> P' B e	  HP : RespectsEquivalenceL A P	  ============================	  RespectsEquivalenceL A' P'	";
             responses[i]=data;
           
 
@@ -633,42 +633,42 @@
           
 
             i = 123;
-            data = "2 subgoals (ID 43)	  	  A, A' : Type	  P : forall B : Type, A <~> B -> Type	  P' : forall B : Type, A' <~> B -> Type	  eA : A <~> A'	  eP : forall (B : Type) (e : A' <~> B), P B (e oE eA) <~> P' B e	  HP : RespectsEquivalenceL A P	  B : Type	  e : A' <~> B	  ============================	  P' A' 1 <~> P' B e		subgoal 2 (ID 45) is:	 (fun e' : forall (B : Type) (e : A' <~> B), P' A' 1 <~> P' B e =>	  Funext -> 1 = e' A' 1) (fun (B : Type) (e : A' <~> B) => ?Goal)	";
+            data = "2 subgoals (ID 43)	  	  A : Type	  A' : Type	  P : forall B : Type, A <~> B -> Type	  P' : forall B : Type, A' <~> B -> Type	  eA : A <~> A'	  eP : forall (B : Type) (e : A' <~> B), P B (e oE eA) <~> P' B e	  HP : RespectsEquivalenceL A P	  B : Type	  e : A' <~> B	  ============================	  P' A' 1 <~> P' B e		subgoal 2 (ID 45) is:	 (fun e' : forall (B : Type) (e : A' <~> B), P' A' 1 <~> P' B e =>	  Funext -> 1 = e' A' 1) (fun (B : Type) (e : A' <~> B) => ?Goal)	";
             responses[i]=data;
           
 
             i = 124;
-            data = "1 subgoal (ID 43)	  	  A, A' : Type	  P : forall B : Type, A <~> B -> Type	  P' : forall B : Type, A' <~> B -> Type	  eA : A <~> A'	  eP : forall (B : Type) (e : A' <~> B), P B (e oE eA) <~> P' B e	  HP : RespectsEquivalenceL A P	  B : Type	  e : A' <~> B	  ============================	  P' A' 1 <~> P' B e	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	";
+            data = "1 subgoal (ID 43)	  	  A : Type	  A' : Type	  P : forall B : Type, A <~> B -> Type	  P' : forall B : Type, A' <~> B -> Type	  eA : A <~> A'	  eP : forall (B : Type) (e : A' <~> B), P B (e oE eA) <~> P' B e	  HP : RespectsEquivalenceL A P	  B : Type	  e : A' <~> B	  ============================	  P' A' 1 <~> P' B e	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 45)		subgoal 1 (ID 45) is:	 (fun e' : forall (B : Type) (e : A' <~> B), P' A' 1 <~> P' B e =>	  Funext -> 1 = e' A' 1)	   (fun (B : Type) (e : A' <~> B) =>	    eP B e oE (HP.1 B (e oE eA) oE (HP.1 A' (1 oE eA))^-1 oE (eP A' 1)^-1))	";
             responses[i]=data;
           
 
             i = 125;
-            data = "1 subgoal (ID 45)		subgoal 1 (ID 45) is:	 (fun e' : forall (B : Type) (e : A' <~> B), P' A' 1 <~> P' B e =>	  Funext -> 1 = e' A' 1)	   (fun (B : Type) (e : A' <~> B) =>	    eP B e oE (HP.1 B (e oE eA) oE (HP.1 A' (1 oE eA))^-1 oE (eP A' 1)^-1))	";
+            data = "1 subgoal (ID 45)	  	  A : Type	  A' : Type	  P : forall B : Type, A <~> B -> Type	  P' : forall B : Type, A' <~> B -> Type	  eA : A <~> A'	  eP : forall (B : Type) (e : A' <~> B), P B (e oE eA) <~> P' B e	  HP : RespectsEquivalenceL A P	  ============================	  (fun e' : forall (B : Type) (e : A' <~> B), P' A' 1 <~> P' B e =>	   Funext -> 1 = e' A' 1)	    (fun (B : Type) (e : A' <~> B) =>	     eP B e oE (HP.1 B (e oE eA) oE (HP.1 A' (1 oE eA))^-1 oE (eP A' 1)^-1))	1 subgoal (ID 45)	  	  A : Type	  A' : Type	  P : forall B : Type, A <~> B -> Type	  P' : forall B : Type, A' <~> B -> Type	  eA : A <~> A'	  eP : forall (B : Type) (e : A' <~> B), P B (e oE eA) <~> P' B e	  HP : RespectsEquivalenceL A P	  ============================	  (fun e' : forall (B : Type) (e : A' <~> B), P' A' 1 <~> P' B e =>	   Funext -> 1 = e' A' 1)	    (fun (B : Type) (e : A' <~> B) =>	     eP B e oE (HP.1 B (e oE eA) oE (HP.1 A' (1 oE eA))^-1 oE (eP A' 1)^-1))	No more subgoals.	No more subgoals.	<infomsg>respects_equivalenceL_equiv is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 126;
-            data = "1 subgoal (ID 45)	  	  A, A' : Type	  P : forall B : Type, A <~> B -> Type	  P' : forall B : Type, A' <~> B -> Type	  eA : A <~> A'	  eP : forall (B : Type) (e : A' <~> B), P B (e oE eA) <~> P' B e	  HP : RespectsEquivalenceL A P	  ============================	  (fun e' : forall (B : Type) (e : A' <~> B), P' A' 1 <~> P' B e =>	   Funext -> 1 = e' A' 1)	    (fun (B : Type) (e : A' <~> B) =>	     eP B e oE (HP.1 B (e oE eA) oE (HP.1 A' (1 oE eA))^-1 oE (eP A' 1)^-1))	1 subgoal (ID 45)	  	  A, A' : Type	  P : forall B : Type, A <~> B -> Type	  P' : forall B : Type, A' <~> B -> Type	  eA : A <~> A'	  eP : forall (B : Type) (e : A' <~> B), P B (e oE eA) <~> P' B e	  HP : RespectsEquivalenceL A P	  ============================	  (fun e' : forall (B : Type) (e : A' <~> B), P' A' 1 <~> P' B e =>	   Funext -> 1 = e' A' 1)	    (fun (B : Type) (e : A' <~> B) =>	     eP B e oE (HP.1 B (e oE eA) oE (HP.1 A' (1 oE eA))^-1 oE (eP A' 1)^-1))	";
+            data = "1 subgoal (ID 51)	  	  A : Type	  A' : Type	  P : forall B : Type, B <~> A -> Type	  P' : forall B : Type, B <~> A' -> Type	  eA : A' <~> A	  eP : forall (B : Type) (e : B <~> A'), P B (eA oE e) <~> P' B e	  HP : RespectsEquivalenceR A P	  ============================	  RespectsEquivalenceR A' P'	";
             responses[i]=data;
           
 
             i = 127;
-            data = "No more subgoals.	No more subgoals.	<infomsg>respects_equivalenceL_equiv is defined</infomsg>	1 subgoal (ID 51)	  	  A, A' : Type	  P : forall B : Type, B <~> A -> Type	  P' : forall B : Type, B <~> A' -> Type	  eA : A' <~> A	  eP : forall (B : Type) (e : B <~> A'), P B (eA oE e) <~> P' B e	  HP : RespectsEquivalenceR A P	  ============================	  RespectsEquivalenceR A' P'	";
+            data = "";
             responses[i]=data;
           
 
             i = 128;
-            data = "2 subgoals (ID 61)	  	  A, A' : Type	  P : forall B : Type, B <~> A -> Type	  P' : forall B : Type, B <~> A' -> Type	  eA : A' <~> A	  eP : forall (B : Type) (e : B <~> A'), P B (eA oE e) <~> P' B e	  HP : RespectsEquivalenceR A P	  B : Type	  e : B <~> A'	  ============================	  P' A' 1 <~> P' B e		subgoal 2 (ID 63) is:	 (fun e' : forall (B : Type) (e : B <~> A'), P' A' 1 <~> P' B e =>	  Funext -> 1 = e' A' 1) (fun (B : Type) (e : B <~> A') => ?Goal)	";
+            data = "2 subgoals (ID 61)	  	  A : Type	  A' : Type	  P : forall B : Type, B <~> A -> Type	  P' : forall B : Type, B <~> A' -> Type	  eA : A' <~> A	  eP : forall (B : Type) (e : B <~> A'), P B (eA oE e) <~> P' B e	  HP : RespectsEquivalenceR A P	  B : Type	  e : B <~> A'	  ============================	  P' A' 1 <~> P' B e		subgoal 2 (ID 63) is:	 (fun e' : forall (B : Type) (e : B <~> A'), P' A' 1 <~> P' B e =>	  Funext -> 1 = e' A' 1) (fun (B : Type) (e : B <~> A') => ?Goal)	";
             responses[i]=data;
           
 
             i = 129;
-            data = "1 subgoal (ID 61)	  	  A, A' : Type	  P : forall B : Type, B <~> A -> Type	  P' : forall B : Type, B <~> A' -> Type	  eA : A' <~> A	  eP : forall (B : Type) (e : B <~> A'), P B (eA oE e) <~> P' B e	  HP : RespectsEquivalenceR A P	  B : Type	  e : B <~> A'	  ============================	  P' A' 1 <~> P' B e	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 63)		subgoal 1 (ID 63) is:	 (fun e' : forall (B : Type) (e : B <~> A'), P' A' 1 <~> P' B e =>	  Funext -> 1 = e' A' 1)	   (fun (B : Type) (e : B <~> A') =>	    eP B e oE (HP.1 B (eA oE e) oE (HP.1 A' (eA oE 1))^-1 oE (eP A' 1)^-1))	";
+            data = "1 subgoal (ID 61)	  	  A : Type	  A' : Type	  P : forall B : Type, B <~> A -> Type	  P' : forall B : Type, B <~> A' -> Type	  eA : A' <~> A	  eP : forall (B : Type) (e : B <~> A'), P B (eA oE e) <~> P' B e	  HP : RespectsEquivalenceR A P	  B : Type	  e : B <~> A'	  ============================	  P' A' 1 <~> P' B e	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 63)		subgoal 1 (ID 63) is:	 (fun e' : forall (B : Type) (e : B <~> A'), P' A' 1 <~> P' B e =>	  Funext -> 1 = e' A' 1)	   (fun (B : Type) (e : B <~> A') =>	    eP B e oE (HP.1 B (eA oE e) oE (HP.1 A' (eA oE 1))^-1 oE (eP A' 1)^-1))	";
             responses[i]=data;
           
 
             i = 130;
-            data = "1 subgoal (ID 63)	  	  A, A' : Type	  P : forall B : Type, B <~> A -> Type	  P' : forall B : Type, B <~> A' -> Type	  eA : A' <~> A	  eP : forall (B : Type) (e : B <~> A'), P B (eA oE e) <~> P' B e	  HP : RespectsEquivalenceR A P	  ============================	  (fun e' : forall (B : Type) (e : B <~> A'), P' A' 1 <~> P' B e =>	   Funext -> 1 = e' A' 1)	    (fun (B : Type) (e : B <~> A') =>	     eP B e oE (HP.1 B (eA oE e) oE (HP.1 A' (eA oE 1))^-1 oE (eP A' 1)^-1))	1 subgoal (ID 63)	  	  A, A' : Type	  P : forall B : Type, B <~> A -> Type	  P' : forall B : Type, B <~> A' -> Type	  eA : A' <~> A	  eP : forall (B : Type) (e : B <~> A'), P B (eA oE e) <~> P' B e	  HP : RespectsEquivalenceR A P	  ============================	  (fun e' : forall (B : Type) (e : B <~> A'), P' A' 1 <~> P' B e =>	   Funext -> 1 = e' A' 1)	    (fun (B : Type) (e : B <~> A') =>	     eP B e oE (HP.1 B (eA oE e) oE (HP.1 A' (eA oE 1))^-1 oE (eP A' 1)^-1))	No more subgoals.	No more subgoals.	<infomsg>respects_equivalenceR_equiv is defined</infomsg>	";
+            data = "1 subgoal (ID 63)	  	  A : Type	  A' : Type	  P : forall B : Type, B <~> A -> Type	  P' : forall B : Type, B <~> A' -> Type	  eA : A' <~> A	  eP : forall (B : Type) (e : B <~> A'), P B (eA oE e) <~> P' B e	  HP : RespectsEquivalenceR A P	  ============================	  (fun e' : forall (B : Type) (e : B <~> A'), P' A' 1 <~> P' B e =>	   Funext -> 1 = e' A' 1)	    (fun (B : Type) (e : B <~> A') =>	     eP B e oE (HP.1 B (eA oE e) oE (HP.1 A' (eA oE 1))^-1 oE (eP A' 1)^-1))	1 subgoal (ID 63)	  	  A : Type	  A' : Type	  P : forall B : Type, B <~> A -> Type	  P' : forall B : Type, B <~> A' -> Type	  eA : A' <~> A	  eP : forall (B : Type) (e : B <~> A'), P B (eA oE e) <~> P' B e	  HP : RespectsEquivalenceR A P	  ============================	  (fun e' : forall (B : Type) (e : B <~> A'), P' A' 1 <~> P' B e =>	   Funext -> 1 = e' A' 1)	    (fun (B : Type) (e : B <~> A') =>	     eP B e oE (HP.1 B (eA oE e) oE (HP.1 A' (eA oE 1))^-1 oE (eP A' 1)^-1))	No more subgoals.	No more subgoals.	<infomsg>respects_equivalenceR_equiv is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -788,7 +788,7 @@
           
 
             i = 154;
-            data = "1 subgoal (ID 27)	  	  A : Type	  P, Q : forall B : Type, A <~> B -> A	  HP : RespectsEquivalenceL A (fun (B : Type) (e : A <~> B) => P B e = Q B e)	  ============================	  RespectsEquivalenceL A	    (fun (B : Type) (e : A <~> B) => e (P B e) = e (Q B e))	";
+            data = "1 subgoal (ID 27)	  	  A : Type	  P : forall B : Type, A <~> B -> A	  Q : forall B : Type, A <~> B -> A	  HP : RespectsEquivalenceL A (fun (B : Type) (e : A <~> B) => P B e = Q B e)	  ============================	  RespectsEquivalenceL A	    (fun (B : Type) (e : A <~> B) => e (P B e) = e (Q B e))	";
             responses[i]=data;
           
 
@@ -798,12 +798,12 @@
           
 
             i = 156;
-            data = "2 subgoals (ID 37)	  	  A : Type	  P, Q : forall B : Type, A <~> B -> A	  HP : RespectsEquivalenceL A (fun (B : Type) (e : A <~> B) => P B e = Q B e)	  B : Type	  e : A <~> B	  ============================	  (fun (B0 : Type) (e0 : A <~> B0) => e0 (P B0 e0) = e0 (Q B0 e0)) A 1 <~>	  (fun (B0 : Type) (e0 : A <~> B0) => e0 (P B0 e0) = e0 (Q B0 e0)) B e		subgoal 2 (ID 42) is:	 1 = (fun (B : Type) (e : A <~> B) => ?Goal) A 1	";
+            data = "2 subgoals (ID 37)	  	  A : Type	  P : forall B : Type, A <~> B -> A	  Q : forall B : Type, A <~> B -> A	  HP : RespectsEquivalenceL A (fun (B : Type) (e : A <~> B) => P B e = Q B e)	  B : Type	  e : A <~> B	  ============================	  (fun (B0 : Type) (e0 : A <~> B0) => e0 (P B0 e0) = e0 (Q B0 e0)) A 1 <~>	  (fun (B0 : Type) (e0 : A <~> B0) => e0 (P B0 e0) = e0 (Q B0 e0)) B e		subgoal 2 (ID 42) is:	 1 = (fun (B : Type) (e : A <~> B) => ?Goal) A 1	";
             responses[i]=data;
           
 
             i = 157;
-            data = "1 subgoal (ID 37)	  	  A : Type	  P, Q : forall B : Type, A <~> B -> A	  HP : RespectsEquivalenceL A (fun (B : Type) (e : A <~> B) => P B e = Q B e)	  B : Type	  e : A <~> B	  ============================	  (fun (B0 : Type) (e0 : A <~> B0) => e0 (P B0 e0) = e0 (Q B0 e0)) A 1 <~>	  (fun (B0 : Type) (e0 : A <~> B0) => e0 (P B0 e0) = e0 (Q B0 e0)) B e	1 subgoal (ID 59)	  	  A : Type	  P, Q : forall B : Type, A <~> B -> A	  HP : RespectsEquivalenceL A (fun (B : Type) (e : A <~> B) => P B e = Q B e)	  B : Type	  e : A <~> B	  ============================	  P A 1 = Q A 1 <~> P B e = Q B e	";
+            data = "1 subgoal (ID 37)	  	  A : Type	  P : forall B : Type, A <~> B -> A	  Q : forall B : Type, A <~> B -> A	  HP : RespectsEquivalenceL A (fun (B : Type) (e : A <~> B) => P B e = Q B e)	  B : Type	  e : A <~> B	  ============================	  (fun (B0 : Type) (e0 : A <~> B0) => e0 (P B0 e0) = e0 (Q B0 e0)) A 1 <~>	  (fun (B0 : Type) (e0 : A <~> B0) => e0 (P B0 e0) = e0 (Q B0 e0)) B e	1 subgoal (ID 59)	  	  A : Type	  P : forall B : Type, A <~> B -> A	  Q : forall B : Type, A <~> B -> A	  HP : RespectsEquivalenceL A (fun (B : Type) (e : A <~> B) => P B e = Q B e)	  B : Type	  e : A <~> B	  ============================	  P A 1 = Q A 1 <~> P B e = Q B e	";
             responses[i]=data;
           
 
@@ -813,12 +813,12 @@
           
 
             i = 159;
-            data = "1 subgoal (ID 42)	  	  A : Type	  P, Q : forall B : Type, A <~> B -> A	  HP : RespectsEquivalenceL A (fun (B : Type) (e : A <~> B) => P B e = Q B e)	  y : Funext	  ============================	  1 =	  (fun (B : Type) (e : A <~> B) =>	   equiv_ap' e (P B e) (Q B e) oE respects_equivalenceL.1 B e) A 1	1 subgoal (ID 42)	  	  A : Type	  P, Q : forall B : Type, A <~> B -> A	  HP : RespectsEquivalenceL A (fun (B : Type) (e : A <~> B) => P B e = Q B e)	  y : Funext	  ============================	  1 =	  (fun (B : Type) (e : A <~> B) =>	   equiv_ap' e (P B e) (Q B e) oE respects_equivalenceL.1 B e) A 1	No more subgoals.	No more subgoals.	<infomsg>equiv_ap_respects_equivalenceL is defined</infomsg>	";
+            data = "1 subgoal (ID 42)	  	  A : Type	  P : forall B : Type, A <~> B -> A	  Q : forall B : Type, A <~> B -> A	  HP : RespectsEquivalenceL A (fun (B : Type) (e : A <~> B) => P B e = Q B e)	  y : Funext	  ============================	  1 =	  (fun (B : Type) (e : A <~> B) =>	   equiv_ap' e (P B e) (Q B e) oE respects_equivalenceL.1 B e) A 1	1 subgoal (ID 42)	  	  A : Type	  P : forall B : Type, A <~> B -> A	  Q : forall B : Type, A <~> B -> A	  HP : RespectsEquivalenceL A (fun (B : Type) (e : A <~> B) => P B e = Q B e)	  y : Funext	  ============================	  1 =	  (fun (B : Type) (e : A <~> B) =>	   equiv_ap' e (P B e) (Q B e) oE respects_equivalenceL.1 B e) A 1	No more subgoals.	No more subgoals.	<infomsg>equiv_ap_respects_equivalenceL is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 160;
-            data = "1 subgoal (ID 48)	  	  A : Type	  P, Q : forall B : Type, A <~> B -> B	  HP : RespectsEquivalenceL A (fun (B : Type) (e : A <~> B) => P B e = Q B e)	  ============================	  RespectsEquivalenceL A	    (fun (B : Type) (e : A <~> B) => e^-1 (P B e) = e^-1 (Q B e))	";
+            data = "1 subgoal (ID 48)	  	  A : Type	  P : forall B : Type, A <~> B -> B	  Q : forall B : Type, A <~> B -> B	  HP : RespectsEquivalenceL A (fun (B : Type) (e : A <~> B) => P B e = Q B e)	  ============================	  RespectsEquivalenceL A	    (fun (B : Type) (e : A <~> B) => e^-1 (P B e) = e^-1 (Q B e))	";
             responses[i]=data;
           
 
@@ -828,12 +828,12 @@
           
 
             i = 162;
-            data = "2 subgoals (ID 58)	  	  A : Type	  P, Q : forall B : Type, A <~> B -> B	  HP : RespectsEquivalenceL A (fun (B : Type) (e : A <~> B) => P B e = Q B e)	  B : Type	  e : A <~> B	  ============================	  (fun (B0 : Type) (e0 : A <~> B0) => e0^-1 (P B0 e0) = e0^-1 (Q B0 e0)) A 1 <~>	  (fun (B0 : Type) (e0 : A <~> B0) => e0^-1 (P B0 e0) = e0^-1 (Q B0 e0)) B e		subgoal 2 (ID 63) is:	 1 = (fun (B : Type) (e : A <~> B) => ?Goal) A 1	";
+            data = "2 subgoals (ID 58)	  	  A : Type	  P : forall B : Type, A <~> B -> B	  Q : forall B : Type, A <~> B -> B	  HP : RespectsEquivalenceL A (fun (B : Type) (e : A <~> B) => P B e = Q B e)	  B : Type	  e : A <~> B	  ============================	  (fun (B0 : Type) (e0 : A <~> B0) => e0^-1 (P B0 e0) = e0^-1 (Q B0 e0)) A 1 <~>	  (fun (B0 : Type) (e0 : A <~> B0) => e0^-1 (P B0 e0) = e0^-1 (Q B0 e0)) B e		subgoal 2 (ID 63) is:	 1 = (fun (B : Type) (e : A <~> B) => ?Goal) A 1	";
             responses[i]=data;
           
 
             i = 163;
-            data = "1 subgoal (ID 58)	  	  A : Type	  P, Q : forall B : Type, A <~> B -> B	  HP : RespectsEquivalenceL A (fun (B : Type) (e : A <~> B) => P B e = Q B e)	  B : Type	  e : A <~> B	  ============================	  (fun (B0 : Type) (e0 : A <~> B0) => e0^-1 (P B0 e0) = e0^-1 (Q B0 e0)) A 1 <~>	  (fun (B0 : Type) (e0 : A <~> B0) => e0^-1 (P B0 e0) = e0^-1 (Q B0 e0)) B e	1 subgoal (ID 80)	  	  A : Type	  P, Q : forall B : Type, A <~> B -> B	  HP : RespectsEquivalenceL A (fun (B : Type) (e : A <~> B) => P B e = Q B e)	  B : Type	  e : A <~> B	  ============================	  P A 1 = Q A 1 <~> P B e = Q B e	";
+            data = "1 subgoal (ID 58)	  	  A : Type	  P : forall B : Type, A <~> B -> B	  Q : forall B : Type, A <~> B -> B	  HP : RespectsEquivalenceL A (fun (B : Type) (e : A <~> B) => P B e = Q B e)	  B : Type	  e : A <~> B	  ============================	  (fun (B0 : Type) (e0 : A <~> B0) => e0^-1 (P B0 e0) = e0^-1 (Q B0 e0)) A 1 <~>	  (fun (B0 : Type) (e0 : A <~> B0) => e0^-1 (P B0 e0) = e0^-1 (Q B0 e0)) B e	1 subgoal (ID 80)	  	  A : Type	  P : forall B : Type, A <~> B -> B	  Q : forall B : Type, A <~> B -> B	  HP : RespectsEquivalenceL A (fun (B : Type) (e : A <~> B) => P B e = Q B e)	  B : Type	  e : A <~> B	  ============================	  P A 1 = Q A 1 <~> P B e = Q B e	";
             responses[i]=data;
           
 
@@ -843,12 +843,12 @@
           
 
             i = 165;
-            data = "1 subgoal (ID 63)	  	  A : Type	  P, Q : forall B : Type, A <~> B -> B	  HP : RespectsEquivalenceL A (fun (B : Type) (e : A <~> B) => P B e = Q B e)	  y : Funext	  ============================	  1 =	  (fun (B : Type) (e : A <~> B) =>	   equiv_ap' e^-1 (P B e) (Q B e) oE respects_equivalenceL.1 B e) A 1	1 subgoal (ID 63)	  	  A : Type	  P, Q : forall B : Type, A <~> B -> B	  HP : RespectsEquivalenceL A (fun (B : Type) (e : A <~> B) => P B e = Q B e)	  y : Funext	  ============================	  1 =	  (fun (B : Type) (e : A <~> B) =>	   equiv_ap' e^-1 (P B e) (Q B e) oE respects_equivalenceL.1 B e) A 1	No more subgoals.	No more subgoals.	<infomsg>equiv_ap_inv_respects_equivalenceL is defined</infomsg>	";
+            data = "1 subgoal (ID 63)	  	  A : Type	  P : forall B : Type, A <~> B -> B	  Q : forall B : Type, A <~> B -> B	  HP : RespectsEquivalenceL A (fun (B : Type) (e : A <~> B) => P B e = Q B e)	  y : Funext	  ============================	  1 =	  (fun (B : Type) (e : A <~> B) =>	   equiv_ap' e^-1 (P B e) (Q B e) oE respects_equivalenceL.1 B e) A 1	1 subgoal (ID 63)	  	  A : Type	  P : forall B : Type, A <~> B -> B	  Q : forall B : Type, A <~> B -> B	  HP : RespectsEquivalenceL A (fun (B : Type) (e : A <~> B) => P B e = Q B e)	  y : Funext	  ============================	  1 =	  (fun (B : Type) (e : A <~> B) =>	   equiv_ap' e^-1 (P B e) (Q B e) oE respects_equivalenceL.1 B e) A 1	No more subgoals.	No more subgoals.	<infomsg>equiv_ap_inv_respects_equivalenceL is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 166;
-            data = "1 subgoal (ID 61)	  	  A : Type	  P, Q : forall B : Type, B <~> A -> B	  HP : RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => P B e = Q B e)	  ============================	  RespectsEquivalenceR A	    (fun (B : Type) (e : B <~> A) => e (P B e) = e (Q B e))	";
+            data = "1 subgoal (ID 61)	  	  A : Type	  P : forall B : Type, B <~> A -> B	  Q : forall B : Type, B <~> A -> B	  HP : RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => P B e = Q B e)	  ============================	  RespectsEquivalenceR A	    (fun (B : Type) (e : B <~> A) => e (P B e) = e (Q B e))	";
             responses[i]=data;
           
 
@@ -858,12 +858,12 @@
           
 
             i = 168;
-            data = "2 subgoals (ID 71)	  	  A : Type	  P, Q : forall B : Type, B <~> A -> B	  HP : RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => P B e = Q B e)	  B : Type	  e : B <~> A	  ============================	  (fun (B0 : Type) (e0 : B0 <~> A) => e0 (P B0 e0) = e0 (Q B0 e0)) A 1 <~>	  (fun (B0 : Type) (e0 : B0 <~> A) => e0 (P B0 e0) = e0 (Q B0 e0)) B e		subgoal 2 (ID 76) is:	 1 = (fun (B : Type) (e : B <~> A) => ?Goal) A 1	";
+            data = "2 subgoals (ID 71)	  	  A : Type	  P : forall B : Type, B <~> A -> B	  Q : forall B : Type, B <~> A -> B	  HP : RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => P B e = Q B e)	  B : Type	  e : B <~> A	  ============================	  (fun (B0 : Type) (e0 : B0 <~> A) => e0 (P B0 e0) = e0 (Q B0 e0)) A 1 <~>	  (fun (B0 : Type) (e0 : B0 <~> A) => e0 (P B0 e0) = e0 (Q B0 e0)) B e		subgoal 2 (ID 76) is:	 1 = (fun (B : Type) (e : B <~> A) => ?Goal) A 1	";
             responses[i]=data;
           
 
             i = 169;
-            data = "1 subgoal (ID 71)	  	  A : Type	  P, Q : forall B : Type, B <~> A -> B	  HP : RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => P B e = Q B e)	  B : Type	  e : B <~> A	  ============================	  (fun (B0 : Type) (e0 : B0 <~> A) => e0 (P B0 e0) = e0 (Q B0 e0)) A 1 <~>	  (fun (B0 : Type) (e0 : B0 <~> A) => e0 (P B0 e0) = e0 (Q B0 e0)) B e	1 subgoal (ID 93)	  	  A : Type	  P, Q : forall B : Type, B <~> A -> B	  HP : RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => P B e = Q B e)	  B : Type	  e : B <~> A	  ============================	  P A 1 = Q A 1 <~> P B e = Q B e	";
+            data = "1 subgoal (ID 71)	  	  A : Type	  P : forall B : Type, B <~> A -> B	  Q : forall B : Type, B <~> A -> B	  HP : RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => P B e = Q B e)	  B : Type	  e : B <~> A	  ============================	  (fun (B0 : Type) (e0 : B0 <~> A) => e0 (P B0 e0) = e0 (Q B0 e0)) A 1 <~>	  (fun (B0 : Type) (e0 : B0 <~> A) => e0 (P B0 e0) = e0 (Q B0 e0)) B e	1 subgoal (ID 93)	  	  A : Type	  P : forall B : Type, B <~> A -> B	  Q : forall B : Type, B <~> A -> B	  HP : RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => P B e = Q B e)	  B : Type	  e : B <~> A	  ============================	  P A 1 = Q A 1 <~> P B e = Q B e	";
             responses[i]=data;
           
 
@@ -873,12 +873,12 @@
           
 
             i = 171;
-            data = "1 subgoal (ID 76)	  	  A : Type	  P, Q : forall B : Type, B <~> A -> B	  HP : RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => P B e = Q B e)	  y : Funext	  ============================	  1 =	  (fun (B : Type) (e : B <~> A) =>	   equiv_ap' e (P B e) (Q B e) oE respects_equivalenceR.1 B e) A 1	1 subgoal (ID 76)	  	  A : Type	  P, Q : forall B : Type, B <~> A -> B	  HP : RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => P B e = Q B e)	  y : Funext	  ============================	  1 =	  (fun (B : Type) (e : B <~> A) =>	   equiv_ap' e (P B e) (Q B e) oE respects_equivalenceR.1 B e) A 1	No more subgoals.	No more subgoals.	<infomsg>equiv_ap_respects_equivalenceR is defined</infomsg>	";
+            data = "1 subgoal (ID 76)	  	  A : Type	  P : forall B : Type, B <~> A -> B	  Q : forall B : Type, B <~> A -> B	  HP : RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => P B e = Q B e)	  y : Funext	  ============================	  1 =	  (fun (B : Type) (e : B <~> A) =>	   equiv_ap' e (P B e) (Q B e) oE respects_equivalenceR.1 B e) A 1	1 subgoal (ID 76)	  	  A : Type	  P : forall B : Type, B <~> A -> B	  Q : forall B : Type, B <~> A -> B	  HP : RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => P B e = Q B e)	  y : Funext	  ============================	  1 =	  (fun (B : Type) (e : B <~> A) =>	   equiv_ap' e (P B e) (Q B e) oE respects_equivalenceR.1 B e) A 1	No more subgoals.	No more subgoals.	<infomsg>equiv_ap_respects_equivalenceR is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 172;
-            data = "1 subgoal (ID 82)	  	  A : Type	  P, Q : forall B : Type, B <~> A -> A	  HP : RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => P B e = Q B e)	  ============================	  RespectsEquivalenceR A	    (fun (B : Type) (e : B <~> A) => e^-1 (P B e) = e^-1 (Q B e))	";
+            data = "1 subgoal (ID 82)	  	  A : Type	  P : forall B : Type, B <~> A -> A	  Q : forall B : Type, B <~> A -> A	  HP : RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => P B e = Q B e)	  ============================	  RespectsEquivalenceR A	    (fun (B : Type) (e : B <~> A) => e^-1 (P B e) = e^-1 (Q B e))	";
             responses[i]=data;
           
 
@@ -888,12 +888,12 @@
           
 
             i = 174;
-            data = "2 subgoals (ID 92)	  	  A : Type	  P, Q : forall B : Type, B <~> A -> A	  HP : RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => P B e = Q B e)	  B : Type	  e : B <~> A	  ============================	  (fun (B0 : Type) (e0 : B0 <~> A) => e0^-1 (P B0 e0) = e0^-1 (Q B0 e0)) A 1 <~>	  (fun (B0 : Type) (e0 : B0 <~> A) => e0^-1 (P B0 e0) = e0^-1 (Q B0 e0)) B e		subgoal 2 (ID 97) is:	 1 = (fun (B : Type) (e : B <~> A) => ?Goal) A 1	";
+            data = "2 subgoals (ID 92)	  	  A : Type	  P : forall B : Type, B <~> A -> A	  Q : forall B : Type, B <~> A -> A	  HP : RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => P B e = Q B e)	  B : Type	  e : B <~> A	  ============================	  (fun (B0 : Type) (e0 : B0 <~> A) => e0^-1 (P B0 e0) = e0^-1 (Q B0 e0)) A 1 <~>	  (fun (B0 : Type) (e0 : B0 <~> A) => e0^-1 (P B0 e0) = e0^-1 (Q B0 e0)) B e		subgoal 2 (ID 97) is:	 1 = (fun (B : Type) (e : B <~> A) => ?Goal) A 1	";
             responses[i]=data;
           
 
             i = 175;
-            data = "1 subgoal (ID 92)	  	  A : Type	  P, Q : forall B : Type, B <~> A -> A	  HP : RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => P B e = Q B e)	  B : Type	  e : B <~> A	  ============================	  (fun (B0 : Type) (e0 : B0 <~> A) => e0^-1 (P B0 e0) = e0^-1 (Q B0 e0)) A 1 <~>	  (fun (B0 : Type) (e0 : B0 <~> A) => e0^-1 (P B0 e0) = e0^-1 (Q B0 e0)) B e	1 subgoal (ID 114)	  	  A : Type	  P, Q : forall B : Type, B <~> A -> A	  HP : RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => P B e = Q B e)	  B : Type	  e : B <~> A	  ============================	  P A 1 = Q A 1 <~> P B e = Q B e	";
+            data = "1 subgoal (ID 92)	  	  A : Type	  P : forall B : Type, B <~> A -> A	  Q : forall B : Type, B <~> A -> A	  HP : RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => P B e = Q B e)	  B : Type	  e : B <~> A	  ============================	  (fun (B0 : Type) (e0 : B0 <~> A) => e0^-1 (P B0 e0) = e0^-1 (Q B0 e0)) A 1 <~>	  (fun (B0 : Type) (e0 : B0 <~> A) => e0^-1 (P B0 e0) = e0^-1 (Q B0 e0)) B e	1 subgoal (ID 114)	  	  A : Type	  P : forall B : Type, B <~> A -> A	  Q : forall B : Type, B <~> A -> A	  HP : RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => P B e = Q B e)	  B : Type	  e : B <~> A	  ============================	  P A 1 = Q A 1 <~> P B e = Q B e	";
             responses[i]=data;
           
 
@@ -903,7 +903,7 @@
           
 
             i = 177;
-            data = "1 subgoal (ID 97)	  	  A : Type	  P, Q : forall B : Type, B <~> A -> A	  HP : RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => P B e = Q B e)	  y : Funext	  ============================	  1 =	  (fun (B : Type) (e : B <~> A) =>	   equiv_ap' e^-1 (P B e) (Q B e) oE respects_equivalenceR.1 B e) A 1	1 subgoal (ID 97)	  	  A : Type	  P, Q : forall B : Type, B <~> A -> A	  HP : RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => P B e = Q B e)	  y : Funext	  ============================	  1 =	  (fun (B : Type) (e : B <~> A) =>	   equiv_ap' e^-1 (P B e) (Q B e) oE respects_equivalenceR.1 B e) A 1	No more subgoals.	No more subgoals.	<infomsg>equiv_ap_inv_respects_equivalenceR is defined</infomsg>	";
+            data = "1 subgoal (ID 97)	  	  A : Type	  P : forall B : Type, B <~> A -> A	  Q : forall B : Type, B <~> A -> A	  HP : RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => P B e = Q B e)	  y : Funext	  ============================	  1 =	  (fun (B : Type) (e : B <~> A) =>	   equiv_ap' e^-1 (P B e) (Q B e) oE respects_equivalenceR.1 B e) A 1	1 subgoal (ID 97)	  	  A : Type	  P : forall B : Type, B <~> A -> A	  Q : forall B : Type, B <~> A -> A	  HP : RespectsEquivalenceR A (fun (B : Type) (e : B <~> A) => P B e = Q B e)	  y : Funext	  ============================	  1 =	  (fun (B : Type) (e : B <~> A) =>	   equiv_ap' e^-1 (P B e) (Q B e) oE respects_equivalenceR.1 B e) A 1	No more subgoals.	No more subgoals.	<infomsg>equiv_ap_inv_respects_equivalenceR is defined</infomsg>	";
             responses[i]=data;
           
 
