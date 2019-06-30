@@ -30,14 +30,14 @@ pre {
 
 <div class="code" title="File: Square.v
 Line: 1
-Time: 0.041s">
+Time: 0.055s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Square.v
 Line: 1
 Time: 0.002s">
-<div class="time" style="width: 4.8780487804878%"></div>
+<div class="time" style="width: 3.6363636363636%"></div>
 <pre>
 Require Import DPath.</pre>
 </div>
@@ -67,7 +67,7 @@ heterogeneous path from p0i to p1i over pi0 and pi1.  *)
 <div class="code" title="File: Square.v
 Line: 18
 Time: 0.002s">
-<div class="time" style="width: 4.8780487804878%"></div>
+<div class="time" style="width: 3.6363636363636%"></div>
 <pre>Definition Square {A} {x00 x01 x10 x11 : A}
           (p0i : x00 = x01) (p1i : x10 = x11)
           (pi0 : x00 = x10) (pi1 : x01 = x11) : Type
@@ -76,7 +76,7 @@ Time: 0.002s">
 <div class="code" title="File: Square.v
 Line: 21
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
 
 Definition sqG1 {A} {x0 x1 : A} {p p' : x0 = x1} (q : p = p')
@@ -85,8 +85,8 @@ Definition sqG1 {A} {x0 x1 : A} {p p' : x0 = x1} (q : p = p')
 </div>
 <div class="code" title="File: Square.v
 Line: 25
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.002s">
+<div class="time" style="width: 3.6363636363636%"></div>
 <pre>
 
 Definition sqid {A} {x0 x1 : A} (p : x0 = x1) : Square p p 1 1
@@ -95,7 +95,7 @@ Definition sqid {A} {x0 x1 : A} (p : x0 = x1) : Square p p 1 1
 <div class="code" title="File: Square.v
 Line: 28
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
 
 Definition sq1G {A} {x0 x1 : A} {p p' : x0 = x1} (q : p = p')
@@ -111,7 +111,7 @@ Proof.</pre>
 <div class="code" title="File: Square.v
 Line: 32
 Time: 0.002s">
-<div class="time" style="width: 4.8780487804878%"></div>
+<div class="time" style="width: 3.6363636363636%"></div>
 <pre>
   destruct q, p; reflexivity.</pre>
 </div>
@@ -120,21 +120,21 @@ Line: 33
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 34
-Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
-<pre>
-
-Definition sqid' {A} {x0 x1 : A} (p : x0 = x1) : Square 1 1 p p
+Line: 35
+Time: 0.002s">
+<div class="time" style="width: 3.6363636363636%"></div>
+<pre>Definition sqid' {A} {x0 x1 : A} (p : x0 = x1) : Square 1 1 p p
   := sq1G (idpath p).</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 37
-Time: 0.002s">
-<div class="time" style="width: 4.8780487804878%"></div>
+Line: 36
+Time: 0.003s">
+<div class="time" style="width: 5.4545454545455%"></div>
 <pre>
 
 Definition sqCc {A} {x00 x01 x10 x11 x20 x21: A}
@@ -145,33 +145,33 @@ Definition sqCc {A} {x00 x01 x10 x11 x20 x21: A}
   : Square p0i p2i (pi0 @ pj0) (pi1 @ pj1).</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 44
+Line: 43
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 45
-Time: 0.004s">
-<div class="time" style="width: 9.7560975609756%"></div>
+Line: 44
+Time: 0.006s">
+<div class="time" style="width: 10.909090909091%"></div>
 <pre>
   destruct pi0, pi1, pj0, pj1; exact (s01 @ s12).</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 46
-Time: 0.002s">
-<div class="time" style="width: 4.8780487804878%"></div>
+Line: 45
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Square.v
 Line: 47
-Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
-<pre>
-
-Definition sqGccc {A} {x00 x01 x10 x11 : A}
+Time: 0.002s">
+<div class="time" style="width: 3.6363636363636%"></div>
+<pre>Definition sqGccc {A} {x00 x01 x10 x11 : A}
            {p0i : x00 = x01} {p1i : x10 = x11}
            {pi0 : x00 = x10} {pi1 : x01 = x11}
            {p0i' : x00 = x01} (g0i : p0i' = p0i)
@@ -179,33 +179,33 @@ Definition sqGccc {A} {x00 x01 x10 x11 : A}
   : Square p0i' p1i pi0 pi1.</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 54
+Line: 52
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 55
-Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+Line: 53
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   destruct g0i; exact s.</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 56
+Line: 54
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 57
+Line: 56
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
-<pre>
-
-Definition sqcGcc {A} {x00 x01 x10 x11 : A}
+<div class="time" style="width: 1.8181818181818%"></div>
+<pre>Definition sqcGcc {A} {x00 x01 x10 x11 : A}
            {p0i : x00 = x01} {p1i : x10 = x11}
            {pi0 : x00 = x10} {pi1 : x01 = x11}
            {p1i' : x10 = x11} (g1i : p1i' = p1i)
@@ -213,33 +213,33 @@ Definition sqcGcc {A} {x00 x01 x10 x11 : A}
   : Square p0i p1i' pi0 pi1.</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 64
+Line: 61
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 65
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 62
+Time: 0.002s">
+<div class="time" style="width: 3.6363636363636%"></div>
 <pre>
   destruct g1i; exact s.</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 66
+Line: 63
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 67
-Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
-<pre>
-
-Definition sqccGc {A} {x00 x01 x10 x11 : A}
+Line: 65
+Time: 0.002s">
+<div class="time" style="width: 3.6363636363636%"></div>
+<pre>Definition sqccGc {A} {x00 x01 x10 x11 : A}
            {p0i : x00 = x01} {p1i : x10 = x11}
            {pi0 : x00 = x10} {pi1 : x01 = x11}
            {pi0' : x00 = x10} (gi0 : pi0 = pi0')
@@ -247,33 +247,33 @@ Definition sqccGc {A} {x00 x01 x10 x11 : A}
   : Square p0i p1i pi0' pi1.</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 74
+Line: 70
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 75
+Line: 71
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   destruct gi0; exact s.</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 76
+Line: 72
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 77
+Line: 74
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
-<pre>
-
-Definition sqcccG {A} {x00 x01 x10 x11 : A}
+<div class="time" style="width: 1.8181818181818%"></div>
+<pre>Definition sqcccG {A} {x00 x01 x10 x11 : A}
            {p0i : x00 = x01} {p1i : x10 = x11}
            {pi0 : x00 = x10} {pi1 : x01 = x11}
            {pi1' : x01 = x11} (gi1 : pi1 = pi1')
@@ -281,66 +281,66 @@ Definition sqcccG {A} {x00 x01 x10 x11 : A}
   : Square p0i p1i pi0 pi1'.</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 84
+Line: 79
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 85
+Line: 80
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
   destruct gi1; exact s.</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 86
+Line: 81
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 87
-Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
-<pre>
-
-Definition sqtr {A} {x00 x01 x10 x11 : A}
+Line: 83
+Time: 0.002s">
+<div class="time" style="width: 3.6363636363636%"></div>
+<pre>Definition sqtr {A} {x00 x01 x10 x11 : A}
            {p0i : x00 = x01} {p1i : x10 = x11}
            {pi0 : x00 = x10} {pi1 : x01 = x11}
            (s : Square p0i p1i pi0 pi1)
   : Square pi0 pi1 p0i p1i.</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 93
+Line: 87
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 94
-Time: 0.003s">
-<div class="time" style="width: 7.3170731707317%"></div>
+Line: 88
+Time: 0.005s">
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre>
   destruct pi0, pi1, s, p0i; reflexivity.</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 95
-Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+Line: 89
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 96
+Line: 91
 Time: 0.007s">
-<div class="time" style="width: 17.073170731707%"></div>
-<pre>
-
-Definition sqcC {A} {x00 x01 x10 x11 x02 x12: A}
+<div class="time" style="width: 12.727272727273%"></div>
+<pre>Definition sqcC {A} {x00 x01 x10 x11 x02 x12: A}
            {p0i : x00 = x01} {p1i : x10 = x11}
            {p0j : x01 = x02} {p1j : x11 = x12}
            {pi0 : x00 = x10} {pi1 : x01 = x11} {pi2 : x02 = x12}
@@ -349,9 +349,9 @@ Definition sqcC {A} {x00 x01 x10 x11 x02 x12: A}
   := sqtr (sqCc (sqtr s01) (sqtr s12)).</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 104
-Time: 0.003s">
-<div class="time" style="width: 7.3170731707317%"></div>
+Line: 97
+Time: 0.004s">
+<div class="time" style="width: 7.2727272727273%"></div>
 <pre>
 
 Definition sqap {A} {B} {x00 x01 x10 x11 : A}
@@ -361,132 +361,126 @@ Definition sqap {A} {B} {x00 x01 x10 x11 : A}
   : Square (ap f p0i) (ap f p1i) (ap f pi0) (ap f pi1).</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 110
+Line: 103
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 111
-Time: 0.002s">
-<div class="time" style="width: 4.8780487804878%"></div>
+Line: 104
+Time: 0.004s">
+<div class="time" style="width: 7.2727272727273%"></div>
 <pre>
   destruct pi0, pi1; exact (ap (ap f) s).</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 112
-Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+Line: 105
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 113
-Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
-<pre>
-
-Definition sqnat {A B} {f f' : A -&gt; B} (h : f == f') {x y : A} (p : x = y)
+Line: 107
+Time: 0.002s">
+<div class="time" style="width: 3.6363636363636%"></div>
+<pre>Definition sqnat {A B} {f f' : A -&gt; B} (h : f == f') {x y : A} (p : x = y)
   : Square (ap f p) (ap f' p) (h x) (h y).</pre>
+</div>
+<div class="code" title="File: Square.v
+Line: 108
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: Square.v
+Line: 109
+Time: 0.002s">
+<div class="time" style="width: 3.6363636363636%"></div>
+<pre>
+  destruct p; apply sq1G; reflexivity.</pre>
+</div>
+<div class="code" title="File: Square.v
+Line: 110
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Defined.
+
+</pre>
+</div>
+<div class="code" title="File: Square.v
+Line: 112
+Time: 0.003s">
+<div class="time" style="width: 5.4545454545455%"></div>
+<pre>Definition sqsx {A B C} (f : A -&gt; B) {g : B -&gt; C} {k : A -&gt; C}
+           (h : g o f == k) {x y : A} (p : x = y)
+  : Square (h x) (h y) (ap g (ap f p)) (ap k p).</pre>
+</div>
+<div class="code" title="File: Square.v
+Line: 114
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: Square.v
+Line: 115
+Time: 0.003s">
+<div class="time" style="width: 5.4545454545455%"></div>
+<pre>
+  destruct p; apply sqG1; reflexivity.</pre>
 </div>
 <div class="code" title="File: Square.v
 Line: 116
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Proof.</pre>
-</div>
-<div class="code" title="File: Square.v
-Line: 117
-Time: 0.002s">
-<div class="time" style="width: 4.8780487804878%"></div>
-<pre>
-  destruct p; apply sq1G; reflexivity.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Square.v
 Line: 118
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Square.v
-Line: 119
-Time: 0.002s">
-<div class="time" style="width: 4.8780487804878%"></div>
-<pre>
-
-Definition sqsx {A B C} (f : A -&gt; B) {g : B -&gt; C} {k : A -&gt; C}
-           (h : g o f == k) {x y : A} (p : x = y)
-  : Square (h x) (h y) (ap g (ap f p)) (ap k p).</pre>
-</div>
-<div class="code" title="File: Square.v
-Line: 123
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
-</div>
-<div class="code" title="File: Square.v
-Line: 124
-Time: 0.003s">
-<div class="time" style="width: 7.3170731707317%"></div>
-<pre>
-  destruct p; apply sqG1; reflexivity.</pre>
-</div>
-<div class="code" title="File: Square.v
-Line: 125
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Square.v
-Line: 126
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
-<pre>
-
-Definition sq_to_concat {A} {x00 x01 x10 x11 : A}
+<div class="time" style="width: 1.8181818181818%"></div>
+<pre>Definition sq_to_concat {A} {x00 x01 x10 x11 : A}
            {p0i : x00 = x01} {p1i : x10 = x11}
            {pi0 : x00 = x10} {pi1 : x01 = x11}
            (s : Square p0i p1i pi0 pi1)
   : p0i @ pi1 = pi0 @ p1i.</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 132
+Line: 122
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 133
-Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+Line: 123
+Time: 0.002s">
+<div class="time" style="width: 3.6363636363636%"></div>
 <pre>
   destruct pi0, pi1; cbn in *.</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 134
-Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+Line: 124
+Time: 0.002s">
+<div class="time" style="width: 3.6363636363636%"></div>
 <pre>
   destruct s, p0i; reflexivity.</pre>
 </div>
 <div class="code" title="File: Square.v
-Line: 135
-Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Square.v
-Line: 137
+Line: 126
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Defined.
 
 </pre>
 </div>

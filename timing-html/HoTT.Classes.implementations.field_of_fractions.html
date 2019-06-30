@@ -30,8 +30,8 @@ pre {
 
 <div class="code" title="File: field_of_fractions.v
 Line: 1
-Time: 0.238s">
-<div class="time" style="width: 81.22866894198%"></div>
+Time: 0.291s">
+<div class="time" style="width: 87.915407854985%"></div>
 <pre>Require Import HoTT.HIT.quotient
   HoTT.Basics.PathGroupoids
   HoTT.Types.Universe
@@ -41,7 +41,7 @@ Time: 0.238s">
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 6
-Time: 0.293s">
+Time: 0.331s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Require Import 
@@ -75,7 +75,7 @@ Universe UR.</pre>
 <div class="code" title="File: field_of_fractions.v
 Line: 15
 Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre>
 Context `{Funext} `{Univalence} (R:Type@{UR})
   `{IntegralDomain R} `{DecidablePaths R}.</pre>
@@ -83,7 +83,7 @@ Context `{Funext} `{Univalence} (R:Type@{UR})
 <div class="code" title="File: field_of_fractions.v
 Line: 17
 Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre>
 
 Record Frac@{} : Type
@@ -130,7 +130,7 @@ Time: 0s">
 <div class="code" title="File: field_of_fractions.v
 Line: 27
 Time: 0.005s">
-<div class="time" style="width: 1.7064846416382%"></div>
+<div class="time" style="width: 1.5105740181269%"></div>
 <pre> issig frac num den den_ne_0.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
@@ -142,29 +142,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 28
-Time: 0.229s">
-<div class="time" style="width: 78.156996587031%"></div>
+Time: 0.251s">
+<div class="time" style="width: 75.83081570997%"></div>
 <pre> apply (trunc_equiv' _ E).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 28
-Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
-<pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 29
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Qed.
 
-Global Instance Frac_ishset@{} : IsHSet Frac
+</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 30
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Global Instance Frac_ishset@{} : IsHSet Frac
   := ltac:(first [exact Frac_ishset'@{UR Ularge Set}|
                   exact Frac_ishset'@{}]).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 33
+Line: 32
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -172,7 +172,7 @@ Time: 0s">
 Local Existing Instance den_ne_0.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 35
+Line: 34
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -180,49 +180,49 @@ Time: 0s">
 Global Instance Frac_inject@{} : Cast R Frac.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 37
+Line: 36
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 38
+Line: 37
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros x.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 39
+Line: 38
 Time: 0.003s">
-<div class="time" style="width: 1.0238907849829%"></div>
+<div class="time" style="width: 0.90634441087613%"></div>
 <pre> apply (frac x 1 _).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 39
+Line: 38
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 40
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Global Instance Frac_0@{} : Zero Frac := ('0 : Frac).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 40
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-Global Instance Frac_0@{} : Zero Frac := ('0 : Frac).</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 42
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
 Global Instance Frac_1@{} : One Frac := ('1 : Frac).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 43
+Line: 41
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -230,36 +230,36 @@ Time: 0s">
 Instance pl@{} : Plus Frac.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 45
+Line: 43
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 46
+Line: 44
 Time: 0.003s">
-<div class="time" style="width: 1.0238907849829%"></div>
+<div class="time" style="width: 0.90634441087613%"></div>
 <pre>
 intros q r; refine (frac (num q * den r + num r * den q) (den q * den r) _).</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 45
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 47
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-Defined.</pre>
+<pre>Definition equiv@{} := fun x y =&gt; num x * den y = num y * den x.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 48
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-Definition equiv@{} := fun x y =&gt; num x * den y = num y * den x.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 50
+Line: 47
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -267,18 +267,69 @@ Time: 0s">
 Global Instance equiv_equiv_rel@{} : EquivRel equiv.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 52
+Line: 49
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 53
+Line: 50
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 split.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 51
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+-</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 52
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros x.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 52
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> hnf.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 52
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> reflexivity.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 52
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+-</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 53
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros x y.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 53
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> unfold equiv.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 53
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  apply symmetry.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 54
@@ -291,277 +342,268 @@ Time: 0s">
 Line: 55
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> intros x.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 55
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> hnf.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 55
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> reflexivity.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 55
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
--</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 56
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> intros x y.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 56
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> unfold equiv.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 56
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  apply symmetry.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 57
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
--</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 58
-Time: 0s">
-<div class="time" style="width: 0%"></div>
 <pre> intros x y z.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 58
+Line: 55
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> unfold equiv.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 58
+Line: 55
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros E1 E2.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 59
-Time: 0.043s">
-<div class="time" style="width: 14.675767918089%"></div>
+Line: 56
+Time: 0.047s">
+<div class="time" style="width: 14.199395770393%"></div>
 <pre>
   apply (mult_left_cancel (den y)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 60
+Line: 57
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 61
+Line: 58
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> solve_propholds.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 61
+Line: 58
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 62
-Time: 0.031s">
-<div class="time" style="width: 10.580204778157%"></div>
+Line: 59
+Time: 0.033s">
+<div class="time" style="width: 9.9697885196375%"></div>
 <pre> rewrite !mult_assoc, !(mult_comm (den y)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 62
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 59
+Time: 0.001s">
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre>
     rewrite E1, &lt;-E2.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 63
-Time: 0.026s">
-<div class="time" style="width: 8.8737201365188%"></div>
+Line: 60
+Time: 0.027s">
+<div class="time" style="width: 8.1570996978852%"></div>
 <pre>
     rewrite &lt;-!mult_assoc.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 64
-Time: 0.004s">
-<div class="time" style="width: 1.3651877133106%"></div>
+Line: 61
+Time: 0.005s">
+<div class="time" style="width: 1.5105740181269%"></div>
 <pre> rewrite (mult_comm (den x)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 64
+Line: 61
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     reflexivity.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 65
-Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+Line: 62
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+Qed.
+
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 66
-Time: 0.04s">
-<div class="time" style="width: 13.651877133106%"></div>
-<pre>
-
-Global Instance equiv_dec@{} : forall x y: Frac, Decidable (equiv x y)
+Line: 64
+Time: 0.041s">
+<div class="time" style="width: 12.38670694864%"></div>
+<pre>Global Instance equiv_dec@{} : forall x y: Frac, Decidable (equiv x y)
   := fun x y =&gt; decide_rel (=) (num x * den y) (num y * den x).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 69
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 65
+Time: 0.001s">
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre>
 
 Lemma pl_respect@{} : forall q1 q2, equiv q1 q2 -&gt; forall r1 r2, equiv r1 r2 -&gt;
   equiv (q1 + r1) (q2 + r2).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 72
+Line: 68
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 73
+Line: 69
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 unfold equiv;intros q1 q2 Eq r1 r2 Er.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 74
+Line: 70
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 simpl.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 75
+Line: 71
 Time: 0.009s">
-<div class="time" style="width: 3.0716723549488%"></div>
+<div class="time" style="width: 2.7190332326284%"></div>
 <pre>
 rewrite plus_mult_distr_r.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 76
-Time: 0.014s">
-<div class="time" style="width: 4.778156996587%"></div>
+Line: 72
+Time: 0.015s">
+<div class="time" style="width: 4.5317220543807%"></div>
 <pre>
 rewrite &lt;-(associativity (num q1) (den r1)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 77
-Time: 0.034s">
-<div class="time" style="width: 11.60409556314%"></div>
+Line: 73
+Time: 0.037s">
+<div class="time" style="width: 11.178247734139%"></div>
 <pre>
 rewrite (associativity (den r1)), (mult_comm (den r1)), &lt;-(associativity (den q2)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 78
-Time: 0.018s">
-<div class="time" style="width: 6.1433447098976%"></div>
+Line: 74
+Time: 0.02s">
+<div class="time" style="width: 6.0422960725076%"></div>
 <pre>
 rewrite (associativity (num q1)), Eq.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 79
-Time: 0.035s">
-<div class="time" style="width: 11.945392491468%"></div>
+Line: 75
+Time: 0.039s">
+<div class="time" style="width: 11.78247734139%"></div>
 <pre>
 rewrite (mult_comm (den q2)), &lt;-(associativity (num r1)), (associativity (den q1)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 80
-Time: 0.035s">
-<div class="time" style="width: 11.945392491468%"></div>
+Line: 76
+Time: 0.038s">
+<div class="time" style="width: 11.480362537764%"></div>
 <pre>
 rewrite (mult_comm (den q1)), &lt;-(associativity (den r2)), (associativity (num r1)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 81
+Line: 77
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 rewrite Er.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 82
-Time: 0.035s">
-<div class="time" style="width: 11.945392491468%"></div>
+Line: 78
+Time: 0.038s">
+<div class="time" style="width: 11.480362537764%"></div>
 <pre>
 rewrite (mult_comm (den r1)), &lt;-(associativity (num q2)), (associativity (den q1)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 83
-Time: 0.035s">
-<div class="time" style="width: 11.945392491468%"></div>
+Line: 79
+Time: 0.038s">
+<div class="time" style="width: 11.480362537764%"></div>
 <pre>
 rewrite (mult_comm (den q1)), &lt;-(associativity (den r2)), (associativity (num q2)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 84
-Time: 0.037s">
-<div class="time" style="width: 12.627986348123%"></div>
+Line: 80
+Time: 0.039s">
+<div class="time" style="width: 11.78247734139%"></div>
 <pre>
 rewrite &lt;-(associativity (num r2)), (associativity (den r1)),
   (mult_comm _ (den q2)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 86
-Time: 0.021s">
-<div class="time" style="width: 7.1672354948805%"></div>
+Line: 82
+Time: 0.023s">
+<div class="time" style="width: 6.9486404833837%"></div>
 <pre>
 rewrite (mult_comm (den r1)), (associativity (num r2)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 87
+Line: 83
 Time: 0.006s">
-<div class="time" style="width: 2.0477815699659%"></div>
+<div class="time" style="width: 1.8126888217523%"></div>
 <pre>
 apply symmetry;apply plus_mult_distr_r.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 88
-Time: 0.005s">
-<div class="time" style="width: 1.7064846416382%"></div>
+Line: 84
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+Qed.
+
+</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 86
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Lemma pl_comm@{} : forall q r, equiv (pl q r) (pl r q).</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 86
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 87
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+intros q r;unfold equiv;simpl.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 88
+Time: 0.011s">
+<div class="time" style="width: 3.3232628398792%"></div>
+<pre>
+rewrite (mult_comm (den r)), plus_comm.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 89
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 89
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Qed.
 
-Lemma pl_comm@{} : forall q r, equiv (pl q r) (pl r q).</pre>
+</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 91
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Lemma pl_assoc@{} : forall q r t, equiv (pl q (pl r t)) (pl (pl q r) t).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 91
@@ -575,258 +617,287 @@ Line: 92
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-intros q r;unfold equiv;simpl.</pre>
+intros;unfold equiv;simpl.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 93
-Time: 0.01s">
-<div class="time" style="width: 3.4129692832765%"></div>
+Time: 0.014s">
+<div class="time" style="width: 4.2296072507553%"></div>
 <pre>
-rewrite (mult_comm (den r)), plus_comm.</pre>
+apply ap2;[|apply symmetry,associativity].</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 94
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> reflexivity.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 94
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.008s">
+<div class="time" style="width: 2.416918429003%"></div>
 <pre>
-Qed.</pre>
+rewrite plus_mult_distr_r.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 95
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.005s">
+<div class="time" style="width: 1.5105740181269%"></div>
 <pre>
-
-Lemma pl_assoc@{} : forall q r t, equiv (pl q (pl r t)) (pl (pl q r) t).</pre>
+rewrite (plus_mult_distr_r _ _ (den t)).</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 96
+Time: 0.008s">
+<div class="time" style="width: 2.416918429003%"></div>
+<pre>
+rewrite plus_assoc.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 97
+Time: 0.001s">
+<div class="time" style="width: 0.30211480362538%"></div>
+<pre> apply ap2;[apply ap2|].</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 97
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Proof.</pre>
+-</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 98
+Time: 0.01s">
+<div class="time" style="width: 3.0211480362538%"></div>
+<pre> apply associativity.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 98
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-intros;unfold equiv;simpl.</pre>
+-</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 99
-Time: 0.013s">
-<div class="time" style="width: 4.4368600682594%"></div>
-<pre>
-apply ap2;[|apply symmetry,associativity].</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 100
-Time: 0.007s">
-<div class="time" style="width: 2.3890784982935%"></div>
-<pre>
-rewrite plus_mult_distr_r.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 101
-Time: 0.004s">
-<div class="time" style="width: 1.3651877133106%"></div>
-<pre>
-rewrite (plus_mult_distr_r _ _ (den t)).</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 102
-Time: 0.007s">
-<div class="time" style="width: 2.3890784982935%"></div>
-<pre>
-rewrite plus_assoc.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 103
-Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
-<pre> apply ap2;[apply ap2|].</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 103
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
--</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 104
-Time: 0.009s">
-<div class="time" style="width: 3.0716723549488%"></div>
-<pre> apply associativity.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 104
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
--</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 105
-Time: 0.023s">
-<div class="time" style="width: 7.8498293515358%"></div>
+Time: 0.025s">
+<div class="time" style="width: 7.5528700906344%"></div>
 <pre> rewrite &lt;-(associativity (num r)), &lt;-(associativity (num r) (den q)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 105
+Line: 99
 Time: 0.004s">
-<div class="time" style="width: 1.3651877133106%"></div>
+<div class="time" style="width: 1.2084592145015%"></div>
 <pre>
   rewrite (mult_comm (den t)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 106
+Line: 100
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 106
+Line: 100
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 107
-Time: 0.015s">
-<div class="time" style="width: 5.1194539249147%"></div>
+Line: 101
+Time: 0.016s">
+<div class="time" style="width: 4.833836858006%"></div>
 <pre> rewrite (mult_comm (den q));apply symmetry,associativity.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 107
-Time: 0.002s">
-<div class="time" style="width: 0.68259385665529%"></div>
+Line: 101
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+Qed.
+
+</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 103
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Instance ml@{} : Mult Frac.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 103
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 104
+Time: 0.003s">
+<div class="time" style="width: 0.90634441087613%"></div>
+<pre>
+intros q r; refine (frac (num q * num r) (den q * den r) _).</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 105
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Defined.
+
+</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 107
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Lemma ml_respect@{} : forall q1 q2, equiv q1 q2 -&gt; forall r1 r2, equiv r1 r2 -&gt;
+  equiv (q1 * r1) (q2 * r2).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 108
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-Instance ml@{} : Mult Frac.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 110
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 111
-Time: 0.003s">
-<div class="time" style="width: 1.0238907849829%"></div>
-<pre>
-intros q r; refine (frac (num q * num r) (den q * den r) _).</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 112
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 113
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-Lemma ml_respect@{} : forall q1 q2, equiv q1 q2 -&gt; forall r1 r2, equiv r1 r2 -&gt;
-  equiv (q1 * r1) (q2 * r2).</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 116
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 117
+Line: 109
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 unfold equiv;intros q1 q2 Eq r1 r2 Er.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 118
+Line: 110
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 simpl.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 119
-Time: 0.029s">
-<div class="time" style="width: 9.8976109215017%"></div>
+Line: 111
+Time: 0.03s">
+<div class="time" style="width: 9.0634441087613%"></div>
 <pre>
 rewrite &lt;-(associativity (num q1)), (associativity (num r1)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 120
-Time: 0.038s">
-<div class="time" style="width: 12.969283276451%"></div>
+Line: 112
+Time: 0.039s">
+<div class="time" style="width: 11.78247734139%"></div>
 <pre>
 rewrite (mult_comm (num r1)), &lt;-(associativity (den q2)), (associativity (num q1)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 121
+Line: 113
 Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre>
 rewrite Eq, Er.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 122
-Time: 0.036s">
-<div class="time" style="width: 12.286689419795%"></div>
+Line: 114
+Time: 0.037s">
+<div class="time" style="width: 11.178247734139%"></div>
 <pre>
 rewrite &lt;-(associativity (num q2)), (associativity (den q1)), (mult_comm (den q1)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 123
-Time: 0.026s">
-<div class="time" style="width: 8.8737201365188%"></div>
+Line: 115
+Time: 0.027s">
+<div class="time" style="width: 8.1570996978852%"></div>
 <pre>
 rewrite &lt;-(simple_associativity (num r2)), &lt;-(simple_associativity (num q2)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 124
+Line: 116
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 reflexivity.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 125
-Time: 0.002s">
-<div class="time" style="width: 0.68259385665529%"></div>
+Line: 117
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+Qed.
+
+</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 119
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Instance neg@{} : Negate Frac.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 119
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 120
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+intros q;refine (frac (- num q) (den q) _).</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 121
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Defined.
+
+</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 123
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Lemma neg_respect@{} : forall q r, equiv q r -&gt; equiv (- q) (- r).</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 123
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 124
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+unfold equiv;simpl;intros q r E.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 125
+Time: 0.008s">
+<div class="time" style="width: 2.416918429003%"></div>
+<pre>
+rewrite &lt;-2!negate_mult_distr_l.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 126
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> rewrite E;reflexivity.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 126
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Qed.
 
-Instance neg@{} : Negate Frac.</pre>
+</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 128
+Time: 0.001s">
+<div class="time" style="width: 0.30211480362538%"></div>
+<pre>Lemma nonzero_num@{} x : ~ equiv x 0 &lt;-&gt; num x &lt;&gt; 0.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 128
@@ -840,344 +911,273 @@ Line: 129
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-intros q;refine (frac (- num q) (den q) _).</pre>
+split; intros E F; apply E.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 130
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+-</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 131
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> red.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 131
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> rewrite F.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 131
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> simpl.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 131
+Time: 0.023s">
+<div class="time" style="width: 6.9486404833837%"></div>
+<pre> rewrite 2!mult_0_l.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 131
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 131
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-Lemma neg_respect@{} : forall q r, equiv q r -&gt; equiv (- q) (- r).</pre>
+-</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 133
+Line: 132
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> red in F;simpl in F.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 132
+Time: 0.015s">
+<div class="time" style="width: 4.5317220543807%"></div>
+<pre> rewrite mult_1_r, mult_0_l in F.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 132
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> trivial.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 132
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Proof.</pre>
+Qed.
+
+</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 134
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Lemma pl_0_l@{} x : equiv (0 + x) x.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 134
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-unfold equiv;simpl;intros q r E.</pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 135
-Time: 0.008s">
-<div class="time" style="width: 2.7303754266212%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-rewrite &lt;-2!negate_mult_distr_l.</pre>
+red;simpl.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 136
+Time: 0.027s">
+<div class="time" style="width: 8.1570996978852%"></div>
+<pre> rewrite mult_1_r, mult_0_l, mult_1_l, plus_0_l.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 136
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> rewrite E;reflexivity.</pre>
+<pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 136
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 137
-Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
-<pre>
+Qed.
 
-Lemma nonzero_num@{} x : ~ equiv x 0 &lt;-&gt; num x &lt;&gt; 0.</pre>
+</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 138
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Lemma pl_0_r@{} x : equiv (x + 0) x.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 138
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 139
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Proof.</pre>
+red;simpl.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 140
+Time: 0.027s">
+<div class="time" style="width: 8.1570996978852%"></div>
+<pre> rewrite 2!mult_1_r, mult_0_l, plus_0_r.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 140
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 140
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-split; intros E F; apply E.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 141
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
--</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 142
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> red.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 142
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> rewrite F.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 142
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> simpl.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 142
-Time: 0.02s">
-<div class="time" style="width: 6.8259385665529%"></div>
-<pre> rewrite 2!mult_0_l.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 142
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> reflexivity.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 142
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
--</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 143
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> red in F;simpl in F.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 143
-Time: 0.015s">
-<div class="time" style="width: 5.1194539249147%"></div>
-<pre> rewrite mult_1_r, mult_0_l in F.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 143
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> trivial.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 143
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 144
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Qed.
 
-Lemma pl_0_l@{} x : equiv (0 + x) x.</pre>
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 146
+Line: 142
+Time: 0.001s">
+<div class="time" style="width: 0.30211480362538%"></div>
+<pre>Lemma pl_neg_l@{} x : equiv (- x + x) 0.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 142
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 147
+Line: 143
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 red;simpl.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 148
-Time: 0.025s">
-<div class="time" style="width: 8.5324232081911%"></div>
-<pre> rewrite mult_1_r, mult_0_l, mult_1_l, plus_0_l.</pre>
+Line: 144
+Time: 0.013s">
+<div class="time" style="width: 3.9274924471299%"></div>
+<pre>
+rewrite mult_1_r, mult_0_l.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 148
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> reflexivity.</pre>
+Line: 145
+Time: 0.007s">
+<div class="time" style="width: 2.1148036253776%"></div>
+<pre>
+rewrite &lt;-plus_mult_distr_r.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 146
+Time: 0.003s">
+<div class="time" style="width: 0.90634441087613%"></div>
+<pre>
+rewrite plus_negate_l.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 147
+Time: 0.003s">
+<div class="time" style="width: 0.90634441087613%"></div>
+<pre>
+apply mult_0_l.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 148
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 149
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Qed.
 
-Lemma pl_0_r@{} x : equiv (x + 0) x.</pre>
+</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 150
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Lemma ml_assoc@{} q r t : equiv (ml q (ml r t)) (ml (ml q r) t).</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 150
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 151
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Proof.</pre>
+red;simpl.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 152
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-red;simpl.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 153
-Time: 0.026s">
-<div class="time" style="width: 8.8737201365188%"></div>
-<pre> rewrite 2!mult_1_r, mult_0_l, plus_0_r.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 153
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> reflexivity.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 153
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 154
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-Lemma pl_neg_l@{} x : equiv (- x + x) 0.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 156
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 157
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-red;simpl.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 158
-Time: 0.013s">
-<div class="time" style="width: 4.4368600682594%"></div>
-<pre>
-rewrite mult_1_r, mult_0_l.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 159
-Time: 0.006s">
-<div class="time" style="width: 2.0477815699659%"></div>
-<pre>
-rewrite &lt;-plus_mult_distr_r.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 160
-Time: 0.003s">
-<div class="time" style="width: 1.0238907849829%"></div>
-<pre>
-rewrite plus_negate_l.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 161
-Time: 0.002s">
-<div class="time" style="width: 0.68259385665529%"></div>
-<pre>
-apply mult_0_l.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 162
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 163
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-Lemma ml_assoc@{} q r t : equiv (ml q (ml r t)) (ml (ml q r) t).</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 165
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 166
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-red;simpl.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 167
-Time: 0.024s">
-<div class="time" style="width: 8.1911262798635%"></div>
+Time: 0.029s">
+<div class="time" style="width: 8.761329305136%"></div>
 <pre>
 rewrite (associativity (num q)), (associativity (den q)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 168
+Line: 153
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 reflexivity.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 169
+Line: 154
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+Qed.
+
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 170
-Time: 0.041s">
-<div class="time" style="width: 13.993174061433%"></div>
-<pre>
-
-Instance dec_rec@{} : DecRecip Frac := fun x =&gt;
+Line: 156
+Time: 0.042s">
+<div class="time" style="width: 12.688821752266%"></div>
+<pre>Instance dec_rec@{} : DecRecip Frac := fun x =&gt;
   match decide_rel (=) (num x) 0 with
   | inl _ =&gt; 0
   | inr P =&gt; frac (den x) (num x) P
   end.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 176
+Line: 160
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1185,145 +1185,145 @@ Time: 0s">
 Lemma dec_recip_respect@{} : forall q r, equiv q r -&gt; equiv (/ q) (/ r).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 178
+Line: 162
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 179
+Line: 163
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 unfold equiv,dec_recip,dec_rec;intros q r E;simpl.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 180
-Time: 0.017s">
-<div class="time" style="width: 5.80204778157%"></div>
+Line: 164
+Time: 0.018s">
+<div class="time" style="width: 5.4380664652568%"></div>
 <pre>
 destruct (decide_rel paths (num q) 0) as [E1|E1],
 (decide_rel paths (num r) 0) as [E2|E2];simpl.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 182
+Line: 166
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 183
+Line: 167
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> trivial.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 183
+Line: 167
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 184
+Line: 168
 Time: 0.009s">
-<div class="time" style="width: 3.0716723549488%"></div>
+<div class="time" style="width: 2.7190332326284%"></div>
 <pre> rewrite E1 in E;rewrite mult_0_l in E.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 184
+Line: 168
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   destruct E2.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 185
-Time: 0.066s">
-<div class="time" style="width: 22.525597269625%"></div>
+Line: 169
+Time: 0.071s">
+<div class="time" style="width: 21.450151057402%"></div>
 <pre>
   apply (right_cancellation_ne_0 mult (den q));try solve_propholds.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 186
-Time: 0.009s">
-<div class="time" style="width: 3.0716723549488%"></div>
+Line: 170
+Time: 0.01s">
+<div class="time" style="width: 3.0211480362538%"></div>
 <pre>
   rewrite mult_0_l;apply symmetry,E.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 187
+Line: 171
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 188
+Line: 172
 Time: 0.009s">
-<div class="time" style="width: 3.0716723549488%"></div>
+<div class="time" style="width: 2.7190332326284%"></div>
 <pre> rewrite E2 in E;rewrite mult_0_l in E.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 188
+Line: 172
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   destruct E1.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 189
-Time: 0.062s">
-<div class="time" style="width: 21.160409556314%"></div>
+Line: 173
+Time: 0.064s">
+<div class="time" style="width: 19.335347432024%"></div>
 <pre>
   apply (right_cancellation_ne_0 mult (den r));try solve_propholds.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 190
-Time: 0.008s">
-<div class="time" style="width: 2.7303754266212%"></div>
+Line: 174
+Time: 0.009s">
+<div class="time" style="width: 2.7190332326284%"></div>
 <pre>
   rewrite mult_0_l;trivial.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 191
+Line: 175
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 192
+Line: 176
 Time: 0.01s">
-<div class="time" style="width: 3.4129692832765%"></div>
+<div class="time" style="width: 3.0211480362538%"></div>
 <pre> rewrite (mult_comm (den q)), (mult_comm (den r)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 192
+Line: 176
 Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre>
   apply symmetry, E.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 193
-Time: 0.003s">
-<div class="time" style="width: 1.0238907849829%"></div>
+Line: 177
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 194
-Time: 0.029s">
-<div class="time" style="width: 9.8976109215017%"></div>
-<pre>
+Qed.
 
-End contents.</pre>
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 196
+Line: 179
+Time: 0.034s">
+<div class="time" style="width: 10.271903323263%"></div>
+<pre>End contents.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 179
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1331,42 +1331,42 @@ Time: 0s">
 Arguments Frac R {Rzero} : rename.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 198
+Line: 181
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Arguments frac {R Rzero} _ _ _ : rename.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 199
+Line: 182
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Arguments num {R Rzero} _ : rename.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 200
+Line: 183
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Arguments den {R Rzero} _ : rename.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 201
+Line: 184
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Arguments den_ne_0 {R Rzero} _ _ : rename.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 202
+Line: 185
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Arguments equiv {R _ _} _ _.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 203
+Line: 186
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1375,28 +1375,28 @@ Time: 0s">
 Section morphisms.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 206
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 189
+Time: 0.001s">
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre>
 Context `{IntegralDomain R1} `{DecidablePaths R1}.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 207
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 190
+Time: 0.001s">
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre>
 Context `{IntegralDomain R2} `{DecidablePaths R2}.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 208
+Line: 191
 Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre>
 Context `(f : R1 -&gt; R2) `{!SemiRingPreserving f} `{!Injective f}.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 209
+Line: 192
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1404,108 +1404,108 @@ Time: 0s">
 Definition lift (x : Frac R1) : Frac R2.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 211
+Line: 194
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 212
+Line: 195
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 apply (frac (f (num x)) (f (den x))).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 213
+Line: 196
 Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre>
 apply injective_ne_0.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 214
+Line: 197
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 apply (den_ne_0 x).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 215
+Line: 198
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 216
-Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
-<pre>
+Defined.
 
-Lemma lift_respects : forall q r, equiv q r -&gt; equiv (lift q) (lift r).</pre>
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 218
+Line: 200
+Time: 0.001s">
+<div class="time" style="width: 0.30211480362538%"></div>
+<pre>Lemma lift_respects : forall q r, equiv q r -&gt; equiv (lift q) (lift r).</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 200
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 219
+Line: 201
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 unfold equiv;simpl;intros q r E.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 220
+Line: 202
 Time: 0.007s">
-<div class="time" style="width: 2.3890784982935%"></div>
+<div class="time" style="width: 2.1148036253776%"></div>
 <pre>
 rewrite &lt;-2!preserves_mult.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 221
+Line: 203
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 apply ap,E.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 222
+Line: 204
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 223
-Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
-<pre>
+Qed.
 
-End morphisms.</pre>
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 225
+Line: 206
 Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.30211480362538%"></div>
+<pre>End morphisms.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 206
+Time: 0.001s">
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre>
 
 End Frac.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 227
+Line: 208
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Import Frac.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 228
+Line: 209
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1513,7 +1513,7 @@ Time: 0s">
 Module FracField.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 230
+Line: 211
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1521,7 +1521,7 @@ Time: 0s">
 Section contents.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 232
+Line: 213
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1529,21 +1529,21 @@ Time: 0s">
    so we don't need to depend on everything to define F. *)</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 234
+Line: 215
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Universe UR.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 234
+Line: 215
 Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre>
 Context `{Funext} `{Univalence} {R:Type@{UR} } `{IsHSet R} `{IntegralDomain R}
   `{DecidablePaths R}.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 236
+Line: 217
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1551,7 +1551,7 @@ Time: 0s">
 Local Existing Instance den_ne_0.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 238
+Line: 219
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1561,21 +1561,21 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 241
-Time: 0.034s">
-<div class="time" style="width: 11.60409556314%"></div>
+Line: 222
+Time: 0.035s">
+<div class="time" style="width: 10.574018126888%"></div>
 <pre>Definition F@{} := quotient equiv.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 241
+Line: 222
 Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre>
 
 Global Instance class@{} : Cast (Frac R) F := class_of _.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 243
+Line: 224
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1585,23 +1585,23 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 246
+Line: 227
 Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre>Global Instance inject@{} : Cast R F := Compose class (Frac_inject _).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 246
+Line: 227
 Time: 0.003s">
-<div class="time" style="width: 1.0238907849829%"></div>
+<div class="time" style="width: 0.90634441087613%"></div>
 <pre>
 
 Definition path@{} {x y} : equiv x y -&gt; ' x = ' y := related_classes_eq _.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 248
+Line: 229
 Time: 0.005s">
-<div class="time" style="width: 1.7064846416382%"></div>
+<div class="time" style="width: 1.5105740181269%"></div>
 <pre>
 
 Definition F_rect@{i} (P : F -&gt; Type@{i}) {sP : forall x, IsHSet (P x)}
@@ -1611,18 +1611,18 @@ Definition F_rect@{i} (P : F -&gt; Type@{i}) {sP : forall x, IsHSet (P x)}
   := quotient_ind equiv P dclass dequiv.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 254
+Line: 235
 Time: 0.002s">
-<div class="time" style="width: 0.68259385665529%"></div>
+<div class="time" style="width: 0.60422960725076%"></div>
 <pre>
 
 Definition F_compute P {sP} dclass dequiv x
  : @F_rect P sP dclass dequiv (' x) = dclass x := 1.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 257
-Time: 0.006s">
-<div class="time" style="width: 2.0477815699659%"></div>
+Line: 238
+Time: 0.007s">
+<div class="time" style="width: 2.1148036253776%"></div>
 <pre>
 
 Definition F_compute_path P {sP} dclass dequiv q r (E : equiv q r)
@@ -1630,199 +1630,199 @@ Definition F_compute_path P {sP} dclass dequiv q r (E : equiv q r)
   := quotient_ind_compute_path _ _ _ _ _ _ _ _.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 261
+Line: 242
 Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre>
 
 Definition F_ind@{i} (P : F -&gt; Type@{i}) {sP : forall x, IsHProp (P x)}
   (dclass : forall x : Frac R, P (' x)) : forall x, P x.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 264
+Line: 245
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 265
+Line: 246
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 apply (@F_rect P (fun _ =&gt; trunc_hprop) dclass).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 266
+Line: 247
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros;apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 267
+Line: 248
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+Qed.
+
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 268
-Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
-<pre>
-
-Definition F_ind2@{i j} (P : F -&gt; F -&gt; Type@{i}) {sP : forall x y, IsHProp (P x y)}
+Line: 250
+Time: 0.002s">
+<div class="time" style="width: 0.60422960725076%"></div>
+<pre>Definition F_ind2@{i j} (P : F -&gt; F -&gt; Type@{i}) {sP : forall x y, IsHProp (P x y)}
   (dclass : forall x y : Frac R, P (' x) (' y)) : forall x y, P x y.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 271
+Line: 251
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 272
+Line: 252
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 apply (@F_ind (fun x =&gt; forall y, _)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 273
+Line: 253
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 274
+Line: 254
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros;apply Forall.trunc_forall@{UR i j}.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 274
+Line: 254
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 275
+Line: 255
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros x.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 275
+Line: 255
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply (F_ind _);intros y.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 276
+Line: 256
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply dclass.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 277
+Line: 257
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+Qed.
+
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 278
-Time: 0.002s">
-<div class="time" style="width: 0.68259385665529%"></div>
-<pre>
-
-Definition F_ind3@{i j} (P : F -&gt; F -&gt; F -&gt; Type@{i})
+Line: 259
+Time: 0.003s">
+<div class="time" style="width: 0.90634441087613%"></div>
+<pre>Definition F_ind3@{i j} (P : F -&gt; F -&gt; F -&gt; Type@{i})
   {sP : forall x y z, IsHProp (P x y z)}
   (dclass : forall x y z : Frac R, P (' x) (' y) (' z))
   : forall x y z, P x y z.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 283
+Line: 262
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 284
+Line: 263
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 apply (@F_ind (fun x =&gt; forall y z, _)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 285
+Line: 264
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 286
-Time: 0.02s">
-<div class="time" style="width: 6.8259385665529%"></div>
+Line: 265
+Time: 0.021s">
+<div class="time" style="width: 6.3444108761329%"></div>
 <pre> intros;apply Forall.trunc_forall@{UR j j}.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 286
+Line: 265
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 287
+Line: 266
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros x.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 287
+Line: 266
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply (F_ind2@{i j} _).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 288
+Line: 267
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> auto.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 288
+Line: 267
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+Qed.
+
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 289
-Time: 0.002s">
-<div class="time" style="width: 0.68259385665529%"></div>
-<pre>
-
-Definition F_rec@{i} {T : Type@{i} } {sT : IsHSet T}
+Line: 269
+Time: 0.003s">
+<div class="time" style="width: 0.90634441087613%"></div>
+<pre>Definition F_rec@{i} {T : Type@{i} } {sT : IsHSet T}
   : forall (dclass : Frac R -&gt; T)
   (dequiv : forall x y, equiv x y -&gt; dclass x = dclass y),
   F -&gt; T
   := quotient_rec equiv.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 295
-Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+Line: 273
+Time: 0.002s">
+<div class="time" style="width: 0.60422960725076%"></div>
 <pre>
 
 Definition F_rec_compute T sT dclass dequiv x
@@ -1830,9 +1830,9 @@ Definition F_rec_compute T sT dclass dequiv x
   := 1.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 299
+Line: 277
 Time: 0.006s">
-<div class="time" style="width: 2.0477815699659%"></div>
+<div class="time" style="width: 1.8126888217523%"></div>
 <pre>
 
 Definition F_rec2@{i j} {T:Type@{i} } {sT : IsHSet T}
@@ -1843,9 +1843,9 @@ Definition F_rec2@{i j} {T:Type@{i} } {sT : IsHSet T}
   := @quotient_rec2@{UR UR j i} _ _ _ _ _ (BuildhSet _).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 306
+Line: 284
 Time: 0.003s">
-<div class="time" style="width: 1.0238907849829%"></div>
+<div class="time" style="width: 0.90634441087613%"></div>
 <pre>
 
 Definition F_rec2_compute {T sT} dclass dequiv x y
@@ -1853,7 +1853,7 @@ Definition F_rec2_compute {T sT} dclass dequiv x y
   := 1.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 310
+Line: 288
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1863,20 +1863,20 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 313
+Line: 291
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Global Instance F0@{} : Zero F := ('0 : F).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 313
+Line: 291
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Global Instance F1@{} : One F := ('1 : F).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 314
+Line: 292
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1884,56 +1884,56 @@ Time: 0s">
 Global Instance Fplus@{} : Plus F.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 316
+Line: 294
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 317
-Time: 0.007s">
-<div class="time" style="width: 2.3890784982935%"></div>
+Line: 295
+Time: 0.008s">
+<div class="time" style="width: 2.416918429003%"></div>
 <pre>
 refine (F_rec2 (fun x y =&gt; ' (Frac.pl _ x y)) _).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 318
+Line: 296
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 319
+Line: 297
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply path.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 319
+Line: 297
 Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre> apply Frac.pl_respect;trivial.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 319
+Line: 297
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 320
+Line: 299
 Time: 0.004s">
-<div class="time" style="width: 1.3651877133106%"></div>
-<pre>
-
-Definition Fplus_compute@{} q r : (' q) + (' r) = ' (Frac.pl _ q r)
+<div class="time" style="width: 1.2084592145015%"></div>
+<pre>Definition Fplus_compute@{} q r : (' q) + (' r) = ' (Frac.pl _ q r)
   := 1.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 323
+Line: 300
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1941,49 +1941,49 @@ Time: 0s">
 Global Instance Fneg@{} : Negate F.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 325
+Line: 302
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 326
+Line: 303
 Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre>
 refine (F_rec (fun x =&gt; ' (Frac.neg _ x)) _).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 327
+Line: 304
 Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre>
 intros;apply path; eapply Frac.neg_respect;try apply _.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 328
+Line: 305
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> trivial.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 328
+Line: 305
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 329
-Time: 0.002s">
-<div class="time" style="width: 0.68259385665529%"></div>
-<pre>
+Defined.
 
-Definition Fneg_compute@{} q : - (' q) = ' (Frac.neg _ q) := 1.</pre>
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 331
+Line: 307
+Time: 0.002s">
+<div class="time" style="width: 0.60422960725076%"></div>
+<pre>Definition Fneg_compute@{} q : - (' q) = ' (Frac.neg _ q) := 1.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 307
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1991,56 +1991,56 @@ Time: 0s">
 Global Instance Fmult@{} : Mult F.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 333
+Line: 309
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 334
+Line: 310
 Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre>
 refine (F_rec2 (fun x y =&gt; ' (Frac.ml _ x y)) _).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 335
+Line: 311
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 336
+Line: 312
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply path.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 336
+Line: 312
 Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre> apply Frac.ml_respect;trivial.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 336
+Line: 312
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 337
+Line: 314
 Time: 0.004s">
-<div class="time" style="width: 1.3651877133106%"></div>
-<pre>
-
-Definition Fmult_compute@{} q r : (' q) * (' r) = ' (Frac.ml _ q r)
+<div class="time" style="width: 1.2084592145015%"></div>
+<pre>Definition Fmult_compute@{} q r : (' q) * (' r) = ' (Frac.ml _ q r)
   := 1.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 340
+Line: 315
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2048,1318 +2048,1641 @@ Time: 0s">
 Instance Fmult_comm@{} : Commutative Fplus.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 342
+Line: 317
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 343
+Line: 318
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 hnf.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 344
-Time: 0.022s">
-<div class="time" style="width: 7.5085324232082%"></div>
+Line: 319
+Time: 0.023s">
+<div class="time" style="width: 6.9486404833837%"></div>
 <pre> apply (F_ind2 _).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 344
+Line: 319
 Time: 0.005s">
-<div class="time" style="width: 1.7064846416382%"></div>
+<div class="time" style="width: 1.5105740181269%"></div>
 <pre>
 intros;apply path, Frac.pl_comm.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 345
+Line: 320
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 346
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Qed.
 
-Instance F_ring@{} : Ring F.</pre>
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 348
+Line: 322
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Instance F_ring@{} : Ring F.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 322
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 349
-Time: 0.041s">
-<div class="time" style="width: 13.993174061433%"></div>
+Line: 323
+Time: 0.044s">
+<div class="time" style="width: 13.293051359517%"></div>
 <pre>
 repeat split;
 first [change sg_op with mult; change mon_unit with 1|
        change sg_op with plus; change mon_unit with 0].</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 352
+Line: 326
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 353
+Line: 327
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply _.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 353
+Line: 327
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 354
+Line: 328
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> hnf.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 354
-Time: 0.036s">
-<div class="time" style="width: 12.286689419795%"></div>
+Line: 328
+Time: 0.04s">
+<div class="time" style="width: 12.084592145015%"></div>
 <pre> apply (F_ind3 _).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 354
-Time: 0.007s">
-<div class="time" style="width: 2.3890784982935%"></div>
+Line: 328
+Time: 0.008s">
+<div class="time" style="width: 2.416918429003%"></div>
 <pre>
   intros;apply path.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 355
+Line: 329
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply Frac.pl_assoc.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 355
+Line: 329
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 356
+Line: 330
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> hnf.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 356
-Time: 0.02s">
-<div class="time" style="width: 6.8259385665529%"></div>
+Line: 330
+Time: 0.022s">
+<div class="time" style="width: 6.6465256797583%"></div>
 <pre> apply (F_ind _).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 356
-Time: 0.003s">
-<div class="time" style="width: 1.0238907849829%"></div>
+Line: 330
+Time: 0.004s">
+<div class="time" style="width: 1.2084592145015%"></div>
 <pre>
   intros;apply path, Frac.pl_0_l.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 357
+Line: 331
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 358
+Line: 332
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> hnf.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 358
-Time: 0.02s">
-<div class="time" style="width: 6.8259385665529%"></div>
+Line: 332
+Time: 0.022s">
+<div class="time" style="width: 6.6465256797583%"></div>
 <pre> apply (F_ind _).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 358
+Line: 332
 Time: 0.004s">
-<div class="time" style="width: 1.3651877133106%"></div>
+<div class="time" style="width: 1.2084592145015%"></div>
 <pre>
   intros;apply path, Frac.pl_0_r.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 359
+Line: 333
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 360
+Line: 334
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> hnf.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 360
-Time: 0.021s">
-<div class="time" style="width: 7.1672354948805%"></div>
+Line: 334
+Time: 0.022s">
+<div class="time" style="width: 6.6465256797583%"></div>
 <pre> apply (F_ind _).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 360
+Line: 334
 Time: 0.004s">
-<div class="time" style="width: 1.3651877133106%"></div>
+<div class="time" style="width: 1.2084592145015%"></div>
 <pre>
   intros;apply path, Frac.pl_neg_l.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 361
+Line: 335
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 362
+Line: 336
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> hnf;intros.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 362
-Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+Line: 336
+Time: 0.002s">
+<div class="time" style="width: 0.60422960725076%"></div>
 <pre>
   rewrite (commutativity (f:=plus)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 363
-Time: 0.021s">
-<div class="time" style="width: 7.1672354948805%"></div>
+Line: 337
+Time: 0.022s">
+<div class="time" style="width: 6.6465256797583%"></div>
 <pre>
   revert x;apply (F_ind _).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 364
+Line: 338
 Time: 0.004s">
-<div class="time" style="width: 1.3651877133106%"></div>
+<div class="time" style="width: 1.2084592145015%"></div>
 <pre>
   intros;apply path, Frac.pl_neg_l.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 365
+Line: 339
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 366
+Line: 340
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply _.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 366
+Line: 340
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 367
+Line: 341
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply _.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 367
+Line: 341
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 368
-Time: 0.04s">
-<div class="time" style="width: 13.651877133106%"></div>
+Line: 342
+Time: 0.047s">
+<div class="time" style="width: 14.199395770393%"></div>
 <pre> hnf; apply (F_ind3 _).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 368
+Line: 342
 Time: 0.008s">
-<div class="time" style="width: 2.7303754266212%"></div>
+<div class="time" style="width: 2.416918429003%"></div>
 <pre>
   intros;apply path, Frac.ml_assoc.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 369
+Line: 343
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 370
+Line: 344
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> hnf.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 370
+Line: 344
 Time: 0.023s">
-<div class="time" style="width: 7.8498293515358%"></div>
+<div class="time" style="width: 6.9486404833837%"></div>
 <pre> apply (F_ind _).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 370
+Line: 344
 Time: 0.003s">
-<div class="time" style="width: 1.0238907849829%"></div>
+<div class="time" style="width: 0.90634441087613%"></div>
 <pre>
   intros;apply path.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 371
+Line: 345
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> red;simpl.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 371
-Time: 0.014s">
-<div class="time" style="width: 4.778156996587%"></div>
+Line: 345
+Time: 0.015s">
+<div class="time" style="width: 4.5317220543807%"></div>
 <pre>
   rewrite 2!mult_1_l.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 372
+Line: 346
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 372
+Line: 346
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 373
+Line: 347
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> hnf.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 373
-Time: 0.021s">
-<div class="time" style="width: 7.1672354948805%"></div>
+Line: 347
+Time: 0.023s">
+<div class="time" style="width: 6.9486404833837%"></div>
 <pre> apply (F_ind _).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 373
-Time: 0.002s">
-<div class="time" style="width: 0.68259385665529%"></div>
+Line: 347
+Time: 0.003s">
+<div class="time" style="width: 0.90634441087613%"></div>
 <pre>
   intros;apply path.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 374
+Line: 348
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> red;simpl.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 374
+Line: 348
 Time: 0.014s">
-<div class="time" style="width: 4.778156996587%"></div>
+<div class="time" style="width: 4.2296072507553%"></div>
 <pre>
   rewrite 2!mult_1_r.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 375
+Line: 349
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 375
+Line: 349
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 376
-Time: 0.027s">
-<div class="time" style="width: 9.2150170648464%"></div>
+Line: 350
+Time: 0.028s">
+<div class="time" style="width: 8.4592145015106%"></div>
 <pre> hnf; apply (F_ind2 _).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 376
-Time: 0.008s">
-<div class="time" style="width: 2.7303754266212%"></div>
+Line: 350
+Time: 0.01s">
+<div class="time" style="width: 3.0211480362538%"></div>
 <pre>
   intros;apply path.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 377
+Line: 351
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   red;simpl.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 378
-Time: 0.009s">
-<div class="time" style="width: 3.0716723549488%"></div>
+Line: 352
+Time: 0.01s">
+<div class="time" style="width: 3.0211480362538%"></div>
 <pre>
   rewrite (mult_comm (num y)), (mult_comm (den y)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 379
+Line: 353
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   reflexivity.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 380
+Line: 354
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 381
+Line: 355
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> hnf.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 381
-Time: 0.029s">
-<div class="time" style="width: 9.8976109215017%"></div>
+Line: 355
+Time: 0.03s">
+<div class="time" style="width: 9.0634441087613%"></div>
 <pre> apply (F_ind3 _).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 381
+Line: 355
 Time: 0.009s">
-<div class="time" style="width: 3.0716723549488%"></div>
+<div class="time" style="width: 2.7190332326284%"></div>
 <pre>
   intros a b c;apply path.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 382
+Line: 356
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   red;simpl.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 383
-Time: 0.021s">
-<div class="time" style="width: 7.1672354948805%"></div>
+Line: 357
+Time: 0.022s">
+<div class="time" style="width: 6.6465256797583%"></div>
 <pre>
   rewrite &lt;-!(mult_assoc (num a)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 384
-Time: 0.008s">
-<div class="time" style="width: 2.7303754266212%"></div>
+Line: 358
+Time: 0.009s">
+<div class="time" style="width: 2.7190332326284%"></div>
 <pre>
   rewrite &lt;-plus_mult_distr_l.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 385
-Time: 0.005s">
-<div class="time" style="width: 1.7064846416382%"></div>
+Line: 359
+Time: 0.006s">
+<div class="time" style="width: 1.8126888217523%"></div>
 <pre>
   rewrite &lt;-(mult_assoc (num a)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 386
+Line: 360
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply ap.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 386
+Line: 360
 Time: 0.011s">
-<div class="time" style="width: 3.7542662116041%"></div>
+<div class="time" style="width: 3.3232628398792%"></div>
 <pre>
   rewrite (mult_comm (den a) (den c)), (mult_comm (den a) (den b)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 387
-Time: 0.011s">
-<div class="time" style="width: 3.7542662116041%"></div>
+Line: 361
+Time: 0.012s">
+<div class="time" style="width: 3.6253776435045%"></div>
 <pre>
   rewrite (mult_assoc (num b)), (mult_assoc (num c)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 388
+Line: 362
 Time: 0.008s">
-<div class="time" style="width: 2.7303754266212%"></div>
+<div class="time" style="width: 2.416918429003%"></div>
 <pre>
   rewrite &lt;-plus_mult_distr_r.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 389
+Line: 363
 Time: 0.006s">
-<div class="time" style="width: 2.0477815699659%"></div>
+<div class="time" style="width: 1.8126888217523%"></div>
 <pre>
   rewrite &lt;-(mult_assoc _ (den a) (den a * _)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 390
+Line: 364
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply ap.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 391
-Time: 0.018s">
-<div class="time" style="width: 6.1433447098976%"></div>
+Line: 365
+Time: 0.019s">
+<div class="time" style="width: 5.7401812688822%"></div>
 <pre>
   rewrite (mult_comm (den b)), &lt;-mult_assoc.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 392
+Line: 366
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply ap.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 392
-Time: 0.004s">
-<div class="time" style="width: 1.3651877133106%"></div>
+Line: 366
+Time: 0.005s">
+<div class="time" style="width: 1.5105740181269%"></div>
 <pre>
   rewrite (mult_comm (den a)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 393
-Time: 0.01s">
-<div class="time" style="width: 3.4129692832765%"></div>
+Line: 367
+Time: 0.011s">
+<div class="time" style="width: 3.3232628398792%"></div>
 <pre> apply associativity.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 393
-Time: 0.033s">
-<div class="time" style="width: 11.262798634812%"></div>
-<pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 394
+Line: 367
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Qed.
 
-Global Instance Fdec_rec@{} : DecRecip F.</pre>
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 396
+Line: 369
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Global Instance Fdec_rec@{} : DecRecip F.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 369
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 397
+Line: 370
 Time: 0.002s">
-<div class="time" style="width: 0.68259385665529%"></div>
+<div class="time" style="width: 0.60422960725076%"></div>
 <pre>
 refine (F_rec (fun x =&gt; ' (Frac.dec_rec _ x)) _).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 398
+Line: 371
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 399
+Line: 372
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply path.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 399
+Line: 372
 Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre> apply Frac.dec_recip_respect;trivial.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 399
+Line: 372
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 400
-Time: 0.002s">
-<div class="time" style="width: 0.68259385665529%"></div>
-<pre>
+Defined.
 
-Lemma classes_eq_related@{} : forall q r, ' q = ' r -&gt; equiv q r.</pre>
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 402
+Line: 374
+Time: 0.002s">
+<div class="time" style="width: 0.60422960725076%"></div>
+<pre>Lemma classes_eq_related@{} : forall q r, ' q = ' r -&gt; equiv q r.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 374
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 403
+Line: 375
 Time: 0.004s">
-<div class="time" style="width: 1.3651877133106%"></div>
+<div class="time" style="width: 1.2084592145015%"></div>
 <pre>
 apply classes_eq_related@{UR UR Ularge Ularge Uhuge};apply _.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 404
+Line: 376
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 405
-Time: 0.014s">
-<div class="time" style="width: 4.778156996587%"></div>
-<pre>
+Qed.
 
-Lemma class_neq@{} : forall q r, ~ equiv q r -&gt; ~ ' q = ' r.</pre>
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 407
+Line: 378
+Time: 0.015s">
+<div class="time" style="width: 4.5317220543807%"></div>
+<pre>Lemma class_neq@{} : forall q r, ~ equiv q r -&gt; ~ ' q = ' r.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 378
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 408
+Line: 379
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros q r E1 E2;apply E1;apply classes_eq_related, E2.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 409
+Line: 380
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 410
-Time: 0.002s">
-<div class="time" style="width: 0.68259385665529%"></div>
-<pre>
+Qed.
 
-Lemma classes_neq_related@{} : forall q r, ~ ' q = ' r -&gt; ~ equiv q r.</pre>
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 412
+Line: 382
+Time: 0.002s">
+<div class="time" style="width: 0.60422960725076%"></div>
+<pre>Lemma classes_neq_related@{} : forall q r, ~ ' q = ' r -&gt; ~ equiv q r.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 382
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 413
+Line: 383
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros q r E1 E2;apply E1,path,E2.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 414
+Line: 384
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 415
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Qed.
 
-Lemma dec_recip_0@{} : / 0 = 0.</pre>
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 417
+Line: 386
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Lemma dec_recip_0@{} : / 0 = 0.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 386
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 418
+Line: 387
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 unfold dec_recip.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 419
+Line: 388
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 419
+Line: 388
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 unfold Frac.dec_rec;simpl.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 420
+Line: 389
 Time: 0.004s">
-<div class="time" style="width: 1.3651877133106%"></div>
+<div class="time" style="width: 1.2084592145015%"></div>
 <pre>
 destruct (decide_rel paths 0 0) as [_|E].</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 421
+Line: 390
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 422
+Line: 391
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 422
+Line: 391
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 423
+Line: 392
 Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre> destruct E;reflexivity.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 423
-Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+Line: 392
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 424
-Time: 0.002s">
-<div class="time" style="width: 0.68259385665529%"></div>
-<pre>
+Qed.
 
-Lemma dec_recip_nonzero_aux@{} : forall q, ~ ' q = 0 -&gt; ~ num q = 0.</pre>
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 426
+Line: 394
+Time: 0.002s">
+<div class="time" style="width: 0.60422960725076%"></div>
+<pre>Lemma dec_recip_nonzero_aux@{} : forall q, ~ ' q = 0 -&gt; ~ num q = 0.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 394
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 427
+Line: 395
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros q E;apply classes_neq_related in E.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 428
+Line: 396
 Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre>
 apply Frac.nonzero_num in E.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 429
+Line: 397
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> trivial.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 429
+Line: 397
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+Qed.
+
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 430
+Line: 399
 Time: 0.003s">
-<div class="time" style="width: 1.0238907849829%"></div>
-<pre>
-
-Lemma dec_recip_nonzero@{} : forall q (E : ~ ' q = 0),
+<div class="time" style="width: 0.90634441087613%"></div>
+<pre>Lemma dec_recip_nonzero@{} : forall q (E : ~ ' q = 0),
   / (' q) = ' (frac (den q) (num q) (dec_recip_nonzero_aux q E)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 433
+Line: 400
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 434
+Line: 401
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 435
+Line: 402
 Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre> apply path.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 435
+Line: 402
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 red;simpl.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 436
+Line: 403
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> unfold Frac.dec_rec.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 436
+Line: 403
 Time: 0.002s">
-<div class="time" style="width: 0.68259385665529%"></div>
+<div class="time" style="width: 0.60422960725076%"></div>
 <pre>
 apply classes_neq_related, Frac.nonzero_num in E.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 437
-Time: 0.009s">
-<div class="time" style="width: 3.0716723549488%"></div>
+Line: 404
+Time: 0.011s">
+<div class="time" style="width: 3.3232628398792%"></div>
 <pre>
 destruct (decide_rel paths (num q) 0) as [E'|?];[destruct E;apply E'|].</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 438
+Line: 405
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 simpl.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 439
+Line: 406
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 439
-Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
-<pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 440
+Line: 406
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Qed.
 
-Global Instance F_field@{} : DecField F.</pre>
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 442
+Line: 408
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Global Instance F_field@{} : DecField F.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 408
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 443
-Time: 0.017s">
-<div class="time" style="width: 5.80204778157%"></div>
+Line: 409
+Time: 0.018s">
+<div class="time" style="width: 5.4380664652568%"></div>
 <pre>
 split;try apply _.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 444
+Line: 410
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 445
+Line: 411
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> red.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 445
+Line: 411
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply class_neq.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 445
+Line: 411
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   unfold equiv;simpl.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 446
-Time: 0.012s">
-<div class="time" style="width: 4.0955631399317%"></div>
+Line: 412
+Time: 0.013s">
+<div class="time" style="width: 3.9274924471299%"></div>
 <pre> rewrite 2!mult_1_r.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 446
-Time: 0.003s">
-<div class="time" style="width: 1.0238907849829%"></div>
+Line: 412
+Time: 0.004s">
+<div class="time" style="width: 1.2084592145015%"></div>
 <pre> solve_propholds.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 446
+Line: 412
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 447
+Line: 413
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply dec_recip_0.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 447
+Line: 413
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 448
-Time: 0.032s">
-<div class="time" style="width: 10.921501706485%"></div>
+Line: 414
+Time: 0.034s">
+<div class="time" style="width: 10.271903323263%"></div>
 <pre> apply (F_ind (fun x =&gt; _ -&gt; _)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 448
+Line: 414
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros x E.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 449
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 415
+Time: 0.001s">
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre>
   rewrite (dec_recip_nonzero _ E).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 450
+Line: 416
 Time: 0.003s">
-<div class="time" style="width: 1.0238907849829%"></div>
+<div class="time" style="width: 0.90634441087613%"></div>
 <pre>
   apply path;red;simpl.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 451
+Line: 417
 Time: 0.015s">
-<div class="time" style="width: 5.1194539249147%"></div>
+<div class="time" style="width: 4.5317220543807%"></div>
 <pre> rewrite mult_1_r,mult_1_l.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 451
+Line: 417
 Time: 0.003s">
-<div class="time" style="width: 1.0238907849829%"></div>
+<div class="time" style="width: 0.90634441087613%"></div>
 <pre>
   apply mult_comm.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 452
-Time: 0.002s">
-<div class="time" style="width: 0.68259385665529%"></div>
-<pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 453
+Line: 418
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Qed.
 
-Lemma dec_class@{} : forall q r, Decidable (class q = class r).</pre>
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 455
+Line: 420
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Lemma dec_class@{} : forall q r, Decidable (class q = class r).</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 420
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 456
+Line: 421
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros q r.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 457
-Time: 0.002s">
-<div class="time" style="width: 0.68259385665529%"></div>
+Line: 422
+Time: 0.003s">
+<div class="time" style="width: 0.90634441087613%"></div>
 <pre>
 destruct (dec (equiv q r)) as [E|E].</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 458
+Line: 423
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 459
+Line: 424
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> left.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 459
+Line: 424
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply path,E.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 459
+Line: 424
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 460
+Line: 425
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> right.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 460
+Line: 425
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros E'.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 460
+Line: 425
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply E.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 461
+Line: 426
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply (classes_eq_related _ _ E').</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 461
+Line: 426
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 462
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Defined.
 
-Global Instance F_dec@{} : DecidablePaths F.</pre>
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 464
+Line: 428
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Global Instance F_dec@{} : DecidablePaths F.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 428
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 465
+Line: 429
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 hnf.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 466
-Time: 0.036s">
-<div class="time" style="width: 12.286689419795%"></div>
+Line: 430
+Time: 0.039s">
+<div class="time" style="width: 11.78247734139%"></div>
 <pre> apply (F_ind2 _).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 466
+Line: 430
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 apply dec_class.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 467
+Line: 431
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+Qed.
+
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 468
-Time: 0.002s">
-<div class="time" style="width: 0.68259385665529%"></div>
-<pre>
-
-Lemma mult_num_den@{} q :
+Line: 433
+Time: 0.003s">
+<div class="time" style="width: 0.90634441087613%"></div>
+<pre>Lemma mult_num_den@{} q :
   ' q = (' num q) / ' den q.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 471
+Line: 434
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 472
+Line: 435
 Time: 0.003s">
-<div class="time" style="width: 1.0238907849829%"></div>
+<div class="time" style="width: 0.90634441087613%"></div>
 <pre>
 apply path.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 473
+Line: 436
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> red.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 473
+Line: 436
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 473
-Time: 0.007s">
-<div class="time" style="width: 2.3890784982935%"></div>
+Line: 436
+Time: 0.008s">
+<div class="time" style="width: 2.416918429003%"></div>
 <pre>
 rewrite mult_1_l.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 474
+Line: 437
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> unfold Frac.dec_rec.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 474
+Line: 437
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 simpl.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 475
-Time: 0.005s">
-<div class="time" style="width: 1.7064846416382%"></div>
+Line: 438
+Time: 0.006s">
+<div class="time" style="width: 1.8126888217523%"></div>
 <pre> destruct (decide_rel paths (den q) 0) as [E|E];simpl.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 475
+Line: 438
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 476
+Line: 439
 Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre> destruct (den_ne_0 q E).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 476
+Line: 439
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 477
-Time: 0.007s">
-<div class="time" style="width: 2.3890784982935%"></div>
+Line: 440
+Time: 0.008s">
+<div class="time" style="width: 2.416918429003%"></div>
 <pre> rewrite mult_1_r.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 477
+Line: 440
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 477
-Time: 0.002s">
-<div class="time" style="width: 0.68259385665529%"></div>
+Line: 440
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+Qed.
+
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 478
+Line: 442
 Time: 0.003s">
-<div class="time" style="width: 1.0238907849829%"></div>
-<pre>
-
-Lemma recip_den_num@{} q :
+<div class="time" style="width: 0.90634441087613%"></div>
+<pre>Lemma recip_den_num@{} q :
   / ' q = (' den q) / 'num q.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 481
+Line: 443
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 482
+Line: 444
 Time: 0.004s">
-<div class="time" style="width: 1.3651877133106%"></div>
+<div class="time" style="width: 1.2084592145015%"></div>
 <pre>
 apply path;red;simpl.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 483
+Line: 445
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 unfold Frac.dec_rec;simpl.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 484
-Time: 0.008s">
-<div class="time" style="width: 2.7303754266212%"></div>
+Line: 446
+Time: 0.009s">
+<div class="time" style="width: 2.7190332326284%"></div>
 <pre>
 destruct (decide_rel paths (num q) 0) as [E|E];simpl.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 485
+Line: 447
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 486
-Time: 0.022s">
-<div class="time" style="width: 7.5085324232082%"></div>
+Line: 448
+Time: 0.023s">
+<div class="time" style="width: 6.9486404833837%"></div>
 <pre> rewrite (mult_0_r (Azero:=Azero)), 2!mult_0_l.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 486
+Line: 448
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 486
+Line: 448
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 487
+Line: 449
 Time: 0.016s">
-<div class="time" style="width: 5.4607508532423%"></div>
+<div class="time" style="width: 4.833836858006%"></div>
 <pre> rewrite mult_1_l,mult_1_r.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 487
+Line: 449
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 487
-Time: 0.004s">
-<div class="time" style="width: 1.3651877133106%"></div>
-<pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 488
+Line: 449
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Qed.
 
 (* A final word about inject *)</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 490
+Line: 452
 Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre>Global Instance inject_sr_morphism@{} : SemiRingPreserving (cast R F).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 490
+Line: 452
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 491
-Time: 0.038s">
-<div class="time" style="width: 12.969283276451%"></div>
+Line: 453
+Time: 0.036s">
+<div class="time" style="width: 10.876132930514%"></div>
 <pre>
 repeat (split; try apply _).</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 454
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+-</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 455
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros x y.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 455
+Time: 0.003s">
+<div class="time" style="width: 0.90634441087613%"></div>
+<pre> apply path.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 455
+Time: 0.002s">
+<div class="time" style="width: 0.60422960725076%"></div>
+<pre> change ((x + y) * (1 * 1) = (x * 1 + y * 1) * 1).</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 455
+Time: 0.038s">
+<div class="time" style="width: 11.480362537764%"></div>
+<pre>
+  rewrite !mult_1_r.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 456
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> reflexivity.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 456
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+-</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 457
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros x y.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 457
+Time: 0.003s">
+<div class="time" style="width: 0.90634441087613%"></div>
+<pre> apply path.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 457
+Time: 0.002s">
+<div class="time" style="width: 0.60422960725076%"></div>
+<pre> change ((x * y) * (1 * 1) = x * y * 1).</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 457
+Time: 0.022s">
+<div class="time" style="width: 6.6465256797583%"></div>
+<pre>
+  rewrite !mult_1_r.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 458
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> reflexivity.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 458
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Qed.
+
+</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 460
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Global Instance inject_injective@{} : Injective (cast R F).</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 460
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 461
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+repeat (split; try apply _).</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 462
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+intros x y E.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 463
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply classes_eq_related in E.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 463
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+red in E.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 464
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> simpl in E.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 464
+Time: 0.015s">
+<div class="time" style="width: 4.5317220543807%"></div>
+<pre> rewrite 2!mult_1_r in E;trivial.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 464
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Qed.
+
+</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 466
+Time: 0.035s">
+<div class="time" style="width: 10.574018126888%"></div>
+<pre>End contents.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 466
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Arguments F R {_ _ _}.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 468
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Module Lift.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 470
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Section morphisms.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 472
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Universe UR1 UR2.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 473
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Context `{Funext} `{Univalence}.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 474
+Time: 0.001s">
+<div class="time" style="width: 0.30211480362538%"></div>
+<pre>
+Context {R1:Type@{UR1} } `{IntegralDomain R1} `{DecidablePaths R1}.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 475
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Context {R2:Type@{UR2} } `{IntegralDomain R2} `{DecidablePaths R2}.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 476
+Time: 0.001s">
+<div class="time" style="width: 0.30211480362538%"></div>
+<pre>
+Context `(f : R1 -&gt; R2) `{!SemiRingPreserving f} `{!Injective f}.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 477
+Time: 0.062s">
+<div class="time" style="width: 18.731117824773%"></div>
+<pre>
+
+Definition lift@{} : F R1 -&gt; F R2.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 479
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 480
+Time: 0.004s">
+<div class="time" style="width: 1.2084592145015%"></div>
+<pre>
+apply (F_rec (fun x =&gt; class (Frac.lift f x))).</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 481
+Time: 0.003s">
+<div class="time" style="width: 0.90634441087613%"></div>
+<pre>
+intros;apply path,Frac.lift_respects;trivial.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 482
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Defined.
+
+</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 484
+Time: 0.01s">
+<div class="time" style="width: 3.0211480362538%"></div>
+<pre>Global Instance lift_sr_morphism@{i} : SemiRingPreserving lift.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 484
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 485
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+(* This takes a few seconds. *)</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 486
+Time: 0.003s">
+<div class="time" style="width: 0.90634441087613%"></div>
+<pre>split;split;red.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 486
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+-</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 487
+Time: 0.042s">
+<div class="time" style="width: 12.688821752266%"></div>
+<pre> apply (F_ind2@{UR1 UR2 i} _).</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 487
+Time: 0.003s">
+<div class="time" style="width: 0.90634441087613%"></div>
+<pre>
+  intros;simpl.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 488
+Time: 0.003s">
+<div class="time" style="width: 0.90634441087613%"></div>
+<pre>
+  apply @path.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 489
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> (* very slow or doesn't terminate without the @ but fast with it *)
+ </pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 490
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>red;simpl.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 490
+Time: 0.036s">
+<div class="time" style="width: 10.876132930514%"></div>
+<pre>
+  repeat (rewrite &lt;-(preserves_mult (f:=f)) || rewrite &lt;-(preserves_plus (f:=f))).</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 491
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  reflexivity.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 492
@@ -3372,26 +3695,32 @@ Time: 0s">
 Line: 493
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> intros x y.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 493
-Time: 0.003s">
-<div class="time" style="width: 1.0238907849829%"></div>
-<pre> apply path.</pre>
+<pre> simpl.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 493
 Time: 0.002s">
-<div class="time" style="width: 0.68259385665529%"></div>
-<pre> change ((x + y) * (1 * 1) = (x * 1 + y * 1) * 1).</pre>
+<div class="time" style="width: 0.60422960725076%"></div>
+<pre> apply path.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 493
-Time: 0.039s">
-<div class="time" style="width: 13.310580204778%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-  rewrite !mult_1_r.</pre>
+  red;simpl.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 494
+Time: 0.002s">
+<div class="time" style="width: 0.60422960725076%"></div>
+<pre> rewrite (preserves_0 (f:=f)).</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 494
+Time: 0.02s">
+<div class="time" style="width: 6.0422960725076%"></div>
+<pre> rewrite 2!mult_0_l.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 494
@@ -3408,522 +3737,186 @@ Time: 0s">
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 495
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> intros x y.</pre>
+Time: 0.043s">
+<div class="time" style="width: 12.990936555891%"></div>
+<pre> apply (F_ind2@{UR1 UR2 i} _).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 495
 Time: 0.003s">
-<div class="time" style="width: 1.0238907849829%"></div>
-<pre> apply path.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 495
-Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
-<pre> change ((x * y) * (1 * 1) = x * y * 1).</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 495
-Time: 0.021s">
-<div class="time" style="width: 7.1672354948805%"></div>
+<div class="time" style="width: 0.90634441087613%"></div>
 <pre>
-  rewrite !mult_1_r.</pre>
+  intros;simpl.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 496
+Time: 0.008s">
+<div class="time" style="width: 2.416918429003%"></div>
+<pre> apply @path.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 496
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  red;simpl.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 497
+Time: 0.014s">
+<div class="time" style="width: 4.2296072507553%"></div>
+<pre>
+  rewrite &lt;-!(preserves_mult (f:=f)).</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 498
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 496
-Time: 0.002s">
-<div class="time" style="width: 0.68259385665529%"></div>
-<pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 497
+Line: 498
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-Global Instance inject_injective@{} : Injective (cast R F).</pre>
+-</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 499
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> simpl.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 499
+Time: 0.002s">
+<div class="time" style="width: 0.60422960725076%"></div>
+<pre> apply path.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 499
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Proof.</pre>
+  red;simpl.</pre>
+</div>
+<div class="code" title="File: field_of_fractions.v
+Line: 500
+Time: 0.022s">
+<div class="time" style="width: 6.6465256797583%"></div>
+<pre> apply commutativity.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 500
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-repeat (split; try apply _).</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 501
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-intros x y E.</pre>
+Qed.
+
+</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 502
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> apply classes_eq_related in E.</pre>
+<pre>Global Instance lift_injective@{i} : Injective lift.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
 Line: 502
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-red in E.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 503
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> simpl in E.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 503
-Time: 0.014s">
-<div class="time" style="width: 4.778156996587%"></div>
-<pre> rewrite 2!mult_1_r in E;trivial.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 503
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 504
-Time: 0.032s">
-<div class="time" style="width: 10.921501706485%"></div>
-<pre>
-
-End contents.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 506
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-Arguments F R {_ _ _}.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 508
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-Module Lift.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 510
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-Section morphisms.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 512
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Universe UR1 UR2.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 513
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Context `{Funext} `{Univalence}.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 514
-Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
-<pre>
-Context {R1:Type@{UR1} } `{IntegralDomain R1} `{DecidablePaths R1}.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 515
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Context {R2:Type@{UR2} } `{IntegralDomain R2} `{DecidablePaths R2}.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 516
-Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
-<pre>
-Context `(f : R1 -&gt; R2) `{!SemiRingPreserving f} `{!Injective f}.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 517
-Time: 0.058s">
-<div class="time" style="width: 19.795221843003%"></div>
-<pre>
-
-Definition lift@{} : F R1 -&gt; F R2.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 519
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 520
-Time: 0.004s">
-<div class="time" style="width: 1.3651877133106%"></div>
-<pre>
-apply (F_rec (fun x =&gt; class (Frac.lift f x))).</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 521
-Time: 0.003s">
-<div class="time" style="width: 1.0238907849829%"></div>
-<pre>
-intros;apply path,Frac.lift_respects;trivial.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 522
-Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 523
-Time: 0.009s">
-<div class="time" style="width: 3.0716723549488%"></div>
-<pre>
-
-Global Instance lift_sr_morphism@{i} : SemiRingPreserving lift.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 525
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 526
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-(* This takes a few seconds. *)</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 527
-Time: 0.002s">
-<div class="time" style="width: 0.68259385665529%"></div>
-<pre>split;split;red.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 527
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
--</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 528
-Time: 0.039s">
-<div class="time" style="width: 13.310580204778%"></div>
-<pre> apply (F_ind2@{UR1 UR2 i} _).</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 528
-Time: 0.003s">
-<div class="time" style="width: 1.0238907849829%"></div>
-<pre>
-  intros;simpl.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 529
-Time: 0.003s">
-<div class="time" style="width: 1.0238907849829%"></div>
-<pre>
-  apply @path.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 530
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> (* very slow or doesn't terminate without the @ but fast with it *)
- </pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 531
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>red;simpl.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 531
-Time: 0.032s">
-<div class="time" style="width: 10.921501706485%"></div>
-<pre>
-  repeat (rewrite &lt;-(preserves_mult (f:=f)) || rewrite &lt;-(preserves_plus (f:=f))).</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 532
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  reflexivity.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 533
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
--</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 534
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> simpl.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 534
-Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
-<pre> apply path.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 534
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  red;simpl.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 535
-Time: 0.002s">
-<div class="time" style="width: 0.68259385665529%"></div>
-<pre> rewrite (preserves_0 (f:=f)).</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 535
-Time: 0.019s">
-<div class="time" style="width: 6.4846416382253%"></div>
-<pre> rewrite 2!mult_0_l.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 535
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> reflexivity.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 535
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
--</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 536
-Time: 0.04s">
-<div class="time" style="width: 13.651877133106%"></div>
-<pre> apply (F_ind2@{UR1 UR2 i} _).</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 536
-Time: 0.003s">
-<div class="time" style="width: 1.0238907849829%"></div>
-<pre>
-  intros;simpl.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 537
-Time: 0.003s">
-<div class="time" style="width: 1.0238907849829%"></div>
-<pre> apply @path.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 537
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  red;simpl.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 538
-Time: 0.014s">
-<div class="time" style="width: 4.778156996587%"></div>
-<pre>
-  rewrite &lt;-!(preserves_mult (f:=f)).</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 539
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> reflexivity.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 539
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
--</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 540
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> simpl.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 540
-Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
-<pre> apply path.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 540
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  red;simpl.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 541
-Time: 0.021s">
-<div class="time" style="width: 7.1672354948805%"></div>
-<pre> apply commutativity.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 541
-Time: 0.015s">
-<div class="time" style="width: 5.1194539249147%"></div>
-<pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 542
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-Global Instance lift_injective@{i} : Injective lift.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 544
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
-</div>
-<div class="code" title="File: field_of_fractions.v
-Line: 545
+Line: 503
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 red.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 546
-Time: 0.045s">
-<div class="time" style="width: 15.358361774744%"></div>
+Line: 504
+Time: 0.048s">
+<div class="time" style="width: 14.501510574018%"></div>
 <pre>
 apply (F_ind2@{UR1 i i} (fun _ _ =&gt; _ -&gt; _)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 547
+Line: 505
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros x y E.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 548
+Line: 506
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 simpl in E.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 549
+Line: 507
 Time: 0.002s">
-<div class="time" style="width: 0.68259385665529%"></div>
+<div class="time" style="width: 0.60422960725076%"></div>
 <pre>
 apply classes_eq_related in E.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 550
+Line: 508
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> red in E;simpl in E.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 550
+Line: 508
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 apply path.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 551
+Line: 509
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> red.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 551
+Line: 509
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 apply (injective f).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 552
+Line: 510
 Time: 0.006s">
-<div class="time" style="width: 2.0477815699659%"></div>
+<div class="time" style="width: 1.8126888217523%"></div>
 <pre> rewrite 2!(preserves_mult (f:=f)).</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 552
+Line: 510
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 apply E.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 553
-Time: 0.002s">
-<div class="time" style="width: 0.68259385665529%"></div>
+Line: 511
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 554
-Time: 0.013s">
-<div class="time" style="width: 4.4368600682594%"></div>
-<pre>
-End morphisms.</pre>
+Line: 512
+Time: 0.015s">
+<div class="time" style="width: 4.5317220543807%"></div>
+<pre>End morphisms.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 555
+Line: 512
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3931,15 +3924,15 @@ Time: 0s">
 End Lift.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 557
+Line: 514
 Time: 0.001s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.30211480362538%"></div>
 <pre>
 
 End FracField.</pre>
 </div>
 <div class="code" title="File: field_of_fractions.v
-Line: 560
+Line: 517
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

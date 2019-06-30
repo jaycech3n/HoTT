@@ -31,12 +31,12 @@ pre {
 <div class="code" title="File: abstract_algebra.v
 Line: 1
 Time: 0.001s">
-<div class="time" style="width: 0.24154589371981%"></div>
+<div class="time" style="width: 0.18484288354898%"></div>
 <pre>Require Coq.Init.Peano.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
 Line: 1
-Time: 0.414s">
+Time: 0.541s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Require Export
@@ -71,8 +71,8 @@ Setoid_Morphism as a substructure, setoid rewriting will become horribly slow.
 </div>
 <div class="code" title="File: abstract_algebra.v
 Line: 24
-Time: 0.007s">
-<div class="time" style="width: 1.6908212560386%"></div>
+Time: 0.008s">
+<div class="time" style="width: 1.4787430683919%"></div>
 <pre>Class IsApart A {Aap : Apart A} : Type :=
   { apart_set :&gt; IsHSet A
   ; apart_mere :&gt; is_mere_relation _ apart
@@ -140,18 +140,18 @@ Line: 36
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+Qed.
+
+</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 37
+Line: 38
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-
-Arguments tight_apart {A Aap IsApart} _ _.</pre>
+<pre>Arguments tight_apart {A Aap IsApart} _ _.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 39
+Line: 38
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -159,29 +159,29 @@ Time: 0s">
 Section setoid_morphisms.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 41
+Line: 40
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Context {A B} {Aap : Apart A} {Bap : Apart B} (f : A -&gt; B).</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 42
+Line: 41
 Time: 0.003s">
-<div class="time" style="width: 0.72463768115942%"></div>
+<div class="time" style="width: 0.55452865064695%"></div>
 <pre>
 
   Class StrongExtensionality := strong_extensionality : forall x y, f x ≶ f y -&gt; x ≶ y.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 44
+Line: 43
 Time: 0.002s">
-<div class="time" style="width: 0.48309178743961%"></div>
+<div class="time" style="width: 0.36968576709797%"></div>
 <pre>
 End setoid_morphisms.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 45
+Line: 44
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -189,13 +189,13 @@ Time: 0s">
 (* HOTT TODO check if this is ok/useful *)</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 47
+Line: 46
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Hint Extern 4 (?f _ = ?f _) =&gt; eapply (ap f) : core.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 47
+Line: 46
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -203,7 +203,7 @@ Time: 0s">
 Section setoid_binary_morphisms.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 49
+Line: 48
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -211,23 +211,23 @@ Time: 0s">
     {Bap : Apart B} {Cap : Apart C} (f : A -&gt; B -&gt; C).</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 51
+Line: 50
 Time: 0.004s">
-<div class="time" style="width: 0.96618357487923%"></div>
+<div class="time" style="width: 0.73937153419593%"></div>
 <pre>
 
   Class StrongBinaryExtensionality := strong_binary_extensionality
     : forall x₁ y₁ x₂ y₂, f x₁ y₁ ≶ f x₂ y₂ -&gt; hor (x₁ ≶ x₂) (y₁ ≶ y₂).</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 54
+Line: 53
 Time: 0.002s">
-<div class="time" style="width: 0.48309178743961%"></div>
+<div class="time" style="width: 0.36968576709797%"></div>
 <pre>
 End setoid_binary_morphisms.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 55
+Line: 54
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -239,29 +239,29 @@ real numbers), we do not include it in the lower part of the algebraic hierarchy
 *)</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 61
+Line: 60
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Section upper_classes.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 61
+Line: 60
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Universe i.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 62
+Line: 61
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Context (A : Type@{i}).</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 63
+Line: 62
 Time: 0.002s">
-<div class="time" style="width: 0.48309178743961%"></div>
+<div class="time" style="width: 0.36968576709797%"></div>
 <pre>
 
   Class SemiGroup {Aop: SgOp A} :=
@@ -269,9 +269,9 @@ Time: 0.002s">
     ; sg_ass :&gt; Associative (&amp;) }.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 67
+Line: 66
 Time: 0.001s">
-<div class="time" style="width: 0.24154589371981%"></div>
+<div class="time" style="width: 0.18484288354898%"></div>
 <pre>
 
   Class CommutativeSemiGroup {Aop : SgOp A} :=
@@ -279,9 +279,9 @@ Time: 0.001s">
     ; comsg_comm :&gt; Commutative (&amp;) }.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 71
+Line: 70
 Time: 0.001s">
-<div class="time" style="width: 0.24154589371981%"></div>
+<div class="time" style="width: 0.18484288354898%"></div>
 <pre>
 
   Class SemiLattice {Aop : SgOp A} :=
@@ -289,9 +289,9 @@ Time: 0.001s">
     ; semilattice_idempotent :&gt; BinaryIdempotent (&amp;)}.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 75
+Line: 74
 Time: 0.003s">
-<div class="time" style="width: 0.72463768115942%"></div>
+<div class="time" style="width: 0.55452865064695%"></div>
 <pre>
 
   Class Monoid {Aop : SgOp A} {Aunit : MonUnit A} :=
@@ -300,9 +300,9 @@ Time: 0.003s">
     ; monoid_right_id :&gt; RightIdentity (&amp;) mon_unit }.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 80
+Line: 79
 Time: 0.002s">
-<div class="time" style="width: 0.48309178743961%"></div>
+<div class="time" style="width: 0.36968576709797%"></div>
 <pre>
 
   Class CommutativeMonoid {Aop Aunit} :=
@@ -310,9 +310,9 @@ Time: 0.002s">
     ; commonoid_commutative :&gt; Commutative (&amp;) }.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 84
+Line: 83
 Time: 0.004s">
-<div class="time" style="width: 0.96618357487923%"></div>
+<div class="time" style="width: 0.73937153419593%"></div>
 <pre>
 
   Class Group {Aop Aunit} {Anegate : Negate A} :=
@@ -321,9 +321,9 @@ Time: 0.004s">
     ; negate_r :&gt; RightInverse (&amp;) (-) mon_unit }.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 89
+Line: 88
 Time: 0.001s">
-<div class="time" style="width: 0.24154589371981%"></div>
+<div class="time" style="width: 0.18484288354898%"></div>
 <pre>
 
   Class BoundedSemiLattice {Aop Aunit} :=
@@ -331,9 +331,9 @@ Time: 0.001s">
     ; bounded_semilattice_idempotent :&gt; BinaryIdempotent (&amp;)}.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 93
-Time: 0.002s">
-<div class="time" style="width: 0.48309178743961%"></div>
+Line: 92
+Time: 0.003s">
+<div class="time" style="width: 0.55452865064695%"></div>
 <pre>
 
   Class AbGroup {Aop Aunit Anegate} :=
@@ -341,7 +341,7 @@ Time: 0.002s">
     ; abgroup_commutative :&gt; Commutative (&amp;) }.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 97
+Line: 96
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -349,9 +349,9 @@ Time: 0s">
   Context {Aplus : Plus A} {Amult : Mult A} {Azero : Zero A} {Aone : One A}.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 99
+Line: 98
 Time: 0.003s">
-<div class="time" style="width: 0.72463768115942%"></div>
+<div class="time" style="width: 0.55452865064695%"></div>
 <pre>
 
   Class SemiRing :=
@@ -361,7 +361,7 @@ Time: 0.003s">
     ; semiring_left_absorb :&gt; LeftAbsorb (.*.) 0 }.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 105
+Line: 104
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -369,9 +369,9 @@ Time: 0s">
   Context {Anegate : Negate A}.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 107
-Time: 0.002s">
-<div class="time" style="width: 0.48309178743961%"></div>
+Line: 106
+Time: 0.003s">
+<div class="time" style="width: 0.55452865064695%"></div>
 <pre>
 
   Class Ring :=
@@ -380,7 +380,7 @@ Time: 0.002s">
     ; ring_dist :&gt; LeftDistribute (.*.) (+) }.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 112
+Line: 111
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -391,16 +391,16 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 117
+Line: 116
 Time: 0.002s">
-<div class="time" style="width: 0.48309178743961%"></div>
+<div class="time" style="width: 0.36968576709797%"></div>
 <pre>Class IntegralDomain :=
     { intdom_ring : Ring
     ; intdom_nontrivial : PropHolds (not (1 = 0))
     ; intdom_nozeroes :&gt; NoZeroDivisors A }.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 120
+Line: 119
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -410,9 +410,9 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 124
-Time: 0.009s">
-<div class="time" style="width: 2.1739130434783%"></div>
+Line: 123
+Time: 0.011s">
+<div class="time" style="width: 2.0332717190388%"></div>
 <pre>Class Field {Aap: Apart A} {Arecip: Recip A} :=
     { field_ring :&gt; Ring
     ; field_apart :&gt; IsApart A
@@ -422,7 +422,7 @@ Time: 0.009s">
     ; recip_inverse : forall x, x.1 // x = 1 }.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 130
+Line: 129
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -433,9 +433,9 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 135
-Time: 0.005s">
-<div class="time" style="width: 1.207729468599%"></div>
+Line: 134
+Time: 0.006s">
+<div class="time" style="width: 1.1090573012939%"></div>
 <pre>Class DecField {Adec_recip : DecRecip A} :=
     { decfield_ring :&gt; Ring
     ; decfield_nontrivial : PropHolds (1 &lt;&gt; 0)
@@ -443,9 +443,9 @@ Time: 0.005s">
     ; dec_recip_inverse : forall x, x &lt;&gt; 0 -&gt; x / x = 1 }.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 139
-Time: 0.004s">
-<div class="time" style="width: 0.96618357487923%"></div>
+Line: 138
+Time: 0.005s">
+<div class="time" style="width: 0.92421441774492%"></div>
 <pre>
 
   Class FieldCharacteristic@{j} {Aap : Apart@{i j} A} (k : nat) : Type@{j}
@@ -454,15 +454,15 @@ Time: 0.004s">
         (@apart A Aap (Peano.nat_iter n (1 +) 0) 0).</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 144
-Time: 0.025s">
-<div class="time" style="width: 6.0386473429952%"></div>
+Line: 143
+Time: 0.029s">
+<div class="time" style="width: 5.3604436229205%"></div>
 <pre>
 
 End upper_classes.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 146
+Line: 145
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -470,14 +470,14 @@ Time: 0s">
 (* Due to bug #2528 *)</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 148
+Line: 147
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Hint Extern 4 (PropHolds (1 &lt;&gt; 0)) =&gt;
   eapply @intdom_nontrivial : typeclass_instances.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 149
+Line: 148
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -485,7 +485,7 @@ Hint Extern 5 (PropHolds (1 ≶ 0)) =&gt;
   eapply @field_nontrivial : typeclass_instances.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 151
+Line: 150
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -493,7 +493,7 @@ Hint Extern 5 (PropHolds (1 &lt;&gt; 0)) =&gt;
   eapply @decfield_nontrivial : typeclass_instances.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 153
+Line: 152
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -506,13 +506,13 @@ take the right way
 *)</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 160
+Line: 159
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Hint Extern 10 (Ring _) =&gt; apply @intdom_ring : typeclass_instances.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 160
+Line: 159
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -520,7 +520,7 @@ Time: 0s">
 Arguments recip_inverse {A Aplus Amult Azero Aone Anegate Aap Arecip Field} _.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 162
+Line: 161
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -528,14 +528,14 @@ Arguments dec_recip_inverse
   {A Aplus Amult Azero Aone Anegate Adec_recip DecField} _ _.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 164
+Line: 163
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Arguments dec_recip_0 {A Aplus Amult Azero Aone Anegate Adec_recip DecField}.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 165
+Line: 164
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -543,51 +543,51 @@ Time: 0s">
 Section lattice.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 167
+Line: 166
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Context A {Ajoin: Join A} {Ameet: Meet A} {Abottom : Bottom A} {Atop : Top A}.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 168
+Line: 167
 Time: 0.003s">
-<div class="time" style="width: 0.72463768115942%"></div>
+<div class="time" style="width: 0.55452865064695%"></div>
 <pre>
 
   Class JoinSemiLattice := 
     join_semilattice :&gt; @SemiLattice A join_is_sg_op.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 171
+Line: 170
 Time: 0.003s">
-<div class="time" style="width: 0.72463768115942%"></div>
+<div class="time" style="width: 0.55452865064695%"></div>
 <pre>
   Class BoundedJoinSemiLattice := 
     bounded_join_semilattice :&gt; @BoundedSemiLattice A
       join_is_sg_op bottom_is_mon_unit.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 174
+Line: 173
 Time: 0.003s">
-<div class="time" style="width: 0.72463768115942%"></div>
+<div class="time" style="width: 0.55452865064695%"></div>
 <pre>
   Class MeetSemiLattice := 
     meet_semilattice :&gt; @SemiLattice A meet_is_sg_op.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 176
+Line: 175
 Time: 0.003s">
-<div class="time" style="width: 0.72463768115942%"></div>
+<div class="time" style="width: 0.55452865064695%"></div>
 <pre>
   Class BoundedMeetSemiLattice :=
     bounded_meet_semilattice :&gt; @BoundedSemiLattice A
       meet_is_sg_op top_is_mon_unit.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 179
+Line: 178
 Time: 0.003s">
-<div class="time" style="width: 0.72463768115942%"></div>
+<div class="time" style="width: 0.55452865064695%"></div>
 <pre>
 
   Class Lattice := 
@@ -597,9 +597,9 @@ Time: 0.003s">
     ; meet_join_absorption :&gt; Absorption (⊓) (⊔)}.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 185
+Line: 184
 Time: 0.003s">
-<div class="time" style="width: 0.72463768115942%"></div>
+<div class="time" style="width: 0.55452865064695%"></div>
 <pre>
 
   Class BoundedLattice :=
@@ -609,9 +609,9 @@ Time: 0.003s">
     ; boundedmeet_join_absorption :&gt; Absorption (⊓) (⊔)}.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 191
-Time: 0.001s">
-<div class="time" style="width: 0.24154589371981%"></div>
+Line: 190
+Time: 0.002s">
+<div class="time" style="width: 0.36968576709797%"></div>
 <pre>
 
   Class DistributiveLattice := 
@@ -619,14 +619,14 @@ Time: 0.001s">
     ; join_meet_distr_l :&gt; LeftDistribute (⊔) (⊓) }.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 195
-Time: 0.015s">
-<div class="time" style="width: 3.6231884057971%"></div>
+Line: 194
+Time: 0.018s">
+<div class="time" style="width: 3.3271719038817%"></div>
 <pre>
 End lattice.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 196
+Line: 195
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -634,7 +634,7 @@ Time: 0s">
 Section morphism_classes.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 198
+Line: 197
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -642,7 +642,7 @@ Time: 0s">
   Section sgmorphism_classes.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 200
+Line: 199
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -650,27 +650,27 @@ Time: 0s">
     {Aunit : MonUnit A} {Bunit : MonUnit B}.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 202
-Time: 0.009s">
-<div class="time" style="width: 2.1739130434783%"></div>
+Line: 201
+Time: 0.011s">
+<div class="time" style="width: 2.0332717190388%"></div>
 <pre>
 
   Class SemiGroupPreserving (f : A -&gt; B) :=
     preserves_sg_op : forall x y, f (x &amp; y) = f x &amp; f y.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 205
-Time: 0.003s">
-<div class="time" style="width: 0.72463768115942%"></div>
+Line: 204
+Time: 0.004s">
+<div class="time" style="width: 0.73937153419593%"></div>
 <pre>
 
   Class UnitPreserving (f : A -&gt; B) :=
     preserves_mon_unit : f mon_unit = mon_unit.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 208
+Line: 207
 Time: 0.001s">
-<div class="time" style="width: 0.24154589371981%"></div>
+<div class="time" style="width: 0.18484288354898%"></div>
 <pre>
 
   Class MonoidPreserving (f : A -&gt; B) :=
@@ -678,14 +678,14 @@ Time: 0.001s">
     ; monmor_unitmor :&gt; UnitPreserving f }.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 212
-Time: 0.006s">
-<div class="time" style="width: 1.4492753623188%"></div>
+Line: 211
+Time: 0.007s">
+<div class="time" style="width: 1.2939001848429%"></div>
 <pre>
   End sgmorphism_classes.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 213
+Line: 212
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -693,18 +693,18 @@ Time: 0s">
   Section ringmorphism_classes.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 215
+Line: 214
 Time: 0.001s">
-<div class="time" style="width: 0.24154589371981%"></div>
+<div class="time" style="width: 0.18484288354898%"></div>
 <pre>
   Context {A B : Type} {Aplus : Plus A} {Bplus : Plus B}
     {Amult : Mult A} {Bmult : Mult B} {Azero : Zero A} {Bzero : Zero B}
     {Aone : One A} {Bone : One B}.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 218
-Time: 0.003s">
-<div class="time" style="width: 0.72463768115942%"></div>
+Line: 217
+Time: 0.004s">
+<div class="time" style="width: 0.73937153419593%"></div>
 <pre>
 
   Class SemiRingPreserving (f : A -&gt; B) :=
@@ -714,7 +714,7 @@ Time: 0.003s">
         mult_is_sg_op mult_is_sg_op one_is_mon_unit one_is_mon_unit f }.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 224
+Line: 223
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -722,23 +722,23 @@ Time: 0s">
   Context {Aap : Apart A} {Bap : Apart B}.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 226
+Line: 225
 Time: 0.002s">
-<div class="time" style="width: 0.48309178743961%"></div>
+<div class="time" style="width: 0.36968576709797%"></div>
 <pre>
   Class SemiRingStrongPreserving (f : A -&gt; B) :=
     { strong_semiringmor_sr_mor :&gt; SemiRingPreserving f
     ; strong_semiringmor_strong_mor :&gt; StrongExtensionality f }.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 229
-Time: 0.003s">
-<div class="time" style="width: 0.72463768115942%"></div>
+Line: 228
+Time: 0.004s">
+<div class="time" style="width: 0.73937153419593%"></div>
 <pre>
   End ringmorphism_classes.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 230
+Line: 229
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -746,7 +746,7 @@ Time: 0s">
   Section latticemorphism_classes.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 232
+Line: 231
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -754,25 +754,25 @@ Time: 0s">
     {Ameet : Meet A} {Bmeet : Meet B}.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 234
-Time: 0.003s">
-<div class="time" style="width: 0.72463768115942%"></div>
+Line: 233
+Time: 0.004s">
+<div class="time" style="width: 0.73937153419593%"></div>
 <pre>
 
   Class JoinPreserving (f : A -&gt; B) :=
     join_slmor_sgmor :&gt; @SemiGroupPreserving A B join_is_sg_op join_is_sg_op f.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 237
-Time: 0.003s">
-<div class="time" style="width: 0.72463768115942%"></div>
+Line: 236
+Time: 0.004s">
+<div class="time" style="width: 0.73937153419593%"></div>
 <pre>
 
   Class MeetPreserving (f : A -&gt; B) :=
     meet_slmor_sgmor :&gt; @SemiGroupPreserving A B meet_is_sg_op meet_is_sg_op f.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 240
+Line: 239
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -780,18 +780,18 @@ Time: 0s">
   Context {Abottom : Bottom A} {Bbottom : Bottom B}.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 242
-Time: 0.003s">
-<div class="time" style="width: 0.72463768115942%"></div>
+Line: 241
+Time: 0.004s">
+<div class="time" style="width: 0.73937153419593%"></div>
 <pre>
   Class BoundedJoinPreserving (f : A -&gt; B) := bounded_join_slmor_monmor
       :&gt; @MonoidPreserving A B join_is_sg_op join_is_sg_op
          bottom_is_mon_unit bottom_is_mon_unit f.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 245
+Line: 244
 Time: 0.001s">
-<div class="time" style="width: 0.24154589371981%"></div>
+<div class="time" style="width: 0.18484288354898%"></div>
 <pre>
 
   Class LatticePreserving (f : A -&gt; B) :=
@@ -799,21 +799,21 @@ Time: 0.001s">
     ; latticemor_meet_mor :&gt; MeetPreserving f }.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 249
-Time: 0.009s">
-<div class="time" style="width: 2.1739130434783%"></div>
+Line: 248
+Time: 0.011s">
+<div class="time" style="width: 2.0332717190388%"></div>
 <pre>
   End latticemorphism_classes.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 250
-Time: 0.021s">
-<div class="time" style="width: 5.0724637681159%"></div>
+Line: 249
+Time: 0.024s">
+<div class="time" style="width: 4.4362292051756%"></div>
 <pre>
 End morphism_classes.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 251
+Line: 250
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -821,22 +821,22 @@ Time: 0s">
 Section jections.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 253
+Line: 252
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Context {A B} (f : A -&gt; B).</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 254
+Line: 253
 Time: 0.003s">
-<div class="time" style="width: 0.72463768115942%"></div>
+<div class="time" style="width: 0.55452865064695%"></div>
 <pre>
 
   Class Injective := injective : forall x y, f x = f y -&gt; x = y.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 256
+Line: 255
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -845,55 +845,54 @@ Time: 0s">
     x &lt;&gt; y -&gt; f x &lt;&gt; f y.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 259
+Line: 258
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 260
+Line: 259
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     intros E1 E2.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 261
+Line: 260
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply E1.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 261
+Line: 260
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     apply injective.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 262
+Line: 261
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     assumption.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 263
+Line: 262
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 264
-Time: 0.002s">
-<div class="time" style="width: 0.48309178743961%"></div>
-<pre>
-End jections.</pre>
+Line: 263
+Time: 0.003s">
+<div class="time" style="width: 0.55452865064695%"></div>
+<pre>End jections.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 265
+Line: 263
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -901,30 +900,30 @@ Time: 0s">
 Section strong_injective.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 267
+Line: 265
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Context {A B} {Aap : Apart A} {Bap : Apart B} (f : A -&gt; B) .</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 268
-Time: 0.002s">
-<div class="time" style="width: 0.48309178743961%"></div>
+Line: 266
+Time: 0.003s">
+<div class="time" style="width: 0.55452865064695%"></div>
 <pre>
   Class StrongInjective :=
     { strong_injective : forall x y, x ≶ y -&gt; f x ≶ f y
     ; strong_injective_mor : StrongExtensionality f }.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 271
+Line: 269
 Time: 0.001s">
-<div class="time" style="width: 0.24154589371981%"></div>
+<div class="time" style="width: 0.18484288354898%"></div>
 <pre>
 End strong_injective.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 272
+Line: 270
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -932,9 +931,9 @@ Time: 0s">
 Section extras.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 274
-Time: 0.005s">
-<div class="time" style="width: 1.207729468599%"></div>
+Line: 272
+Time: 0.006s">
+<div class="time" style="width: 1.1090573012939%"></div>
 <pre>
 
 Class CutMinusSpec A (cm : CutMinus A) `{Zero A} `{Plus A} `{Le A} := {
@@ -943,15 +942,15 @@ Class CutMinusSpec A (cm : CutMinus A) `{Zero A} `{Plus A} `{Le A} := {
 }.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 279
+Line: 277
 Time: 0.001s">
-<div class="time" style="width: 0.24154589371981%"></div>
+<div class="time" style="width: 0.18484288354898%"></div>
 <pre>
 
 End extras.</pre>
 </div>
 <div class="code" title="File: abstract_algebra.v
-Line: 282
+Line: 280
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

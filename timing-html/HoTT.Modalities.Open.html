@@ -38,21 +38,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Open.v
 Line: 2
-Time: 0.042s">
-<div class="time" style="width: 2.6266416510319%"></div>
+Time: 0.053s">
+<div class="time" style="width: 2.9510022271715%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Open.v
 Line: 2
-Time: 0.011s">
-<div class="time" style="width: 0.68792995622264%"></div>
+Time: 0.013s">
+<div class="time" style="width: 0.72383073496659%"></div>
 <pre>
 Require Import HProp TruncType Extensions.</pre>
 </div>
 <div class="code" title="File: Open.v
 Line: 3
-Time: 0.128s">
-<div class="time" style="width: 8.0050031269543%"></div>
+Time: 0.171s">
+<div class="time" style="width: 9.5211581291759%"></div>
 <pre>
 Require Import Modality Accessible Nullification Lex.</pre>
 </div>
@@ -78,7 +78,7 @@ Time: 0s">
 <div class="code" title="File: Open.v
 Line: 10
 Time: 0.001s">
-<div class="time" style="width: 0.062539086929331%"></div>
+<div class="time" style="width: 0.055679287305122%"></div>
 <pre>Record Open_Modality :=
   Op { funext_Op : Funext ;
        unOp : hProp
@@ -136,8 +136,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Open.v
 Line: 27
-Time: 0.001s">
-<div class="time" style="width: 0.062539086929331%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Definition O_indO (O : Modality@{u a}) (A : Type@{i})
@@ -168,15 +168,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Open.v
 Line: 35
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.055679287305122%"></div>
 <pre>
     apply path_arrow; intros u'.</pre>
 </div>
 <div class="code" title="File: Open.v
 Line: 36
-Time: 0.002s">
-<div class="time" style="width: 0.12507817385866%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.16703786191537%"></div>
 <pre>
     unfold to; apply ap; apply path_ishprop.</pre>
 </div>
@@ -185,15 +185,15 @@ Line: 37
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Defined.</pre>
+  Defined.
+
+ </pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 38
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-  Definition O_indO_beta (O : Modality@{u a}) (A : Type@{i})
+Line: 40
+Time: 0.001s">
+<div class="time" style="width: 0.055679287305122%"></div>
+<pre>Definition O_indO_beta (O : Modality@{u a}) (A : Type@{i})
              (B : O_reflector@{u a i} O A -&gt; Type@{j})
              (f : forall a, O_reflector@{u a j} O (B (to O A a))) (a : A)
   : O_indO O A B f (to O A a) = f a.</pre>
@@ -208,29 +208,29 @@ Time: 0s">
 <div class="code" title="File: Open.v
 Line: 44
 Time: 0.001s">
-<div class="time" style="width: 0.062539086929331%"></div>
+<div class="time" style="width: 0.055679287305122%"></div>
 <pre>
     pose (funext_Op O); apply path_arrow; intros u.</pre>
 </div>
 <div class="code" title="File: Open.v
 Line: 45
-Time: 0.004s">
-<div class="time" style="width: 0.25015634771732%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.33407572383073%"></div>
 <pre>
     transitivity (transport B 1 (f a u));
       auto with path_hints.</pre>
 </div>
 <div class="code" title="File: Open.v
 Line: 47
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.11135857461024%"></div>
 <pre>
     apply (ap (fun p =&gt; transport B p (f a u))).</pre>
 </div>
 <div class="code" title="File: Open.v
 Line: 48
-Time: 0.013s">
-<div class="time" style="width: 0.8130081300813%"></div>
+Time: 0.018s">
+<div class="time" style="width: 1.0022271714922%"></div>
 <pre>
     transitivity (path_arrow (fun _ =&gt; a) (fun _ =&gt; a) (@ap10 (unOp O) _ _ _ 1));
       auto with path_hints.</pre>
@@ -244,21 +244,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Open.v
 Line: 51
-Time: 0.001s">
-<div class="time" style="width: 0.062539086929331%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply ap@{i i}.</pre>
 </div>
 <div class="code" title="File: Open.v
 Line: 51
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.055679287305122%"></div>
 <pre>
       apply path_forall; intros u'.</pre>
 </div>
 <div class="code" title="File: Open.v
 Line: 52
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.055679287305122%"></div>
 <pre>
       apply ap_const.</pre>
 </div>
@@ -277,18 +277,18 @@ Time: 0s">
 </div>
 <div class="code" title="File: Open.v
 Line: 54
-Time: 0.004s">
-<div class="time" style="width: 0.25015634771732%"></div>
-<pre>
-  Defined.</pre>
-</div>
-<div class="code" title="File: Open.v
-Line: 55
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+  Defined.
 
-  Definition minO_pathsO (O : Modality@{u a}) (A : Type@{i})
+ </pre>
+</div>
+<div class="code" title="File: Open.v
+Line: 57
+Time: 0.001s">
+<div class="time" style="width: 0.055679287305122%"></div>
+<pre>Definition minO_pathsO (O : Modality@{u a}) (A : Type@{i})
              (z z' : O_reflector@{u a i} O A)
   : IsEquiv@{i i} (to O (z = z')).</pre>
 </div>
@@ -315,8 +315,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Open.v
 Line: 62
-Time: 0.001s">
-<div class="time" style="width: 0.062539086929331%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intros f; apply path_arrow; intros u.</pre>
 </div>
 <div class="code" title="File: Open.v
@@ -335,14 +335,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Open.v
 Line: 64
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.055679287305122%"></div>
 <pre> intros f; apply path_arrow; intros u.</pre>
 </div>
 <div class="code" title="File: Open.v
 Line: 64
 Time: 0.002s">
-<div class="time" style="width: 0.12507817385866%"></div>
+<div class="time" style="width: 0.11135857461024%"></div>
 <pre>
       transitivity (path_arrow z z' (ap10 (f u))).</pre>
 </div>
@@ -355,14 +355,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Open.v
 Line: 66
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.055679287305122%"></div>
 <pre> unfold to; apply ap@{i i}.</pre>
 </div>
 <div class="code" title="File: Open.v
 Line: 66
-Time: 0.001s">
-<div class="time" style="width: 0.062539086929331%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
         apply path_forall; intros u'.</pre>
 </div>
@@ -375,8 +375,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Open.v
 Line: 68
-Time: 0.002s">
-<div class="time" style="width: 0.12507817385866%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.16703786191537%"></div>
 <pre>
         apply path_ishprop.</pre>
 </div>
@@ -389,8 +389,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Open.v
 Line: 70
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.055679287305122%"></div>
 <pre> apply eta_path_arrow.</pre>
 </div>
 <div class="code" title="File: Open.v
@@ -415,52 +415,52 @@ Time: 0s">
 </div>
 <div class="code" title="File: Open.v
 Line: 72
-Time: 0.004s">
-<div class="time" style="width: 0.25015634771732%"></div>
-<pre>
-  Defined.</pre>
-</div>
-<div class="code" title="File: Open.v
-Line: 73
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+  Defined.
 
-End OpenModalities_easy.</pre>
+</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 75
-Time: 0.004s">
-<div class="time" style="width: 0.25015634771732%"></div>
+Line: 74
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>End OpenModalities_easy.</pre>
+</div>
+<div class="code" title="File: Open.v
+Line: 74
+Time: 0.005s">
+<div class="time" style="width: 0.27839643652561%"></div>
 <pre>
 
 Module OpenModalities &lt;: Modalities
   := EasyModalities_to_Modalities OpenModalities_easy.</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 78
-Time: 0.104s">
-<div class="time" style="width: 6.5040650406504%"></div>
+Line: 77
+Time: 0.136s">
+<div class="time" style="width: 7.5723830734967%"></div>
 <pre>
 
 Module Import OpM := Modalities_Theory OpenModalities.</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 80
+Line: 79
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Export OpM.Coercions.</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 81
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 80
+Time: 0.001s">
+<div class="time" style="width: 0.055679287305122%"></div>
 <pre>
 Export OpM.RSU.Coercions.</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 82
+Line: 81
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -469,7 +469,7 @@ Coercion Open_Modality_to_Modality :=
   idmap : Open_Modality -&gt; OpenModalities.Modality.</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 85
+Line: 84
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -479,13 +479,13 @@ Time: 0s">
 (** Note that unlike the case for closed and topological modalities, we can prove this without univalence (though we do of course need funext). *)</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 89
-Time: 0.165s">
-<div class="time" style="width: 10.31894934334%"></div>
+Line: 88
+Time: 0.201s">
+<div class="time" style="width: 11.19153674833%"></div>
 <pre>Module Import Lex_OpenModalities := Lex_Modalities_Theory OpenModalities.</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 89
+Line: 88
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -494,79 +494,92 @@ Global Instance lex_open (O : Modality)
 : Lex O.</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 92
+Line: 91
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 93
+Line: 92
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros A x y.</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 94
+Line: 93
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   pose (U := unOp O); pose proof (funext_Op O).</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 95
+Line: 94
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   change (Contr (U -&gt; A) -&gt; Contr (U -&gt; (x = y))); intros ?.</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 96
+Line: 95
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   assert (uc : U -&gt; Contr A).</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 97
+Line: 96
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   {</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 98
+Line: 97
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros u.</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 98
+Line: 97
 Time: 0.002s">
-<div class="time" style="width: 0.12507817385866%"></div>
+<div class="time" style="width: 0.11135857461024%"></div>
 <pre>
     pose (contr_inhabited_hprop U u).</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 99
-Time: 0.014s">
-<div class="time" style="width: 0.87554721701063%"></div>
+Line: 98
+Time: 0.015s">
+<div class="time" style="width: 0.83518930957684%"></div>
 <pre>
     refine (contr_equiv (U -&gt; A) (equiv_contr_forall _)).</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 100
+Line: 99
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> }</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 100
+Line: 99
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   simple refine (BuildContr _ _ _).</pre>
+</div>
+<div class="code" title="File: Open.v
+Line: 100
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  -</pre>
+</div>
+<div class="code" title="File: Open.v
+Line: 101
+Time: 0.008s">
+<div class="time" style="width: 0.44543429844098%"></div>
+<pre> intros u; pose (uc u); exact (center (x=y)).</pre>
 </div>
 <div class="code" title="File: Open.v
 Line: 101
@@ -577,63 +590,44 @@ Time: 0s">
 </div>
 <div class="code" title="File: Open.v
 Line: 102
-Time: 0.007s">
-<div class="time" style="width: 0.43777360850532%"></div>
-<pre> intros u; pose (uc u); exact (center (x=y)).</pre>
-</div>
-<div class="code" title="File: Open.v
-Line: 102
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  -</pre>
-</div>
-<div class="code" title="File: Open.v
-Line: 103
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.055679287305122%"></div>
 <pre> intros f; apply path_arrow; intros u.</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 103
-Time: 0.007s">
-<div class="time" style="width: 0.43777360850532%"></div>
+Line: 102
+Time: 0.008s">
+<div class="time" style="width: 0.44543429844098%"></div>
 <pre>
     pose proof (uc u); apply path_contr.</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 104
-Time: 0.001s">
-<div class="time" style="width: 0.062539086929331%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Open.v
-Line: 105
+Line: 103
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Defined.
 
 (** ** The open modality is accessible. *)
 
 </pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 108
-Time: 0.002s">
-<div class="time" style="width: 0.12507817385866%"></div>
+Line: 107
+Time: 0.003s">
+<div class="time" style="width: 0.16703786191537%"></div>
 <pre>Module Accessible_OpenModalities &lt;: Accessible_Modalities OpenModalities.</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 108
-Time: 0.105s">
-<div class="time" style="width: 6.5666041275797%"></div>
+Line: 107
+Time: 0.119s">
+<div class="time" style="width: 6.6258351893096%"></div>
 <pre>
 
   Module Import Os_Theory := Modalities_Theory OpenModalities.</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 110
+Line: 109
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -643,7 +637,7 @@ Time: 0s">
          Build_NullGenerators@{a} Unit (fun _ =&gt; unOp O).</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 114
+Line: 113
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -655,93 +649,87 @@ Time: 0s">
       (IsNull (acc_gen O) X).</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 120
+Line: 119
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 121
+Line: 120
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     pose (funext_Op O); split.</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 122
+Line: 121
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     -</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 123
+Line: 122
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros X_inO u.</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 123
+Line: 122
 Time: 0.001s">
-<div class="time" style="width: 0.062539086929331%"></div>
+<div class="time" style="width: 0.055679287305122%"></div>
 <pre>
       apply (equiv_inverse (equiv_ooextendable_isequiv@{a a i i i  i i i i i  i i i i} _ _)).</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 124
-Time: 1.564s">
-<div class="time" style="width: 97.811131957473%"></div>
+Line: 123
+Time: 1.746s">
+<div class="time" style="width: 97.216035634744%"></div>
 <pre>
       refine (cancelR_isequiv (fun x (u:Unit) =&gt; x)).</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 125
+Line: 124
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       apply X_inO.</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 126
+Line: 125
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     -</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 127
+Line: 126
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros ext; specialize (ext tt).</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 127
-Time: 1.599s">
+Line: 126
+Time: 1.796s">
 <div class="time" style="width: 100%"></div>
 <pre>
       refine (isequiv_compose (f := (fun x =&gt; unit_name x))
                               (g := (fun h =&gt; h o (@const (unOp O) Unit tt)))).</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 129
+Line: 128
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       refine (isequiv_ooextendable@{a a i i i  i i i i i  i} (fun _ =&gt; X) (@const@{i a} (unOp O) Unit tt) ext).</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 130
-Time: 0.003s">
-<div class="time" style="width: 0.18761726078799%"></div>
-<pre>
-  Defined.</pre>
-</div>
-<div class="code" title="File: Open.v
-Line: 131
+Line: 129
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+  Defined.
 
   (* Phantom universes (ie not appearing in the term) are produced by some un-annotated functions and foralls.
      For instance if we explicitate [(B:=(Unit -&gt; _))] in the [isequiv_compose] use above only one extra is produced.
@@ -752,22 +740,22 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 139
-Time: 0.002s">
-<div class="time" style="width: 0.12507817385866%"></div>
+Line: 138
+Time: 0.003s">
+<div class="time" style="width: 0.16703786191537%"></div>
 <pre>Definition inO_iff_isnull@{u a i}
     := Eval unfold inO_iff_isnull' in ltac:(first [exact inO_iff_isnull'@{u a i i i}|exact inO_iff_isnull'@{u a i}]).</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 140
-Time: 0.054s">
-<div class="time" style="width: 3.3771106941839%"></div>
+Line: 139
+Time: 0.068s">
+<div class="time" style="width: 3.7861915367483%"></div>
 <pre>
 
 End Accessible_OpenModalities.</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 142
+Line: 141
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -775,14 +763,14 @@ Time: 0s">
 (** Thus, arguably a better definition of [Op] would be as a nullification modality, as it would not require [Funext] and would have a judgmental computation rule.  However, the above definition is also nice to know, as it doesn't use HITs.  We name the other version [Op']. *)</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 144
+Line: 143
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Op' (U : hProp) : Nullification_Modality
   := Nul (Build_NullGenerators Unit (fun (_:Unit) =&gt; U)).</pre>
 </div>
 <div class="code" title="File: Open.v
-Line: 146
+Line: 145
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

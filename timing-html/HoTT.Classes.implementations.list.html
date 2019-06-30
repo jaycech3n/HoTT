@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: list.v
 Line: 1
-Time: 0.452s">
+Time: 0.627s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import
   HoTT.Classes.interfaces.abstract_algebra
@@ -98,8 +98,8 @@ Import ListNotations.</pre>
 </div>
 <div class="code" title="File: list.v
 Line: 15
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.15948963317384%"></div>
 <pre>
 
 Fixpoint length {A} (l : list A) := match l with
@@ -110,7 +110,7 @@ Fixpoint length {A} (l : list A) := match l with
 <div class="code" title="File: list.v
 Line: 20
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.15948963317384%"></div>
 <pre>
 
 Fixpoint fold_left {A B} (f : A -&gt; B -&gt; A) (acc : A) (l : list B) :=
@@ -122,7 +122,7 @@ Fixpoint fold_left {A B} (f : A -&gt; B -&gt; A) (acc : A) (l : list B) :=
 <div class="code" title="File: list.v
 Line: 26
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.15948963317384%"></div>
 <pre>
 
 Fixpoint map {A B} (f : A -&gt; B) (l : list A) :=
@@ -133,8 +133,8 @@ Fixpoint map {A B} (f : A -&gt; B) (l : list A) :=
 </div>
 <div class="code" title="File: list.v
 Line: 32
-Time: 0.002s">
-<div class="time" style="width: 0.44247787610619%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.47846889952153%"></div>
 <pre>
 
 Fixpoint map2 `(f : A -&gt; B -&gt; C)
@@ -149,8 +149,8 @@ Fixpoint map2 `(f : A -&gt; B -&gt; C)
 </div>
 <div class="code" title="File: list.v
 Line: 42
-Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.31897926634769%"></div>
 <pre>
 
 Lemma map2_cons `(f : A -&gt; B -&gt; C) defl defr x l1 y l2 :
@@ -175,29 +175,42 @@ Line: 47
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+Qed.
+
+</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 48
+Line: 49
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-
-Lemma map_id `(f : A -&gt; A) (Hf : forall x, f x = x) (l : list A) : map f l = l.</pre>
+<pre>Lemma map_id `(f : A -&gt; A) (Hf : forall x, f x = x) (l : list A) : map f l = l.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 50
+Line: 49
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 51
+Line: 50
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 induction l as [|x l IHl].</pre>
+</div>
+<div class="code" title="File: list.v
+Line: 51
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+-</pre>
+</div>
+<div class="code" title="File: list.v
+Line: 52
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: list.v
 Line: 52
@@ -210,6 +223,18 @@ Time: 0s">
 Line: 53
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre> simpl.</pre>
+</div>
+<div class="code" title="File: list.v
+Line: 53
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> rewrite Hf,IHl.</pre>
+</div>
+<div class="code" title="File: list.v
+Line: 53
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: list.v
@@ -217,32 +242,15 @@ Line: 53
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
--</pre>
+Qed.
+
+</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 54
+Line: 55
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> simpl.</pre>
-</div>
-<div class="code" title="File: list.v
-Line: 54
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> rewrite Hf,IHl.</pre>
-</div>
-<div class="code" title="File: list.v
-Line: 54
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> reflexivity.</pre>
-</div>
-<div class="code" title="File: list.v
-Line: 54
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Qed.</pre>
+<pre>Instance sg_op_app A : SgOp (list A) := @app A.</pre>
 </div>
 <div class="code" title="File: list.v
 Line: 55
@@ -250,83 +258,75 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-Instance sg_op_app A : SgOp (list A) := @app A.</pre>
+Instance app_assoc A : Associative (@app A).</pre>
 </div>
 <div class="code" title="File: list.v
 Line: 57
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-Instance app_assoc A : Associative (@app A).</pre>
-</div>
-<div class="code" title="File: list.v
-Line: 59
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 60
+Line: 58
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros l1.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 61
+Line: 59
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> induction l1 as [|x l1 IH];intros l2 l3.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 61
+Line: 59
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 62
+Line: 60
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 62
+Line: 60
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 63
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 61
+Time: 0.001s">
+<div class="time" style="width: 0.15948963317384%"></div>
 <pre> simpl;apply ap;apply IH.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 63
+Line: 61
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+Qed.
+
+</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 64
+Line: 63
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
-<pre>
-
-Fixpoint for_all {A} (P : A -&gt; Type) l : Type :=
+<div class="time" style="width: 0.15948963317384%"></div>
+<pre>Fixpoint for_all {A} (P : A -&gt; Type) l : Type :=
   match l with
   | [] =&gt; Unit
   | x :: l =&gt; P x /\ for_all P l
   end.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 70
+Line: 67
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -335,95 +335,95 @@ Lemma for_all_trivial {A} (P : A -&gt; Type) : (forall x, P x) -&gt;
   forall l, for_all P l.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 73
+Line: 70
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 74
+Line: 71
+Time: 0.001s">
+<div class="time" style="width: 0.15948963317384%"></div>
+<pre>
+intros HP l;induction l as [|x l IHl];split;auto.</pre>
+</div>
+<div class="code" title="File: list.v
+Line: 72
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-intros HP l;induction l as [|x l IHl];split;auto.</pre>
+Qed.
+
+</pre>
+</div>
+<div class="code" title="File: list.v
+Line: 74
+Time: 0.001s">
+<div class="time" style="width: 0.15948963317384%"></div>
+<pre>Lemma for_all_map {A B} P Q (f : A -&gt; B) (Hf : forall x, P x -&gt; Q (f x))
+ : forall l, for_all P l -&gt; for_all Q (map f l).</pre>
 </div>
 <div class="code" title="File: list.v
 Line: 75
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: list.v
-Line: 76
-Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
-<pre>
-
-Lemma for_all_map {A B} P Q (f : A -&gt; B) (Hf : forall x, P x -&gt; Q (f x))
- : forall l, for_all P l -&gt; for_all Q (map f l).</pre>
-</div>
-<div class="code" title="File: list.v
-Line: 79
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 80
+Line: 76
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros l;induction l as [|x l IHl];simpl.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 81
+Line: 77
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 82
+Line: 78
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> auto.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 82
+Line: 78
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 83
+Line: 79
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros [Hx Hl].</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 83
+Line: 79
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> split;auto.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 83
+Line: 79
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 84
+Line: 81
 Time: 0.003s">
-<div class="time" style="width: 0.66371681415929%"></div>
-<pre>
-
-Lemma for_all_map2 {A B C} P Q R
+<div class="time" style="width: 0.47846889952153%"></div>
+<pre>Lemma for_all_map2 {A B C} P Q R
   `(f : A -&gt; B -&gt; C) (Hf : forall x y, P x -&gt; Q y -&gt; R (f x y))
   def_l (Hdefl : forall l1, for_all P l1 -&gt; for_all R (def_l l1))
   def_r (Hdefr : forall l2, for_all Q l2 -&gt; for_all R (def_r l2))
@@ -431,245 +431,239 @@ Lemma for_all_map2 {A B C} P Q R
     for_all R (map2 f def_l def_r l1 l2).</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 91
+Line: 86
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 92
+Line: 87
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros l1;induction l1 as [|x l1 IHl1].</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 93
+Line: 88
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 94
+Line: 89
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 94
+Line: 89
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.15948963317384%"></div>
 <pre> intros [|y l2] _; auto.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 94
+Line: 89
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 95
+Line: 90
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 95
+Line: 90
 Time: 0.003s">
-<div class="time" style="width: 0.66371681415929%"></div>
+<div class="time" style="width: 0.47846889952153%"></div>
 <pre> intros [|y l2] [Hx Hl1];[intros _|intros [Hy Hl2]];simpl;auto.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 95
+Line: 90
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply Hdefl.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 96
+Line: 91
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl;auto.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 96
-Time: 0.002s">
-<div class="time" style="width: 0.44247787610619%"></div>
+Line: 91
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+Qed.
+
+</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 97
+Line: 93
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
-<pre>
-
-Lemma fold_preserves {A B} P Q (f : A -&gt; B -&gt; A)
+<div class="time" style="width: 0.15948963317384%"></div>
+<pre>Lemma fold_preserves {A B} P Q (f : A -&gt; B -&gt; A)
   (Hf : forall x y, P x -&gt; Q y -&gt; P (f x y))
   : forall acc (Ha : P acc) l (Hl : for_all Q l), P (fold_left f acc l).</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 101
+Line: 95
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 102
+Line: 96
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros acc Ha l Hl;revert l Hl acc Ha.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 103
+Line: 97
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros l;induction l as [|x l IHl].</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 104
+Line: 98
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 105
+Line: 99
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros _ acc Ha.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 105
+Line: 99
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact Ha.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 105
+Line: 99
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 106
+Line: 100
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 106
+Line: 100
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros [Hx Hl] acc Ha.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 106
+Line: 100
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply IHl;auto.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 107
+Line: 101
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+Qed.
+
+</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 108
+Line: 103
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-
-Instance for_all_trunc {A} {n} (P : A -&gt; Type) : forall l,
+<pre>Instance for_all_trunc {A} {n} (P : A -&gt; Type) : forall l,
   for_all (fun x =&gt; IsTrunc n (P x)) l -&gt; IsTrunc n (for_all P l).</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 111
+Line: 104
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 112
+Line: 105
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros l;induction l as [|x l IHl];simpl.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 113
+Line: 106
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 114
+Line: 107
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros _.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 114
+Line: 107
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.15948963317384%"></div>
 <pre> destruct n;apply _.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 114
+Line: 107
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 115
+Line: 108
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros [Hx Hl].</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 115
+Line: 108
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply IHl in Hl.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 116
+Line: 109
 Time: 0.003s">
-<div class="time" style="width: 0.66371681415929%"></div>
+<div class="time" style="width: 0.47846889952153%"></div>
 <pre> apply _.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 116
-Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
-<pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: list.v
-Line: 117
+Line: 109
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Qed.
 
 (* Copy pasted from the Coq library. *)</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 119
+Line: 112
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition tl {A} (l:list A) : list A :=
@@ -679,7 +673,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 123
+Line: 116
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -688,9 +682,9 @@ Time: 0s">
 (** The "In list" predicate *)</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 126
+Line: 119
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.15948963317384%"></div>
 <pre>Fixpoint InList {A} (a:A) (l:list A) : Type0 :=
   match l with
     | [] =&gt; False
@@ -698,7 +692,7 @@ Time: 0.001s">
   end.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 130
+Line: 123
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -710,7 +704,7 @@ Fixpoint fold_right {A} {B} (f : B -&gt; A -&gt; A) (x : A) (l : list B) : A :=
   end.</pre>
 </div>
 <div class="code" title="File: list.v
-Line: 137
+Line: 130
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

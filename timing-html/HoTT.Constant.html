@@ -36,28 +36,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: Constant.v
 Line: 1
-Time: 0.04s">
-<div class="time" style="width: 21.739130434783%"></div>
+Time: 0.049s">
+<div class="time" style="width: 24.257425742574%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Constant.v
 Line: 1
-Time: 0.021s">
-<div class="time" style="width: 11.413043478261%"></div>
+Time: 0.027s">
+<div class="time" style="width: 13.366336633663%"></div>
 <pre>
 Require Import Extensions Factorization Modalities.Modality.</pre>
 </div>
 <div class="code" title="File: Constant.v
 Line: 2
-Time: 0.159s">
-<div class="time" style="width: 86.413043478261%"></div>
+Time: 0.202s">
+<div class="time" style="width: 100%"></div>
 <pre>
 Require Import HIT.Truncations HIT.Connectedness.</pre>
 </div>
 <div class="code" title="File: Constant.v
 Line: 3
 Time: 0.004s">
-<div class="time" style="width: 2.1739130434783%"></div>
+<div class="time" style="width: 1.980198019802%"></div>
 <pre>
 Import TrM.</pre>
 </div>
@@ -113,22 +113,22 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Constant.v
 Line: 17
-Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   apply hprop_inhabited_contr; intros [x0 p0].</pre>
 </div>
 <div class="code" title="File: Constant.v
 Line: 18
-Time: 0.013s">
-<div class="time" style="width: 7.0652173913043%"></div>
+Time: 0.015s">
+<div class="time" style="width: 7.4257425742574%"></div>
 <pre>
   refine (contr_equiv' {x:X &amp; f x0 = x} _); unfold FixedBy.</pre>
 </div>
 <div class="code" title="File: Constant.v
 Line: 19
-Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
   refine (equiv_functor_sigma' (equiv_idmap X)
            (fun x =&gt; equiv_concat_l (wconst x x0) x)).</pre>
@@ -138,13 +138,7 @@ Line: 21
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Constant.v
-Line: 22
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Defined.
 
 (** It follows that if a type [X] admits a weakly constant endofunction [f], then [FixedBy f] is equivalent to [merely X]. *)</pre>
 </div>
@@ -166,7 +160,7 @@ Proof.</pre>
 <div class="code" title="File: Constant.v
 Line: 27
 Time: 0.003s">
-<div class="time" style="width: 1.6304347826087%"></div>
+<div class="time" style="width: 1.4851485148515%"></div>
 <pre>
   apply equiv_iff_hprop.</pre>
 </div>
@@ -192,8 +186,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Constant.v
 Line: 30
-Time: 0.002s">
-<div class="time" style="width: 1.0869565217391%"></div>
+Time: 0.003s">
+<div class="time" style="width: 1.4851485148515%"></div>
 <pre> apply Trunc_rec; intros x.</pre>
 </div>
 <div class="code" title="File: Constant.v
@@ -215,13 +209,7 @@ Line: 32
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Constant.v
-Line: 33
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Defined.
 
 (** Therefore, a type is collapsible (admits a weakly constant endomap) if and only if [merely X -&gt; X] (it has "split support"). *)</pre>
 </div>
@@ -241,8 +229,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Constant.v
 Line: 37
-Time: 0.04s">
-<div class="time" style="width: 21.739130434783%"></div>
+Time: 0.043s">
+<div class="time" style="width: 21.287128712871%"></div>
 <pre>
   refine (_ o (equiv_fix_merely collapse)^-1).</pre>
 </div>
@@ -258,64 +246,58 @@ Line: 39
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 40
+Line: 41
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-
-Definition collapsible_splitsupp {X} (s : merely X -&gt; X)
+<pre>Definition collapsible_splitsupp {X} (s : merely X -&gt; X)
 : Collapsible X.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 43
+Line: 42
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 44
+Line: 43
 Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
   refine (Build_Collapsible _ (s o tr) _); intros x y.</pre>
+</div>
+<div class="code" title="File: Constant.v
+Line: 44
+Time: 0.001s">
+<div class="time" style="width: 0.4950495049505%"></div>
+<pre>
+  apply (ap s), path_ishprop.</pre>
 </div>
 <div class="code" title="File: Constant.v
 Line: 45
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  apply (ap s), path_ishprop.</pre>
-</div>
-<div class="code" title="File: Constant.v
-Line: 46
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Constant.v
-Line: 47
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Defined.
 
 (**  We say that [f] is *conditionally constant* if it factors through the propositional truncation [merely X], and *constant* if it factors through [Unit]. *)
 
 </pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 50
-Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+Line: 49
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition ConditionallyConstant {X Y : Type} (f : X -&gt; Y)
   := ExtensionAlong (@tr -1 X) (fun _ =&gt; Y) f.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 51
+Line: 50
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -323,280 +305,250 @@ Time: 0s">
 (** We don't yet have a need for a predicate [Constant] on functions; we do already have the operation [const] which constructs the constant function at a given point.  Every such constant function is, of course, conditionally constant. *)</pre>
 </div>
 <div class="code" title="File: Constant.v
+Line: 52
+Time: 0.001s">
+<div class="time" style="width: 0.4950495049505%"></div>
+<pre>Definition cconst_const {X Y} (y : Y)
+: ConditionallyConstant (@const X Y y).</pre>
+</div>
+<div class="code" title="File: Constant.v
 Line: 53
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>Definition cconst_const {X Y} (y : Y)
-: ConditionallyConstant (@const X Y y).</pre>
+<pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: Constant.v
 Line: 54
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Proof.</pre>
+  exists (const y); intros x; reflexivity.</pre>
 </div>
 <div class="code" title="File: Constant.v
 Line: 55
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  exists (const y); intros x; reflexivity.</pre>
-</div>
-<div class="code" title="File: Constant.v
-Line: 56
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Constant.v
-Line: 57
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Defined.
 
 (** The type of conditionally constant functions is equivalent to [merely X -&gt; Y]. *)</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 59
+Line: 58
 Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>Definition equiv_cconst_from_merely `{Funext} (X Y : Type)
 : { f : X -&gt; Y &amp; ConditionallyConstant f } &lt;~&gt; (merely X -&gt; Y).</pre>
+</div>
+<div class="code" title="File: Constant.v
+Line: 59
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: Constant.v
 Line: 60
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Proof.</pre>
-</div>
-<div class="code" title="File: Constant.v
-Line: 61
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
   refine (_ oE (equiv_sigma_symm _)).</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 62
-Time: 0.015s">
-<div class="time" style="width: 8.1521739130435%"></div>
+Line: 61
+Time: 0.017s">
+<div class="time" style="width: 8.4158415841584%"></div>
 <pre>
   refine (equiv_sigma_contr _).</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 63
-Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Constant.v
-Line: 64
+Line: 62
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Defined.
 
 (** If a function factors through any hprop, it is conditionally constant. *)</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 66
-Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+Line: 65
+Time: 0.002s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>Definition cconst_factors_hprop {X Y : Type} (f : X -&gt; Y)
            (P : Type) `{IsHProp P}
            (g : X -&gt; P) (h : P -&gt; Y) (p : h o g == f)
 : ConditionallyConstant f.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 69
+Line: 68
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 70
+Line: 69
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   pose (g' := Trunc_rec g : merely X -&gt; P).</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 71
+Line: 70
 Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
   exists (h o g'); intros x.</pre>
+</div>
+<div class="code" title="File: Constant.v
+Line: 71
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  apply p.</pre>
 </div>
 <div class="code" title="File: Constant.v
 Line: 72
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  apply p.</pre>
-</div>
-<div class="code" title="File: Constant.v
-Line: 73
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Constant.v
-Line: 74
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Defined.
 
 (** Thus, if it factors through a type that [X] implies is contractible, then it is also conditionally constant. *)</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 76
-Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+Line: 75
+Time: 0.002s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>Definition cconst_factors_contr `{Funext}  {X Y : Type} (f : X -&gt; Y)
            (P : Type) `{Pc : X -&gt; Contr P}
            (g : X -&gt; P) (h : P -&gt; Y) (p : h o g == f)
 : ConditionallyConstant f.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 79
+Line: 78
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 80
+Line: 79
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   assert (merely X -&gt; IsHProp P).</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 81
+Line: 80
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   {</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 82
+Line: 81
 Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre> apply Trunc_rec.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 82
+Line: 81
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>            (** Uses funext *)
    </pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 83
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 82
+Time: 0.001s">
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>intros x; pose (Pc x); apply trunc_succ.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 83
+Line: 82
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> }</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 83
+Line: 82
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   pose (g' := Trunc_ind (fun _ =&gt; P) g : merely X -&gt; P).</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 84
-Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+Line: 83
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   exists (h o g'); intros x.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 85
+Line: 84
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply p.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 86
+Line: 85
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Constant.v
-Line: 87
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Defined.
 
 (** Any weakly constant function with collapsible domain is conditionally constant. *)</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 89
-Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+Line: 88
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition cconst_wconst_collapsible {X Y : Type} (f : X -&gt; Y)
            `{Collapsible X} `{WeaklyConstant _ _ f}
 : ConditionallyConstant f.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 91
+Line: 90
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 92
-Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+Line: 91
+Time: 0.002s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
   exists (f o splitsupp_collapsible); intros x.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 93
-Time: 0.027s">
-<div class="time" style="width: 14.673913043478%"></div>
+Line: 92
+Time: 0.029s">
+<div class="time" style="width: 14.356435643564%"></div>
 <pre>
   unfold splitsupp_collapsible; simpl.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 94
-Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+Line: 93
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   apply wconst.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 95
-Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Constant.v
-Line: 96
+Line: 94
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Defined.
 
 (** Any weakly constant function with hset codomain is conditionally constant. *)</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 98
+Line: 97
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition cconst_wconst_hset `{Funext} {X Y : Type} (f : X -&gt; Y)
@@ -604,98 +556,111 @@ Time: 0s">
 : ConditionallyConstant f.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 100
+Line: 99
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 101
+Line: 100
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   assert (Ys' : merely X -&gt; IsHSet Y).</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 102
+Line: 101
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   {</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 103
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 102
+Time: 0.001s">
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre> apply Trunc_rec.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 103
+Line: 102
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros x; exact (Ys x).</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 103
+Line: 102
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> }</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 103
-Time: 0.138s">
-<div class="time" style="width: 75%"></div>
+Line: 102
+Time: 0.164s">
+<div class="time" style="width: 81.188118811881%"></div>
 <pre>
   simple refine (cconst_factors_hprop f (image -1 f) _ _ _).</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 104
+Line: 103
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 105
+Line: 104
 Time: 0.002s">
-<div class="time" style="width: 1.0869565217391%"></div>
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre> apply hprop_allpath; intros [y1 p1] [y2 p2].</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 105
-Time: 0.01s">
-<div class="time" style="width: 5.4347826086957%"></div>
+Line: 104
+Time: 0.011s">
+<div class="time" style="width: 5.4455445544554%"></div>
 <pre>
     apply path_sigma_hprop; simpl.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 106
+Line: 105
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     pose proof (Ys' (Trunc_functor -1 pr1 p1)).</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 107
-Time: 0.184s">
-<div class="time" style="width: 100%"></div>
+Line: 106
+Time: 0.2s">
+<div class="time" style="width: 99.009900990099%"></div>
 <pre>
     strip_truncations.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 108
+Line: 107
 Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
     destruct p1 as [x1 q1], p2 as [x2 q2].</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 109
+Line: 108
 Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
     exact (q1^ @ wconst x1 x2 @ q2).</pre>
+</div>
+<div class="code" title="File: Constant.v
+Line: 109
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  -</pre>
+</div>
+<div class="code" title="File: Constant.v
+Line: 110
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply factor1.</pre>
 </div>
 <div class="code" title="File: Constant.v
 Line: 110
@@ -708,7 +673,7 @@ Time: 0s">
 Line: 111
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> apply factor1.</pre>
+<pre> apply factor2.</pre>
 </div>
 <div class="code" title="File: Constant.v
 Line: 111
@@ -719,51 +684,32 @@ Time: 0s">
 </div>
 <div class="code" title="File: Constant.v
 Line: 112
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> apply factor2.</pre>
+Time: 0.001s">
+<div class="time" style="width: 0.4950495049505%"></div>
+<pre> apply fact_factors.</pre>
 </div>
 <div class="code" title="File: Constant.v
 Line: 112
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  -</pre>
-</div>
-<div class="code" title="File: Constant.v
-Line: 113
-Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
-<pre> apply fact_factors.</pre>
-</div>
-<div class="code" title="File: Constant.v
-Line: 113
-Time: 0.002s">
-<div class="time" style="width: 1.0869565217391%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Constant.v
-Line: 114
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Defined.
 
 (** We can decompose this into an "induction principle" and its computation rule. *)</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 116
+Line: 115
 Time: 0.002s">
-<div class="time" style="width: 1.0869565217391%"></div>
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>Definition merely_rec_hset `{Funext} {X Y : Type} (f : X -&gt; Y)
            `{Ys : X -&gt; IsHSet Y} `{WeaklyConstant _ _ f}
 : merely X -&gt; Y
   := (cconst_wconst_hset f).1.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 119
-Time: 0.002s">
-<div class="time" style="width: 1.0869565217391%"></div>
+Line: 118
+Time: 0.003s">
+<div class="time" style="width: 1.4851485148515%"></div>
 <pre>
 
 Definition merely_rec_hset_beta `{Funext} {X Y : Type} (f : X -&gt; Y)
@@ -773,7 +719,7 @@ Definition merely_rec_hset_beta `{Funext} {X Y : Type} (f : X -&gt; Y)
   := (cconst_wconst_hset f).2 x.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 125
+Line: 124
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -781,7 +727,7 @@ Time: 0s">
 (** More generally, the type of weakly constant functions [X -&gt; Y], when [Y] is a set, is equivalent to [merely X -&gt; Y]. *)</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 127
+Line: 126
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition equiv_merely_rec_hset `{Funext} (X Y : Type)
@@ -789,52 +735,65 @@ Time: 0s">
 : { f : X -&gt; Y &amp; WeaklyConstant f } &lt;~&gt; (merely X -&gt; Y).</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 129
+Line: 128
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 130
+Line: 129
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   assert (Ys' : merely X -&gt; IsHSet Y).</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 131
+Line: 130
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   {</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 132
+Line: 131
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply Trunc_rec.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 132
+Line: 131
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros x; exact (Ys x).</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 132
+Line: 131
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> }</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 132
-Time: 0.004s">
-<div class="time" style="width: 2.1739130434783%"></div>
+Line: 131
+Time: 0.005s">
+<div class="time" style="width: 2.4752475247525%"></div>
 <pre>
   simple refine (equiv_adjointify
             (fun fc =&gt; @merely_rec_hset _ _ _ fc.1 _ fc.2)
             (fun g =&gt; (g o tr ; _)) _ _); try exact _.</pre>
+</div>
+<div class="code" title="File: Constant.v
+Line: 134
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  -</pre>
+</div>
+<div class="code" title="File: Constant.v
+Line: 135
+Time: 0.001s">
+<div class="time" style="width: 0.4950495049505%"></div>
+<pre> intros x y; apply (ap g), path_ishprop.</pre>
 </div>
 <div class="code" title="File: Constant.v
 Line: 135
@@ -846,108 +805,89 @@ Time: 0s">
 <div class="code" title="File: Constant.v
 Line: 136
 Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
-<pre> intros x y; apply (ap g), path_ishprop.</pre>
+<div class="time" style="width: 0.4950495049505%"></div>
+<pre> intros g; apply path_arrow; intros mx.</pre>
 </div>
 <div class="code" title="File: Constant.v
 Line: 136
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  -</pre>
-</div>
-<div class="code" title="File: Constant.v
-Line: 137
-Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
-<pre> intros g; apply path_arrow; intros mx.</pre>
-</div>
-<div class="code" title="File: Constant.v
-Line: 137
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
     pose proof (Ys' mx).</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 138
-Time: 0.103s">
-<div class="time" style="width: 55.978260869565%"></div>
+Line: 137
+Time: 0.119s">
+<div class="time" style="width: 58.910891089109%"></div>
 <pre>
     strip_truncations; reflexivity.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 139
+Line: 138
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 140
+Line: 139
 Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre> intros [f ?].</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 140
-Time: 0.025s">
-<div class="time" style="width: 13.586956521739%"></div>
+Line: 139
+Time: 0.028s">
+<div class="time" style="width: 13.861386138614%"></div>
 <pre>
     refine (path_sigma_hprop _ _ _).</pre>
+</div>
+<div class="code" title="File: Constant.v
+Line: 140
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    +</pre>
 </div>
 <div class="code" title="File: Constant.v
 Line: 141
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-    +</pre>
-</div>
-<div class="code" title="File: Constant.v
-Line: 142
-Time: 0s">
-<div class="time" style="width: 0%"></div>
 <pre> intros f'; apply hprop_allpath; intros w1 w2.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 142
+Line: 141
 Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
       apply path_forall; intros x; apply path_forall; intros y.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 143
-Time: 0.01s">
-<div class="time" style="width: 5.4347826086957%"></div>
+Line: 142
+Time: 0.011s">
+<div class="time" style="width: 5.4455445544554%"></div>
 <pre>
       pose (Ys x); apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 144
+Line: 143
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     +</pre>
 </div>
 <div class="code" title="File: Constant.v
-Line: 145
+Line: 144
 Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre> apply path_arrow; intros x; reflexivity.</pre>
 </div>
 <div class="code" title="File: Constant.v
 Line: 145
-Time: 0.007s">
-<div class="time" style="width: 3.804347826087%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Constant.v
-Line: 147
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Defined.
 
 </pre>
 </div>

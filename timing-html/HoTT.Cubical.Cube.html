@@ -30,14 +30,14 @@ pre {
 
 <div class="code" title="File: Cube.v
 Line: 1
-Time: 0.04s">
+Time: 0.05s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Cube.v
 Line: 1
 Time: 0.003s">
-<div class="time" style="width: 7.5%"></div>
+<div class="time" style="width: 6%"></div>
 <pre>
 Require Import DPath Square.</pre>
 </div>
@@ -64,7 +64,7 @@ x011   |               |          x011----pi11----x111   |
 <div class="code" title="File: Cube.v
 Line: 16
 Time: 0.005s">
-<div class="time" style="width: 12.5%"></div>
+<div class="time" style="width: 10%"></div>
 <pre>Definition Cube {A} {x000 x010 x100 x110 x001 x011 x101 x111 : A}
           {p0i0 : x000 = x010} {p1i0 : x100 = x110}
           {pi00 : x000 = x100} {pi10 : x010 = x110}
@@ -88,8 +88,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Cube.v
 Line: 29
-Time: 0.01s">
-<div class="time" style="width: 25%"></div>
+Time: 0.012s">
+<div class="time" style="width: 24%"></div>
 <pre>
   unshelve (refine (@dpath _ (fun bdry : { xs : (A*A)*(A*A) &amp;
                                    ((fst (fst xs) = snd (fst xs))
@@ -109,8 +109,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Cube.v
 Line: 38
-Time: 0.003s">
-<div class="time" style="width: 7.5%"></div>
+Time: 0.004s">
+<div class="time" style="width: 8%"></div>
 <pre> exists ((x000,x001),(x010,x011)); split; split; cbn; assumption.</pre>
 </div>
 <div class="code" title="File: Cube.v
@@ -122,8 +122,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Cube.v
 Line: 39
-Time: 0.003s">
-<div class="time" style="width: 7.5%"></div>
+Time: 0.004s">
+<div class="time" style="width: 8%"></div>
 <pre> exists ((x100,x101),(x110,x111)); split; split; cbn; assumption.</pre>
 </div>
 <div class="code" title="File: Cube.v
@@ -135,14 +135,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Cube.v
 Line: 40
-Time: 0.033s">
-<div class="time" style="width: 82.5%"></div>
+Time: 0.042s">
+<div class="time" style="width: 84%"></div>
 <pre> destruct pi00, pi01, pi10, pi11; cbn in *.</pre>
 </div>
 <div class="code" title="File: Cube.v
 Line: 40
-Time: 0.013s">
-<div class="time" style="width: 32.5%"></div>
+Time: 0.022s">
+<div class="time" style="width: 44%"></div>
 <pre>
     destruct sii0, sii1, si0i, si1i; reflexivity.</pre>
 </div>
@@ -156,7 +156,7 @@ Time: 0s">
 <div class="code" title="File: Cube.v
 Line: 42
 Time: 0.001s">
-<div class="time" style="width: 2.5%"></div>
+<div class="time" style="width: 2%"></div>
 <pre> assumption.</pre>
 </div>
 <div class="code" title="File: Cube.v
@@ -174,18 +174,18 @@ Time: 0s">
 </div>
 <div class="code" title="File: Cube.v
 Line: 43
-Time: 0.034s">
-<div class="time" style="width: 85%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Cube.v
-Line: 44
-Time: 0.011s">
-<div class="time" style="width: 27.5%"></div>
-<pre>
-
-Definition sqsx_compose {X A B C} (i : X -&gt; A)
+Line: 45
+Time: 0.012s">
+<div class="time" style="width: 24%"></div>
+<pre>Definition sqsx_compose {X A B C} (i : X -&gt; A)
            (f : A -&gt; B) {g : B -&gt; C} {k : A -&gt; C}
            (h : g o f == k) {x y : X} (p : x = y)
   : Cube (sqsx (f o i) (fun x =&gt; h (i x)) p)
@@ -194,33 +194,33 @@ Definition sqsx_compose {X A B C} (i : X -&gt; A)
          (ap (ap g) (ap_compose i f p)) (ap_compose i k p).</pre>
 </div>
 <div class="code" title="File: Cube.v
-Line: 52
+Line: 51
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Cube.v
-Line: 53
-Time: 0.025s">
-<div class="time" style="width: 62.5%"></div>
+Line: 52
+Time: 0.031s">
+<div class="time" style="width: 62%"></div>
 <pre>
   destruct p; reflexivity.</pre>
 </div>
 <div class="code" title="File: Cube.v
-Line: 54
-Time: 0.027s">
-<div class="time" style="width: 67.5%"></div>
+Line: 53
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Cube.v
 Line: 55
-Time: 0.011s">
-<div class="time" style="width: 27.5%"></div>
-<pre>
-
-Definition cubetr {A} {x000 x010 x100 x110 x001 x011 x101 x111 : A}
+Time: 0.017s">
+<div class="time" style="width: 34%"></div>
+<pre>Definition cubetr {A} {x000 x010 x100 x110 x001 x011 x101 x111 : A}
           {p0i0 : x000 = x010} {p1i0 : x100 = x110}
           {pi00 : x000 = x100} {pi10 : x010 = x110}
           {p0i1 : x001 = x011} {p1i1 : x101 = x111}
@@ -237,62 +237,62 @@ Definition cubetr {A} {x000 x010 x100 x110 x001 x011 x101 x111 : A}
   : Cube sii0 sii1 s0ii s1ii (sqtr si0i) (sqtr si1i).</pre>
 </div>
 <div class="code" title="File: Cube.v
-Line: 71
+Line: 69
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Cube.v
-Line: 72
-Time: 0.012s">
-<div class="time" style="width: 30%"></div>
+Line: 70
+Time: 0.017s">
+<div class="time" style="width: 34%"></div>
 <pre>
   destruct pi00, pi01, pi10, pi11; cbn in *.</pre>
 </div>
 <div class="code" title="File: Cube.v
-Line: 73
-Time: 0.015s">
-<div class="time" style="width: 37.5%"></div>
+Line: 71
+Time: 0.019s">
+<div class="time" style="width: 38%"></div>
 <pre>
   destruct sii0, sii1, si0i, si1i; cbn in *.</pre>
 </div>
 <div class="code" title="File: Cube.v
-Line: 74
-Time: 0.002s">
-<div class="time" style="width: 5%"></div>
+Line: 72
+Time: 0.003s">
+<div class="time" style="width: 6%"></div>
 <pre>
   destruct c.</pre>
 </div>
 <div class="code" title="File: Cube.v
-Line: 75
-Time: 0.005s">
-<div class="time" style="width: 12.5%"></div>
+Line: 73
+Time: 0.007s">
+<div class="time" style="width: 14%"></div>
 <pre>
   destruct p00i, p01i; cbn in *.</pre>
 </div>
 <div class="code" title="File: Cube.v
-Line: 76
-Time: 0.034s">
-<div class="time" style="width: 85%"></div>
+Line: 74
+Time: 0.049s">
+<div class="time" style="width: 98%"></div>
 <pre>
   destruct s0ii; reflexivity.</pre>
 </div>
 <div class="code" title="File: Cube.v
-Line: 77
-Time: 0.025s">
-<div class="time" style="width: 62.5%"></div>
+Line: 75
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+
+</pre>
 </div>
 <div class="code" title="File: Cube.v
 Line: 78
-Time: 0.011s">
-<div class="time" style="width: 27.5%"></div>
-<pre>
-
-
-Definition cuberot {A} {x000 x010 x100 x110 x001 x011 x101 x111 : A}
+Time: 0.013s">
+<div class="time" style="width: 26%"></div>
+<pre>Definition cuberot {A} {x000 x010 x100 x110 x001 x011 x101 x111 : A}
           {p0i0 : x000 = x010} {p1i0 : x100 = x110}
           {pi00 : x000 = x100} {pi10 : x010 = x110}
           {p0i1 : x001 = x011} {p1i1 : x101 = x111}
@@ -309,59 +309,53 @@ Definition cuberot {A} {x000 x010 x100 x110 x001 x011 x101 x111 : A}
   : Cube (sqtr sii0) (sqtr sii1) (sqtr si0i) (sqtr si1i) s0ii s1ii.</pre>
 </div>
 <div class="code" title="File: Cube.v
-Line: 95
+Line: 92
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Cube.v
-Line: 96
-Time: 0.011s">
-<div class="time" style="width: 27.5%"></div>
+Line: 93
+Time: 0.012s">
+<div class="time" style="width: 24%"></div>
 <pre>
   destruct pi00, pi01, pi10, pi11; cbn in *.</pre>
 </div>
 <div class="code" title="File: Cube.v
-Line: 97
-Time: 0.013s">
-<div class="time" style="width: 32.5%"></div>
+Line: 94
+Time: 0.016s">
+<div class="time" style="width: 32%"></div>
 <pre>
   destruct sii0, sii1, si0i, si1i; cbn in *.</pre>
 </div>
 <div class="code" title="File: Cube.v
-Line: 98
-Time: 0.001s">
-<div class="time" style="width: 2.5%"></div>
+Line: 95
+Time: 0.002s">
+<div class="time" style="width: 4%"></div>
 <pre>
   destruct c.</pre>
 </div>
 <div class="code" title="File: Cube.v
-Line: 99
-Time: 0.005s">
-<div class="time" style="width: 12.5%"></div>
+Line: 96
+Time: 0.006s">
+<div class="time" style="width: 12%"></div>
 <pre>
   destruct p00i, p01i; cbn in *.</pre>
 </div>
 <div class="code" title="File: Cube.v
-Line: 100
-Time: 0.011s">
-<div class="time" style="width: 27.5%"></div>
+Line: 97
+Time: 0.012s">
+<div class="time" style="width: 24%"></div>
 <pre>
   destruct s0ii; reflexivity.</pre>
 </div>
 <div class="code" title="File: Cube.v
-Line: 101
-Time: 0.026s">
-<div class="time" style="width: 65%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Cube.v
-Line: 103
+Line: 99
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Defined.
 
 </pre>
 </div>

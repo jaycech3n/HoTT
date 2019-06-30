@@ -36,13 +36,13 @@ Time: 0s">
 </div>
 <div class="code" title="File: Attributes.v
 Line: 1
-Time: 0.071s">
-<div class="time" style="width: 36.59793814433%"></div>
+Time: 0.086s">
+<div class="time" style="width: 35.537190082645%"></div>
 <pre>Require Import Category.Core Functor.Core HomFunctor Category.Morphisms Category.Dual Functor.Dual Category.Prod Functor.Prod NaturalTransformation.Core SetCategory.Core Functor.Composition.Core.</pre>
 </div>
 <div class="code" title="File: Attributes.v
 Line: 1
-Time: 0.194s">
+Time: 0.242s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Require Import Basics.Trunc HIT.epi Types.Universe HSet HIT.iso HIT.Truncations UnivalenceImpliesFunext TruncType.</pre>
@@ -126,7 +126,7 @@ Time: 0s">
 <div class="code" title="File: Attributes.v
 Line: 18
 Time: 0.002s">
-<div class="time" style="width: 1.0309278350515%"></div>
+<div class="time" style="width: 0.82644628099174%"></div>
 <pre>Definition induced_hom_natural_transformation
   : NaturalTransformation (hom_functor C) (hom_functor D o (F^op, F)).</pre>
 </div>
@@ -139,8 +139,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Attributes.v
 Line: 20
-Time: 0.006s">
-<div class="time" style="width: 3.0927835051546%"></div>
+Time: 0.007s">
+<div class="time" style="width: 2.8925619834711%"></div>
 <pre>
     refine (Build_NaturalTransformation
               (hom_functor C)
@@ -151,8 +151,8 @@ Time: 0.006s">
 </div>
 <div class="code" title="File: Attributes.v
 Line: 26
-Time: 0.034s">
-<div class="time" style="width: 17.525773195876%"></div>
+Time: 0.046s">
+<div class="time" style="width: 19.00826446281%"></div>
 <pre>
     abstract (
         repeat (intros [] || intro);
@@ -165,24 +165,18 @@ Time: 0.034s">
 </div>
 <div class="code" title="File: Attributes.v
 Line: 34
-Time: 0.003s">
-<div class="time" style="width: 1.5463917525773%"></div>
-<pre>
-  Defined.</pre>
-</div>
-<div class="code" title="File: Attributes.v
-Line: 35
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+  Defined.
 
   (** ** Full *)
  </pre>
 </div>
 <div class="code" title="File: Attributes.v
 Line: 38
-Time: 0.023s">
-<div class="time" style="width: 11.855670103093%"></div>
+Time: 0.027s">
+<div class="time" style="width: 11.157024793388%"></div>
 <pre>Class IsFull
     := is_full
        : forall x y : C,
@@ -198,8 +192,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Attributes.v
 Line: 43
-Time: 0.023s">
-<div class="time" style="width: 11.855670103093%"></div>
+Time: 0.025s">
+<div class="time" style="width: 10.330578512397%"></div>
 <pre>Class IsFaithful
     := is_faithful
        : forall x y : C,
@@ -217,7 +211,7 @@ Time: 0s">
 <div class="code" title="File: Attributes.v
 Line: 49
 Time: 0.007s">
-<div class="time" style="width: 3.6082474226804%"></div>
+<div class="time" style="width: 2.8925619834711%"></div>
 <pre>Class IsFullyFaithful
     := is_fully_faithful
        : forall x y : C,
@@ -255,23 +249,17 @@ Time: 0s">
 </div>
 <div class="code" title="File: Attributes.v
 Line: 58
-Time: 0.004s">
-<div class="time" style="width: 2.0618556701031%"></div>
+Time: 0.006s">
+<div class="time" style="width: 2.4793388429752%"></div>
 <pre>
     typeclasses eauto.</pre>
 </div>
 <div class="code" title="File: Attributes.v
 Line: 59
-Time: 0.013s">
-<div class="time" style="width: 6.7010309278351%"></div>
-<pre>
-  Qed.</pre>
-</div>
-<div class="code" title="File: Attributes.v
-Line: 60
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+  Qed.
 
   (** ** Fully Faithful → Faithful *)
  </pre>
@@ -292,30 +280,24 @@ Time: 0s">
 </div>
 <div class="code" title="File: Attributes.v
 Line: 65
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.41322314049587%"></div>
 <pre>
     intros ? ?; hnf in * |- .</pre>
 </div>
 <div class="code" title="File: Attributes.v
 Line: 66
 Time: 0.005s">
-<div class="time" style="width: 2.5773195876289%"></div>
+<div class="time" style="width: 2.0661157024793%"></div>
 <pre>
     typeclasses eauto.</pre>
 </div>
 <div class="code" title="File: Attributes.v
 Line: 67
-Time: 0.011s">
-<div class="time" style="width: 5.6701030927835%"></div>
-<pre>
-  Qed.</pre>
-</div>
-<div class="code" title="File: Attributes.v
-Line: 68
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+  Qed.
 
   (** ** Full * Faithful → Fully Faithful *)
   (** We start with a helper method, which assumes that epi * mono → iso, and ten prove this assumption *)
@@ -323,8 +305,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Attributes.v
 Line: 72
-Time: 0.002s">
-<div class="time" style="width: 1.0309278350515%"></div>
+Time: 0.003s">
+<div class="time" style="width: 1.2396694214876%"></div>
 <pre>Lemma isfullyfaithful_isfull_isfaithful_helper `{IsFull} `{IsFaithful}
         (H' : forall x y (m : morphism set_cat x y),
                 IsEpimorphism m
@@ -349,26 +331,25 @@ Time: 0s">
 <div class="code" title="File: Attributes.v
 Line: 79
 Time: 0.003s">
-<div class="time" style="width: 1.5463917525773%"></div>
+<div class="time" style="width: 1.2396694214876%"></div>
 <pre>
     apply H'; eauto.</pre>
 </div>
 <div class="code" title="File: Attributes.v
 Line: 80
-Time: 0.001s">
-<div class="time" style="width: 0.51546391752577%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: Attributes.v
 Line: 81
-Time: 0.118s">
-<div class="time" style="width: 60.824742268041%"></div>
-<pre>
-End full_faithful.</pre>
+Time: 0.139s">
+<div class="time" style="width: 57.438016528926%"></div>
+<pre>End full_faithful.</pre>
 </div>
 <div class="code" title="File: Attributes.v
-Line: 82
+Line: 81
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -376,30 +357,30 @@ Time: 0s">
 Section fully_faithful_helpers.</pre>
 </div>
 <div class="code" title="File: Attributes.v
-Line: 84
+Line: 83
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Context `{ua : Univalence}.</pre>
 </div>
 <div class="code" title="File: Attributes.v
-Line: 85
+Line: 84
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Variables x y : hSet.</pre>
 </div>
 <div class="code" title="File: Attributes.v
-Line: 86
+Line: 85
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Variable m : x -&gt; y.</pre>
 </div>
 <div class="code" title="File: Attributes.v
-Line: 87
+Line: 86
 Time: 0.001s">
-<div class="time" style="width: 0.51546391752577%"></div>
+<div class="time" style="width: 0.41322314049587%"></div>
 <pre>
 
   Lemma isisomorphism_isequiv_set_cat
@@ -407,16 +388,16 @@ Time: 0.001s">
   : IsIsomorphism (m : morphism set_cat x y).</pre>
 </div>
 <div class="code" title="File: Attributes.v
-Line: 91
+Line: 90
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Attributes.v
-Line: 92
-Time: 0.007s">
-<div class="time" style="width: 3.6082474226804%"></div>
+Line: 91
+Time: 0.008s">
+<div class="time" style="width: 3.3057851239669%"></div>
 <pre>
     exists (m^-1)%core;
     apply path_forall; intro;
@@ -425,19 +406,19 @@ Time: 0.007s">
     eauto.</pre>
 </div>
 <div class="code" title="File: Attributes.v
-Line: 97
-Time: 0.002s">
-<div class="time" style="width: 1.0309278350515%"></div>
+Line: 96
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-  Qed.</pre>
+  Qed.
+
+ </pre>
 </div>
 <div class="code" title="File: Attributes.v
-Line: 98
-Time: 0.003s">
-<div class="time" style="width: 1.5463917525773%"></div>
-<pre>
-
-  Definition isequiv_isepimorphism_ismonomorphism
+Line: 99
+Time: 0.004s">
+<div class="time" style="width: 1.6528925619835%"></div>
+<pre>Definition isequiv_isepimorphism_ismonomorphism
              (Hepi : IsEpimorphism (m : morphism set_cat x y))
              (Hmono : IsMonomorphism (m : morphism set_cat x y))
   : @IsEquiv _ _ m
@@ -445,16 +426,16 @@ Time: 0.003s">
     := @isequiv_isepi_ismono _ x y m Hepi Hmono.</pre>
 </div>
 <div class="code" title="File: Attributes.v
-Line: 105
+Line: 104
 Time: 0.001s">
-<div class="time" style="width: 0.51546391752577%"></div>
+<div class="time" style="width: 0.41322314049587%"></div>
 <pre>
 End fully_faithful_helpers.</pre>
 </div>
 <div class="code" title="File: Attributes.v
-Line: 106
-Time: 0.008s">
-<div class="time" style="width: 4.1237113402062%"></div>
+Line: 105
+Time: 0.009s">
+<div class="time" style="width: 3.7190082644628%"></div>
 <pre>
 
 Global Instance isfullyfaithful_isfull_isfaithful
@@ -470,7 +451,7 @@ Global Instance isfullyfaithful_isfull_isfaithful
                      (Hfaithful x y)).</pre>
 </div>
 <div class="code" title="File: Attributes.v
-Line: 118
+Line: 117
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -484,15 +465,15 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Attributes.v
-Line: 125
-Time: 0.003s">
-<div class="time" style="width: 1.5463917525773%"></div>
+Line: 124
+Time: 0.004s">
+<div class="time" style="width: 1.6528925619835%"></div>
 <pre>Class IsSplitEssentiallySurjective A B (F : Functor A B)
   := is_split_essentially_surjective
      : forall b : B, exists a : A, F a &lt;~=~&gt; b.</pre>
 </div>
 <div class="code" title="File: Attributes.v
-Line: 127
+Line: 126
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -504,15 +485,15 @@ Time: 0s">
     [b : B] there _merely_ exists an [a : A] such that [F a ≅ b]. *)</pre>
 </div>
 <div class="code" title="File: Attributes.v
-Line: 133
+Line: 132
 Time: 0.004s">
-<div class="time" style="width: 2.0618556701031%"></div>
+<div class="time" style="width: 1.6528925619835%"></div>
 <pre>Class IsEssentiallySurjective A B (F : Functor A B)
   := is_essentially_surjective
      : forall b : B, hexists (fun a : A =&gt; F a &lt;~=~&gt; b).</pre>
 </div>
 <div class="code" title="File: Attributes.v
-Line: 135
+Line: 134
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -524,15 +505,15 @@ Time: 0s">
     essentially surjective. *)</pre>
 </div>
 <div class="code" title="File: Attributes.v
-Line: 141
+Line: 140
 Time: 0.006s">
-<div class="time" style="width: 3.0927835051546%"></div>
+<div class="time" style="width: 2.4793388429752%"></div>
 <pre>Class IsWeakEquivalence `{Funext} A B (F : Functor A B)
   := { is_fully_faithful__is_weak_equivalence :&gt; IsFullyFaithful F;
        is_essentially_surjective__is_weak_equivalence :&gt; IsEssentiallySurjective F }.</pre>
 </div>
 <div class="code" title="File: Attributes.v
-Line: 144
+Line: 143
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

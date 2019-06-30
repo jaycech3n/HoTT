@@ -36,13 +36,13 @@ Time: 0s">
 </div>
 <div class="code" title="File: Negation.v
 Line: 1
-Time: 0.039s">
-<div class="time" style="width: 22.033898305085%"></div>
+Time: 0.047s">
+<div class="time" style="width: 20%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Negation.v
 Line: 1
-Time: 0.177s">
+Time: 0.235s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Require Import HoTT.Spaces.No.Core.</pre>
@@ -74,8 +74,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Negation.v
 Line: 9
-Time: 0.003s">
-<div class="time" style="width: 1.6949152542373%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.7021276595745%"></div>
 <pre>Class HasNegation (S : OptionSort) 
   := symmetric_options : forall L R, InSort S L R -&gt; InSort S R L.</pre>
 </div>
@@ -112,8 +112,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Negation.v
 Line: 17
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.42553191489362%"></div>
 <pre>
   intros L R [? ?]; split; assumption.</pre>
 </div>
@@ -122,32 +122,32 @@ Line: 18
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+Qed.
+
+</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 19
+Line: 20
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-
-Section HasNegation.</pre>
+<pre>Section HasNegation.</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 21
+Line: 20
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Context {S : OptionSort} `{HasNegation S}.</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 22
+Line: 21
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Let No := GenNo S.</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 23
+Line: 22
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -155,19 +155,32 @@ Time: 0s">
   Definition negate : No -&gt; No.</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 25
+Line: 24
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 26
-Time: 0.037s">
-<div class="time" style="width: 20.90395480226%"></div>
+Line: 25
+Time: 0.049s">
+<div class="time" style="width: 20.851063829787%"></div>
 <pre>
     simple refine (No_rec No (fun x y =&gt; y &lt;= x) (fun x y =&gt; y &lt; x)
                           _ _ _ _ _); intros.</pre>
+</div>
+<div class="code" title="File: Negation.v
+Line: 27
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    -</pre>
+</div>
+<div class="code" title="File: Negation.v
+Line: 28
+Time: 0.001s">
+<div class="time" style="width: 0.42553191489362%"></div>
+<pre> exact {{ fxR | fxL // fun r l =&gt; fxcut l r }}.</pre>
 </div>
 <div class="code" title="File: Negation.v
 Line: 28
@@ -179,8 +192,8 @@ Time: 0s">
 <div class="code" title="File: Negation.v
 Line: 29
 Time: 0.001s">
-<div class="time" style="width: 0.56497175141243%"></div>
-<pre> exact {{ fxR | fxL // fun r l =&gt; fxcut l r }}.</pre>
+<div class="time" style="width: 0.42553191489362%"></div>
+<pre> apply path_No; assumption.</pre>
 </div>
 <div class="code" title="File: Negation.v
 Line: 29
@@ -193,7 +206,13 @@ Time: 0s">
 Line: 30
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> apply path_No; assumption.</pre>
+<pre> cbn in *.</pre>
+</div>
+<div class="code" title="File: Negation.v
+Line: 30
+Time: 0.002s">
+<div class="time" style="width: 0.85106382978723%"></div>
+<pre> apply le_lr; intros; [ apply dq | apply dp ].</pre>
 </div>
 <div class="code" title="File: Negation.v
 Line: 30
@@ -204,99 +223,74 @@ Time: 0s">
 </div>
 <div class="code" title="File: Negation.v
 Line: 31
-Time: 0.001s">
-<div class="time" style="width: 0.56497175141243%"></div>
-<pre> cbn in *.</pre>
-</div>
-<div class="code" title="File: Negation.v
-Line: 31
-Time: 0.001s">
-<div class="time" style="width: 0.56497175141243%"></div>
-<pre> apply le_lr; intros; [ apply dq | apply dp ].</pre>
-</div>
-<div class="code" title="File: Negation.v
-Line: 31
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    -</pre>
-</div>
-<div class="code" title="File: Negation.v
-Line: 32
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> cbn in *.</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 32
-Time: 0.001s">
-<div class="time" style="width: 0.56497175141243%"></div>
+Line: 31
+Time: 0.002s">
+<div class="time" style="width: 0.85106382978723%"></div>
 <pre> apply lt_r with l; intros; assumption.</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 32
+Line: 31
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     -</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 33
+Line: 32
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> cbn in *.</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 33
-Time: 0.001s">
-<div class="time" style="width: 0.56497175141243%"></div>
+Line: 32
+Time: 0.002s">
+<div class="time" style="width: 0.85106382978723%"></div>
 <pre> apply lt_l with r; intros; assumption.</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 33
-Time: 0.003s">
-<div class="time" style="width: 1.6949152542373%"></div>
-<pre>
-  Defined.</pre>
-</div>
-<div class="code" title="File: Negation.v
-Line: 34
+Line: 32
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+  Defined.
 
   (** The following proof verifies that [No_rec] applied to a cut reduces definitionally to a cut with the expected options (although it does produce quite a large term). *)
  </pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 37
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 36
+Time: 0.001s">
+<div class="time" style="width: 0.42553191489362%"></div>
 <pre>Context `{InSort S Empty Empty} `{InSort S Unit Empty}.</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 37
+Line: 36
 Time: 0.001s">
-<div class="time" style="width: 0.56497175141243%"></div>
+<div class="time" style="width: 0.42553191489362%"></div>
 <pre>
   Goal negate one = minusone.</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 38
+Line: 37
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 39
-Time: 0.042s">
-<div class="time" style="width: 23.728813559322%"></div>
+Line: 38
+Time: 0.051s">
+<div class="time" style="width: 21.702127659574%"></div>
 <pre>
     apply path_No; apply le_lr; intros.</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 40
+Line: 39
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -304,36 +298,49 @@ Time: 0s">
    </pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 42
+Line: 41
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>-</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 42
-Time: 0.005s">
-<div class="time" style="width: 2.8248587570621%"></div>
+Line: 41
+Time: 0.007s">
+<div class="time" style="width: 2.9787234042553%"></div>
 <pre> elim l.</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 42
+Line: 41
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     -</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 43
-Time: 0.007s">
-<div class="time" style="width: 3.954802259887%"></div>
+Line: 42
+Time: 0.009s">
+<div class="time" style="width: 3.8297872340426%"></div>
 <pre> apply lt_r with r.</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 43
-Time: 0.06s">
-<div class="time" style="width: 33.898305084746%"></div>
+Line: 42
+Time: 0.083s">
+<div class="time" style="width: 35.31914893617%"></div>
 <pre>
       apply le_lr; apply Empty_ind.</pre>
+</div>
+<div class="code" title="File: Negation.v
+Line: 43
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    -</pre>
+</div>
+<div class="code" title="File: Negation.v
+Line: 44
+Time: 0.017s">
+<div class="time" style="width: 7.2340425531915%"></div>
+<pre> elim l.</pre>
 </div>
 <div class="code" title="File: Negation.v
 Line: 44
@@ -344,50 +351,31 @@ Time: 0s">
 </div>
 <div class="code" title="File: Negation.v
 Line: 45
-Time: 0.015s">
-<div class="time" style="width: 8.4745762711864%"></div>
-<pre> elim l.</pre>
-</div>
-<div class="code" title="File: Negation.v
-Line: 45
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    -</pre>
-</div>
-<div class="code" title="File: Negation.v
-Line: 46
-Time: 0.006s">
-<div class="time" style="width: 3.3898305084746%"></div>
+Time: 0.007s">
+<div class="time" style="width: 2.9787234042553%"></div>
 <pre> apply lt_r with r.</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 46
-Time: 0.013s">
-<div class="time" style="width: 7.3446327683616%"></div>
+Line: 45
+Time: 0.014s">
+<div class="time" style="width: 5.9574468085106%"></div>
 <pre>
       apply le_lr; apply Empty_ind.</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 47
-Time: 0.105s">
-<div class="time" style="width: 59.322033898305%"></div>
-<pre>
-  Qed.</pre>
-</div>
-<div class="code" title="File: Negation.v
-Line: 48
+Line: 46
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+  Qed.
 
   (** More useful is the following rewriting lemma. *)
  </pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 51
-Time: 0.002s">
-<div class="time" style="width: 1.1299435028249%"></div>
+Line: 50
+Time: 0.003s">
+<div class="time" style="width: 1.2765957446809%"></div>
 <pre>Definition negate_cut
              {L R : Type@{i} } {Sx : InSort@{i} S L R}
              (xL : L -&gt; No@{i}) (xR : R -&gt; No@{i})
@@ -397,43 +385,43 @@ Time: 0.002s">
         {{ (fun r =&gt; negate (xR r)) | (fun l =&gt; negate (xL l)) // nxcut }} }.</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 57
+Line: 56
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 58
+Line: 57
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     eexists.</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 59
+Line: 58
 Time: 0.015s">
-<div class="time" style="width: 8.4745762711864%"></div>
+<div class="time" style="width: 6.3829787234043%"></div>
 <pre>
     reflexivity.</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 60
-Time: 0.025s">
-<div class="time" style="width: 14.124293785311%"></div>
+Line: 59
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-  Defined.</pre>
+  Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Negation.v
 Line: 61
-Time: 0.046s">
-<div class="time" style="width: 25.988700564972%"></div>
-<pre>
-
-End HasNegation.</pre>
+Time: 0.056s">
+<div class="time" style="width: 23.829787234043%"></div>
+<pre>End HasNegation.</pre>
 </div>
 <div class="code" title="File: Negation.v
-Line: 64
+Line: 62
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

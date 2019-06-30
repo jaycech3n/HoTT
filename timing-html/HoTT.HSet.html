@@ -39,13 +39,13 @@ Time: 0s">
 </div>
 <div class="code" title="File: HSet.v
 Line: 3
-Time: 0.017s">
-<div class="time" style="width: 65.384615384615%"></div>
+Time: 0.022s">
+<div class="time" style="width: 66.666666666667%"></div>
 <pre>Require Import HoTT.Basics.</pre>
 </div>
 <div class="code" title="File: HSet.v
 Line: 3
-Time: 0.026s">
+Time: 0.033s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Require Import Types.Paths Types.Sigma Types.Empty Types.Record Types.Unit Types.Arrow HProp.</pre>
@@ -77,8 +77,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HSet.v
 Line: 10
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>
 
 Definition axiomK_hset {A} : IsHSet A -&gt; axiomK A.</pre>
@@ -109,75 +109,75 @@ Line: 15
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 16
+Line: 17
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-
-Definition hset_axiomK {A} `{axiomK A} : IsHSet A.</pre>
+<pre>Definition hset_axiomK {A} `{axiomK A} : IsHSet A.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 18
+Line: 17
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 19
+Line: 18
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros x y H.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 20
+Line: 19
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply @hprop_allpath.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 21
+Line: 20
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros p q.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 22
-Time: 0.002s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Line: 21
+Time: 0.008s">
+<div class="time" style="width: 24.242424242424%"></div>
 <pre>
   by induction p.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 23
+Line: 22
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
+</div>
+<div class="code" title="File: HSet.v
+Line: 24
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Section AssumeFunext.</pre>
 </div>
 <div class="code" title="File: HSet.v
 Line: 24
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-Section AssumeFunext.</pre>
-</div>
-<div class="code" title="File: HSet.v
-Line: 26
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
 Context `{Funext}.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 27
+Line: 25
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -185,205 +185,199 @@ Time: 0s">
 Theorem equiv_hset_axiomK {A} : IsHSet A &lt;~&gt; axiomK A.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 29
+Line: 27
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 30
+Line: 28
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply (equiv_adjointify (@axiomK_hset A) (@hset_axiomK A)).</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 31
+Line: 29
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 32
+Line: 30
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros K.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 32
-Time: 0.003s">
-<div class="time" style="width: 11.538461538462%"></div>
+Line: 30
+Time: 0.005s">
+<div class="time" style="width: 15.151515151515%"></div>
 <pre> by_extensionality x.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 32
-Time: 0.005s">
-<div class="time" style="width: 19.230769230769%"></div>
+Line: 30
+Time: 0.007s">
+<div class="time" style="width: 21.212121212121%"></div>
 <pre> by_extensionality x'.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 32
+Line: 30
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     cut (Contr (x=x)).</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 33
+Line: 31
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     +</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 34
+Line: 32
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intro.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 34
-Time: 0.002s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Line: 32
+Time: 0.003s">
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre> eapply path_contr.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 34
+Line: 32
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     +</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 35
+Line: 33
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exists 1.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 35
+Line: 33
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 35
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 33
+Time: 0.001s">
+<div class="time" style="width: 3.030303030303%"></div>
 <pre> symmetry; apply K.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 35
+Line: 33
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 36
+Line: 34
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intro K.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 36
-Time: 0.003s">
-<div class="time" style="width: 11.538461538462%"></div>
+Line: 34
+Time: 0.006s">
+<div class="time" style="width: 18.181818181818%"></div>
 <pre> by_extensionality x.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 36
+Line: 34
 Time: 0.004s">
-<div class="time" style="width: 15.384615384615%"></div>
+<div class="time" style="width: 12.121212121212%"></div>
 <pre> by_extensionality x'.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 36
-Time: 0.009s">
-<div class="time" style="width: 34.615384615385%"></div>
+Line: 34
+Time: 0.014s">
+<div class="time" style="width: 42.424242424242%"></div>
 <pre>
     eapply path_ishprop.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 37
-Time: 0.002s">
-<div class="time" style="width: 7.6923076923077%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: HSet.v
-Line: 38
+Line: 35
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Defined.
 
-Global Instance axiomK_isprop A : IsHProp (axiomK A) | 0.</pre>
+</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 40
+Line: 37
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Global Instance axiomK_isprop A : IsHProp (axiomK A) | 0.</pre>
+</div>
+<div class="code" title="File: HSet.v
+Line: 37
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 41
-Time: 0.006s">
-<div class="time" style="width: 23.076923076923%"></div>
+Line: 38
+Time: 0.007s">
+<div class="time" style="width: 21.212121212121%"></div>
 <pre>
   apply (trunc_equiv _ equiv_hset_axiomK).</pre>
+</div>
+<div class="code" title="File: HSet.v
+Line: 39
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Defined.
+
+</pre>
+</div>
+<div class="code" title="File: HSet.v
+Line: 41
+Time: 0.001s">
+<div class="time" style="width: 3.030303030303%"></div>
+<pre>Theorem set_path2 {A} `{IsHSet A} {x y : A} (p q : x = y):
+  p = q.</pre>
 </div>
 <div class="code" title="File: HSet.v
 Line: 42
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: HSet.v
 Line: 43
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-Theorem set_path2 {A} `{IsHSet A} {x y : A} (p q : x = y):
-  p = q.</pre>
-</div>
-<div class="code" title="File: HSet.v
-Line: 46
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
-</div>
-<div class="code" title="File: HSet.v
-Line: 47
-Time: 0.001s">
-<div class="time" style="width: 3.8461538461538%"></div>
-<pre>
   induction q.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 48
+Line: 44
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply axiomK_hset; assumption.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 49
+Line: 45
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: HSet.v
-Line: 50
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Defined.
 
 (** Recall that axiom K says that any self-path is homotopic to the
    identity path.  In particular, the identity path is homotopic to
@@ -393,50 +387,50 @@ Time: 0s">
 (* TODO: What was the purpose of this lemma?  Do we need it at all?  It's actually fairly trivial. *)</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 57
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 53
+Time: 0.001s">
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>Lemma axiomK_idpath {A} (x : A) (K : axiomK A) :
   K x (idpath x) = idpath (idpath x).</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 58
+Line: 54
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 59
+Line: 55
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   pose (T1A := @trunc_succ _ A (@hset_axiomK A K)).</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 60
+Line: 56
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   exact (@set_path2 (x=x) (T1A x x) _ _ _ _).</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 61
+Line: 57
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: HSet.v
-Line: 62
-Time: 0.001s">
-<div class="time" style="width: 3.8461538461538%"></div>
-<pre>
+Defined.
 
-End AssumeFunext.</pre>
+</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 64
+Line: 59
+Time: 0.003s">
+<div class="time" style="width: 9.0909090909091%"></div>
+<pre>End AssumeFunext.</pre>
+</div>
+<div class="code" title="File: HSet.v
+Line: 59
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -444,7 +438,7 @@ Time: 0s">
 (** We prove that if [R] is a reflexive mere relation on [X] implying identity, then [X] is an hSet, and hence [R x y] is equivalent to [x = y]. *)</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 66
+Line: 61
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Lemma isset_hrel_subpaths
@@ -455,89 +449,89 @@ Time: 0s">
 : IsHSet X.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 71
+Line: 66
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 72
+Line: 67
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply @hset_axiomK.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 73
+Line: 68
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros x p.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 74
-Time: 0.001s">
-<div class="time" style="width: 3.8461538461538%"></div>
+Line: 69
+Time: 0.002s">
+<div class="time" style="width: 6.0606060606061%"></div>
 <pre>
   refine (_ @ concat_Vp (f x x (transport (R x) p^ (reflexivity _)))).</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 75
+Line: 70
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply moveL_Vp.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 76
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 71
+Time: 0.002s">
+<div class="time" style="width: 6.0606060606061%"></div>
 <pre>
   refine ((transport_paths_r _ _)^ @ _).</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 77
+Line: 72
 Time: 0.001s">
-<div class="time" style="width: 3.8461538461538%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>
   refine ((transport_arrow _ _ _)^ @ _).</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 78
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 73
+Time: 0.001s">
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>
   refine ((ap10 (apD (f x) p) (@reflexivity X R _ x)) @ _).</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 79
+Line: 74
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply ap.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 80
-Time: 0.001s">
-<div class="time" style="width: 3.8461538461538%"></div>
+Line: 75
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 81
-Time: 0.003s">
-<div class="time" style="width: 11.538461538462%"></div>
+Line: 76
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 82
+Line: 78
 Time: 0.001s">
-<div class="time" style="width: 3.8461538461538%"></div>
-<pre>
-
-Global Instance isequiv_hrel_subpaths
+<div class="time" style="width: 3.030303030303%"></div>
+<pre>Global Instance isequiv_hrel_subpaths
        X R
        `{Reflexive X R}
        `{forall x y, IsHProp (R x y)}
@@ -546,23 +540,23 @@ Global Instance isequiv_hrel_subpaths
 : IsEquiv (f x y) | 10000.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 90
+Line: 84
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 91
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 85
+Time: 0.001s">
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>
   pose proof (isset_hrel_subpaths f).</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 92
-Time: 0.004s">
-<div class="time" style="width: 15.384615384615%"></div>
+Line: 86
+Time: 0.006s">
+<div class="time" style="width: 18.181818181818%"></div>
 <pre>
   refine (isequiv_adjointify
             (f x y)
@@ -573,30 +567,24 @@ Time: 0.004s">
   apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 99
-Time: 0.001s">
-<div class="time" style="width: 3.8461538461538%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: HSet.v
-Line: 100
+Line: 93
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Defined.
 
 (** We will now prove that for sets, monos and injections are equivalent.*)</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 102
-Time: 0.002s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Line: 96
+Time: 0.003s">
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre>Definition ismono {X Y} (f : X -&gt; Y)
   := forall (Z : hSet),
      forall g h : Z -&gt; X, f o g = f o h -&gt; g = h.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 104
+Line: 98
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -606,63 +594,113 @@ Definition isinj {X Y} (f : X -&gt; Y)
        f x0 = f x1 -&gt; x0 = x1.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 108
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 102
+Time: 0.001s">
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>
 
 Lemma isinj_embedding {A B : Type} (m : A -&gt; B) : IsEmbedding m -&gt; isinj m.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 110
+Line: 104
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 111
+Line: 105
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros ise x y p.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 112
+Line: 106
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   pose (ise (m y)).</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 113
+Line: 107
 Time: 0.001s">
-<div class="time" style="width: 3.8461538461538%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>
   assert (q : (x;p) = (y;1) :&gt; hfiber m (m y)) by apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 114
+Line: 108
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   exact (ap pr1 q).</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 115
-Time: 0.001s">
-<div class="time" style="width: 3.8461538461538%"></div>
+Line: 109
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
+</div>
+<div class="code" title="File: HSet.v
+Line: 111
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Lemma isembedding_isinj_hset {A B : Type} `{IsHSet B} (m : A -&gt; B)
+: isinj m -&gt; IsEmbedding m.</pre>
+</div>
+<div class="code" title="File: HSet.v
+Line: 112
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: HSet.v
+Line: 113
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  intros isi b.</pre>
+</div>
+<div class="code" title="File: HSet.v
+Line: 114
+Time: 0.002s">
+<div class="time" style="width: 6.0606060606061%"></div>
+<pre>
+  apply hprop_allpath; intros [x p] [y q].</pre>
+</div>
+<div class="code" title="File: HSet.v
+Line: 115
+Time: 0.009s">
+<div class="time" style="width: 27.272727272727%"></div>
+<pre>
+  apply path_sigma_hprop; simpl.</pre>
 </div>
 <div class="code" title="File: HSet.v
 Line: 116
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+  exact (isi x y (p @ q^)).</pre>
+</div>
+<div class="code" title="File: HSet.v
+Line: 117
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Defined.
 
-Lemma isembedding_isinj_hset {A B : Type} `{IsHSet B} (m : A -&gt; B)
-: isinj m -&gt; IsEmbedding m.</pre>
+</pre>
+</div>
+<div class="code" title="File: HSet.v
+Line: 119
+Time: 0.001s">
+<div class="time" style="width: 3.030303030303%"></div>
+<pre>Lemma isinj_ismono `{Funext} {X Y} (f : X -&gt; Y) : isinj f -&gt; ismono f.</pre>
 </div>
 <div class="code" title="File: HSet.v
 Line: 119
@@ -676,100 +714,50 @@ Line: 120
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  intros isi b.</pre>
-</div>
-<div class="code" title="File: HSet.v
-Line: 121
-Time: 0.001s">
-<div class="time" style="width: 3.8461538461538%"></div>
-<pre>
-  apply hprop_allpath; intros [x p] [y q].</pre>
-</div>
-<div class="code" title="File: HSet.v
-Line: 122
-Time: 0.006s">
-<div class="time" style="width: 23.076923076923%"></div>
-<pre>
-  apply path_sigma_hprop; simpl.</pre>
-</div>
-<div class="code" title="File: HSet.v
-Line: 123
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  exact (isi x y (p @ q^)).</pre>
-</div>
-<div class="code" title="File: HSet.v
-Line: 124
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: HSet.v
-Line: 125
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-Lemma isinj_ismono `{Funext} {X Y} (f : X -&gt; Y) : isinj f -&gt; ismono f.</pre>
-</div>
-<div class="code" title="File: HSet.v
-Line: 127
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
-</div>
-<div class="code" title="File: HSet.v
-Line: 128
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
   intros ? ? ? ? H'.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 129
+Line: 121
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply path_forall.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 130
+Line: 122
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply ap10 in H'.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 131
+Line: 123
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   hnf in *.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 132
-Time: 0.001s">
-<div class="time" style="width: 3.8461538461538%"></div>
+Line: 124
+Time: 0.002s">
+<div class="time" style="width: 6.0606060606061%"></div>
 <pre>
   eauto.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 133
+Line: 125
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+Qed.
+
+</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 134
-Time: 0.006s">
-<div class="time" style="width: 23.076923076923%"></div>
-<pre>
-
-Definition ismono_isinj {X Y} (f : X -&gt; Y)
+Line: 127
+Time: 0.009s">
+<div class="time" style="width: 27.272727272727%"></div>
+<pre>Definition ismono_isinj {X Y} (f : X -&gt; Y)
            (H : ismono f)
 : isinj f
   := fun x0 x1 H' =&gt;
@@ -780,7 +768,7 @@ Definition ismono_isinj {X Y} (f : X -&gt; Y)
             tt.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 144
+Line: 135
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -789,117 +777,111 @@ Lemma ismono_isequiv `{Funext} X Y (f : X -&gt; Y) `{IsEquiv _ _ f}
 : ismono f.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 147
+Line: 138
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 148
+Line: 139
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros ? g h H'.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 149
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 140
+Time: 0.001s">
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>
   apply ap10 in H'.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 150
+Line: 141
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply path_forall.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 151
+Line: 142
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intro x.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 152
-Time: 0.001s">
-<div class="time" style="width: 3.8461538461538%"></div>
+Line: 143
+Time: 0.002s">
+<div class="time" style="width: 6.0606060606061%"></div>
 <pre>
   transitivity (f^-1 (f (g x))).</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 153
+Line: 144
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 154
-Time: 0.002s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Line: 145
+Time: 0.003s">
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre> by rewrite eissect.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 154
+Line: 145
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 155
+Line: 146
 Time: 0.001s">
-<div class="time" style="width: 3.8461538461538%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre> transitivity (f^-1 (f (h x))).</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 155
+Line: 146
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     *</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 156
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 147
+Time: 0.001s">
+<div class="time" style="width: 3.030303030303%"></div>
 <pre> apply ap.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 156
+Line: 147
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply H'.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 156
+Line: 147
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     *</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 157
-Time: 0.003s">
-<div class="time" style="width: 11.538461538462%"></div>
+Line: 148
+Time: 0.004s">
+<div class="time" style="width: 12.121212121212%"></div>
 <pre> by rewrite eissect.</pre>
 </div>
 <div class="code" title="File: HSet.v
-Line: 157
+Line: 149
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: HSet.v
-Line: 159
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Qed.
 
 </pre>
 </div>

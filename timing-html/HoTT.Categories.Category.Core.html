@@ -36,8 +36,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 1
-Time: 0.008s">
-<div class="time" style="width: 66.666666666667%"></div>
+Time: 0.009s">
+<div class="time" style="width: 52.941176470588%"></div>
 <pre>Require Export Overture Basics.Notations.</pre>
 </div>
 <div class="code" title="File: Core.v
@@ -157,7 +157,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 43
-Time: 0.012s">
+Time: 0.017s">
 <div class="time" style="width: 100%"></div>
 <pre>Record PreCategory :=
   Build_PreCategory' {
@@ -289,7 +289,7 @@ Time: 0s">
 <div class="code" title="File: Core.v
 Line: 90
 Time: 0.004s">
-<div class="time" style="width: 33.333333333333%"></div>
+<div class="time" style="width: 23.529411764706%"></div>
 <pre>Definition Build_PreCategory
            object morphism identity compose
            associativity left_identity right_identity
@@ -341,8 +341,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 107
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.002s">
+<div class="time" style="width: 11.764705882353%"></div>
 <pre>
 
 Hint Resolve @left_identity @right_identity @associativity : category morphism.</pre>
@@ -393,8 +393,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 117
-Time: 0.001s">
-<div class="time" style="width: 8.3333333333333%"></div>
+Time: 0.003s">
+<div class="time" style="width: 17.647058823529%"></div>
 <pre>Lemma identity_unique (id0 id1 : forall x, morphism C x x)
         (id1_left : forall s d (m : morphism C s d), id1 _ o m = m)
         (id0_right : forall s d (m : morphism C s d), m o id0 _ = m)
@@ -416,8 +416,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 122
-Time: 0.003s">
-<div class="time" style="width: 25%"></div>
+Time: 0.005s">
+<div class="time" style="width: 29.411764705882%"></div>
 <pre>
     etransitivity;
       [ symmetry; apply id1_left
@@ -428,13 +428,7 @@ Line: 125
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Qed.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 126
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+  Qed.
 
   (** Anything equal to the identity acts like it.  This is obvious,
       but useful as a helper lemma for automation. *)
@@ -442,8 +436,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 130
-Time: 0.003s">
-<div class="time" style="width: 25%"></div>
+Time: 0.004s">
+<div class="time" style="width: 23.529411764706%"></div>
 <pre>Definition concat_left_identity s d (m : morphism C s d) i
   : i = 1 -&gt; i o m = m
     := fun H =&gt; (ap10 (ap _ H) _ @ left_identity _ _ _ m)%path.</pre>
@@ -451,7 +445,7 @@ Time: 0.003s">
 <div class="code" title="File: Core.v
 Line: 132
 Time: 0.003s">
-<div class="time" style="width: 25%"></div>
+<div class="time" style="width: 17.647058823529%"></div>
 <pre>
 
   Definition concat_right_identity s d (m : morphism C s d) i
@@ -460,8 +454,8 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: Core.v
 Line: 136
-Time: 0.002s">
-<div class="time" style="width: 16.666666666667%"></div>
+Time: 0.003s">
+<div class="time" style="width: 17.647058823529%"></div>
 <pre>
 End identity_unique.</pre>
 </div>

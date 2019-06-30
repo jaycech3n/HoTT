@@ -39,21 +39,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Localization.v
 Line: 3
-Time: 0.044s">
-<div class="time" style="width: 13.880126182965%"></div>
+Time: 0.05s">
+<div class="time" style="width: 31.645569620253%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Localization.v
 Line: 3
-Time: 0.009s">
-<div class="time" style="width: 2.8391167192429%"></div>
+Time: 0.01s">
+<div class="time" style="width: 6.3291139240506%"></div>
 <pre>
 Require Import Extensions EquivalenceVarieties.</pre>
 </div>
 <div class="code" title="File: Localization.v
 Line: 4
-Time: 0.021s">
-<div class="time" style="width: 6.6246056782334%"></div>
+Time: 0.026s">
+<div class="time" style="width: 16.455696202532%"></div>
 <pre>
 Require Import ReflectiveSubuniverse Accessible.</pre>
 </div>
@@ -119,8 +119,8 @@ Then, however, we have to express the hypotheses of the induction principle.  We
 </div>
 <div class="code" title="File: Localization.v
 Line: 46
-Time: 0.007s">
-<div class="time" style="width: 2.2082018927445%"></div>
+Time: 0.009s">
+<div class="time" style="width: 5.6962025316456%"></div>
 <pre>Fixpoint ExtendableAlong_Over@{a b c d m}
          (n : nat) {A : Type@{a}} {B : Type@{b}} (f : A -&gt; B)
          (C : B -&gt; Type@{c})
@@ -164,7 +164,7 @@ Time: 0s">
 <div class="code" title="File: Localization.v
 Line: 72
 Time: 0.002s">
-<div class="time" style="width: 0.63091482649842%"></div>
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>Definition extendable_over_postcompose' (n : nat)
            {A B : Type} (C : B -&gt; Type) (f : A -&gt; B)
            (ext : ExtendableAlong n f C)
@@ -182,8 +182,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Localization.v
 Line: 79
-Time: 0.002s">
-<div class="time" style="width: 0.63091482649842%"></div>
+Time: 0.003s">
+<div class="time" style="width: 1.8987341772152%"></div>
 <pre>
   revert C ext D E g; simple_induction n n IHn; intros C ext D E g; simpl.</pre>
 </div>
@@ -203,8 +203,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Localization.v
 Line: 82
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.63291139240506%"></div>
 <pre>
   split.</pre>
 </div>
@@ -223,8 +223,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Localization.v
 Line: 84
-Time: 0.006s">
-<div class="time" style="width: 1.8927444794953%"></div>
+Time: 0.007s">
+<div class="time" style="width: 4.4303797468354%"></div>
 <pre>
     exists (fun b =&gt; g b ((fst ext h).1 b)
                      ((fst ext' h (fun a =&gt; (g _ _)^-1 (k a))).1 b)).</pre>
@@ -239,21 +239,21 @@ Time: 0s">
 <div class="code" title="File: Localization.v
 Line: 87
 Time: 0.002s">
-<div class="time" style="width: 0.63091482649842%"></div>
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>
     refine ((ap_transport ((fst ext h).2 a) (g (f a)) _)^ @ _).</pre>
 </div>
 <div class="code" title="File: Localization.v
 Line: 88
-Time: 0.002s">
-<div class="time" style="width: 0.63091482649842%"></div>
+Time: 0.003s">
+<div class="time" style="width: 1.8987341772152%"></div>
 <pre>
     apply moveR_equiv_M.</pre>
 </div>
 <div class="code" title="File: Localization.v
 Line: 89
-Time: 0.001s">
-<div class="time" style="width: 0.31545741324921%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>
     exact ((fst ext' h (fun a =&gt; (g _ _)^-1 (k a))).2 a).</pre>
 </div>
@@ -272,8 +272,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Localization.v
 Line: 91
-Time: 0.011s">
-<div class="time" style="width: 3.4700315457413%"></div>
+Time: 0.013s">
+<div class="time" style="width: 8.2278481012658%"></div>
 <pre>
     refine (IHn (fun b =&gt; p b = q b) _
                 (fun b =&gt; fun c =&gt; transport (D b) c ((g b (p b))^-1 (p' b))
@@ -305,32 +305,32 @@ Time: 0s">
 </div>
 <div class="code" title="File: Localization.v
 Line: 100
-Time: 0.001s">
-<div class="time" style="width: 0.31545741324921%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>
     refine (_ @ (ap_transport c (g b) _)^).</pre>
 </div>
 <div class="code" title="File: Localization.v
 Line: 101
-Time: 0.003s">
-<div class="time" style="width: 0.94637223974763%"></div>
+Time: 0.009s">
+<div class="time" style="width: 5.6962025316456%"></div>
 <pre>
     apply ap, symmetry, eisretr.</pre>
 </div>
 <div class="code" title="File: Localization.v
 Line: 102
-Time: 0.008s">
-<div class="time" style="width: 2.5236593059937%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 103
-Time: 0.003s">
-<div class="time" style="width: 0.94637223974763%"></div>
-<pre>
-
-Definition extendable_over_postcompose (n : nat)
+Line: 104
+Time: 0.004s">
+<div class="time" style="width: 2.5316455696203%"></div>
+<pre>Definition extendable_over_postcompose (n : nat)
            {A B : Type} (C : B -&gt; Type) (f : A -&gt; B)
            (ext : ExtendableAlong n f C)
            (D E : forall b, C b -&gt; Type)
@@ -342,7 +342,7 @@ Definition extendable_over_postcompose (n : nat)
      (fun b c =&gt; BuildEquiv _ _ (g b c) _).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 114
+Line: 113
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -350,9 +350,9 @@ Time: 0s">
 (** And if the dependency is trivial, we obtain them from an ordinary [ExtendableAlong]. *)</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 116
-Time: 0.001s">
-<div class="time" style="width: 0.31545741324921%"></div>
+Line: 115
+Time: 0.002s">
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>Definition extendable_over_const
            (n : nat) {A B : Type} (C : B -&gt; Type) (f : A -&gt; B)
            (ext : ExtendableAlong n f C) (D : B -&gt; Type)
@@ -360,116 +360,110 @@ Time: 0.001s">
   -&gt; ExtendableAlong_Over n f C (fun b _ =&gt; D b) ext.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 120
+Line: 119
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 121
+Line: 120
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   revert C ext D.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 122
+Line: 121
 Time: 0.001s">
-<div class="time" style="width: 0.31545741324921%"></div>
+<div class="time" style="width: 0.63291139240506%"></div>
 <pre>
   simple_induction n n IHn; intros C ext D ext'.</pre>
+</div>
+<div class="code" title="File: Localization.v
+Line: 122
+Time: 0.001s">
+<div class="time" style="width: 0.63291139240506%"></div>
+<pre>
+  1:exact tt.</pre>
 </div>
 <div class="code" title="File: Localization.v
 Line: 123
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  1:exact tt.</pre>
+  split.</pre>
 </div>
 <div class="code" title="File: Localization.v
 Line: 124
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  split.</pre>
+  -</pre>
+</div>
+<div class="code" title="File: Localization.v
+Line: 125
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros g g'.</pre>
 </div>
 <div class="code" title="File: Localization.v
 Line: 125
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  -</pre>
-</div>
-<div class="code" title="File: Localization.v
-Line: 126
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> intros g g'.</pre>
-</div>
-<div class="code" title="File: Localization.v
-Line: 126
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
     exists ((fst ext' g').1).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 127
-Time: 0.002s">
-<div class="time" style="width: 0.63091482649842%"></div>
+Line: 126
+Time: 0.004s">
+<div class="time" style="width: 2.5316455696203%"></div>
 <pre>
     exact (fun a =&gt; transport_const ((fst ext g).2 a) _
                                     @ (fst ext' g').2 a).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 129
+Line: 128
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 130
+Line: 129
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros h k h' k'.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 130
-Time: 0.002s">
-<div class="time" style="width: 0.63091482649842%"></div>
+Line: 129
+Time: 0.001s">
+<div class="time" style="width: 0.63291139240506%"></div>
 <pre>
     refine (extendable_over_postcompose' _ _ _ _ _ _ _
               (IHn (fun b =&gt; h b = k b) (snd ext h k)
                    (fun b =&gt; h' b = k' b) (snd ext' h' k'))).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 133
+Line: 132
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     exact (fun b c =&gt; equiv_concat_l (transport_const c (h' b)) (k' b)).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 134
-Time: 0.003s">
-<div class="time" style="width: 0.94637223974763%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Localization.v
-Line: 135
+Line: 133
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Defined.
 
 (** This lemma will be used in stating the computation rule for localization. *)</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 137
+Line: 136
 Time: 0.001s">
-<div class="time" style="width: 0.31545741324921%"></div>
+<div class="time" style="width: 0.63291139240506%"></div>
 <pre>Fixpoint apD_extendable_eq (n : nat) {A B : Type} (C : B -&gt; Type) (f : A -&gt; B)
          (ext : ExtendableAlong n f C) (D : forall b, C b -&gt; Type)
          (g : forall b c, D b c)
@@ -478,18 +472,31 @@ Time: 0.001s">
 : Type.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 142
+Line: 141
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 143
+Line: 142
 Time: 0.001s">
-<div class="time" style="width: 0.31545741324921%"></div>
+<div class="time" style="width: 0.63291139240506%"></div>
 <pre>
   destruct n.</pre>
+</div>
+<div class="code" title="File: Localization.v
+Line: 143
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  -</pre>
+</div>
+<div class="code" title="File: Localization.v
+Line: 144
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> exact Unit.</pre>
 </div>
 <div class="code" title="File: Localization.v
 Line: 144
@@ -502,46 +509,33 @@ Time: 0s">
 Line: 145
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> exact Unit.</pre>
+<pre> apply prod.</pre>
 </div>
 <div class="code" title="File: Localization.v
 Line: 145
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  -</pre>
-</div>
-<div class="code" title="File: Localization.v
-Line: 146
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> apply prod.</pre>
-</div>
-<div class="code" title="File: Localization.v
-Line: 146
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
     +</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 147
-Time: 0.003s">
-<div class="time" style="width: 0.94637223974763%"></div>
+Line: 146
+Time: 0.005s">
+<div class="time" style="width: 3.1645569620253%"></div>
 <pre> exact (forall (h : forall a, C (f a)) (b : B),
                g b ((fst ext h).1 b) = (fst ext' h (fun a =&gt; g (f a) (h a))).1 b).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 148
+Line: 147
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     +</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 149
-Time: 0.004s">
-<div class="time" style="width: 1.2618296529968%"></div>
+Line: 148
+Time: 0.006s">
+<div class="time" style="width: 3.7974683544304%"></div>
 <pre> exact (forall h k, apD_extendable_eq
                            n A B (fun b =&gt; h b = k b) f (snd ext h k)
                            (fun b c =&gt; c # g b (h b) = g b (k b))
@@ -549,44 +543,38 @@ Time: 0.004s">
                            (snd ext' h k _ _)).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 153
-Time: 0.001s">
-<div class="time" style="width: 0.31545741324921%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Localization.v
-Line: 154
+Line: 152
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Defined.
 
 (** Here's the [oo]-version. *)</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 156
-Time: 0.001s">
-<div class="time" style="width: 0.31545741324921%"></div>
+Line: 155
+Time: 0.002s">
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>Definition ooExtendableAlong_Over
          {A B : Type} (f : A -&gt; B) (C : B -&gt; Type)
          (D : forall b, C b -&gt; Type) (ext : ooExtendableAlong f C)
   := forall n, ExtendableAlong_Over n f C D (ext n).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 159
+Line: 158
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 (** Universe parameters are the same as for [ExtendableAlong_Over]. *)</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 160
+Line: 159
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Check ooExtendableAlong_Over@{a b c d r}.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 160
+Line: 159
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -594,9 +582,9 @@ Time: 0s">
 (** The [oo]-version for trivial dependency. *)</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 162
-Time: 0.002s">
-<div class="time" style="width: 0.63091482649842%"></div>
+Line: 161
+Time: 0.003s">
+<div class="time" style="width: 1.8987341772152%"></div>
 <pre>Definition ooextendable_over_const
            {A B : Type} (C : B -&gt; Type) (f : A -&gt; B)
            (ext : ooExtendableAlong f C) (D : B -&gt; Type)
@@ -605,7 +593,7 @@ Time: 0.002s">
 := fun ext' n =&gt; extendable_over_const n C f (ext n) D (ext' n).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 167
+Line: 166
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -613,9 +601,9 @@ Time: 0s">
 (** A crucial fact: the [oo]-version is inherited by types of homotopies. *)</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 169
-Time: 0.001s">
-<div class="time" style="width: 0.31545741324921%"></div>
+Line: 168
+Time: 0.002s">
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>Definition ooextendable_over_homotopy
            {A B : Type} (C : B -&gt; Type) (f : A -&gt; B)
            (ext : ooExtendableAlong f C)
@@ -625,84 +613,84 @@ Time: 0.001s">
   -&gt; ooExtendableAlong_Over f C (fun b c =&gt; r b c = s b c) ext.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 175
+Line: 174
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 176
+Line: 175
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros ext' n.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 177
+Line: 176
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   revert C ext D r s ext'.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 178
+Line: 177
 Time: 0.001s">
-<div class="time" style="width: 0.31545741324921%"></div>
+<div class="time" style="width: 0.63291139240506%"></div>
 <pre>
   simple_induction n n IHn; intros C ext D r s ext'.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 179
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 178
+Time: 0.001s">
+<div class="time" style="width: 0.63291139240506%"></div>
 <pre>
   1:exact tt.</pre>
+</div>
+<div class="code" title="File: Localization.v
+Line: 179
+Time: 0.001s">
+<div class="time" style="width: 0.63291139240506%"></div>
+<pre>
+  split.</pre>
 </div>
 <div class="code" title="File: Localization.v
 Line: 180
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  split.</pre>
+  -</pre>
 </div>
 <div class="code" title="File: Localization.v
 Line: 181
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-  -</pre>
-</div>
-<div class="code" title="File: Localization.v
-Line: 182
-Time: 0s">
-<div class="time" style="width: 0%"></div>
 <pre> intros g g'.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 182
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 181
+Time: 0.001s">
+<div class="time" style="width: 0.63291139240506%"></div>
 <pre>
     simple refine (_;_); simpl.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 183
+Line: 182
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     +</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 184
+Line: 183
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros b.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 184
-Time: 0.005s">
-<div class="time" style="width: 1.5772870662461%"></div>
+Line: 183
+Time: 0.006s">
+<div class="time" style="width: 3.7974683544304%"></div>
 <pre>
       refine (_ @ (fst (snd (ext' 2) _ _
                             (fun b' =&gt; r b' ((fst (ext n.+1) g).1 b'))
@@ -710,51 +698,51 @@ Time: 0.005s">
                        (fun _ =&gt; 1) _).1 b).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 188
+Line: 187
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       *</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 189
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 188
+Time: 0.001s">
+<div class="time" style="width: 0.63291139240506%"></div>
 <pre> refine (transport2 (D b) (p := 1) _ _).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 189
-Time: 0.004s">
-<div class="time" style="width: 1.2618296529968%"></div>
+Line: 188
+Time: 0.005s">
+<div class="time" style="width: 3.1645569620253%"></div>
 <pre>
         refine ((fst (snd (snd (ext 3) _ _) (fun b' =&gt; 1)
                           ((fst (snd (ext 2) _ _) (fun a : A =&gt; 1)).1)
                 ) _).1 b); intros a.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 192
-Time: 0.003s">
-<div class="time" style="width: 0.94637223974763%"></div>
+Line: 191
+Time: 0.004s">
+<div class="time" style="width: 2.5316455696203%"></div>
 <pre>
         symmetry; refine ((fst (snd (ext 2) _ _) (fun a' =&gt; 1)).2 a).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 193
+Line: 192
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       *</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 194
+Line: 193
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros a; simpl.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 194
-Time: 0.005s">
-<div class="time" style="width: 1.5772870662461%"></div>
+Line: 193
+Time: 0.006s">
+<div class="time" style="width: 3.7974683544304%"></div>
 <pre>
         refine (_ @
           ap (transport (D (f a)) ((fst (ext n.+1) g).2 a)^) (g' a)
@@ -763,29 +751,29 @@ Time: 0.005s">
         | by apply apD ].</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 199
+Line: 198
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     +</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 200
-Time: 0.003s">
-<div class="time" style="width: 0.94637223974763%"></div>
+Line: 199
+Time: 0.004s">
+<div class="time" style="width: 2.5316455696203%"></div>
 <pre> intros a; simpl.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 200
-Time: 0.006s">
-<div class="time" style="width: 1.8927444794953%"></div>
+Line: 199
+Time: 0.008s">
+<div class="time" style="width: 5.0632911392405%"></div>
 <pre>
       set (h := (fst (ext n.+1) g).1).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 201
-Time: 0.014s">
-<div class="time" style="width: 4.416403785489%"></div>
+Line: 200
+Time: 0.018s">
+<div class="time" style="width: 11.392405063291%"></div>
 <pre>
       match goal with
           |- context[   (fst (snd (ext' 2) _ _ ?k1 ?k2) (fun _ =&gt; 1) ?l).1 ]
@@ -794,37 +782,37 @@ Time: 0.014s">
       end.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 206
-Time: 0.011s">
-<div class="time" style="width: 3.4700315457413%"></div>
+Line: 205
+Time: 0.015s">
+<div class="time" style="width: 9.4936708860759%"></div>
 <pre>
       rewrite transport_paths_Fl in p.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 207
-Time: 0.003s">
-<div class="time" style="width: 0.94637223974763%"></div>
+Line: 206
+Time: 0.004s">
+<div class="time" style="width: 2.5316455696203%"></div>
 <pre>
       apply moveL_Mp in p.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 208
-Time: 0.004s">
-<div class="time" style="width: 1.2618296529968%"></div>
+Line: 207
+Time: 0.005s">
+<div class="time" style="width: 3.1645569620253%"></div>
 <pre>
       refine (ap (transport _ _) (1 @@ p) @ _); clear p.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 209
-Time: 0.009s">
-<div class="time" style="width: 2.8391167192429%"></div>
+Line: 208
+Time: 0.013s">
+<div class="time" style="width: 8.2278481012658%"></div>
 <pre>
       unfold transport2; rewrite concat_p_pp.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 210
-Time: 0.007s">
-<div class="time" style="width: 2.2082018927445%"></div>
+Line: 209
+Time: 0.009s">
+<div class="time" style="width: 5.6962025316456%"></div>
 <pre>
       match goal with
           |- transport ?P ?p ((ap ?f ?q @ ap ?f ?r) @ ?s) = ?t
@@ -832,9 +820,9 @@ Time: 0.007s">
       end.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 214
-Time: 0.006s">
-<div class="time" style="width: 1.8927444794953%"></div>
+Line: 213
+Time: 0.008s">
+<div class="time" style="width: 5.0632911392405%"></div>
 <pre>
       pose (p := (fst (snd (snd (ext 3) h h) (fun b' : B =&gt; 1)
                            ((fst (snd (ext 2) h h) (fun a0 : A =&gt; 1)).1))
@@ -843,193 +831,193 @@ Time: 0.006s">
         simpl in p.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 219
-Time: 0.006s">
-<div class="time" style="width: 1.8927444794953%"></div>
+Line: 218
+Time: 0.009s">
+<div class="time" style="width: 5.6962025316456%"></div>
 <pre>
       refine (ap (transport _ _) (ap (ap _) (p @@ 1) @@ 1) @ _); clear p.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 220
-Time: 0.014s">
-<div class="time" style="width: 4.416403785489%"></div>
+Line: 219
+Time: 0.019s">
+<div class="time" style="width: 12.025316455696%"></div>
 <pre>
       rewrite concat_Vp; simpl; rewrite concat_1p.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 221
-Time: 0.002s">
-<div class="time" style="width: 0.63091482649842%"></div>
+Line: 220
+Time: 0.003s">
+<div class="time" style="width: 1.8987341772152%"></div>
 <pre>
       refine (transport_paths_FlFr_D _ _ @ _).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 222
+Line: 221
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Open Scope long_path_scope.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 223
+Line: 222
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Local Opaque transport_pV.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 224
+Line: 223
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> (* work around bug 4533 *)
      </pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 225
-Time: 0.136s">
-<div class="time" style="width: 42.902208201893%"></div>
+Line: 224
+Time: 0.158s">
+<div class="time" style="width: 100%"></div>
 <pre>rewrite !ap_pp, !concat_p_pp, ap_transport_pV, !concat_p_pp.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 225
+Line: 224
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Local Transparent transport_pV.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 226
+Line: 225
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> (* work around bug 4533 *)
      </pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 227
+Line: 226
 Time: 0.007s">
-<div class="time" style="width: 2.2082018927445%"></div>
+<div class="time" style="width: 4.4303797468354%"></div>
 <pre>refine ((((_  @@ 1) @ concat_1p _) @@ 1 @@ 1 @@ 1) @ _).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 227
+Line: 226
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       *</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 228
+Line: 227
 Time: 0.013s">
-<div class="time" style="width: 4.1009463722397%"></div>
+<div class="time" style="width: 8.2278481012658%"></div>
 <pre> rewrite ap_V, concat_pp_p.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 228
-Time: 0.003s">
-<div class="time" style="width: 0.94637223974763%"></div>
+Line: 227
+Time: 0.004s">
+<div class="time" style="width: 2.5316455696203%"></div>
 <pre>
         do 2 apply moveR_Vp.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 229
+Line: 228
 Time: 0.005s">
-<div class="time" style="width: 1.5772870662461%"></div>
+<div class="time" style="width: 3.1645569620253%"></div>
 <pre>
         rewrite concat_p1.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 230
+Line: 229
 Time: 0.009s">
-<div class="time" style="width: 2.8391167192429%"></div>
+<div class="time" style="width: 5.6962025316456%"></div>
 <pre>
         symmetry; apply transport_pV_ap.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 231
+Line: 230
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       *</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 232
-Time: 0.017s">
-<div class="time" style="width: 5.3627760252366%"></div>
+Line: 231
+Time: 0.018s">
+<div class="time" style="width: 11.392405063291%"></div>
 <pre> rewrite !concat_pp_p.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 232
+Line: 231
 Time: 0.002s">
-<div class="time" style="width: 0.63091482649842%"></div>
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>
         refine ((1 @@ _) @ (concat_p1 _)).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 233
+Line: 232
 Time: 0.007s">
-<div class="time" style="width: 2.2082018927445%"></div>
+<div class="time" style="width: 4.4303797468354%"></div>
 <pre>
         apply moveR_Vp; rewrite concat_p1.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 234
+Line: 233
 Time: 0.002s">
-<div class="time" style="width: 0.63091482649842%"></div>
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>
         apply transport_pV_ap.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 235
+Line: 234
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Close Scope long_path_scope.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 236
+Line: 235
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 237
+Line: 236
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros h k h' k'.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 237
-Time: 0.003s">
-<div class="time" style="width: 0.94637223974763%"></div>
+Line: 236
+Time: 0.004s">
+<div class="time" style="width: 2.5316455696203%"></div>
 <pre>
     refine (extendable_over_postcompose' _ _ _ _ _ _
              (fun b c =&gt; equiv_cancelL (apD (r b) c) _ _) _).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 239
+Line: 238
 Time: 0.003s">
-<div class="time" style="width: 0.94637223974763%"></div>
+<div class="time" style="width: 1.8987341772152%"></div>
 <pre>
     refine (IHn _ _ _ _ _
                 (fun n =&gt; snd (ext' n.+1) h k
                               (fun b =&gt; r b (h b)) (fun b =&gt; s b (k b)))).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 242
+Line: 241
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre></pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 242
+Line: 241
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Local Opaque transport_pV.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 243
+Line: 242
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> (* work around bug 4533 *)
@@ -1037,13 +1025,13 @@ Time: 0s">
      </pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 245
+Line: 244
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Local Transparent transport_pV.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 245
+Line: 244
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> (* work around bug 4533 *)
@@ -1059,13 +1047,13 @@ Time: 0s">
      </pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 255
+Line: 254
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Close Scope long_path_scope.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 255
+Line: 254
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1074,19 +1062,8 @@ Time: 0s">
              (fun b c =&gt; equiv_cancelL (apD (r b) c) _ _) _).
     refine (IHn _ _ _ _ _
                 (fun n =&gt; snd (ext' n.+1) h k
-                              (fun b =&gt; r b (h b)) (fun b =&gt; s b (k b)))).</pre>
-</div>
-<div class="code" title="File: Localization.v
-Line: 261
-Time: 0.317s">
-<div class="time" style="width: 100%"></div>
-<pre>Qed.</pre>
-</div>
-<div class="code" title="File: Localization.v
-Line: 261
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+                              (fun b =&gt; r b (h b)) (fun b =&gt; s b (k b)))).
+Qed.
 
 (** ** Local types *)
 
@@ -1141,7 +1118,7 @@ Time: 0s">
 <div class="code" title="File: Localization.v
 Line: 274
 Time: 0.009s">
-<div class="time" style="width: 2.8391167192429%"></div>
+<div class="time" style="width: 5.6962025316456%"></div>
 <pre>
   refine (ooextendable_postcompose@{a a i j k k k k k k}
             _ _ (f i) (fun _ =&gt; g) _).</pre>
@@ -1165,13 +1142,7 @@ Line: 278
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Localization.v
-Line: 279
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Defined.
 
 (** ** Localization as a HIT *)
 
@@ -1220,8 +1191,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Localization.v
 Line: 293
-Time: 0.002s">
-<div class="time" style="width: 0.63091482649842%"></div>
+Time: 0.003s">
+<div class="time" style="width: 1.8987341772152%"></div>
 <pre>
 
   Fixpoint Localize_ind
@@ -1250,7 +1221,7 @@ Time: 0s">
 <div class="code" title="File: Localization.v
 Line: 310
 Time: 0.003s">
-<div class="time" style="width: 0.94637223974763%"></div>
+<div class="time" style="width: 1.8987341772152%"></div>
 <pre>Axiom Localize_ind_islocal_localize_beta :
     forall (f : LocalGenerators) (X : Type)
            (P : Localize f X -&gt; Type)
@@ -1309,7 +1280,7 @@ Time: 0s">
 <div class="code" title="File: Localization.v
 Line: 332
 Time: 0.001s">
-<div class="time" style="width: 0.31545741324921%"></div>
+<div class="time" style="width: 0.63291139240506%"></div>
 <pre>Definition ext_localize_ind (X : Type)
       (P : Localize f X -&gt; Type)
       (Ploc : forall i, ooExtendableAlong_Over
@@ -1333,8 +1304,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Localization.v
 Line: 339
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.63291139240506%"></div>
 <pre>
     simple_induction n n IHn; intros P Ploc.</pre>
 </div>
@@ -1395,7 +1366,7 @@ Time: 0s">
 <div class="code" title="File: Localization.v
 Line: 346
 Time: 0.001s">
-<div class="time" style="width: 0.31545741324921%"></div>
+<div class="time" style="width: 0.63291139240506%"></div>
 <pre>
       apply ooextendable_over_homotopy.</pre>
 </div>
@@ -1408,21 +1379,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Localization.v
 Line: 348
-Time: 0.001s">
-<div class="time" style="width: 0.31545741324921%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-  Defined.</pre>
-</div>
-<div class="code" title="File: Localization.v
-Line: 349
-Time: 0.001s">
-<div class="time" style="width: 0.31545741324921%"></div>
-<pre>
+  Defined.
 
-End Localization.</pre>
+</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 351
+Line: 350
+Time: 0.001s">
+<div class="time" style="width: 0.63291139240506%"></div>
+<pre>End Localization.</pre>
+</div>
+<div class="code" title="File: Localization.v
+Line: 350
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1430,13 +1401,13 @@ Time: 0s">
 (** We define a wrapper around [LocalGenerators].  See the comments in HIT/Truncations for an explanation.  Unlike there, here we make the wrapper a [Record] rather than a [Definition], so that a projection has to be inserted to convert one to the other.  This forces us to write [Loc f] as a parameter to all reflective-subuniverse functions, which is really entirely reasonable; we only allowed ourselves to write [n] rather than [Tr n] in the case of truncations because things like connectedness are traditionally defined only for the truncation modality, so users may prefer not to have to think about the fact that there is a modality present. *)</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 353
+Line: 352
 Time: 0.001s">
-<div class="time" style="width: 0.31545741324921%"></div>
+<div class="time" style="width: 0.63291139240506%"></div>
 <pre>Record Localization_ReflectiveSubuniverse := Loc { unLoc : LocalGenerators }.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 353
+Line: 352
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1444,7 +1415,7 @@ Time: 0s">
 Module Localization_ReflectiveSubuniverses &lt;: ReflectiveSubuniverses.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 355
+Line: 354
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1453,20 +1424,20 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 358
+Line: 357
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition ReflectiveSubuniverse : Type@{u} := Localization_ReflectiveSubuniverse@{a}.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 358
+Line: 357
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Check ReflectiveSubuniverse@{u a}.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 359
+Line: 358
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1475,7 +1446,7 @@ Time: 0s">
     := fun O =&gt; Localize@{a i} (unLoc O).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 362
+Line: 361
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1484,7 +1455,7 @@ Time: 0s">
     := fun O X =&gt; IsLocal@{i i a} (unLoc O) X.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 365
+Line: 364
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1495,7 +1466,7 @@ Time: 0s">
     := fun O =&gt; islocal_localize@{a i i} (unLoc O).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 370
+Line: 369
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1505,7 +1476,7 @@ Time: 0s">
     := fun O =&gt; @loc@{a i} (unLoc O).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 374
+Line: 373
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1517,7 +1488,7 @@ Time: 0s">
     := fun O =&gt; islocal_equiv_islocal@{a i j i j k} (unLoc O).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 380
+Line: 379
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1527,89 +1498,89 @@ Time: 0s">
   : IsHProp (In@{u a i} O T).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 384
+Line: 383
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 385
+Line: 384
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     apply (@trunc_forall@{a i i} _); intros i.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 386
+Line: 385
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     apply ishprop_ooextendable@{a a i i i  i i i i i  i i i}.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 387
+Line: 386
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Defined.</pre>
+  Defined.
+
+ </pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 388
+Line: 389
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-
-  Definition extendable_to_O
+<pre>Definition extendable_to_O
              (O : ReflectiveSubuniverse@{u a}) {P : Type@{i}}
              {Q : Type@{j}} {Q_inO : In@{u a j} O Q}
   : ooExtendableAlong@{i i j k} (to O P) (fun _ =&gt; Q).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 393
+Line: 392
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 394
+Line: 393
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     apply ext_localize_ind@{a i j i k}; intros ?.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 395
+Line: 394
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     apply ooextendable_over_const.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 396
+Line: 395
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     apply Q_inO.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 397
+Line: 396
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Defined.</pre>
+  Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Localization.v
 Line: 398
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-
-End Localization_ReflectiveSubuniverses.</pre>
+<pre>End Localization_ReflectiveSubuniverses.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 400
+Line: 398
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1618,26 +1589,26 @@ Time: 0s">
 (** If you import the following module [LocM], then you can call all the reflective subuniverse functions with a [LocalGenerators] as the parameter. *)</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 403
-Time: 0.075s">
-<div class="time" style="width: 23.659305993691%"></div>
+Line: 401
+Time: 0.084s">
+<div class="time" style="width: 53.164556962025%"></div>
 <pre>Module Import LocM := ReflectiveSubuniverses_Theory Localization_ReflectiveSubuniverses.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 403
+Line: 401
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 (** If you don't import it, then you'll need to write [LocM.function_name]. *)</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 404
+Line: 402
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Export LocM.Coercions.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 404
+Line: 402
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1646,7 +1617,7 @@ Coercion Localization_ReflectiveSubuniverse_to_ReflectiveSubuniverse := idmap
   : Localization_ReflectiveSubuniverse -&gt; ReflectiveSubuniverse.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 407
+Line: 405
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1654,13 +1625,13 @@ Time: 0s">
 (** Here is the "real" definition of the notation [IsLocal].  Defining it this way allows it to inherit typeclass inference from [In], unlike (for instance) the slightly annoying case of [IsTrunc n] versus [In (Tr n)]. *)</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 409
+Line: 407
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Notation IsLocal f := (In (Loc f)).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 409
+Line: 407
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1668,14 +1639,14 @@ Time: 0s">
 Section LocalTypes.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 411
+Line: 409
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Context (f : LocalGenerators).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 412
+Line: 410
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1684,15 +1655,15 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 415
-Time: 0.001s">
-<div class="time" style="width: 0.31545741324921%"></div>
+Line: 413
+Time: 0.002s">
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>Definition ooextendable_islocal {X : Type@{i}} {Xloc : IsLocal f X} i
   : ooExtendableAlong@{a a i k} (f i) (fun _ =&gt; X)
     := (lift_ooextendablealong _ _ (Xloc i)).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 417
+Line: 415
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1701,9 +1672,9 @@ Time: 0s">
     := islocal_localize f X.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 420
+Line: 418
 Time: 0.003s">
-<div class="time" style="width: 0.94637223974763%"></div>
+<div class="time" style="width: 1.8987341772152%"></div>
 <pre>
 
   Global Instance isequiv_precomp_islocal `{Funext}
@@ -1712,7 +1683,7 @@ Time: 0.003s">
   := isequiv_ooextendable (fun _ =&gt; X) (f i) (ooextendable_islocal i).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 425
+Line: 423
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1721,61 +1692,61 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 428
+Line: 426
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Localize_rec {X Z : Type} `{IsLocal f Z} (g : X -&gt; Z)
   : Localize f X -&gt; Z.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 429
+Line: 427
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 430
+Line: 428
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     refine (Localize_ind f X (fun _ =&gt; Z) g _); intros i.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 431
+Line: 429
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     apply ooextendable_over_const.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 432
+Line: 430
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     apply ooextendable_islocal.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 433
+Line: 431
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Defined.</pre>
+  Defined.
+
+ </pre>
 </div>
 <div class="code" title="File: Localization.v
 Line: 434
-Time: 0.001s">
-<div class="time" style="width: 0.31545741324921%"></div>
-<pre>
-
-  Definition local_rec {X} `{IsLocal f X} {i} (g : lgen_domain f i -&gt; X)
+Time: 0.002s">
+<div class="time" style="width: 1.2658227848101%"></div>
+<pre>Definition local_rec {X} `{IsLocal f X} {i} (g : lgen_domain f i -&gt; X)
   : lgen_codomain f i -&gt; X
   := (fst (ooextendable_islocal i 1%nat) g).1.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 438
+Line: 436
 Time: 0.002s">
-<div class="time" style="width: 0.63091482649842%"></div>
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>
 
   Definition local_rec_beta {X} `{IsLocal f X} {i} (g : lgen_domain f i -&gt; X) s
@@ -1783,9 +1754,9 @@ Time: 0.002s">
     := (fst (ooextendable_islocal i 1%nat) g).2 s.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 442
+Line: 440
 Time: 0.004s">
-<div class="time" style="width: 1.2618296529968%"></div>
+<div class="time" style="width: 2.5316455696203%"></div>
 <pre>
 
   Definition local_indpaths {X} `{IsLocal f X} {i} {h k : lgen_codomain f i -&gt; X}
@@ -1794,9 +1765,9 @@ Time: 0.004s">
     := (fst (snd (ooextendable_islocal i 2) h k) p).1.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 447
+Line: 445
 Time: 0.005s">
-<div class="time" style="width: 1.5772870662461%"></div>
+<div class="time" style="width: 3.1645569620253%"></div>
 <pre>
 
   Definition local_indpaths_beta {X} `{IsLocal f X} {i} (h k : lgen_codomain f i -&gt; X)
@@ -1805,15 +1776,15 @@ Time: 0.005s">
     := (fst (snd (ooextendable_islocal i 2) h k) p).2 s.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 452
-Time: 0.002s">
-<div class="time" style="width: 0.63091482649842%"></div>
+Line: 450
+Time: 0.003s">
+<div class="time" style="width: 1.8987341772152%"></div>
 <pre>
 
 End LocalTypes.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 454
+Line: 452
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1821,28 +1792,28 @@ Time: 0s">
 Arguments local_rec : simpl never.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 456
+Line: 454
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Arguments local_rec_beta : simpl never.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 457
+Line: 455
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Arguments local_indpaths : simpl never.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 458
+Line: 456
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Arguments local_indpaths_beta : simpl never.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 459
+Line: 457
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1852,14 +1823,14 @@ Time: 0s">
 (** Localization subuniverses are accessible, essentially by definition. *)</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 463
+Line: 461
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Module Accessible_Localization
   &lt;: Accessible_ReflectiveSubuniverses Localization_ReflectiveSubuniverses.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 464
+Line: 462
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1867,7 +1838,7 @@ Time: 0s">
   Import Localization_ReflectiveSubuniverses.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 466
+Line: 464
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1876,9 +1847,9 @@ Time: 0s">
     := unLoc.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 469
+Line: 467
 Time: 0.001s">
-<div class="time" style="width: 0.31545741324921%"></div>
+<div class="time" style="width: 0.63291139240506%"></div>
 <pre>
 
   Definition inO_iff_islocal
@@ -1887,7 +1858,7 @@ Time: 0.001s">
     := (idmap , idmap).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 474
+Line: 472
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1895,7 +1866,7 @@ Time: 0s">
 End Accessible_Localization.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 476
+Line: 474
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1905,7 +1876,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 479
+Line: 477
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Module Nudge_ReflectiveSubuniverses
@@ -1913,7 +1884,7 @@ Time: 0s">
        (Acc : Accessible_ReflectiveSubuniverses Os).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 481
+Line: 479
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1922,21 +1893,21 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 484
+Line: 482
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Module Data &lt;: ReflectiveSubuniverses_Restriction_Data
                    Localization_ReflectiveSubuniverses.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 485
+Line: 483
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     Definition New_ReflectiveSubuniverse := Os.ReflectiveSubuniverse.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 486
+Line: 484
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1945,23 +1916,23 @@ Time: 0s">
       := fun O =&gt; Loc (Acc.acc_gen O).</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 489
+Line: 487
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   End Data.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 490
+Line: 488
 Time: 0.001s">
-<div class="time" style="width: 0.31545741324921%"></div>
+<div class="time" style="width: 0.63291139240506%"></div>
 <pre>
 
   Module Nudged &lt;: ReflectiveSubuniverses
     := ReflectiveSubuniverses_Restriction Localization_ReflectiveSubuniverses Data.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 493
+Line: 491
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1969,7 +1940,7 @@ Time: 0s">
 End Nudge_ReflectiveSubuniverses.</pre>
 </div>
 <div class="code" title="File: Localization.v
-Line: 496
+Line: 494
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

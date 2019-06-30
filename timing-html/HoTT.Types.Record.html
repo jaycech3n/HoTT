@@ -39,14 +39,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Record.v
 Line: 3
-Time: 0.018s">
-<div class="time" style="width: 90%"></div>
+Time: 0.022s">
+<div class="time" style="width: 61.111111111111%"></div>
 <pre>Require Import HoTT.Basics.</pre>
 </div>
 <div class="code" title="File: Record.v
 Line: 3
-Time: 0.012s">
-<div class="time" style="width: 60%"></div>
+Time: 0.014s">
+<div class="time" style="width: 38.888888888889%"></div>
 <pre>
 Require Import Types.Sigma Types.Forall.</pre>
 </div>
@@ -133,53 +133,47 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Record.v
 Line: 35
-Time: 0.003s">
-<div class="time" style="width: 15%"></div>
+Time: 0.005s">
+<div class="time" style="width: 13.888888888889%"></div>
 <pre>
   issig (BuildContr A) (@center A) (@contr A).</pre>
 </div>
 <div class="code" title="File: Record.v
 Line: 36
-Time: 0.001s">
-<div class="time" style="width: 5%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Record.v
-Line: 37
+Line: 38
 Time: 0.001s">
-<div class="time" style="width: 5%"></div>
-<pre>
-
-Definition issig_equiv (A B : Type)
+<div class="time" style="width: 2.7777777777778%"></div>
+<pre>Definition issig_equiv (A B : Type)
   : { f : A -&gt; B &amp; IsEquiv f } &lt;~&gt; Equiv A B.</pre>
 </div>
 <div class="code" title="File: Record.v
-Line: 40
+Line: 39
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Record.v
-Line: 41
-Time: 0.003s">
-<div class="time" style="width: 15%"></div>
+Line: 40
+Time: 0.004s">
+<div class="time" style="width: 11.111111111111%"></div>
 <pre>
   issig (BuildEquiv A B) (@equiv_fun A B) (@equiv_isequiv A B).</pre>
 </div>
 <div class="code" title="File: Record.v
-Line: 42
-Time: 0.001s">
-<div class="time" style="width: 5%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Record.v
-Line: 43
+Line: 41
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Defined.
 
 (** Here is a version of the [issig] tactic for three-component records, which proves goals that look like
 &lt;&lt;
@@ -190,7 +184,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Record.v
-Line: 50
+Line: 49
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac issig3 build pr1 pr2 pr3 :=
@@ -207,7 +201,7 @@ Time: 0s">
                        (fun _ =&gt; 1))).</pre>
 </div>
 <div class="code" title="File: Record.v
-Line: 61
+Line: 60
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -216,7 +210,7 @@ Tactic Notation "issig" constr(build) constr(pr1) constr(pr2) constr(pr3) :=
   issig3 build pr1 pr2 pr3.</pre>
 </div>
 <div class="code" title="File: Record.v
-Line: 64
+Line: 63
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -224,7 +218,7 @@ Time: 0s">
 (** And a similar version for four-component records.  It should be clear how to extend the pattern indefinitely. *)</pre>
 </div>
 <div class="code" title="File: Record.v
-Line: 66
+Line: 65
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac issig4 build pr1 pr2 pr3 pr4 :=
@@ -241,7 +235,7 @@ Time: 0s">
                        (fun _ =&gt; 1))).</pre>
 </div>
 <div class="code" title="File: Record.v
-Line: 77
+Line: 76
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -250,7 +244,7 @@ Tactic Notation "issig" constr(build) constr(pr1) constr(pr2) constr(pr3) constr
   issig4 build pr1 pr2 pr3 pr4.</pre>
 </div>
 <div class="code" title="File: Record.v
-Line: 80
+Line: 79
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -270,7 +264,7 @@ Ltac issig5 build pr1 pr2 pr3 pr4 pr5 :=
                        (fun _ =&gt; 1))).</pre>
 </div>
 <div class="code" title="File: Record.v
-Line: 94
+Line: 93
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -279,7 +273,7 @@ Tactic Notation "issig" constr(build) constr(pr1) constr(pr2) constr(pr3) constr
   issig5 build pr1 pr2 pr3 pr4 pr5.</pre>
 </div>
 <div class="code" title="File: Record.v
-Line: 97
+Line: 96
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -298,7 +292,7 @@ Ltac issig6 build pr1 pr2 pr3 pr4 pr5 pr6 :=
                        (fun _ =&gt; 1))).</pre>
 </div>
 <div class="code" title="File: Record.v
-Line: 110
+Line: 109
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -307,7 +301,7 @@ Tactic Notation "issig" constr(build) constr(pr1) constr(pr2) constr(pr3) constr
   issig6 build pr1 pr2 pr3 pr4 pr5 pr6.</pre>
 </div>
 <div class="code" title="File: Record.v
-Line: 113
+Line: 112
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -317,23 +311,23 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Record.v
-Line: 116
-Time: 0.001s">
-<div class="time" style="width: 5%"></div>
+Line: 115
+Time: 0.002s">
+<div class="time" style="width: 5.5555555555556%"></div>
 <pre>Definition issig_isequiv {A B : Type} (f : A -&gt; B) :
   { g:B-&gt;A &amp; { r:Sect g f &amp; { s:Sect f g &amp; forall x : A, r (f x) = ap f (s x) }}}
   &lt;~&gt; IsEquiv f.</pre>
 </div>
 <div class="code" title="File: Record.v
-Line: 118
+Line: 117
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Record.v
-Line: 119
-Time: 0.02s">
+Line: 118
+Time: 0.036s">
 <div class="time" style="width: 100%"></div>
 <pre>
   issig (BuildIsEquiv A B f) (@equiv_inv A B f) (@eisretr A B f)
@@ -341,16 +335,10 @@ Time: 0.02s">
 </div>
 <div class="code" title="File: Record.v
 Line: 121
-Time: 0.011s">
-<div class="time" style="width: 55%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Record.v
-Line: 123
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Defined.
 
 </pre>
 </div>

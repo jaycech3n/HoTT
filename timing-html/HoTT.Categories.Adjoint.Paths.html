@@ -36,8 +36,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Paths.v
 Line: 1
-Time: 0.008s">
-<div class="time" style="width: 8.9887640449438%"></div>
+Time: 0.009s">
+<div class="time" style="width: 7.6271186440678%"></div>
 <pre>Require Import Category.Core Functor.Core NaturalTransformation.Core.</pre>
 </div>
 <div class="code" title="File: Paths.v
@@ -49,22 +49,22 @@ Require Import Functor.Composition.Core Functor.Identity.</pre>
 </div>
 <div class="code" title="File: Paths.v
 Line: 2
-Time: 0.023s">
-<div class="time" style="width: 25.842696629213%"></div>
+Time: 0.026s">
+<div class="time" style="width: 22.033898305085%"></div>
 <pre>
 Require Import NaturalTransformation.Composition.Core NaturalTransformation.Composition.Laws.</pre>
 </div>
 <div class="code" title="File: Paths.v
 Line: 3
-Time: 0.02s">
-<div class="time" style="width: 22.47191011236%"></div>
+Time: 0.027s">
+<div class="time" style="width: 22.881355932203%"></div>
 <pre>
 Require Import Adjoint.UnitCounit Adjoint.Core NaturalTransformation.Paths.</pre>
 </div>
 <div class="code" title="File: Paths.v
 Line: 4
-Time: 0.002s">
-<div class="time" style="width: 2.247191011236%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.5423728813559%"></div>
 <pre>
 Require Import Types.Record Types.Sigma Trunc.</pre>
 </div>
@@ -174,8 +174,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Paths.v
 Line: 31
-Time: 0.005s">
-<div class="time" style="width: 5.6179775280899%"></div>
+Time: 0.006s">
+<div class="time" style="width: 5.0847457627119%"></div>
 <pre>Lemma equiv_sig_adjunction
   : adjunction_sigT &lt;~&gt; (F -| G).</pre>
 </div>
@@ -188,8 +188,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Paths.v
 Line: 33
-Time: 0.088s">
-<div class="time" style="width: 98.876404494382%"></div>
+Time: 0.118s">
+<div class="time" style="width: 100%"></div>
 <pre>
     issig (@Build_AdjunctionUnitCounit _ _ F G)
           (@unit _ _ F G)
@@ -199,16 +199,10 @@ Time: 0.088s">
 </div>
 <div class="code" title="File: Paths.v
 Line: 38
-Time: 0.038s">
-<div class="time" style="width: 42.696629213483%"></div>
-<pre>
-  Defined.</pre>
-</div>
-<div class="code" title="File: Paths.v
-Line: 39
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+  Defined.
 
   (** ** Adjunctions are an hSet *)
  </pre>
@@ -235,31 +229,25 @@ Time: 0s">
 </div>
 <div class="code" title="File: Paths.v
 Line: 44
-Time: 0.089s">
-<div class="time" style="width: 100%"></div>
+Time: 0.116s">
+<div class="time" style="width: 98.305084745763%"></div>
 <pre>
     typeclasses eauto.</pre>
 </div>
 <div class="code" title="File: Paths.v
 Line: 45
-Time: 0.006s">
-<div class="time" style="width: 6.7415730337079%"></div>
-<pre>
-  Qed.</pre>
-</div>
-<div class="code" title="File: Paths.v
-Line: 46
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+  Qed.
 
   (** ** Equality of adjunctions follows from equality of unit+counit *)
  </pre>
 </div>
 <div class="code" title="File: Paths.v
 Line: 49
-Time: 0.002s">
-<div class="time" style="width: 2.247191011236%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.5423728813559%"></div>
 <pre>Lemma path_adjunction' (A A' : F -| G)
   : unit A = unit A'
     -&gt; counit A = counit A'
@@ -281,46 +269,40 @@ Time: 0s">
 </div>
 <div class="code" title="File: Paths.v
 Line: 54
-Time: 0.006s">
-<div class="time" style="width: 6.7415730337079%"></div>
+Time: 0.008s">
+<div class="time" style="width: 6.7796610169492%"></div>
 <pre>
     destruct A, A'; simpl in *.</pre>
 </div>
 <div class="code" title="File: Paths.v
 Line: 55
-Time: 0.022s">
-<div class="time" style="width: 24.719101123596%"></div>
+Time: 0.03s">
+<div class="time" style="width: 25.423728813559%"></div>
 <pre>
     path_induction.</pre>
 </div>
 <div class="code" title="File: Paths.v
 Line: 56
-Time: 0.04s">
-<div class="time" style="width: 44.943820224719%"></div>
+Time: 0.043s">
+<div class="time" style="width: 36.440677966102%"></div>
 <pre>
     f_ap;
       exact (center _).</pre>
 </div>
 <div class="code" title="File: Paths.v
 Line: 58
-Time: 0.005s">
-<div class="time" style="width: 5.6179775280899%"></div>
-<pre>
-  Qed.</pre>
-</div>
-<div class="code" title="File: Paths.v
-Line: 59
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+  Qed.
 
   (** ** Equality of adjunctions follows from equality of action of unit+counit on objects *)
  </pre>
 </div>
 <div class="code" title="File: Paths.v
 Line: 62
-Time: 0.003s">
-<div class="time" style="width: 3.3707865168539%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.3898305084746%"></div>
 <pre>Lemma path_adjunction (A A' : F -| G)
   : components_of (unit A) == components_of (unit A')
     -&gt; components_of (counit A) == components_of (counit A')
@@ -343,7 +325,7 @@ Time: 0s">
 <div class="code" title="File: Paths.v
 Line: 67
 Time: 0.001s">
-<div class="time" style="width: 1.123595505618%"></div>
+<div class="time" style="width: 0.84745762711864%"></div>
 <pre>
     apply path_adjunction';
     apply path_natural_transformation;
@@ -354,13 +336,7 @@ Line: 70
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Qed.</pre>
-</div>
-<div class="code" title="File: Paths.v
-Line: 71
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+  Qed.
 
   (** In fact, it suffices to show that either the units are equal, or
       the counits are equal, by the UMP of the (co)unit.  And if we
@@ -372,8 +348,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Paths.v
 Line: 79
-Time: 0.022s">
-<div class="time" style="width: 24.719101123596%"></div>
+Time: 0.025s">
+<div class="time" style="width: 21.186440677966%"></div>
 <pre>End path_adjunction.</pre>
 </div>
 <div class="code" title="File: Paths.v

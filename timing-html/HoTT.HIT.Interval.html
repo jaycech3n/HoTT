@@ -40,14 +40,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Interval.v
 Line: 4
-Time: 0.019s">
+Time: 0.023s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.Basics.</pre>
 </div>
 <div class="code" title="File: Interval.v
 Line: 4
-Time: 0.015s">
-<div class="time" style="width: 78.947368421053%"></div>
+Time: 0.016s">
+<div class="time" style="width: 69.565217391304%"></div>
 <pre>
 Require Import Types.Sigma Types.Forall Types.Paths.</pre>
 </div>
@@ -87,8 +87,8 @@ Axiom seg : zero = one.</pre>
 </div>
 <div class="code" title="File: Interval.v
 Line: 15
-Time: 0.001s">
-<div class="time" style="width: 5.2631578947368%"></div>
+Time: 0.002s">
+<div class="time" style="width: 8.695652173913%"></div>
 <pre>
 
 Definition interval_ind (P : interval -&gt; Type)
@@ -101,8 +101,8 @@ Definition interval_ind (P : interval -&gt; Type)
 </div>
 <div class="code" title="File: Interval.v
 Line: 23
-Time: 0.001s">
-<div class="time" style="width: 5.2631578947368%"></div>
+Time: 0.002s">
+<div class="time" style="width: 8.695652173913%"></div>
 <pre>
 
 Axiom interval_ind_beta_seg : forall (P : interval -&gt; Type)
@@ -136,7 +136,7 @@ reflexivity.
 <div class="code" title="File: Interval.v
 Line: 38
 Time: 0.001s">
-<div class="time" style="width: 5.2631578947368%"></div>
+<div class="time" style="width: 4.3478260869565%"></div>
 <pre>Definition interval_rec (P : Type) (a b : P) (p : a = b)
   : interval -&gt; P
   := interval_ind (fun _ =&gt; P) a b (transport_const _ _ @ p).</pre>
@@ -144,7 +144,7 @@ Time: 0.001s">
 <div class="code" title="File: Interval.v
 Line: 40
 Time: 0.001s">
-<div class="time" style="width: 5.2631578947368%"></div>
+<div class="time" style="width: 4.3478260869565%"></div>
 <pre>
 
 Definition interval_rec_beta_seg (P : Type) (a b : P) (p : a = b)
@@ -167,7 +167,7 @@ Time: 0s">
 <div class="code" title="File: Interval.v
 Line: 45
 Time: 0.002s">
-<div class="time" style="width: 10.526315789474%"></div>
+<div class="time" style="width: 8.695652173913%"></div>
 <pre>
   refine ((apD_const (interval_ind (fun _ =&gt; P) a b _) seg)^ @ _).</pre>
 </div>
@@ -180,16 +180,10 @@ Time: 0s">
 </div>
 <div class="code" title="File: Interval.v
 Line: 47
-Time: 0.004s">
-<div class="time" style="width: 21.052631578947%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Interval.v
-Line: 48
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Defined.
 
 (** ** The interval is contractible. *)
 
@@ -210,8 +204,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Interval.v
 Line: 52
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 4.3478260869565%"></div>
 <pre>
   exists zero.</pre>
 </div>
@@ -230,17 +224,11 @@ Time: 0s">
   refine (transport_paths_r _ _ @ concat_1p _).</pre>
 </div>
 <div class="code" title="File: Interval.v
-Line: 55
+Line: 56
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Interval.v
-Line: 57
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Defined.
 
 </pre>
 </div>

@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: DPath.v
 Line: 1
-Time: 0.042s">
+Time: 0.053s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
@@ -46,8 +46,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: DPath.v
 Line: 4
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.8867924528302%"></div>
 <pre>Definition dpath {A} (P : A -&gt; Type) {x y : A}
            (p : x = y) (u : P x) (v : P y) : Type.</pre>
 </div>
@@ -70,53 +70,47 @@ Line: 7
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 8
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
-<pre>
-
-Definition dpath_compose {A B} (f : A -&gt; B) (P : B -&gt; Type) {x y : A}
+Line: 9
+Time: 0.002s">
+<div class="time" style="width: 3.7735849056604%"></div>
+<pre>Definition dpath_compose {A B} (f : A -&gt; B) (P : B -&gt; Type) {x y : A}
            (p : x = y) (u : P (f x)) (v : P (f y))
   : dpath P (ap f p) u v &lt;~&gt; dpath (fun x =&gt; P (f x)) p u v.</pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 12
+Line: 11
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 13
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Line: 12
+Time: 0.002s">
+<div class="time" style="width: 3.7735849056604%"></div>
 <pre>
   destruct p; apply equiv_idmap.</pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 14
+Line: 13
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: DPath.v
-Line: 15
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Defined.
 
 (* Prod *)
 
 </pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 18
+Line: 17
 Time: 0.002s">
-<div class="time" style="width: 4.7619047619048%"></div>
+<div class="time" style="width: 3.7735849056604%"></div>
 <pre>Definition dpath_prod {A} (P Q : A -&gt; Type)
            {x y : A} (p : x = y)
            (u : P x) (v : P y) (r : Q x) (s : Q y)
@@ -124,40 +118,34 @@ Time: 0.002s">
   : dpath (fun x =&gt; P x * Q x) p (u,r) (v,s).</pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 22
+Line: 21
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 23
+Line: 22
 Time: 0.002s">
-<div class="time" style="width: 4.7619047619048%"></div>
+<div class="time" style="width: 3.7735849056604%"></div>
 <pre>
   destruct p; apply path_prod; assumption.</pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 24
+Line: 23
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: DPath.v
-Line: 25
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Defined.
 
 (* Forall *)
 
 </pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 28
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Line: 27
+Time: 0.002s">
+<div class="time" style="width: 3.7735849056604%"></div>
 <pre>Definition dpath_forall_const `{Funext} {A B} (P : A -&gt; B -&gt; Type)
            {x y : A} (p : x = y)
            (u : forall b, P x b) (v : forall b, P y b)
@@ -165,95 +153,89 @@ Time: 0.001s">
   : dpath (fun a =&gt; forall b, P a b) p u v.</pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 32
+Line: 31
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 33
+Line: 32
 Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+<div class="time" style="width: 1.8867924528302%"></div>
 <pre>
   destruct p; cbn in *.</pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 34
+Line: 33
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply path_forall; assumption.</pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 35
+Line: 34
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: DPath.v
-Line: 36
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Defined.
 
 (* Sigma *)
 
 </pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 39
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Line: 38
+Time: 0.002s">
+<div class="time" style="width: 3.7735849056604%"></div>
 <pre>Definition path_sig_uncurried {A : Type} (P : A -&gt; Type) (u v : sig P)
            (pq : {p : pr1 u = pr1 v &amp;
                       dpath P p (pr2 u) (pr2 v)})
 : u = v.</pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 42
+Line: 41
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 43
-Time: 0.002s">
-<div class="time" style="width: 4.7619047619048%"></div>
+Line: 42
+Time: 0.003s">
+<div class="time" style="width: 5.6603773584906%"></div>
 <pre>
   destruct u as [u1 u2]; destruct v as [v1 v2]; destruct pq as [p q].</pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 44
+Line: 43
 Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+<div class="time" style="width: 1.8867924528302%"></div>
 <pre>
   cbn in *; destruct p; cbn in *; destruct q; reflexivity.</pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 45
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Line: 44
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.  
+
+</pre>
 </div>
 <div class="code" title="File: DPath.v
 Line: 46
-Time: 0.002s">
-<div class="time" style="width: 4.7619047619048%"></div>
-<pre>  
-
-Definition path_sig {A : Type} (P : A -&gt; Type) (u v : sig P)
+Time: 0.003s">
+<div class="time" style="width: 5.6603773584906%"></div>
+<pre>Definition path_sig {A : Type} (P : A -&gt; Type) (u v : sig P)
            (p : pr1 u = pr1 v) (q : dpath P p (pr2 u) (pr2 v))
 : u = v
   := path_sig_uncurried P u v (exist _ p q).</pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 51
+Line: 49
 Time: 0.002s">
-<div class="time" style="width: 4.7619047619048%"></div>
+<div class="time" style="width: 3.7735849056604%"></div>
 <pre>
 
 Definition ap_pr1_path_sig {A : Type} (P : A -&gt; Type) (u v : sig P)
@@ -261,33 +243,33 @@ Definition ap_pr1_path_sig {A : Type} (P : A -&gt; Type) (u v : sig P)
 : ap pr1 (path_sig P u v p q) = p.</pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 55
+Line: 53
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 56
-Time: 0.005s">
-<div class="time" style="width: 11.904761904762%"></div>
+Line: 54
+Time: 0.007s">
+<div class="time" style="width: 13.207547169811%"></div>
 <pre>
   destruct u, v; cbn in *; destruct p; cbn in *; destruct q; reflexivity.</pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 57
-Time: 0.002s">
-<div class="time" style="width: 4.7619047619048%"></div>
+Line: 55
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 58
-Time: 0.005s">
-<div class="time" style="width: 11.904761904762%"></div>
-<pre>
-
-Definition ap_pr1_pr1_path_sig {A : Type} (B : A -&gt; Type) (P : sig B -&gt; Type)
+Line: 57
+Time: 0.008s">
+<div class="time" style="width: 15.094339622642%"></div>
+<pre>Definition ap_pr1_pr1_path_sig {A : Type} (B : A -&gt; Type) (P : sig B -&gt; Type)
            (u v : sig P)
            (p : pr1 (pr1 u) = pr1 (pr1 v))
            (q : dpath B p (pr2 (pr1 u)) (pr2 (pr1 v)))
@@ -296,38 +278,32 @@ Definition ap_pr1_pr1_path_sig {A : Type} (B : A -&gt; Type) (P : sig B -&gt; Ty
     = p.</pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 66
+Line: 63
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 67
-Time: 0.007s">
-<div class="time" style="width: 16.666666666667%"></div>
+Line: 64
+Time: 0.009s">
+<div class="time" style="width: 16.981132075472%"></div>
 <pre>
   destruct u as [[u11 u12] u2]; destruct v as [[v11 v12] v2].</pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 68
-Time: 0.007s">
-<div class="time" style="width: 16.666666666667%"></div>
+Line: 65
+Time: 0.01s">
+<div class="time" style="width: 18.867924528302%"></div>
 <pre>
   cbn in *; destruct p; cbn in *; destruct q; cbn in *; destruct r; reflexivity.</pre>
 </div>
 <div class="code" title="File: DPath.v
-Line: 69
-Time: 0.007s">
-<div class="time" style="width: 16.666666666667%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: DPath.v
-Line: 71
+Line: 67
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Defined.
 
 </pre>
 </div>

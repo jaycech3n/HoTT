@@ -36,35 +36,35 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pushout.v
 Line: 1
-Time: 0.017s">
-<div class="time" style="width: 8.5858585858586%"></div>
+Time: 0.021s">
+<div class="time" style="width: 8.5714285714286%"></div>
 <pre>Require Import HoTT.Basics.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 1
-Time: 0.023s">
-<div class="time" style="width: 11.616161616162%"></div>
+Time: 0.027s">
+<div class="time" style="width: 11.020408163265%"></div>
 <pre>
 Require Import Types.Paths Types.Forall Types.Sigma Types.Arrow Types.Universe Types.Unit Types.Sum.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 2
-Time: 0.01s">
-<div class="time" style="width: 5.0505050505051%"></div>
+Time: 0.013s">
+<div class="time" style="width: 5.3061224489796%"></div>
 <pre>
 Require Import HSet TruncType.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 3
-Time: 0.001s">
-<div class="time" style="width: 0.50505050505051%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.81632653061224%"></div>
 <pre>
 Require Export HIT.Coeq.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 4
-Time: 0.183s">
-<div class="time" style="width: 92.424242424242%"></div>
+Time: 0.245s">
+<div class="time" style="width: 100%"></div>
 <pre>
 Require Import HIT.Truncations.</pre>
 </div>
@@ -103,14 +103,14 @@ Record Cocone (S : Span) (D : Type) :=
 <div class="code" title="File: Pushout.v
 Line: 24
 Time: 0.002s">
-<div class="time" style="width: 1.010101010101%"></div>
+<div class="time" style="width: 0.81632653061224%"></div>
 <pre>Definition pushout {A B C : Type} (f : A -&gt; B) (g : A -&gt; C) : Type
   := Coeq (inl o f) (inr o g).</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 25
 Time: 0.003s">
-<div class="time" style="width: 1.5151515151515%"></div>
+<div class="time" style="width: 1.2244897959184%"></div>
 <pre>
 
 Definition push {A B C : Type} {f : A -&gt; B} {g : A -&gt; C}
@@ -120,22 +120,22 @@ Definition push {A B C : Type} {f : A -&gt; B} {g : A -&gt; C}
 <div class="code" title="File: Pushout.v
 Line: 29
 Time: 0.001s">
-<div class="time" style="width: 0.50505050505051%"></div>
+<div class="time" style="width: 0.40816326530612%"></div>
 <pre>
 
 Definition pushl {A B C} {f : A -&gt; B} {g : A -&gt; C} (b : B) : pushout f g := push (inl b).</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 31
-Time: 0.001s">
-<div class="time" style="width: 0.50505050505051%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.81632653061224%"></div>
 <pre>
 Definition pushr {A B C} {f : A -&gt; B} {g : A -&gt; C} (c : C) : pushout f g := push (inr c).</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 32
-Time: 0.004s">
-<div class="time" style="width: 2.020202020202%"></div>
+Time: 0.006s">
+<div class="time" style="width: 2.4489795918367%"></div>
 <pre>
 
 Definition pp {A B C : Type} {f : A -&gt; B} {g : A -&gt; C} (a : A) : pushl (f a) = pushr (g a)
@@ -143,8 +143,8 @@ Definition pp {A B C : Type} {f : A -&gt; B} {g : A -&gt; C} (a : A) : pushl (f 
 </div>
 <div class="code" title="File: Pushout.v
 Line: 35
-Time: 0.006s">
-<div class="time" style="width: 3.030303030303%"></div>
+Time: 0.009s">
+<div class="time" style="width: 3.6734693877551%"></div>
 <pre>
 
 Definition pushout_ind {A B C} (f : A -&gt; B) (g : A -&gt; C) (P : pushout f g -&gt; Type)
@@ -156,8 +156,8 @@ Definition pushout_ind {A B C} (f : A -&gt; B) (g : A -&gt; C) (P : pushout f g 
 </div>
 <div class="code" title="File: Pushout.v
 Line: 42
-Time: 0.012s">
-<div class="time" style="width: 6.0606060606061%"></div>
+Time: 0.015s">
+<div class="time" style="width: 6.1224489795918%"></div>
 <pre>
 
 Definition pushout_ind_beta_pp {A B C f g}
@@ -205,15 +205,15 @@ Arguments pushout_ind : simpl never.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 55
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.40816326530612%"></div>
 <pre>
 Arguments pushout_ind_beta_pp : simpl never.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 56
-Time: 0.003s">
-<div class="time" style="width: 1.5151515151515%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.6326530612245%"></div>
 <pre>
 
 Definition pushout_rec {A B C} {f : A -&gt; B} {g : A -&gt; C} (P : Type)
@@ -225,8 +225,8 @@ Definition pushout_rec {A B C} {f : A -&gt; B} {g : A -&gt; C} (P : Type)
 </div>
 <div class="code" title="File: Pushout.v
 Line: 63
-Time: 0.002s">
-<div class="time" style="width: 1.010101010101%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.6326530612245%"></div>
 <pre>
 
 Definition pushout_rec_beta_pp {A B C f g} (P : Type)
@@ -252,37 +252,31 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pushout.v
 Line: 72
-Time: 0.004s">
-<div class="time" style="width: 2.020202020202%"></div>
+Time: 0.005s">
+<div class="time" style="width: 2.0408163265306%"></div>
 <pre>
   eapply (cancelL (transport_const (pp a) _)).</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 73
-Time: 0.004s">
-<div class="time" style="width: 2.020202020202%"></div>
+Time: 0.011s">
+<div class="time" style="width: 4.4897959183673%"></div>
 <pre>
   refine ((apD_const (@pushout_ind A B C f g (fun _ =&gt; P) pushb pushc _) (pp a))^ @ _).</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 74
 Time: 0.001s">
-<div class="time" style="width: 0.50505050505051%"></div>
+<div class="time" style="width: 0.40816326530612%"></div>
 <pre>
   refine (pushout_ind_beta_pp (fun _ =&gt; P) _ _ _ _).</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 75
-Time: 0.019s">
-<div class="time" style="width: 9.5959595959596%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Pushout.v
-Line: 76
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Defined.
 
 (** ** Symmetry *)
 
@@ -290,8 +284,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pushout.v
 Line: 79
-Time: 0.004s">
-<div class="time" style="width: 2.020202020202%"></div>
+Time: 0.005s">
+<div class="time" style="width: 2.0408163265306%"></div>
 <pre>Definition pushout_sym_map {A B C} {f : A -&gt; B} {g : A -&gt; C}
   : pushout f g -&gt; pushout g f
   := pushout_rec (pushout g f) pushr pushl (fun a : A =&gt; (pp a)^).</pre>
@@ -320,8 +314,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pushout.v
 Line: 85
-Time: 0.002s">
-<div class="time" style="width: 1.010101010101%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.6326530612245%"></div>
 <pre> srapply @pushout_ind.</pre>
 </div>
 <div class="code" title="File: Pushout.v
@@ -365,29 +359,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pushout.v
 Line: 88
-Time: 0.198s">
-<div class="time" style="width: 100%"></div>
+Time: 0.235s">
+<div class="time" style="width: 95.918367346939%"></div>
 <pre>
     abstract (rewrite transport_paths_FFlr, pushout_rec_beta_pp, ap_V, pushout_rec_beta_pp; hott_simpl).</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 89
-Time: 0.002s">
-<div class="time" style="width: 1.010101010101%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Pushout.v
-Line: 90
+Line: 91
 Time: 0.009s">
-<div class="time" style="width: 4.5454545454545%"></div>
-<pre>
-
-Definition pushout_sym {A B C} {f : A -&gt; B} {g : A -&gt; C} : pushout f g &lt;~&gt; pushout g f :=
+<div class="time" style="width: 3.6734693877551%"></div>
+<pre>Definition pushout_sym {A B C} {f : A -&gt; B} {g : A -&gt; C} : pushout f g &lt;~&gt; pushout g f :=
 equiv_adjointify pushout_sym_map pushout_sym_map sect_pushout_sym_map sect_pushout_sym_map.</pre>
 </div>
 <div class="code" title="File: Pushout.v
-Line: 93
+Line: 92
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -399,41 +393,54 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Pushout.v
-Line: 98
+Line: 97
 Time: 0.005s">
-<div class="time" style="width: 2.5252525252525%"></div>
+<div class="time" style="width: 2.0408163265306%"></div>
 <pre>Lemma equiv_pushout {A B C f g A' B' C' f' g'}
   (eA : A &lt;~&gt; A') (eB : B &lt;~&gt; B') (eC : C &lt;~&gt; C')
   (p : eB o f == f' o eA) (q : eC o g == g' o eA)
   : pushout f g &lt;~&gt; pushout f' g'.</pre>
 </div>
 <div class="code" title="File: Pushout.v
-Line: 101
+Line: 100
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Pushout.v
-Line: 102
+Line: 101
 Time: 0.001s">
-<div class="time" style="width: 0.50505050505051%"></div>
+<div class="time" style="width: 0.40816326530612%"></div>
 <pre>
   refine (equiv_functor_coeq' eA (equiv_functor_sum' eB eC) _ _).</pre>
 </div>
 <div class="code" title="File: Pushout.v
-Line: 103
+Line: 102
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   all:unfold pointwise_paths.</pre>
 </div>
 <div class="code" title="File: Pushout.v
+Line: 103
+Time: 0.001s">
+<div class="time" style="width: 0.40816326530612%"></div>
+<pre>
+  all:intro; simpl; apply ap.</pre>
+</div>
+<div class="code" title="File: Pushout.v
 Line: 104
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  all:intro; simpl; apply ap.</pre>
+  +</pre>
+</div>
+<div class="code" title="File: Pushout.v
+Line: 105
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply p.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 105
@@ -446,86 +453,67 @@ Time: 0s">
 Line: 106
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> apply p.</pre>
+<pre> apply q.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 106
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  +</pre>
-</div>
-<div class="code" title="File: Pushout.v
-Line: 107
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> apply q.</pre>
-</div>
-<div class="code" title="File: Pushout.v
-Line: 107
-Time: 0.001s">
-<div class="time" style="width: 0.50505050505051%"></div>
-<pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 108
 Time: 0.02s">
-<div class="time" style="width: 10.10101010101%"></div>
-<pre>
-
-Lemma equiv_pushout_pp {A B C f g A' B' C' f' g'}
+<div class="time" style="width: 8.1632653061224%"></div>
+<pre>Lemma equiv_pushout_pp {A B C f g A' B' C' f' g'}
   {eA : A &lt;~&gt; A'} {eB : B &lt;~&gt; B'} {eC : C &lt;~&gt; C'}
   {p : eB o f == f' o eA} {q : eC o g == g' o eA}
   : forall a : A, ap (equiv_pushout eA eB eC p q) (pp a)
     = ap push (ap inl (p a)) @ pp (eA a) @ ap push (ap inr (q a))^.</pre>
 </div>
 <div class="code" title="File: Pushout.v
-Line: 114
+Line: 112
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Pushout.v
-Line: 115
-Time: 0.003s">
-<div class="time" style="width: 1.5151515151515%"></div>
+Line: 113
+Time: 0.004s">
+<div class="time" style="width: 1.6326530612245%"></div>
 <pre>
   apply @functor_coeq_beta_cp.</pre>
 </div>
 <div class="code" title="File: Pushout.v
-Line: 116
-Time: 0.003s">
-<div class="time" style="width: 1.5151515151515%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Pushout.v
-Line: 117
+Line: 114
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Defined.
 
 (** ** Cones of hsets *)
 
 </pre>
 </div>
 <div class="code" title="File: Pushout.v
-Line: 120
+Line: 118
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Section SetCone.</pre>
 </div>
 <div class="code" title="File: Pushout.v
-Line: 120
+Line: 118
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Context {A B : hSet} (f : A -&gt; B).</pre>
 </div>
 <div class="code" title="File: Pushout.v
-Line: 121
+Line: 119
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -533,15 +521,15 @@ Time: 0s">
   Definition setcone := Trunc 0 (pushout f (const tt)).</pre>
 </div>
 <div class="code" title="File: Pushout.v
-Line: 123
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 121
+Time: 0.001s">
+<div class="time" style="width: 0.40816326530612%"></div>
 <pre>
 
   Global Instance istrunc_setcone : IsHSet setcone := _.</pre>
 </div>
 <div class="code" title="File: Pushout.v
-Line: 125
+Line: 123
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -549,14 +537,14 @@ Time: 0s">
   Definition setcone_point : setcone := tr (push (inr tt)).</pre>
 </div>
 <div class="code" title="File: Pushout.v
-Line: 127
+Line: 125
 Time: 0.001s">
-<div class="time" style="width: 0.50505050505051%"></div>
+<div class="time" style="width: 0.40816326530612%"></div>
 <pre>
 End SetCone.</pre>
 </div>
 <div class="code" title="File: Pushout.v
-Line: 129
+Line: 127
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

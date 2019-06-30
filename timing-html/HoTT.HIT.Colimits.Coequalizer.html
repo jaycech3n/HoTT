@@ -30,14 +30,14 @@ pre {
 
 <div class="code" title="File: Coequalizer.v
 Line: 1
-Time: 0.046s">
-<div class="time" style="width: 26.436781609195%"></div>
+Time: 0.057s">
+<div class="time" style="width: 30.48128342246%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types HoTT.HIT.Coeq.</pre>
 </div>
 <div class="code" title="File: Coequalizer.v
 Line: 1
-Time: 0.004s">
-<div class="time" style="width: 2.2988505747126%"></div>
+Time: 0.005s">
+<div class="time" style="width: 2.6737967914439%"></div>
 <pre>
 Require Import Colimits.Diagram Colimits.Colimit.</pre>
 </div>
@@ -137,16 +137,16 @@ Line: 20
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Defined.</pre>
+  Defined.
+
+
+ </pre>
 </div>
 <div class="code" title="File: Coequalizer.v
-Line: 21
+Line: 24
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-
-
-  Context {B A : Type}.</pre>
+<pre>Context {B A : Type}.</pre>
 </div>
 <div class="code" title="File: Coequalizer.v
 Line: 24
@@ -200,8 +200,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Coequalizer.v
 Line: 32
-Time: 0.003s">
-<div class="time" style="width: 1.7241379310345%"></div>
+Time: 0.004s">
+<div class="time" style="width: 2.1390374331551%"></div>
 <pre> intros i j; destruct i, j; intro H; destruct H;[exact f | exact g].</pre>
 </div>
 <div class="code" title="File: Coequalizer.v
@@ -209,15 +209,15 @@ Line: 32
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Defined.</pre>
+  Defined.
+
+ </pre>
 </div>
 <div class="code" title="File: Coequalizer.v
-Line: 33
+Line: 35
 Time: 0.002s">
-<div class="time" style="width: 1.1494252873563%"></div>
-<pre>
-
-  Definition Build_coequalizer_cocone {f g : B -&gt; A}
+<div class="time" style="width: 1.0695187165775%"></div>
+<pre>Definition Build_coequalizer_cocone {f g : B -&gt; A}
              `(q: A -&gt; Q) (Hq: q o g == q o f)
     : cocone (coequalizer_diag f g) Q.</pre>
 </div>
@@ -244,8 +244,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Coequalizer.v
 Line: 40
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.53475935828877%"></div>
 <pre> destruct i; cbn;[exact (q o f) | exact q].</pre>
 </div>
 <div class="code" title="File: Coequalizer.v
@@ -257,24 +257,24 @@ Time: 0s">
 </div>
 <div class="code" title="File: Coequalizer.v
 Line: 41
-Time: 0.005s">
-<div class="time" style="width: 2.8735632183908%"></div>
+Time: 0.006s">
+<div class="time" style="width: 3.2085561497326%"></div>
 <pre> destruct i, j, g0; cbn;[reflexivity | exact Hq].</pre>
 </div>
 <div class="code" title="File: Coequalizer.v
 Line: 41
-Time: 0.002s">
-<div class="time" style="width: 1.1494252873563%"></div>
-<pre>
-  Defined.</pre>
-</div>
-<div class="code" title="File: Coequalizer.v
-Line: 42
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+  Defined.
 
-  Definition is_coequalizer (f g : B -&gt; A)
+ </pre>
+</div>
+<div class="code" title="File: Coequalizer.v
+Line: 44
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Definition is_coequalizer (f g : B -&gt; A)
     := is_colimit (coequalizer_diag f g).</pre>
 </div>
 <div class="code" title="File: Coequalizer.v
@@ -373,8 +373,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Coequalizer.v
 Line: 61
-Time: 0.005s">
-<div class="time" style="width: 2.8735632183908%"></div>
+Time: 0.006s">
+<div class="time" style="width: 3.2085561497326%"></div>
 <pre> intros i j phi x; destruct i, j, phi; simpl.</pre>
 </div>
 <div class="code" title="File: Coequalizer.v
@@ -386,8 +386,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Coequalizer.v
 Line: 62
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.53475935828877%"></div>
 <pre> exact (cp x).</pre>
 </div>
 <div class="code" title="File: Coequalizer.v
@@ -405,18 +405,18 @@ Time: 0s">
 </div>
 <div class="code" title="File: Coequalizer.v
 Line: 63
-Time: 0.002s">
-<div class="time" style="width: 1.1494252873563%"></div>
-<pre>
-  Defined.</pre>
-</div>
-<div class="code" title="File: Coequalizer.v
-Line: 64
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+  Defined.
 
-  Lemma is_coequalizer_Coeq : is_colimit (coequalizer_diag f g) (Coeq f g).</pre>
+ </pre>
+</div>
+<div class="code" title="File: Coequalizer.v
+Line: 66
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Lemma is_coequalizer_Coeq : is_colimit (coequalizer_diag f g) (Coeq f g).</pre>
 </div>
 <div class="code" title="File: Coequalizer.v
 Line: 66
@@ -493,8 +493,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Coequalizer.v
 Line: 73
-Time: 0.001s">
-<div class="time" style="width: 0.57471264367816%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.0695187165775%"></div>
 <pre> etransitivity.</pre>
 </div>
 <div class="code" title="File: Coequalizer.v
@@ -539,7 +539,7 @@ Time: 0s">
 <div class="code" title="File: Coequalizer.v
 Line: 76
 Time: 0.001s">
-<div class="time" style="width: 0.57471264367816%"></div>
+<div class="time" style="width: 0.53475935828877%"></div>
 <pre> simple refine (path_cocone _ _).</pre>
 </div>
 <div class="code" title="File: Coequalizer.v
@@ -551,8 +551,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Coequalizer.v
 Line: 77
-Time: 0.002s">
-<div class="time" style="width: 1.1494252873563%"></div>
+Time: 0.003s">
+<div class="time" style="width: 1.6042780748663%"></div>
 <pre> intros i x; destruct i; simpl.</pre>
 </div>
 <div class="code" title="File: Coequalizer.v
@@ -590,8 +590,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Coequalizer.v
 Line: 80
-Time: 0.042s">
-<div class="time" style="width: 24.137931034483%"></div>
+Time: 0.054s">
+<div class="time" style="width: 28.877005347594%"></div>
 <pre> intros i j phi x; destruct i, j, phi; simpl.</pre>
 </div>
 <div class="code" title="File: Coequalizer.v
@@ -603,14 +603,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Coequalizer.v
 Line: 81
-Time: 0.143s">
-<div class="time" style="width: 82.183908045977%"></div>
+Time: 0.179s">
+<div class="time" style="width: 95.72192513369%"></div>
 <pre> hott_simpl.</pre>
 </div>
 <div class="code" title="File: Coequalizer.v
 Line: 81
-Time: 0.006s">
-<div class="time" style="width: 3.448275862069%"></div>
+Time: 0.008s">
+<div class="time" style="width: 4.2780748663102%"></div>
 <pre>
           match goal with
           | [|- ap (Coeq_rec ?a ?b ?c) _ @ _ = _ ]
@@ -619,8 +619,8 @@ Time: 0.006s">
 </div>
 <div class="code" title="File: Coequalizer.v
 Line: 85
-Time: 0.101s">
-<div class="time" style="width: 58.045977011494%"></div>
+Time: 0.117s">
+<div class="time" style="width: 62.566844919786%"></div>
 <pre> hott_simpl.</pre>
 </div>
 <div class="code" title="File: Coequalizer.v
@@ -699,43 +699,43 @@ Time: 0s">
 <div class="code" title="File: Coequalizer.v
 Line: 92
 Time: 0.001s">
-<div class="time" style="width: 0.57471264367816%"></div>
+<div class="time" style="width: 0.53475935828877%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: Coequalizer.v
 Line: 92
-Time: 0.004s">
-<div class="time" style="width: 2.2988505747126%"></div>
+Time: 0.005s">
+<div class="time" style="width: 2.6737967914439%"></div>
 <pre>
         rewrite transport_paths_FlFr.</pre>
 </div>
 <div class="code" title="File: Coequalizer.v
 Line: 93
-Time: 0.007s">
-<div class="time" style="width: 4.0229885057471%"></div>
+Time: 0.008s">
+<div class="time" style="width: 4.2780748663102%"></div>
 <pre>
         rewrite Coeq_rec_beta_cp.</pre>
 </div>
 <div class="code" title="File: Coequalizer.v
 Line: 94
-Time: 0.174s">
+Time: 0.187s">
 <div class="time" style="width: 100%"></div>
 <pre> hott_simpl.</pre>
 </div>
 <div class="code" title="File: Coequalizer.v
 Line: 94
-Time: 0.048s">
-<div class="time" style="width: 27.586206896552%"></div>
-<pre>
-  Defined.</pre>
-</div>
-<div class="code" title="File: Coequalizer.v
-Line: 95
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+  Defined.
 
-  Definition equiv_Coeq_Coequalizer
+ </pre>
+</div>
+<div class="code" title="File: Coequalizer.v
+Line: 97
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Definition equiv_Coeq_Coequalizer
     : Coeq f g &lt;~&gt; Coequalizer f g.</pre>
 </div>
 <div class="code" title="File: Coequalizer.v
@@ -748,7 +748,7 @@ Time: 0s">
 <div class="code" title="File: Coequalizer.v
 Line: 99
 Time: 0.001s">
-<div class="time" style="width: 0.57471264367816%"></div>
+<div class="time" style="width: 0.53475935828877%"></div>
 <pre>
     serapply colimit_unicity.</pre>
 </div>
@@ -771,18 +771,18 @@ Line: 102
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Defined.</pre>
-</div>
-<div class="code" title="File: Coequalizer.v
-Line: 103
-Time: 0.024s">
-<div class="time" style="width: 13.793103448276%"></div>
-<pre>
+  Defined.
 
-End Coequalizer.</pre>
+</pre>
 </div>
 <div class="code" title="File: Coequalizer.v
-Line: 106
+Line: 104
+Time: 0.027s">
+<div class="time" style="width: 14.438502673797%"></div>
+<pre>End Coequalizer.</pre>
+</div>
+<div class="code" title="File: Coequalizer.v
+Line: 105
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

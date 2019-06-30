@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: ua_prod_algebra.v
 Line: 1
-Time: 0.479s">
+Time: 0.605s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import
   HoTT.Basics.Equivalences
@@ -85,7 +85,7 @@ Time: 0s">
 <div class="code" title="File: ua_prod_algebra.v
 Line: 18
 Time: 0.002s">
-<div class="time" style="width: 0.41753653444676%"></div>
+<div class="time" style="width: 0.33057851239669%"></div>
 <pre>
 
   Fixpoint op_prod_algebra (w : SymbolType σ)
@@ -101,7 +101,7 @@ Time: 0.002s">
 <div class="code" title="File: ua_prod_algebra.v
 Line: 28
 Time: 0.001s">
-<div class="time" style="width: 0.20876826722338%"></div>
+<div class="time" style="width: 0.16528925619835%"></div>
 <pre>
 
   Definition ops_prod_algebra (u : Symbol σ)
@@ -144,7 +144,7 @@ Time: 0s">
 <div class="code" title="File: ua_prod_algebra.v
 Line: 41
 Time: 0.008s">
-<div class="time" style="width: 1.6701461377871%"></div>
+<div class="time" style="width: 1.3223140495868%"></div>
 <pre> exact _.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
@@ -157,12 +157,11 @@ Time: 0s">
 <div class="code" title="File: ua_prod_algebra.v
 Line: 42
 Time: 0.001s">
-<div class="time" style="width: 0.20876826722338%"></div>
-<pre>
-End prod_algebra.</pre>
+<div class="time" style="width: 0.16528925619835%"></div>
+<pre>End prod_algebra.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 43
+Line: 42
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -172,20 +171,20 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 46
+Line: 45
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Section hom_proj_prod_algebra.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 46
+Line: 45
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Context `{Funext} {σ : Signature} (I : Type) (A : I → Algebra σ).</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 47
+Line: 46
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -195,9 +194,9 @@ Time: 0s">
     := c i.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 51
+Line: 50
 Time: 0.001s">
-<div class="time" style="width: 0.20876826722338%"></div>
+<div class="time" style="width: 0.16528925619835%"></div>
 <pre>
 
   Lemma oppreserving_proj_prod_algebra {w : SymbolType σ}
@@ -207,18 +206,31 @@ Time: 0.001s">
         (op_prod_algebra I A w v) α.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 57
+Line: 56
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 58
+Line: 57
 Time: 0.001s">
-<div class="time" style="width: 0.20876826722338%"></div>
+<div class="time" style="width: 0.16528925619835%"></div>
 <pre>
     induction w.</pre>
+</div>
+<div class="code" title="File: ua_prod_algebra.v
+Line: 58
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    -</pre>
+</div>
+<div class="code" title="File: ua_prod_algebra.v
+Line: 59
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> exact P.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
 Line: 59
@@ -231,97 +243,84 @@ Time: 0s">
 Line: 60
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> exact P.</pre>
+<pre> intro p.</pre>
+</div>
+<div class="code" title="File: ua_prod_algebra.v
+Line: 60
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply (IHw (λ i, v i (p i)) (α (p i))).</pre>
+</div>
+<div class="code" title="File: ua_prod_algebra.v
+Line: 60
+Time: 0.001s">
+<div class="time" style="width: 0.16528925619835%"></div>
+<pre> f_ap.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
 Line: 60
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    -</pre>
-</div>
-<div class="code" title="File: ua_prod_algebra.v
-Line: 61
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> intro p.</pre>
-</div>
-<div class="code" title="File: ua_prod_algebra.v
-Line: 61
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> apply (IHw (λ i, v i (p i)) (α (p i))).</pre>
-</div>
-<div class="code" title="File: ua_prod_algebra.v
-Line: 61
-Time: 0.001s">
-<div class="time" style="width: 0.20876826722338%"></div>
-<pre> f_ap.</pre>
-</div>
-<div class="code" title="File: ua_prod_algebra.v
-Line: 61
-Time: 0.001s">
-<div class="time" style="width: 0.20876826722338%"></div>
-<pre>
-  Defined.</pre>
-</div>
-<div class="code" title="File: ua_prod_algebra.v
-Line: 62
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+  Defined.
 
-  Global Instance is_homomorphism_proj_prod_algebra (i:I)
+ </pre>
+</div>
+<div class="code" title="File: ua_prod_algebra.v
+Line: 63
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Global Instance is_homomorphism_proj_prod_algebra (i:I)
     : IsHomomorphism (def_proj_prod_algebra i).</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 65
+Line: 64
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 66
+Line: 65
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     intro u.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 67
+Line: 66
 Time: 0.001s">
-<div class="time" style="width: 0.20876826722338%"></div>
+<div class="time" style="width: 0.16528925619835%"></div>
 <pre>
     by apply oppreserving_proj_prod_algebra.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 68
+Line: 67
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Defined.</pre>
+  Defined.
+
+ </pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 69
+Line: 70
 Time: 0.001s">
-<div class="time" style="width: 0.20876826722338%"></div>
-<pre>
-
-  Definition hom_proj_prod_algebra (i : I)
+<div class="time" style="width: 0.16528925619835%"></div>
+<pre>Definition hom_proj_prod_algebra (i : I)
     : Homomorphism (ProdAlgebra I A) (A i)
     := BuildHomomorphism (def_proj_prod_algebra i).</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 73
+Line: 72
 Time: 0.001s">
-<div class="time" style="width: 0.20876826722338%"></div>
+<div class="time" style="width: 0.16528925619835%"></div>
 <pre>
 
 End hom_proj_prod_algebra.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 75
+Line: 74
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -331,13 +330,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 78
+Line: 77
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Section ump_prod_algebra.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 78
+Line: 77
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -349,9 +348,9 @@ Time: 0s">
     (C : Algebra σ).</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 84
-Time: 0.002s">
-<div class="time" style="width: 0.41753653444676%"></div>
+Line: 83
+Time: 0.001s">
+<div class="time" style="width: 0.16528925619835%"></div>
 <pre>
 
   Definition hom_prod_algebra_mapout
@@ -360,9 +359,9 @@ Time: 0.002s">
     := hom_compose (hom_proj_prod_algebra I A i) f.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 89
+Line: 88
 Time: 0.001s">
-<div class="time" style="width: 0.20876826722338%"></div>
+<div class="time" style="width: 0.16528925619835%"></div>
 <pre>
 
   Definition def_prod_algebra_mapin (f : ∀ (i:I) s, C s → A i s)
@@ -370,9 +369,9 @@ Time: 0.001s">
     := λ (s : Sort σ) (x : C s) (i : I), f i s x.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 93
+Line: 92
 Time: 0.002s">
-<div class="time" style="width: 0.41753653444676%"></div>
+<div class="time" style="width: 0.33057851239669%"></div>
 <pre>
 
   Lemma oppreserving_prod_algebra_mapin {w : SymbolType σ}
@@ -383,18 +382,37 @@ Time: 0.002s">
         (op_prod_algebra I A w (λ i, α i)).</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 100
+Line: 99
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 101
+Line: 100
 Time: 0.001s">
-<div class="time" style="width: 0.20876826722338%"></div>
+<div class="time" style="width: 0.16528925619835%"></div>
 <pre>
     induction w.</pre>
+</div>
+<div class="code" title="File: ua_prod_algebra.v
+Line: 101
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    -</pre>
+</div>
+<div class="code" title="File: ua_prod_algebra.v
+Line: 102
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> funext i.</pre>
+</div>
+<div class="code" title="File: ua_prod_algebra.v
+Line: 102
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply P.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
 Line: 102
@@ -407,116 +425,97 @@ Time: 0s">
 Line: 103
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> funext i.</pre>
-</div>
-<div class="code" title="File: ua_prod_algebra.v
-Line: 103
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> apply P.</pre>
-</div>
-<div class="code" title="File: ua_prod_algebra.v
-Line: 103
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    -</pre>
-</div>
-<div class="code" title="File: ua_prod_algebra.v
-Line: 104
-Time: 0s">
-<div class="time" style="width: 0%"></div>
 <pre> intro x.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 104
+Line: 103
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply IHw.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 104
+Line: 103
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intro i.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 104
+Line: 103
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply P.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 104
-Time: 0.001s">
-<div class="time" style="width: 0.20876826722338%"></div>
-<pre>
-  Defined.</pre>
-</div>
-<div class="code" title="File: ua_prod_algebra.v
-Line: 105
+Line: 103
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+  Defined.
 
-  Global Instance is_homomorphism_prod_algebra_mapin
+ </pre>
+</div>
+<div class="code" title="File: ua_prod_algebra.v
+Line: 106
+Time: 0.001s">
+<div class="time" style="width: 0.16528925619835%"></div>
+<pre>Global Instance is_homomorphism_prod_algebra_mapin
     (f : ∀ (i:I), Homomorphism C (A i))
     : IsHomomorphism (def_prod_algebra_mapin f).</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 109
+Line: 108
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 110
+Line: 109
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     intro u.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 111
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 110
+Time: 0.001s">
+<div class="time" style="width: 0.16528925619835%"></div>
 <pre>
     apply oppreserving_prod_algebra_mapin.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 112
+Line: 111
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     intro i.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 113
+Line: 112
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     apply f.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 114
+Line: 113
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Defined.</pre>
+  Defined.
+
+ </pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 115
+Line: 116
 Time: 0.002s">
-<div class="time" style="width: 0.41753653444676%"></div>
-<pre>
-
-  Definition hom_prod_algebra_mapin (f : ∀ i, Homomorphism C (A i))
+<div class="time" style="width: 0.33057851239669%"></div>
+<pre>Definition hom_prod_algebra_mapin (f : ∀ i, Homomorphism C (A i))
     : Homomorphism C (ProdAlgebra I A)
     := BuildHomomorphism (def_prod_algebra_mapin f).</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 119
+Line: 118
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -535,25 +534,44 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 131
+Line: 130
 Time: 0.001s">
-<div class="time" style="width: 0.20876826722338%"></div>
+<div class="time" style="width: 0.16528925619835%"></div>
 <pre>Lemma ump_prod_algebra `{!∀ i, IsHSetAlgebra (A i)}
    : (∀ (i:I), Homomorphism C (A i)) &lt;~&gt; Homomorphism C (ProdAlgebra I A).</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 132
+Line: 131
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 133
+Line: 132
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     apply (equiv_adjointify hom_prod_algebra_mapin hom_prod_algebra_mapout).</pre>
+</div>
+<div class="code" title="File: ua_prod_algebra.v
+Line: 133
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    -</pre>
+</div>
+<div class="code" title="File: ua_prod_algebra.v
+Line: 134
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intro f.</pre>
+</div>
+<div class="code" title="File: ua_prod_algebra.v
+Line: 134
+Time: 0.002s">
+<div class="time" style="width: 0.33057851239669%"></div>
+<pre> by apply path_hset_homomorphism.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
 Line: 134
@@ -570,8 +588,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_prod_algebra.v
 Line: 135
-Time: 0.002s">
-<div class="time" style="width: 0.41753653444676%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> funext i.</pre>
+</div>
+<div class="code" title="File: ua_prod_algebra.v
+Line: 135
+Time: 0.001s">
+<div class="time" style="width: 0.16528925619835%"></div>
 <pre> by apply path_hset_homomorphism.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
@@ -579,42 +603,16 @@ Line: 135
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    -</pre>
-</div>
-<div class="code" title="File: ua_prod_algebra.v
-Line: 136
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> intro f.</pre>
-</div>
-<div class="code" title="File: ua_prod_algebra.v
-Line: 136
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> funext i.</pre>
-</div>
-<div class="code" title="File: ua_prod_algebra.v
-Line: 136
-Time: 0.001s">
-<div class="time" style="width: 0.20876826722338%"></div>
-<pre> by apply path_hset_homomorphism.</pre>
-</div>
-<div class="code" title="File: ua_prod_algebra.v
-Line: 136
-Time: 0.001s">
-<div class="time" style="width: 0.20876826722338%"></div>
-<pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 137
+Line: 136
 Time: 0.003s">
-<div class="time" style="width: 0.62630480167015%"></div>
-<pre>
-End ump_prod_algebra.</pre>
+<div class="time" style="width: 0.49586776859504%"></div>
+<pre>End ump_prod_algebra.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 138
+Line: 136
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -624,20 +622,20 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 141
+Line: 139
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Section bin_prod_algebra.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 141
+Line: 139
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Context `{Funext} {σ : Signature} (A B : Algebra σ).</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 142
+Line: 140
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -646,7 +644,7 @@ Time: 0s">
     := if b then B else A.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 145
+Line: 143
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -656,37 +654,37 @@ Time: 0s">
     : ∀ (b:Bool), IsTruncAlgebra n (bin_prod_algebras b).</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 149
+Line: 147
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 150
+Line: 148
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     intros []; exact _.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 151
+Line: 149
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Qed.</pre>
+  Qed.
+
+ </pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
 Line: 152
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-
-  Definition BinProdAlgebra : Algebra σ :=
+<pre>Definition BinProdAlgebra : Algebra σ :=
     ProdAlgebra Bool bin_prod_algebras.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 155
+Line: 153
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -695,7 +693,7 @@ Time: 0s">
     := hom_proj_prod_algebra Bool bin_prod_algebras false.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 158
+Line: 156
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -704,14 +702,14 @@ Time: 0s">
     := hom_proj_prod_algebra Bool bin_prod_algebras true.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 161
+Line: 159
 Time: 0.001s">
-<div class="time" style="width: 0.20876826722338%"></div>
+<div class="time" style="width: 0.16528925619835%"></div>
 <pre>
 End bin_prod_algebra.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 162
+Line: 160
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -719,7 +717,7 @@ Time: 0s">
 Module prod_algebra_notations.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 164
+Line: 162
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -729,7 +727,7 @@ Time: 0s">
                              : Algebra_scope.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 168
+Line: 166
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -737,7 +735,7 @@ Time: 0s">
 End prod_algebra_notations.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 170
+Line: 168
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -745,7 +743,7 @@ Time: 0s">
 Import prod_algebra_notations.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 172
+Line: 170
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -756,15 +754,15 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 176
+Line: 174
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Section ump_bin_prod_algebra.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 176
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 174
+Time: 0.001s">
+<div class="time" style="width: 0.16528925619835%"></div>
 <pre>
   Context
     `{Funext}
@@ -773,53 +771,52 @@ Time: 0s">
     `{!IsHSetAlgebra A} `{!IsHSetAlgebra B}.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 181
+Line: 179
 Time: 0.001s">
-<div class="time" style="width: 0.20876826722338%"></div>
+<div class="time" style="width: 0.16528925619835%"></div>
 <pre>
 
  Lemma ump_bin_prod_algebra
    : Homomorphism C A * Homomorphism C B &lt;~&gt; Homomorphism C (A × B).</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 184
+Line: 182
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 185
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 183
+Time: 0.001s">
+<div class="time" style="width: 0.16528925619835%"></div>
 <pre>
     set (k := λ (b:Bool), Homomorphism C (bin_prod_algebras A B b)).</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 186
-Time: 0.046s">
-<div class="time" style="width: 9.6033402922756%"></div>
+Line: 184
+Time: 0.055s">
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre>
     exact (equiv_compose
             (ump_prod_algebra Bool (bin_prod_algebras A B) C)
             (equiv_bool_forall_prod k)^-1).</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 189
+Line: 187
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 190
+Line: 188
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-End ump_bin_prod_algebra.</pre>
+<pre>End ump_bin_prod_algebra.</pre>
 </div>
 <div class="code" title="File: ua_prod_algebra.v
-Line: 192
+Line: 189
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

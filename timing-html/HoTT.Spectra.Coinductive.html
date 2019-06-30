@@ -38,21 +38,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Coinductive.v
 Line: 2
-Time: 0.04s">
-<div class="time" style="width: 21.739130434783%"></div>
+Time: 0.048s">
+<div class="time" style="width: 21.145374449339%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
 Line: 2
-Time: 0.184s">
+Time: 0.227s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Require Import Pointed UnivalenceImpliesFunext.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
 Line: 3
-Time: 0.01s">
-<div class="time" style="width: 5.4347826086957%"></div>
+Time: 0.007s">
+<div class="time" style="width: 3.0837004405286%"></div>
 <pre>
 Require Import HIT.Truncations HIT.Suspension.</pre>
 </div>
@@ -91,8 +91,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Coinductive.v
 Line: 12
-Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.88105726872247%"></div>
 <pre>CoInductive IsSpectrum : pType -&gt; Type :=
   | isspectrum_loops : forall E, IsSpectrum E -&gt; IsSpectrum (loops E).</pre>
 </div>
@@ -169,15 +169,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Coinductive.v
 Line: 29
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.44052863436123%"></div>
 <pre>
   exists (loops E).</pre>
 </div>
 <div class="code" title="File: Coinductive.v
 Line: 30
 Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+<div class="time" style="width: 0.44052863436123%"></div>
 <pre>
   exact _.</pre>
 </div>
@@ -186,13 +186,7 @@ Line: 31
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Coinductive.v
-Line: 32
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Defined.
 
 (** *** Coinductive frobnication *)
 
@@ -231,209 +225,191 @@ Line: 40
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 41
+Line: 42
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Definition frobsp_eq {E : pType} (Es : IsSpectrum E)
+: Es = frobsp Es.</pre>
+</div>
+<div class="code" title="File: Coinductive.v
+Line: 43
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-Definition frobsp_eq {E : pType} (Es : IsSpectrum E)
-: Es = frobsp Es.</pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
 Line: 44
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Proof.</pre>
+  destruct Es.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
 Line: 45
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  destruct Es.</pre>
+  reflexivity.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
 Line: 46
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  reflexivity.</pre>
-</div>
-<div class="code" title="File: Coinductive.v
-Line: 47
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Coinductive.v
-Line: 48
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Defined.
 
 (** ** The inverse of loops *)
 
 </pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 51
+Line: 50
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition unloopsp : Spectrum -&gt; Spectrum.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 51
+Line: 50
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 52
+Line: 51
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros [E Es].</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 53
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 52
+Time: 0.001s">
+<div class="time" style="width: 0.44052863436123%"></div>
 <pre>
   destruct Es.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 54
+Line: 53
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   exact (E;Es).</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 55
+Line: 54
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Coinductive.v
-Line: 56
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Defined.
 
 (** Intriguingly, we can define this equivalence even though in general, path-spaces of coinductive types are ill-specified. *)</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 58
+Line: 57
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition equiv_loopsp : Spectrum &lt;~&gt; Spectrum.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 58
+Line: 57
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 59
+Line: 58
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   refine (equiv_adjointify loopsp unloopsp _ _).</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 60
+Line: 59
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 61
+Line: 60
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros E.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 61
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 60
+Time: 0.001s">
+<div class="time" style="width: 0.44052863436123%"></div>
 <pre> destruct E as [E Es].</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 61
+Line: 60
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> destruct Es.</pre>
+</div>
+<div class="code" title="File: Coinductive.v
+Line: 60
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    reflexivity.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
 Line: 61
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    reflexivity.</pre>
+  -</pre>
+</div>
+<div class="code" title="File: Coinductive.v
+Line: 62
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros E.</pre>
+</div>
+<div class="code" title="File: Coinductive.v
+Line: 62
+Time: 0.001s">
+<div class="time" style="width: 0.44052863436123%"></div>
+<pre> destruct E as [E Es].</pre>
+</div>
+<div class="code" title="File: Coinductive.v
+Line: 62
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> destruct Es.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
 Line: 62
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  -</pre>
-</div>
-<div class="code" title="File: Coinductive.v
-Line: 63
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> intros E.</pre>
-</div>
-<div class="code" title="File: Coinductive.v
-Line: 63
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> destruct E as [E Es].</pre>
-</div>
-<div class="code" title="File: Coinductive.v
-Line: 63
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> destruct Es.</pre>
-</div>
-<div class="code" title="File: Coinductive.v
-Line: 63
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
     reflexivity.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 64
-Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Coinductive.v
-Line: 65
+Line: 63
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Defined.
 
 (** ** Maps of spectra *)
 
 </pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 68
-Time: 0.003s">
-<div class="time" style="width: 1.6304347826087%"></div>
+Line: 67
+Time: 0.004s">
+<div class="time" style="width: 1.7621145374449%"></div>
 <pre>CoInductive IsSpMap
 : forall (E F : pType) (f : E -&gt;* F)
          (Es : IsSpectrum E) (Fs : IsSpectrum F), Type :=
@@ -442,7 +418,7 @@ Time: 0.003s">
                  IsSpMap (loops E) (loops F) (loops_functor f) _ _.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 73
+Line: 72
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -450,23 +426,23 @@ Time: 0s">
 Arguments IsSpMap {E F} f {_ _}.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 75
+Line: 74
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Existing Class IsSpMap.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 76
-Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+Line: 75
+Time: 0.002s">
+<div class="time" style="width: 0.88105726872247%"></div>
 <pre>
 
 Definition SpMap (E F : Spectrum)
   := { f : loops_oo E -&gt;* loops_oo F &amp; IsSpMap f }.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 79
+Line: 78
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -476,26 +452,26 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 82
-Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+Line: 81
+Time: 0.002s">
+<div class="time" style="width: 0.88105726872247%"></div>
 <pre>Definition loops_oo_functor {E F : Spectrum}
 : SpMap E F -&gt; (loops_oo E -&gt;* loops_oo F)
   := pr1.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 84
+Line: 83
 Time: 0.002s">
-<div class="time" style="width: 1.0869565217391%"></div>
+<div class="time" style="width: 0.88105726872247%"></div>
 <pre>
 Global Instance isspmap_loops_oo_functor {E F} (f : SpMap E F)
 : IsSpMap (loops_oo_functor f)
   := pr2 f.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 87
+Line: 86
 Time: 0.003s">
-<div class="time" style="width: 1.6304347826087%"></div>
+<div class="time" style="width: 1.3215859030837%"></div>
 <pre>
 
 CoFixpoint isspmap_loops_functor
@@ -504,43 +480,43 @@ CoFixpoint isspmap_loops_functor
 : IsSpMap (loops_functor f).</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 92
+Line: 91
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 93
-Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+Line: 92
+Time: 0.002s">
+<div class="time" style="width: 0.88105726872247%"></div>
 <pre>
   destruct fs.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 94
+Line: 93
 Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+<div class="time" style="width: 0.44052863436123%"></div>
 <pre>
   refine (spmap_loop (loops E) (loops F) (loops_functor f) _ _ _).</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 95
+Line: 94
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+Qed.
+
+</pre>
 </div>
 <div class="code" title="File: Coinductive.v
 Line: 96
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-
-Global Existing Instance isspmap_loops_functor.</pre>
+<pre>Global Existing Instance isspmap_loops_functor.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 98
+Line: 96
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -549,52 +525,46 @@ Definition loopsp_functor {E F} (f : SpMap E F)
 : SpMap (loopsp E) (loopsp F).</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 101
+Line: 99
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 102
+Line: 100
 Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+<div class="time" style="width: 0.44052863436123%"></div>
 <pre>
   destruct f as [f ?].</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 103
+Line: 101
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   exists (loops_functor f).</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 104
-Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+Line: 102
+Time: 0.002s">
+<div class="time" style="width: 0.88105726872247%"></div>
 <pre>
   exact _.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 105
+Line: 103
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Coinductive.v
-Line: 106
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Defined.
 
 (** ** Truncation *)
 
 (** TODO: Generalize this to all integers *)</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 110
+Line: 108
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>CoFixpoint isspectrum_tr `{Univalence} (n : trunc_index)
@@ -602,75 +572,75 @@ Time: 0s">
 : IsSpectrum (pTr n A).</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 112
+Line: 110
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 113
+Line: 111
 Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+<div class="time" style="width: 0.44052863436123%"></div>
 <pre>
   destruct As.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 114
+Line: 112
 Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+<div class="time" style="width: 0.44052863436123%"></div>
 <pre>
   assert (s : IsSpectrum (loops (pTr n.+1 E))).</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 115
+Line: 113
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   {</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 116
+Line: 114
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply isspectrum_loops.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 116
+Line: 114
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> by apply isspectrum_tr.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 116
+Line: 114
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> }</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 116
+Line: 114
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   exact (transport IsSpectrum (ptr_loops_eq n E)^ s).</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 117
-Time: 0.002s">
-<div class="time" style="width: 1.0869565217391%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Coinductive.v
-Line: 118
+Line: 115
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Defined.
 
-Global Existing Instance isspectrum_tr.</pre>
+</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 120
+Line: 117
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Global Existing Instance isspectrum_tr.</pre>
+</div>
+<div class="code" title="File: Coinductive.v
+Line: 117
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -679,45 +649,39 @@ Definition Trsp `{Univalence} (n : trunc_index)
 : Spectrum -&gt; Spectrum.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 123
+Line: 120
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 124
+Line: 121
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros [E ?].</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 125
+Line: 122
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   exists (pTr n E).</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 126
+Line: 123
 Time: 0.001s">
-<div class="time" style="width: 0.54347826086957%"></div>
+<div class="time" style="width: 0.44052863436123%"></div>
 <pre>
   exact _.</pre>
 </div>
 <div class="code" title="File: Coinductive.v
-Line: 127
+Line: 125
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Coinductive.v
-Line: 129
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Defined.
 
 (** ** Suspension *)
 

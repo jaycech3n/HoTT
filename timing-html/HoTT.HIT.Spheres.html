@@ -40,28 +40,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: Spheres.v
 Line: 4
-Time: 0.017s">
-<div class="time" style="width: 1.0480887792848%"></div>
+Time: 0.021s">
+<div class="time" style="width: 8.5365853658537%"></div>
 <pre>Require Import HoTT.Basics.</pre>
 </div>
 <div class="code" title="File: Spheres.v
 Line: 4
-Time: 0.015s">
-<div class="time" style="width: 0.92478421701603%"></div>
+Time: 0.016s">
+<div class="time" style="width: 6.5040650406504%"></div>
 <pre>
 Require Import Types.Sigma Types.Forall Types.Paths Types.Bool.</pre>
 </div>
 <div class="code" title="File: Spheres.v
 Line: 5
-Time: 0.014s">
-<div class="time" style="width: 0.86313193588163%"></div>
+Time: 0.015s">
+<div class="time" style="width: 6.0975609756098%"></div>
 <pre>
 Require Import HProp NullHomotopy.</pre>
 </div>
 <div class="code" title="File: Spheres.v
 Line: 6
-Time: 0.199s">
-<div class="time" style="width: 12.268803945746%"></div>
+Time: 0.246s">
+<div class="time" style="width: 100%"></div>
 <pre>
 Require Import HIT.Suspension HIT.Circle HIT.TwoSphere.</pre>
 </div>
@@ -99,8 +99,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Spheres.v
 Line: 15
-Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>Fixpoint Sphere (n : trunc_index)
   := match n return Type with
        | -2 =&gt; Empty
@@ -155,499 +155,487 @@ Line: 26
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 27
+Line: 28
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Definition Bool_to_Sph0 : Bool -&gt; (Sphere 0).</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 28
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-Definition Bool_to_Sph0 : Bool -&gt; (Sphere 0).</pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: Spheres.v
 Line: 29
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Proof.</pre>
+  exact (fun b =&gt; if b then North else South).</pre>
 </div>
 <div class="code" title="File: Spheres.v
 Line: 30
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  exact (fun b =&gt; if b then North else South).</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 31
+Line: 32
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-Defined.</pre>
+<pre>Global Instance isequiv_Sph0_to_Bool : IsEquiv (Sph0_to_Bool) | 0.</pre>
 </div>
 <div class="code" title="File: Spheres.v
 Line: 32
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-Global Instance isequiv_Sph0_to_Bool : IsEquiv (Sph0_to_Bool) | 0.</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 34
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 35
+Line: 33
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply isequiv_adjointify with Bool_to_Sph0.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 36
+Line: 34
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 37
-Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
+Line: 35
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intros [ | ]; exact 1.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 37
+Line: 35
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 38
+Line: 36
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> unfold Sect.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 38
+Line: 36
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> refine (Susp_ind _ 1 1 _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 38
+Line: 36
 Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
+<div class="time" style="width: 0.40650406504065%"></div>
 <pre> intros [].</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 38
-Time: 0.002s">
-<div class="time" style="width: 0.1233045622688%"></div>
+Line: 36
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+(** *** [Sphere 1] *)</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 39
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Definition Sph1_to_S1 : (Sphere 1) -&gt; S1.</pre>
 </div>
 <div class="code" title="File: Spheres.v
 Line: 39
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-(** *** [Sphere 1] *)</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 41
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>Definition Sph1_to_S1 : (Sphere 1) -&gt; S1.</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 41
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 42
+Line: 40
 Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
+<div class="time" style="width: 0.40650406504065%"></div>
 <pre>
   apply (Susp_rec Circle.base Circle.base).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 43
+Line: 41
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   exact (fun x =&gt; if (Sph0_to_Bool x) then loop else 1).</pre>
 </div>
 <div class="code" title="File: Spheres.v
+Line: 42
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Defined.
+
+</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 44
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Definition S1_to_Sph1 : S1 -&gt; (Sphere 1).</pre>
+</div>
+<div class="code" title="File: Spheres.v
 Line: 44
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: Spheres.v
 Line: 45
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-Definition S1_to_Sph1 : S1 -&gt; (Sphere 1).</pre>
+  apply (S1_rec _ North).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 47
+Line: 46
+Time: 0.001s">
+<div class="time" style="width: 0.40650406504065%"></div>
+<pre> exact (merid North @ (merid South)^).</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 46
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Proof.</pre>
+Defined.
+
+</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 48
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Global Instance isequiv_Sph1_to_S1 : IsEquiv (Sph1_to_S1) | 0.</pre>
 </div>
 <div class="code" title="File: Spheres.v
 Line: 48
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  apply (S1_rec _ North).</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 49
-Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
-<pre> exact (merid North @ (merid South)^).</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 49
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 50
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-Global Instance isequiv_Sph1_to_S1 : IsEquiv (Sph1_to_S1) | 0.</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 52
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 53
+Line: 49
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply isequiv_adjointify with S1_to_Sph1.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 54
+Line: 50
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 55
+Line: 51
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> refine (S1_ind _ 1 _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 55
+Line: 51
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     refine ((transport_paths_FFlr _ _) @ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 56
-Time: 0.01s">
-<div class="time" style="width: 0.61652281134402%"></div>
+Line: 52
+Time: 0.012s">
+<div class="time" style="width: 4.8780487804878%"></div>
 <pre>
     unfold S1_to_Sph1; rewrite S1_rec_beta_loop.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 57
-Time: 0.015s">
-<div class="time" style="width: 0.92478421701603%"></div>
+Line: 53
+Time: 0.019s">
+<div class="time" style="width: 7.7235772357724%"></div>
 <pre>
     rewrite ap_pp, ap_V.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 58
+Line: 54
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     unfold Sph1_to_S1.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 59
+Line: 55
 Time: 0.004s">
-<div class="time" style="width: 0.24660912453761%"></div>
+<div class="time" style="width: 1.6260162601626%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 59
-Time: 0.006s">
-<div class="time" style="width: 0.36991368680641%"></div>
+Line: 55
+Time: 0.007s">
+<div class="time" style="width: 2.8455284552846%"></div>
 <pre> rewrite 2 Susp_rec_beta_merid.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 59
-Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
+Line: 55
+Time: 0.002s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 59
-Time: 0.055s">
-<div class="time" style="width: 3.3908754623921%"></div>
+Line: 55
+Time: 0.068s">
+<div class="time" style="width: 27.642276422764%"></div>
 <pre>
     hott_simpl.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 60
+Line: 56
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 61
-Time: 0.002s">
-<div class="time" style="width: 0.1233045622688%"></div>
+Line: 57
+Time: 0.003s">
+<div class="time" style="width: 1.219512195122%"></div>
 <pre> refine (Susp_ind (fun x =&gt; S1_to_Sph1 (Sph1_to_S1 x) = x)
                      1 (merid South) _); intros x.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 62
+Line: 58
 Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
+<div class="time" style="width: 0.40650406504065%"></div>
 <pre>
     refine ((transport_paths_FFlr _ _) @ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 63
-Time: 0.006s">
-<div class="time" style="width: 0.36991368680641%"></div>
+Line: 59
+Time: 0.007s">
+<div class="time" style="width: 2.8455284552846%"></div>
 <pre>
     unfold Sph1_to_S1; rewrite (Susp_rec_beta_merid x).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 64
+Line: 60
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     revert x.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 65
-Time: 0.011s">
-<div class="time" style="width: 0.67817509247842%"></div>
+Line: 61
+Time: 0.013s">
+<div class="time" style="width: 5.2845528455285%"></div>
 <pre> change (Susp Empty) with (Sphere 0).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 65
-Time: 0.058s">
-<div class="time" style="width: 3.5758323057953%"></div>
+Line: 61
+Time: 0.078s">
+<div class="time" style="width: 31.707317073171%"></div>
 <pre>
     apply (equiv_ind (Sph0_to_Bool ^-1)); intros x.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 66
-Time: 0.032s">
-<div class="time" style="width: 1.9728729963009%"></div>
+Line: 62
+Time: 0.034s">
+<div class="time" style="width: 13.821138211382%"></div>
 <pre>
     case x; simpl.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 67
+Line: 63
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     2: apply concat_1p.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 68
+Line: 64
 Time: 0.003s">
-<div class="time" style="width: 0.18495684340321%"></div>
+<div class="time" style="width: 1.219512195122%"></div>
 <pre>
     unfold S1_to_Sph1; rewrite S1_rec_beta_loop.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 69
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 65
+Time: 0.001s">
+<div class="time" style="width: 0.40650406504065%"></div>
 <pre>
     refine (whiskerR (concat_p1 _) _ @ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 70
+Line: 66
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     apply moveR_Vp.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 71
-Time: 0.037s">
-<div class="time" style="width: 2.2811344019729%"></div>
+Line: 67
+Time: 0.041s">
+<div class="time" style="width: 16.666666666667%"></div>
 <pre> hott_simpl.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 71
-Time: 0.067s">
-<div class="time" style="width: 4.1307028360049%"></div>
+Line: 67
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+
+(** *** [Sphere 2] *)</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 71
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Definition Sph2_to_S2 : (Sphere 2) -&gt; S2.</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 71
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: Spheres.v
 Line: 72
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-
-(** *** [Sphere 2] *)</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 75
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>Definition Sph2_to_S2 : (Sphere 2) -&gt; S2.</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 75
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 76
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
   apply (Susp_rec base base).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 77
+Line: 73
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply (Susp_rec (idpath base) (idpath base)).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 78
+Line: 74
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply (Susp_rec surf (idpath (idpath base))).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 79
+Line: 75
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply Empty_rec.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 80
+Line: 76
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 81
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Defined.
 
-Definition S2_to_Sph2 : S2 -&gt; (Sphere 2).</pre>
+</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 83
+Line: 78
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Definition S2_to_Sph2 : S2 -&gt; (Sphere 2).</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 78
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 84
+Line: 79
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply (S2_rec (Sphere 2) North).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 85
+Line: 80
 Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
+<div class="time" style="width: 0.40650406504065%"></div>
 <pre>
   refine (transport (fun x =&gt; x = x) (concat_pV (merid North)) _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 86
+Line: 81
 Time: 0.003s">
-<div class="time" style="width: 0.18495684340321%"></div>
+<div class="time" style="width: 1.219512195122%"></div>
 <pre>
   refine (((ap (fun u =&gt; merid u @ (merid North)^) 
                (merid North @ (merid South)^)))).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 88
-Time: 0.005s">
-<div class="time" style="width: 0.30826140567201%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 89
+Line: 83
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Defined.
 
-Definition issect_S2_to_Sph2 : Sect S2_to_Sph2 Sph2_to_S2.</pre>
+</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 91
+Line: 85
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Definition issect_S2_to_Sph2 : Sect S2_to_Sph2 Sph2_to_S2.</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 85
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 92
+Line: 86
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   refine (S2_ind _ 1 _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 93
+Line: 87
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> 
   refine (_ @ (concat_p1 _)).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 94
-Time: 0.026s">
-<div class="time" style="width: 1.6029593094945%"></div>
+Line: 88
+Time: 0.032s">
+<div class="time" style="width: 13.008130081301%"></div>
 <pre>
   refine (_ @ (@concat_Ap (base = base) _ _
                           (fun p =&gt; (p^ @ ap Sph2_to_S2 (ap S2_to_Sph2 p))^)
@@ -659,83 +647,83 @@ Time: 0.026s">
                           1 1 surf)^).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 102
-Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
+Line: 96
+Time: 0.002s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
   refine (_ @ (concat_1p _)^).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 103
-Time: 0.005s">
-<div class="time" style="width: 0.30826140567201%"></div>
+Line: 97
+Time: 0.006s">
+<div class="time" style="width: 2.4390243902439%"></div>
 <pre>
   refine (_ @ (ap_compose (fun p =&gt; p^ @ ap Sph2_to_S2 (ap S2_to_Sph2 p)) 
                           inverse
                           surf)^).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 106
+Line: 100
 Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
+<div class="time" style="width: 0.40650406504065%"></div>
 <pre>
   refine (@ap _ _ (ap inverse) 1 _ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 107
+Line: 101
 Time: 0.002s">
-<div class="time" style="width: 0.1233045622688%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
   refine (_ @ (concat2_ap_ap _ _ _)).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 108
-Time: 0.005s">
-<div class="time" style="width: 0.30826140567201%"></div>
+Line: 102
+Time: 0.006s">
+<div class="time" style="width: 2.4390243902439%"></div>
 <pre>
   refine (_ @ (ap (fun w =&gt; inverse2 surf @@ w) 
                   (ap_compose (ap S2_to_Sph2) (ap Sph2_to_S2) surf))^).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 110
+Line: 104
 Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
+<div class="time" style="width: 0.40650406504065%"></div>
 <pre>
   refine ((concat_Vp_inverse2 _ _ surf)^ @ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 111
+Line: 105
 Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
+<div class="time" style="width: 0.40650406504065%"></div>
 <pre>
   refine ((concat_p1 _) @ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 112
+Line: 106
 Time: 0.002s">
-<div class="time" style="width: 0.1233045622688%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre> 
   refine (ap (fun p : 1 = 1 =&gt; inverse2 surf @@ p) _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 113
+Line: 107
 Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
+<div class="time" style="width: 0.40650406504065%"></div>
 <pre>
 
   symmetry.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 115
-Time: 0.03s">
-<div class="time" style="width: 1.8495684340321%"></div>
+Line: 109
+Time: 0.032s">
+<div class="time" style="width: 13.008130081301%"></div>
 <pre> refine ((ap (ap (ap Sph2_to_S2))
                         (S2_rec_beta_surf (Sphere 2) North _)) @ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 116
-Time: 0.042s">
-<div class="time" style="width: 2.5893958076449%"></div>
+Line: 110
+Time: 0.052s">
+<div class="time" style="width: 21.138211382114%"></div>
 <pre>
   refine ((ap_transport (concat_pV (merid North))
                         (fun z =&gt; @ap _ _ _ z z) 
@@ -743,9 +731,9 @@ Time: 0.042s">
                             (merid North @ (merid South)^))) @ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 120
-Time: 0.022s">
-<div class="time" style="width: 1.3563501849568%"></div>
+Line: 114
+Time: 0.024s">
+<div class="time" style="width: 9.7560975609756%"></div>
 <pre>
   
   refine ((ap (transport (fun z =&gt; ap Sph2_to_S2 z = ap Sph2_to_S2 z) 
@@ -754,30 +742,30 @@ Time: 0.022s">
                           (merid North @ (merid South)^))^) @ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 125
+Line: 119
 Time: 0.002s">
-<div class="time" style="width: 0.1233045622688%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
   refine ((transport_paths_FlFr _ _) @ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 126
-Time: 0.035s">
-<div class="time" style="width: 2.1578298397041%"></div>
+Line: 120
+Time: 0.037s">
+<div class="time" style="width: 15.040650406504%"></div>
 <pre> rewrite_moveR_Vp_p.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 126
-Time: 0.018s">
-<div class="time" style="width: 1.1097410604192%"></div>
+Line: 120
+Time: 0.02s">
+<div class="time" style="width: 8.130081300813%"></div>
 <pre>
   refine ((ap (fun w =&gt; _ @ w) 
               (ap_pp_concat_pV Sph2_to_S2 (merid North))^) @ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 128
-Time: 0.032s">
-<div class="time" style="width: 1.9728729963009%"></div>
+Line: 122
+Time: 0.036s">
+<div class="time" style="width: 14.634146341463%"></div>
 <pre>
   refine ((ap (fun w =&gt; _ @ (_ @ (_ @ w)))
               (concat_pV_inverse2 (ap Sph2_to_S2 (merid North)) 
@@ -785,9 +773,9 @@ Time: 0.032s">
                                   (Susp_rec_beta_merid North))^) @ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 132
-Time: 0.125s">
-<div class="time" style="width: 7.7065351418002%"></div>
+Line: 126
+Time: 0.144s">
+<div class="time" style="width: 58.536585365854%"></div>
 <pre>
   refine ((@concat_Ap (Sphere 1) _ 
                       (fun x =&gt; ap Sph2_to_S2 (merid x @ (merid North)^))
@@ -803,41 +791,41 @@ Time: 0.125s">
                       North North (merid North @ (merid South)^)) @ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 144
-Time: 0.097s">
-<div class="time" style="width: 5.980271270037%"></div>
+Line: 138
+Time: 0.12s">
+<div class="time" style="width: 48.780487804878%"></div>
 <pre> f_ap.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 144
+Line: 138
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   {</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 145
-Time: 0.008s">
-<div class="time" style="width: 0.49321824907522%"></div>
+Line: 139
+Time: 0.01s">
+<div class="time" style="width: 4.0650406504065%"></div>
 <pre> refine (_ @ (ap_pp_concat_pV _ _)).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 145
-Time: 0.017s">
-<div class="time" style="width: 1.0480887792848%"></div>
+Line: 139
+Time: 0.02s">
+<div class="time" style="width: 8.130081300813%"></div>
 <pre>
     refine (ap (fun w =&gt; _ @ (_ @ w)) (concat_pV_inverse2 _ _ _)).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 146
+Line: 140
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> }</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 146
-Time: 0.006s">
-<div class="time" style="width: 0.36991368680641%"></div>
+Line: 140
+Time: 0.007s">
+<div class="time" style="width: 2.8455284552846%"></div>
 <pre>
   refine ((concat2_ap_ap (Susp_rec 1 1 (Susp_rec surf 1 
                                          (Empty_rec (surf = 1)))) 
@@ -845,331 +833,331 @@ Time: 0.006s">
                          (merid North @ (merid South)^))^ @ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 150
+Line: 144
 Time: 0.003s">
-<div class="time" style="width: 0.18495684340321%"></div>
+<div class="time" style="width: 1.219512195122%"></div>
 <pre>
   refine ((ap (fun w =&gt; _ @@ w) (ap_const _ _)) @ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 151
+Line: 145
 Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
+<div class="time" style="width: 0.40650406504065%"></div>
 <pre>
   refine ((concat2_p1 _) @ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 152
+Line: 146
 Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
+<div class="time" style="width: 0.40650406504065%"></div>
 <pre> refine ((whiskerR_p1_1 _) @ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 152
+Line: 146
 Time: 0.002s">
-<div class="time" style="width: 0.1233045622688%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
   refine ((ap_pp _ (merid North) (merid South)^) @ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 153
+Line: 147
 Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
+<div class="time" style="width: 0.40650406504065%"></div>
 <pre> 
   refine (_ @ (concat_p1 _)).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 154
-Time: 0.016s">
-<div class="time" style="width: 0.98643649815043%"></div>
+Line: 148
+Time: 0.017s">
+<div class="time" style="width: 6.9105691056911%"></div>
 <pre> f_ap.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 154
+Line: 148
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 155
+Line: 149
 Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
+<div class="time" style="width: 0.40650406504065%"></div>
 <pre> refine (Susp_rec_beta_merid North).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 155
+Line: 149
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 156
+Line: 150
 Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
+<div class="time" style="width: 0.40650406504065%"></div>
 <pre> refine (ap_V _ _ @ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 156
+Line: 150
 Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
+<div class="time" style="width: 0.40650406504065%"></div>
 <pre> refine (@inverse2 _ _ _ _ 1 _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 156
+Line: 150
 Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
+<div class="time" style="width: 0.40650406504065%"></div>
 <pre>
     refine (Susp_rec_beta_merid South).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 157
-Time: 1.622s">
-<div class="time" style="width: 100%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 158
+Line: 151
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Defined.
 
-Definition issect_Sph2_to_S2 : Sect Sph2_to_S2 S2_to_Sph2.</pre>
+</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 160
+Line: 153
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Definition issect_Sph2_to_S2 : Sect Sph2_to_S2 S2_to_Sph2.</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 153
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 161
+Line: 154
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intro x.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 162
+Line: 155
 Time: 0.002s">
-<div class="time" style="width: 0.1233045622688%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
   refine ((Susp_rec_eta_homot (S2_to_Sph2 o Sph2_to_S2) x) @ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 163
+Line: 156
 Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
+<div class="time" style="width: 0.40650406504065%"></div>
 <pre> symmetry.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 163
+Line: 156
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   generalize dependent x.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 164
+Line: 157
 Time: 0.002s">
-<div class="time" style="width: 0.1233045622688%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
   refine (Susp_ind _ 1 (merid North)^ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 165
+Line: 158
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intro x.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 166
-Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
+Line: 159
+Time: 0.002s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
   refine ((transport_paths_FlFr (f := fun y =&gt; y) _ _) @ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 167
-Time: 0.016s">
-<div class="time" style="width: 0.98643649815043%"></div>
+Line: 160
+Time: 0.017s">
+<div class="time" style="width: 6.9105691056911%"></div>
 <pre>
   rewrite_moveR_Vp_p.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 168
+Line: 161
 Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
+<div class="time" style="width: 0.40650406504065%"></div>
 <pre> refine ((concat_1p _) @ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 168
+Line: 161
 Time: 0.002s">
-<div class="time" style="width: 0.1233045622688%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
   refine (_ @ (ap (fun w =&gt; w @ _) (ap_idmap _)^)).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 169
+Line: 162
 Time: 0.003s">
-<div class="time" style="width: 0.18495684340321%"></div>
+<div class="time" style="width: 1.219512195122%"></div>
 <pre>
   refine ((Susp_rec_beta_merid _) @ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 170
-Time: 0.03s">
-<div class="time" style="width: 1.8495684340321%"></div>
+Line: 163
+Time: 0.032s">
+<div class="time" style="width: 13.008130081301%"></div>
 <pre>
   path_via (ap S2_to_Sph2 (ap Sph2_to_S2 (merid x))).</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 164
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  {</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 165
+Time: 0.002s">
+<div class="time" style="width: 0.8130081300813%"></div>
+<pre> apply (ap_compose Sph2_to_S2 S2_to_Sph2 (merid x)).</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 165
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> }</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 165
+Time: 0.036s">
+<div class="time" style="width: 14.634146341463%"></div>
+<pre>
+  path_via (ap S2_to_Sph2 
+               (Susp_rec 1 1 (Susp_rec surf 1 (Empty_rec (surf = 1))) x)).</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 167
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> 
+  {</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 168
+Time: 0.004s">
+<div class="time" style="width: 1.6260162601626%"></div>
+<pre> repeat f_ap.</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 168
+Time: 0.001s">
+<div class="time" style="width: 0.40650406504065%"></div>
+<pre> apply Susp_rec_beta_merid.</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 168
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> }</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 168
+Time: 0.008s">
+<div class="time" style="width: 3.2520325203252%"></div>
+<pre>
+  symmetry.</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 169
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> generalize dependent x.</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 169
+Time: 0.003s">
+<div class="time" style="width: 1.219512195122%"></div>
+<pre> 
+
+  simple refine (Susp_ind _ (concat_pV (merid North)) _ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
 Line: 171
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  {</pre>
+  -</pre>
 </div>
 <div class="code" title="File: Spheres.v
 Line: 172
 Time: 0.002s">
-<div class="time" style="width: 0.1233045622688%"></div>
-<pre> apply (ap_compose Sph2_to_S2 S2_to_Sph2 (merid x)).</pre>
+<div class="time" style="width: 0.8130081300813%"></div>
+<pre> refine (_ @ (concat_pV (merid North))).</pre>
 </div>
 <div class="code" title="File: Spheres.v
 Line: 172
+Time: 0.006s">
+<div class="time" style="width: 2.4390243902439%"></div>
+<pre> 
+    apply (ap (fun w =&gt; merid w @ (merid North)^) (merid South)^).</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 173
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> }</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 172
-Time: 0.033s">
-<div class="time" style="width: 2.0345252774353%"></div>
 <pre>
-  path_via (ap S2_to_Sph2 
-               (Susp_rec 1 1 (Susp_rec surf 1 (Empty_rec (surf = 1))) x)).</pre>
+  -</pre>
 </div>
 <div class="code" title="File: Spheres.v
 Line: 174
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> 
-  {</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 175
-Time: 0.004s">
-<div class="time" style="width: 0.24660912453761%"></div>
-<pre> repeat f_ap.</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 175
-Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
-<pre> apply Susp_rec_beta_merid.</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 175
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> }</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 175
-Time: 0.008s">
-<div class="time" style="width: 0.49321824907522%"></div>
-<pre>
-  symmetry.</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 176
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> generalize dependent x.</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 176
-Time: 0.002s">
-<div class="time" style="width: 0.1233045622688%"></div>
-<pre> 
-
-  simple refine (Susp_ind _ (concat_pV (merid North)) _ _).</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 178
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  -</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 179
-Time: 0.002s">
-<div class="time" style="width: 0.1233045622688%"></div>
-<pre> refine (_ @ (concat_pV (merid North))).</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 179
-Time: 0.006s">
-<div class="time" style="width: 0.36991368680641%"></div>
-<pre> 
-    apply (ap (fun w =&gt; merid w @ (merid North)^) (merid South)^).</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 180
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  -</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 181
-Time: 0s">
-<div class="time" style="width: 0%"></div>
 <pre> intro x.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 181
+Line: 174
 Time: 0.008s">
-<div class="time" style="width: 0.49321824907522%"></div>
+<div class="time" style="width: 3.2520325203252%"></div>
 <pre>
     refine ((transport_paths_FlFr (merid x) (concat_pV (merid North))) @ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 182
-Time: 0.091s">
-<div class="time" style="width: 5.6103575832306%"></div>
+Line: 175
+Time: 0.1s">
+<div class="time" style="width: 40.650406504065%"></div>
 <pre>
     rewrite_moveR_Vp_p.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 183
-Time: 0.01s">
-<div class="time" style="width: 0.61652281134402%"></div>
+Line: 176
+Time: 0.011s">
+<div class="time" style="width: 4.4715447154472%"></div>
 <pre> symmetry.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 183
-Time: 0.035s">
-<div class="time" style="width: 2.1578298397041%"></div>
+Line: 176
+Time: 0.037s">
+<div class="time" style="width: 15.040650406504%"></div>
 <pre> apply (dpath_path_lr _ _ _)^-1.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 183
-Time: 0.009s">
-<div class="time" style="width: 0.55487053020962%"></div>
+Line: 176
+Time: 0.01s">
+<div class="time" style="width: 4.0650406504065%"></div>
 <pre>
     refine ((ap (transport _ _) (ap_pp _ (merid x) (merid South)^)^) @ _).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 184
-Time: 0.006s">
-<div class="time" style="width: 0.36991368680641%"></div>
+Line: 177
+Time: 0.007s">
+<div class="time" style="width: 2.8455284552846%"></div>
 <pre>
     refine (_ @ (ap_compose (Susp_rec 1 1 
                               (Susp_rec surf 1 
@@ -1177,161 +1165,155 @@ Time: 0.006s">
                             (ap S2_to_Sph2) (merid x))^).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 188
-Time: 0.005s">
-<div class="time" style="width: 0.30826140567201%"></div>
+Line: 181
+Time: 0.006s">
+<div class="time" style="width: 2.4390243902439%"></div>
 <pre>
     refine (_ @ (ap (ap02 S2_to_Sph2) (Susp_rec_beta_merid _)^)).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 189
+Line: 182
 Time: 0.007s">
-<div class="time" style="width: 0.43156596794081%"></div>
+<div class="time" style="width: 2.8455284552846%"></div>
 <pre>
     symmetry.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 190
+Line: 183
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> generalize dependent x.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 190
+Line: 183
 Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
+<div class="time" style="width: 0.40650406504065%"></div>
 <pre>
     
     simple refine (Susp_ind _ _ _ _).</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 185
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    +</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 186
+Time: 0.005s">
+<div class="time" style="width: 2.0325203252033%"></div>
+<pre> refine (S2_rec_beta_surf _ _ _).</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 186
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    +</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 187
+Time: 0.009s">
+<div class="time" style="width: 3.6585365853659%"></div>
+<pre> refine (_ @ (ap (fun w =&gt; transport _ _ (ap _ w))
+                      (concat_pV (merid South))^)).</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 188
+Time: 0.004s">
+<div class="time" style="width: 1.6260162601626%"></div>
+<pre>
+      refine (_ @ (transport_paths_lr _ _)^).</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 189
+Time: 0.006s">
+<div class="time" style="width: 2.4390243902439%"></div>
+<pre>
+      refine (_ @ (ap (fun w =&gt; w @ _) (concat_p1 _)^)).</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 190
+Time: 0.002s">
+<div class="time" style="width: 0.8130081300813%"></div>
+<pre>
+      refine (concat_Vp _)^.</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 191
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    +</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 192
+Time: 0.041s">
+<div class="time" style="width: 16.666666666667%"></div>
+<pre> apply Empty_ind.</pre>
 </div>
 <div class="code" title="File: Spheres.v
 Line: 192
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    +</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 193
-Time: 0.004s">
-<div class="time" style="width: 0.24660912453761%"></div>
-<pre> refine (S2_rec_beta_surf _ _ _).</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 193
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    +</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Spheres.v
 Line: 194
-Time: 0.008s">
-<div class="time" style="width: 0.49321824907522%"></div>
-<pre> refine (_ @ (ap (fun w =&gt; transport _ _ (ap _ w))
-                      (concat_pV (merid South))^)).</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 195
-Time: 0.004s">
-<div class="time" style="width: 0.24660912453761%"></div>
-<pre>
-      refine (_ @ (transport_paths_lr _ _)^).</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 196
-Time: 0.005s">
-<div class="time" style="width: 0.30826140567201%"></div>
-<pre>
-      refine (_ @ (ap (fun w =&gt; w @ _) (concat_p1 _)^)).</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 197
-Time: 0.002s">
-<div class="time" style="width: 0.1233045622688%"></div>
-<pre>
-      refine (concat_Vp _)^.</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 198
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-    +</pre>
+<pre>Global Instance isequiv_Sph2_to_S2 : IsEquiv (Sph2_to_S2) | 0.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 199
-Time: 0.037s">
-<div class="time" style="width: 2.2811344019729%"></div>
-<pre> apply Empty_ind.</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 199
-Time: 0.765s">
-<div class="time" style="width: 47.163995067818%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 200
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-Global Instance isequiv_Sph2_to_S2 : IsEquiv (Sph2_to_S2) | 0.</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 202
+Line: 194
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 203
+Line: 195
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply isequiv_adjointify with S2_to_Sph2.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 204
+Line: 196
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 205
-Time: 0.027s">
-<div class="time" style="width: 1.6646115906289%"></div>
+Line: 197
+Time: 0.029s">
+<div class="time" style="width: 11.788617886179%"></div>
 <pre> apply issect_S2_to_Sph2.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 205
+Line: 197
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 206
+Line: 198
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply issect_Sph2_to_S2.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 206
+Line: 198
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 207
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Defined.
         
 
 (** ** Truncatedness via spheres  *)
@@ -1343,7 +1325,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 215
+Line: 207
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Fixpoint allnullhomot_trunc {n : trunc_index} {X : Type} `{IsTrunc n X}
@@ -1351,191 +1333,185 @@ Time: 0s">
 : NullHomotopy f.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 217
+Line: 209
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 210
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  destruct n as [ | n'].</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 211
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  -</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 212
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> simpl in *.</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 212
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> exists (center X).</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 212
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros [ ].</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 212
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  -</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 213
+Time: 0.001s">
+<div class="time" style="width: 0.40650406504065%"></div>
+<pre> apply nullhomot_susp_from_paths.</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 213
+Time: 0.002s">
+<div class="time" style="width: 0.8130081300813%"></div>
+<pre>
+    apply allnullhomot_trunc; auto with typeclass_instances.</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 214
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Defined.
+
+</pre>
+</div>
+<div class="code" title="File: Spheres.v
+Line: 216
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Fixpoint trunc_allnullhomot {n : trunc_index} {X : Type}
+  (HX : forall (f : Sphere n.+2 -&gt; X), NullHomotopy f) {struct n}
+: IsTrunc n.+1 X.</pre>
 </div>
 <div class="code" title="File: Spheres.v
 Line: 218
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  destruct n as [ | n'].</pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: Spheres.v
 Line: 219
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  -</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 220
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> simpl in *.</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 220
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> exists (center X).</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 220
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> intros [ ].</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 220
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  -</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 221
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> apply nullhomot_susp_from_paths.</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 221
-Time: 0.002s">
-<div class="time" style="width: 0.1233045622688%"></div>
-<pre>
-    apply allnullhomot_trunc; auto with typeclass_instances.</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 222
-Time: 0.002s">
-<div class="time" style="width: 0.1233045622688%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 223
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-Fixpoint trunc_allnullhomot {n : trunc_index} {X : Type}
-  (HX : forall (f : Sphere n.+2 -&gt; X), NullHomotopy f) {struct n}
-: IsTrunc n.+1 X.</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 227
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 228
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
   destruct n as [ | n'].</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 229
+Line: 220
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 230
+Line: 221
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> (* n = -2 *)</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 230
+Line: 221
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>apply hprop_allpath.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 230
+Line: 221
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     intros x0 x1.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 231
-Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
+Line: 222
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> set (f := (fun b =&gt; if (Sph0_to_Bool b) then x0 else x1)).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 231
+Line: 222
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     set (n := HX f).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 232
+Line: 223
 Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
+<div class="time" style="width: 0.40650406504065%"></div>
 <pre> exact (n.2 North @ (n.2 South)^).</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 232
+Line: 223
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 233
+Line: 224
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> (* n ≥ -1 *)</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 233
+Line: 224
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>intros x0 x1.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 233
+Line: 224
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     apply (trunc_allnullhomot n').</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 234
+Line: 225
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     intro f.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 235
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 226
+Time: 0.001s">
+<div class="time" style="width: 0.40650406504065%"></div>
 <pre> apply nullhomot_paths_from_susp, HX.</pre>
 </div>
 <div class="code" title="File: Spheres.v
-Line: 235
-Time: 0.001s">
-<div class="time" style="width: 0.061652281134402%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Spheres.v
-Line: 237
+Line: 227
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Defined.
 
 </pre>
 </div>

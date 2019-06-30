@@ -36,14 +36,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 1
-Time: 0.007s">
-<div class="time" style="width: 17.948717948718%"></div>
+Time: 0.008s">
+<div class="time" style="width: 17.021276595745%"></div>
 <pre>Require Import Category.Core.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 1
-Time: 0.036s">
-<div class="time" style="width: 92.307692307692%"></div>
+Time: 0.043s">
+<div class="time" style="width: 91.489361702128%"></div>
 <pre>
 Require Import HProp HSet Types.Sigma Types.Record Trunc.</pre>
 </div>
@@ -191,8 +191,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 64
-Time: 0.008s">
-<div class="time" style="width: 20.512820512821%"></div>
+Time: 0.009s">
+<div class="time" style="width: 19.148936170213%"></div>
 <pre>Record NotionOfStructure (X : PreCategory) :=
   {
     structure :&gt; X -&gt; Type;
@@ -316,22 +316,22 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 121
-Time: 0.001s">
-<div class="time" style="width: 2.5641025641026%"></div>
+Time: 0.002s">
+<div class="time" style="width: 4.2553191489362%"></div>
 <pre>
   split; repeat intro; eauto with structure_homomorphisms.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 122
-Time: 0.001s">
-<div class="time" style="width: 2.5641025641026%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   rewrite &lt;- identity_identity.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 123
 Time: 0.002s">
-<div class="time" style="width: 5.1282051282051%"></div>
+<div class="time" style="width: 4.2553191489362%"></div>
 <pre>
   eauto with structure_homomorphisms.</pre>
 </div>
@@ -340,13 +340,7 @@ Line: 124
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 125
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Defined.
 
 (** *** Standard notion of structure *)
 (** We say that [(P, H)] is a _standard notion of structure_ if this
@@ -360,7 +354,7 @@ Time: 0s">
 <div class="code" title="File: Core.v
 Line: 133
 Time: 0.003s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 6.3829787234043%"></div>
 <pre>Class IsStandardNotionOfStructure X (P : NotionOfStructure X) :=
   antisymmetry_structure : forall x (a b : P x),
                              a &lt;= b -&gt; b &lt;= a -&gt; a = b.</pre>
@@ -378,8 +372,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 139
-Time: 0.001s">
-<div class="time" style="width: 2.5641025641026%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Global Instance istrunc_homomorphism_standard_notion_of_structure
        X P `{@IsStandardNotionOfStructure X P} x
 : IsHSet (P x).</pre>
@@ -393,8 +387,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 142
-Time: 0.014s">
-<div class="time" style="width: 35.897435897436%"></div>
+Time: 0.017s">
+<div class="time" style="width: 36.170212765957%"></div>
 <pre>
   eapply (@isset_hrel_subpaths
             _ (fun a b =&gt; (a &lt;= b) * (b &lt;= a)));
@@ -409,8 +403,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 146
-Time: 0.003s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0.004s">
+<div class="time" style="width: 8.5106382978723%"></div>
 <pre> repeat intro; split; apply reflexivity.</pre>
 </div>
 <div class="code" title="File: Core.v
@@ -423,21 +417,15 @@ Time: 0s">
 <div class="code" title="File: Core.v
 Line: 147
 Time: 0.001s">
-<div class="time" style="width: 2.5641025641026%"></div>
+<div class="time" style="width: 2.1276595744681%"></div>
 <pre> intros ? ? [? ?]; apply antisymmetry_structure; assumption.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 147
-Time: 0.002s">
-<div class="time" style="width: 5.1282051282051%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 148
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Defined.
 
 (** *** Precategory of structures *)
 (** We now define, for any notion of structure [(P, H)], a
@@ -525,16 +513,16 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 189
-Time: 0.003s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0.004s">
+<div class="time" style="width: 8.5106382978723%"></div>
 <pre>Record morphism (xa yb : object) :=
       { f : Category.Core.morphism X xa.1 yb.1;
         h : is_structure_homomorphism _ _ _ f xa.2 yb.2 }.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 191
-Time: 0.001s">
-<div class="time" style="width: 2.5641025641026%"></div>
+Time: 0.002s">
+<div class="time" style="width: 4.2553191489362%"></div>
 <pre>
 
     Lemma issig_morphism (xa yb : object)
@@ -551,25 +539,25 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 197
-Time: 0.004s">
-<div class="time" style="width: 10.25641025641%"></div>
+Time: 0.005s">
+<div class="time" style="width: 10.63829787234%"></div>
 <pre>
       issig (@Build_morphism xa yb) (@f xa yb) (@h xa yb).</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 198
-Time: 0.002s">
-<div class="time" style="width: 5.1282051282051%"></div>
-<pre>
-    Defined.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 199
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+    Defined.
 
-    Lemma path_morphism
+   </pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 201
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Lemma path_morphism
     : forall xa yb (fh gi : morphism xa yb),
         f fh = f gi -&gt; fh = gi.</pre>
 </div>
@@ -583,14 +571,14 @@ Time: 0s">
 <div class="code" title="File: Core.v
 Line: 204
 Time: 0.003s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 6.3829787234043%"></div>
 <pre>
       intros ? ? [? ?] [? ?] H; simpl in *; path_induction; apply ap.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 205
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.1276595744681%"></div>
 <pre>
       apply path_ishprop.</pre>
 </div>
@@ -599,14 +587,14 @@ Line: 206
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    Defined.</pre>
+    Defined.
+ </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 207
-Time: 0.004s">
-<div class="time" style="width: 10.25641025641%"></div>
-<pre>
-  End precategory.</pre>
+Line: 208
+Time: 0.005s">
+<div class="time" style="width: 10.63829787234%"></div>
+<pre>End precategory.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 208
@@ -662,7 +650,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 218
-Time: 0.039s">
+Time: 0.047s">
 <div class="time" style="width: 100%"></div>
 <pre>
     refine (@Build_PreCategory
@@ -689,20 +677,19 @@ Time: 0.039s">
 </div>
 <div class="code" title="File: Core.v
 Line: 239
-Time: 0.004s">
-<div class="time" style="width: 10.25641025641%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 240
 Time: 0.006s">
-<div class="time" style="width: 15.384615384615%"></div>
-<pre>
-End precategory.</pre>
+<div class="time" style="width: 12.765957446809%"></div>
+<pre>End precategory.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 241
+Line: 240
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -710,28 +697,28 @@ Time: 0s">
 Module Export StructureCoreNotations.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 243
+Line: 242
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Notation "a &lt;=_{ x } b" := (is_structure_homomorphism _ x x (identity x) a b) : long_structure_scope.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 244
+Line: 243
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Notation "a &lt;= b" := (a &lt;=_{ _ } b)%long_structure : structure_scope.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 245
+Line: 244
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 End StructureCoreNotations.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 247
+Line: 246
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: ExcludedMiddle.v
 Line: 1
-Time: 0.042s">
+Time: 0.054s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
@@ -67,8 +67,8 @@ Axiom LEM : forall `{ExcludedMiddle} (P : Type), IsHProp P -&gt; P + ~P.</pre>
 </div>
 <div class="code" title="File: ExcludedMiddle.v
 Line: 7
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.8518518518519%"></div>
 <pre>
 
 Definition ExcludedMiddle_type := forall (P : Type), IsHProp P -&gt; P + ~P.</pre>
@@ -85,8 +85,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExcludedMiddle.v
 Line: 12
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Global Instance decidable_lem `{ExcludedMiddle} (P : Type) `{IsHProp P} : Decidable P
   := LEM P _.</pre>
 </div>
@@ -166,13 +166,7 @@ Line: 23
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: ExcludedMiddle.v
-Line: 24
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Defined.
 
 (** This direction requires Funext. *)</pre>
 </div>
@@ -199,8 +193,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExcludedMiddle.v
 Line: 29
-Time: 0.01s">
-<div class="time" style="width: 23.809523809524%"></div>
+Time: 0.015s">
+<div class="time" style="width: 27.777777777778%"></div>
 <pre>
   refine (dn (P + ~P) _ _).</pre>
 </div>
@@ -239,8 +233,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExcludedMiddle.v
 Line: 33
-Time: 0.006s">
-<div class="time" style="width: 14.285714285714%"></div>
+Time: 0.008s">
+<div class="time" style="width: 14.814814814815%"></div>
 <pre> exact _.</pre>
 </div>
 <div class="code" title="File: ExcludedMiddle.v
@@ -313,16 +307,10 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExcludedMiddle.v
 Line: 41
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: ExcludedMiddle.v
-Line: 42
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Defined.
 
 (** DNE is equivalent to "every proposition is a negation". *)</pre>
 </div>
@@ -356,8 +344,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExcludedMiddle.v
 Line: 48
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.8518518518519%"></div>
 <pre> intros p np; exact (np p).</pre>
 </div>
 <div class="code" title="File: ExcludedMiddle.v
@@ -378,68 +366,68 @@ Line: 49
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: ExcludedMiddle.v
-Line: 50
+Line: 51
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-
-Definition DNE_from_allneg (H : forall P, IsHProp P -&gt; {Q : Type &amp; P &lt;-&gt; ~Q})
+<pre>Definition DNE_from_allneg (H : forall P, IsHProp P -&gt; {Q : Type &amp; P &lt;-&gt; ~Q})
   : DNE_type.</pre>
 </div>
 <div class="code" title="File: ExcludedMiddle.v
-Line: 53
+Line: 52
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: ExcludedMiddle.v
-Line: 54
+Line: 53
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros P ? nnp.</pre>
 </div>
 <div class="code" title="File: ExcludedMiddle.v
-Line: 55
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Line: 54
+Time: 0.002s">
+<div class="time" style="width: 3.7037037037037%"></div>
 <pre>
   destruct (H P _) as [Q e].</pre>
 </div>
 <div class="code" title="File: ExcludedMiddle.v
-Line: 56
+Line: 55
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply e.</pre>
 </div>
 <div class="code" title="File: ExcludedMiddle.v
-Line: 57
+Line: 56
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros q.</pre>
 </div>
 <div class="code" title="File: ExcludedMiddle.v
-Line: 58
+Line: 57
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply nnp.</pre>
 </div>
 <div class="code" title="File: ExcludedMiddle.v
-Line: 59
+Line: 58
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros p.</pre>
 </div>
 <div class="code" title="File: ExcludedMiddle.v
-Line: 60
+Line: 59
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -450,13 +438,7 @@ Line: 61
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: ExcludedMiddle.v
-Line: 63
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Defined.
 
 </pre>
 </div>

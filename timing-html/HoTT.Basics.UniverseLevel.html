@@ -30,8 +30,8 @@ pre {
 
 <div class="code" title="File: UniverseLevel.v
 Line: 1
-Time: 0.01s">
-<div class="time" style="width: 52.631578947368%"></div>
+Time: 0.013s">
+<div class="time" style="width: 50%"></div>
 <pre>Require Import Basics.Overture Basics.PathGroupoids.</pre>
 </div>
 <div class="code" title="File: UniverseLevel.v
@@ -72,7 +72,7 @@ Definition lower {A} : Lift A -&gt; A := fun x =&gt; x.</pre>
 <div class="code" title="File: UniverseLevel.v
 Line: 12
 Time: 0.001s">
-<div class="time" style="width: 5.2631578947368%"></div>
+<div class="time" style="width: 3.8461538461538%"></div>
 <pre>
 
 Definition lift2 {A B} (f : forall x : A, B x) : forall x : Lift A, Lift (B (lower x))
@@ -103,8 +103,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: UniverseLevel.v
 Line: 20
-Time: 0.002s">
-<div class="time" style="width: 10.526315789474%"></div>
+Time: 0.003s">
+<div class="time" style="width: 11.538461538462%"></div>
 <pre>
 
 Global Instance isequiv_lift T : IsEquiv (@lift T)
@@ -118,8 +118,8 @@ Global Instance isequiv_lift T : IsEquiv (@lift T)
 </div>
 <div class="code" title="File: UniverseLevel.v
 Line: 29
-Time: 0.003s">
-<div class="time" style="width: 15.789473684211%"></div>
+Time: 0.005s">
+<div class="time" style="width: 19.230769230769%"></div>
 <pre>
 
 Global Instance isequiv_lift2 A B : IsEquiv (@lift2 A B)
@@ -133,8 +133,8 @@ Global Instance isequiv_lift2 A B : IsEquiv (@lift2 A B)
 </div>
 <div class="code" title="File: UniverseLevel.v
 Line: 38
-Time: 0.017s">
-<div class="time" style="width: 89.473684210526%"></div>
+Time: 0.021s">
+<div class="time" style="width: 80.769230769231%"></div>
 <pre>
 
 Global Instance lift_isequiv {A B} (f : A -&gt; B) {H : IsEquiv f} : @IsEquiv (Lift A) (Lift B) (lift2 f)
@@ -150,7 +150,7 @@ Global Instance lift_isequiv {A B} (f : A -&gt; B) {H : IsEquiv f} : @IsEquiv (L
 </div>
 <div class="code" title="File: UniverseLevel.v
 Line: 49
-Time: 0.019s">
+Time: 0.026s">
 <div class="time" style="width: 100%"></div>
 <pre>
 
@@ -167,8 +167,8 @@ Global Instance lower_isequiv {A B} (f : Lift A -&gt; Lift B) {H : IsEquiv f} : 
 </div>
 <div class="code" title="File: UniverseLevel.v
 Line: 60
-Time: 0.002s">
-<div class="time" style="width: 10.526315789474%"></div>
+Time: 0.003s">
+<div class="time" style="width: 11.538461538462%"></div>
 <pre>
 
 Definition lower_equiv {A B} (e : Equiv (Lift A) (Lift B)) : Equiv A B
@@ -215,7 +215,7 @@ Definition lower'@{i j} {A : Type@{i}} : Lift'@{i j} A -&gt; A := fun x =&gt; x.
 <div class="code" title="File: UniverseLevel.v
 Line: 70
 Time: 0.001s">
-<div class="time" style="width: 5.2631578947368%"></div>
+<div class="time" style="width: 3.8461538461538%"></div>
 <pre>
 
 Definition lift'2@{i i' j j'} {A : Type@{i}} {B : A -&gt; Type@{i'}} (f : forall x : A, B x)
@@ -250,7 +250,7 @@ Time: 0s">
 <div class="code" title="File: UniverseLevel.v
 Line: 81
 Time: 0.002s">
-<div class="time" style="width: 10.526315789474%"></div>
+<div class="time" style="width: 7.6923076923077%"></div>
 <pre>
 
 Definition isequiv_lift'@{i j} (T : Type@{i}) : IsEquiv (@lift'@{i j} T)
@@ -280,7 +280,7 @@ Time: 0s">
 <div class="code" title="File: UniverseLevel.v
 Line: 92
 Time: 0.003s">
-<div class="time" style="width: 15.789473684211%"></div>
+<div class="time" style="width: 11.538461538462%"></div>
 <pre>Definition isequiv_lift'2@{e0 e1 i i' j j'} (A : Type@{i}) (B : A -&gt; Type@{j}) : IsEquiv@{e0 e1} (@lift'2@{i i' j j'} A B)
   := @BuildIsEquiv
        _ _
@@ -307,8 +307,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: UniverseLevel.v
 Line: 101
-Time: 0.016s">
-<div class="time" style="width: 84.210526315789%"></div>
+Time: 0.019s">
+<div class="time" style="width: 73.076923076923%"></div>
 <pre>Definition lift'_isequiv@{a b i j i' j'}  {A : Type@{a}} {B : Type@{b}} (f : A -&gt; B) {H : IsEquiv f} : @IsEquiv (Lift'@{i j} A) (Lift'@{i' j'} B) (lift'2 f)
   := @BuildIsEquiv
        (Lift' A) (Lift' B)
@@ -337,8 +337,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: UniverseLevel.v
 Line: 112
-Time: 0.016s">
-<div class="time" style="width: 84.210526315789%"></div>
+Time: 0.02s">
+<div class="time" style="width: 76.923076923077%"></div>
 <pre>Definition lower'_isequiv@{i j i' j'} {A : Type@{i}} {B : Type@{j}} (f : Lift'@{i j} A -&gt; Lift'@{i' j'} B) {H : IsEquiv f} : @IsEquiv A B (lower'2 f)
   := @BuildIsEquiv
        _ _
@@ -352,8 +352,8 @@ Time: 0.016s">
 </div>
 <div class="code" title="File: UniverseLevel.v
 Line: 121
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.8461538461538%"></div>
 <pre>
 Global Existing Instance lower'_isequiv.</pre>
 </div>
@@ -367,8 +367,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: UniverseLevel.v
 Line: 123
-Time: 0.003s">
-<div class="time" style="width: 15.789473684211%"></div>
+Time: 0.004s">
+<div class="time" style="width: 15.384615384615%"></div>
 <pre>Definition lower'_equiv@{i j i' j'} {A : Type@{i}} {B : Type@{j}} (e : Equiv (Lift'@{i j} A) (Lift'@{i' j'} B)) : Equiv A B
   := @BuildEquiv A B (lower'2 e) _.</pre>
 </div>

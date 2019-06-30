@@ -67,8 +67,8 @@ Time: 0.011s">
 </div>
 <div class="code" title="File: Peano.v
 Line: 25
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.002s">
+<div class="time" style="width: 18.181818181818%"></div>
 <pre>
 Require Import Datatypes.</pre>
 </div>
@@ -184,13 +184,7 @@ Line: 47
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: Peano.v
-Line: 48
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Qed.
 
 (** Injectivity of successor *)
 
@@ -242,11 +236,10 @@ Qed.</pre>
 Line: 57
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-Hint Resolve not_eq_S: core.</pre>
+<pre>Hint Resolve not_eq_S: core.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 58
+Line: 57
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -258,7 +251,7 @@ Definition IsSucc (n:nat) : Type :=
   end.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 64
+Line: 63
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -284,7 +277,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 83
+Line: 82
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Fixpoint plus (n m:nat) : nat :=
@@ -296,22 +289,22 @@ Time: 0s">
 where "n + m" := (plus n m) : nat_scope.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 89
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 88
+Time: 0.001s">
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre>
 
 Hint Resolve (f_equal2 plus): v62.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 91
+Line: 90
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Hint Resolve (f_equal2 (A1:=nat) (A2:=nat)): core.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 92
+Line: 91
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -319,35 +312,34 @@ Time: 0s">
 Lemma plus_n_O : forall n:nat, n = n + 0.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 94
+Line: 93
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 95
+Line: 94
 Time: 0.001s">
 <div class="time" style="width: 9.0909090909091%"></div>
 <pre>
   induction n; simpl; auto.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 96
+Line: 95
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 97
+Line: 96
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-Hint Resolve plus_n_O: core.</pre>
+<pre>Hint Resolve plus_n_O: core.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 98
+Line: 96
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -355,64 +347,63 @@ Time: 0s">
 Lemma plus_O_n : forall n:nat, 0 + n = n.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 100
+Line: 98
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 101
+Line: 99
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   auto.</pre>
 </div>
 <div class="code" title="File: Peano.v
+Line: 100
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Qed.
+
+</pre>
+</div>
+<div class="code" title="File: Peano.v
 Line: 102
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-Qed.</pre>
+<pre>Lemma plus_n_Sm : forall n m:nat, S (n + m) = n + S m.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 103
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-Lemma plus_n_Sm : forall n m:nat, S (n + m) = n + S m.</pre>
-</div>
-<div class="code" title="File: Peano.v
-Line: 105
+Line: 102
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 106
-Time: 0.001s">
-<div class="time" style="width: 9.0909090909091%"></div>
+Line: 103
+Time: 0.002s">
+<div class="time" style="width: 18.181818181818%"></div>
 <pre>
   intros n m; induction n; simpl; auto.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 107
+Line: 104
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 108
+Line: 105
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-Hint Resolve plus_n_Sm: core.</pre>
+<pre>Hint Resolve plus_n_Sm: core.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 109
+Line: 105
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -420,51 +411,45 @@ Time: 0s">
 Lemma plus_Sn_m : forall n m:nat, S n + m = S (n + m).</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 111
+Line: 107
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 112
+Line: 108
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   auto.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 113
+Line: 109
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: Peano.v
-Line: 114
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Qed.
 
 (** Standard associated names *)
 
 </pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 117
+Line: 113
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Notation plus_0_r_reverse := plus_n_O (only parsing).</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 117
+Line: 113
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation plus_succ_r_reverse := plus_n_Sm (only parsing).</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 118
+Line: 114
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -474,9 +459,9 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 121
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 117
+Time: 0.001s">
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre>Fixpoint mult (n m:nat) : nat :=
   match n with
   | O =&gt; 0
@@ -486,7 +471,7 @@ Time: 0s">
 where "n * m" := (mult n m) : nat_scope.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 127
+Line: 123
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -494,7 +479,7 @@ Time: 0s">
 Hint Resolve (f_equal2 mult): core.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 129
+Line: 125
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -502,35 +487,34 @@ Time: 0s">
 Lemma mult_n_O : forall n:nat, 0 = n * 0.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 131
+Line: 127
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 132
+Line: 128
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   induction n; simpl; auto.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 133
+Line: 129
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 134
+Line: 130
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-Hint Resolve mult_n_O: core.</pre>
+<pre>Hint Resolve mult_n_O: core.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 135
+Line: 130
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -538,49 +522,48 @@ Time: 0s">
 Lemma mult_n_Sm : forall n m:nat, n * m + n = n * S m.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 137
+Line: 132
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 138
-Time: 0.002s">
-<div class="time" style="width: 18.181818181818%"></div>
+Line: 133
+Time: 0.001s">
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre>
   intros; induction n as [| p H]; simpl; auto.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 139
-Time: 0.001s">
-<div class="time" style="width: 9.0909090909091%"></div>
+Line: 134
+Time: 0.004s">
+<div class="time" style="width: 36.363636363636%"></div>
 <pre>
   destruct H; rewrite &lt;- plus_n_Sm; apply eq_S.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 140
+Line: 135
 Time: 0.001s">
 <div class="time" style="width: 9.0909090909091%"></div>
 <pre>
   pattern m at 1 3; elim m; simpl; auto.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 141
-Time: 0.001s">
-<div class="time" style="width: 9.0909090909091%"></div>
+Line: 136
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 142
+Line: 137
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-Hint Resolve mult_n_Sm: core.</pre>
+<pre>Hint Resolve mult_n_Sm: core.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 143
+Line: 137
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -590,20 +573,20 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 146
+Line: 140
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Notation mult_0_r_reverse := mult_n_O (only parsing).</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 146
+Line: 140
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation mult_succ_r_reverse := mult_n_Sm (only parsing).</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 147
+Line: 141
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -613,7 +596,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 150
+Line: 144
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Fixpoint minus (n m:nat) : nat :=
@@ -626,7 +609,7 @@ Time: 0s">
 where "n - m" := (minus n m) : nat_scope.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 157
+Line: 151
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -637,22 +620,22 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 161
-Time: 0.001s">
-<div class="time" style="width: 9.0909090909091%"></div>
+Line: 155
+Time: 0.002s">
+<div class="time" style="width: 18.181818181818%"></div>
 <pre>Inductive le (n:nat) : nat -&gt; Type :=
   | le_n : le n n
   | le_S : forall m:nat, le n m -&gt; le n (S m).</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 163
+Line: 157
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Local Notation "n &lt;= m" := (le n m) : nat_scope.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 164
+Line: 158
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -660,7 +643,7 @@ Time: 0s">
 Hint Constructors le: core.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 166
+Line: 160
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -669,20 +652,20 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 168
+Line: 162
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition lt (n m:nat) := S n &lt;= m.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 168
+Line: 162
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Hint Unfold lt: core.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 169
+Line: 163
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -690,7 +673,7 @@ Time: 0s">
 Local Infix "&lt;" := lt : nat_scope.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 171
+Line: 165
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -698,14 +681,14 @@ Time: 0s">
 Definition ge (n m:nat) := m &lt;= n.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 173
+Line: 167
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Hint Unfold ge: core.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 174
+Line: 168
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -713,7 +696,7 @@ Time: 0s">
 Local Infix "&gt;=" := ge : nat_scope.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 176
+Line: 170
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -721,14 +704,14 @@ Time: 0s">
 Definition gt (n m:nat) := m &lt; n.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 178
+Line: 172
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Hint Unfold gt: core.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 179
+Line: 173
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -736,7 +719,7 @@ Time: 0s">
 Local Infix "&gt;" := gt : nat_scope.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 181
+Line: 175
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -744,28 +727,28 @@ Time: 0s">
 Local Notation "x &lt;= y &lt;= z" := (x &lt;= y /\ y &lt;= z) : nat_scope.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 183
+Line: 177
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Local Notation "x &lt;= y &lt; z" := (x &lt;= y /\ y &lt; z) : nat_scope.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 184
+Line: 178
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Local Notation "x &lt; y &lt; z" := (x &lt; y /\ y &lt; z) : nat_scope.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 185
+Line: 179
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Local Notation "x &lt; y &lt;= z" := (x &lt; y /\ y &lt;= z) : nat_scope.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 186
+Line: 180
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -773,39 +756,77 @@ Time: 0s">
 Theorem le_pred : forall n m, n &lt;= m -&gt; pred n &lt;= pred m.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 188
+Line: 182
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 189
-Time: 0.001s">
-<div class="time" style="width: 9.0909090909091%"></div>
+Line: 183
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 induction 1; auto.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 190
+Line: 184
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> destruct m; simpl; auto.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 190
+Line: 184
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+Qed.
+
+</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 191
+Line: 186
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Theorem le_S_n : forall n m, S n &lt;= S m -&gt; n &lt;= m.</pre>
+</div>
+<div class="code" title="File: Peano.v
+Line: 186
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: Peano.v
+Line: 187
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+intros n m.</pre>
+</div>
+<div class="code" title="File: Peano.v
+Line: 188
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> exact (le_pred (S n) (S m)).</pre>
+</div>
+<div class="code" title="File: Peano.v
+Line: 188
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Qed.
 
-Theorem le_S_n : forall n m, S n &lt;= S m -&gt; n &lt;= m.</pre>
+(** Case analysis *)
+
+</pre>
+</div>
+<div class="code" title="File: Peano.v
+Line: 192
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Theorem nat_case :
+ forall (n:nat) (P:nat -&gt; Type), P 0 -&gt; (forall m:nat, P (S m)) -&gt; P n.</pre>
 </div>
 <div class="code" title="File: Peano.v
 Line: 193
@@ -816,74 +837,24 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Peano.v
 Line: 194
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-intros n m.</pre>
-</div>
-<div class="code" title="File: Peano.v
-Line: 195
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> exact (le_pred (S n) (S m)).</pre>
-</div>
-<div class="code" title="File: Peano.v
-Line: 195
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: Peano.v
-Line: 196
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-(** Case analysis *)
-
-</pre>
-</div>
-<div class="code" title="File: Peano.v
-Line: 199
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>Theorem nat_case :
- forall (n:nat) (P:nat -&gt; Type), P 0 -&gt; (forall m:nat, P (S m)) -&gt; P n.</pre>
-</div>
-<div class="code" title="File: Peano.v
-Line: 200
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
-</div>
-<div class="code" title="File: Peano.v
-Line: 201
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre>
   induction n; auto.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 202
+Line: 195
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: Peano.v
-Line: 203
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Qed.
 
 (** Principle of double induction *)
 
 </pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 206
+Line: 199
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Theorem nat_double_ind :
@@ -893,47 +864,41 @@ Time: 0s">
    (forall n m:nat, R n m -&gt; R (S n) (S m)) -&gt; forall n m:nat, R n m.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 210
+Line: 203
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 211
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 204
+Time: 0.001s">
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre>
   induction n; auto.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 212
-Time: 0.001s">
-<div class="time" style="width: 9.0909090909091%"></div>
+Line: 205
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   destruct m; auto.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 213
+Line: 206
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: Peano.v
-Line: 214
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Qed.
 
 (** Maximum and minimum : definitions and specifications *)
 
 </pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 217
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 210
+Time: 0.001s">
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre>Fixpoint max n m : nat :=
   match n, m with
     | O, _ =&gt; m
@@ -942,9 +907,9 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 222
-Time: 0.001s">
-<div class="time" style="width: 9.0909090909091%"></div>
+Line: 215
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Fixpoint min n m : nat :=
@@ -955,7 +920,7 @@ Fixpoint min n m : nat :=
   end.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 229
+Line: 222
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -989,7 +954,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 256
+Line: 249
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Fixpoint nat_iter (n:nat) {A} (f:A-&gt;A) (x:A) : A :=
@@ -999,7 +964,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 260
+Line: 253
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1008,62 +973,56 @@ Lemma nat_iter_succ_r n {A} (f:A-&gt;A) (x:A) :
   nat_iter (S n) f x = nat_iter n f (f x).</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 263
+Line: 256
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 264
+Line: 257
 Time: 0.002s">
 <div class="time" style="width: 18.181818181818%"></div>
 <pre>
   induction n; intros; simpl; rewrite &lt;- ?IHn; trivial.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 265
+Line: 258
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+Qed.
+
+</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 266
-Time: 0.001s">
-<div class="time" style="width: 9.0909090909091%"></div>
-<pre>
-
-Theorem nat_iter_plus :
+Line: 260
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Theorem nat_iter_plus :
   forall (n m:nat) {A} (f:A -&gt; A) (x:A),
     nat_iter (n + m) f x = nat_iter n f (nat_iter m f x).</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 270
+Line: 262
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 271
-Time: 0.003s">
-<div class="time" style="width: 27.272727272727%"></div>
+Line: 263
+Time: 0.004s">
+<div class="time" style="width: 36.363636363636%"></div>
 <pre>
   induction n; intros; simpl; rewrite ?IHn; trivial.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 272
+Line: 264
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: Peano.v
-Line: 273
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Qed.
 
 (** Preservation of invariants : if [f : A-&gt;A] preserves the invariant [Inv],
     then the iterates of [f] also preserve it. *)
@@ -1071,7 +1030,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 277
+Line: 269
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Theorem nat_iter_invariant :
@@ -1080,44 +1039,38 @@ Time: 0s">
     forall x, P x -&gt; P (nat_iter n f x).</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 280
+Line: 272
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 281
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 273
+Time: 0.003s">
+<div class="time" style="width: 27.272727272727%"></div>
 <pre>
   induction n; simpl; trivial.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 282
+Line: 274
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros A f P Hf x Hx.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 283
+Line: 275
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply Hf, IHn; trivial.</pre>
 </div>
 <div class="code" title="File: Peano.v
-Line: 283
+Line: 276
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: Peano.v
-Line: 285
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Qed.
 
 </pre>
 </div>

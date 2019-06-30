@@ -36,7 +36,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Cantor.v
 Line: 1
-Time: 0.044s">
+Time: 0.063s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
@@ -74,8 +74,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Cantor.v
 Line: 8
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.5873015873016%"></div>
 <pre>
 
 Definition fold_cantor : cantor + cantor -&gt; cantor.</pre>
@@ -177,36 +177,49 @@ Line: 18
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Cantor.v
-Line: 19
+Line: 20
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-
-Definition unfold_cantor : cantor -&gt; cantor + cantor.</pre>
+<pre>Definition unfold_cantor : cantor -&gt; cantor + cantor.</pre>
 </div>
 <div class="code" title="File: Cantor.v
-Line: 21
+Line: 20
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Cantor.v
-Line: 22
+Line: 21
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros c.</pre>
 </div>
 <div class="code" title="File: Cantor.v
-Line: 23
+Line: 22
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   case (c 0).</pre>
+</div>
+<div class="code" title="File: Cantor.v
+Line: 23
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  -</pre>
+</div>
+<div class="code" title="File: Cantor.v
+Line: 24
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> exact (inl (fun n =&gt; c n.+1)).</pre>
 </div>
 <div class="code" title="File: Cantor.v
 Line: 24
@@ -219,69 +232,76 @@ Time: 0s">
 Line: 25
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> exact (inl (fun n =&gt; c n.+1)).</pre>
+<pre> exact (inr (fun n =&gt; c n.+1)).</pre>
 </div>
 <div class="code" title="File: Cantor.v
 Line: 25
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  -</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Cantor.v
-Line: 26
+Line: 27
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> exact (inr (fun n =&gt; c n.+1)).</pre>
-</div>
-<div class="code" title="File: Cantor.v
-Line: 26
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Defined.</pre>
+<pre>Global Instance isequiv_fold_cantor `{Funext} : IsEquiv fold_cantor.</pre>
 </div>
 <div class="code" title="File: Cantor.v
 Line: 27
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-Global Instance isequiv_fold_cantor `{Funext} : IsEquiv fold_cantor.</pre>
-</div>
-<div class="code" title="File: Cantor.v
-Line: 29
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Cantor.v
-Line: 30
+Line: 28
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   refine (isequiv_adjointify fold_cantor unfold_cantor _ _).</pre>
 </div>
 <div class="code" title="File: Cantor.v
-Line: 31
+Line: 29
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Cantor.v
-Line: 32
+Line: 30
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros c; apply path_arrow; intros n.</pre>
+</div>
+<div class="code" title="File: Cantor.v
+Line: 30
+Time: 0.001s">
+<div class="time" style="width: 1.5873015873016%"></div>
+<pre>
+    induction n as [|n IH].</pre>
+</div>
+<div class="code" title="File: Cantor.v
+Line: 31
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    +</pre>
+</div>
+<div class="code" title="File: Cantor.v
+Line: 32
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> unfold unfold_cantor.</pre>
 </div>
 <div class="code" title="File: Cantor.v
 Line: 32
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    induction n as [|n IH].</pre>
+      case (c 0); reflexivity.</pre>
 </div>
 <div class="code" title="File: Cantor.v
 Line: 33
@@ -298,8 +318,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Cantor.v
 Line: 34
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.002s">
+<div class="time" style="width: 3.1746031746032%"></div>
 <pre>
       case (c 0); reflexivity.</pre>
 </div>
@@ -308,52 +328,32 @@ Line: 35
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    +</pre>
-</div>
-<div class="code" title="File: Cantor.v
-Line: 36
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> unfold unfold_cantor.</pre>
-</div>
-<div class="code" title="File: Cantor.v
-Line: 36
-Time: 0.001s">
-<div class="time" style="width: 2.2727272727273%"></div>
-<pre>
-      case (c 0); reflexivity.</pre>
-</div>
-<div class="code" title="File: Cantor.v
-Line: 37
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
   -</pre>
 </div>
 <div class="code" title="File: Cantor.v
-Line: 38
+Line: 36
 Time: 0.001s">
-<div class="time" style="width: 2.2727272727273%"></div>
+<div class="time" style="width: 1.5873015873016%"></div>
 <pre> intros [c|c]; apply path_sum; reflexivity.</pre>
 </div>
 <div class="code" title="File: Cantor.v
-Line: 38
-Time: 0.002s">
-<div class="time" style="width: 4.5454545454545%"></div>
+Line: 36
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Cantor.v
-Line: 39
-Time: 0.003s">
-<div class="time" style="width: 6.8181818181818%"></div>
-<pre>
-
-Definition equiv_fold_cantor `{Funext} : cantor + cantor &lt;~&gt; cantor
+Line: 38
+Time: 0.004s">
+<div class="time" style="width: 6.3492063492063%"></div>
+<pre>Definition equiv_fold_cantor `{Funext} : cantor + cantor &lt;~&gt; cantor
   := BuildEquiv _ _ fold_cantor _.</pre>
 </div>
 <div class="code" title="File: Cantor.v
-Line: 43
+Line: 40
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

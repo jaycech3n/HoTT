@@ -36,21 +36,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 1
-Time: 0.007s">
-<div class="time" style="width: 8.3333333333333%"></div>
+Time: 0.008s">
+<div class="time" style="width: 7.4766355140187%"></div>
 <pre>Require Import Category.Core Functor.Core.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 1
-Time: 0.038s">
-<div class="time" style="width: 45.238095238095%"></div>
+Time: 0.045s">
+<div class="time" style="width: 42.056074766355%"></div>
 <pre>
 Require Import SetCategory.Core.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 2
 Time: 0.003s">
-<div class="time" style="width: 3.5714285714286%"></div>
+<div class="time" style="width: 2.803738317757%"></div>
 <pre>
 Require Import Basics.Trunc HSet Types.Sigma TruncType Types.Record.</pre>
 </div>
@@ -149,7 +149,7 @@ Time: 0s">
 <div class="code" title="File: Core.v
 Line: 35
 Time: 0.001s">
-<div class="time" style="width: 1.1904761904762%"></div>
+<div class="time" style="width: 0.93457943925234%"></div>
 <pre>
 
   Record Pair :=
@@ -161,7 +161,7 @@ Time: 0.001s">
 <div class="code" title="File: Core.v
 Line: 41
 Time: 0.001s">
-<div class="time" style="width: 1.1904761904762%"></div>
+<div class="time" style="width: 0.93457943925234%"></div>
 <pre>
 
   Definition issig_pair : { c : C | F c } &lt;~&gt; Pair.</pre>
@@ -176,31 +176,31 @@ Time: 0s">
 <div class="code" title="File: Core.v
 Line: 44
 Time: 0.003s">
-<div class="time" style="width: 3.5714285714286%"></div>
+<div class="time" style="width: 2.803738317757%"></div>
 <pre>
     issig Build_Pair c x.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 45
-Time: 0.001s">
-<div class="time" style="width: 1.1904761904762%"></div>
-<pre>
-  Defined.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 46
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+  Defined.
 
-  Local Notation morphism s d :=
+ </pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 48
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Local Notation morphism s d :=
     { f : morphism C s.(c) d.(c)
     | F _1 f s.(x) = d.(x) }.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 50
 Time: 0.003s">
-<div class="time" style="width: 3.5714285714286%"></div>
+<div class="time" style="width: 2.803738317757%"></div>
 <pre>
 
   Definition compose_H s d d'
@@ -217,22 +217,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 56
-Time: 0.002s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.803738317757%"></div>
 <pre>
     etransitivity; [ | exact (m1.2) ].</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 57
 Time: 0.004s">
-<div class="time" style="width: 4.7619047619048%"></div>
+<div class="time" style="width: 3.7383177570093%"></div>
 <pre>
     etransitivity; [ | apply ap; exact (m2.2) ].</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 58
-Time: 0.001s">
-<div class="time" style="width: 1.1904761904762%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     match goal with
       | [ |- ?f ?x = ?g (?h ?x) ] =&gt; change (f x = (g o h) x)
@@ -249,25 +249,25 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 64
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.93457943925234%"></div>
 <pre>
     apply (composition_of F).</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 65
-Time: 0.003s">
-<div class="time" style="width: 3.5714285714286%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-  Defined.</pre>
+  Defined.
+
+ </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 66
-Time: 0.002s">
-<div class="time" style="width: 2.3809523809524%"></div>
-<pre>
-
-  Definition compose s d d'
+Line: 68
+Time: 0.003s">
+<div class="time" style="width: 2.803738317757%"></div>
+<pre>Definition compose s d d'
              (m1 : morphism d d')
              (m2 : morphism s d)
   : morphism s d'.</pre>
@@ -295,24 +295,24 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 74
-Time: 0.001s">
-<div class="time" style="width: 1.1904761904762%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-  Defined.</pre>
+  Defined.
+
+ </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 75
+Line: 77
 Time: 0.001s">
-<div class="time" style="width: 1.1904761904762%"></div>
-<pre>
-
-  Definition identity_H s
+<div class="time" style="width: 0.93457943925234%"></div>
+<pre>Definition identity_H s
     := apD10 (identity_of F s.(c)) s.(x).</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 78
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.93457943925234%"></div>
 <pre>
 
   Definition identity s : morphism s s.</pre>
@@ -343,15 +343,15 @@ Line: 83
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Defined.</pre>
+  Defined.
+
+ </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 84
+Line: 86
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-
-  Global Arguments compose_H : simpl never.</pre>
+<pre>Global Arguments compose_H : simpl never.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 86
@@ -398,7 +398,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 93
-Time: 0.084s">
+Time: 0.107s">
 <div class="time" style="width: 100%"></div>
 <pre>
     refine (@Build_PreCategory
@@ -421,24 +421,18 @@ Time: 0.084s">
 </div>
 <div class="code" title="File: Core.v
 Line: 110
-Time: 0.003s">
-<div class="time" style="width: 3.5714285714286%"></div>
-<pre>
-  Defined.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 111
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+  Defined.
 
   (** ** First projection functor *)
  </pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 114
-Time: 0.004s">
-<div class="time" style="width: 4.7619047619048%"></div>
+Time: 0.005s">
+<div class="time" style="width: 4.6728971962617%"></div>
 <pre>Definition pr1 : Functor category C
     := Build_Functor
          category C
@@ -449,8 +443,8 @@ Time: 0.004s">
 </div>
 <div class="code" title="File: Core.v
 Line: 120
-Time: 0.014s">
-<div class="time" style="width: 16.666666666667%"></div>
+Time: 0.018s">
+<div class="time" style="width: 16.822429906542%"></div>
 <pre>
 End Grothendieck.</pre>
 </div>

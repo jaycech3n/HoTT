@@ -36,14 +36,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Functors.v
 Line: 1
-Time: 0.048s">
-<div class="time" style="width: 46.153846153846%"></div>
+Time: 0.06s">
+<div class="time" style="width: 44.117647058824%"></div>
 <pre>Require Import Category.Core Functor.Core FunctorCategory.Core Functor.Identity NaturalTransformation.Core NaturalTransformation.Paths Functor.Composition.Core.</pre>
 </div>
 <div class="code" title="File: Functors.v
 Line: 1
-Time: 0.015s">
-<div class="time" style="width: 14.423076923077%"></div>
+Time: 0.018s">
+<div class="time" style="width: 13.235294117647%"></div>
 <pre>
 Require Import InitialTerminalCategory.Core InitialTerminalCategory.Functors InitialTerminalCategory.NaturalTransformations.</pre>
 </div>
@@ -146,8 +146,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Functors.v
 Line: 21
-Time: 0.007s">
-<div class="time" style="width: 6.7307692307692%"></div>
+Time: 0.009s">
+<div class="time" style="width: 6.6176470588235%"></div>
 <pre>Definition functor : Functor (1 -&gt; C) C
     := Build_Functor (1 -&gt; C) C
                      (fun F =&gt; F (center _))
@@ -157,8 +157,8 @@ Time: 0.007s">
 </div>
 <div class="code" title="File: Functors.v
 Line: 26
-Time: 0.002s">
-<div class="time" style="width: 1.9230769230769%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.2058823529412%"></div>
 <pre>
 
   Definition inverse_morphism_of
@@ -176,8 +176,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Functors.v
 Line: 33
-Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.4705882352941%"></div>
 <pre>
     refine (Build_NaturalTransformation
               (Functors.from_terminal _ s)
@@ -194,8 +194,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Functors.v
 Line: 39
-Time: 0.003s">
-<div class="time" style="width: 2.8846153846154%"></div>
+Time: 0.006s">
+<div class="time" style="width: 4.4117647058824%"></div>
 <pre>
     etransitivity;
       [ apply right_identity
@@ -203,18 +203,18 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: Functors.v
 Line: 42
-Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
-<pre>
-  Defined.</pre>
-</div>
-<div class="code" title="File: Functors.v
-Line: 43
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+  Defined.
 
-  Global Arguments inverse_morphism_of / _ _ _.</pre>
+ </pre>
+</div>
+<div class="code" title="File: Functors.v
+Line: 45
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Global Arguments inverse_morphism_of / _ _ _.</pre>
 </div>
 <div class="code" title="File: Functors.v
 Line: 45
@@ -227,8 +227,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Functors.v
 Line: 48
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.73529411764706%"></div>
 <pre>Definition inverse : Functor C (1 -&gt; C).</pre>
 </div>
 <div class="code" title="File: Functors.v
@@ -240,8 +240,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Functors.v
 Line: 49
-Time: 0.009s">
-<div class="time" style="width: 8.6538461538462%"></div>
+Time: 0.011s">
+<div class="time" style="width: 8.0882352941176%"></div>
 <pre>
     refine (Build_Functor
               C (1 -&gt; C)
@@ -261,13 +261,12 @@ Time: 0s">
 </div>
 <div class="code" title="File: Functors.v
 Line: 58
-Time: 0.004s">
-<div class="time" style="width: 3.8461538461538%"></div>
-<pre>
-End law1.</pre>
+Time: 0.005s">
+<div class="time" style="width: 3.6764705882353%"></div>
+<pre>End law1.</pre>
 </div>
 <div class="code" title="File: Functors.v
-Line: 59
+Line: 58
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -275,42 +274,42 @@ Time: 0s">
 Section law1'.</pre>
 </div>
 <div class="code" title="File: Functors.v
-Line: 61
+Line: 60
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Context `{Funext}.</pre>
 </div>
 <div class="code" title="File: Functors.v
-Line: 62
+Line: 61
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Context `{IsInitialCategory zero}.</pre>
 </div>
 <div class="code" title="File: Functors.v
-Line: 63
+Line: 62
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Context `{IsTerminalCategory one}.</pre>
 </div>
 <div class="code" title="File: Functors.v
-Line: 64
+Line: 63
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Local Notation "0" := zero : category_scope.</pre>
 </div>
 <div class="code" title="File: Functors.v
-Line: 65
+Line: 64
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Local Notation "1" := one : category_scope.</pre>
 </div>
 <div class="code" title="File: Functors.v
-Line: 66
+Line: 65
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -318,15 +317,15 @@ Time: 0s">
   Variable C : PreCategory.</pre>
 </div>
 <div class="code" title="File: Functors.v
-Line: 68
-Time: 0.023s">
-<div class="time" style="width: 22.115384615385%"></div>
+Line: 67
+Time: 0.028s">
+<div class="time" style="width: 20.588235294118%"></div>
 <pre>
 
   Global Instance: IsTerminalCategory (C -&gt; 1) := {}.</pre>
 </div>
 <div class="code" title="File: Functors.v
-Line: 70
+Line: 69
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -335,14 +334,14 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Functors.v
-Line: 73
-Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+Line: 72
+Time: 0.002s">
+<div class="time" style="width: 1.4705882352941%"></div>
 <pre>Definition functor' : Functor (C -&gt; 1) 1
     := Functors.to_terminal _.</pre>
 </div>
 <div class="code" title="File: Functors.v
-Line: 74
+Line: 73
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -351,14 +350,14 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Functors.v
-Line: 77
-Time: 0.023s">
-<div class="time" style="width: 22.115384615385%"></div>
+Line: 76
+Time: 0.03s">
+<div class="time" style="width: 22.058823529412%"></div>
 <pre>Definition inverse' : Functor 1 (C -&gt; 1)
     := Functors.to_terminal _.</pre>
 </div>
 <div class="code" title="File: Functors.v
-Line: 78
+Line: 77
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -367,8 +366,8 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Functors.v
-Line: 81
-Time: 0.104s">
+Line: 80
+Time: 0.136s">
 <div class="time" style="width: 100%"></div>
 <pre>Definition law'
   : functor' o inverse' = 1
@@ -376,14 +375,14 @@ Time: 0.104s">
     := center _.</pre>
 </div>
 <div class="code" title="File: Functors.v
-Line: 84
-Time: 0.003s">
-<div class="time" style="width: 2.8846153846154%"></div>
+Line: 83
+Time: 0.004s">
+<div class="time" style="width: 2.9411764705882%"></div>
 <pre>
 End law1'.</pre>
 </div>
 <div class="code" title="File: Functors.v
-Line: 86
+Line: 85
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: canonical_names.v
 Line: 1
-Time: 0.225s">
+Time: 0.301s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Export HoTT.Basics.Overture HoTT.Types.Bool HoTT.Basics.Decidable HoTT.Basics.Trunc HoTT.HIT.Truncations.</pre>
 </div>
@@ -140,7 +140,7 @@ Time: 0s">
 <div class="code" title="File: canonical_names.v
 Line: 26
 Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre> apply _.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
@@ -161,26 +161,26 @@ Line: 27
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+Qed.
+
+</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 28
+Line: 29
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-
-Notation " g ∘ f " := (Compose g f)%mc
+<pre>Notation " g ∘ f " := (Compose g f)%mc
   (at level 40, left associativity).</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 31
+Line: 30
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(∘)" := Compose (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 32
+Line: 31
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -188,7 +188,7 @@ Time: 0s">
 Definition id {A : Type} (a : A) := a.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 34
+Line: 33
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -196,21 +196,21 @@ Time: 0s">
 Notation "(=)" := paths (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 36
+Line: 35
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "( x =)" := (paths x) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 37
+Line: 36
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(= x )" := (fun y =&gt; paths y x) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 38
+Line: 37
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -218,57 +218,57 @@ Time: 0s">
 Notation "(&lt;&gt;)" := (fun x y =&gt; ~x = y) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 40
+Line: 39
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "( x &lt;&gt;)" := (fun y =&gt; x &lt;&gt; y) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 41
+Line: 40
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(&lt;&gt; x )" := (fun y =&gt; y &lt;&gt; x) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 42
-Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+Line: 41
+Time: 0.004s">
+<div class="time" style="width: 1.328903654485%"></div>
 <pre>
 
 Class Apart A := apart: relation A.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 44
+Line: 43
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Infix "≶" := apart (at level 70, no associativity) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 45
+Line: 44
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(≶)" := apart (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 46
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 45
+Time: 0.001s">
+<div class="time" style="width: 0.33222591362126%"></div>
 <pre>
 Notation "( x ≶)" := (apart x) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 47
+Line: 46
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(≶ x )" := (fun y =&gt; apart y x) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 48
+Line: 47
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -277,59 +277,59 @@ Time: 0s">
 Therefore we introduce the following class. *)</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 51
-Time: 0.004s">
-<div class="time" style="width: 1.7777777777778%"></div>
+Line: 50
+Time: 0.005s">
+<div class="time" style="width: 1.6611295681063%"></div>
 <pre>Class TrivialApart A {Aap : Apart A} :=
   { trivial_apart_prop :&gt; is_mere_relation A apart
   ; trivial_apart : forall x y, x ≶ y &lt;-&gt; x &lt;&gt; y }.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 53
-Time: 0.001s">
-<div class="time" style="width: 0.44444444444444%"></div>
+Line: 52
+Time: 0.002s">
+<div class="time" style="width: 0.66445182724252%"></div>
 <pre>
 
 Definition sig_apart `{Apart A} (P: A -&gt; Type) : Apart (sig P) := fun x y =&gt; x.1 ≶ y.1.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 55
+Line: 54
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Hint Extern 10 (Apart (sig _)) =&gt; apply @sig_apart : typeclass_instances.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 56
-Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+Line: 55
+Time: 0.004s">
+<div class="time" style="width: 1.328903654485%"></div>
 <pre>
 
 Class Cast A B := cast: A -&gt; B.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 58
+Line: 57
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Arguments cast _ _ {Cast} _.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 59
+Line: 58
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "' x" := (cast _ _ x) (at level 20) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 60
+Line: 59
 Time: 0.002s">
-<div class="time" style="width: 0.88888888888889%"></div>
+<div class="time" style="width: 0.66445182724252%"></div>
 <pre>
 Typeclasses Transparent Cast.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 61
+Line: 60
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -337,163 +337,163 @@ Time: 0s">
 (* Other canonically named relations/operations/constants: *)</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 63
-Time: 0.002s">
-<div class="time" style="width: 0.88888888888889%"></div>
+Line: 62
+Time: 0.004s">
+<div class="time" style="width: 1.328903654485%"></div>
 <pre>Class SgOp A := sg_op: A -&gt; A -&gt; A.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 63
-Time: 0.002s">
-<div class="time" style="width: 0.88888888888889%"></div>
+Line: 62
+Time: 0.003s">
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 Class MonUnit A := mon_unit: A.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 64
+Line: 63
 Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 Class Plus A := plus: A -&gt; A -&gt; A.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 65
+Line: 64
 Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 Class Mult A := mult: A -&gt; A -&gt; A.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 66
+Line: 65
 Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 Class One A := one: A.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 67
-Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+Line: 66
+Time: 0.004s">
+<div class="time" style="width: 1.328903654485%"></div>
 <pre>
 Class Zero A := zero: A.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 68
+Line: 67
 Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 Class Negate A := negate: A -&gt; A.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 69
+Line: 68
 Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 Class DecRecip A := dec_recip: A -&gt; A.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 70
+Line: 69
 Time: 0.001s">
-<div class="time" style="width: 0.44444444444444%"></div>
+<div class="time" style="width: 0.33222591362126%"></div>
 <pre>
 Definition ApartZero R `{Zero R} `{Apart R} := sig (≶ zero).</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 71
-Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+Line: 70
+Time: 0.004s">
+<div class="time" style="width: 1.328903654485%"></div>
 <pre>
 Class Recip A `{Apart A} `{Zero A} := recip: ApartZero A -&gt; A.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 72
-Time: 0.021s">
-<div class="time" style="width: 9.3333333333333%"></div>
+Line: 71
+Time: 0.02s">
+<div class="time" style="width: 6.6445182724252%"></div>
 <pre>
 Typeclasses Transparent SgOp MonUnit Plus Mult Zero One Negate.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 73
+Line: 72
 Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 
 Class Meet A := meet: A -&gt; A -&gt; A.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 75
+Line: 74
 Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 Class Join A := join: A -&gt; A -&gt; A.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 76
+Line: 75
 Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 Class Top A := top: A.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 77
-Time: 0.002s">
-<div class="time" style="width: 0.88888888888889%"></div>
+Line: 76
+Time: 0.003s">
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 Class Bottom A := bottom: A.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 78
-Time: 0.009s">
-<div class="time" style="width: 4%"></div>
+Line: 77
+Time: 0.011s">
+<div class="time" style="width: 3.6544850498339%"></div>
 <pre>
 Typeclasses Transparent Meet Join Top Bottom.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 79
+Line: 78
 Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 
 Class Le A := le: relation A.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 81
+Line: 80
 Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 Class Lt A := lt: relation A.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 82
-Time: 0.004s">
-<div class="time" style="width: 1.7777777777778%"></div>
+Line: 81
+Time: 0.005s">
+<div class="time" style="width: 1.6611295681063%"></div>
 <pre>
 Typeclasses Transparent Le Lt.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 83
+Line: 82
 Time: 0.001s">
-<div class="time" style="width: 0.44444444444444%"></div>
+<div class="time" style="width: 0.33222591362126%"></div>
 <pre>
 
 Definition NonNeg R `{Zero R} `{Le R} := sig (le zero).</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 85
-Time: 0.001s">
-<div class="time" style="width: 0.44444444444444%"></div>
+Line: 84
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Definition Pos R `{Zero R} `{Lt R} := sig (lt zero).</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 86
+Line: 85
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Definition NonPos R `{Zero R} `{Le R} := sig (fun y =&gt; le y zero).</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 87
+Line: 86
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -501,56 +501,56 @@ Time: 0s">
 Instance plus_is_sg_op `{f : Plus A} : SgOp A := f.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 89
+Line: 88
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Instance mult_is_sg_op `{f : Mult A} : SgOp A := f.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 90
+Line: 89
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Instance one_is_mon_unit `{c : One A} : MonUnit A := c.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 91
+Line: 90
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Instance zero_is_mon_unit `{c : Zero A} : MonUnit A := c.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 92
+Line: 91
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Instance meet_is_sg_op `{f : Meet A} : SgOp A := f.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 93
+Line: 92
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Instance join_is_sg_op `{f : Join A} : SgOp A := f.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 94
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 93
+Time: 0.001s">
+<div class="time" style="width: 0.33222591362126%"></div>
 <pre>
 Instance top_is_mon_unit `{s : Top A} : MonUnit A := s.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 95
-Time: 0.001s">
-<div class="time" style="width: 0.44444444444444%"></div>
+Line: 94
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Instance bottom_is_mon_unit `{s : Bottom A} : MonUnit A := s.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 96
+Line: 95
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -558,21 +558,21 @@ Time: 0s">
 Hint Extern 4 (Apart (ApartZero _)) =&gt; apply @sig_apart : typeclass_instances.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 98
+Line: 97
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Hint Extern 4 (Apart (NonNeg _)) =&gt; apply @sig_apart : typeclass_instances.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 99
+Line: 98
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Hint Extern 4 (Apart (Pos _)) =&gt; apply @sig_apart : typeclass_instances.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 100
+Line: 99
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -580,34 +580,34 @@ Time: 0s">
 (* Notations: *)</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 102
+Line: 101
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Infix "&amp;" := sg_op (at level 50, left associativity) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 102
+Line: 101
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(&amp;)" := sg_op (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 103
+Line: 102
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "( x &amp;)" := (sg_op x) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 104
+Line: 103
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(&amp; x )" := (fun y =&gt; y &amp; x) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 105
+Line: 104
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -615,28 +615,28 @@ Time: 0s">
 Infix "+" := plus : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 107
+Line: 106
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(+)" := plus (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 108
+Line: 107
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "( x +)" := (plus x) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 109
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 108
+Time: 0.001s">
+<div class="time" style="width: 0.33222591362126%"></div>
 <pre>
 Notation "(+ x )" := (fun y =&gt; y + x) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 110
+Line: 109
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -644,7 +644,7 @@ Time: 0s">
 Infix "*" := mult : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 112
+Line: 111
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -652,27 +652,27 @@ Time: 0s">
    because they conflict with comments. *)</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 114
+Line: 113
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Notation "( x *.)" := (mult x) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 114
+Line: 113
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(.*.)" := mult (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 115
+Line: 114
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(.* x )" := (fun y =&gt; y * x) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 116
+Line: 115
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -680,21 +680,21 @@ Time: 0s">
 Notation "- x" := (negate x) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 118
+Line: 117
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(-)" := negate (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 119
+Line: 118
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "x - y" := (x + -y) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 120
+Line: 119
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -702,77 +702,77 @@ Time: 0s">
 Notation "0" := zero : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 122
+Line: 121
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "1" := one : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 123
+Line: 122
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "2" := (1 + 1) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 124
+Line: 123
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "3" := (1 + (1 + 1)) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 125
+Line: 124
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "4" := (1 + (1 + (1 + 1))) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 126
+Line: 125
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "5" := (1 + (1 + (1 + (1 + 1)))) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 127
+Line: 126
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "6" := (1 + (1 + (1 + (1 + (1 + 1))))) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 128
+Line: 127
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "- 1" := (-(1)) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 129
+Line: 128
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "- 2" := (-(2)) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 130
+Line: 129
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "- 3" := (-(3)) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 131
+Line: 130
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "- 4" := (-(4)) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 132
+Line: 131
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -780,21 +780,21 @@ Time: 0s">
 Notation "/ x" := (dec_recip x) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 134
+Line: 133
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(/)" := dec_recip (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 135
+Line: 134
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "x / y" := (x * /y) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 136
+Line: 135
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -802,21 +802,21 @@ Time: 0s">
 Notation "// x" := (recip x) (at level 40, no associativity) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 138
+Line: 137
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(//)" := recip (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 139
+Line: 138
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "x // y" := (x * //y) (at level 40, left associativity) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 140
+Line: 139
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -824,14 +824,14 @@ Time: 0s">
 Notation "⊤" := top : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 142
+Line: 141
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "⊥" := bottom : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 143
+Line: 142
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -839,28 +839,28 @@ Time: 0s">
 Infix "⊓" := meet (at level 50, no associativity) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 145
+Line: 144
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(⊓)" := meet (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 146
+Line: 145
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "( X ⊓)" := (meet X) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 147
+Line: 146
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(⊓ X )" := (fun Y =&gt; Y ⊓ X) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 148
+Line: 147
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -868,28 +868,28 @@ Time: 0s">
 Infix "⊔" := join (at level 50, no associativity) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 150
+Line: 149
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(⊔)" := join (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 151
+Line: 150
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "( X ⊔)" := (join X) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 152
+Line: 151
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(⊔ X )" := (fun Y =&gt; Y ⊔ X) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 153
+Line: 152
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -897,28 +897,28 @@ Time: 0s">
 Infix "≤" := le (at level 70, no associativity) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 155
+Line: 154
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(≤)" := le (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 156
+Line: 155
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "( x ≤)" := (le x) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 157
+Line: 156
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(≤ x )" := (fun y =&gt; y ≤ x) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 158
+Line: 157
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -926,28 +926,28 @@ Time: 0s">
 Infix "&lt;=" := le (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 160
+Line: 159
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(&lt;=)" := le (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 161
+Line: 160
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "( x &lt;=)" := (le x) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 162
+Line: 161
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(&lt;= x )" := (fun y =&gt; y ≤ x) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 163
+Line: 162
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -955,28 +955,28 @@ Time: 0s">
 Infix "&lt;" := lt : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 165
+Line: 164
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(&lt;)" := lt (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 166
+Line: 165
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "( x &lt;)" := (lt x) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 167
+Line: 166
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(&lt; x )" := (fun y =&gt; y &lt; x) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 168
+Line: 167
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -984,28 +984,28 @@ Time: 0s">
 Notation "x ≤ y ≤ z" := (x ≤ y /\ y ≤ z) (at level 70, y at next level) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 170
+Line: 169
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "x ≤ y &lt; z" := (x ≤ y /\ y &lt; z) (at level 70, y at next level) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 171
+Line: 170
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "x &lt; y &lt; z" := (x &lt; y /\ y &lt; z) (at level 70, y at next level) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 172
+Line: 171
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "x &lt; y ≤ z" := (x &lt; y /\ y ≤ z) (at level 70, y at next level) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 173
+Line: 172
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1013,7 +1013,7 @@ Time: 0s">
 (** It is likely that ≤ and &lt; are transitive (and ≤ reflexive) so inform [auto] of this. *)</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 175
+Line: 174
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac auto_trans := match goal with
@@ -1021,7 +1021,7 @@ Time: 0s">
                   end.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 177
+Line: 176
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1029,37 +1029,37 @@ Time: 0s">
 Hint Extern 2 (?x ≤ ?y) =&gt; reflexivity : core.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 179
+Line: 178
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Hint Extern 4 (?x ≤ ?z) =&gt; auto_trans : core.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 180
+Line: 179
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Hint Extern 4 (?x &lt; ?z) =&gt; auto_trans : core.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 181
-Time: 0.005s">
-<div class="time" style="width: 2.2222222222222%"></div>
+Line: 180
+Time: 0.007s">
+<div class="time" style="width: 2.3255813953488%"></div>
 <pre>
 
 Class Abs A `{Le A} `{Zero A} `{Negate A}
   := abs_sig: forall (x : A), { y : A | (0 ≤ x -&gt; y = x) /\ (x ≤ 0 -&gt; y = -x)}.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 184
-Time: 0.001s">
-<div class="time" style="width: 0.44444444444444%"></div>
+Line: 183
+Time: 0.002s">
+<div class="time" style="width: 0.66445182724252%"></div>
 <pre>
 Definition abs `{Abs A} := fun x : A =&gt; (abs_sig x).1.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 185
+Line: 184
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1067,194 +1067,194 @@ Time: 0s">
 (* Common properties: *)</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 187
-Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+Line: 186
+Time: 0.004s">
+<div class="time" style="width: 1.328903654485%"></div>
 <pre>Class Inverse `(A -&gt; B) : Type := inverse: B -&gt; A.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 187
+Line: 186
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Arguments inverse {A B} _ {Inverse} _.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 188
-Time: 0.002s">
-<div class="time" style="width: 0.88888888888889%"></div>
+Line: 187
+Time: 0.003s">
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 Typeclasses Transparent Inverse.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 189
+Line: 188
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "f ⁻¹" := (inverse f) (at level 30) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 190
-Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+Line: 189
+Time: 0.004s">
+<div class="time" style="width: 1.328903654485%"></div>
 <pre>
 
 Class Idempotent `(f: A -&gt; A -&gt; A) (x : A) : Type := idempotency: f x x = x.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 192
+Line: 191
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Arguments idempotency {A} _ _ {Idempotent}.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 193
-Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+Line: 192
+Time: 0.004s">
+<div class="time" style="width: 1.328903654485%"></div>
 <pre>
 
 Class UnaryIdempotent {A} (f: A -&gt; A) : Type :=
   unary_idempotent :&gt; Idempotent Compose f.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 196
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 195
+Time: 0.001s">
+<div class="time" style="width: 0.33222591362126%"></div>
 <pre>
 
 Lemma unary_idempotency `{UnaryIdempotent A f} x : f (f x) = f x.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 198
+Line: 197
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 199
+Line: 198
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 change (f (f x)) with (Compose f f x).</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 200
+Line: 199
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 apply (ap (fun g =&gt; g x)).</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 201
+Line: 200
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 change (Compose f f = f).</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 202
+Line: 201
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 apply idempotency.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 203
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 202
+Time: 0.001s">
+<div class="time" style="width: 0.33222591362126%"></div>
 <pre> apply _.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 203
+Line: 202
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+Qed.
+
+</pre>
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 204
-Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
-<pre>
-
-Class BinaryIdempotent `(op: A -&gt; A -&gt; A) : Type
+Time: 0.004s">
+<div class="time" style="width: 1.328903654485%"></div>
+<pre>Class BinaryIdempotent `(op: A -&gt; A -&gt; A) : Type
   := binary_idempotent :&gt; forall x, Idempotent op x.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 207
-Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+Line: 205
+Time: 0.004s">
+<div class="time" style="width: 1.328903654485%"></div>
 <pre>
 
 Class LeftIdentity {A B} (op : A -&gt; B -&gt; B) (x : A): Type
   := left_identity: forall y, op x y = y.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 210
-Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+Line: 208
+Time: 0.005s">
+<div class="time" style="width: 1.6611295681063%"></div>
 <pre>
 Class RightIdentity {A B} (op : A -&gt; B -&gt; A) (y : B): Type
   := right_identity: forall x, op x y = x.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 212
-Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+Line: 210
+Time: 0.004s">
+<div class="time" style="width: 1.328903654485%"></div>
 <pre>
 
 Class Absorption {A B C} (op1: A -&gt; C -&gt; A) (op2: A -&gt; B -&gt; C) : Type
   := absorption: forall x y, op1 x (op2 x y) = x.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 215
-Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+Line: 213
+Time: 0.004s">
+<div class="time" style="width: 1.328903654485%"></div>
 <pre>
 
 Class LeftAbsorb {A B} (op : A -&gt; B -&gt; A) (x : A): Type
   := left_absorb: forall y, op x y = x.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 218
-Time: 0.051s">
-<div class="time" style="width: 22.666666666667%"></div>
+Line: 216
+Time: 0.072s">
+<div class="time" style="width: 23.920265780731%"></div>
 <pre>
 Class RightAbsorb {A B} (op : A -&gt; B -&gt; B) (y : B): Type
   := right_absorb: forall x, op x y = y.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 220
-Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+Line: 218
+Time: 0.004s">
+<div class="time" style="width: 1.328903654485%"></div>
 <pre>
 
 Class LeftInverse {A} {B} {C} (op : A -&gt; B -&gt; C) (inv : B -&gt; A) (unit : C)
   := left_inverse: forall x, op (inv x) x = unit.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 223
+Line: 221
 Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 Class RightInverse {A} {B} {C} (op : A -&gt; B -&gt; C) (inv : A -&gt; B) (unit : C)
   := right_inverse: forall x, op x (inv x) = unit.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 225
+Line: 223
 Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 
 Class Commutative {B A} (f : A -&gt; A -&gt; B) : Type
   := commutativity: forall x y, f x y = f y x.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 228
-Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+Line: 226
+Time: 0.004s">
+<div class="time" style="width: 1.328903654485%"></div>
 <pre>
 
 Class HeteroAssociative {A B C AB BC ABC}
@@ -1263,54 +1263,54 @@ Class HeteroAssociative {A B C AB BC ABC}
   := associativity : forall x y z, fA_BC x (fBC y z) = fAB_C (fAB x y) z.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 233
+Line: 231
 Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 Class Associative {A} (f : A -&gt; A -&gt; A)
   := simple_associativity :&gt; HeteroAssociative f f f f.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 235
-Time: 0.002s">
-<div class="time" style="width: 0.88888888888889%"></div>
+Line: 233
+Time: 0.003s">
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 
 Class Involutive {A} (f : A -&gt; A) := involutive: forall x, f (f x) = x.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 237
-Time: 0.002s">
-<div class="time" style="width: 0.88888888888889%"></div>
+Line: 235
+Time: 0.003s">
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 
 Class TotalRelation `(R : relation A) : Type := total : forall x y : A, R x y |_| R y x.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 239
+Line: 237
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Arguments total {A} _ {TotalRelation} _ _.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 240
+Line: 238
 Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 
 Class Trichotomy `(R : relation A)
   := trichotomy : forall x y : A, R x y |_| x = y |_| R y x.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 243
+Line: 241
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Arguments trichotomy {A} R {Trichotomy} _ _.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 244
+Line: 242
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1318,41 +1318,41 @@ Time: 0s">
 Arguments irreflexivity {A} _ {Irreflexive} _ _.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 246
-Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+Line: 244
+Time: 0.004s">
+<div class="time" style="width: 1.328903654485%"></div>
 <pre>
 
 Class CoTransitive `(R : relation A) : Type := cotransitive
   : forall x y, R x y -&gt; forall z, hor (R x z) (R z y).</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 249
+Line: 247
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Arguments cotransitive {A R CoTransitive x y} _ _.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 250
-Time: 0.002s">
-<div class="time" style="width: 0.88888888888889%"></div>
+Line: 248
+Time: 0.003s">
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 
 Class AntiSymmetric `(R : relation A) : Type
   := antisymmetry: forall x y, R x y -&gt; R y x -&gt; x = y.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 253
+Line: 251
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Arguments antisymmetry {A} _ {AntiSymmetric} _ _ _ _.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 254
+Line: 252
 Time: 0.002s">
-<div class="time" style="width: 0.88888888888889%"></div>
+<div class="time" style="width: 0.66445182724252%"></div>
 <pre>
 
 Class EquivRel `(R : relation A) : Type := BuildEquivRel
@@ -1361,16 +1361,16 @@ Class EquivRel `(R : relation A) : Type := BuildEquivRel
     EquivRel_Transitive :&gt; Transitive R }.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 259
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 257
+Time: 0.001s">
+<div class="time" style="width: 0.33222591362126%"></div>
 <pre>
 
 Definition SigEquivRel {A:Type} (R : relation A) : Type :=
   {_ : Reflexive R | { _ : Symmetric R | Transitive R}}.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 262
+Line: 260
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1380,166 +1380,166 @@ Global Instance trunc_sig_equiv_rel `{Funext} {A : Type}
   :  IsTrunc n (SigEquivRel R).</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 266
+Line: 264
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 267
+Line: 265
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply @trunc_sigma.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 268
+Line: 266
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 269
+Line: 267
 Time: 0.001s">
-<div class="time" style="width: 0.44444444444444%"></div>
+<div class="time" style="width: 0.33222591362126%"></div>
 <pre> apply trunc_forall.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 269
+Line: 267
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 270
+Line: 268
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 270
-Time: 0.022s">
-<div class="time" style="width: 9.7777777777778%"></div>
+Line: 268
+Time: 0.023s">
+<div class="time" style="width: 7.641196013289%"></div>
 <pre> apply @trunc_sigma; intros; apply trunc_forall.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 270
-Time: 0.001s">
-<div class="time" style="width: 0.44444444444444%"></div>
+Line: 268
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
+</div>
+<div class="code" title="File: canonical_names.v
+Line: 270
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Lemma issig_equiv_rel {A:Type} (R : relation A)
+  : SigEquivRel R &lt;~&gt; EquivRel R.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 271
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-Lemma issig_equiv_rel {A:Type} (R : relation A)
-  : SigEquivRel R &lt;~&gt; EquivRel R.</pre>
-</div>
-<div class="code" title="File: canonical_names.v
-Line: 274
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 275
+Line: 272
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   unfold SigEquivRel.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 276
+Line: 273
 Time: 0.006s">
-<div class="time" style="width: 2.6666666666667%"></div>
+<div class="time" style="width: 1.9933554817276%"></div>
 <pre>
   issig (@BuildEquivRel A R) (@EquivRel_Reflexive A R)
           (@EquivRel_Symmetric A R) (@EquivRel_Transitive A R).</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 278
-Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+Line: 275
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+Defined.
+
+</pre>
+</div>
+<div class="code" title="File: canonical_names.v
+Line: 277
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Global Instance trunc_equiv_rel `{Funext} {A : Type}
+  (R : relation A) {n} `{!forall (x y : A), IsTrunc n (R x y)}
+  : IsTrunc n (EquivRel R).</pre>
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 279
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-Global Instance trunc_equiv_rel `{Funext} {A : Type}
-  (R : relation A) {n} `{!forall (x y : A), IsTrunc n (R x y)}
-  : IsTrunc n (EquivRel R).</pre>
-</div>
-<div class="code" title="File: canonical_names.v
-Line: 283
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 284
-Time: 0.01s">
-<div class="time" style="width: 4.4444444444444%"></div>
+Line: 280
+Time: 0.011s">
+<div class="time" style="width: 3.6544850498339%"></div>
 <pre>
   exact (trunc_equiv (SigEquivRel R) (issig_equiv_rel R)).</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 285
+Line: 281
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+Qed.
+
+</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 286
-Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
-<pre>
-
-Class LeftHeteroDistribute {A B C}
+Line: 283
+Time: 0.004s">
+<div class="time" style="width: 1.328903654485%"></div>
+<pre>Class LeftHeteroDistribute {A B C}
   (f : A -&gt; B -&gt; C) (g_r : B -&gt; B -&gt; B) (g : C -&gt; C -&gt; C) : Type
   := distribute_l : forall a b c, f a (g_r b c) = g (f a b) (f a c).</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 290
-Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+Line: 285
+Time: 0.004s">
+<div class="time" style="width: 1.328903654485%"></div>
 <pre>
 Class RightHeteroDistribute {A B C}
   (f : A -&gt; B -&gt; C) (g_l : A -&gt; A -&gt; A) (g : C -&gt; C -&gt; C) : Type
   := distribute_r: forall a b c, f (g_l a b) c = g (f a c) (f b c).</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 293
+Line: 288
 Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 Class LeftDistribute {A} (f g: A -&gt; A -&gt; A)
   := simple_distribute_l :&gt; LeftHeteroDistribute f g g.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 295
+Line: 290
 Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 Class RightDistribute {A} (f g: A -&gt; A -&gt; A)
   := simple_distribute_r :&gt; RightHeteroDistribute f g g.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 297
+Line: 292
 Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 
 Class HeteroSymmetric {A} {T : A -&gt; A -&gt; Type}
@@ -1547,7 +1547,7 @@ Class HeteroSymmetric {A} {T : A -&gt; A -&gt; Type}
   := hetero_symmetric `(a : T x y) (b : T y x) : R a b -&gt; R b a.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 301
+Line: 296
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1556,35 +1556,35 @@ Time: 0s">
   name to refer to this commonly used property. *)</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 304
+Line: 299
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Section cancellation.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 304
+Line: 299
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Context `(op : A -&gt; A -&gt; A) (z : A).</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 305
-Time: 0.002s">
-<div class="time" style="width: 0.88888888888889%"></div>
+Line: 300
+Time: 0.003s">
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 
   Class LeftCancellation := left_cancellation : forall x y, op z x = op z y -&gt; x = y.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 307
-Time: 0.002s">
-<div class="time" style="width: 0.88888888888889%"></div>
+Line: 302
+Time: 0.003s">
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
   Class RightCancellation := right_cancellation : forall x y, op x z = op y z -&gt; x = y.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 308
+Line: 303
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1592,31 +1592,31 @@ Time: 0s">
   Context {Aap : Apart A}.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 310
+Line: 305
 Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 
   Class StrongLeftCancellation := strong_left_cancellation
     : forall x y, x ≶ y -&gt; op z x ≶ op z y.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 313
+Line: 308
 Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
   Class StrongRightCancellation := strong_right_cancellation
     : forall x y, x ≶ y -&gt; op x z ≶ op y z.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 315
-Time: 0.009s">
-<div class="time" style="width: 4%"></div>
+Line: 310
+Time: 0.01s">
+<div class="time" style="width: 3.3222591362126%"></div>
 <pre>
 End cancellation.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 316
+Line: 311
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1624,85 +1624,79 @@ Time: 0s">
 (* Common names for properties that hold in N, Z, Q, ... *)</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 318
-Time: 0.004s">
-<div class="time" style="width: 1.7777777777778%"></div>
+Line: 313
+Time: 0.005s">
+<div class="time" style="width: 1.6611295681063%"></div>
 <pre>Class ZeroProduct A `{!Mult A} `{!Zero A} : Type
   := zero_product : forall x y, x * y = 0 -&gt; x = 0 |_| y = 0.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 319
-Time: 0.004s">
-<div class="time" style="width: 1.7777777777778%"></div>
+Line: 314
+Time: 0.005s">
+<div class="time" style="width: 1.6611295681063%"></div>
 <pre>
 
 Class ZeroDivisor {R} `{Zero R} `{Mult R} (x : R) : Type
   := zero_divisor : x &lt;&gt; 0 /\ exists y, y &lt;&gt; 0 /\ x * y = 0.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 322
+Line: 317
 Time: 0.004s">
-<div class="time" style="width: 1.7777777777778%"></div>
+<div class="time" style="width: 1.328903654485%"></div>
 <pre>
 
 Class NoZeroDivisors R `{Zero R} `{Mult R} : Type
   := no_zero_divisors x : ~ZeroDivisor x.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 325
+Line: 320
 Time: 0.006s">
-<div class="time" style="width: 2.6666666666667%"></div>
+<div class="time" style="width: 1.9933554817276%"></div>
 <pre>
 
 Instance zero_product_no_zero_divisors `{ZeroProduct A}
   : NoZeroDivisors A.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 328
+Line: 323
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 329
+Line: 324
 Time: 0.001s">
-<div class="time" style="width: 0.44444444444444%"></div>
+<div class="time" style="width: 0.33222591362126%"></div>
 <pre>
 intros x [? [? [? E]]].</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 330
+Line: 325
 Time: 0.002s">
-<div class="time" style="width: 0.88888888888889%"></div>
+<div class="time" style="width: 0.66445182724252%"></div>
 <pre>
 destruct (zero_product _ _ E); auto.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 331
+Line: 326
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: canonical_names.v
-Line: 332
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
+Qed.
 
 (* A common induction principle for both the naturals and integers *)</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 334
-Time: 0.004s">
-<div class="time" style="width: 1.7777777777778%"></div>
+Line: 329
+Time: 0.005s">
+<div class="time" style="width: 1.6611295681063%"></div>
 <pre>Class Biinduction R `{Zero R} `{One R} `{Plus R} : Type
   := biinduction (P : R -&gt; Type)
   : P 0 -&gt; (forall n, P n &lt;-&gt; P (1 + n)) -&gt; forall n, P n.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 336
+Line: 331
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1711,41 +1705,41 @@ Time: 0s">
 (** Additional operations **)</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 339
-Time: 0.002s">
-<div class="time" style="width: 0.88888888888889%"></div>
+Line: 334
+Time: 0.003s">
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>Class CutMinus A := cut_minus : A -&gt; A -&gt; A.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 339
+Line: 334
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Infix "∸" := cut_minus (at level 50, left associativity) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 340
+Line: 335
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(∸)" := cut_minus (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 341
+Line: 336
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "( x ∸)" := (cut_minus x) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 342
+Line: 337
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(∸ y )" := (fun x =&gt; x ∸ y) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 343
+Line: 338
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1753,169 +1747,169 @@ Time: 0s">
 Inductive comparison : Set := LT | EQ | GT.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 345
-Time: 0.002s">
-<div class="time" style="width: 0.88888888888889%"></div>
+Line: 340
+Time: 0.003s">
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 
 Class Compare A := compare : A -&gt; A -&gt; comparison.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 347
+Line: 342
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Infix "?=" := compare (at level 70, no associativity) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 348
+Line: 343
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(?=)" := compare (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 349
+Line: 344
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "( x ?=)" := (compare x) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 350
+Line: 345
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(?= y )" := (fun x =&gt; x ?= y) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 351
-Time: 0.002s">
-<div class="time" style="width: 0.88888888888889%"></div>
+Line: 346
+Time: 0.003s">
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 
 Class Eqb A := eqb : A -&gt; A -&gt; Bool.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 353
+Line: 348
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Infix "=?" := eqb (at level 70, no associativity) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 354
+Line: 349
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(=?)" := eqb (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 355
+Line: 350
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "( x =?)" := (eqb x) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 356
+Line: 351
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(=? y )" := (fun x =&gt; x =? y) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 357
-Time: 0.002s">
-<div class="time" style="width: 0.88888888888889%"></div>
+Line: 352
+Time: 0.003s">
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 
 Class Ltb A := ltb : A -&gt; A -&gt; Bool.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 359
+Line: 354
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Infix "&lt;?" := ltb (at level 70, no associativity) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 360
+Line: 355
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(&lt;?)" := ltb (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 361
+Line: 356
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "( x &lt;?)" := (ltb x) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 362
+Line: 357
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(&lt;? y )" := (fun x =&gt; x &lt;? y) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 363
-Time: 0.002s">
-<div class="time" style="width: 0.88888888888889%"></div>
+Line: 358
+Time: 0.003s">
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 
 Class Leb A := leb : A -&gt; A -&gt; Bool.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 365
+Line: 360
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Infix "&lt;=?" := leb (at level 70, no associativity) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 366
+Line: 361
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(&lt;=?)" := leb (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 367
+Line: 362
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "( x &lt;=?)" := (leb x) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 368
+Line: 363
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "(&lt;=? y )" := (fun x =&gt; x &lt;=? y) (only parsing) : mc_scope.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 369
+Line: 364
 Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 
 Class Return (M : Type -&gt; Type) := ret : forall {A}, A -&gt; M A.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 371
+Line: 366
 Time: 0.003s">
-<div class="time" style="width: 1.3333333333333%"></div>
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>
 
 Class Bind (M : Type -&gt; Type) := bind : forall {A B}, M A -&gt; (A -&gt; M B) -&gt; M B.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 373
+Line: 368
 Time: 0.002s">
-<div class="time" style="width: 0.88888888888889%"></div>
+<div class="time" style="width: 0.66445182724252%"></div>
 <pre>
 
 Class Enumerable@{i} (A : Type@{i}) :=
@@ -1924,21 +1918,21 @@ Class Enumerable@{i} (A : Type@{i}) :=
     TrM.RSU.IsConnMap@{Uhuge Ularge i i Ularge} (trunc_S minus_two) enumerator }.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 378
+Line: 373
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Arguments enumerator A {_} _.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 379
+Line: 374
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Arguments enumerator_issurj A {_} _.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 380
+Line: 375
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1953,13 +1947,13 @@ Time: 0s">
 *)</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 389
-Time: 0.002s">
-<div class="time" style="width: 0.88888888888889%"></div>
+Line: 384
+Time: 0.003s">
+<div class="time" style="width: 0.99667774086379%"></div>
 <pre>Class PropHolds (P : Type) := prop_holds: P.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 389
+Line: 384
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1967,7 +1961,7 @@ Time: 0s">
 Hint Extern 0 (PropHolds _) =&gt; assumption : typeclass_instances.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 391
+Line: 386
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1979,7 +1973,7 @@ Ltac solve_propholds :=
   end.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
-Line: 398
+Line: 393
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

@@ -30,8 +30,8 @@ pre {
 
 <div class="code" title="File: CoreParts.v
 Line: 1
-Time: 0.008s">
-<div class="time" style="width: 12.307692307692%"></div>
+Time: 0.01s">
+<div class="time" style="width: 14.705882352941%"></div>
 <pre>Require Import Category.Core Functor.Core NaturalTransformation.Core.</pre>
 </div>
 <div class="code" title="File: CoreParts.v
@@ -50,22 +50,22 @@ Require Import Functor.Composition.Core.</pre>
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 3
-Time: 0.023s">
-<div class="time" style="width: 35.384615384615%"></div>
+Time: 0.026s">
+<div class="time" style="width: 38.235294117647%"></div>
 <pre>
 Require Import NaturalTransformation.Paths NaturalTransformation.Composition.Core.</pre>
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 4
-Time: 0.023s">
-<div class="time" style="width: 35.384615384615%"></div>
+Time: 0.03s">
+<div class="time" style="width: 44.117647058824%"></div>
 <pre>
 Require Import Category.Morphisms FunctorCategory.Core.</pre>
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 5
 Time: 0.003s">
-<div class="time" style="width: 4.6153846153846%"></div>
+<div class="time" style="width: 4.4117647058824%"></div>
 <pre>
 Require Import Pseudofunctor.Core.</pre>
 </div>
@@ -85,8 +85,8 @@ Require Import FunctorCategory.Morphisms.</pre>
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 8
-Time: 0.002s">
-<div class="time" style="width: 3.0769230769231%"></div>
+Time: 0.004s">
+<div class="time" style="width: 5.8823529411765%"></div>
 <pre>
 Require Import Types.Record Trunc Types.Paths Types.Sigma.</pre>
 </div>
@@ -214,23 +214,23 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 52
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4705882352941%"></div>
 <pre>
     Variable T : Pseudofunctor B.</pre>
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 53
-Time: 0.002s">
-<div class="time" style="width: 3.0769230769231%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4705882352941%"></div>
 <pre>
 
     Context `{forall a b, IsHSet (Functor (S a) (T b))}.</pre>
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 55
-Time: 0.003s">
-<div class="time" style="width: 4.6153846153846%"></div>
+Time: 0.004s">
+<div class="time" style="width: 5.8823529411765%"></div>
 <pre>
 
     Record object :=
@@ -253,8 +253,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 67
-Time: 0.001s">
-<div class="time" style="width: 1.5384615384615%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.9411764705882%"></div>
 <pre>
 
     Lemma issig_object
@@ -269,8 +269,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 71
-Time: 0.005s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0.006s">
+<div class="time" style="width: 8.8235294117647%"></div>
 <pre>
       issig (@Build_object)
             (@a)
@@ -279,18 +279,18 @@ Time: 0.005s">
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 75
-Time: 0.002s">
-<div class="time" style="width: 3.0769230769231%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-    Defined.</pre>
+    Defined.
+
+   </pre>
 </div>
 <div class="code" title="File: CoreParts.v
-Line: 76
-Time: 0.002s">
-<div class="time" style="width: 3.0769230769231%"></div>
-<pre>
-
-    Global Instance trunc_object `{IsTrunc n A, IsTrunc n B}
+Line: 78
+Time: 0.003s">
+<div class="time" style="width: 4.4117647058824%"></div>
+<pre>Global Instance trunc_object `{IsTrunc n A, IsTrunc n B}
            `{forall s d, IsTrunc n (Functor (S s) (T d))}
     : IsTrunc n object.</pre>
 </div>
@@ -311,25 +311,25 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 83
-Time: 0.004s">
-<div class="time" style="width: 6.1538461538462%"></div>
+Time: 0.006s">
+<div class="time" style="width: 8.8235294117647%"></div>
 <pre>
       typeclasses eauto.</pre>
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 84
-Time: 0.001s">
-<div class="time" style="width: 1.5384615384615%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-    Qed.</pre>
+    Qed.
+
+   </pre>
 </div>
 <div class="code" title="File: CoreParts.v
-Line: 85
-Time: 0.002s">
-<div class="time" style="width: 3.0769230769231%"></div>
-<pre>
-
-    Lemma path_object (x y : object)
+Line: 87
+Time: 0.003s">
+<div class="time" style="width: 4.4117647058824%"></div>
+<pre>Lemma path_object (x y : object)
     : forall (Ha : x.(a) = y.(a))
              (Hb : x.(b) = y.(b)),
         match Ha in _ = X, Hb in _ = Y return Functor (S X) (T Y) with
@@ -346,32 +346,32 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 94
-Time: 0.002s">
-<div class="time" style="width: 3.0769230769231%"></div>
+Time: 0.004s">
+<div class="time" style="width: 5.8823529411765%"></div>
 <pre>
       destruct x, y; simpl.</pre>
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 95
 Time: 0.003s">
-<div class="time" style="width: 4.6153846153846%"></div>
+<div class="time" style="width: 4.4117647058824%"></div>
 <pre>
       intros; path_induction; reflexivity.</pre>
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 96
-Time: 0.001s">
-<div class="time" style="width: 1.5384615384615%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-    Defined.</pre>
+    Defined.
+
+   </pre>
 </div>
 <div class="code" title="File: CoreParts.v
-Line: 97
-Time: 0.006s">
-<div class="time" style="width: 9.2307692307692%"></div>
-<pre>
-
-    Definition path_object_uncurried x y
+Line: 99
+Time: 0.008s">
+<div class="time" style="width: 11.764705882353%"></div>
+<pre>Definition path_object_uncurried x y
                (H : { HaHb : (x.(a) = y.(a)) * (x.(b) = y.(b))
                     | match fst HaHb in _ = X, snd HaHb in _ = Y return Functor (S X) (T Y) with
                         | idpath, idpath =&gt; x.(f)
@@ -382,7 +382,7 @@ Time: 0.006s">
 <div class="code" title="File: CoreParts.v
 Line: 105
 Time: 0.001s">
-<div class="time" style="width: 1.5384615384615%"></div>
+<div class="time" style="width: 1.4705882352941%"></div>
 <pre>
 
     Lemma ap_a_path_object x y Ha Hb Hf
@@ -397,15 +397,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 109
-Time: 0.004s">
-<div class="time" style="width: 6.1538461538462%"></div>
+Time: 0.005s">
+<div class="time" style="width: 7.3529411764706%"></div>
 <pre>
       destruct x, y; simpl in *.</pre>
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 110
-Time: 0.004s">
-<div class="time" style="width: 6.1538461538462%"></div>
+Time: 0.005s">
+<div class="time" style="width: 7.3529411764706%"></div>
 <pre>
       destruct Ha, Hb, Hf; simpl in *.</pre>
 </div>
@@ -418,18 +418,18 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 112
-Time: 0.003s">
-<div class="time" style="width: 4.6153846153846%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-    Qed.</pre>
+    Qed.
+
+   </pre>
 </div>
 <div class="code" title="File: CoreParts.v
-Line: 113
-Time: 0.001s">
-<div class="time" style="width: 1.5384615384615%"></div>
-<pre>
-
-    Lemma ap_b_path_object x y Ha Hb Hf
+Line: 115
+Time: 0.002s">
+<div class="time" style="width: 2.9411764705882%"></div>
+<pre>Lemma ap_b_path_object x y Ha Hb Hf
     : ap (@b) (@path_object x y Ha Hb Hf) = Hb.</pre>
 </div>
 <div class="code" title="File: CoreParts.v
@@ -442,14 +442,14 @@ Time: 0s">
 <div class="code" title="File: CoreParts.v
 Line: 117
 Time: 0.004s">
-<div class="time" style="width: 6.1538461538462%"></div>
+<div class="time" style="width: 5.8823529411765%"></div>
 <pre>
       destruct x, y; simpl in *.</pre>
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 118
-Time: 0.004s">
-<div class="time" style="width: 6.1538461538462%"></div>
+Time: 0.006s">
+<div class="time" style="width: 8.8235294117647%"></div>
 <pre>
       destruct Ha, Hb, Hf; simpl in *.</pre>
 </div>
@@ -462,23 +462,23 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 120
-Time: 0.002s">
-<div class="time" style="width: 3.0769230769231%"></div>
-<pre>
-    Qed.</pre>
-</div>
-<div class="code" title="File: CoreParts.v
-Line: 121
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+    Qed.
 
-    Global Opaque path_object.</pre>
+   </pre>
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 123
-Time: 0.007s">
-<div class="time" style="width: 10.769230769231%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Global Opaque path_object.</pre>
+</div>
+<div class="code" title="File: CoreParts.v
+Line: 123
+Time: 0.009s">
+<div class="time" style="width: 13.235294117647%"></div>
 <pre>
 
     Record morphism (abf a'b'f' : object) :=
@@ -503,8 +503,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 137
-Time: 0.003s">
-<div class="time" style="width: 4.6153846153846%"></div>
+Time: 0.005s">
+<div class="time" style="width: 7.3529411764706%"></div>
 <pre>
 
     Lemma issig_morphism abf a'b'f'
@@ -520,8 +520,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 142
-Time: 0.017s">
-<div class="time" style="width: 26.153846153846%"></div>
+Time: 0.019s">
+<div class="time" style="width: 27.941176470588%"></div>
 <pre>
       issig (@Build_morphism abf a'b'f')
             (@g abf a'b'f')
@@ -530,18 +530,18 @@ Time: 0.017s">
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 146
-Time: 0.007s">
-<div class="time" style="width: 10.769230769231%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-    Defined.</pre>
+    Defined.
+
+   </pre>
 </div>
 <div class="code" title="File: CoreParts.v
-Line: 147
-Time: 0.005s">
-<div class="time" style="width: 7.6923076923077%"></div>
-<pre>
-
-    Global Instance trunc_morphism abf a'b'f'
+Line: 149
+Time: 0.007s">
+<div class="time" style="width: 10.294117647059%"></div>
+<pre>Global Instance trunc_morphism abf a'b'f'
            `{IsTrunc n (Category.Core.morphism A (abf.(a)) (a'b'f'.(a)))}
            `{IsTrunc n (Category.Core.morphism B (abf.(b)) (a'b'f'.(b)))}
            `{forall m1 m2,
@@ -559,33 +559,33 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 157
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4705882352941%"></div>
 <pre>
       eapply trunc_equiv';
       [ exact (issig_morphism _ _) | ].</pre>
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 159
-Time: 0.008s">
-<div class="time" style="width: 12.307692307692%"></div>
+Time: 0.01s">
+<div class="time" style="width: 14.705882352941%"></div>
 <pre>
       typeclasses eauto.</pre>
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 160
-Time: 0.002s">
-<div class="time" style="width: 3.0769230769231%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-    Qed.</pre>
+    Qed.
+
+   </pre>
 </div>
 <div class="code" title="File: CoreParts.v
-Line: 161
-Time: 0.007s">
-<div class="time" style="width: 10.769230769231%"></div>
-<pre>
-
-    Lemma path_morphism abf a'b'f'
+Line: 163
+Time: 0.009s">
+<div class="time" style="width: 13.235294117647%"></div>
+<pre>Lemma path_morphism abf a'b'f'
           (gh g'h' : morphism abf a'b'f')
     : forall
         (Hg : gh.(g) = g'h'.(g))
@@ -615,15 +615,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 177
-Time: 0.007s">
-<div class="time" style="width: 10.769230769231%"></div>
+Time: 0.009s">
+<div class="time" style="width: 13.235294117647%"></div>
 <pre>
       destruct gh, g'h'; simpl in *.</pre>
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 178
-Time: 0.007s">
-<div class="time" style="width: 10.769230769231%"></div>
+Time: 0.008s">
+<div class="time" style="width: 11.764705882353%"></div>
 <pre>
       destruct Hg, Hh, Hp.</pre>
 </div>
@@ -636,18 +636,18 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 180
-Time: 0.006s">
-<div class="time" style="width: 9.2307692307692%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-    Qed.</pre>
+    Qed.
+
+   </pre>
 </div>
 <div class="code" title="File: CoreParts.v
-Line: 181
-Time: 0.018s">
-<div class="time" style="width: 27.692307692308%"></div>
-<pre>
-
-    Definition path_morphism_uncurried abf a'b'f' gh g'h'
+Line: 183
+Time: 0.022s">
+<div class="time" style="width: 32.352941176471%"></div>
+<pre>Definition path_morphism_uncurried abf a'b'f' gh g'h'
                (H : { HgHh : (gh.(g) = g'h'.(g)) * (gh.(h) = g'h'.(h))
                     | match fst HgHh in _ = g, snd HgHh in _ = h
                             return NaturalTransformation
@@ -661,8 +661,8 @@ Time: 0.018s">
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 193
-Time: 0.02s">
-<div class="time" style="width: 30.769230769231%"></div>
+Time: 0.025s">
+<div class="time" style="width: 36.764705882353%"></div>
 <pre>
 
     Lemma path_morphism'_helper abf a'b'f'
@@ -692,35 +692,35 @@ Time: 0s">
 <div class="code" title="File: CoreParts.v
 Line: 211
 Time: 0.001s">
-<div class="time" style="width: 1.5384615384615%"></div>
+<div class="time" style="width: 1.4705882352941%"></div>
 <pre>
       simpl; intros Hg Hh Hp.</pre>
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 212
-Time: 0.007s">
-<div class="time" style="width: 10.769230769231%"></div>
+Time: 0.009s">
+<div class="time" style="width: 13.235294117647%"></div>
 <pre>
       destruct g'h'; simpl in *.</pre>
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 213
-Time: 0.018s">
-<div class="time" style="width: 27.692307692308%"></div>
+Time: 0.022s">
+<div class="time" style="width: 32.352941176471%"></div>
 <pre>
       destruct Hg, Hh, Hp; simpl in *.</pre>
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 214
 Time: 0.003s">
-<div class="time" style="width: 4.6153846153846%"></div>
+<div class="time" style="width: 4.4117647058824%"></div>
 <pre>
       path_natural_transformation.</pre>
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 215
-Time: 0.014s">
-<div class="time" style="width: 21.538461538462%"></div>
+Time: 0.017s">
+<div class="time" style="width: 25%"></div>
 <pre>
       autorewrite with functor morphism.</pre>
 </div>
@@ -733,18 +733,18 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 217
-Time: 0.05s">
-<div class="time" style="width: 76.923076923077%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-    Qed.</pre>
+    Qed.
+
+   </pre>
 </div>
 <div class="code" title="File: CoreParts.v
-Line: 218
-Time: 0.017s">
-<div class="time" style="width: 26.153846153846%"></div>
-<pre>
-
-    Definition path_morphism' abf a'b'f'
+Line: 220
+Time: 0.019s">
+<div class="time" style="width: 27.941176470588%"></div>
+<pre>Definition path_morphism' abf a'b'f'
                (gh g'h' : morphism abf a'b'f')
                (Hg : gh.(g) = g'h'.(g))
                (Hh : gh.(h) = g'h'.(h))
@@ -758,8 +758,8 @@ Time: 0.017s">
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 230
-Time: 0.037s">
-<div class="time" style="width: 56.923076923077%"></div>
+Time: 0.04s">
+<div class="time" style="width: 58.823529411765%"></div>
 <pre>
 
     Definition path_morphism'_uncurried abf a'b'f' gh g'h'
@@ -791,14 +791,14 @@ Time: 0s">
 <div class="code" title="File: CoreParts.v
 Line: 244
 Time: 0.001s">
-<div class="time" style="width: 1.5384615384615%"></div>
+<div class="time" style="width: 1.4705882352941%"></div>
 <pre>
       exists (gh.(g) o g'h'.(g)) (gh.(h) o g'h'.(h)).</pre>
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 245
-Time: 0.013s">
-<div class="time" style="width: 20%"></div>
+Time: 0.014s">
+<div class="time" style="width: 20.588235294118%"></div>
 <pre>
       exact ((_ oL (p_composition_of S _ _ _ _ _)^-1)
                o (associator_1 _ _ _)
@@ -811,18 +811,18 @@ Time: 0.013s">
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 253
-Time: 0.002s">
-<div class="time" style="width: 3.0769230769231%"></div>
-<pre>
-    Defined.</pre>
-</div>
-<div class="code" title="File: CoreParts.v
-Line: 254
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+    Defined.
 
-    Global Arguments compose _ _ _ _ _ / .</pre>
+   </pre>
+</div>
+<div class="code" title="File: CoreParts.v
+Line: 256
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Global Arguments compose _ _ _ _ _ / .</pre>
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 256
@@ -848,8 +848,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 260
-Time: 0.006s">
-<div class="time" style="width: 9.2307692307692%"></div>
+Time: 0.007s">
+<div class="time" style="width: 10.294117647059%"></div>
 <pre>
       exact ((_ oL (p_identity_of S _ : Category.Core.morphism _ _ _)^-1)
                o (right_identity_natural_transformation_2 _)
@@ -859,22 +859,22 @@ Time: 0.006s">
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 265
-Time: 0.001s">
-<div class="time" style="width: 1.5384615384615%"></div>
-<pre>
-    Defined.</pre>
-</div>
-<div class="code" title="File: CoreParts.v
-Line: 266
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+    Defined.
 
-    Global Arguments identity _ / .</pre>
+   </pre>
 </div>
 <div class="code" title="File: CoreParts.v
 Line: 268
-Time: 0.065s">
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Global Arguments identity _ / .</pre>
+</div>
+<div class="code" title="File: CoreParts.v
+Line: 268
+Time: 0.068s">
 <div class="time" style="width: 100%"></div>
 <pre>
   End lax_comma_category_parts.</pre>
@@ -882,7 +882,7 @@ Time: 0.065s">
 <div class="code" title="File: CoreParts.v
 Line: 269
 Time: 0.001s">
-<div class="time" style="width: 1.5384615384615%"></div>
+<div class="time" style="width: 1.4705882352941%"></div>
 <pre>
 End LaxCommaCategoryParts.</pre>
 </div>

@@ -36,14 +36,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Notnot.v
 Line: 1
-Time: 0.04s">
-<div class="time" style="width: 39.60396039604%"></div>
+Time: 0.05s">
+<div class="time" style="width: 38.759689922481%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Notnot.v
 Line: 1
-Time: 0.02s">
-<div class="time" style="width: 19.80198019802%"></div>
+Time: 0.027s">
+<div class="time" style="width: 20.93023255814%"></div>
 <pre>
 Require Import Modality.</pre>
 </div>
@@ -74,8 +74,8 @@ Instead, we define a [Record] wrapper around it.  This is the recommended best p
 </div>
 <div class="code" title="File: Notnot.v
 Line: 14
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.77519379844961%"></div>
 <pre>Record Notnot_Modality := Notnot { unNotnot : Funext }.</pre>
 </div>
 <div class="code" title="File: Notnot.v
@@ -107,8 +107,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Notnot.v
 Line: 23
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.77519379844961%"></div>
 <pre>
 
   Definition to (O : Modality@{u a}) (T : Type@{i})
@@ -169,8 +169,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Notnot.v
 Line: 37
-Time: 0.01s">
-<div class="time" style="width: 9.9009900990099%"></div>
+Time: 0.014s">
+<div class="time" style="width: 10.852713178295%"></div>
 <pre>
     exact (f a (transport (fun x =&gt; not@{j j} (B x))
                           (path_ishprop _ _)
@@ -181,15 +181,15 @@ Line: 40
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Defined.</pre>
+  Defined.
+
+ </pre>
 </div>
 <div class="code" title="File: Notnot.v
-Line: 41
+Line: 43
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-
-  Definition O_indO_beta@{u a i j} (O : Modality@{u a}) (A : Type@{i})
+<pre>Definition O_indO_beta@{u a i j} (O : Modality@{u a}) (A : Type@{i})
              (B : O_reflector@{u a i} O A -&gt; Type@{j})
              (f : forall a, O_reflector@{u a j} O (B (to O A a))) (a:A)
   : O_indO O A B f (to O A a) = f a.</pre>
@@ -217,8 +217,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Notnot.v
 Line: 49
-Time: 0.01s">
-<div class="time" style="width: 9.9009900990099%"></div>
+Time: 0.013s">
+<div class="time" style="width: 10.077519379845%"></div>
 <pre>
     apply path_ishprop.</pre>
 </div>
@@ -227,15 +227,15 @@ Line: 50
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Defined.</pre>
+  Defined.
+
+ </pre>
 </div>
 <div class="code" title="File: Notnot.v
-Line: 51
+Line: 53
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-
-  Definition minO_pathsO@{u a i} (O : Modality@{u a}) (A : Type@{i})
+<pre>Definition minO_pathsO@{u a i} (O : Modality@{u a}) (A : Type@{i})
              (z z' : O_reflector@{u a i} O A)
   : IsEquiv@{i i} (to@{u a i} O (z = z')).</pre>
 </div>
@@ -262,15 +262,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Notnot.v
 Line: 58
-Time: 0.025s">
-<div class="time" style="width: 24.752475247525%"></div>
+Time: 0.031s">
+<div class="time" style="width: 24.031007751938%"></div>
 <pre>
     refine (isequiv_iff_hprop _ _).</pre>
 </div>
 <div class="code" title="File: Notnot.v
 Line: 59
-Time: 0.01s">
-<div class="time" style="width: 9.9009900990099%"></div>
+Time: 0.013s">
+<div class="time" style="width: 10.077519379845%"></div>
 <pre>
     intros; apply path_ishprop.</pre>
 </div>
@@ -279,26 +279,26 @@ Line: 60
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Defined.</pre>
+  Defined.
+
+</pre>
 </div>
 <div class="code" title="File: Notnot.v
-Line: 61
+Line: 62
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-
-End Notnot_Easy_Modalities.</pre>
+<pre>End Notnot_Easy_Modalities.</pre>
 </div>
 <div class="code" title="File: Notnot.v
-Line: 63
-Time: 0.004s">
-<div class="time" style="width: 3.960396039604%"></div>
+Line: 62
+Time: 0.005s">
+<div class="time" style="width: 3.8759689922481%"></div>
 <pre>
 
 Module Notnot_Modalities &lt;: Modalities := EasyModalities_to_Modalities Notnot_Easy_Modalities.</pre>
 </div>
 <div class="code" title="File: Notnot.v
-Line: 65
+Line: 64
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -306,27 +306,27 @@ Time: 0s">
 (** After we define any family of modalities or reflective subuniverses, we give a corresponding name to the theory module, generally by postfixing the above-mentioned record constructor with [M] (for "module").  This way, one can either [Import] the theory module (here [NotnotM]) and get access to all the modality functions for the modalities in question, or not import it and access them qualified as [NotnotM.function_name]. *)</pre>
 </div>
 <div class="code" title="File: Notnot.v
-Line: 67
-Time: 0.101s">
+Line: 66
+Time: 0.129s">
 <div class="time" style="width: 100%"></div>
 <pre>Module NotNotM := Modalities_Theory Notnot_Modalities.</pre>
 </div>
 <div class="code" title="File: Notnot.v
-Line: 67
+Line: 66
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Export NotNotM.Coercions.</pre>
 </div>
 <div class="code" title="File: Notnot.v
-Line: 68
+Line: 67
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Export NotNotM.RSU.Coercions.</pre>
 </div>
 <div class="code" title="File: Notnot.v
-Line: 69
+Line: 68
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -334,14 +334,14 @@ Time: 0s">
 (** Finally, we declare a coercion allowing us to use elements of the record wrapper as modalities. *)</pre>
 </div>
 <div class="code" title="File: Notnot.v
-Line: 71
+Line: 70
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Coercion Notnot_Modalities_to_Modalities := idmap
   : Notnot_Modality -&gt; Notnot_Modalities.Modality.</pre>
 </div>
 <div class="code" title="File: Notnot.v
-Line: 73
+Line: 72
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
