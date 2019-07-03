@@ -38,7 +38,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: BinderApply.v
 Line: 3
-Time: 0.013s">
+Time: 0.009s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import Basics.Overture Tactics.EvalIn.</pre>
 </div>
@@ -224,7 +224,7 @@ Tactic Notation "binder" "eapply" open_constr(lem) "in" constr(H) := binder eapp
 <div class="code" title="File: BinderApply.v
 Line: 73
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 11.111111111111%"></div>
 <pre>
 
 Example basic_goal {A B C} (HA : forall x : A, B x) (HB : forall x : A, B x -&gt; C x) : forall x : A, C x.</pre>
@@ -283,8 +283,8 @@ Abort.
 </div>
 <div class="code" title="File: BinderApply.v
 Line: 84
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Example basic {A B C} (HA : forall x : A, B x) (HB : forall x : A, B x -&gt; C x) : forall x : A, C x.</pre>
 </div>
 <div class="code" title="File: BinderApply.v
@@ -319,7 +319,7 @@ Time: 0s">
 <div class="code" title="File: BinderApply.v
 Line: 89
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 11.111111111111%"></div>
 <pre>binder apply HB in HA.</pre>
 </div>
 <div class="code" title="File: BinderApply.v
@@ -342,7 +342,7 @@ Abort.
 <div class="code" title="File: BinderApply.v
 Line: 93
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 11.111111111111%"></div>
 <pre>Example ex_funext `{Funext} {A} f g
         (H' : forall x y z w : A, f x y z w = g x y z w :&gt; A)
 : f = g.</pre>
@@ -371,8 +371,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: BinderApply.v
 Line: 99
-Time: 0.005s">
-<div class="time" style="width: 38.461538461538%"></div>
+Time: 0.003s">
+<div class="time" style="width: 33.333333333333%"></div>
 <pre>
   binder eapply path_forall in H'.</pre>
 </div>
@@ -397,21 +397,21 @@ Funext . Extended goal with context:
 </div>
 <div class="code" title="File: BinderApply.v
 Line: 113
-Time: 0.003s">
-<div class="time" style="width: 23.076923076923%"></div>
+Time: 0.002s">
+<div class="time" style="width: 22.222222222222%"></div>
 <pre>binder apply @path_forall in H' using assumption.</pre>
 </div>
 <div class="code" title="File: BinderApply.v
 Line: 113
-Time: 0.003s">
-<div class="time" style="width: 23.076923076923%"></div>
+Time: 0.002s">
+<div class="time" style="width: 22.222222222222%"></div>
 <pre>
   binder apply @path_forall in H' using typeclasses eauto.</pre>
 </div>
 <div class="code" title="File: BinderApply.v
 Line: 114
-Time: 0.003s">
-<div class="time" style="width: 23.076923076923%"></div>
+Time: 0.002s">
+<div class="time" style="width: 22.222222222222%"></div>
 <pre>
   binder apply (@path_forall _) in H'.</pre>
 </div>

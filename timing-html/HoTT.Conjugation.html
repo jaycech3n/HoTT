@@ -40,7 +40,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 4
-Time: 0.025s">
+Time: 0.015s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.Basics.</pre>
 </div>
@@ -61,8 +61,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 7
-Time: 0.002s">
-<div class="time" style="width: 8%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>Definition conjp {A B : Type} {f g : A -&gt; B} {x y : A} (r : forall x, f x = g x) (p : f x = f y) :
   g x = g y
   :=
@@ -80,8 +80,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 13
-Time: 0.003s">
-<div class="time" style="width: 12%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>Definition conjp_concat {A : Type} (f g : A -&gt; A) (r : forall x, f x = g x) {x y z : A}
   (p : f x = f y) (q : f y = f z) :
   conjp r (p @ q) = conjp r p @ (conjp r q).</pre>
@@ -102,15 +102,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 17
-Time: 0.022s">
-<div class="time" style="width: 88%"></div>
+Time: 0.014s">
+<div class="time" style="width: 93.333333333333%"></div>
 <pre>
   try repeat (rewrite concat_p_pp).</pre>
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 18
-Time: 0.003s">
-<div class="time" style="width: 12%"></div>
+Time: 0.002s">
+<div class="time" style="width: 13.333333333333%"></div>
 <pre>
   rewrite concat_pp_V.</pre>
 </div>
@@ -132,8 +132,8 @@ Qed.
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 22
-Time: 0.002s">
-<div class="time" style="width: 8%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>Lemma ap_to_conjp {A B : Type} {f g : A -&gt; B} (p : forall x, f x = g x) {x y : A} (q : x = y) :
   ap g q = conjp p (ap f q).</pre>
 </div>
@@ -146,8 +146,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 24
-Time: 0.001s">
-<div class="time" style="width: 4%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   destruct q.</pre>
 </div>
@@ -165,8 +165,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 25
-Time: 0.002s">
-<div class="time" style="width: 8%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>
   transitivity ((p x)^ @ p x).</pre>
 </div>
@@ -179,8 +179,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 27
-Time: 0.002s">
-<div class="time" style="width: 8%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre> symmetry; apply concat_Vp.</pre>
 </div>
 <div class="code" title="File: Conjugation.v
@@ -199,7 +199,7 @@ Time: 0s">
 <div class="code" title="File: Conjugation.v
 Line: 28
 Time: 0.001s">
-<div class="time" style="width: 4%"></div>
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>  symmetry; apply concat_p1.</pre>
 </div>
 <div class="code" title="File: Conjugation.v
@@ -213,8 +213,8 @@ Qed.
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 30
-Time: 0.002s">
-<div class="time" style="width: 8%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Lemma conjp_ap {A : Type} {f : A -&gt; A} (p : forall x, f x = x) {x y : A} (q : x = y) :
   conjp p (ap f q) = q.</pre>
 </div>
@@ -227,8 +227,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 32
-Time: 0.001s">
-<div class="time" style="width: 4%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   destruct q.</pre>
 </div>
@@ -246,8 +246,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 33
-Time: 0.002s">
-<div class="time" style="width: 8%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   transitivity ((p x)^ @ p x).</pre>
 </div>
@@ -279,8 +279,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 36
-Time: 0.001s">
-<div class="time" style="width: 4%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply concat_Vp.</pre>
 </div>
 <div class="code" title="File: Conjugation.v
@@ -294,8 +294,8 @@ Qed.
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 38
-Time: 0.002s">
-<div class="time" style="width: 8%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Lemma ap1_to_conjp {A : Type} {f : A -&gt; A} (p : forall x, idmap x = f x) {x y : A} (q : x = y) :
   ap f q = conjp p q.</pre>
 </div>
@@ -309,7 +309,7 @@ Proof.</pre>
 <div class="code" title="File: Conjugation.v
 Line: 40
 Time: 0.001s">
-<div class="time" style="width: 4%"></div>
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>
   transitivity (conjp p (ap idmap q)).</pre>
 </div>

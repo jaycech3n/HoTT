@@ -56,7 +56,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Specif.v
 Line: 14
-Time: 0.012s">
+Time: 0.009s">
 <div class="time" style="width: 100%"></div>
 <pre>
 
@@ -64,8 +64,8 @@ Require Import Notations.</pre>
 </div>
 <div class="code" title="File: Specif.v
 Line: 16
-Time: 0.001s">
-<div class="time" style="width: 8.3333333333333%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Require Import Datatypes.</pre>
 </div>
@@ -103,8 +103,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Specif.v
 Line: 24
-Time: 0.001s">
-<div class="time" style="width: 8.3333333333333%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Record sig {A} (P : A -&gt; Type) := exist { proj1_sig : A ; proj2_sig : P proj1_sig }.</pre>
 </div>
 <div class="code" title="File: Specif.v
@@ -156,8 +156,8 @@ Inductive sig2 (A:Type) (P Q:A -&gt; Type) : Type :=
 </div>
 <div class="code" title="File: Specif.v
 Line: 34
-Time: 0.001s">
-<div class="time" style="width: 8.3333333333333%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Scheme sig2_rect := Induction for sig2 Sort Type.</pre>
@@ -484,8 +484,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Specif.v
 Line: 111
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 11.111111111111%"></div>
 <pre>
     intro z; destruct (H z); assumption.</pre>
 </div>
@@ -511,8 +511,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Specif.v
 Line: 125
-Time: 0.001s">
-<div class="time" style="width: 8.3333333333333%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>End Choice_lemmas.</pre>
 </div>
 <div class="code" title="File: Specif.v
@@ -564,15 +564,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Specif.v
 Line: 136
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 11.111111111111%"></div>
 <pre>
     set (f:=fix f n := match n with O =&gt; x0 | S n' =&gt; projT1 (H (f n')) end).</pre>
 </div>
 <div class="code" title="File: Specif.v
 Line: 137
-Time: 0.001s">
-<div class="time" style="width: 8.3333333333333%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     exists f.</pre>
 </div>
@@ -591,8 +591,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Specif.v
 Line: 139
-Time: 0.001s">
-<div class="time" style="width: 8.3333333333333%"></div>
+Time: 0.002s">
+<div class="time" style="width: 22.222222222222%"></div>
 <pre>
     induction n; simpl; apply projT2.</pre>
 </div>
@@ -638,7 +638,7 @@ Line: 151
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Definition value := Some.</pre>
+Definition value := @Some.</pre>
 </div>
 <div class="code" title="File: Specif.v
 Line: 152
@@ -649,14 +649,21 @@ Definition error := @None.</pre>
 </div>
 <div class="code" title="File: Specif.v
 Line: 153
-Time: 0.001s">
-<div class="time" style="width: 8.3333333333333%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
-Arguments error [A].</pre>
+Arguments value {A} a.</pre>
 </div>
 <div class="code" title="File: Specif.v
 Line: 155
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Arguments error {A}.</pre>
+</div>
+<div class="code" title="File: Specif.v
+Line: 156
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -664,7 +671,7 @@ Time: 0s">
 Definition except := False_rec.</pre>
 </div>
 <div class="code" title="File: Specif.v
-Line: 157
+Line: 158
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> (* for compatibility with previous versions *)
@@ -672,13 +679,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Specif.v
-Line: 158
+Line: 159
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Arguments except [P] _.</pre>
 </div>
 <div class="code" title="File: Specif.v
-Line: 158
+Line: 159
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -686,35 +693,35 @@ Time: 0s">
 Theorem absurd_set : forall (A:Prop) (C:Set), A -&gt; not A -&gt; C.</pre>
 </div>
 <div class="code" title="File: Specif.v
-Line: 160
+Line: 161
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Specif.v
-Line: 161
+Line: 162
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros A C h1 h2.</pre>
 </div>
 <div class="code" title="File: Specif.v
-Line: 162
+Line: 163
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply False_rec.</pre>
 </div>
 <div class="code" title="File: Specif.v
-Line: 163
+Line: 164
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply (h2 h1).</pre>
 </div>
 <div class="code" title="File: Specif.v
-Line: 164
+Line: 165
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -723,13 +730,13 @@ Defined.
 </pre>
 </div>
 <div class="code" title="File: Specif.v
-Line: 166
+Line: 167
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Hint Resolve existT existT2: core.</pre>
 </div>
 <div class="code" title="File: Specif.v
-Line: 167
+Line: 168
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

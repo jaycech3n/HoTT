@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: Functorish.v
 Line: 1
-Time: 0.057s">
+Time: 0.045s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.Basics Types.Universe TruncType UnivalenceImpliesFunext.</pre>
 </div>
@@ -66,8 +66,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Functorish.v
 Line: 7
-Time: 0.003s">
-<div class="time" style="width: 5.2631578947368%"></div>
+Time: 0.002s">
+<div class="time" style="width: 4.4444444444444%"></div>
 <pre>Class Functorish (F : Type -&gt; Type) := {
   fmap {A B} (f : A -&gt; B) : F A -&gt; F B ;
   fmap_idmap (A:Type) : fmap (idmap : A -&gt; A) = idmap
@@ -121,15 +121,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Functorish.v
 Line: 20
-Time: 0.002s">
-<div class="time" style="width: 3.5087719298246%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.2222222222222%"></div>
 <pre>
   refine (equiv_induction (fun A' e =&gt; IsEquiv (fmap F e)) _ _ (BuildEquiv _ _ f _)).</pre>
 </div>
 <div class="code" title="File: Functorish.v
 Line: 21
 Time: 0.001s">
-<div class="time" style="width: 1.7543859649123%"></div>
+<div class="time" style="width: 2.2222222222222%"></div>
 <pre>
   refine (transport _ (fmap_idmap F)^ _);
     try apply isequiv_idmap.</pre>
@@ -146,7 +146,7 @@ Defined.
 <div class="code" title="File: Functorish.v
 Line: 25
 Time: 0.002s">
-<div class="time" style="width: 3.5087719298246%"></div>
+<div class="time" style="width: 4.4444444444444%"></div>
 <pre>Proposition fmap_agrees_with_univalence {A B} (f : A -&gt; B) `{IsEquiv _ _ f}
   : fmap F f = equiv_path _ _ (ap F (path_universe f)).</pre>
 </div>
@@ -159,8 +159,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Functorish.v
 Line: 27
-Time: 0.006s">
-<div class="time" style="width: 10.526315789474%"></div>
+Time: 0.005s">
+<div class="time" style="width: 11.111111111111%"></div>
 <pre>
   refine (equiv_induction
     (fun A' e =&gt; fmap F e = equiv_path _ _ (ap F (path_universe e)))
@@ -168,8 +168,8 @@ Time: 0.006s">
 </div>
 <div class="code" title="File: Functorish.v
 Line: 30
-Time: 0.002s">
-<div class="time" style="width: 3.5087719298246%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.2222222222222%"></div>
 <pre>
   transitivity (idmap : F A -&gt; F A).</pre>
 </div>
@@ -196,13 +196,13 @@ Time: 0s">
 <div class="code" title="File: Functorish.v
 Line: 33
 Time: 0.001s">
-<div class="time" style="width: 1.7543859649123%"></div>
+<div class="time" style="width: 2.2222222222222%"></div>
 <pre> change (equiv_idmap A) with (equiv_path A A 1).</pre>
 </div>
 <div class="code" title="File: Functorish.v
 Line: 33
-Time: 0.002s">
-<div class="time" style="width: 3.5087719298246%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.2222222222222%"></div>
 <pre>
     rewrite (@eta_path_universe _ A A 1).</pre>
 </div>
@@ -223,8 +223,8 @@ Defined.
 </div>
 <div class="code" title="File: Functorish.v
 Line: 36
-Time: 0.003s">
-<div class="time" style="width: 5.2631578947368%"></div>
+Time: 0.002s">
+<div class="time" style="width: 4.4444444444444%"></div>
 <pre>End Functorish.</pre>
 </div>
 <div class="code" title="File: Functorish.v

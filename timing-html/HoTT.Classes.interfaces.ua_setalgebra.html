@@ -39,7 +39,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_setalgebra.v
 Line: 3
-Time: 0.592s">
+Time: 0.449s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Export HoTT.Classes.interfaces.ua_algebra.</pre>
 </div>
@@ -53,8 +53,8 @@ Require Import HoTT.Basics.Equivalences.</pre>
 </div>
 <div class="code" title="File: ua_setalgebra.v
 Line: 5
-Time: 0.003s">
-<div class="time" style="width: 0.50675675675676%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.44543429844098%"></div>
 <pre>
 
 Record SetAlgebra {σ : Signature} : Type := BuildSetAlgebra
@@ -115,7 +115,7 @@ Proof.</pre>
 <div class="code" title="File: ua_setalgebra.v
 Line: 23
 Time: 0.001s">
-<div class="time" style="width: 0.16891891891892%"></div>
+<div class="time" style="width: 0.22271714922049%"></div>
 <pre>
   destruct A as [A AH], B as [B BH].</pre>
 </div>
@@ -127,15 +127,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_setalgebra.v
 Line: 24
-Time: 0.003s">
-<div class="time" style="width: 0.50675675675676%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.44543429844098%"></div>
 <pre>
   transparent assert (a : (p#AH = BH)) by apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: ua_setalgebra.v
 Line: 25
-Time: 0.002s">
-<div class="time" style="width: 0.33783783783784%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.22271714922049%"></div>
 <pre>
   by path_induction.</pre>
 </div>
@@ -153,7 +153,7 @@ Defined.
 <div class="code" title="File: ua_setalgebra.v
 Line: 30
 Time: 0.001s">
-<div class="time" style="width: 0.16891891891892%"></div>
+<div class="time" style="width: 0.22271714922049%"></div>
 <pre>Lemma path_setalgebra_1 `{Funext} {σ} (A : SetAlgebra σ)
   : path_setalgebra A A idpath = idpath.</pre>
 </div>
@@ -167,7 +167,7 @@ Proof.</pre>
 <div class="code" title="File: ua_setalgebra.v
 Line: 32
 Time: 0.002s">
-<div class="time" style="width: 0.33783783783784%"></div>
+<div class="time" style="width: 0.44543429844098%"></div>
 <pre>
   transparent assert (p :
       (∀ I : IsHSetAlgebra A, path_ishprop I I = idpath)).</pre>
@@ -187,8 +187,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_setalgebra.v
 Line: 35
-Time: 0.038s">
-<div class="time" style="width: 6.4189189189189%"></div>
+Time: 0.035s">
+<div class="time" style="width: 7.7951002227172%"></div>
 <pre> apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: ua_setalgebra.v
@@ -206,8 +206,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_setalgebra.v
 Line: 36
-Time: 0.003s">
-<div class="time" style="width: 0.50675675675676%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.44543429844098%"></div>
 <pre> by rewrite p.</pre>
 </div>
 <div class="code" title="File: ua_setalgebra.v
@@ -225,7 +225,7 @@ Qed.
 <div class="code" title="File: ua_setalgebra.v
 Line: 41
 Time: 0.001s">
-<div class="time" style="width: 0.16891891891892%"></div>
+<div class="time" style="width: 0.22271714922049%"></div>
 <pre>Global Instance isequiv_path_setalgebra `{Funext} {σ : Signature}
   (A B : SetAlgebra σ)
   : IsEquiv (path_setalgebra A B).</pre>
@@ -239,8 +239,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ua_setalgebra.v
 Line: 44
-Time: 0.001s">
-<div class="time" style="width: 0.16891891891892%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   refine (isequiv_adjointify
             (path_setalgebra A B) (ap algebra_setalgebra) _ _).</pre>
@@ -254,8 +254,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_setalgebra.v
 Line: 47
-Time: 0.004s">
-<div class="time" style="width: 0.67567567567568%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.66815144766147%"></div>
 <pre> abstract (intro p; induction p; by rewrite path_setalgebra_1).</pre>
 </div>
 <div class="code" title="File: ua_setalgebra.v
@@ -267,8 +267,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_setalgebra.v
 Line: 48
-Time: 0.011s">
-<div class="time" style="width: 1.8581081081081%"></div>
+Time: 0.01s">
+<div class="time" style="width: 2.2271714922049%"></div>
 <pre> abstract (
       intro e; destruct A as [A AH], B as [B BH];
       cbn in e; destruct e;

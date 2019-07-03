@@ -36,8 +36,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 1
-Time: 0.013s">
-<div class="time" style="width: 19.402985074627%"></div>
+Time: 0.009s">
+<div class="time" style="width: 16.363636363636%"></div>
 <pre>Require Import Category.Core Functor.Core NaturalTransformation.Core.</pre>
 </div>
 <div class="code" title="File: Core.v
@@ -49,15 +49,15 @@ Require Import Functor.Composition.Core.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 2
-Time: 0.067s">
+Time: 0.055s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Require Import ExponentialLaws.Law1.Functors FunctorCategory.Core.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 3
-Time: 0.024s">
-<div class="time" style="width: 35.820895522388%"></div>
+Time: 0.013s">
+<div class="time" style="width: 23.636363636364%"></div>
 <pre>
 Require Import UniversalProperties KanExtensions.Core InitialTerminalCategory.Core NatCategory.</pre>
 </div>
@@ -103,8 +103,8 @@ Local Set Warnings Append "notation-overridden".</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 8
-Time: 0.001s">
-<div class="time" style="width: 1.4925373134328%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Require Import Equivalences.</pre>
 </div>
@@ -210,15 +210,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 43
-Time: 0.017s">
-<div class="time" style="width: 25.373134328358%"></div>
+Time: 0.012s">
+<div class="time" style="width: 21.818181818182%"></div>
 <pre>Definition diagonal_functor : Functor (1 -&gt; C) (D -&gt; C)
     := @pullback_along _ D 1 C (Functors.to_terminal _).</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 44
-Time: 0.018s">
-<div class="time" style="width: 26.865671641791%"></div>
+Time: 0.012s">
+<div class="time" style="width: 21.818181818182%"></div>
 <pre>
 
   Definition diagonal_functor' : Functor C (D -&gt; C)
@@ -234,8 +234,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 49
-Time: 0.004s">
-<div class="time" style="width: 5.9701492537313%"></div>
+Time: 0.002s">
+<div class="time" style="width: 3.6363636363636%"></div>
 <pre>
     Lemma diagonal_functor_diagonal_functor' X
     : diagonal_functor X = diagonal_functor' (X (center _)).</pre>
@@ -249,8 +249,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 52
-Time: 0.01s">
-<div class="time" style="width: 14.925373134328%"></div>
+Time: 0.007s">
+<div class="time" style="width: 12.727272727273%"></div>
 <pre>
       path_functor.</pre>
 </div>
@@ -264,14 +264,14 @@ Time: 0s">
 <div class="code" title="File: Core.v
 Line: 54
 Time: 0.003s">
-<div class="time" style="width: 4.4776119402985%"></div>
+<div class="time" style="width: 5.4545454545455%"></div>
 <pre>
       repeat (apply path_forall || intro).</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 55
 Time: 0.001s">
-<div class="time" style="width: 1.4925373134328%"></div>
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
       apply identity_of.</pre>
 </div>
@@ -291,8 +291,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 58
-Time: 0.006s">
-<div class="time" style="width: 8.955223880597%"></div>
+Time: 0.002s">
+<div class="time" style="width: 3.6363636363636%"></div>
 <pre>
 End diagonal_functor.</pre>
 </div>
@@ -328,8 +328,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 65
-Time: 0.003s">
-<div class="time" style="width: 4.4776119402985%"></div>
+Time: 0.002s">
+<div class="time" style="width: 3.6363636363636%"></div>
 <pre>
 
   Lemma compose_diagonal_functor x (F : Functor D' D)
@@ -345,7 +345,7 @@ Time: 0s">
 <div class="code" title="File: Core.v
 Line: 69
 Time: 0.005s">
-<div class="time" style="width: 7.4626865671642%"></div>
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre>
     path_functor.</pre>
 </div>
@@ -360,8 +360,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 73
-Time: 0.025s">
-<div class="time" style="width: 37.313432835821%"></div>
+Time: 0.017s">
+<div class="time" style="width: 30.909090909091%"></div>
 <pre>Definition compose_diagonal_functor_natural_transformation
              x (F : Functor D' D)
   : NaturalTransformation (diagonal_functor C D x o F) (diagonal_functor _ _ x)
@@ -377,15 +377,15 @@ Time: 0.025s">
 </div>
 <div class="code" title="File: Core.v
 Line: 84
-Time: 0.004s">
-<div class="time" style="width: 5.9701492537313%"></div>
+Time: 0.003s">
+<div class="time" style="width: 5.4545454545455%"></div>
 <pre>
 End diagonal_functor_lemmas.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 85
 Time: 0.001s">
-<div class="time" style="width: 1.4925373134328%"></div>
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
 
 Hint Rewrite @compose_diagonal_functor : category.</pre>
@@ -439,8 +439,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 104
-Time: 0.015s">
-<div class="time" style="width: 22.388059701493%"></div>
+Time: 0.013s">
+<div class="time" style="width: 23.636363636364%"></div>
 <pre>Definition IsLimit
     := @IsRightKanExtensionAlong _ D 1 C (Functors.to_terminal _) F.</pre>
 </div>
@@ -474,8 +474,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 127
-Time: 0.016s">
-<div class="time" style="width: 23.880597014925%"></div>
+Time: 0.013s">
+<div class="time" style="width: 23.636363636364%"></div>
 <pre>Definition IsColimit
     := @IsLeftKanExtensionAlong _ D 1 C (Functors.to_terminal _) F.</pre>
 </div>
@@ -526,7 +526,7 @@ Time: 0s">
 <div class="code" title="File: Core.v
 Line: 166
 Time: 0.003s">
-<div class="time" style="width: 4.4776119402985%"></div>
+<div class="time" style="width: 5.4545454545455%"></div>
 <pre>End Limit.</pre>
 </div>
 <div class="code" title="File: Core.v

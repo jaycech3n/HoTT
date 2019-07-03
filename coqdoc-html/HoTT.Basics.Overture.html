@@ -65,15 +65,6 @@ This command changes Coq's subterm selection to always use full conversion after
 </div>
 
 <div class="doc">
-This command makes it so that when defining an <span class="inlinecode"><span class="id" title="keyword">Instance</span></span>, if you give a term explicitly with <span class="inlinecode">:=</span>, then Coq must be able to fill in all the holes in that term.  This is the same as the behavior of <span class="inlinecode"><span class="id" title="keyword">Definition</span></span>.  (Without this command, if Coq is unable to fill in all the holes in a term given to an <span class="inlinecode"><span class="id" title="keyword">Instance</span></span>, it silently drops into interactive proof mode.  This is a source of hard-to-find bugs, and you can always obtain equivalent behavior by beginning an interactive proof with <span class="inlinecode"><span class="id" title="tactic">refine</span></span>.) 
-</div>
-<div class="code">
-<span class="id" title="keyword">Global</span> <span class="id" title="keyword">Unset</span> <span class="id" title="var">Refine</span> <span class="id" title="keyword">Instance</span> <span class="id" title="var">Mode</span>.<br/>
-
-<br/>
-</div>
-
-<div class="doc">
 This command makes it so that you don't have to declare universes explicitly when mentioning them in the type.  (Without this command, if you want to say <span class="inlinecode"><span class="id" title="keyword">Definition</span></span> <span class="inlinecode"><span class="id" title="var">foo</span></span> <span class="inlinecode">:=</span> <span class="inlinecode"><span class="id" title="var">Type@</span>{<a class="idref" href="HoTT.Classes.theory.ua_second_isomorphism.html#i"><span class="id" title="abbreviation">i</span></a>}.</span>, you must instead say <span class="inlinecode"><span class="id" title="keyword">Definition</span></span> <span class="inlinecode"><span class="id" title="var">foo@</span>{<a class="idref" href="HoTT.Classes.theory.ua_second_isomorphism.html#i"><span class="id" title="abbreviation">i</span></a>}</span> <span class="inlinecode">:=</span> <span class="inlinecode"><span class="id" title="var">Type@</span>{<a class="idref" href="HoTT.Classes.theory.ua_second_isomorphism.html#i"><span class="id" title="abbreviation">i</span></a>}.</span>. 
 </div>
 <div class="code">
@@ -113,7 +104,7 @@ Currently Coq doesn't print equivalences correctly (8.6). This fixes that. See h
 Apply using the same opacity information as typeclass proof search. 
 </div>
 <div class="code">
-<span class="id" title="keyword">Ltac</span> <span class="id" title="var">class_apply</span> <span class="id" title="var">c</span> := <span class="id" title="var">autoapply</span> <span class="id" title="var">c</span> <span class="id" title="keyword">using</span> <span class="id" title="var">typeclass_instances</span>.<br/>
+<span class="id" title="keyword">Ltac</span> <span class="id" title="var">class_apply</span> <span class="id" title="var">c</span> := <span class="id" title="var">autoapply</span> <span class="id" title="var">c</span> <span class="id" title="keyword">with</span> <span class="id" title="var">typeclass_instances</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Definition</span> <a name="relation"><span class="id" title="definition">relation</span></a> (<span class="id" title="var">A</span> : <span class="id" title="keyword">Type</span>) := <a class="idref" href="HoTT.Basics.Overture.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>.<br/>
