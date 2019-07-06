@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: unique_choice.v
 Line: 1
-Time: 0.225s">
+Time: 0.211s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.Basics HIT.Truncations HProp.</pre>
 </div>
@@ -68,8 +68,8 @@ Lemma atmost {X} {P : X -&gt; Type}:
 </div>
 <div class="code" title="File: unique_choice.v
 Line: 9
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.4739336492891%"></div>
 <pre>
 intros H H0 [x p] [y q].</pre>
 </div>
@@ -82,8 +82,8 @@ specialize (H0 x y p q).</pre>
 </div>
 <div class="code" title="File: unique_choice.v
 Line: 11
-Time: 0.001s">
-<div class="time" style="width: 0.44444444444444%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 induction H0.</pre>
 </div>
@@ -96,8 +96,8 @@ assert (H0: (p =q)) by apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: unique_choice.v
 Line: 13
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.4739336492891%"></div>
 <pre>
 now induction H0.</pre>
 </div>
@@ -133,15 +133,15 @@ intros H1 [H H0].</pre>
 </div>
 <div class="code" title="File: unique_choice.v
 Line: 19
-Time: 0.001s">
-<div class="time" style="width: 0.44444444444444%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 apply (@Trunc_rec -1 (sigT P) );auto.</pre>
 </div>
 <div class="code" title="File: unique_choice.v
 Line: 20
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.4739336492891%"></div>
 <pre>
 by apply hprop_allpath, atmost.</pre>
 </div>
@@ -156,8 +156,8 @@ Qed.
 </div>
 <div class="code" title="File: unique_choice.v
 Line: 23
-Time: 0.001s">
-<div class="time" style="width: 0.44444444444444%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Lemma unique_choice {X Y} (R:X-&gt;Y-&gt;Type) :
  (forall x y, IsHProp (R x y)) -&gt; (forall x, (hunique (R x)))
    -&gt; {f : X -&gt; Y &amp; forall x, (R x (f x))}.</pre>
@@ -171,8 +171,8 @@ intros X0 X1.</pre>
 </div>
 <div class="code" title="File: unique_choice.v
 Line: 26
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.4739336492891%"></div>
 <pre>
 exists (fun x:X =&gt; (pr1 (iota _ (X0 x) (X1 x)))).</pre>
 </div>

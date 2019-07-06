@@ -40,21 +40,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 4
-Time: 0.043s">
+Time: 0.042s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Extensions.v
 Line: 4
-Time: 0.007s">
-<div class="time" style="width: 16.279069767442%"></div>
+Time: 0.006s">
+<div class="time" style="width: 14.285714285714%"></div>
 <pre>
 Require Import HProp EquivalenceVarieties.</pre>
 </div>
 <div class="code" title="File: Extensions.v
 Line: 5
 Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
 Require Import HoTT.Tactics.</pre>
 </div>
@@ -160,7 +160,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 38
 Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>Definition lift_extensionalong@{a b p m1 n1 m2 n2} {A : Type@{a}} {B : Type@{b}} (f : A -&gt; B)
              (P : B -&gt; Type@{p}) (d : forall x:A, P (f x))
   : ExtensionAlong@{a b p m1 n1} f P d -&gt; ExtensionAlong@{a b p m2 n2} f P d
@@ -185,7 +185,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 45
 Time: 0.002s">
-<div class="time" style="width: 4.6511627906977%"></div>
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>
 
   Definition equiv_path_extension `{Funext} {A B : Type} {f : A -&gt; B}
@@ -213,7 +213,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 55
 Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
     refine (equiv_functor_sigma' (equiv_path_forall (ext .1) (ext' .1)) _).</pre>
 </div>
@@ -252,7 +252,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 58
 Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
     refine (equiv_compose' (B := (p (f x))^ @ (ext .2 x) = (ext' .2 x)) _ _).</pre>
 </div>
@@ -272,7 +272,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 60
 Time: 0.003s">
-<div class="time" style="width: 6.9767441860465%"></div>
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>
       transitivity ((apD10 (path_forall _ _ p) (f x))^ @ ext .2 x).</pre>
 </div>
@@ -286,7 +286,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 62
 Time: 0.002s">
-<div class="time" style="width: 4.6511627906977%"></div>
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre> assert (transp_extension : forall p : ext .1 = ext' .1,
                                      (transport (fun (s : forall y : B, P y) =&gt; forall x : A, s (f x) = d x)
                                                 p (ext .2) x
@@ -301,21 +301,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 66
-Time: 0.005s">
-<div class="time" style="width: 11.627906976744%"></div>
+Time: 0.004s">
+<div class="time" style="width: 9.5238095238095%"></div>
 <pre> destruct ext as [g gd], ext' as [g' gd']; simpl.</pre>
 </div>
 <div class="code" title="File: Extensions.v
 Line: 66
 Time: 0.002s">
-<div class="time" style="width: 4.6511627906977%"></div>
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>
           intros q; destruct q; simpl.</pre>
 </div>
 <div class="code" title="File: Extensions.v
 Line: 67
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
           apply inverse, concat_1p.</pre>
 </div>
@@ -342,7 +342,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 70
 Time: 0.002s">
-<div class="time" style="width: 4.6511627906977%"></div>
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre> apply whiskerR, ap, apD10_path_forall.</pre>
 </div>
 <div class="code" title="File: Extensions.v
@@ -354,14 +354,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 71
-Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> refine (equiv_moveR_Vp _ _ _ oE _).</pre>
 </div>
 <div class="code" title="File: Extensions.v
 Line: 71
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
       refine (equiv_moveL_pM _ _ _ oE _).</pre>
 </div>
@@ -383,8 +383,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 76
-Time: 0.005s">
-<div class="time" style="width: 11.627906976744%"></div>
+Time: 0.004s">
+<div class="time" style="width: 9.5238095238095%"></div>
 <pre>Definition path_extension `{Funext} {A B : Type} {f : A -&gt; B}
              {P : B -&gt; Type} {d : forall x:A, P (f x)}
              (ext ext' : ExtensionAlong f P d)
@@ -397,7 +397,7 @@ Time: 0.005s">
 <div class="code" title="File: Extensions.v
 Line: 83
 Time: 0.002s">
-<div class="time" style="width: 4.6511627906977%"></div>
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>
 
   Global Instance isequiv_path_extension `{Funext} {A B : Type} {f : A -&gt; B}
@@ -414,8 +414,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 89
-Time: 0.01s">
-<div class="time" style="width: 23.255813953488%"></div>
+Time: 0.009s">
+<div class="time" style="width: 21.428571428571%"></div>
 <pre>
     exact _.</pre>
 </div>
@@ -433,7 +433,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 95
 Time: 0.002s">
-<div class="time" style="width: 4.6511627906977%"></div>
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>Fixpoint ExtendableAlong@{i j k l}
            (n : nat) {A : Type@{i}} {B : Type@{j}}
            (f : A -&gt; B) (C : B -&gt; Type@{k}) : Type@{l}
@@ -520,8 +520,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 123
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
     revert C; simple_induction n n IH; intros C.</pre>
 </div>
@@ -627,7 +627,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 139
 Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
 
   Definition equiv_extendable_pathsplit `{Funext} (n : nat)
@@ -644,8 +644,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 145
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
     generalize dependent C; simple_induction n n IHn; intros C.</pre>
 </div>
@@ -658,8 +658,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 147
-Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     refine (_ *E _); simpl.</pre>
 </div>
@@ -672,8 +672,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 149
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre> refine (equiv_functor_forall' 1 _); intros g; simpl.</pre>
 </div>
 <div class="code" title="File: Extensions.v
@@ -685,8 +685,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 150
-Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       apply equiv_path_forall.</pre>
 </div>
@@ -700,20 +700,20 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 152
 Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre> refine (equiv_functor_forall' 1 _); intros h.</pre>
 </div>
 <div class="code" title="File: Extensions.v
 Line: 152
 Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
       refine (equiv_functor_forall' 1 _); intros k; simpl.</pre>
 </div>
 <div class="code" title="File: Extensions.v
 Line: 153
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
       refine (_ oE IHn (fun b =&gt; h b = k b)).</pre>
 </div>
@@ -727,15 +727,15 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 155
 Time: 0.002s">
-<div class="time" style="width: 4.6511627906977%"></div>
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>
       refine (equiv_functor_pathsplit n _ _
                (equiv_apD10 _ _ _) (equiv_apD10 _ _ _) _).</pre>
 </div>
 <div class="code" title="File: Extensions.v
 Line: 157
-Time: 0.002s">
-<div class="time" style="width: 4.6511627906977%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
       intros []; reflexivity.</pre>
 </div>
@@ -751,7 +751,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 161
 Time: 0.004s">
-<div class="time" style="width: 9.3023255813953%"></div>
+<div class="time" style="width: 9.5238095238095%"></div>
 <pre>Definition isequiv_extendable `{Funext} (n : nat)
              {A B : Type} {C : B -&gt; Type} {f : A -&gt; B}
   : ExtendableAlong n.+2 f C
@@ -760,8 +760,8 @@ Time: 0.004s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 165
-Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Global Instance ishprop_extendable `{Funext} (n : nat)
@@ -778,7 +778,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 170
 Time: 0.003s">
-<div class="time" style="width: 6.9767441860465%"></div>
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>
     refine (trunc_equiv' _ (equiv_extendable_pathsplit n.+2 C f)^-1).</pre>
 </div>
@@ -793,8 +793,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 174
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>Definition equiv_extendable_isequiv `{Funext} (n : nat)
              {A B : Type} (C : B -&gt; Type) (f : A -&gt; B)
   : ExtendableAlong n.+2 f C
@@ -809,8 +809,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 178
-Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     etransitivity.</pre>
 </div>
@@ -852,8 +852,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 185
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>Definition extendable_postcompose' (n : nat)
              {A B : Type} (C D : B -&gt; Type) (f : A -&gt; B)
              (g : forall b, C b &lt;~&gt; D b)
@@ -876,7 +876,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 190
 Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
     simple_induction n n IH; intros C D g; simpl.</pre>
 </div>
@@ -904,22 +904,22 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 194
 Time: 0.002s">
-<div class="time" style="width: 4.6511627906977%"></div>
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre> refine (functor_forall (functor_forall idmap
                                              (fun a =&gt; (g (f a))^-1)) _);
       intros h; simpl.</pre>
 </div>
 <div class="code" title="File: Extensions.v
 Line: 196
-Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       refine (functor_sigma (functor_forall idmap g) _); intros k.</pre>
 </div>
 <div class="code" title="File: Extensions.v
 Line: 197
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
       refine (functor_forall idmap _);
         intros a; unfold functor_arrow, functor_forall, composeD; simpl.</pre>
@@ -940,15 +940,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 201
-Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+Time: 0.002s">
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre> refine (functor_forall (functor_forall idmap (fun b =&gt; (g b)^-1)) _);
       intros h.</pre>
 </div>
 <div class="code" title="File: Extensions.v
 Line: 202
 Time: 0.002s">
-<div class="time" style="width: 4.6511627906977%"></div>
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>
       refine (functor_forall (functor_forall idmap (fun b =&gt; (g b)^-1)) _);
         intros k; simpl; unfold functor_forall.</pre>
@@ -963,7 +963,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 205
 Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
       apply equiv_inverse, equiv_ap; exact _.</pre>
 </div>
@@ -979,7 +979,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 209
 Time: 0.002s">
-<div class="time" style="width: 4.6511627906977%"></div>
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>Definition extendable_postcompose (n : nat)
              {A B : Type} (C D : B -&gt; Type) (f : A -&gt; B)
              (g : forall b, C b -&gt; D b) `{forall b, IsEquiv (g b)}
@@ -998,7 +998,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 216
 Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>Definition extendable_compose (n : nat)
              {A B C : Type} (P : C -&gt; Type) (f : A -&gt; B) (g : B -&gt; C)
   : ExtendableAlong n g P -&gt; ExtendableAlong n f (fun b =&gt; P (g b)) -&gt; ExtendableAlong n (g o f) P.</pre>
@@ -1013,7 +1013,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 219
 Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
     revert P; simple_induction n n IHn; intros P extg extf; [ exact tt | split ].</pre>
 </div>
@@ -1033,14 +1033,14 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 221
 Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
       exists ((fst extg (fst extf h).1).1); intros a.</pre>
 </div>
 <div class="code" title="File: Extensions.v
 Line: 222
-Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       refine ((fst extg (fst extf h).1).2 (f a) @ _).</pre>
 </div>
@@ -1110,7 +1110,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 232
 Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>Definition cancelL_extendable (n : nat)
              {A B C : Type} (P : C -&gt; Type) (f : A -&gt; B) (g : B -&gt; C)
   : ExtendableAlong n g P -&gt; ExtendableAlong n (g o f) P -&gt; ExtendableAlong n f (fun b =&gt; P (g b)).</pre>
@@ -1125,7 +1125,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 235
 Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
     revert P; simple_induction n n IHn; intros P extg extgf; [ exact tt | split ].</pre>
 </div>
@@ -1144,8 +1144,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 237
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
       exists ((fst extgf h).1 oD g); intros a.</pre>
 </div>
@@ -1185,8 +1185,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 242
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
       refine (extendable_postcompose' n (fun b =&gt; h' (g b) = k' (g b)) (fun b =&gt; h b = k b) f _ _).</pre>
 </div>
@@ -1206,7 +1206,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 244
 Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
         exact (equiv_concat_lr ((fst extg h).2 b)^ ((fst extg k).2 b)).</pre>
 </div>
@@ -1219,8 +1219,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 246
-Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply (IHn (fun c =&gt; h' c = k' c) (snd extg h' k') (snd extgf h' k')).</pre>
 </div>
 <div class="code" title="File: Extensions.v
@@ -1235,7 +1235,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 249
 Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>Definition cancelR_extendable (n : nat)
              {A B C : Type} (P : C -&gt; Type) (f : A -&gt; B) (g : B -&gt; C)
   : ExtendableAlong n.+1 f (fun b =&gt; P (g b)) -&gt; ExtendableAlong n (g o f) P -&gt; ExtendableAlong n g P.</pre>
@@ -1250,7 +1250,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 252
 Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
     revert P; simple_induction n n IHn; intros P extf extgf; [ exact tt | split ].</pre>
 </div>
@@ -1276,15 +1276,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 255
-Time: 0.002s">
-<div class="time" style="width: 4.6511627906977%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
       refine ((fst (snd extf ((fst extgf (h oD f)).1 oD g) h) _).1 b); intros a.</pre>
 </div>
 <div class="code" title="File: Extensions.v
 Line: 256
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
       apply ((fst extgf (h oD f)).2).</pre>
 </div>
@@ -1346,8 +1346,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 265
-Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition extendable_homotopic (n : nat)
              {A B : Type} (C : B -&gt; Type) (f : A -&gt; B) {g : A -&gt; B} (p : f == g)
   : ExtendableAlong n f C -&gt; ExtendableAlong n g C.</pre>
@@ -1362,7 +1362,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 268
 Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
     revert C; simple_induction n n IHn; intros C extf; [ exact tt | split ].</pre>
 </div>
@@ -1382,14 +1382,14 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 270
 Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
       exists ((fst extf (fun a =&gt; (p a)^ # h a)).1); intros a.</pre>
 </div>
 <div class="code" title="File: Extensions.v
 Line: 271
-Time: 0.002s">
-<div class="time" style="width: 4.6511627906977%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
       refine ((apD ((fst extf (fun a =&gt; (p a)^ # h a)).1) (p a))^ @ _).</pre>
 </div>
@@ -1402,8 +1402,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 273
-Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       exact ((fst extf (fun a =&gt; (p a)^ # h a)).2 a).</pre>
 </div>
@@ -1455,7 +1455,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 283
 Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
     revert C; simple_induction n n IHn; intros C; [ exact tt | split ].</pre>
 </div>
@@ -1474,22 +1474,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 285
-Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       exists (fun b =&gt; eisretr f b # h (f^-1 b)); intros a.</pre>
 </div>
 <div class="code" title="File: Extensions.v
 Line: 286
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
       refine (transport2 C (eisadj f a) _ @ _).</pre>
 </div>
 <div class="code" title="File: Extensions.v
 Line: 287
-Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       refine ((transport_compose C f _ _)^ @ _).</pre>
 </div>
@@ -1549,7 +1549,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 299
 Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
     generalize dependent C; simple_induction n n IHn;
       intros C ?; [ exact tt | split ].</pre>
@@ -1597,7 +1597,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 305
 Time: 0.004s">
-<div class="time" style="width: 9.3023255813953%"></div>
+<div class="time" style="width: 9.5238095238095%"></div>
 <pre>
       apply IHn; exact _.</pre>
 </div>
@@ -1613,8 +1613,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 310
-Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition extendable_homotopy (n : nat)
              {A B : Type} (C : B -&gt; Type) (f : A -&gt; B)
              (h k : forall b, C b)
@@ -1629,8 +1629,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 314
-Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+Time: 0.002s">
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>
     revert C h k; simple_induction n n IHn;
       intros C h k ext; [exact tt | split].</pre>
@@ -1670,8 +1670,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 319
-Time: 0.002s">
-<div class="time" style="width: 4.6511627906977%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
       apply IHn, ext.</pre>
 </div>
@@ -1750,8 +1750,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 339
-Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition lift_ooextendablealong@{i j k l1 l2}
              {A : Type@{i}} {B : Type@{j}}
              (f : A -&gt; B) (C : B -&gt; Type@{k})
@@ -1806,7 +1806,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 352
 Time: 0.002s">
-<div class="time" style="width: 4.6511627906977%"></div>
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>
 
   Definition isequiv_ooextendable `{Funext}
@@ -1816,8 +1816,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 357
-Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Definition equiv_ooextendable_pathsplit `{Funext}
@@ -1834,8 +1834,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 363
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
     refine (equiv_functor_forall' 1 _); intros n.</pre>
 </div>
@@ -1872,8 +1872,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 371
-Time: 0.043s">
-<div class="time" style="width: 100%"></div>
+Time: 0.04s">
+<div class="time" style="width: 95.238095238095%"></div>
 <pre>
     refine (trunc_equiv _ (equiv_ooextendable_pathsplit C f)^-1).</pre>
 </div>
@@ -1889,7 +1889,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 375
 Time: 0.003s">
-<div class="time" style="width: 6.9767441860465%"></div>
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>Definition equiv_ooextendable_isequiv `{Funext}
              {A B : Type} (C : B -&gt; Type) (f : A -&gt; B)
   : ooExtendableAlong f C
@@ -1898,8 +1898,8 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 379
-Time: 0.003s">
-<div class="time" style="width: 6.9767441860465%"></div>
+Time: 0.002s">
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>
 
   Definition ooextendable_postcompose
@@ -1911,7 +1911,7 @@ Time: 0.003s">
 <div class="code" title="File: Extensions.v
 Line: 385
 Time: 0.002s">
-<div class="time" style="width: 4.6511627906977%"></div>
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>
 
   Definition ooextendable_compose
@@ -1922,7 +1922,7 @@ Time: 0.002s">
 <div class="code" title="File: Extensions.v
 Line: 390
 Time: 0.002s">
-<div class="time" style="width: 4.6511627906977%"></div>
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>
 
   Definition cancelL_ooextendable
@@ -1933,7 +1933,7 @@ Time: 0.002s">
 <div class="code" title="File: Extensions.v
 Line: 395
 Time: 0.002s">
-<div class="time" style="width: 4.6511627906977%"></div>
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>
 
   Definition cancelR_ooextendable
@@ -1944,7 +1944,7 @@ Time: 0.002s">
 <div class="code" title="File: Extensions.v
 Line: 400
 Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
 
   Definition ooextendable_homotopic
@@ -1954,8 +1954,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 405
-Time: 0.031s">
-<div class="time" style="width: 72.093023255814%"></div>
+Time: 0.027s">
+<div class="time" style="width: 64.285714285714%"></div>
 <pre>
 
   Definition ooextendable_equiv
@@ -1966,7 +1966,7 @@ Time: 0.031s">
 <div class="code" title="File: Extensions.v
 Line: 410
 Time: 0.001s">
-<div class="time" style="width: 2.3255813953488%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
 
   Definition ooextendable_contr
@@ -2056,7 +2056,7 @@ Time: 0s">
 <div class="code" title="File: Extensions.v
 Line: 434
 Time: 0.002s">
-<div class="time" style="width: 4.6511627906977%"></div>
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>
       exists (fun b =&gt; (fst (orth b 1%nat) (fun x =&gt; x.2 # g x.1)).1 tt).</pre>
 </div>
@@ -2119,8 +2119,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Extensions.v
 Line: 443
-Time: 0.021s">
-<div class="time" style="width: 48.837209302326%"></div>
+Time: 0.019s">
+<div class="time" style="width: 45.238095238095%"></div>
 <pre>End Extensions.</pre>
 </div>
 <div class="code" title="File: Extensions.v

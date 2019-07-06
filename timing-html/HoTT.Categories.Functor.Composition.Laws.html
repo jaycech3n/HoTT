@@ -164,8 +164,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Laws.v
 Line: 27
-Time: 0.001s">
-<div class="time" style="width: 0.36363636363636%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Lemma right_identity (F : Functor C D) : F o 1 = F.</pre>
 </div>
 <div class="code" title="File: Laws.v
@@ -219,16 +219,16 @@ End identity_lemmas.</pre>
 </div>
 <div class="code" title="File: Laws.v
 Line: 40
-Time: 0.001s">
-<div class="time" style="width: 0.36363636363636%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Hint Rewrite @left_identity @right_identity : category.</pre>
 </div>
 <div class="code" title="File: Laws.v
 Line: 42
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.36363636363636%"></div>
 <pre>
 Hint Rewrite @left_identity @right_identity : functor.</pre>
 </div>
@@ -313,8 +313,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Laws.v
 Line: 62
-Time: 0.008s">
-<div class="time" style="width: 2.9090909090909%"></div>
+Time: 0.01s">
+<div class="time" style="width: 3.6363636363636%"></div>
 <pre>Definition associativity_fst F G H
   : ap object_of (associativity F G H) = idpath
     := @path_functor_uncurried_fst _ _ _ ((H o G) o F) (H o (G o F)) 1%path 1%path.</pre>
@@ -401,8 +401,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Laws.v
 Line: 96
-Time: 0.005s">
-<div class="time" style="width: 1.8181818181818%"></div>
+Time: 0.006s">
+<div class="time" style="width: 2.1818181818182%"></div>
 <pre>Lemma triangle C D E (F : Functor C D) (G : Functor D E)
   : (associativity F 1 G @ ap (compose G) (left_identity F))
     = (ap (fun G' : Functor D E =&gt; G' o F) (right_identity G)).</pre>
@@ -416,8 +416,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Laws.v
 Line: 99
-Time: 0.18s">
-<div class="time" style="width: 65.454545454545%"></div>
+Time: 0.187s">
+<div class="time" style="width: 68%"></div>
 <pre>
     coherence_t.</pre>
 </div>
@@ -449,8 +449,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Laws.v
 Line: 120
-Time: 0.016s">
-<div class="time" style="width: 5.8181818181818%"></div>
+Time: 0.015s">
+<div class="time" style="width: 5.4545454545455%"></div>
 <pre>Lemma pentagon A B C D E
         (F : Functor A B) (G : Functor B C) (H : Functor C D) (K : Functor D E)
   : (associativity F G (K o H) @ associativity (G o F) H K)
@@ -479,8 +479,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Laws.v
 Line: 126
-Time: 0.016s">
-<div class="time" style="width: 5.8181818181818%"></div>
+Time: 0.015s">
+<div class="time" style="width: 5.4545454545455%"></div>
 <pre>End coherence.</pre>
 </div>
 <div class="code" title="File: Laws.v
