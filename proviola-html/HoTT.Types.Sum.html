@@ -533,17 +533,17 @@
           
 
             i = 103;
-            data = "1 subgoal (ID 194)	  	  A : Type	  B : Type	  a : A	  ============================	  Decidable {x : A & inl x = inl a}	";
+            data = "1 subgoal (ID 194)	  	  A : Type	  B : Type	  a : A	  ============================	  Decidable {x : A & inl x = inl a}	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 196)		subgoal 1 (ID 196) is:	 Decidable {x : A & inl x = inr b}	";
             responses[i]=data;
           
 
             i = 104;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 196)		subgoal 1 (ID 196) is:	 Decidable {x : A & inl x = inr b}	";
+            data = "1 subgoal (ID 196)	  	  A : Type	  B : Type	  b : B	  ============================	  Decidable {x : A & inl x = inr b}	No more subgoals.	";
             responses[i]=data;
           
 
             i = 105;
-            data = "1 subgoal (ID 196)	  	  A : Type	  B : Type	  b : B	  ============================	  Decidable {x : A & inl x = inr b}	No more subgoals.	<infomsg>decidable_hfiber_inl is defined</infomsg>	";
+            data = "<infomsg>decidable_hfiber_inl is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -598,12 +598,12 @@
           
 
             i = 116;
-            data = "1 subgoal (ID 212)	  	  A : Type	  B : Type	  b : B	  ============================	  Decidable {x : B & inr x = inr b}	";
+            data = "1 subgoal (ID 212)	  	  A : Type	  B : Type	  b : B	  ============================	  Decidable {x : B & inr x = inr b}	No more subgoals.	";
             responses[i]=data;
           
 
             i = 117;
-            data = "No more subgoals.	<infomsg>decidable_hfiber_inr is defined</infomsg>	";
+            data = "<infomsg>decidable_hfiber_inr is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -698,12 +698,12 @@
           
 
             i = 136;
-            data = "1 subgoal (ID 211)	  	  H : Funext	  A : Type	  P : A -> Type	  H0 : forall a : A, IsHProp (P a)	  H1 : forall a : A, Decidable (P a)	  f := fun x : A =>	       let s := dec (P x) in	       match s with	       | inl p => inl (x; p)	       | inr np => inr (x; np)	       end : A -> {x : A & P x} + {x : A & ~ P x}	  ============================	  A <~> {x : A & P x} + {x : A & ~ P x}	";
+            data = "1 subgoal (ID 211)	  	  H : Funext	  A : Type	  P : A -> Type	  H0 : forall a : A, IsHProp (P a)	  H1 : forall a : A, Decidable (P a)	  f := fun x : A =>	       let s := dec (P x) in	       match s with	       | inl p => inl (x; p)	       | inr np => inr (x; np)	       end : A -> {x : A & P x} + {x : A & ~ P x}	  ============================	  A <~> {x : A & P x} + {x : A & ~ P x}	1 subgoal (ID 253)	  	  H : Funext	  A : Type	  P : A -> Type	  H0 : forall a : A, IsHProp (P a)	  H1 : forall a : A, Decidable (P a)	  f := fun x : A =>	       let s := dec (P x) in	       match s with	       | inl p => inl (x; p)	       | inr np => inr (x; np)	       end : A -> {x : A & P x} + {x : A & ~ P x}	  ============================	  IsEquiv f	";
             responses[i]=data;
           
 
             i = 137;
-            data = "1 subgoal (ID 253)	  	  H : Funext	  A : Type	  P : A -> Type	  H0 : forall a : A, IsHProp (P a)	  H1 : forall a : A, Decidable (P a)	  f := fun x : A =>	       let s := dec (P x) in	       match s with	       | inl p => inl (x; p)	       | inr np => inr (x; np)	       end : A -> {x : A & P x} + {x : A & ~ P x}	  ============================	  IsEquiv f	2 subgoals (ID 278)	  	  H : Funext	  A : Type	  P : A -> Type	  H0 : forall a : A, IsHProp (P a)	  H1 : forall a : A, Decidable (P a)	  f := fun x : A =>	       let s := dec (P x) in	       match s with	       | inl p => inl (x; p)	       | inr np => inr (x; np)	       end : A -> {x : A & P x} + {x : A & ~ P x}	  ============================	  Sect	    (fun z : {x : A & P x} + {x : A & ~ P x} =>	     match z with	     | inl y => let y0 := y in let x := y0.1 in let p := y0.2 in x	     | inr y => let y0 := y in let x := y0.1 in let np := y0.2 in x	     end) f		subgoal 2 (ID 280) is:	 Sect f	   (fun z : {x : A & P x} + {x : A & ~ P x} =>	    match z with	    | inl y => let y0 := y in let x := y0.1 in let p := y0.2 in x	    | inr y => let y0 := y in let x := y0.1 in let np := y0.2 in x	    end)	";
+            data = "2 subgoals (ID 278)	  	  H : Funext	  A : Type	  P : A -> Type	  H0 : forall a : A, IsHProp (P a)	  H1 : forall a : A, Decidable (P a)	  f := fun x : A =>	       let s := dec (P x) in	       match s with	       | inl p => inl (x; p)	       | inr np => inr (x; np)	       end : A -> {x : A & P x} + {x : A & ~ P x}	  ============================	  Sect	    (fun z : {x : A & P x} + {x : A & ~ P x} =>	     match z with	     | inl y => let y0 := y in let x := y0.1 in let p := y0.2 in x	     | inr y => let y0 := y in let x := y0.1 in let np := y0.2 in x	     end) f		subgoal 2 (ID 280) is:	 Sect f	   (fun z : {x : A & P x} + {x : A & ~ P x} =>	    match z with	    | inl y => let y0 := y in let x := y0.1 in let p := y0.2 in x	    | inr y => let y0 := y in let x := y0.1 in let np := y0.2 in x	    end)	";
             responses[i]=data;
           
 
@@ -1358,12 +1358,12 @@
           
 
             i = 268;
-            data = "1 subgoal (ID 445)	  	  A : Type	  A' : Type	  B : Type	  B' : Type	  f : A -> A'	  g : B -> B'	  a' : A'	  ============================	  Sect	    (fun X : hfiber functor_sum (inl a') =>	     (fun proj1_sig : A + B =>	      match	        proj1_sig as s return (functor_sum s = inl a' -> hfiber f a')	      with	      | inl a =>	          fun p : functor_sum (inl a) = inl a' => (a; path_sum_inl B' p)	      | inr b =>	          fun p : functor_sum (inr b) = inl a' =>	          Empty_rect (fun _ : Empty => hfiber f a') (inr_ne_inl (g b) a' p)	      end) X.1 X.2)	    (fun X : hfiber f a' =>	     (fun (a : A) (p : f a = a') => (inl a; ap inl p)) X.1 X.2)	2 subgoals (ID 521)	  	  A : Type	  A' : Type	  B : Type	  B' : Type	  f : A -> A'	  g : B -> B'	  a' : A'	  a : A	  p : functor_sum (inl a) = inl a'	  ============================	  (inl a; ap inl (path_sum_inl B' p)) = (inl a; p)		subgoal 2 (ID 523) is:	 (inl (Empty_rect (fun _ : Empty => hfiber f a') (inr_ne_inl (g b) a' p)).1;	 ap inl (Empty_rect (fun _ : Empty => hfiber f a') (inr_ne_inl (g b) a' p)).2) =	 (inr b; p)	";
+            data = "1 subgoal (ID 445)	  	  A : Type	  A' : Type	  B : Type	  B' : Type	  f : A -> A'	  g : B -> B'	  a' : A'	  ============================	  Sect	    (fun X : hfiber functor_sum (inl a') =>	     (fun proj1_sig : A + B =>	      match	        proj1_sig as s return (functor_sum s = inl a' -> hfiber f a')	      with	      | inl a =>	          fun p : functor_sum (inl a) = inl a' => (a; path_sum_inl B' p)	      | inr b =>	          fun p : functor_sum (inr b) = inl a' =>	          Empty_rect (fun _ : Empty => hfiber f a') (inr_ne_inl (g b) a' p)	      end) X.1 X.2)	    (fun X : hfiber f a' =>	     (fun (a : A) (p : f a = a') => (inl a; ap inl p)) X.1 X.2)	";
             responses[i]=data;
           
 
             i = 269;
-            data = "1 subgoal (ID 521)	  	  A : Type	  A' : Type	  B : Type	  B' : Type	  f : A -> A'	  g : B -> B'	  a' : A'	  a : A	  p : functor_sum (inl a) = inl a'	  ============================	  (inl a; ap inl (path_sum_inl B' p)) = (inl a; p)	1 subgoal (ID 526)	  	  A : Type	  A' : Type	  B : Type	  B' : Type	  f : A -> A'	  g : B -> B'	  a' : A'	  a : A	  p : functor_sum (inl a) = inl a'	  ============================	  ap inl (path_sum_inl B' p) = p	";
+            data = "2 subgoals (ID 521)	  	  A : Type	  A' : Type	  B : Type	  B' : Type	  f : A -> A'	  g : B -> B'	  a' : A'	  a : A	  p : functor_sum (inl a) = inl a'	  ============================	  (inl a; ap inl (path_sum_inl B' p)) = (inl a; p)		subgoal 2 (ID 523) is:	 (inl (Empty_rect (fun _ : Empty => hfiber f a') (inr_ne_inl (g b) a' p)).1;	 ap inl (Empty_rect (fun _ : Empty => hfiber f a') (inr_ne_inl (g b) a' p)).2) =	 (inr b; p)	1 subgoal (ID 521)	  	  A : Type	  A' : Type	  B : Type	  B' : Type	  f : A -> A'	  g : B -> B'	  a' : A'	  a : A	  p : functor_sum (inl a) = inl a'	  ============================	  (inl a; ap inl (path_sum_inl B' p)) = (inl a; p)	1 subgoal (ID 526)	  	  A : Type	  A' : Type	  B : Type	  B' : Type	  f : A -> A'	  g : B -> B'	  a' : A'	  a : A	  p : functor_sum (inl a) = inl a'	  ============================	  ap inl (path_sum_inl B' p) = p	";
             responses[i]=data;
           
 

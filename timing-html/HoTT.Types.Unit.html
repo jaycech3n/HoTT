@@ -70,8 +70,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Unit.v
 Line: 9
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5.8823529411765%"></div>
 <pre>Definition eta_unit (z : Unit) : tt = z
   := match z with tt =&gt; 1 end.</pre>
 </div>
@@ -89,8 +89,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Unit.v
 Line: 15
-Time: 0.001s">
-<div class="time" style="width: 5.8823529411765%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition path_unit_uncurried (z z' : Unit) : Unit -&gt; z = z'
   := fun _ =&gt; match z, z' with tt, tt =&gt; 1 end.</pre>
 </div>
@@ -155,8 +155,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Unit.v
 Line: 26
-Time: 0.002s">
-<div class="time" style="width: 11.764705882353%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5.8823529411765%"></div>
 <pre>
   refine (BuildIsEquiv _ _ (path_unit_uncurried z z') (fun _ =&gt; tt)
     (fun p:z=z' =&gt;
@@ -185,8 +185,8 @@ Defined.
 </div>
 <div class="code" title="File: Unit.v
 Line: 37
-Time: 0.001s">
-<div class="time" style="width: 5.8823529411765%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition equiv_path_unit (z z' : Unit) : Unit &lt;~&gt; (z = z')
   := BuildEquiv _ _ (path_unit_uncurried z z') _.</pre>
 </div>
@@ -226,8 +226,8 @@ Global Instance isequiv_unit_ind `{Funext} (A : Unit -&gt; Type)
 </div>
 <div class="code" title="File: Unit.v
 Line: 54
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5.8823529411765%"></div>
 <pre>
 
 Global Instance isequiv_unit_rec `{Funext} (A : Type)
@@ -414,8 +414,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Unit.v
 Line: 91
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5.8823529411765%"></div>
 <pre>Global Instance contr_unit : Contr Unit | 0 := let x := {|
   center := tt;
   contr := fun t : Unit =&gt; match t with tt =&gt; 1 end
@@ -480,8 +480,8 @@ Defined.
 </div>
 <div class="code" title="File: Unit.v
 Line: 109
-Time: 0.004s">
-<div class="time" style="width: 23.529411764706%"></div>
+Time: 0.003s">
+<div class="time" style="width: 17.647058823529%"></div>
 <pre>Global Instance contr_equiv_unit (A : Type) (f : A &lt;~&gt; Unit) : Contr A | 10000
   := BuildContr A (f^-1 tt)
   (fun a =&gt; ap f^-1 (contr (f a)) @ eissect f a).</pre>

@@ -30,14 +30,14 @@ pre {
 
 <div class="code" title="File: Pushout.v
 Line: 1
-Time: 0.219s">
-<div class="time" style="width: 48.451327433628%"></div>
+Time: 0.226s">
+<div class="time" style="width: 50.559284116331%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types HIT.Pushout.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 1
 Time: 0.004s">
-<div class="time" style="width: 0.88495575221239%"></div>
+<div class="time" style="width: 0.89485458612975%"></div>
 <pre>
 Require Import Colimits.Diagram Colimits.Colimit.</pre>
 </div>
@@ -107,8 +107,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pushout.v
 Line: 17
-Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intros [i|i] [j|j].</pre>
 </div>
 <div class="code" title="File: Pushout.v
@@ -226,7 +226,7 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 32
 Time: 0.002s">
-<div class="time" style="width: 0.44247787610619%"></div>
+<div class="time" style="width: 0.44742729306488%"></div>
 <pre> intros [i|i] [j|j] u; cbn; try contradiction.</pre>
 </div>
 <div class="code" title="File: Pushout.v
@@ -274,7 +274,7 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 38
 Time: 0.002s">
-<div class="time" style="width: 0.44247787610619%"></div>
+<div class="time" style="width: 0.44742729306488%"></div>
 <pre>Definition Build_span_cocone {f : A -&gt; B} {g : A -&gt; C} {Z : Type}
              (inl' : B -&gt; Z) (inr' : C -&gt; Z)
              (pp' : inl' o f == inr' o g)
@@ -304,7 +304,7 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 44
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.22371364653244%"></div>
 <pre> intros [|[]]; [ exact (inr' o g) | exact inl' | exact inr' ].</pre>
 </div>
 <div class="code" title="File: Pushout.v
@@ -316,8 +316,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pushout.v
 Line: 45
-Time: 0.006s">
-<div class="time" style="width: 1.3274336283186%"></div>
+Time: 0.007s">
+<div class="time" style="width: 1.5659955257271%"></div>
 <pre> intros [] [] []; cbn.</pre>
 </div>
 <div class="code" title="File: Pushout.v
@@ -364,7 +364,7 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 50
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.22371364653244%"></div>
 <pre>Definition pol' {f : A -&gt; B} {g : A -&gt; C} {Z} (Co : cocone (span f g) Z)
     : B -&gt; Z
     := q Co (inr true).</pre>
@@ -372,7 +372,7 @@ Time: 0.001s">
 <div class="code" title="File: Pushout.v
 Line: 52
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.22371364653244%"></div>
 <pre>
   Definition por' {f : A -&gt; B} {g : A -&gt; C} {Z} (Co : cocone (span f g) Z)
     : C -&gt; Z
@@ -380,8 +380,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Pushout.v
 Line: 55
-Time: 0.006s">
-<div class="time" style="width: 1.3274336283186%"></div>
+Time: 0.007s">
+<div class="time" style="width: 1.5659955257271%"></div>
 <pre>
   Definition popp' {f : A -&gt; B} {g : A -&gt; C} {Z} (Co : cocone (span f g) Z)
     : pol' Co o f == por' Co o g
@@ -390,8 +390,8 @@ Time: 0.006s">
 </div>
 <div class="code" title="File: Pushout.v
 Line: 59
-Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 
@@ -415,23 +415,23 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pushout.v
 Line: 66
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.22371364653244%"></div>
 <pre>
 
   Definition pol : B -&gt; PO f g := colim (D:=span f g) (inr true).</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 68
-Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Definition por : C -&gt; PO f g := colim (D:=span f g) (inr false).</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 69
-Time: 0.004s">
-<div class="time" style="width: 0.88495575221239%"></div>
+Time: 0.005s">
+<div class="time" style="width: 1.1185682326622%"></div>
 <pre>
 
   Definition popp (a : A) : pol (f a) = por (g a)
@@ -450,7 +450,7 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 76
 Time: 0.002s">
-<div class="time" style="width: 0.44247787610619%"></div>
+<div class="time" style="width: 0.44742729306488%"></div>
 <pre>Definition PO_ind (P : PO f g -&gt; Type) (l' : forall b, P (pol b))
              (r' : forall c, P (por c))
              (pp' : forall a, popp a # l' (f a) = r' (g a))
@@ -480,7 +480,7 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 82
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.22371364653244%"></div>
 <pre> intros [[]|[]] x; cbn.</pre>
 </div>
 <div class="code" title="File: Pushout.v
@@ -493,7 +493,7 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 83
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.22371364653244%"></div>
 <pre> exact (@colimp _ (span f g) (inl tt) (inr true) tt x # l' (f x)).</pre>
 </div>
 <div class="code" title="File: Pushout.v
@@ -531,14 +531,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pushout.v
 Line: 86
-Time: 0.026s">
-<div class="time" style="width: 5.7522123893805%"></div>
+Time: 0.028s">
+<div class="time" style="width: 6.2639821029083%"></div>
 <pre> intros [] [] []; cbn.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 86
 Time: 0.006s">
-<div class="time" style="width: 1.3274336283186%"></div>
+<div class="time" style="width: 1.3422818791946%"></div>
 <pre>
       destruct u, b; cbn.</pre>
 </div>
@@ -577,21 +577,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pushout.v
 Line: 90
-Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply moveR_transport_p.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 90
 Time: 0.003s">
-<div class="time" style="width: 0.66371681415929%"></div>
+<div class="time" style="width: 0.67114093959732%"></div>
 <pre>
         etransitivity; [|apply transport_pp].</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 91
 Time: 0.002s">
-<div class="time" style="width: 0.44247787610619%"></div>
+<div class="time" style="width: 0.44742729306488%"></div>
 <pre>
         symmetry; apply pp'.</pre>
 </div>
@@ -607,7 +607,7 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 95
 Time: 0.003s">
-<div class="time" style="width: 0.66371681415929%"></div>
+<div class="time" style="width: 0.67114093959732%"></div>
 <pre>Definition PO_ind_beta_pp (P : PO f g -&gt; Type) (l' : forall b, P (pol b))
              (r' : forall c, P (por c))
              (pp' : forall a, popp a # l' (f a) = r' (g a))
@@ -629,8 +629,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pushout.v
 Line: 100
-Time: 0.005s">
-<div class="time" style="width: 1.1061946902655%"></div>
+Time: 0.006s">
+<div class="time" style="width: 1.3422818791946%"></div>
 <pre> etransitivity.</pre>
 </div>
 <div class="code" title="File: Pushout.v
@@ -642,8 +642,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pushout.v
 Line: 101
-Time: 0.004s">
-<div class="time" style="width: 0.88495575221239%"></div>
+Time: 0.005s">
+<div class="time" style="width: 1.1185682326622%"></div>
 <pre> eapply apD_pp.</pre>
 </div>
 <div class="code" title="File: Pushout.v
@@ -655,8 +655,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pushout.v
 Line: 102
-Time: 0.046s">
-<div class="time" style="width: 10.176991150442%"></div>
+Time: 0.045s">
+<div class="time" style="width: 10.06711409396%"></div>
 <pre> assert (apD (PO_ind P l' r' pp')
                   (@colimp _ (span f g) (inl tt) (inr true) tt x) = 1).</pre>
 </div>
@@ -669,14 +669,14 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 103
 Time: 0.002s">
-<div class="time" style="width: 0.44247787610619%"></div>
+<div class="time" style="width: 0.44742729306488%"></div>
 <pre>
         unfold PO_ind.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 104
-Time: 0.01s">
-<div class="time" style="width: 2.212389380531%"></div>
+Time: 0.011s">
+<div class="time" style="width: 2.4608501118568%"></div>
 <pre>
         match goal with
         | |- apD (colimit_ind P ?qq1 ?qq2) _ = _ =&gt;
@@ -692,7 +692,7 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 108
 Time: 0.022s">
-<div class="time" style="width: 4.8672566371681%"></div>
+<div class="time" style="width: 4.9217002237136%"></div>
 <pre>
       rewrite X.</pre>
 </div>
@@ -704,32 +704,32 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pushout.v
 Line: 109
-Time: 0.01s">
-<div class="time" style="width: 2.212389380531%"></div>
+Time: 0.011s">
+<div class="time" style="width: 2.4608501118568%"></div>
 <pre> cbn.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 109
 Time: 0.013s">
-<div class="time" style="width: 2.8761061946903%"></div>
+<div class="time" style="width: 2.9082774049217%"></div>
 <pre> rewrite concat_p1.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 109
 Time: 0.01s">
-<div class="time" style="width: 2.212389380531%"></div>
+<div class="time" style="width: 2.2371364653244%"></div>
 <pre>
       rewrite apD_V.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 110
 Time: 0.003s">
-<div class="time" style="width: 0.66371681415929%"></div>
+<div class="time" style="width: 0.67114093959732%"></div>
 <pre> unfold PO_ind.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 110
-Time: 0.452s">
+Time: 0.447s">
 <div class="time" style="width: 100%"></div>
 <pre>
       match goal with
@@ -740,8 +740,8 @@ Time: 0.452s">
 </div>
 <div class="code" title="File: Pushout.v
 Line: 115
-Time: 0.022s">
-<div class="time" style="width: 4.8672566371681%"></div>
+Time: 0.023s">
+<div class="time" style="width: 5.1454138702461%"></div>
 <pre>
       match goal with
       | |- ?pp @ moveR_transport_V P _ _ _ (moveR_transport_p P _ _ _ ?qq)^ = _
@@ -750,15 +750,15 @@ Time: 0.022s">
 </div>
 <div class="code" title="File: Pushout.v
 Line: 119
-Time: 0.016s">
-<div class="time" style="width: 3.5398230088496%"></div>
+Time: 0.017s">
+<div class="time" style="width: 3.8031319910515%"></div>
 <pre>
       rewrite moveR_transport_p_V.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 120
 Time: 0.009s">
-<div class="time" style="width: 1.9911504424779%"></div>
+<div class="time" style="width: 2.0134228187919%"></div>
 <pre> rewrite moveR_moveL_transport_p.</pre>
 </div>
 <div class="code" title="File: Pushout.v
@@ -770,14 +770,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pushout.v
 Line: 121
-Time: 0.013s">
-<div class="time" style="width: 2.8761061946903%"></div>
+Time: 0.012s">
+<div class="time" style="width: 2.6845637583893%"></div>
 <pre> rewrite inv_pp.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 121
-Time: 0.254s">
-<div class="time" style="width: 56.194690265487%"></div>
+Time: 0.245s">
+<div class="time" style="width: 54.809843400447%"></div>
 <pre> hott_simpl.</pre>
 </div>
 <div class="code" title="File: Pushout.v
@@ -792,7 +792,7 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 124
 Time: 0.002s">
-<div class="time" style="width: 0.44247787610619%"></div>
+<div class="time" style="width: 0.44742729306488%"></div>
 <pre>Definition PO_rec (P: Type) (l': B -&gt; P) (r': C -&gt; P)
              (pp': l' o f == r' o g)
     : PO f g -&gt; P
@@ -801,7 +801,7 @@ Time: 0.002s">
 <div class="code" title="File: Pushout.v
 Line: 127
 Time: 0.002s">
-<div class="time" style="width: 0.44247787610619%"></div>
+<div class="time" style="width: 0.44742729306488%"></div>
 <pre>
 
   Definition PO_rec_beta_pp (P: Type) (l': B -&gt; P) (r': C -&gt; P)
@@ -825,7 +825,7 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 133
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.22371364653244%"></div>
 <pre>
     pose proof (colimit_rec_beta_colimp P (Build_span_cocone l' r' pp')
                                     (inl tt) (inr true) tt x).</pre>
@@ -833,7 +833,7 @@ Time: 0.001s">
 <div class="code" title="File: Pushout.v
 Line: 135
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.22371364653244%"></div>
 <pre>
     pose proof (colimit_rec_beta_colimp P (Build_span_cocone l' r' pp')
                                     (inl tt) (inr false) tt x).</pre>
@@ -841,14 +841,14 @@ Time: 0.001s">
 <div class="code" title="File: Pushout.v
 Line: 137
 Time: 0.002s">
-<div class="time" style="width: 0.44247787610619%"></div>
+<div class="time" style="width: 0.44742729306488%"></div>
 <pre>
     unfold popp; cbn in *.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 138
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.22371364653244%"></div>
 <pre>
     refine (ap_pp _ _ _ @ _).</pre>
 </div>
@@ -861,20 +861,20 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 139
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.22371364653244%"></div>
 <pre>
     refine (X @@ _).</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 140
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.22371364653244%"></div>
 <pre> refine (_ @ inverse2 X0).</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 140
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.22371364653244%"></div>
 <pre>
     exact (ap_V _ _).</pre>
 </div>
@@ -920,7 +920,7 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 150
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.22371364653244%"></div>
 <pre> serapply PO_rec.</pre>
 </div>
 <div class="code" title="File: Pushout.v
@@ -984,7 +984,7 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 154
 Time: 0.002s">
-<div class="time" style="width: 0.44247787610619%"></div>
+<div class="time" style="width: 0.44742729306488%"></div>
 <pre> serapply PO_ind; cbn.</pre>
 </div>
 <div class="code" title="File: Pushout.v
@@ -1047,46 +1047,46 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pushout.v
 Line: 158
-Time: 0.018s">
-<div class="time" style="width: 3.9823008849558%"></div>
+Time: 0.017s">
+<div class="time" style="width: 3.8031319910515%"></div>
 <pre> rewrite transport_paths_FlFr, ap_idmap.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 158
 Time: 0.004s">
-<div class="time" style="width: 0.88495575221239%"></div>
+<div class="time" style="width: 0.89485458612975%"></div>
 <pre>
         rewrite ap_compose.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 159
 Time: 0.005s">
-<div class="time" style="width: 1.1061946902655%"></div>
+<div class="time" style="width: 1.1185682326622%"></div>
 <pre> rewrite PO_rec_beta_pp.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 159
 Time: 0.004s">
-<div class="time" style="width: 0.88495575221239%"></div>
+<div class="time" style="width: 0.89485458612975%"></div>
 <pre>
         rewrite eisadj.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 160
 Time: 0.016s">
-<div class="time" style="width: 3.5398230088496%"></div>
+<div class="time" style="width: 3.579418344519%"></div>
 <pre> destruct (eissect f a).</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 160
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.22371364653244%"></div>
 <pre> cbn.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 160
 Time: 0.004s">
-<div class="time" style="width: 0.88495575221239%"></div>
+<div class="time" style="width: 0.89485458612975%"></div>
 <pre>
         rewrite concat_1p, concat_p1.</pre>
 </div>
@@ -1119,7 +1119,7 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 163
 Time: 0.289s">
-<div class="time" style="width: 63.938053097345%"></div>
+<div class="time" style="width: 64.653243847875%"></div>
 <pre>End PO.</pre>
 </div>
 <div class="code" title="File: Pushout.v
@@ -1155,8 +1155,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pushout.v
 Line: 169
-Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Definition is_PO_pushout : is_PO f g (pushout f g).</pre>
@@ -1185,7 +1185,7 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 174
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.22371364653244%"></div>
 <pre> serapply Build_span_cocone.</pre>
 </div>
 <div class="code" title="File: Pushout.v
@@ -1198,7 +1198,7 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 175
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.22371364653244%"></div>
 <pre> exact (push o inl).</pre>
 </div>
 <div class="code" title="File: Pushout.v
@@ -1211,7 +1211,7 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 176
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.22371364653244%"></div>
 <pre> exact (push o inr).</pre>
 </div>
 <div class="code" title="File: Pushout.v
@@ -1237,7 +1237,7 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 178
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.22371364653244%"></div>
 <pre> intro Y; serapply isequiv_adjointify.</pre>
 </div>
 <div class="code" title="File: Pushout.v
@@ -1256,7 +1256,7 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 179
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.22371364653244%"></div>
 <pre> serapply pushout_rec.</pre>
 </div>
 <div class="code" title="File: Pushout.v
@@ -1308,13 +1308,13 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 183
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.22371364653244%"></div>
 <pre> intros [Co Co'].</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 183
 Time: 0.007s">
-<div class="time" style="width: 1.5486725663717%"></div>
+<div class="time" style="width: 1.5659955257271%"></div>
 <pre> serapply path_cocone; cbn.</pre>
 </div>
 <div class="code" title="File: Pushout.v
@@ -1326,8 +1326,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pushout.v
 Line: 184
-Time: 0.003s">
-<div class="time" style="width: 0.66371681415929%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.89485458612975%"></div>
 <pre> intros [[]|[]] x; simpl.</pre>
 </div>
 <div class="code" title="File: Pushout.v
@@ -1365,8 +1365,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pushout.v
 Line: 187
-Time: 0.192s">
-<div class="time" style="width: 42.477876106195%"></div>
+Time: 0.196s">
+<div class="time" style="width: 43.847874720358%"></div>
 <pre> intros [[]|[]] [[]|[]] [] x; simpl.</pre>
 </div>
 <div class="code" title="File: Pushout.v
@@ -1379,14 +1379,14 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 188
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.22371364653244%"></div>
 <pre>
           refine (_ @ (concat_1p _)^).</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 189
 Time: 0.008s">
-<div class="time" style="width: 1.7699115044248%"></div>
+<div class="time" style="width: 1.7897091722595%"></div>
 <pre>
           rewrite pushout_rec_beta_pp.</pre>
 </div>
@@ -1406,7 +1406,7 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 191
 Time: 0.106s">
-<div class="time" style="width: 23.451327433628%"></div>
+<div class="time" style="width: 23.713646532438%"></div>
 <pre> hott_simpl.</pre>
 </div>
 <div class="code" title="File: Pushout.v
@@ -1431,7 +1431,7 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 192
 Time: 0.006s">
-<div class="time" style="width: 1.3274336283186%"></div>
+<div class="time" style="width: 1.3422818791946%"></div>
 <pre>
         serapply pushout_ind; cbn.</pre>
 </div>
@@ -1477,27 +1477,27 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 196
 Time: 0.006s">
-<div class="time" style="width: 1.3274336283186%"></div>
+<div class="time" style="width: 1.3422818791946%"></div>
 <pre>
           rewrite transport_paths_FlFr.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 197
-Time: 0.02s">
-<div class="time" style="width: 4.4247787610619%"></div>
+Time: 0.019s">
+<div class="time" style="width: 4.2505592841163%"></div>
 <pre> rewrite concat_p1.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 197
-Time: 0.012s">
-<div class="time" style="width: 2.6548672566372%"></div>
+Time: 0.011s">
+<div class="time" style="width: 2.4608501118568%"></div>
 <pre>
           rewrite pushout_rec_beta_pp.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 198
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.22371364653244%"></div>
 <pre> eapply moveR_Vp.</pre>
 </div>
 <div class="code" title="File: Pushout.v
@@ -1510,13 +1510,13 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 199
 Time: 0.002s">
-<div class="time" style="width: 0.44247787610619%"></div>
+<div class="time" style="width: 0.44742729306488%"></div>
 <pre> cbn.</pre>
 </div>
 <div class="code" title="File: Pushout.v
 Line: 199
 Time: 0.006s">
-<div class="time" style="width: 1.3274336283186%"></div>
+<div class="time" style="width: 1.3422818791946%"></div>
 <pre> by rewrite !concat_p1.</pre>
 </div>
 <div class="code" title="File: Pushout.v
@@ -1545,7 +1545,7 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 204
 Time: 0.001s">
-<div class="time" style="width: 0.2212389380531%"></div>
+<div class="time" style="width: 0.22371364653244%"></div>
 <pre>
     serapply colimit_unicity.</pre>
 </div>
@@ -1575,7 +1575,7 @@ Time: 0s">
 <div class="code" title="File: Pushout.v
 Line: 209
 Time: 0.071s">
-<div class="time" style="width: 15.70796460177%"></div>
+<div class="time" style="width: 15.883668903803%"></div>
 <pre>End is_PO_pushout.</pre>
 </div>
 <div class="code" title="File: Pushout.v

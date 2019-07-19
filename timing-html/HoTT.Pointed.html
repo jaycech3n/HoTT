@@ -39,28 +39,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pointed.v
 Line: 3
-Time: 0.04s">
-<div class="time" style="width: 0.99280218416481%"></div>
+Time: 0.041s">
+<div class="time" style="width: 1.0118460019743%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 3
 Time: 0.013s">
-<div class="time" style="width: 0.32266070985356%"></div>
+<div class="time" style="width: 0.3208292201382%"></div>
 <pre>
 Require Import Fibrations Factorization.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 4
-Time: 0.167s">
-<div class="time" style="width: 4.1449491188881%"></div>
+Time: 0.178s">
+<div class="time" style="width: 4.3928923988154%"></div>
 <pre>
 Require Import Modalities.Modality HIT.Truncations HIT.Connectedness.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 5
 Time: 0.004s">
-<div class="time" style="width: 0.099280218416481%"></div>
+<div class="time" style="width: 0.098716683119447%"></div>
 <pre>
 Import TrM.</pre>
 </div>
@@ -105,8 +105,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pointed.v
 Line: 15
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>Global Instance ispointed_contr `{Contr A} : IsPointed A := center A.</pre>
 </div>
 <div class="code" title="File: Pointed.v
@@ -120,7 +120,7 @@ Time: 0s">
 <div class="code" title="File: Pointed.v
 Line: 17
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>Global Instance ispointed_forall `{H : forall a : A, IsPointed (B a)}
 : IsPointed (forall a, B a)
   := fun a =&gt; point (B a).</pre>
@@ -135,8 +135,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pointed.v
 Line: 21
-Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.049358341559724%"></div>
 <pre>Global Instance ispointed_sigma `{IsPointed A} `{IsPointed (B (point A))}
 : IsPointed (sigT B)
   := (point A; point (B (point A))).</pre>
@@ -152,7 +152,7 @@ Time: 0s">
 <div class="code" title="File: Pointed.v
 Line: 25
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>Global Instance ispointed_prod `{IsPointed A, IsPointed B} : IsPointed (A * B)
   := (point A, point B).</pre>
 </div>
@@ -184,15 +184,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pointed.v
 Line: 34
-Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition loops (A : Type) `{IsPointed A} : pType :=
   Build_pType (point A = point A) idpath.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 35
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
 
 Fixpoint iterated_loops (n : nat) (A : Type) `{H : IsPointed A}
@@ -226,8 +226,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 46
-Time: 0.004s">
-<div class="time" style="width: 0.099280218416481%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.12339585389931%"></div>
 <pre>
   exact _.</pre>
 </div>
@@ -242,8 +242,8 @@ Defined.
 </div>
 <div class="code" title="File: Pointed.v
 Line: 50
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>Definition isconnected_loops `{Univalence} {n} (A : pType)
            `{IsConnected n.+1 A}
 : IsConnected n (loops A).</pre>
@@ -257,8 +257,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 53
-Time: 0.065s">
-<div class="time" style="width: 1.6133035492678%"></div>
+Time: 0.067s">
+<div class="time" style="width: 1.6535044422507%"></div>
 <pre>
   exact _.</pre>
 </div>
@@ -275,8 +275,8 @@ Defined.
 </div>
 <div class="code" title="File: Pointed.v
 Line: 58
-Time: 0.002s">
-<div class="time" style="width: 0.04964010920824%"></div>
+Time: 0.01s">
+<div class="time" style="width: 0.24679170779862%"></div>
 <pre>Record pMap (A B : pType) :=
   { pointed_fun : A -&gt; B ;
     point_eq : pointed_fun (point A) = point B }.</pre>
@@ -329,8 +329,8 @@ Definition pmap_idmap (A : pType): A -&gt;* A
 </div>
 <div class="code" title="File: Pointed.v
 Line: 70
-Time: 0.002s">
-<div class="time" style="width: 0.04964010920824%"></div>
+Time: 0.01s">
+<div class="time" style="width: 0.24679170779862%"></div>
 <pre>
 
 Definition pmap_compose {A B C : pType}
@@ -367,8 +367,8 @@ which would allow us to use [o] for pointed maps as well most of the time.  Howe
 </div>
 <div class="code" title="File: Pointed.v
 Line: 89
-Time: 0.005s">
-<div class="time" style="width: 0.1241002730206%"></div>
+Time: 0.007s">
+<div class="time" style="width: 0.17275419545903%"></div>
 <pre>Record pHomotopy {A B : pType} (f g : pMap A B) :=
   { pointed_htpy : f == g ;
     point_htpy : pointed_htpy (point A) @ point_eq g = point_eq f }.</pre>
@@ -447,8 +447,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pointed.v
 Line: 114
-Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition loops_functor {A B : pType} (f : A -&gt;* B)
 : (loops A) -&gt;* (loops B).</pre>
 </div>
@@ -461,23 +461,23 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 116
-Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.049358341559724%"></div>
 <pre>
   refine (Build_pMap (loops A) (loops B)
             (fun p =&gt; (point_eq f)^ @ (ap f p @ point_eq f)) _).</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 118
-Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   apply moveR_Vp; simpl.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 119
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
   refine (concat_1p _ @ (concat_p1 _)^).</pre>
 </div>
@@ -507,14 +507,14 @@ Proof.</pre>
 <div class="code" title="File: Pointed.v
 Line: 124
 Time: 0.012s">
-<div class="time" style="width: 0.29784065524944%"></div>
+<div class="time" style="width: 0.29615004935834%"></div>
 <pre>
   pointed_reduce.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 125
 Time: 0.002s">
-<div class="time" style="width: 0.04964010920824%"></div>
+<div class="time" style="width: 0.049358341559724%"></div>
 <pre>
   simple refine (Build_pHomotopy _ _); simpl.</pre>
 </div>
@@ -547,8 +547,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pointed.v
 Line: 129
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
     apply moveR_Vp.</pre>
 </div>
@@ -568,14 +568,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pointed.v
 Line: 132
-Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.049358341559724%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 132
-Time: 0.089s">
-<div class="time" style="width: 2.2089848597667%"></div>
+Time: 0.091s">
+<div class="time" style="width: 2.2458045409674%"></div>
 <pre>
     abstract (rewrite !concat_p1; reflexivity).</pre>
 </div>
@@ -593,7 +593,7 @@ Qed.
 <div class="code" title="File: Pointed.v
 Line: 137
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>Definition pmap_compose_assoc {A B C D : pType}
            (h : C -&gt;* D) (g : B -&gt;* C) (f : A -&gt;* B)
 : (h o* g) o* f ==* h o* (g o* f).</pre>
@@ -608,7 +608,7 @@ Proof.</pre>
 <div class="code" title="File: Pointed.v
 Line: 140
 Time: 0.012s">
-<div class="time" style="width: 0.29784065524944%"></div>
+<div class="time" style="width: 0.29615004935834%"></div>
 <pre>
   pointed_reduce.</pre>
 </div>
@@ -671,7 +671,7 @@ Proof.</pre>
 <div class="code" title="File: Pointed.v
 Line: 148
 Time: 0.003s">
-<div class="time" style="width: 0.07446016381236%"></div>
+<div class="time" style="width: 0.074037512339585%"></div>
 <pre>
   pointed_reduce.</pre>
 </div>
@@ -733,8 +733,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 156
-Time: 0.009s">
-<div class="time" style="width: 0.22338049143708%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.074037512339585%"></div>
 <pre>
   pointed_reduce.</pre>
 </div>
@@ -799,8 +799,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 167
-Time: 0.014s">
-<div class="time" style="width: 0.34748076445768%"></div>
+Time: 0.013s">
+<div class="time" style="width: 0.3208292201382%"></div>
 <pre>
   pointed_reduce.</pre>
 </div>
@@ -863,8 +863,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 176
-Time: 0.014s">
-<div class="time" style="width: 0.34748076445768%"></div>
+Time: 0.013s">
+<div class="time" style="width: 0.3208292201382%"></div>
 <pre>
   pointed_reduce.</pre>
 </div>
@@ -898,7 +898,7 @@ Time: 0s">
 <div class="code" title="File: Pointed.v
 Line: 180
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre> refine (concat_p1 _ @ (concat_1p _)^).</pre>
 </div>
 <div class="code" title="File: Pointed.v
@@ -929,8 +929,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 187
-Time: 0.015s">
-<div class="time" style="width: 0.3723008190618%"></div>
+Time: 0.014s">
+<div class="time" style="width: 0.34550839091807%"></div>
 <pre>
   pointed_reduce.</pre>
 </div>
@@ -1000,8 +1000,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 197
-Time: 0.008s">
-<div class="time" style="width: 0.19856043683296%"></div>
+Time: 0.012s">
+<div class="time" style="width: 0.29615004935834%"></div>
 <pre>
   intros p; pointed_reduce.</pre>
 </div>
@@ -1066,7 +1066,7 @@ Time: 0s">
 <div class="code" title="File: Pointed.v
 Line: 206
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>Definition loops_functor_compose {A B C : pType}
            (g : B -&gt;* C) (f : A -&gt;* B)
 : (loops_functor (pmap_compose g f))
@@ -1081,15 +1081,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 210
-Time: 0.013s">
-<div class="time" style="width: 0.32266070985356%"></div>
+Time: 0.009s">
+<div class="time" style="width: 0.22211253701876%"></div>
 <pre>
   pointed_reduce.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 211
 Time: 0.004s">
-<div class="time" style="width: 0.099280218416481%"></div>
+<div class="time" style="width: 0.098716683119447%"></div>
 <pre>
   simple refine (Build_pHomotopy _ _); simpl.</pre>
 </div>
@@ -1109,21 +1109,21 @@ Time: 0s">
 <div class="code" title="File: Pointed.v
 Line: 213
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
     apply whiskerL, whiskerR.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 214
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
     refine (_ @ ap (ap g) (concat_1p _)^).</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 215
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
     refine (_ @ ap (ap g) (concat_p1 _)^).</pre>
 </div>
@@ -1144,7 +1144,7 @@ Time: 0s">
 <div class="code" title="File: Pointed.v
 Line: 218
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: Pointed.v
@@ -1173,14 +1173,14 @@ Proof.</pre>
 <div class="code" title="File: Pointed.v
 Line: 222
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
   pointed_reduce.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 223
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
   simple refine (Build_pHomotopy _ _); simpl.</pre>
 </div>
@@ -1200,7 +1200,7 @@ Time: 0s">
 <div class="code" title="File: Pointed.v
 Line: 225
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
     refine (concat_1p _ @ concat_p1 _ @ ap_idmap _).</pre>
 </div>
@@ -1231,7 +1231,7 @@ Qed.
 <div class="code" title="File: Pointed.v
 Line: 232
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>Global Instance istrunc_loops_functor {n : trunc_index}
        (A B : pType) (f : A -&gt;* B) `{IsTruncMap n.+1 _ _ f}
 : IsTruncMap n (loops_functor f).</pre>
@@ -1258,15 +1258,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pointed.v
 Line: 236
-Time: 0.148s">
-<div class="time" style="width: 3.6733680814098%"></div>
+Time: 0.147s">
+<div class="time" style="width: 3.6278381046397%"></div>
 <pre>
   refine (trunc_equiv' _ (equiv_functor_sigma' 1 (fun q =&gt; equiv_moveR_Vp _ _ _))); simpl.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 237
 Time: 0.012s">
-<div class="time" style="width: 0.29784065524944%"></div>
+<div class="time" style="width: 0.29615004935834%"></div>
 <pre>
   refine (trunc_equiv' _ (equiv_functor_sigma' 1 (fun q =&gt; equiv_moveR_pM _ _ _))).</pre>
 </div>
@@ -1282,7 +1282,7 @@ Defined.
 <div class="code" title="File: Pointed.v
 Line: 241
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>Global Instance isconnected_loops_functor `{Univalence} {n : trunc_index}
        (A B : pType) (f : A -&gt;* B) `{IsConnMap n.+1 _ _ f}
 : IsConnMap n (loops_functor f).</pre>
@@ -1310,21 +1310,21 @@ Time: 0s">
 <div class="code" title="File: Pointed.v
 Line: 245
 Time: 1.712s">
-<div class="time" style="width: 42.491933482254%"></div>
+<div class="time" style="width: 42.250740375123%"></div>
 <pre>
   refine (isconnected_equiv' n _ (equiv_functor_sigma' 1 (fun q =&gt; equiv_moveR_Vp _ _ _)) _); simpl.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 246
-Time: 4.029s">
+Time: 4.052s">
 <div class="time" style="width: 100%"></div>
 <pre>
   refine (isconnected_equiv' n _ (equiv_functor_sigma' 1 (fun q =&gt; equiv_moveR_pM _ _ _)) _); simpl.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 247
-Time: 0.164s">
-<div class="time" style="width: 4.0704889550757%"></div>
+Time: 0.166s">
+<div class="time" style="width: 4.0967423494571%"></div>
 <pre>
   refine (isconnected_equiv' n _ (hfiber_ap _)^-1 _).</pre>
 </div>
@@ -1340,7 +1340,7 @@ Defined.
 <div class="code" title="File: Pointed.v
 Line: 251
 Time: 0.003s">
-<div class="time" style="width: 0.07446016381236%"></div>
+<div class="time" style="width: 0.074037512339585%"></div>
 <pre>Definition equiv_loops_image `{Univalence} (n : trunc_index)
            {A B : pType} (f : A -&gt;* B)
 : loops (Build_pType (image n.+1 f) (factor1 (image n.+1 f) (point A)))
@@ -1356,7 +1356,7 @@ Proof.</pre>
 <div class="code" title="File: Pointed.v
 Line: 255
 Time: 0.002s">
-<div class="time" style="width: 0.04964010920824%"></div>
+<div class="time" style="width: 0.049358341559724%"></div>
 <pre>
   set (C := (Build_pType (image n.+1 f) (factor1 (image n.+1 f) (point A)))).</pre>
 </div>
@@ -1369,15 +1369,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pointed.v
 Line: 257
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
   pose (h := Build_pMap C B (factor2 (image n.+1 f)) (point_eq f)).</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 258
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
   transparent assert (I : (Factorization (@IsConnMap n) (@MapIn n) (loops_functor f))).</pre>
 </div>
@@ -1390,8 +1390,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pointed.v
 Line: 260
-Time: 0.644s">
-<div class="time" style="width: 15.984115165053%"></div>
+Time: 0.65s">
+<div class="time" style="width: 16.04146100691%"></div>
 <pre> refine (@Build_Factorization
               (@IsConnMap n) (@MapIn n) (loops A) (loops B) (loops_functor f)
               (loops C) (loops_functor g) (loops_functor h) _ _ _).</pre>
@@ -1399,28 +1399,28 @@ Time: 0.644s">
 <div class="code" title="File: Pointed.v
 Line: 262
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
     intros x; symmetry.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 263
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
     refine (_ @ pointed_htpy (loops_functor_compose h g) x).</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 264
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
     simpl.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 265
 Time: 0.01s">
-<div class="time" style="width: 0.2482005460412%"></div>
+<div class="time" style="width: 0.24679170779862%"></div>
 <pre>
     abstract (rewrite !concat_1p; reflexivity).</pre>
 </div>
@@ -1432,8 +1432,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pointed.v
 Line: 266
-Time: 0.015s">
-<div class="time" style="width: 0.3723008190618%"></div>
+Time: 0.017s">
+<div class="time" style="width: 0.41954590325765%"></div>
 <pre>
   exact (path_intermediate
            (path_factor (O_factsys n) (loops_functor f) I (image n (loops_functor f)))).</pre>
@@ -1451,8 +1451,8 @@ Defined.
 </div>
 <div class="code" title="File: Pointed.v
 Line: 272
-Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.049358341559724%"></div>
 <pre>Record pEquiv (A B : pType) :=
   { pointed_equiv_fun : A -&gt;* B ;
     pointed_isequiv : IsEquiv pointed_equiv_fun
@@ -1484,7 +1484,7 @@ Global Existing Instance pointed_isequiv.</pre>
 <div class="code" title="File: Pointed.v
 Line: 280
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
 
 Definition pointed_equiv_equiv {A B} (f : A &lt;~&gt;* B)
@@ -1517,8 +1517,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 290
-Time: 0.045s">
-<div class="time" style="width: 1.1169024571854%"></div>
+Time: 0.041s">
+<div class="time" style="width: 1.0118460019743%"></div>
 <pre>
   refine (Build_pEquiv B A
             (Build_pMap _ _ f^-1 _)
@@ -1527,7 +1527,7 @@ Time: 0.045s">
 <div class="code" title="File: Pointed.v
 Line: 293
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
   apply moveR_equiv_V; symmetry; apply point_eq.</pre>
 </div>
@@ -1543,7 +1543,7 @@ Defined.
 <div class="code" title="File: Pointed.v
 Line: 296
 Time: 0.002s">
-<div class="time" style="width: 0.04964010920824%"></div>
+<div class="time" style="width: 0.049358341559724%"></div>
 <pre>Definition pequiv_compose {A B C : pType}
            (f : A &lt;~&gt;* B) (g : B &lt;~&gt;* C)
 : A &lt;~&gt;* C
@@ -1584,7 +1584,7 @@ Proof.</pre>
 <div class="code" title="File: Pointed.v
 Line: 306
 Time: 0.002s">
-<div class="time" style="width: 0.04964010920824%"></div>
+<div class="time" style="width: 0.049358341559724%"></div>
 <pre>
   issig Build_pType pointed_type ispointed_type.</pre>
 </div>
@@ -1600,7 +1600,7 @@ Defined.
 <div class="code" title="File: Pointed.v
 Line: 309
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>Definition issig_pmap (A B : pType)
 : { f : A -&gt; B &amp; f (point A) = point B } &lt;~&gt; (A -&gt;* B).</pre>
 </div>
@@ -1614,7 +1614,7 @@ Proof.</pre>
 <div class="code" title="File: Pointed.v
 Line: 311
 Time: 0.003s">
-<div class="time" style="width: 0.07446016381236%"></div>
+<div class="time" style="width: 0.074037512339585%"></div>
 <pre>
   issig (@Build_pMap A B) (@pointed_fun A B) (@point_eq A B).</pre>
 </div>
@@ -1630,7 +1630,7 @@ Defined.
 <div class="code" title="File: Pointed.v
 Line: 314
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>Definition issig_phomotopy {A B : pType} (f g : A -&gt;* B)
 : { p : f == g &amp; p (point A) @ point_eq g = point_eq f } &lt;~&gt; (f ==* g).</pre>
 </div>
@@ -1644,7 +1644,7 @@ Proof.</pre>
 <div class="code" title="File: Pointed.v
 Line: 316
 Time: 0.008s">
-<div class="time" style="width: 0.19856043683296%"></div>
+<div class="time" style="width: 0.19743336623889%"></div>
 <pre>
   issig (@Build_pHomotopy A B f g) (@pointed_htpy A B f g) (@point_htpy A B f g).</pre>
 </div>
@@ -1674,7 +1674,7 @@ Proof.</pre>
 <div class="code" title="File: Pointed.v
 Line: 321
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
   refine ((equiv_ap' (issig_pmap A B)^-1 f g)^-1 oE _); cbn.</pre>
 </div>
@@ -1688,14 +1688,14 @@ Time: 0s">
 <div class="code" title="File: Pointed.v
 Line: 323
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
   refine (equiv_path_sigma _ _ _ oE _); cbn.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 324
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
   refine (equiv_functor_sigma' (equiv_path_arrow f g) _); intros p.</pre>
 </div>
@@ -1729,21 +1729,21 @@ Time: 0s">
 <div class="code" title="File: Pointed.v
 Line: 328
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
   refine (transport_paths_Fl (path_forall f g p) (point_eq f) @ _).</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 329
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
   apply whiskerR, inverse2.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 330
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
   refine (ap_apply_l (path_forall f g p) (point A) @ _).</pre>
 </div>
@@ -1766,7 +1766,7 @@ Defined.
 <div class="code" title="File: Pointed.v
 Line: 334
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>Definition path_pmap `{Funext} {A B : pType} {f g : A -&gt;* B}
 : (f ==* g) -&gt; (f = g)
   := equiv_path_pmap f g.</pre>
@@ -1774,7 +1774,7 @@ Time: 0.001s">
 <div class="code" title="File: Pointed.v
 Line: 336
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
 
 Definition issig_pequiv (A B : pType)
@@ -1790,21 +1790,21 @@ Proof.</pre>
 <div class="code" title="File: Pointed.v
 Line: 340
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
   transitivity { f : A -&gt;* B &amp; IsEquiv f }.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 341
-Time: 0.002s">
-<div class="time" style="width: 0.04964010920824%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.074037512339585%"></div>
 <pre>
   2:issig (@Build_pEquiv A B) (@pointed_equiv_fun A B) (@pointed_isequiv A B).</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 342
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
   refine ((equiv_functor_sigma'
              (P := fun f =&gt; IsEquiv f.1)
@@ -1812,8 +1812,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Pointed.v
 Line: 345
-Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.049358341559724%"></div>
 <pre>
   refine (_ oE (equiv_functor_sigma'
                  (Q := fun f =&gt; f.1 (point A) = point B)
@@ -1887,7 +1887,7 @@ Time: 0s">
 <div class="code" title="File: Pointed.v
 Line: 358
 Time: 0.005s">
-<div class="time" style="width: 0.1241002730206%"></div>
+<div class="time" style="width: 0.12339585389931%"></div>
 <pre>
   refine (equiv_ap issig_ptype (A;a) (B;b) oE _).</pre>
 </div>
@@ -1922,7 +1922,7 @@ Time: 0s">
 <div class="code" title="File: Pointed.v
 Line: 363
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
   apply transport_path_universe.</pre>
 </div>
@@ -2001,7 +2001,7 @@ Proof.</pre>
 <div class="code" title="File: Pointed.v
 Line: 380
 Time: 1.976s">
-<div class="time" style="width: 49.044427897741%"></div>
+<div class="time" style="width: 48.766041461007%"></div>
 <pre>
   refine (Build_pType (hfiber f (point B)) _); try exact _.</pre>
 </div>
@@ -2031,7 +2031,7 @@ Defined.
 <div class="code" title="File: Pointed.v
 Line: 385
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>Definition pfib {A B : pType} (f : A -&gt;* B) : pfiber f -&gt;* A
   := (Build_pMap (pfiber f) A pr1 1).</pre>
 </div>
@@ -2087,7 +2087,7 @@ Time: 0s">
 <div class="code" title="File: Pointed.v
 Line: 393
 Time: 0.002s">
-<div class="time" style="width: 0.04964010920824%"></div>
+<div class="time" style="width: 0.049358341559724%"></div>
 <pre>
     refine (_ oE (equiv_functor_sigma'
                    (P := fun a =&gt; {_ : f a = point B &amp; a = point A})
@@ -2097,14 +2097,14 @@ Time: 0.002s">
 <div class="code" title="File: Pointed.v
 Line: 397
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
     refine (_ oE equiv_sigma_assoc _ (fun a =&gt; f a.1 = point B)).</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 398
 Time: 0.023s">
-<div class="time" style="width: 0.57086125589476%"></div>
+<div class="time" style="width: 0.56762092793682%"></div>
 <pre>
     refine (_ oE equiv_contr_sigma _); simpl.</pre>
 </div>
@@ -2118,7 +2118,7 @@ Time: 0s">
 <div class="code" title="File: Pointed.v
 Line: 400
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
     symmetry; apply point_eq.</pre>
 </div>
@@ -2131,8 +2131,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pointed.v
 Line: 402
-Time: 0.016s">
-<div class="time" style="width: 0.39712087366592%"></div>
+Time: 0.018s">
+<div class="time" style="width: 0.44422507403751%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: Pointed.v
@@ -2154,7 +2154,7 @@ Defined.
 <div class="code" title="File: Pointed.v
 Line: 406
 Time: 0.003s">
-<div class="time" style="width: 0.07446016381236%"></div>
+<div class="time" style="width: 0.074037512339585%"></div>
 <pre>Definition pfiber2_loops_functor {A B : pType} (f : A -&gt;* B)
 : loops_inv _ o* pfiber2_loops f o* pfib (pfib (pfib f))
   ==* loops_functor f o* pfiber2_loops (pfib f).</pre>
@@ -2168,15 +2168,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 409
-Time: 0.164s">
-<div class="time" style="width: 4.0704889550757%"></div>
+Time: 0.162s">
+<div class="time" style="width: 3.9980256663376%"></div>
 <pre>
   pointed_reduce.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 410
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
   simple refine (Build_pHomotopy _ _).</pre>
 </div>
@@ -2189,55 +2189,55 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pointed.v
 Line: 412
-Time: 0.026s">
-<div class="time" style="width: 0.64532141970712%"></div>
+Time: 0.031s">
+<div class="time" style="width: 0.76505429417572%"></div>
 <pre> intros [[xp q] r].</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 412
 Time: 0.01s">
-<div class="time" style="width: 0.2482005460412%"></div>
+<div class="time" style="width: 0.24679170779862%"></div>
 <pre> simpl in *.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 412
-Time: 0.015s">
-<div class="time" style="width: 0.3723008190618%"></div>
+Time: 0.021s">
+<div class="time" style="width: 0.5182625863771%"></div>
 <pre>
     rewrite !transport_paths_Fl.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 413
-Time: 0.071s">
-<div class="time" style="width: 1.7622238768925%"></div>
+Time: 0.062s">
+<div class="time" style="width: 1.5301085883514%"></div>
 <pre>
     rewrite inv_pp, !ap_V, !inv_V, ap_compose, !ap_pp, inv_pp.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 414
-Time: 0.024s">
-<div class="time" style="width: 0.59568131049888%"></div>
+Time: 0.025s">
+<div class="time" style="width: 0.61697926949655%"></div>
 <pre>
     simpl; rewrite !concat_1p, !concat_p1.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 415
-Time: 0.004s">
-<div class="time" style="width: 0.099280218416481%"></div>
+Time: 0.011s">
+<div class="time" style="width: 0.27147087857848%"></div>
 <pre>
     rewrite ap_pr1_path_basedpaths'.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 416
-Time: 0.007s">
-<div class="time" style="width: 0.17374038222884%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.14807502467917%"></div>
 <pre>
     rewrite ap_V, inv_V; apply whiskerR.</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 417
 Time: 0.003s">
-<div class="time" style="width: 0.07446016381236%"></div>
+<div class="time" style="width: 0.074037512339585%"></div>
 <pre>
     match goal with
         |- ?a = ap f (ap ?g ?z) =&gt;
@@ -2246,15 +2246,15 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: Pointed.v
 Line: 421
-Time: 0.015s">
-<div class="time" style="width: 0.3723008190618%"></div>
+Time: 0.009s">
+<div class="time" style="width: 0.22211253701876%"></div>
 <pre>
     rewrite (ap_compose pr1 pr1).</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 422
 Time: 0.008s">
-<div class="time" style="width: 0.19856043683296%"></div>
+<div class="time" style="width: 0.19743336623889%"></div>
 <pre>
     rewrite ap_pr1_path_basedpaths'.</pre>
 </div>
@@ -2269,13 +2269,13 @@ Time: 0s">
 <div class="code" title="File: Pointed.v
 Line: 425
 Time: 0.004s">
-<div class="time" style="width: 0.099280218416481%"></div>
+<div class="time" style="width: 0.098716683119447%"></div>
 <pre>set (s := r^); change ((xp.2)^ = ap f (ap pr1 s)).</pre>
 </div>
 <div class="code" title="File: Pointed.v
 Line: 425
 Time: 0.003s">
-<div class="time" style="width: 0.07446016381236%"></div>
+<div class="time" style="width: 0.074037512339585%"></div>
 <pre>
     clearbody s; clear r; destruct s; reflexivity.</pre>
 </div>
@@ -2288,8 +2288,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pointed.v
 Line: 427
-Time: 0.183s">
-<div class="time" style="width: 4.542069992554%"></div>
+Time: 0.182s">
+<div class="time" style="width: 4.4916090819348%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: Pointed.v
@@ -2306,7 +2306,7 @@ Qed.
 <div class="code" title="File: Pointed.v
 Line: 431
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>Global Instance ispointed_tr (n : trunc_index) (A : Type) `{IsPointed A}
 : IsPointed (Tr n A)
   := tr (point A).</pre>
@@ -2314,7 +2314,7 @@ Time: 0.001s">
 <div class="code" title="File: Pointed.v
 Line: 433
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
 
 Definition pTr (n : trunc_index) (A : pType) : pType
@@ -2361,8 +2361,8 @@ Defined.
 </div>
 <div class="code" title="File: Pointed.v
 Line: 444
-Time: 0.038s">
-<div class="time" style="width: 0.94316207495656%"></div>
+Time: 0.036s">
+<div class="time" style="width: 0.88845014807502%"></div>
 <pre>Definition pTr_pequiv {X Y : pType} (n : trunc_index) (f : X &lt;~&gt;* Y)
 : pTr n X &lt;~&gt;* pTr n Y
   := Build_pEquiv _ _ (pTr_functor n f) _.</pre>
@@ -2370,7 +2370,7 @@ Time: 0.038s">
 <div class="code" title="File: Pointed.v
 Line: 446
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>
 
 Definition ptr_loops `{Univalence} (n : trunc_index) (A : pType)
@@ -2400,7 +2400,7 @@ Time: 0s">
 <div class="code" title="File: Pointed.v
 Line: 452
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre> apply equiv_path_Tr.</pre>
 </div>
 <div class="code" title="File: Pointed.v
@@ -2428,7 +2428,7 @@ Defined.
 <div class="code" title="File: Pointed.v
 Line: 455
 Time: 0.001s">
-<div class="time" style="width: 0.02482005460412%"></div>
+<div class="time" style="width: 0.024679170779862%"></div>
 <pre>Definition ptr_loops_eq `{Univalence} (n : trunc_index) (A : pType)
 : pTr n (loops A) = loops (pTr n.+1 A) :&gt; pType
   := path_ptype (ptr_loops n A).</pre>

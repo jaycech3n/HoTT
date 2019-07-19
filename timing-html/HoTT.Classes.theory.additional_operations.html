@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: additional_operations.v
 Line: 1
-Time: 0.438s">
+Time: 0.449s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.Classes.interfaces.abstract_algebra.</pre>
 </div>
@@ -44,8 +44,8 @@ Local Set Universe Minimization ToSet.</pre>
 </div>
 <div class="code" title="File: additional_operations.v
 Line: 3
-Time: 0.033s">
-<div class="time" style="width: 7.5342465753425%"></div>
+Time: 0.032s">
+<div class="time" style="width: 7.1269487750557%"></div>
 <pre>
 
 Instance decide_eqb `{DecidablePaths A} : Eqb A
@@ -54,7 +54,7 @@ Instance decide_eqb `{DecidablePaths A} : Eqb A
 <div class="code" title="File: additional_operations.v
 Line: 6
 Time: 0.001s">
-<div class="time" style="width: 0.22831050228311%"></div>
+<div class="time" style="width: 0.22271714922049%"></div>
 <pre>
 
 Lemma decide_eqb_ok@{i} {A:Type@{i} } `{DecidablePaths A} :
@@ -76,8 +76,8 @@ unfold eqb,decide_eqb.</pre>
 </div>
 <div class="code" title="File: additional_operations.v
 Line: 11
-Time: 0.003s">
-<div class="time" style="width: 0.68493150684932%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.44543429844098%"></div>
 <pre>
 intros a b;destruct (decide_rel paths a b) as [E1|E1];split;intros E2;auto.</pre>
 </div>
@@ -333,8 +333,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: additional_operations.v
 Line: 46
-Time: 0.019s">
-<div class="time" style="width: 4.337899543379%"></div>
+Time: 0.018s">
+<div class="time" style="width: 4.0089086859688%"></div>
 <pre>
 
 Lemma compare_eqb_eq `{Compare A} : forall a b : A, a =? b = true -&gt; a ?= b = EQ.</pre>
@@ -362,8 +362,8 @@ intros a b.</pre>
 </div>
 <div class="code" title="File: additional_operations.v
 Line: 51
-Time: 0.001s">
-<div class="time" style="width: 0.22831050228311%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.44543429844098%"></div>
 <pre> destruct (a ?= b);trivial;intros E;destruct (false_ne_true E).</pre>
 </div>
 <div class="code" title="File: additional_operations.v
@@ -378,7 +378,7 @@ Qed.
 <div class="code" title="File: additional_operations.v
 Line: 53
 Time: 0.001s">
-<div class="time" style="width: 0.22831050228311%"></div>
+<div class="time" style="width: 0.22271714922049%"></div>
 <pre>Instance tricho_compare `{Trichotomy A R} : Compare A | 2
   := fun a b =&gt;
   match trichotomy R a b with
@@ -390,7 +390,7 @@ Time: 0.001s">
 <div class="code" title="File: additional_operations.v
 Line: 59
 Time: 0.001s">
-<div class="time" style="width: 0.22831050228311%"></div>
+<div class="time" style="width: 0.22271714922049%"></div>
 <pre>
 
 Lemma tricho_compare_eq `{Trichotomy A R}
@@ -413,7 +413,7 @@ unfold compare,tricho_compare.</pre>
 <div class="code" title="File: additional_operations.v
 Line: 64
 Time: 0.003s">
-<div class="time" style="width: 0.68493150684932%"></div>
+<div class="time" style="width: 0.66815144766147%"></div>
 <pre>
 intros a b;destruct (trichotomy R a b) as [E|[E|E]];auto.</pre>
 </div>
@@ -455,7 +455,7 @@ Qed.
 <div class="code" title="File: additional_operations.v
 Line: 69
 Time: 0.001s">
-<div class="time" style="width: 0.22831050228311%"></div>
+<div class="time" style="width: 0.22271714922049%"></div>
 <pre>Lemma tricho_compare_ok `{Trichotomy A R} `{Irreflexive A R}
   : forall a b : A, compare a b = EQ &lt;-&gt; a = b.</pre>
 </div>
@@ -476,7 +476,7 @@ unfold compare,tricho_compare.</pre>
 <div class="code" title="File: additional_operations.v
 Line: 72
 Time: 0.01s">
-<div class="time" style="width: 2.2831050228311%"></div>
+<div class="time" style="width: 2.2271714922049%"></div>
 <pre>
 intros a b;destruct (trichotomy R a b) as [E1|[E1|E1]];split;auto.</pre>
 </div>
@@ -508,8 +508,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: additional_operations.v
 Line: 75
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.22271714922049%"></div>
 <pre> destruct (irreflexivity R _ E1).</pre>
 </div>
 <div class="code" title="File: additional_operations.v
@@ -540,8 +540,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: additional_operations.v
 Line: 77
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.22271714922049%"></div>
 <pre> destruct (irreflexivity R _ E1).</pre>
 </div>
 <div class="code" title="File: additional_operations.v
@@ -556,7 +556,7 @@ Qed.
 <div class="code" title="File: additional_operations.v
 Line: 79
 Time: 0.003s">
-<div class="time" style="width: 0.68493150684932%"></div>
+<div class="time" style="width: 0.66815144766147%"></div>
 <pre>Lemma total_abs_either `{Abs A} `{!TotalRelation le}
   : forall x : A, (0 &lt;= x /\ abs x = x) |_| (x &lt;= 0 /\ abs x = - x).</pre>
 </div>
@@ -576,8 +576,8 @@ intros x.</pre>
 </div>
 <div class="code" title="File: additional_operations.v
 Line: 82
-Time: 0.002s">
-<div class="time" style="width: 0.45662100456621%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.66815144766147%"></div>
 <pre>
 destruct (total le 0 x) as [E|E].</pre>
 </div>
@@ -603,7 +603,7 @@ Time: 0s">
 <div class="code" title="File: additional_operations.v
 Line: 84
 Time: 0.001s">
-<div class="time" style="width: 0.22831050228311%"></div>
+<div class="time" style="width: 0.22271714922049%"></div>
 <pre> apply ((abs_sig x).2);trivial.</pre>
 </div>
 <div class="code" title="File: additional_operations.v
@@ -628,7 +628,7 @@ Time: 0s">
 <div class="code" title="File: additional_operations.v
 Line: 85
 Time: 0.001s">
-<div class="time" style="width: 0.22831050228311%"></div>
+<div class="time" style="width: 0.22271714922049%"></div>
 <pre> apply ((abs_sig x).2);trivial.</pre>
 </div>
 <div class="code" title="File: additional_operations.v

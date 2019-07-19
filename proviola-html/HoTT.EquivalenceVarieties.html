@@ -868,32 +868,32 @@
           
 
             i = 170;
-            data = "1 subgoal (ID 242)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  g : B -> A	  r : forall x : B, f (g x) = x	  ============================	  (forall (x : B) (y : {a : A & f a = x}), (g x; r x) = y) <~>	  {s : Sect f g & forall x : A, r (f x) = ap f (s x)}	";
+            data = "1 subgoal (ID 242)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  g : B -> A	  r : forall x : B, f (g x) = x	  ============================	  (forall (x : B) (y : {a : A & f a = x}), (g x; r x) = y) <~>	  {s : forall x : A, g (f x) = x & forall x : A, r (f x) = ap f (s x)}	";
             responses[i]=data;
           
 
             i = 171;
-            data = "1 subgoal (ID 285)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  g : B -> A	  r : forall x : B, f (g x) = x	  ============================	  (forall (a : B) (a0 : A) (y : f a0 = a), (g a; r a) = (a0; y)) <~>	  {s : Sect f g & forall x : A, r (f x) = ap f (s x)}	";
+            data = "1 subgoal (ID 285)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  g : B -> A	  r : forall x : B, f (g x) = x	  ============================	  (forall (a : B) (a0 : A) (y : f a0 = a), (g a; r a) = (a0; y)) <~>	  {s : forall x : A, g (f x) = x & forall x : A, r (f x) = ap f (s x)}	";
             responses[i]=data;
           
 
             i = 172;
-            data = "1 subgoal (ID 296)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  g : B -> A	  r : forall x : B, f (g x) = x	  ============================	  (forall (b : A) (a : B) (y : f b = a), (g a; r a) = (b; y)) <~>	  {s : Sect f g & forall x : A, r (f x) = ap f (s x)}	";
+            data = "1 subgoal (ID 296)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  g : B -> A	  r : forall x : B, f (g x) = x	  ============================	  (forall (b : A) (a : B) (y : f b = a), (g a; r a) = (b; y)) <~>	  {s : forall x : A, g (f x) = x & forall x : A, r (f x) = ap f (s x)}	";
             responses[i]=data;
           
 
             i = 173;
-            data = "1 subgoal (ID 342)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  g : B -> A	  r : forall x : B, f (g x) = x	  ============================	  (forall a : A, (g (f a); r (f a)) = (a; 1)) <~>	  {s : Sect f g & forall x : A, r (f x) = ap f (s x)}	";
+            data = "1 subgoal (ID 342)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  g : B -> A	  r : forall x : B, f (g x) = x	  ============================	  (forall a : A, (g (f a); r (f a)) = (a; 1)) <~>	  {s : forall x : A, g (f x) = x & forall x : A, r (f x) = ap f (s x)}	";
             responses[i]=data;
           
 
             i = 174;
-            data = "1 subgoal (ID 389)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  g : B -> A	  r : forall x : B, f (g x) = x	  ============================	  (forall a : A,	   {p : g (f a) = a & transport (fun a' : A => f a' = f a) p (r (f a)) = 1}) <~>	  {s : Sect f g & forall x : A, r (f x) = ap f (s x)}	";
+            data = "1 subgoal (ID 389)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  g : B -> A	  r : forall x : B, f (g x) = x	  ============================	  (forall a : A,	   {p : g (f a) = a & transport (fun a' : A => f a' = f a) p (r (f a)) = 1}) <~>	  {s : forall x : A, g (f x) = x & forall x : A, r (f x) = ap f (s x)}	";
             responses[i]=data;
           
 
             i = 175;
-            data = "1 subgoal (ID 416)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  g : B -> A	  r : forall x : B, f (g x) = x	  ============================	  {f0 : forall x : A, g (f x) = x &	  forall x : A, transport (fun a' : A => f a' = f x) (f0 x) (r (f x)) = 1} <~>	  {s : Sect f g & forall x : A, r (f x) = ap f (s x)}	";
+            data = "1 subgoal (ID 416)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  g : B -> A	  r : forall x : B, f (g x) = x	  ============================	  {f0 : forall x : A, g (f x) = x &	  forall x : A, transport (fun a' : A => f a' = f x) (f0 x) (r (f x)) = 1} <~>	  {s : forall x : A, g (f x) = x & forall x : A, r (f x) = ap f (s x)}	";
             responses[i]=data;
           
 
