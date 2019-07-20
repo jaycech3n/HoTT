@@ -31,14 +31,14 @@ pre {
 <div class="code" title="File: naturals.v
 Line: 1
 Time: 0.03s">
-<div class="time" style="width: 6.3965884861407%"></div>
+<div class="time" style="width: 6.3694267515924%"></div>
 <pre>Require Import
   HoTT.Types.Universe
   HoTT.Basics.Decidable.</pre>
 </div>
 <div class="code" title="File: naturals.v
 Line: 3
-Time: 0.469s">
+Time: 0.471s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Require Import
@@ -73,7 +73,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 13
 Time: 0.006s">
-<div class="time" style="width: 1.2793176972281%"></div>
+<div class="time" style="width: 1.2738853503185%"></div>
 <pre>
 
 Lemma to_semiring_unique `{Naturals N} `{SemiRing SR} (f: N -&gt; SR)
@@ -90,14 +90,14 @@ Proof.</pre>
 <div class="code" title="File: naturals.v
 Line: 18
 Time: 0.001s">
-<div class="time" style="width: 0.21321961620469%"></div>
+<div class="time" style="width: 0.21231422505308%"></div>
 <pre>
 symmetry.</pre>
 </div>
 <div class="code" title="File: naturals.v
 Line: 19
 Time: 0.002s">
-<div class="time" style="width: 0.42643923240938%"></div>
+<div class="time" style="width: 0.42462845010616%"></div>
 <pre> apply naturals_initial.</pre>
 </div>
 <div class="code" title="File: naturals.v
@@ -112,7 +112,7 @@ Qed.
 <div class="code" title="File: naturals.v
 Line: 21
 Time: 0.008s">
-<div class="time" style="width: 1.7057569296375%"></div>
+<div class="time" style="width: 1.6985138004246%"></div>
 <pre>Lemma to_semiring_unique_alt `{Naturals N} `{SemiRing SR} (f g: N -&gt; SR)
   `{!SemiRingPreserving f} `{!SemiRingPreserving g} x
   : f x = g x.</pre>
@@ -127,7 +127,7 @@ Proof.</pre>
 <div class="code" title="File: naturals.v
 Line: 24
 Time: 0.01s">
-<div class="time" style="width: 2.1321961620469%"></div>
+<div class="time" style="width: 2.1231422505308%"></div>
 <pre>
 rewrite (to_semiring_unique f), (to_semiring_unique g);reflexivity.</pre>
 </div>
@@ -143,7 +143,7 @@ Qed.
 <div class="code" title="File: naturals.v
 Line: 27
 Time: 0.014s">
-<div class="time" style="width: 2.9850746268657%"></div>
+<div class="time" style="width: 2.9723991507431%"></div>
 <pre>Lemma to_semiring_involutive N `{Naturals N} N2 `{Naturals N2} x :
   naturals_to_semiring N2 N (naturals_to_semiring N N2 x) = x.</pre>
 </div>
@@ -157,14 +157,14 @@ Proof.</pre>
 <div class="code" title="File: naturals.v
 Line: 29
 Time: 0.015s">
-<div class="time" style="width: 3.1982942430704%"></div>
+<div class="time" style="width: 3.1847133757962%"></div>
 <pre>
 change (Compose (naturals_to_semiring N2 N) (naturals_to_semiring N N2) x = id x).</pre>
 </div>
 <div class="code" title="File: naturals.v
 Line: 30
 Time: 0.02s">
-<div class="time" style="width: 4.2643923240938%"></div>
+<div class="time" style="width: 4.2462845010616%"></div>
 <pre>
 apply to_semiring_unique_alt;apply _.</pre>
 </div>
@@ -180,7 +180,7 @@ Qed.
 <div class="code" title="File: naturals.v
 Line: 33
 Time: 0.008s">
-<div class="time" style="width: 1.7057569296375%"></div>
+<div class="time" style="width: 1.6985138004246%"></div>
 <pre>Lemma morphisms_involutive `{Naturals N} `{SemiRing R} (f : R -&gt; N) (g : N -&gt; R)
   `{!SemiRingPreserving f} `{!SemiRingPreserving g} x : f (g x) = x.</pre>
 </div>
@@ -194,7 +194,7 @@ Proof.</pre>
 <div class="code" title="File: naturals.v
 Line: 35
 Time: 0.014s">
-<div class="time" style="width: 2.9850746268657%"></div>
+<div class="time" style="width: 2.9723991507431%"></div>
 <pre> exact (to_semiring_unique_alt (f ∘ g) id _).</pre>
 </div>
 <div class="code" title="File: naturals.v
@@ -208,7 +208,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 36
 Time: 0.017s">
-<div class="time" style="width: 3.6247334754797%"></div>
+<div class="time" style="width: 3.6093418259023%"></div>
 <pre>Lemma to_semiring_twice `{Naturals N} `{SemiRing R1} `{SemiRing R2}
   (f : R1 -&gt; R2) (g : N -&gt; R1) (h : N -&gt; R2)
   `{!SemiRingPreserving f} `{!SemiRingPreserving g} `{!SemiRingPreserving h} x
@@ -224,7 +224,7 @@ Proof.</pre>
 <div class="code" title="File: naturals.v
 Line: 40
 Time: 0.008s">
-<div class="time" style="width: 1.7057569296375%"></div>
+<div class="time" style="width: 1.6985138004246%"></div>
 <pre> exact (to_semiring_unique_alt (f ∘ g) h _).</pre>
 </div>
 <div class="code" title="File: naturals.v
@@ -238,7 +238,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 41
 Time: 0.003s">
-<div class="time" style="width: 0.63965884861407%"></div>
+<div class="time" style="width: 0.63694267515924%"></div>
 <pre>Lemma to_semiring_self `{Naturals N} (f : N -&gt; N) `{!SemiRingPreserving f} x
   : f x = x.</pre>
 </div>
@@ -252,7 +252,7 @@ Proof.</pre>
 <div class="code" title="File: naturals.v
 Line: 43
 Time: 0.007s">
-<div class="time" style="width: 1.4925373134328%"></div>
+<div class="time" style="width: 1.4861995753716%"></div>
 <pre> exact (to_semiring_unique_alt f id _).</pre>
 </div>
 <div class="code" title="File: naturals.v
@@ -266,7 +266,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 44
 Time: 0.009s">
-<div class="time" style="width: 1.9189765458422%"></div>
+<div class="time" style="width: 1.9108280254777%"></div>
 <pre>Lemma to_semiring_injective `{Naturals N} `{SemiRing A}
    (f: A -&gt; N) (g: N -&gt; A) `{!SemiRingPreserving f} `{!SemiRingPreserving g}
    : Injective g.</pre>
@@ -295,7 +295,7 @@ change (id x = id y).</pre>
 <div class="code" title="File: naturals.v
 Line: 49
 Time: 0.053s">
-<div class="time" style="width: 11.300639658849%"></div>
+<div class="time" style="width: 11.252653927813%"></div>
 <pre>
 rewrite &lt;-(to_semiring_twice f g id x), &lt;-(to_semiring_twice f g id y).</pre>
 </div>
@@ -318,7 +318,7 @@ Qed.
 <div class="code" title="File: naturals.v
 Line: 53
 Time: 0.007s">
-<div class="time" style="width: 1.4925373134328%"></div>
+<div class="time" style="width: 1.4861995753716%"></div>
 <pre>Instance naturals_to_naturals_injective `{Naturals N} `{Naturals N2} (f: N -&gt; N2)
   `{!SemiRingPreserving f}
   : Injective f | 15.</pre>
@@ -333,7 +333,7 @@ Proof.</pre>
 <div class="code" title="File: naturals.v
 Line: 56
 Time: 0.015s">
-<div class="time" style="width: 3.1982942430704%"></div>
+<div class="time" style="width: 3.1847133757962%"></div>
 <pre> exact (to_semiring_injective (naturals_to_semiring N2 N) _).</pre>
 </div>
 <div class="code" title="File: naturals.v
@@ -353,7 +353,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 57
 Time: 0.004s">
-<div class="time" style="width: 0.85287846481876%"></div>
+<div class="time" style="width: 0.84925690021231%"></div>
 <pre>
   Context `{Naturals N} `{SemiRing SR}
     {SRap : Apart SR} {SRle SRlt} `{!FullPseudoSemiRingOrder (A:=SR) SRle SRlt}.</pre>
@@ -361,7 +361,7 @@ Time: 0.004s">
 <div class="code" title="File: naturals.v
 Line: 59
 Time: 0.003s">
-<div class="time" style="width: 0.63965884861407%"></div>
+<div class="time" style="width: 0.63694267515924%"></div>
 <pre>
   Context (f : N -&gt; SR) `{!IsEquiv f}
     `{!SemiRingPreserving f} `{!SemiRingPreserving (f^-1)}.</pre>
@@ -378,7 +378,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 64
 Time: 0.002s">
-<div class="time" style="width: 0.42643923240938%"></div>
+<div class="time" style="width: 0.42462845010616%"></div>
 <pre>Definition retract_is_nat_to_sr : NaturalsToSemiRing SR
     := fun R _ _ _ _ _ =&gt; naturals_to_semiring N R ∘ f^-1.</pre>
 </div>
@@ -400,7 +400,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 68
 Time: 0.041s">
-<div class="time" style="width: 8.7420042643923%"></div>
+<div class="time" style="width: 8.7048832271762%"></div>
 <pre>
 
     Instance: SemiRingPreserving (naturals_to_semiring N R ∘ f^-1) := {}.</pre>
@@ -408,7 +408,7 @@ Time: 0.041s">
 <div class="code" title="File: naturals.v
 Line: 70
 Time: 0.001s">
-<div class="time" style="width: 0.21321961620469%"></div>
+<div class="time" style="width: 0.21231422505308%"></div>
 <pre>
 
     Context (h :  SR -&gt; R) `{!SemiRingPreserving h}.</pre>
@@ -416,7 +416,7 @@ Time: 0.001s">
 <div class="code" title="File: naturals.v
 Line: 72
 Time: 0.002s">
-<div class="time" style="width: 0.42643923240938%"></div>
+<div class="time" style="width: 0.42462845010616%"></div>
 <pre>
 
     Lemma same_morphism x : (naturals_to_semiring N R ∘ f^-1) x = h x.</pre>
@@ -431,7 +431,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 75
 Time: 0.002s">
-<div class="time" style="width: 0.42643923240938%"></div>
+<div class="time" style="width: 0.42462845010616%"></div>
 <pre>
     transitivity ((h ∘ (f ∘ f^-1)) x).</pre>
 </div>
@@ -445,13 +445,13 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 77
 Time: 0.001s">
-<div class="time" style="width: 0.21321961620469%"></div>
+<div class="time" style="width: 0.21231422505308%"></div>
 <pre> symmetry.</pre>
 </div>
 <div class="code" title="File: naturals.v
 Line: 77
 Time: 0.008s">
-<div class="time" style="width: 1.7057569296375%"></div>
+<div class="time" style="width: 1.6985138004246%"></div>
 <pre> apply (to_semiring_unique (h ∘ f)).</pre>
 </div>
 <div class="code" title="File: naturals.v
@@ -470,7 +470,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 78
 Time: 0.001s">
-<div class="time" style="width: 0.21321961620469%"></div>
+<div class="time" style="width: 0.21231422505308%"></div>
 <pre> apply ap, eisretr.</pre>
 </div>
 <div class="code" title="File: naturals.v
@@ -499,7 +499,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 83
 Time: 0.001s">
-<div class="time" style="width: 0.21321961620469%"></div>
+<div class="time" style="width: 0.21231422505308%"></div>
 <pre>Lemma retract_is_nat : Naturals SR (U:=retract_is_nat_to_sr).</pre>
 </div>
 <div class="code" title="File: naturals.v
@@ -512,7 +512,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 84
 Time: 0.011s">
-<div class="time" style="width: 2.3454157782516%"></div>
+<div class="time" style="width: 2.3354564755839%"></div>
 <pre>
   split;try apply _.</pre>
 </div>
@@ -531,8 +531,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: naturals.v
 Line: 86
-Time: 0.025s">
-<div class="time" style="width: 5.3304904051173%"></div>
+Time: 0.024s">
+<div class="time" style="width: 5.0955414012739%"></div>
 <pre> apply _.</pre>
 </div>
 <div class="code" title="File: naturals.v
@@ -545,7 +545,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 87
 Time: 0.001s">
-<div class="time" style="width: 0.21321961620469%"></div>
+<div class="time" style="width: 0.21231422505308%"></div>
 <pre> intros;apply same_morphism;apply _.</pre>
 </div>
 <div class="code" title="File: naturals.v
@@ -558,7 +558,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 88
 Time: 0.002s">
-<div class="time" style="width: 0.42643923240938%"></div>
+<div class="time" style="width: 0.42462845010616%"></div>
 <pre>End retract_is_nat.</pre>
 </div>
 <div class="code" title="File: naturals.v
@@ -572,7 +572,7 @@ Section nat_to_nat_iso.</pre>
 <div class="code" title="File: naturals.v
 Line: 90
 Time: 0.002s">
-<div class="time" style="width: 0.42643923240938%"></div>
+<div class="time" style="width: 0.42462845010616%"></div>
 <pre>
 
 Context `{Naturals N1} `{Naturals N2}.</pre>
@@ -580,7 +580,7 @@ Context `{Naturals N1} `{Naturals N2}.</pre>
 <div class="code" title="File: naturals.v
 Line: 92
 Time: 0.004s">
-<div class="time" style="width: 0.85287846481876%"></div>
+<div class="time" style="width: 0.84925690021231%"></div>
 <pre>
 
 Global Instance nat_to_nat_equiv : IsEquiv (naturals_to_semiring N1 N2).</pre>
@@ -595,7 +595,7 @@ Proof.</pre>
 <div class="code" title="File: naturals.v
 Line: 95
 Time: 0.008s">
-<div class="time" style="width: 1.7057569296375%"></div>
+<div class="time" style="width: 1.6985138004246%"></div>
 <pre>
 apply Equivalences.isequiv_adjointify with (naturals_to_semiring N2 N1);
 red;apply (to_semiring_involutive _ _).</pre>
@@ -612,7 +612,7 @@ Defined.
 <div class="code" title="File: naturals.v
 Line: 99
 Time: 0.001s">
-<div class="time" style="width: 0.21321961620469%"></div>
+<div class="time" style="width: 0.21231422505308%"></div>
 <pre>End nat_to_nat_iso.</pre>
 </div>
 <div class="code" title="File: naturals.v
@@ -641,13 +641,13 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 104
 Time: 0.001s">
-<div class="time" style="width: 0.21321961620469%"></div>
+<div class="time" style="width: 0.21231422505308%"></div>
 <pre>Context `{Funext} `{Univalence} {N : Type@{U} } `{Naturals@{U U U U U U U U} N}.</pre>
 </div>
 <div class="code" title="File: naturals.v
 Line: 104
 Time: 0.003s">
-<div class="time" style="width: 0.63965884861407%"></div>
+<div class="time" style="width: 0.63694267515924%"></div>
 <pre>
 
 Lemma from_nat_stmt  (N':Type@{U}) `{Naturals@{U U U U U U U U} N'}
@@ -663,8 +663,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: naturals.v
 Line: 109
-Time: 0.062s">
-<div class="time" style="width: 13.219616204691%"></div>
+Time: 0.059s">
+<div class="time" style="width: 12.526539278132%"></div>
 <pre>
 apply SemiRings.iso_leibnitz with (naturals_to_semiring N' N);apply _.</pre>
 </div>
@@ -703,7 +703,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 117
 Time: 0.002s">
-<div class="time" style="width: 0.42643923240938%"></div>
+<div class="time" style="width: 0.42462845010616%"></div>
 <pre>
   pose (Q := fun s : SemiRings.Operations =&gt;
     forall P : s -&gt; Type, P 0 -&gt; (forall n, P n -&gt; P (1 + n)) -&gt; forall n, P n).</pre>
@@ -718,7 +718,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 120
 Time: 0.002s">
-<div class="time" style="width: 0.42643923240938%"></div>
+<div class="time" style="width: 0.42462845010616%"></div>
 <pre>
   apply (from_nat_stmt nat).</pre>
 </div>
@@ -754,8 +754,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: naturals.v
 Line: 127
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.21231422505308%"></div>
 <pre>Lemma case : forall x : N, x = 0 |_| exists y : N, (x = 1 + y)%mc.</pre>
 </div>
 <div class="code" title="File: naturals.v
@@ -768,7 +768,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 128
 Time: 0.005s">
-<div class="time" style="width: 1.0660980810235%"></div>
+<div class="time" style="width: 1.0615711252654%"></div>
 <pre>
   refine (from_nat_stmt nat
     (fun s =&gt; forall x : s, x = 0 |_| exists y : s, (x = 1 + y)%mc) _).</pre>
@@ -783,7 +783,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 131
 Time: 0.003s">
-<div class="time" style="width: 0.63965884861407%"></div>
+<div class="time" style="width: 0.63694267515924%"></div>
 <pre> intros [|x];eauto.</pre>
 </div>
 <div class="code" title="File: naturals.v
@@ -860,7 +860,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 142
 Time: 0.003s">
-<div class="time" style="width: 0.63965884861407%"></div>
+<div class="time" style="width: 0.63694267515924%"></div>
 <pre>
   refine (from_nat_stmt@{i U}
     nat (fun s =&gt; forall z : s, LeftCancellation plus z) _).</pre>
@@ -909,7 +909,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 149
 Time: 0.018s">
-<div class="time" style="width: 3.8379530916844%"></div>
+<div class="time" style="width: 3.8216560509554%"></div>
 <pre> apply (right_cancel_from_left (+)).</pre>
 </div>
 <div class="code" title="File: naturals.v
@@ -935,8 +935,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: naturals.v
 Line: 152
-Time: 0.005s">
-<div class="time" style="width: 1.0660980810235%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.84925690021231%"></div>
 <pre>
   refine (from_nat_stmt nat (fun s =&gt;
     forall z : s, PropHolds (~ z = 0) -&gt; LeftCancellation mult z) _).</pre>
@@ -985,7 +985,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 159
 Time: 0.009s">
-<div class="time" style="width: 1.9189765458422%"></div>
+<div class="time" style="width: 1.9108280254777%"></div>
 <pre> apply (right_cancel_from_left (.*.)).</pre>
 </div>
 <div class="code" title="File: naturals.v
@@ -1012,7 +1012,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 162
 Time: 0.004s">
-<div class="time" style="width: 0.85287846481876%"></div>
+<div class="time" style="width: 0.84925690021231%"></div>
 <pre>
   refine (from_nat_stmt nat (fun s =&gt; PropHolds (~ (1:s) = 0)) _).</pre>
 </div>
@@ -1035,7 +1035,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 167
 Time: 0.001s">
-<div class="time" style="width: 0.21321961620469%"></div>
+<div class="time" style="width: 0.21231422505308%"></div>
 <pre>Instance nat_nontrivial_apart `{Apart N} `{!TrivialApart N} :
     PropHolds ((1:N) ≶ 0).</pre>
 </div>
@@ -1082,7 +1082,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 172
 Time: 0.006s">
-<div class="time" style="width: 1.2793176972281%"></div>
+<div class="time" style="width: 1.2738853503185%"></div>
 <pre>
   refine (from_nat_stmt nat
     (fun s =&gt; forall x y : s, x + y = 0 -&gt; x = 0 /\ y = 0) _).</pre>
@@ -1112,7 +1112,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 178
 Time: 0.001s">
-<div class="time" style="width: 0.21321961620469%"></div>
+<div class="time" style="width: 0.21231422505308%"></div>
 <pre>Lemma one_sum : forall (x y : N), x + y = 1 -&gt; (x = 1 /\ y = 0) |_| (x = 0 /\ y = 1).</pre>
 </div>
 <div class="code" title="File: naturals.v
@@ -1125,7 +1125,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 179
 Time: 0.007s">
-<div class="time" style="width: 1.4925373134328%"></div>
+<div class="time" style="width: 1.4861995753716%"></div>
 <pre>
   refine (from_nat_stmt nat (fun s =&gt;
     forall (x y : s), x + y = 1 -&gt; (x = 1 /\ y = 0) |_| (x = 0 /\ y = 1)) _).</pre>
@@ -1140,7 +1140,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 182
 Time: 0.006s">
-<div class="time" style="width: 1.2793176972281%"></div>
+<div class="time" style="width: 1.2738853503185%"></div>
 <pre>
   intros [|x] [|y];auto.</pre>
 </div>
@@ -1160,7 +1160,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 184
 Time: 0.001s">
-<div class="time" style="width: 0.21321961620469%"></div>
+<div class="time" style="width: 0.21231422505308%"></div>
 <pre> rewrite add_S_l,add_0_r in E.</pre>
 </div>
 <div class="code" title="File: naturals.v
@@ -1179,7 +1179,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 185
 Time: 0.001s">
-<div class="time" style="width: 0.21321961620469%"></div>
+<div class="time" style="width: 0.21231422505308%"></div>
 <pre>
     auto.</pre>
 </div>
@@ -1199,7 +1199,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 187
 Time: 0.001s">
-<div class="time" style="width: 0.21321961620469%"></div>
+<div class="time" style="width: 0.21231422505308%"></div>
 <pre>
     rewrite add_S_l,add_S_r in E.</pre>
 </div>
@@ -1213,7 +1213,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 189
 Time: 0.001s">
-<div class="time" style="width: 0.21321961620469%"></div>
+<div class="time" style="width: 0.21231422505308%"></div>
 <pre> destruct (S_neq_0 _ E).</pre>
 </div>
 <div class="code" title="File: naturals.v
@@ -1240,8 +1240,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: naturals.v
 Line: 193
-Time: 0.003s">
-<div class="time" style="width: 0.63965884861407%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.84925690021231%"></div>
 <pre>
   refine (from_nat_stmt nat (fun s =&gt; ZeroProduct s) _).</pre>
 </div>
@@ -1280,7 +1280,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 196
 Time: 0.001s">
-<div class="time" style="width: 0.21321961620469%"></div>
+<div class="time" style="width: 0.21231422505308%"></div>
 <pre>
 
 Lemma nat_1_plus_ne_0 x : 1 + x &lt;&gt; 0.</pre>
@@ -1341,8 +1341,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: naturals.v
 Line: 203
-Time: 0.021s">
-<div class="time" style="width: 4.4776119402985%"></div>
+Time: 0.022s">
+<div class="time" style="width: 4.6709129511677%"></div>
 <pre>
 apply decidablepaths_equiv with nat (naturals_to_semiring nat N);apply _.</pre>
 </div>
@@ -1364,14 +1364,14 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 206
 Time: 0.003s">
-<div class="time" style="width: 0.63965884861407%"></div>
+<div class="time" style="width: 0.63694267515924%"></div>
 <pre>
   Context `{Ring R} `{!SemiRingPreserving (f : N -&gt; R)} `{!Injective f}.</pre>
 </div>
 <div class="code" title="File: naturals.v
 Line: 207
 Time: 0.001s">
-<div class="time" style="width: 0.21321961620469%"></div>
+<div class="time" style="width: 0.21231422505308%"></div>
 <pre>
 
   Lemma to_ring_zero_sum x y :
@@ -1399,8 +1399,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: naturals.v
 Line: 212
-Time: 0.006s">
-<div class="time" style="width: 1.2793176972281%"></div>
+Time: 0.007s">
+<div class="time" style="width: 1.4861995753716%"></div>
 <pre>
   rewrite rings.preserves_0, rings.preserves_plus, &lt;-E.</pre>
 </div>
@@ -1444,7 +1444,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 220
 Time: 0.001s">
-<div class="time" style="width: 0.21321961620469%"></div>
+<div class="time" style="width: 0.21231422505308%"></div>
 <pre> destruct (to_ring_zero_sum x y E) as [E2 E3].</pre>
 </div>
 <div class="code" title="File: naturals.v
@@ -1476,7 +1476,7 @@ Time: 0s">
 <div class="code" title="File: naturals.v
 Line: 222
 Time: 0.022s">
-<div class="time" style="width: 4.6908315565032%"></div>
+<div class="time" style="width: 4.6709129511677%"></div>
 <pre>
 End contents.</pre>
 </div>

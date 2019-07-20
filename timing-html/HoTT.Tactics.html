@@ -38,7 +38,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Tactics.v
 Line: 2
-Time: 0.026s">
+Time: 0.028s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.Basics Types.Prod Types.Forall Types.Paths.</pre>
 </div>
@@ -100,7 +100,7 @@ Time: 0s">
 <div class="code" title="File: Tactics.v
 Line: 33
 Time: 0.002s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>Lemma path_forall_1_beta `{Funext} A B x P f g e Px
 : @transport (forall a : A, B a) (fun f =&gt; P (f x)) f g (@path_forall _ _ _ _ _ e) Px
   = @transport (B x) P (f x) (g x) (e x) Px.</pre>
@@ -115,7 +115,7 @@ Proof.</pre>
 <div class="code" title="File: Tactics.v
 Line: 36
 Time: 0.006s">
-<div class="time" style="width: 23.076923076923%"></div>
+<div class="time" style="width: 21.428571428571%"></div>
 <pre>
   path_forall_beta_t.</pre>
 </div>
@@ -131,7 +131,7 @@ Defined.
 <div class="code" title="File: Tactics.v
 Line: 40
 Time: 0.004s">
-<div class="time" style="width: 15.384615384615%"></div>
+<div class="time" style="width: 14.285714285714%"></div>
 <pre>Lemma path_forall_recr_beta' `{Funext} A B x0 P f g e Px
 : @transport (forall a : A, B a)
              (fun f =&gt; P f (f x0))
@@ -155,8 +155,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Tactics.v
 Line: 53
-Time: 0.008s">
-<div class="time" style="width: 30.769230769231%"></div>
+Time: 0.009s">
+<div class="time" style="width: 32.142857142857%"></div>
 <pre>
   path_forall_beta_t.</pre>
 </div>
@@ -172,7 +172,7 @@ Defined.
 <div class="code" title="File: Tactics.v
 Line: 57
 Time: 0.002s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>Lemma path_forall_recr_beta `{Funext} A B x0 P f g e Px
 : @transport (forall a : A, B a)
              (fun f =&gt; P f (f x0))
@@ -202,7 +202,7 @@ Proof.</pre>
 <div class="code" title="File: Tactics.v
 Line: 75
 Time: 0.001s">
-<div class="time" style="width: 3.8461538461538%"></div>
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
   etransitivity.</pre>
 </div>
@@ -215,8 +215,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Tactics.v
 Line: 77
-Time: 0.001s">
-<div class="time" style="width: 3.8461538461538%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply path_forall_recr_beta'.</pre>
 </div>
 <div class="code" title="File: Tactics.v
@@ -326,7 +326,7 @@ Time: 0s">
 <div class="code" title="File: Tactics.v
 Line: 133
 Time: 0.004s">
-<div class="time" style="width: 15.384615384615%"></div>
+<div class="time" style="width: 14.285714285714%"></div>
 <pre>Lemma path_forall_2_beta' `{Funext} A B x0 x1 P f g e Px
 : @transport (forall a : A, B a) (fun f =&gt; P (f x0) (f x1)) f g (@path_forall _ _ _ _ _ e) Px
   = @transport (B x0 * B x1)%type (fun x =&gt; P (fst x) (snd x)) (f x0, f x1) (g x0, g x1) (path_prod' (e x0) (e x1)) Px.</pre>
@@ -340,15 +340,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Tactics.v
 Line: 136
-Time: 0.015s">
-<div class="time" style="width: 57.692307692308%"></div>
+Time: 0.017s">
+<div class="time" style="width: 60.714285714286%"></div>
 <pre>
   transport_path_forall_hammer.</pre>
 </div>
 <div class="code" title="File: Tactics.v
 Line: 137
 Time: 0.004s">
-<div class="time" style="width: 15.384615384615%"></div>
+<div class="time" style="width: 14.285714285714%"></div>
 <pre>
   repeat match goal with
            | [ |- context[e ?x] ] =&gt; induction (e x)
@@ -373,8 +373,8 @@ Qed.
 </div>
 <div class="code" title="File: Tactics.v
 Line: 144
-Time: 0.003s">
-<div class="time" style="width: 11.538461538462%"></div>
+Time: 0.002s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>Lemma path_forall_2_beta `{Funext} A B x0 x1 P f g e Px
 : @transport (forall a : A, B a) (fun f =&gt; P (f x0) (f x1)) f g (@path_forall _ _ _ _ _ e) Px
   = transport (fun y : B x1 =&gt; P (g x0) y) (e x1)
@@ -389,8 +389,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Tactics.v
 Line: 148
-Time: 0.016s">
-<div class="time" style="width: 61.538461538462%"></div>
+Time: 0.015s">
+<div class="time" style="width: 53.571428571429%"></div>
 <pre>
   transport_path_forall_hammer.</pre>
 </div>
@@ -544,7 +544,7 @@ Time: 0s">
 <div class="code" title="File: Tactics.v
 Line: 206
 Time: 0.002s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>Definition match_eta {T} {x y : T} (H0 : x = y)
 : (H0 = match H0 in (_ = y) return (x = y) with
           | idpath =&gt; idpath
@@ -554,7 +554,7 @@ Time: 0.002s">
 <div class="code" title="File: Tactics.v
 Line: 210
 Time: 0.002s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>
 
 Definition match_eta1 {T} {x : T} (E : x = x)
@@ -566,8 +566,8 @@ Definition match_eta1 {T} {x : T} (E : x = x)
 </div>
 <div class="code" title="File: Tactics.v
 Line: 217
-Time: 0.001s">
-<div class="time" style="width: 3.8461538461538%"></div>
+Time: 0.002s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>
 
 Definition match_eta2 {T} {x : T} (E : x = x)
@@ -1190,8 +1190,8 @@ Ltac destruct_head T := destruct_all_matches ltac:(destruct_head_matcher T).</pr
 </div>
 <div class="code" title="File: Tactics.v
 Line: 377
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.005s">
+<div class="time" style="width: 17.857142857143%"></div>
 <pre>
 Ltac destruct_head' T := destruct_all_matches' ltac:(destruct_head_matcher T).</pre>
 </div>

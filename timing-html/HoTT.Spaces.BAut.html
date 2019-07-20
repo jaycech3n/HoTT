@@ -36,35 +36,35 @@ Time: 0s">
 </div>
 <div class="code" title="File: BAut.v
 Line: 1
-Time: 0.041s">
-<div class="time" style="width: 3.8425492033739%"></div>
+Time: 0.045s">
+<div class="time" style="width: 4.2372881355932%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 1
-Time: 0.182s">
-<div class="time" style="width: 17.057169634489%"></div>
+Time: 0.188s">
+<div class="time" style="width: 17.702448210923%"></div>
 <pre>
 Require Import Constant Factorization UnivalenceImpliesFunext.</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 2
 Time: 0.003s">
-<div class="time" style="width: 0.28116213683224%"></div>
+<div class="time" style="width: 0.28248587570621%"></div>
 <pre>
 Require Import Modalities.Modality HIT.Truncations HIT.Connectedness.</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 3
 Time: 0.007s">
-<div class="time" style="width: 0.65604498594189%"></div>
+<div class="time" style="width: 0.65913370998117%"></div>
 <pre>
 Require Export Algebra.ooGroup Algebra.Aut.</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 4
 Time: 0.004s">
-<div class="time" style="width: 0.37488284910965%"></div>
+<div class="time" style="width: 0.37664783427495%"></div>
 <pre>
 Import TrM.</pre>
 </div>
@@ -93,7 +93,7 @@ Time: 0s">
 <div class="code" title="File: BAut.v
 Line: 14
 Time: 0.002s">
-<div class="time" style="width: 0.18744142455483%"></div>
+<div class="time" style="width: 0.18832391713748%"></div>
 <pre>Definition BAut_pr1 X : BAut X -&gt; Type := pr1.</pre>
 </div>
 <div class="code" title="File: BAut.v
@@ -106,7 +106,7 @@ Coercion BAut_pr1 : BAut &gt;-&gt; Sortclass.</pre>
 <div class="code" title="File: BAut.v
 Line: 15
 Time: 0.023s">
-<div class="time" style="width: 2.1555763823805%"></div>
+<div class="time" style="width: 2.165725047081%"></div>
 <pre>
 
 Definition path_baut `{Univalence} {X} (Z Z' : BAut X)
@@ -116,7 +116,7 @@ Definition path_baut `{Univalence} {X} (Z Z' : BAut X)
 <div class="code" title="File: BAut.v
 Line: 19
 Time: 0.026s">
-<div class="time" style="width: 2.4367385192127%"></div>
+<div class="time" style="width: 2.4482109227872%"></div>
 <pre>
 
 Definition ap_pr1_path_baut `{Univalence} {X}
@@ -133,14 +133,14 @@ Proof.</pre>
 <div class="code" title="File: BAut.v
 Line: 24
 Time: 0.001s">
-<div class="time" style="width: 0.093720712277413%"></div>
+<div class="time" style="width: 0.094161958568738%"></div>
 <pre>
   unfold path_baut, BAut_pr1; simpl.</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 25
 Time: 0.007s">
-<div class="time" style="width: 0.65604498594189%"></div>
+<div class="time" style="width: 0.65913370998117%"></div>
 <pre>
   apply ap_pr1_path_sigma_hprop.</pre>
 </div>
@@ -155,8 +155,8 @@ Defined.
 </div>
 <div class="code" title="File: BAut.v
 Line: 28
-Time: 0.005s">
-<div class="time" style="width: 0.46860356138707%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.56497175141243%"></div>
 <pre>Definition transport_path_baut `{Univalence} {X}
            {Z Z' : BAut X} (f : Z &lt;~&gt; Z') (z : Z)
 : transport (fun (W:BAut X) =&gt; W) (path_baut Z Z' f) z = f z.</pre>
@@ -171,21 +171,21 @@ Proof.</pre>
 <div class="code" title="File: BAut.v
 Line: 31
 Time: 0.001s">
-<div class="time" style="width: 0.093720712277413%"></div>
+<div class="time" style="width: 0.094161958568738%"></div>
 <pre>
   refine (transport_compose idmap (BAut_pr1 X) _ _ @ _).</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 32
 Time: 0.021s">
-<div class="time" style="width: 1.9681349578257%"></div>
+<div class="time" style="width: 1.9774011299435%"></div>
 <pre>
   refine (_ @ transport_path_universe f z).</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 33
 Time: 0.002s">
-<div class="time" style="width: 0.18744142455483%"></div>
+<div class="time" style="width: 0.18832391713748%"></div>
 <pre>
   apply ap10, ap, ap_pr1_path_baut.</pre>
 </div>
@@ -202,8 +202,8 @@ Defined.
 </div>
 <div class="code" title="File: BAut.v
 Line: 39
-Time: 0.001s">
-<div class="time" style="width: 0.093720712277413%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Global Instance trunc_baut `{Univalence} {n X} `{IsTrunc n.+1 X}
 : IsTrunc n.+2 (BAut X).</pre>
 </div>
@@ -217,42 +217,42 @@ Proof.</pre>
 <div class="code" title="File: BAut.v
 Line: 41
 Time: 0.009s">
-<div class="time" style="width: 0.84348641049672%"></div>
+<div class="time" style="width: 0.84745762711864%"></div>
 <pre>
   intros [Z p] [W q].</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 42
-Time: 0.126s">
-<div class="time" style="width: 11.808809746954%"></div>
+Time: 0.123s">
+<div class="time" style="width: 11.581920903955%"></div>
 <pre>
   strip_truncations.</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 43
-Time: 0.038s">
-<div class="time" style="width: 3.5613870665417%"></div>
+Time: 0.039s">
+<div class="time" style="width: 3.6723163841808%"></div>
 <pre>
   refine (@trunc_equiv' _ _ (path_baut _ _) n.+1 _); simpl.</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 44
 Time: 0.001s">
-<div class="time" style="width: 0.093720712277413%"></div>
+<div class="time" style="width: 0.094161958568738%"></div>
 <pre>
   symmetry in q; destruct q.</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 45
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.094161958568738%"></div>
 <pre>
   symmetry in p; destruct p.</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 46
 Time: 0.007s">
-<div class="time" style="width: 0.65604498594189%"></div>
+<div class="time" style="width: 0.65913370998117%"></div>
 <pre>
   exact _.</pre>
 </div>
@@ -268,7 +268,7 @@ Defined.
 <div class="code" title="File: BAut.v
 Line: 50
 Time: 0.002s">
-<div class="time" style="width: 0.18744142455483%"></div>
+<div class="time" style="width: 0.18832391713748%"></div>
 <pre>Definition merely_path_baut `{Univalence} {X} (Z Z' : BAut X)
 : merely (Z = Z')
 := merely_path_is0connected (BAut X) Z Z'.</pre>
@@ -308,7 +308,7 @@ Time: 0s">
 <div class="code" title="File: BAut.v
 Line: 66
 Time: 0.001s">
-<div class="time" style="width: 0.093720712277413%"></div>
+<div class="time" style="width: 0.094161958568738%"></div>
 <pre>Global Instance trunc_el_baut `{Funext} {n X} `{IsTrunc n X} (Z : BAut X)
 : IsTrunc n Z.</pre>
 </div>
@@ -322,21 +322,21 @@ Proof.</pre>
 <div class="code" title="File: BAut.v
 Line: 68
 Time: 0.002s">
-<div class="time" style="width: 0.18744142455483%"></div>
+<div class="time" style="width: 0.18832391713748%"></div>
 <pre>
   destruct Z as [Z p].</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 69
 Time: 0.043s">
-<div class="time" style="width: 4.0299906279288%"></div>
+<div class="time" style="width: 4.0489642184557%"></div>
 <pre>
   strip_truncations.</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 70
 Time: 0.001s">
-<div class="time" style="width: 0.093720712277413%"></div>
+<div class="time" style="width: 0.094161958568738%"></div>
 <pre>
   destruct p; exact _.</pre>
 </div>
@@ -356,7 +356,7 @@ Defined.
 <div class="code" title="File: BAut.v
 Line: 77
 Time: 0.008s">
-<div class="time" style="width: 0.74976569821931%"></div>
+<div class="time" style="width: 0.75329566854991%"></div>
 <pre>Definition baut_prod_r (X A : Type)
   : BAut X -&gt; BAut (X * A)
   := fun Z:BAut X =&gt;
@@ -366,7 +366,7 @@ Time: 0.008s">
 <div class="code" title="File: BAut.v
 Line: 81
 Time: 0.006s">
-<div class="time" style="width: 0.56232427366448%"></div>
+<div class="time" style="width: 0.56497175141243%"></div>
 <pre>
 
 Definition ap_baut_prod_r `{Univalence} (X A : Type)
@@ -384,49 +384,49 @@ Proof.</pre>
 <div class="code" title="File: BAut.v
 Line: 87
 Time: 0.002s">
-<div class="time" style="width: 0.18744142455483%"></div>
+<div class="time" style="width: 0.18832391713748%"></div>
 <pre>
   cbn.</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 88
 Time: 0.033s">
-<div class="time" style="width: 3.0927835051546%"></div>
+<div class="time" style="width: 3.1073446327684%"></div>
 <pre>
   apply moveL_equiv_M; cbn; unfold pr1_path.</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 89
 Time: 0.012s">
-<div class="time" style="width: 1.124648547329%"></div>
+<div class="time" style="width: 1.1299435028249%"></div>
 <pre>
   rewrite &lt;- (ap_compose (baut_prod_r X A) pr1 (path_sigma_hprop Z W _)).</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 90
 Time: 0.022s">
-<div class="time" style="width: 2.0618556701031%"></div>
+<div class="time" style="width: 2.0715630885122%"></div>
 <pre>
   rewrite &lt;- ((ap_compose pr1 (fun Z =&gt; Z * A) (path_sigma_hprop Z W _))^).</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 91
 Time: 0.005s">
-<div class="time" style="width: 0.46860356138707%"></div>
+<div class="time" style="width: 0.47080979284369%"></div>
 <pre>
   rewrite ap_pr1_path_sigma_hprop.</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 92
-Time: 0.097s">
-<div class="time" style="width: 9.0909090909091%"></div>
+Time: 0.092s">
+<div class="time" style="width: 8.6629001883239%"></div>
 <pre>
   apply moveL_equiv_M; cbn.</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 93
 Time: 0.005s">
-<div class="time" style="width: 0.46860356138707%"></div>
+<div class="time" style="width: 0.47080979284369%"></div>
 <pre>
   apply ap_prod_r_path_universe.</pre>
 </div>
@@ -444,7 +444,7 @@ Qed.
 <div class="code" title="File: BAut.v
 Line: 99
 Time: 0.014s">
-<div class="time" style="width: 1.3120899718838%"></div>
+<div class="time" style="width: 1.3182674199623%"></div>
 <pre>Lemma baut_ind_hset `{Univalence} X
       (** It ought to be possible to allow more generally [P : BAut X -&gt; Type], but the proof would get more complicated, and this version suffices for present applications. *)
       (P : Type -&gt; Type) `{forall (Z : BAut X), IsHSet (P Z)}
@@ -462,7 +462,7 @@ Proof.</pre>
 <div class="code" title="File: BAut.v
 Line: 105
 Time: 0.001s">
-<div class="time" style="width: 0.093720712277413%"></div>
+<div class="time" style="width: 0.094161958568738%"></div>
 <pre>
   refine (equiv_sigT_ind _ oE _).</pre>
 </div>
@@ -477,7 +477,7 @@ Time: 0s">
 <div class="code" title="File: BAut.v
 Line: 108
 Time: 0.073s">
-<div class="time" style="width: 6.8416119962512%"></div>
+<div class="time" style="width: 6.8738229755179%"></div>
 <pre>refine ((equiv_functor_forall'
              (P := fun Z =&gt; { f : (Z=X) -&gt; P Z &amp; WeaklyConstant f })
              1
@@ -499,7 +499,7 @@ Time: 0s">
 <div class="code" title="File: BAut.v
 Line: 112
 Time: 0.001s">
-<div class="time" style="width: 0.093720712277413%"></div>
+<div class="time" style="width: 0.094161958568738%"></div>
 <pre> change (IsHSet (P (BAut_pr1 X (Z ; tr p)))).</pre>
 </div>
 <div class="code" title="File: BAut.v
@@ -538,7 +538,7 @@ Time: 0s">
 <div class="code" title="File: BAut.v
 Line: 115
 Time: 0.003s">
-<div class="time" style="width: 0.28116213683224%"></div>
+<div class="time" style="width: 0.28248587570621%"></div>
 <pre>
   refine (equiv_functor_sigma'
            (P := fun k : forall xy, P xy.1 =&gt; forall Z p q, k (Z;p) = k (Z;q))
@@ -548,7 +548,7 @@ Time: 0.003s">
 <div class="code" title="File: BAut.v
 Line: 119
 Time: 0.003s">
-<div class="time" style="width: 0.28116213683224%"></div>
+<div class="time" style="width: 0.28248587570621%"></div>
 <pre>
   refine (equiv_functor_sigma'
             (equiv_idmap (forall Zp : {Z:Type &amp; Z=X}, P Zp.1))
@@ -557,8 +557,8 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: BAut.v
 Line: 123
-Time: 0.021s">
-<div class="time" style="width: 1.9681349578257%"></div>
+Time: 0.023s">
+<div class="time" style="width: 2.165725047081%"></div>
 <pre>
   refine (equiv_functor_sigma'
            (equiv_idmap (forall Zp : {Z:Type &amp; Z=X}, P Zp.1))
@@ -568,7 +568,7 @@ Time: 0.021s">
 <div class="code" title="File: BAut.v
 Line: 127
 Time: 0.021s">
-<div class="time" style="width: 1.9681349578257%"></div>
+<div class="time" style="width: 1.9774011299435%"></div>
 <pre>
   refine (equiv_functor_sigma'
             (P := fun (e : P X) =&gt; forall q:X=X, transport P q^ e = e)
@@ -585,8 +585,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: BAut.v
 Line: 133
-Time: 0.016s">
-<div class="time" style="width: 1.4995313964386%"></div>
+Time: 0.015s">
+<div class="time" style="width: 1.4124293785311%"></div>
 <pre> intros g; simpl.</pre>
 </div>
 <div class="code" title="File: BAut.v
@@ -606,7 +606,7 @@ Time: 0s">
 <div class="code" title="File: BAut.v
 Line: 135
 Time: 0.001s">
-<div class="time" style="width: 0.093720712277413%"></div>
+<div class="time" style="width: 0.094161958568738%"></div>
 <pre>
     refine (transport_compose P pr1 (path_contr (X;1) (X;g)) f @ _).</pre>
 </div>
@@ -620,7 +620,7 @@ Time: 0s">
 <div class="code" title="File: BAut.v
 Line: 137
 Time: 0.001s">
-<div class="time" style="width: 0.093720712277413%"></div>
+<div class="time" style="width: 0.094161958568738%"></div>
 <pre>
     refine (ap_pr1_path_contr_basedpaths' _ _ @ concat_1p g^).</pre>
 </div>
@@ -639,15 +639,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: BAut.v
 Line: 139
-Time: 0.001s">
-<div class="time" style="width: 0.093720712277413%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   refine (equiv_functor_forall' (equiv_path_universe X X)^-1 _).</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 140
 Time: 0.001s">
-<div class="time" style="width: 0.093720712277413%"></div>
+<div class="time" style="width: 0.094161958568738%"></div>
 <pre>
   intros g; simpl.</pre>
 </div>
@@ -674,8 +674,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: BAut.v
 Line: 144
-Time: 0.002s">
-<div class="time" style="width: 0.18744142455483%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.094161958568738%"></div>
 <pre>
   symmetry; apply (eissect (equiv_path X X)).</pre>
 </div>
@@ -693,7 +693,7 @@ Defined.
 <div class="code" title="File: BAut.v
 Line: 149
 Time: 0.002s">
-<div class="time" style="width: 0.18744142455483%"></div>
+<div class="time" style="width: 0.18832391713748%"></div>
 <pre>Definition center_baut `{Univalence} X `{IsHSet X}
 : { f : X &lt;~&gt; X &amp; forall g:X&lt;~&gt;X, g o f == f o g }
   &lt;~&gt; (forall Z:BAut X, Z = Z).</pre>
@@ -708,7 +708,7 @@ Proof.</pre>
 <div class="code" title="File: BAut.v
 Line: 152
 Time: 0.012s">
-<div class="time" style="width: 1.124648547329%"></div>
+<div class="time" style="width: 1.1299435028249%"></div>
 <pre>
   refine (equiv_functor_forall'
             (P := fun Z =&gt; Z.1 = Z.1)
@@ -718,14 +718,14 @@ Time: 0.012s">
 <div class="code" title="File: BAut.v
 Line: 156
 Time: 0.124s">
-<div class="time" style="width: 11.621368322399%"></div>
+<div class="time" style="width: 11.676082862524%"></div>
 <pre>
   refine (baut_ind_hset X (fun Z =&gt; Z = Z) oE _).</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 157
 Time: 0.001s">
-<div class="time" style="width: 0.093720712277413%"></div>
+<div class="time" style="width: 0.094161958568738%"></div>
 <pre>
   simpl.</pre>
 </div>
@@ -739,7 +739,7 @@ Time: 0s">
 <div class="code" title="File: BAut.v
 Line: 159
 Time: 0.001s">
-<div class="time" style="width: 0.093720712277413%"></div>
+<div class="time" style="width: 0.094161958568738%"></div>
 <pre>
   refine (equiv_functor_forall' 1 _); intros g; simpl.</pre>
 </div>
@@ -753,7 +753,7 @@ Time: 0s">
 <div class="code" title="File: BAut.v
 Line: 161
 Time: 0.001s">
-<div class="time" style="width: 0.093720712277413%"></div>
+<div class="time" style="width: 0.094161958568738%"></div>
 <pre>
   refine (_ oE equiv_path_equiv (g oE f) (f oE g)).</pre>
 </div>
@@ -766,8 +766,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: BAut.v
 Line: 163
-Time: 0.02s">
-<div class="time" style="width: 1.8744142455483%"></div>
+Time: 0.019s">
+<div class="time" style="width: 1.789077212806%"></div>
 <pre> equiv_intro (equiv_path X X) g.</pre>
 </div>
 <div class="code" title="File: BAut.v
@@ -780,41 +780,41 @@ Time: 0s">
 <div class="code" title="File: BAut.v
 Line: 164
 Time: 0.015s">
-<div class="time" style="width: 1.4058106841612%"></div>
+<div class="time" style="width: 1.4124293785311%"></div>
 <pre> equiv_intro (equiv_path X X) f.</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 164
 Time: 0.001s">
-<div class="time" style="width: 0.093720712277413%"></div>
+<div class="time" style="width: 0.094161958568738%"></div>
 <pre>
   refine (_ oE equiv_concat_l (equiv_path_pp _ _) _).</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 165
 Time: 0.001s">
-<div class="time" style="width: 0.093720712277413%"></div>
+<div class="time" style="width: 0.094161958568738%"></div>
 <pre>
   refine (_ oE equiv_concat_r (equiv_path_pp _ _)^ _).</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 166
-Time: 0.016s">
-<div class="time" style="width: 1.4995313964386%"></div>
+Time: 0.015s">
+<div class="time" style="width: 1.4124293785311%"></div>
 <pre>
   refine (_ oE (equiv_ap (equiv_path X X) _ _)^-1).</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 167
 Time: 0.001s">
-<div class="time" style="width: 0.093720712277413%"></div>
+<div class="time" style="width: 0.094161958568738%"></div>
 <pre>
   refine (equiv_concat_l (transport_paths_lr _ _) _ oE _).</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 168
-Time: 0.001s">
-<div class="time" style="width: 0.093720712277413%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   refine (equiv_concat_l (concat_pp_p _ _ _) _ oE _).</pre>
 </div>
@@ -842,7 +842,7 @@ Time: 0s">
 <div class="code" title="File: BAut.v
 Line: 172
 Time: 0.001s">
-<div class="time" style="width: 0.093720712277413%"></div>
+<div class="time" style="width: 0.094161958568738%"></div>
 <pre> apply concat2; apply eissect.</pre>
 </div>
 <div class="code" title="File: BAut.v
@@ -855,7 +855,7 @@ Time: 0s">
 <div class="code" title="File: BAut.v
 Line: 173
 Time: 0.002s">
-<div class="time" style="width: 0.18744142455483%"></div>
+<div class="time" style="width: 0.18832391713748%"></div>
 <pre> symmetry; apply concat2; apply eissect.</pre>
 </div>
 <div class="code" title="File: BAut.v
@@ -870,7 +870,7 @@ Defined.
 <div class="code" title="File: BAut.v
 Line: 176
 Time: 0.004s">
-<div class="time" style="width: 0.37488284910965%"></div>
+<div class="time" style="width: 0.37664783427495%"></div>
 <pre>Definition id_center_baut `{Univalence} X `{IsHSet X}
 : center_baut X (existT
                    (fun (f:X&lt;~&gt;X) =&gt; forall (g:X&lt;~&gt;X), g o f == f o g)
@@ -894,22 +894,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: BAut.v
 Line: 183
-Time: 0.139s">
-<div class="time" style="width: 13.02717900656%"></div>
+Time: 0.14s">
+<div class="time" style="width: 13.182674199623%"></div>
 <pre>
   assert (IsHSet (Z.1 = Z.1)) by exact _.</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 184
-Time: 0.222s">
-<div class="time" style="width: 20.805998125586%"></div>
+Time: 0.223s">
+<div class="time" style="width: 20.998116760829%"></div>
 <pre>
   baut_reduce.</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 185
-Time: 0.213s">
-<div class="time" style="width: 19.962511715089%"></div>
+Time: 0.212s">
+<div class="time" style="width: 19.962335216573%"></div>
 <pre>
   exact (ap (path_sigma_hprop _ _) path_universe_1
             @ path_sigma_hprop_1 _).</pre>
@@ -948,7 +948,7 @@ Time: 0s">
 <div class="code" title="File: BAut.v
 Line: 194
 Time: 0.001s">
-<div class="time" style="width: 0.093720712277413%"></div>
+<div class="time" style="width: 0.094161958568738%"></div>
 <pre>
 
   Definition center2_baut `{Univalence} X `{IsTrunc 1 X}
@@ -965,7 +965,7 @@ Time: 0s">
 <div class="code" title="File: BAut.v
 Line: 199
 Time: 0.027s">
-<div class="time" style="width: 2.5304592314902%"></div>
+<div class="time" style="width: 2.5423728813559%"></div>
 <pre>
     refine ((equiv_functor_forall'
                (P := fun Z =&gt; idpath Z.1 = idpath Z.1)
@@ -982,8 +982,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: BAut.v
 Line: 205
-Time: 0.005s">
-<div class="time" style="width: 0.46860356138707%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.37664783427495%"></div>
 <pre> symmetry; apply path_sigma_hprop_1.</pre>
 </div>
 <div class="code" title="File: BAut.v
@@ -1001,8 +1001,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: BAut.v
 Line: 206
-Time: 0.003s">
-<div class="time" style="width: 0.28116213683224%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.18832391713748%"></div>
 <pre> apply path_sigma_hprop_1.</pre>
 </div>
 <div class="code" title="File: BAut.v
@@ -1013,15 +1013,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: BAut.v
 Line: 206
-Time: 0.205s">
-<div class="time" style="width: 19.21274601687%"></div>
+Time: 0.208s">
+<div class="time" style="width: 19.585687382298%"></div>
 <pre>
     assert (forall Z:BAut X, IsHSet (idpath Z.1 = idpath Z.1)) by exact _.</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 207
-Time: 0.006s">
-<div class="time" style="width: 0.56232427366448%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.47080979284369%"></div>
 <pre>
     refine (baut_ind_hset X (fun Z =&gt; idpath Z = idpath Z) oE _).</pre>
 </div>
@@ -1042,13 +1042,13 @@ Time: 0s">
 <div class="code" title="File: BAut.v
 Line: 210
 Time: 0.006s">
-<div class="time" style="width: 0.56232427366448%"></div>
+<div class="time" style="width: 0.56497175141243%"></div>
 <pre> refine (_ oE equiv_path2_universe 1 1).</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 210
 Time: 0.001s">
-<div class="time" style="width: 0.093720712277413%"></div>
+<div class="time" style="width: 0.094161958568738%"></div>
 <pre>
       apply equiv_concat_lr.</pre>
 </div>
@@ -1062,7 +1062,7 @@ Time: 0s">
 <div class="code" title="File: BAut.v
 Line: 212
 Time: 0.006s">
-<div class="time" style="width: 0.56232427366448%"></div>
+<div class="time" style="width: 0.56497175141243%"></div>
 <pre> symmetry; apply path_universe_1.</pre>
 </div>
 <div class="code" title="File: BAut.v
@@ -1094,28 +1094,28 @@ Time: 0s">
 <div class="code" title="File: BAut.v
 Line: 214
 Time: 0.005s">
-<div class="time" style="width: 0.46860356138707%"></div>
+<div class="time" style="width: 0.47080979284369%"></div>
 <pre>
     refine (equiv_functor_forall' 1 _); intros g.</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 215
 Time: 0.007s">
-<div class="time" style="width: 0.65604498594189%"></div>
+<div class="time" style="width: 0.65913370998117%"></div>
 <pre>
     refine (_ oE equiv_path3_universe _ _).</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 216
 Time: 0.003s">
-<div class="time" style="width: 0.28116213683224%"></div>
+<div class="time" style="width: 0.28248587570621%"></div>
 <pre>
     refine (dpath_paths2 (path_universe g) _ _ oE _).</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 217
 Time: 0.005s">
-<div class="time" style="width: 0.46860356138707%"></div>
+<div class="time" style="width: 0.47080979284369%"></div>
 <pre>
     cbn.</pre>
 </div>
@@ -1143,12 +1143,12 @@ Time: 0s">
 <div class="code" title="File: BAut.v
 Line: 221
 Time: 0.002s">
-<div class="time" style="width: 0.18744142455483%"></div>
+<div class="time" style="width: 0.18832391713748%"></div>
 <pre> refine (_ @ (path2_universe_postcompose_idmap f g)^).</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 221
-Time: 1.067s">
+Time: 1.062s">
 <div class="time" style="width: 100%"></div>
 <pre>
       abstract (rewrite !whiskerR_pp, !concat_pp_p; reflexivity).</pre>
@@ -1163,13 +1163,13 @@ Time: 0s">
 <div class="code" title="File: BAut.v
 Line: 223
 Time: 0.001s">
-<div class="time" style="width: 0.093720712277413%"></div>
+<div class="time" style="width: 0.094161958568738%"></div>
 <pre> refine (path2_universe_precompose_idmap f g @ _).</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 223
-Time: 1.059s">
-<div class="time" style="width: 99.250234301781%"></div>
+Time: 1.056s">
+<div class="time" style="width: 99.435028248588%"></div>
 <pre>
       abstract (rewrite !whiskerL_pp, !concat_pp_p; reflexivity).</pre>
 </div>
@@ -1186,7 +1186,7 @@ Time: 0s">
 <div class="code" title="File: BAut.v
 Line: 228
 Time: 0.003s">
-<div class="time" style="width: 0.28116213683224%"></div>
+<div class="time" style="width: 0.28248587570621%"></div>
 <pre>Definition id_center2_baut `{Univalence} X `{IsTrunc 1 X}
   : center2_baut X (existT
                       (fun (f:forall x:X, x=x) =&gt;
@@ -1211,22 +1211,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: BAut.v
 Line: 236
-Time: 0.203s">
-<div class="time" style="width: 19.025304592315%"></div>
+Time: 0.204s">
+<div class="time" style="width: 19.209039548023%"></div>
 <pre>
     assert (IsHSet (idpath Z.1 = idpath Z.1)) by exact _.</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 237
-Time: 0.295s">
-<div class="time" style="width: 27.647610121837%"></div>
+Time: 0.294s">
+<div class="time" style="width: 27.683615819209%"></div>
 <pre>
     baut_reduce.</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 238
-Time: 0.378s">
-<div class="time" style="width: 35.426429240862%"></div>
+Time: 0.375s">
+<div class="time" style="width: 35.310734463277%"></div>
 <pre>
     cbn.</pre>
 </div>
@@ -1239,34 +1239,34 @@ Time: 0s">
 <div class="code" title="File: BAut.v
 Line: 239
 Time: 0.001s">
-<div class="time" style="width: 0.093720712277413%"></div>
+<div class="time" style="width: 0.094161958568738%"></div>
 <pre> cbn.</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 239
-Time: 0.009s">
-<div class="time" style="width: 0.84348641049672%"></div>
+Time: 0.01s">
+<div class="time" style="width: 0.94161958568738%"></div>
 <pre>
     rewrite equiv_path2_universe_1.</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 240
-Time: 0.029s">
-<div class="time" style="width: 2.717900656045%"></div>
+Time: 0.03s">
+<div class="time" style="width: 2.8248587570621%"></div>
 <pre>
     rewrite !concat_p1, !concat_Vp.</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 241
 Time: 0.001s">
-<div class="time" style="width: 0.093720712277413%"></div>
+<div class="time" style="width: 0.094161958568738%"></div>
 <pre>
     simpl.</pre>
 </div>
 <div class="code" title="File: BAut.v
 Line: 242
-Time: 0.016s">
-<div class="time" style="width: 1.4995313964386%"></div>
+Time: 0.017s">
+<div class="time" style="width: 1.6007532956685%"></div>
 <pre>
     rewrite !concat_p1, !concat_Vp.</pre>
 </div>
@@ -1288,8 +1288,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: BAut.v
 Line: 246
-Time: 0.066s">
-<div class="time" style="width: 6.1855670103093%"></div>
+Time: 0.069s">
+<div class="time" style="width: 6.4971751412429%"></div>
 <pre>End Center2BAut.</pre>
 </div>
 <div class="code" title="File: BAut.v

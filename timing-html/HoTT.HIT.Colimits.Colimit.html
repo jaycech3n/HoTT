@@ -31,13 +31,13 @@ pre {
 <div class="code" title="File: Colimit.v
 Line: 1
 Time: 0.044s">
-<div class="time" style="width: 15.884476534296%"></div>
+<div class="time" style="width: 15.942028985507%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 1
 Time: 0.004s">
-<div class="time" style="width: 1.4440433212996%"></div>
+<div class="time" style="width: 1.4492753623188%"></div>
 <pre>
 Require Import Colimits.Diagram.</pre>
 </div>
@@ -72,7 +72,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 11
 Time: 0.004s">
-<div class="time" style="width: 1.4440433212996%"></div>
+<div class="time" style="width: 1.4492753623188%"></div>
 <pre>Record cocone {G: graph} (D: diagram G) (X: Type) :=
   {q : forall i, D i -&gt; X;
    qq : forall (i j: G) (g: G i j) (x: D i), q j (D _f g x) = q i x}.</pre>
@@ -136,7 +136,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 27
 Time: 0.009s">
-<div class="time" style="width: 3.2490974729242%"></div>
+<div class="time" style="width: 3.2608695652174%"></div>
 <pre>Definition path_cocone_naive {C1 C2: cocone D X}
              (P := fun q' =&gt; forall {i j:G} (g: G i j) (x: D i), q' j (D _f g x)
                                                          = q' i x)
@@ -153,7 +153,7 @@ Time: 0.009s">
 <div class="code" title="File: Colimit.v
 Line: 38
 Time: 0.003s">
-<div class="time" style="width: 1.0830324909747%"></div>
+<div class="time" style="width: 1.0869565217391%"></div>
 <pre>
 
   Definition path_cocone {C1 C2: cocone D X}
@@ -171,14 +171,14 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 44
 Time: 0.003s">
-<div class="time" style="width: 1.0830324909747%"></div>
+<div class="time" style="width: 1.0869565217391%"></div>
 <pre>
     destruct C1 as [q pp_q], C2 as [r pp_r].</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 45
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>
     refine (path_cocone_naive (path_forall _ _ (fun i =&gt; path_forall _ _ (eq1 i))) _).</pre>
 </div>
@@ -190,57 +190,57 @@ Time: 0s">
 </div>
 <div class="code" title="File: Colimit.v
 Line: 46
-Time: 0.003s">
-<div class="time" style="width: 1.0830324909747%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.4492753623188%"></div>
 <pre>
     funext i j f x.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 47
 Time: 0.018s">
-<div class="time" style="width: 6.4981949458484%"></div>
+<div class="time" style="width: 6.5217391304348%"></div>
 <pre>
     repeat rewrite transport_forall_constant.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 48
 Time: 0.004s">
-<div class="time" style="width: 1.4440433212996%"></div>
+<div class="time" style="width: 1.4492753623188%"></div>
 <pre>
     rewrite transport_paths_FlFr.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 49
 Time: 0.003s">
-<div class="time" style="width: 1.0830324909747%"></div>
+<div class="time" style="width: 1.0869565217391%"></div>
 <pre>
     rewrite concat_pp_p.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 50
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre> apply moveR_Vp.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 50
-Time: 0.014s">
-<div class="time" style="width: 5.0541516245487%"></div>
+Time: 0.013s">
+<div class="time" style="width: 4.7101449275362%"></div>
 <pre>
     rewrite !(ap_apply_lD2
                 (path_forall q r (fun i =&gt; path_forall (q i) (r i) (eq1 i)))).</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 52
-Time: 0.016s">
-<div class="time" style="width: 5.7761732851986%"></div>
+Time: 0.015s">
+<div class="time" style="width: 5.4347826086957%"></div>
 <pre>
     rewrite !eisretr.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 53
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre> apply eq2.</pre>
 </div>
 <div class="code" title="File: Colimit.v
@@ -297,8 +297,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Colimit.v
 Line: 63
-Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> exact (f o (C i)).</pre>
 </div>
 <div class="code" title="File: Colimit.v
@@ -316,8 +316,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Colimit.v
 Line: 64
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre> exact (ap f (qq _ i j g x)).</pre>
 </div>
 <div class="code" title="File: Colimit.v
@@ -337,15 +337,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Colimit.v
 Line: 73
-Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition is_universal (C: cocone D X)
     := forall (Y: Type), IsEquiv (@postcompose_cocone C Y).</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 74
 Time: 0.01s">
-<div class="time" style="width: 3.6101083032491%"></div>
+<div class="time" style="width: 3.6231884057971%"></div>
 <pre>
 
 End Cocone.</pre>
@@ -366,7 +366,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 82
 Time: 0.004s">
-<div class="time" style="width: 1.4440433212996%"></div>
+<div class="time" style="width: 1.4492753623188%"></div>
 <pre>Record is_colimit `(D: diagram G) (Q: Type) :=
   {is_colimit_C :&gt; cocone D Q;
    is_colimit_H : is_universal is_colimit_C}.</pre>
@@ -405,8 +405,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Colimit.v
 Line: 91
-Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.72463768115942%"></div>
 <pre>Definition postcompose_cocone_inv `{D: diagram G} `(H: is_colimit D Q)
            `(C': cocone D X) : Q -&gt; X
   := @equiv_inv _ _ _ (is_colimit_H H X) C'.</pre>
@@ -435,8 +435,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Colimit.v
 Line: 102
-Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Private Inductive colimit {G: graph} (D: diagram G) : Type:=
   | colim : forall i, D i -&gt; colimit D.</pre>
@@ -452,7 +452,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 106
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>
 
   Axiom colimp : forall {G: graph} {D: diagram G} (i j: G) (f : G i j) (x: D i),
@@ -461,7 +461,7 @@ Time: 0.001s">
 <div class="code" title="File: Colimit.v
 Line: 109
 Time: 0.004s">
-<div class="time" style="width: 1.4440433212996%"></div>
+<div class="time" style="width: 1.4492753623188%"></div>
 <pre>
 
   Definition colimit_ind {G: graph} {D: diagram G} (P: colimit D -&gt; Type)
@@ -473,7 +473,7 @@ Time: 0.004s">
 <div class="code" title="File: Colimit.v
 Line: 115
 Time: 0.006s">
-<div class="time" style="width: 2.1660649819495%"></div>
+<div class="time" style="width: 2.1739130434783%"></div>
 <pre>
 
   Axiom colimit_ind_beta_colimp
@@ -486,8 +486,8 @@ Time: 0.006s">
 </div>
 <div class="code" title="File: Colimit.v
 Line: 123
-Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Definition colimit_rec {G: graph} {D: diagram G} (P: Type) (C: cocone D P)
@@ -536,7 +536,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 130
 Time: 0.002s">
-<div class="time" style="width: 0.72202166064982%"></div>
+<div class="time" style="width: 0.72463768115942%"></div>
 <pre>
       exact ((transport_const (colimp i j g x) (q _ _ (D _f g x))) @ (qq _ i j g x)).</pre>
 </div>
@@ -552,7 +552,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 134
 Time: 0.002s">
-<div class="time" style="width: 0.72202166064982%"></div>
+<div class="time" style="width: 0.72463768115942%"></div>
 <pre>Definition colimit_rec_beta_colimp {G: graph} {D: diagram G} (P: Type) (C: cocone D P)
              (i j: G) (g: G i j) (x: D i)
     : ap (colimit_rec P C) (colimp i j g x) = qq C i j g x.</pre>
@@ -574,21 +574,21 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 138
 Time: 0.002s">
-<div class="time" style="width: 0.72202166064982%"></div>
+<div class="time" style="width: 0.72463768115942%"></div>
 <pre>
     eapply (cancelL (transport_const (colimp i j g x) _)).</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 139
 Time: 0.003s">
-<div class="time" style="width: 1.0830324909747%"></div>
+<div class="time" style="width: 1.0869565217391%"></div>
 <pre>
     simple refine ((apD_const (colimit_ind (fun _ =&gt; P) C _) (colimp i j g x))^ @ _).</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 140
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>
     simple refine (colimit_ind_beta_colimp (fun _ =&gt; P) C _ i j g x).</pre>
 </div>
@@ -618,7 +618,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 145
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>Definition cocone_colimit {G: graph} (D: diagram G) : cocone D (colimit D)
   := Build_cocone colim colimp.</pre>
 </div>
@@ -705,20 +705,20 @@ Time: 0s">
 </div>
 <div class="code" title="File: Colimit.v
 Line: 155
-Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 155
-Time: 0.14s">
-<div class="time" style="width: 50.541516245487%"></div>
+Time: 0.177s">
+<div class="time" style="width: 64.130434782609%"></div>
 <pre> hott_simpl.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 155
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>
       apply colimit_rec_beta_colimp.</pre>
 </div>
@@ -789,21 +789,21 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 160
 Time: 0.003s">
-<div class="time" style="width: 1.0830324909747%"></div>
+<div class="time" style="width: 1.0869565217391%"></div>
 <pre>
       rewrite transport_paths_FlFr.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 161
 Time: 0.004s">
-<div class="time" style="width: 1.4440433212996%"></div>
+<div class="time" style="width: 1.4492753623188%"></div>
 <pre>
       rewrite colimit_rec_beta_colimp.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 162
 Time: 0.128s">
-<div class="time" style="width: 46.209386281588%"></div>
+<div class="time" style="width: 46.376811594203%"></div>
 <pre> hott_simpl.</pre>
 </div>
 <div class="code" title="File: Colimit.v
@@ -818,7 +818,7 @@ Defined.
 <div class="code" title="File: Colimit.v
 Line: 164
 Time: 0.002s">
-<div class="time" style="width: 0.72202166064982%"></div>
+<div class="time" style="width: 0.72463768115942%"></div>
 <pre>Definition is_colimit_colimit `{Funext} {G: graph} (D: diagram G) : is_colimit D (colimit D)
   := Build_is_colimit _ (is_universal_colimit D).</pre>
 </div>
@@ -904,7 +904,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 183
 Time: 0.099s">
-<div class="time" style="width: 35.740072202166%"></div>
+<div class="time" style="width: 35.869565217391%"></div>
 <pre> intros i j g x; simpl; hott_simpl.</pre>
 </div>
 <div class="code" title="File: Colimit.v
@@ -919,7 +919,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 186
 Time: 0.002s">
-<div class="time" style="width: 0.72202166064982%"></div>
+<div class="time" style="width: 0.72463768115942%"></div>
 <pre>Definition postcompose_cocone_comp {D: diagram G}
              `(f: X -&gt; Y) `(g: Y -&gt; Z) (C: cocone D X)
     : postcompose_cocone C (g o f)
@@ -961,8 +961,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Colimit.v
 Line: 193
-Time: 0.143s">
-<div class="time" style="width: 51.624548736462%"></div>
+Time: 0.146s">
+<div class="time" style="width: 52.898550724638%"></div>
 <pre> intros i j h x; simpl; hott_simpl.</pre>
 </div>
 <div class="code" title="File: Colimit.v
@@ -986,8 +986,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Colimit.v
 Line: 200
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>Definition precompose_cocone {D1 D2: diagram G}
              (m: diagram_map D1 D2) {X: Type}
     : (cocone D2 X) -&gt; (cocone D1 X).</pre>
@@ -1047,7 +1047,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 206
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>
       etransitivity.</pre>
 </div>
@@ -1067,7 +1067,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 208
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre> symmetry.</pre>
 </div>
 <div class="code" title="File: Colimit.v
@@ -1154,8 +1154,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Colimit.v
 Line: 218
-Time: 0.104s">
-<div class="time" style="width: 37.545126353791%"></div>
+Time: 0.099s">
+<div class="time" style="width: 35.869565217391%"></div>
 <pre> hott_simpl.</pre>
 </div>
 <div class="code" title="File: Colimit.v
@@ -1170,7 +1170,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 221
 Time: 0.002s">
-<div class="time" style="width: 0.72202166064982%"></div>
+<div class="time" style="width: 0.72463768115942%"></div>
 <pre>Definition precompose_cocone_comp {D1 D2 D3: diagram G}
              (m2: diagram_map D2 D3) (m1: diagram_map D1 D2) (X: Type)
     : (precompose_cocone (X:=X) m1) o (precompose_cocone m2)
@@ -1232,26 +1232,26 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 229
 Time: 0.002s">
-<div class="time" style="width: 0.72202166064982%"></div>
+<div class="time" style="width: 0.72463768115942%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 229
-Time: 0.277s">
+Time: 0.276s">
 <div class="time" style="width: 100%"></div>
 <pre> hott_simpl.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 229
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>
       apply ap10.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 230
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre> apply ap.</pre>
 </div>
 <div class="code" title="File: Colimit.v
@@ -1263,26 +1263,26 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 230
 Time: 0.004s">
-<div class="time" style="width: 1.4440433212996%"></div>
+<div class="time" style="width: 1.4492753623188%"></div>
 <pre>
       rewrite inv_pp.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 231
 Time: 0.004s">
-<div class="time" style="width: 1.4440433212996%"></div>
+<div class="time" style="width: 1.4492753623188%"></div>
 <pre> rewrite ap_pp.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 231
 Time: 0.004s">
-<div class="time" style="width: 1.4440433212996%"></div>
+<div class="time" style="width: 1.4492753623188%"></div>
 <pre> rewrite ap_compose.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 231
 Time: 0.005s">
-<div class="time" style="width: 1.8050541516245%"></div>
+<div class="time" style="width: 1.8115942028986%"></div>
 <pre> by rewrite ap_V.</pre>
 </div>
 <div class="code" title="File: Colimit.v
@@ -1299,7 +1299,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 236
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>Definition precompose_postcompose_cocone {D1 D2: diagram G}
              (m: diagram_map D1 D2) `(f: X -&gt; Y) (C: cocone D2 X)
     : postcompose_cocone (precompose_cocone m C) f
@@ -1341,14 +1341,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Colimit.v
 Line: 243
-Time: 0.218s">
-<div class="time" style="width: 78.70036101083%"></div>
+Time: 0.226s">
+<div class="time" style="width: 81.884057971014%"></div>
 <pre> intros i j g x; simpl; hott_simpl.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 243
 Time: 0.008s">
-<div class="time" style="width: 2.8880866425993%"></div>
+<div class="time" style="width: 2.8985507246377%"></div>
 <pre>
       etransitivity.</pre>
 </div>
@@ -1375,19 +1375,19 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 246
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre> apply ap10.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 246
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre> apply ap.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 246
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>
         symmetry.</pre>
 </div>
@@ -1411,7 +1411,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 252
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>Definition precompose_cocone_equiv {D1 D2: diagram G} (m: D1 ~d~ D2) (X: Type)
     : IsEquiv (precompose_cocone (X:=X) m).</pre>
 </div>
@@ -1446,7 +1446,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 257
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre> etransitivity.</pre>
 </div>
 <div class="code" title="File: Colimit.v
@@ -1472,7 +1472,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 259
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre> rewrite diagram_inv_is_retraction.</pre>
 </div>
 <div class="code" title="File: Colimit.v
@@ -1497,7 +1497,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 260
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre> etransitivity.</pre>
 </div>
 <div class="code" title="File: Colimit.v
@@ -1523,7 +1523,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 262
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre> rewrite diagram_inv_is_section.</pre>
 </div>
 <div class="code" title="File: Colimit.v
@@ -1546,7 +1546,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 267
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>Definition postcompose_cocone_equiv {D: diagram G} `(f: X &lt;~&gt; Y)
     : IsEquiv (fun C: cocone D X =&gt; postcompose_cocone C f).</pre>
 </div>
@@ -1559,8 +1559,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Colimit.v
 Line: 269
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>
     serapply isequiv_adjointify.</pre>
 </div>
@@ -1574,7 +1574,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 271
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre> exact (fun C =&gt; postcompose_cocone C f^-1).</pre>
 </div>
 <div class="code" title="File: Colimit.v
@@ -1593,7 +1593,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 272
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre> etransitivity.</pre>
 </div>
 <div class="code" title="File: Colimit.v
@@ -1624,8 +1624,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Colimit.v
 Line: 274
-Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> etransitivity.</pre>
 </div>
 <div class="code" title="File: Colimit.v
@@ -1642,8 +1642,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Colimit.v
 Line: 274
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>
         funext x; apply eisretr.</pre>
 </div>
@@ -1663,7 +1663,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 276
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre> etransitivity.</pre>
 </div>
 <div class="code" title="File: Colimit.v
@@ -1695,7 +1695,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 278
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre> etransitivity.</pre>
 </div>
 <div class="code" title="File: Colimit.v
@@ -1712,8 +1712,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Colimit.v
 Line: 278
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>
         funext x; apply eissect.</pre>
 </div>
@@ -1733,7 +1733,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 286
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>Definition precompose_equiv_universality {D1 D2: diagram G} (m: D1 ~d~ D2)
              `(C: cocone D2 X)
     : is_universal C -&gt; is_universal (precompose_cocone (X:=X) m C).</pre>
@@ -1762,14 +1762,14 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 291
 Time: 0.003s">
-<div class="time" style="width: 1.0830324909747%"></div>
+<div class="time" style="width: 1.0869565217391%"></div>
 <pre>
     rewrite (path_forall _ _ (fun f =&gt; precompose_postcompose_cocone m f C)).</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 292
-Time: 0.005s">
-<div class="time" style="width: 1.8050541516245%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.4492753623188%"></div>
 <pre>
     simple refine isequiv_compose.</pre>
 </div>
@@ -1791,7 +1791,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 296
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>Definition postcompose_equiv_universality {D: diagram G} `(f: X &lt;~&gt; Y)
              `(C: cocone D X)
     : is_universal C -&gt; is_universal (postcompose_cocone C f).</pre>
@@ -1820,14 +1820,14 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 301
 Time: 0.003s">
-<div class="time" style="width: 1.0830324909747%"></div>
+<div class="time" style="width: 1.0869565217391%"></div>
 <pre>
     rewrite &lt;- (path_forall _ _ (fun g =&gt; postcompose_cocone_comp f g C)).</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 302
 Time: 0.009s">
-<div class="time" style="width: 3.2490974729242%"></div>
+<div class="time" style="width: 3.2608695652174%"></div>
 <pre>
     simple refine isequiv_compose.</pre>
 </div>
@@ -1845,7 +1845,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 308
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>Definition precompose_equiv_is_colimit {D1 D2: diagram G}
              (m: D1 ~d~ D2) {Q: Type}
     : is_colimit D2 Q -&gt; is_colimit D1 Q.</pre>
@@ -1895,7 +1895,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 316
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>Definition postcompose_equiv_is_colimit {D: diagram G} `(f: Q &lt;~&gt; Q')
     : is_colimit D Q -&gt; is_colimit D Q'.</pre>
 </div>
@@ -1915,8 +1915,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Colimit.v
 Line: 319
-Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> simple refine (Build_is_colimit (postcompose_cocone HQ f) _).</pre>
 </div>
 <div class="code" title="File: Colimit.v
@@ -1941,8 +1941,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Colimit.v
 Line: 321
-Time: 0.032s">
-<div class="time" style="width: 11.552346570397%"></div>
+Time: 0.029s">
+<div class="time" style="width: 10.507246376812%"></div>
 <pre>End FunctorialityCocone.</pre>
 </div>
 <div class="code" title="File: Colimit.v
@@ -1982,7 +1982,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 330
 Time: 0.002s">
-<div class="time" style="width: 0.72202166064982%"></div>
+<div class="time" style="width: 0.72463768115942%"></div>
 <pre>Definition functoriality_colimit {D1 D2: diagram G}
              (m: diagram_map D1 D2)
              `(HQ1: is_colimit D1 Q1) `(HQ2: is_colimit D2 Q2)
@@ -2001,8 +2001,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Colimit.v
 Line: 338
-Time: 0.002s">
-<div class="time" style="width: 0.72202166064982%"></div>
+Time: 0.003s">
+<div class="time" style="width: 1.0869565217391%"></div>
 <pre>Definition functoriality_colimit_commute {D1 D2: diagram G}
              (m: diagram_map D1 D2)
              `(HQ1: is_colimit D1 Q1) `(HQ2: is_colimit D2 Q2)
@@ -2026,7 +2026,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 344
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>
     exact (eisretr (postcompose_cocone HQ1) _)^.</pre>
 </div>
@@ -2046,14 +2046,14 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 352
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>Context {D1 D2: diagram G} (m: D1 ~d~ D2)
           `(HQ1: is_colimit D1 Q1) `(HQ2: is_colimit D2 Q2).</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 353
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>
 
   Definition functoriality_colimit_eissect
@@ -2082,8 +2082,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Colimit.v
 Line: 359
-Time: 0.015s">
-<div class="time" style="width: 5.4151624548736%"></div>
+Time: 0.017s">
+<div class="time" style="width: 6.1594202898551%"></div>
 <pre>
     simple refine (equiv_inj (postcompose_cocone HQ2) _).</pre>
 </div>
@@ -2110,19 +2110,19 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 362
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre> etransitivity.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 362
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre> 2:symmetry; apply postcompose_cocone_identity.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 362
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>
       etransitivity.</pre>
 </div>
@@ -2135,8 +2135,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Colimit.v
 Line: 364
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre> apply postcompose_cocone_comp.</pre>
 </div>
 <div class="code" title="File: Colimit.v
@@ -2154,34 +2154,34 @@ Time: 0s">
 </div>
 <div class="code" title="File: Colimit.v
 Line: 365
-Time: 0.002s">
-<div class="time" style="width: 0.72202166064982%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre> rewrite eisretr.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 365
 Time: 0.002s">
-<div class="time" style="width: 0.72202166064982%"></div>
+<div class="time" style="width: 0.72463768115942%"></div>
 <pre>
         rewrite precompose_postcompose_cocone.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 366
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre> rewrite eisretr.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 366
 Time: 0.002s">
-<div class="time" style="width: 0.72202166064982%"></div>
+<div class="time" style="width: 0.72463768115942%"></div>
 <pre>
         rewrite precompose_cocone_comp.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 367
-Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.72463768115942%"></div>
 <pre> rewrite diagram_inv_is_section.</pre>
 </div>
 <div class="code" title="File: Colimit.v
@@ -2202,8 +2202,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Colimit.v
 Line: 371
-Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.72463768115942%"></div>
 <pre>Definition functoriality_colimit_eisretr
     : Sect (functoriality_colimit m HQ1 HQ2)
            (functoriality_colimit (diagram_equiv_inv m) HQ2 HQ1).</pre>
@@ -2231,7 +2231,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 375
 Time: 0.009s">
-<div class="time" style="width: 3.2490974729242%"></div>
+<div class="time" style="width: 3.2608695652174%"></div>
 <pre>
     simple refine (equiv_inj (postcompose_cocone HQ1) _).</pre>
 </div>
@@ -2258,19 +2258,19 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 378
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre> etransitivity.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 378
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre> 2:symmetry; apply postcompose_cocone_identity.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 378
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>
       etransitivity.</pre>
 </div>
@@ -2303,33 +2303,33 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 381
 Time: 0.002s">
-<div class="time" style="width: 0.72202166064982%"></div>
+<div class="time" style="width: 0.72463768115942%"></div>
 <pre> rewrite eisretr.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 381
 Time: 0.002s">
-<div class="time" style="width: 0.72202166064982%"></div>
+<div class="time" style="width: 0.72463768115942%"></div>
 <pre>
         rewrite precompose_postcompose_cocone.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 382
-Time: 0.002s">
-<div class="time" style="width: 0.72202166064982%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre> rewrite eisretr.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 382
-Time: 0.003s">
-<div class="time" style="width: 1.0830324909747%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.72463768115942%"></div>
 <pre>
         rewrite precompose_cocone_comp.</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 383
-Time: 0.002s">
-<div class="time" style="width: 0.72202166064982%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre> rewrite diagram_inv_is_retraction.</pre>
 </div>
 <div class="code" title="File: Colimit.v
@@ -2351,7 +2351,7 @@ Time: 0s">
 <div class="code" title="File: Colimit.v
 Line: 387
 Time: 0.003s">
-<div class="time" style="width: 1.0830324909747%"></div>
+<div class="time" style="width: 1.0869565217391%"></div>
 <pre>Definition functoriality_colimit_isequiv
     : IsEquiv (functoriality_colimit m HQ1 HQ2)
     := isequiv_adjointify _ _ functoriality_colimit_eissect
@@ -2360,7 +2360,7 @@ Time: 0.003s">
 <div class="code" title="File: Colimit.v
 Line: 390
 Time: 0.002s">
-<div class="time" style="width: 0.72202166064982%"></div>
+<div class="time" style="width: 0.72463768115942%"></div>
 <pre>
 
   Definition functoriality_colimit_equiv
@@ -2370,7 +2370,7 @@ Time: 0.002s">
 <div class="code" title="File: Colimit.v
 Line: 394
 Time: 0.006s">
-<div class="time" style="width: 2.1660649819495%"></div>
+<div class="time" style="width: 2.1739130434783%"></div>
 <pre>
 End FunctorialityColimit.</pre>
 </div>
@@ -2389,8 +2389,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Colimit.v
 Line: 401
-Time: 0.003s">
-<div class="time" style="width: 1.0830324909747%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>Theorem colimit_unicity `{Funext} {G: graph} {D: diagram G} {Q1 Q2: Type}
         (HQ1: is_colimit D Q1) (HQ2: is_colimit D Q2)
   : Q1 &lt;~&gt; Q2.</pre>
@@ -2405,14 +2405,14 @@ Proof.</pre>
 <div class="code" title="File: Colimit.v
 Line: 404
 Time: 0.001s">
-<div class="time" style="width: 0.36101083032491%"></div>
+<div class="time" style="width: 0.36231884057971%"></div>
 <pre>
   simple refine (functoriality_colimit_equiv _ HQ1 HQ2).</pre>
 </div>
 <div class="code" title="File: Colimit.v
 Line: 405
-Time: 0.013s">
-<div class="time" style="width: 4.6931407942238%"></div>
+Time: 0.015s">
+<div class="time" style="width: 5.4347826086957%"></div>
 <pre>
   simple refine (Build_diagram_equiv (diagram_idmap D) _).</pre>
 </div>

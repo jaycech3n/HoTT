@@ -39,28 +39,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nullification.v
 Line: 3
-Time: 0.039s">
-<div class="time" style="width: 24.074074074074%"></div>
+Time: 0.056s">
+<div class="time" style="width: 33.734939759036%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Nullification.v
 Line: 3
 Time: 0.008s">
-<div class="time" style="width: 4.9382716049383%"></div>
+<div class="time" style="width: 4.8192771084337%"></div>
 <pre>
 Require Import Extensions.</pre>
 </div>
 <div class="code" title="File: Nullification.v
 Line: 4
-Time: 0.021s">
-<div class="time" style="width: 12.962962962963%"></div>
+Time: 0.022s">
+<div class="time" style="width: 13.253012048193%"></div>
 <pre>
 Require Import Modality Accessible.</pre>
 </div>
 <div class="code" title="File: Nullification.v
 Line: 5
-Time: 0.016s">
-<div class="time" style="width: 9.8765432098765%"></div>
+Time: 0.017s">
+<div class="time" style="width: 10.240963855422%"></div>
 <pre>
 Require Export Localization.</pre>
 </div>
@@ -92,8 +92,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nullification.v
 Line: 12
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.60240963855422%"></div>
 <pre>Definition extendable_over_unit (n : nat)
   (A : Type@{a}) (C : Unit -&gt; Type@{i}) (D : forall u, C u -&gt; Type@{j})
   (ext : ExtendableAlong@{a a i k} n (@const A Unit tt) C)
@@ -111,7 +111,7 @@ Proof.</pre>
 <div class="code" title="File: Nullification.v
 Line: 18
 Time: 0.002s">
-<div class="time" style="width: 1.2345679012346%"></div>
+<div class="time" style="width: 1.2048192771084%"></div>
 <pre>
   generalize dependent C; simple_induction n n IH;
     intros C D ext ext'; [exact tt | split].</pre>
@@ -132,7 +132,7 @@ Time: 0s">
 <div class="code" title="File: Nullification.v
 Line: 21
 Time: 0.003s">
-<div class="time" style="width: 1.8518518518519%"></div>
+<div class="time" style="width: 1.8072289156627%"></div>
 <pre>
     exists ((fst (ext' (fst ext g).1)
                  (fun a =&gt; ((fst ext g).2 a)^ # (g' a))).1);
@@ -140,15 +140,15 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: Nullification.v
 Line: 24
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.60240963855422%"></div>
 <pre>
     apply moveR_transport_p.</pre>
 </div>
 <div class="code" title="File: Nullification.v
 Line: 25
 Time: 0.002s">
-<div class="time" style="width: 1.2345679012346%"></div>
+<div class="time" style="width: 1.2048192771084%"></div>
 <pre>
     exact ((fst (ext' (fst ext g).1)
                 (fun a =&gt; ((fst ext g).2 a)^ # (g' a))).2 a).</pre>
@@ -192,7 +192,7 @@ Defined.
 <div class="code" title="File: Nullification.v
 Line: 32
 Time: 0.002s">
-<div class="time" style="width: 1.2345679012346%"></div>
+<div class="time" style="width: 1.2048192771084%"></div>
 <pre>Definition ooextendable_over_unit@{i j k l m}
   (A : Type@{i}) (C : Unit -&gt; Type@{j}) (D : forall u, C u -&gt; Type@{k})
   (ext : ooExtendableAlong@{l l j m} (@const@{l l} A Unit tt) C)
@@ -211,8 +211,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nullification.v
 Line: 40
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.60240963855422%"></div>
 <pre>Record Nullification_Modality := Nul { unNul : NullGenerators }.</pre>
 </div>
 <div class="code" title="File: Nullification.v
@@ -274,15 +274,15 @@ Time: 0s">
 <div class="code" title="File: Nullification.v
 Line: 54
 Time: 0.001s">
-<div class="time" style="width: 0.61728395061728%"></div>
+<div class="time" style="width: 0.60240963855422%"></div>
 <pre>
 
   Module LocRSU := ReflectiveSubuniverses_Restriction Localization_ReflectiveSubuniverses LocRSU_Data.</pre>
 </div>
 <div class="code" title="File: Nullification.v
 Line: 56
-Time: 0.067s">
-<div class="time" style="width: 41.358024691358%"></div>
+Time: 0.072s">
+<div class="time" style="width: 43.373493975904%"></div>
 <pre>
 
   Module LocRSUTh := ReflectiveSubuniverses_Theory LocRSU.</pre>
@@ -366,8 +366,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nullification.v
 Line: 75
-Time: 0.022s">
-<div class="time" style="width: 13.58024691358%"></div>
+Time: 0.021s">
+<div class="time" style="width: 12.650602409639%"></div>
 <pre>
     refine (ooextendable_postcompose
               (fun (_:Unit) =&gt; B (c tt)) _ _
@@ -375,8 +375,8 @@ Time: 0.022s">
 </div>
 <div class="code" title="File: Nullification.v
 Line: 78
-Time: 0.011s">
-<div class="time" style="width: 6.7901234567901%"></div>
+Time: 0.012s">
+<div class="time" style="width: 7.2289156626506%"></div>
 <pre>
     refine (ooextendable_islocal _ i).</pre>
 </div>
@@ -399,7 +399,7 @@ Time: 0s">
 <div class="code" title="File: Nullification.v
 Line: 83
 Time: 0.002s">
-<div class="time" style="width: 1.2345679012346%"></div>
+<div class="time" style="width: 1.2048192771084%"></div>
 <pre>Definition O_ind_beta_internal (O : Modality@{u a}) (A : Type@{i})
              (B : O_reflector@{u a i} O A -&gt; Type@{j})
              (B_inO : forall oa : O_reflector O A, In@{u a j} O (B oa))
@@ -442,8 +442,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nullification.v
 Line: 96
-Time: 0.013s">
-<div class="time" style="width: 8.0246913580247%"></div>
+Time: 0.014s">
+<div class="time" style="width: 8.433734939759%"></div>
 <pre>End Nullification_Modalities.</pre>
 </div>
 <div class="code" title="File: Nullification.v
@@ -456,8 +456,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nullification.v
 Line: 98
-Time: 0.153s">
-<div class="time" style="width: 94.444444444444%"></div>
+Time: 0.148s">
+<div class="time" style="width: 89.156626506024%"></div>
 <pre>Module Import NulM := Modalities_Theory Nullification_Modalities.</pre>
 </div>
 <div class="code" title="File: Nullification.v
@@ -516,14 +516,14 @@ Time: 0s">
 <div class="code" title="File: Nullification.v
 Line: 109
 Time: 0.003s">
-<div class="time" style="width: 1.8518518518519%"></div>
+<div class="time" style="width: 1.8072289156627%"></div>
 <pre>Module Accessible_Nullification
   &lt;: Accessible_Modalities Nullification_Modalities.</pre>
 </div>
 <div class="code" title="File: Nullification.v
 Line: 110
-Time: 0.101s">
-<div class="time" style="width: 62.345679012346%"></div>
+Time: 0.097s">
+<div class="time" style="width: 58.433734939759%"></div>
 <pre>
 
   Module Import Os_Theory := Modalities_Theory Nullification_Modalities.</pre>
@@ -540,7 +540,7 @@ Time: 0s">
 <div class="code" title="File: Nullification.v
 Line: 115
 Time: 0.001s">
-<div class="time" style="width: 0.61728395061728%"></div>
+<div class="time" style="width: 0.60240963855422%"></div>
 <pre>
 
   Definition inO_iff_isnull (O : Modality@{u a}) (X : Type@{i})
@@ -549,15 +549,15 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Nullification.v
 Line: 119
-Time: 0.06s">
-<div class="time" style="width: 37.037037037037%"></div>
+Time: 0.057s">
+<div class="time" style="width: 34.33734939759%"></div>
 <pre>
 
 End Accessible_Nullification.</pre>
 </div>
 <div class="code" title="File: Nullification.v
 Line: 121
-Time: 0.162s">
+Time: 0.166s">
 <div class="time" style="width: 100%"></div>
 <pre>
 
@@ -575,8 +575,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nullification.v
 Line: 126
-Time: 0.019s">
-<div class="time" style="width: 11.728395061728%"></div>
+Time: 0.024s">
+<div class="time" style="width: 14.457831325301%"></div>
 <pre>Module Nudge_Modalities
        (Os : Modalities)
        (Acc : Accessible_Modalities Os).</pre>
@@ -622,7 +622,7 @@ Time: 0s">
 <div class="code" title="File: Nullification.v
 Line: 136
 Time: 0.002s">
-<div class="time" style="width: 1.2345679012346%"></div>
+<div class="time" style="width: 1.2048192771084%"></div>
 <pre>
 
   Module Nudged &lt;: Modalities

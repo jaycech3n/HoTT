@@ -37,13 +37,13 @@ Time: 0s">
 <div class="code" title="File: Core.v
 Line: 1
 Time: 0.006s">
-<div class="time" style="width: 14.634146341463%"></div>
+<div class="time" style="width: 15.384615384615%"></div>
 <pre>Require Import Category.Core.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 1
-Time: 0.036s">
-<div class="time" style="width: 87.80487804878%"></div>
+Time: 0.035s">
+<div class="time" style="width: 89.74358974359%"></div>
 <pre>
 Require Import HProp HSet Types.Sigma Types.Record Trunc.</pre>
 </div>
@@ -191,8 +191,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 64
-Time: 0.008s">
-<div class="time" style="width: 19.512195121951%"></div>
+Time: 0.007s">
+<div class="time" style="width: 17.948717948718%"></div>
 <pre>Record NotionOfStructure (X : PreCategory) :=
   {
     structure :&gt; X -&gt; Type;
@@ -302,7 +302,7 @@ Time: 0s">
 <div class="code" title="File: Core.v
 Line: 118
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.5641025641026%"></div>
 <pre>Global Instance preorder_is_structure_homomorphism
        X (P : NotionOfStructure X) x
 : PreOrder (is_structure_homomorphism P x x (identity x)).</pre>
@@ -317,7 +317,7 @@ Proof.</pre>
 <div class="code" title="File: Core.v
 Line: 121
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.5641025641026%"></div>
 <pre>
   split; repeat intro; eauto with structure_homomorphisms.</pre>
 </div>
@@ -330,8 +330,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 123
-Time: 0.002s">
-<div class="time" style="width: 4.8780487804878%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.5641025641026%"></div>
 <pre>
   eauto with structure_homomorphisms.</pre>
 </div>
@@ -354,7 +354,7 @@ Defined.
 <div class="code" title="File: Core.v
 Line: 133
 Time: 0.003s">
-<div class="time" style="width: 7.3170731707317%"></div>
+<div class="time" style="width: 7.6923076923077%"></div>
 <pre>Class IsStandardNotionOfStructure X (P : NotionOfStructure X) :=
   antisymmetry_structure : forall x (a b : P x),
                              a &lt;= b -&gt; b &lt;= a -&gt; a = b.</pre>
@@ -388,7 +388,7 @@ Proof.</pre>
 <div class="code" title="File: Core.v
 Line: 142
 Time: 0.013s">
-<div class="time" style="width: 31.707317073171%"></div>
+<div class="time" style="width: 33.333333333333%"></div>
 <pre>
   eapply (@isset_hrel_subpaths
             _ (fun a b =&gt; (a &lt;= b) * (b &lt;= a)));
@@ -403,8 +403,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 146
-Time: 0.004s">
-<div class="time" style="width: 9.7560975609756%"></div>
+Time: 0.003s">
+<div class="time" style="width: 7.6923076923077%"></div>
 <pre> repeat intro; split; apply reflexivity.</pre>
 </div>
 <div class="code" title="File: Core.v
@@ -513,8 +513,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 189
-Time: 0.004s">
-<div class="time" style="width: 9.7560975609756%"></div>
+Time: 0.003s">
+<div class="time" style="width: 7.6923076923077%"></div>
 <pre>Record morphism (xa yb : object) :=
       { f : Category.Core.morphism X xa.1 yb.1;
         h : is_structure_homomorphism _ _ _ f xa.2 yb.2 }.</pre>
@@ -522,7 +522,7 @@ Time: 0.004s">
 <div class="code" title="File: Core.v
 Line: 191
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.5641025641026%"></div>
 <pre>
 
     Lemma issig_morphism (xa yb : object)
@@ -539,8 +539,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 197
-Time: 0.004s">
-<div class="time" style="width: 9.7560975609756%"></div>
+Time: 0.003s">
+<div class="time" style="width: 7.6923076923077%"></div>
 <pre>
       issig (@Build_morphism xa yb) (@f xa yb) (@h xa yb).</pre>
 </div>
@@ -556,7 +556,7 @@ Time: 0s">
 <div class="code" title="File: Core.v
 Line: 201
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.5641025641026%"></div>
 <pre>Lemma path_morphism
     : forall xa yb (fh gi : morphism xa yb),
         f fh = f gi -&gt; fh = gi.</pre>
@@ -571,7 +571,7 @@ Time: 0s">
 <div class="code" title="File: Core.v
 Line: 204
 Time: 0.002s">
-<div class="time" style="width: 4.8780487804878%"></div>
+<div class="time" style="width: 5.1282051282051%"></div>
 <pre>
       intros ? ? [? ?] [? ?] H; simpl in *; path_induction; apply ap.</pre>
 </div>
@@ -593,7 +593,7 @@ Time: 0s">
 <div class="code" title="File: Core.v
 Line: 208
 Time: 0.004s">
-<div class="time" style="width: 9.7560975609756%"></div>
+<div class="time" style="width: 10.25641025641%"></div>
 <pre>End precategory.</pre>
 </div>
 <div class="code" title="File: Core.v
@@ -650,7 +650,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 218
-Time: 0.041s">
+Time: 0.039s">
 <div class="time" style="width: 100%"></div>
 <pre>
     refine (@Build_PreCategory
@@ -684,8 +684,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 240
-Time: 0.006s">
-<div class="time" style="width: 14.634146341463%"></div>
+Time: 0.005s">
+<div class="time" style="width: 12.820512820513%"></div>
 <pre>End precategory.</pre>
 </div>
 <div class="code" title="File: Core.v
