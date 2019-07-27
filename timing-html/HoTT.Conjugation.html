@@ -40,7 +40,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 4
-Time: 0.017s">
+Time: 0.018s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.Basics.</pre>
 </div>
@@ -62,7 +62,7 @@ Time: 0s">
 <div class="code" title="File: Conjugation.v
 Line: 7
 Time: 0.001s">
-<div class="time" style="width: 5.8823529411765%"></div>
+<div class="time" style="width: 5.5555555555556%"></div>
 <pre>Definition conjp {A B : Type} {f g : A -&gt; B} {x y : A} (r : forall x, f x = g x) (p : f x = f y) :
   g x = g y
   :=
@@ -81,7 +81,7 @@ Time: 0s">
 <div class="code" title="File: Conjugation.v
 Line: 13
 Time: 0.002s">
-<div class="time" style="width: 11.764705882353%"></div>
+<div class="time" style="width: 11.111111111111%"></div>
 <pre>Definition conjp_concat {A : Type} (f g : A -&gt; A) (r : forall x, f x = g x) {x y z : A}
   (p : f x = f y) (q : f y = f z) :
   conjp r (p @ q) = conjp r p @ (conjp r q).</pre>
@@ -102,15 +102,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 17
-Time: 0.016s">
-<div class="time" style="width: 94.117647058824%"></div>
+Time: 0.015s">
+<div class="time" style="width: 83.333333333333%"></div>
 <pre>
   try repeat (rewrite concat_p_pp).</pre>
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 18
 Time: 0.003s">
-<div class="time" style="width: 17.647058823529%"></div>
+<div class="time" style="width: 16.666666666667%"></div>
 <pre>
   rewrite concat_pp_V.</pre>
 </div>
@@ -133,7 +133,7 @@ Qed.
 <div class="code" title="File: Conjugation.v
 Line: 22
 Time: 0.001s">
-<div class="time" style="width: 5.8823529411765%"></div>
+<div class="time" style="width: 5.5555555555556%"></div>
 <pre>Lemma ap_to_conjp {A B : Type} {f g : A -&gt; B} (p : forall x, f x = g x) {x y : A} (q : x = y) :
   ap g q = conjp p (ap f q).</pre>
 </div>
@@ -147,7 +147,7 @@ Proof.</pre>
 <div class="code" title="File: Conjugation.v
 Line: 24
 Time: 0.001s">
-<div class="time" style="width: 5.8823529411765%"></div>
+<div class="time" style="width: 5.5555555555556%"></div>
 <pre>
   destruct q.</pre>
 </div>
@@ -166,7 +166,7 @@ Time: 0s">
 <div class="code" title="File: Conjugation.v
 Line: 25
 Time: 0.001s">
-<div class="time" style="width: 5.8823529411765%"></div>
+<div class="time" style="width: 5.5555555555556%"></div>
 <pre>
   transitivity ((p x)^ @ p x).</pre>
 </div>
@@ -180,7 +180,7 @@ Time: 0s">
 <div class="code" title="File: Conjugation.v
 Line: 27
 Time: 0.001s">
-<div class="time" style="width: 5.8823529411765%"></div>
+<div class="time" style="width: 5.5555555555556%"></div>
 <pre> symmetry; apply concat_Vp.</pre>
 </div>
 <div class="code" title="File: Conjugation.v
@@ -199,7 +199,7 @@ Time: 0s">
 <div class="code" title="File: Conjugation.v
 Line: 28
 Time: 0.001s">
-<div class="time" style="width: 5.8823529411765%"></div>
+<div class="time" style="width: 5.5555555555556%"></div>
 <pre>  symmetry; apply concat_p1.</pre>
 </div>
 <div class="code" title="File: Conjugation.v
@@ -228,7 +228,7 @@ Proof.</pre>
 <div class="code" title="File: Conjugation.v
 Line: 32
 Time: 0.001s">
-<div class="time" style="width: 5.8823529411765%"></div>
+<div class="time" style="width: 5.5555555555556%"></div>
 <pre>
   destruct q.</pre>
 </div>
@@ -246,8 +246,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 33
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5.5555555555556%"></div>
 <pre>
   transitivity ((p x)^ @ p x).</pre>
 </div>
@@ -309,7 +309,7 @@ Proof.</pre>
 <div class="code" title="File: Conjugation.v
 Line: 40
 Time: 0.001s">
-<div class="time" style="width: 5.8823529411765%"></div>
+<div class="time" style="width: 5.5555555555556%"></div>
 <pre>
   transitivity (conjp p (ap idmap q)).</pre>
 </div>
@@ -335,8 +335,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 43
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5.5555555555556%"></div>
 <pre> apply ap; apply ap_idmap.</pre>
 </div>
 <div class="code" title="File: Conjugation.v

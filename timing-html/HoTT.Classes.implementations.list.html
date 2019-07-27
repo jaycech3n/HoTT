@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: list.v
 Line: 1
-Time: 0.466s">
+Time: 0.458s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import
   HoTT.Classes.interfaces.abstract_algebra
@@ -98,8 +98,8 @@ Import ListNotations.</pre>
 </div>
 <div class="code" title="File: list.v
 Line: 15
-Time: 0.001s">
-<div class="time" style="width: 0.21459227467811%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Fixpoint length {A} (l : list A) := match l with
@@ -110,7 +110,7 @@ Fixpoint length {A} (l : list A) := match l with
 <div class="code" title="File: list.v
 Line: 20
 Time: 0.001s">
-<div class="time" style="width: 0.21459227467811%"></div>
+<div class="time" style="width: 0.21834061135371%"></div>
 <pre>
 
 Fixpoint fold_left {A B} (f : A -&gt; B -&gt; A) (acc : A) (l : list B) :=
@@ -122,7 +122,7 @@ Fixpoint fold_left {A B} (f : A -&gt; B -&gt; A) (acc : A) (l : list B) :=
 <div class="code" title="File: list.v
 Line: 26
 Time: 0.001s">
-<div class="time" style="width: 0.21459227467811%"></div>
+<div class="time" style="width: 0.21834061135371%"></div>
 <pre>
 
 Fixpoint map {A B} (f : A -&gt; B) (l : list A) :=
@@ -134,7 +134,7 @@ Fixpoint map {A B} (f : A -&gt; B) (l : list A) :=
 <div class="code" title="File: list.v
 Line: 32
 Time: 0.002s">
-<div class="time" style="width: 0.42918454935622%"></div>
+<div class="time" style="width: 0.43668122270742%"></div>
 <pre>
 
 Fixpoint map2 `(f : A -&gt; B -&gt; C)
@@ -150,7 +150,7 @@ Fixpoint map2 `(f : A -&gt; B -&gt; C)
 <div class="code" title="File: list.v
 Line: 42
 Time: 0.001s">
-<div class="time" style="width: 0.21459227467811%"></div>
+<div class="time" style="width: 0.21834061135371%"></div>
 <pre>
 
 Lemma map2_cons `(f : A -&gt; B -&gt; C) defl defr x l1 y l2 :
@@ -318,7 +318,7 @@ Qed.
 <div class="code" title="File: list.v
 Line: 63
 Time: 0.001s">
-<div class="time" style="width: 0.21459227467811%"></div>
+<div class="time" style="width: 0.21834061135371%"></div>
 <pre>Fixpoint for_all {A} (P : A -&gt; Type) l : Type :=
   match l with
   | [] =&gt; Unit
@@ -360,7 +360,7 @@ Qed.
 <div class="code" title="File: list.v
 Line: 74
 Time: 0.001s">
-<div class="time" style="width: 0.21459227467811%"></div>
+<div class="time" style="width: 0.21834061135371%"></div>
 <pre>Lemma for_all_map {A B} P Q (f : A -&gt; B) (Hf : forall x, P x -&gt; Q (f x))
  : forall l, for_all P l -&gt; for_all Q (map f l).</pre>
 </div>
@@ -422,7 +422,7 @@ Defined.
 <div class="code" title="File: list.v
 Line: 81
 Time: 0.003s">
-<div class="time" style="width: 0.64377682403433%"></div>
+<div class="time" style="width: 0.65502183406114%"></div>
 <pre>Lemma for_all_map2 {A B C} P Q R
   `(f : A -&gt; B -&gt; C) (Hf : forall x y, P x -&gt; Q y -&gt; R (f x y))
   def_l (Hdefl : forall l1, for_all P l1 -&gt; for_all R (def_l l1))
@@ -460,7 +460,7 @@ Time: 0s">
 <div class="code" title="File: list.v
 Line: 89
 Time: 0.001s">
-<div class="time" style="width: 0.21459227467811%"></div>
+<div class="time" style="width: 0.21834061135371%"></div>
 <pre> intros [|y l2] _; auto.</pre>
 </div>
 <div class="code" title="File: list.v
@@ -479,7 +479,7 @@ Time: 0s">
 <div class="code" title="File: list.v
 Line: 90
 Time: 0.004s">
-<div class="time" style="width: 0.85836909871245%"></div>
+<div class="time" style="width: 0.87336244541485%"></div>
 <pre> intros [|y l2] [Hx Hl1];[intros _|intros [Hy Hl2]];simpl;auto.</pre>
 </div>
 <div class="code" title="File: list.v
@@ -507,7 +507,7 @@ Qed.
 <div class="code" title="File: list.v
 Line: 93
 Time: 0.001s">
-<div class="time" style="width: 0.21459227467811%"></div>
+<div class="time" style="width: 0.21834061135371%"></div>
 <pre>Lemma fold_preserves {A B} P Q (f : A -&gt; B -&gt; A)
   (Hf : forall x y, P x -&gt; Q y -&gt; P (f x y))
   : forall acc (Ha : P acc) l (Hl : for_all Q l), P (fold_left f acc l).</pre>
@@ -624,7 +624,7 @@ Time: 0s">
 <div class="code" title="File: list.v
 Line: 107
 Time: 0.001s">
-<div class="time" style="width: 0.21459227467811%"></div>
+<div class="time" style="width: 0.21834061135371%"></div>
 <pre> destruct n;apply _.</pre>
 </div>
 <div class="code" title="File: list.v
@@ -650,7 +650,7 @@ Time: 0s">
 <div class="code" title="File: list.v
 Line: 109
 Time: 0.003s">
-<div class="time" style="width: 0.64377682403433%"></div>
+<div class="time" style="width: 0.65502183406114%"></div>
 <pre> apply _.</pre>
 </div>
 <div class="code" title="File: list.v
@@ -684,7 +684,7 @@ Time: 0s">
 <div class="code" title="File: list.v
 Line: 119
 Time: 0.001s">
-<div class="time" style="width: 0.21459227467811%"></div>
+<div class="time" style="width: 0.21834061135371%"></div>
 <pre>Fixpoint InList {A} (a:A) (l:list A) : Type0 :=
   match l with
     | [] =&gt; False
@@ -693,8 +693,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: list.v
 Line: 123
-Time: 0.001s">
-<div class="time" style="width: 0.21459227467811%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Fixpoint fold_right {A} {B} (f : B -&gt; A -&gt; A) (x : A) (l : list B) : A :=

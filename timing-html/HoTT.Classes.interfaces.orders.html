@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: orders.v
 Line: 1
-Time: 0.455s">
+Time: 0.482s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.Classes.interfaces.abstract_algebra.</pre>
 </div>
@@ -61,8 +61,8 @@ usual properties like Trichotomy (&lt;) and TotalRelation (≤).
 </div>
 <div class="code" title="File: orders.v
 Line: 19
-Time: 0.005s">
-<div class="time" style="width: 1.0989010989011%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.8298755186722%"></div>
 <pre>Class PartialOrder `(Ale : Le A) :=
   { po_hset :&gt; IsHSet A
   ; po_hprop :&gt; is_mere_relation A Ale
@@ -72,7 +72,7 @@ Time: 0.005s">
 <div class="code" title="File: orders.v
 Line: 23
 Time: 0.003s">
-<div class="time" style="width: 0.65934065934066%"></div>
+<div class="time" style="width: 0.62240663900415%"></div>
 <pre>
 
 Class TotalOrder `(Ale : Le A) :=
@@ -98,7 +98,7 @@ do this in orders.lattices.
 <div class="code" title="File: orders.v
 Line: 37
 Time: 0.007s">
-<div class="time" style="width: 1.5384615384615%"></div>
+<div class="time" style="width: 1.4522821576763%"></div>
 <pre>Class MeetSemiLatticeOrder `(Ale : Le A) `{Meet A} :=
   { meet_sl_order :&gt; PartialOrder (≤)
   ; meet_lb_l : forall x y, x ⊓ y ≤ x
@@ -107,8 +107,8 @@ Time: 0.007s">
 </div>
 <div class="code" title="File: orders.v
 Line: 41
-Time: 0.009s">
-<div class="time" style="width: 1.978021978022%"></div>
+Time: 0.007s">
+<div class="time" style="width: 1.4522821576763%"></div>
 <pre>
 
 Class JoinSemiLatticeOrder `(Ale : Le A) `{Join A} :=
@@ -120,7 +120,7 @@ Class JoinSemiLatticeOrder `(Ale : Le A) `{Join A} :=
 <div class="code" title="File: orders.v
 Line: 47
 Time: 0.003s">
-<div class="time" style="width: 0.65934065934066%"></div>
+<div class="time" style="width: 0.62240663900415%"></div>
 <pre>
 
 Class LatticeOrder `(Ale : Le A) `{Meet A} `{Join A} :=
@@ -130,7 +130,7 @@ Class LatticeOrder `(Ale : Le A) `{Meet A} `{Join A} :=
 <div class="code" title="File: orders.v
 Line: 51
 Time: 0.004s">
-<div class="time" style="width: 0.87912087912088%"></div>
+<div class="time" style="width: 0.8298755186722%"></div>
 <pre>
 
 Class StrictOrder `(Alt : Lt A) :=
@@ -150,7 +150,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 59
 Time: 0.009s">
-<div class="time" style="width: 1.978021978022%"></div>
+<div class="time" style="width: 1.8672199170124%"></div>
 <pre>Class PseudoOrder `{Aap : Apart A} (Alt : Lt A) :=
   { pseudo_order_apart : IsApart A
   ; pseudo_order_mere_lt :&gt; is_mere_relation A lt
@@ -170,7 +170,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 67
 Time: 0.01s">
-<div class="time" style="width: 2.1978021978022%"></div>
+<div class="time" style="width: 2.0746887966805%"></div>
 <pre>Class FullPartialOrder `{Aap : Apart A} (Ale : Le A) (Alt : Lt A) :=
   { strict_po_apart : IsApart A
   ; strict_po_mere_lt : is_mere_relation A lt
@@ -189,8 +189,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 75
-Time: 0.006s">
-<div class="time" style="width: 1.3186813186813%"></div>
+Time: 0.007s">
+<div class="time" style="width: 1.4522821576763%"></div>
 <pre>Class FullPseudoOrder `{Aap : Apart A} (Ale : Le A) (Alt : Lt A) :=
   { fullpseudo_le_hprop :&gt; is_mere_relation A Ale
   ; full_pseudo_order_pseudo :&gt; PseudoOrder Alt
@@ -214,7 +214,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 81
 Time: 0.003s">
-<div class="time" style="width: 0.65934065934066%"></div>
+<div class="time" style="width: 0.62240663900415%"></div>
 <pre>
 
   Class OrderPreserving := order_preserving : forall x y, (x ≤ y -&gt; f x ≤ f y).</pre>
@@ -222,7 +222,7 @@ Time: 0.003s">
 <div class="code" title="File: orders.v
 Line: 83
 Time: 0.003s">
-<div class="time" style="width: 0.65934065934066%"></div>
+<div class="time" style="width: 0.62240663900415%"></div>
 <pre>
 
   Class OrderReflecting := order_reflecting : forall x y, (f x ≤ f y -&gt; x ≤ y).</pre>
@@ -230,7 +230,7 @@ Time: 0.003s">
 <div class="code" title="File: orders.v
 Line: 85
 Time: 0.001s">
-<div class="time" style="width: 0.21978021978022%"></div>
+<div class="time" style="width: 0.20746887966805%"></div>
 <pre>
 
   Class OrderEmbedding :=
@@ -239,8 +239,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: orders.v
 Line: 89
-Time: 0.007s">
-<div class="time" style="width: 1.5384615384615%"></div>
+Time: 0.006s">
+<div class="time" style="width: 1.2448132780083%"></div>
 <pre>
 End order_maps.</pre>
 </div>
@@ -262,7 +262,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 93
 Time: 0.003s">
-<div class="time" style="width: 0.65934065934066%"></div>
+<div class="time" style="width: 0.62240663900415%"></div>
 <pre>
 
   Class StrictlyOrderPreserving := strictly_order_preserving
@@ -271,7 +271,7 @@ Time: 0.003s">
 <div class="code" title="File: orders.v
 Line: 96
 Time: 0.003s">
-<div class="time" style="width: 0.65934065934066%"></div>
+<div class="time" style="width: 0.62240663900415%"></div>
 <pre>
 
   Class StrictlyOrderReflecting := strictly_order_reflecting
@@ -280,7 +280,7 @@ Time: 0.003s">
 <div class="code" title="File: orders.v
 Line: 99
 Time: 0.001s">
-<div class="time" style="width: 0.21978021978022%"></div>
+<div class="time" style="width: 0.20746887966805%"></div>
 <pre>
 
   Class StrictOrderEmbedding :=
@@ -289,8 +289,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: orders.v
 Line: 103
-Time: 0.007s">
-<div class="time" style="width: 1.5384615384615%"></div>
+Time: 0.006s">
+<div class="time" style="width: 1.2448132780083%"></div>
 <pre>
 End srorder_maps.</pre>
 </div>
@@ -326,7 +326,7 @@ Davorin Lešnik's PhD thesis.
 <div class="code" title="File: orders.v
 Line: 115
 Time: 0.01s">
-<div class="time" style="width: 2.1978021978022%"></div>
+<div class="time" style="width: 2.0746887966805%"></div>
 <pre>Class SemiRingOrder `{Plus A} `{Mult A}
     `{Zero A} `{One A} (Ale : Le A) :=
   { srorder_po :&gt; PartialOrder Ale
@@ -337,8 +337,8 @@ Time: 0.01s">
 </div>
 <div class="code" title="File: orders.v
 Line: 121
-Time: 0.017s">
-<div class="time" style="width: 3.7362637362637%"></div>
+Time: 0.016s">
+<div class="time" style="width: 3.3195020746888%"></div>
 <pre>
 
 Class StrictSemiRingOrder `{Plus A} `{Mult A}
@@ -351,8 +351,8 @@ Class StrictSemiRingOrder `{Plus A} `{Mult A}
 </div>
 <div class="code" title="File: orders.v
 Line: 129
-Time: 0.016s">
-<div class="time" style="width: 3.5164835164835%"></div>
+Time: 0.015s">
+<div class="time" style="width: 3.1120331950207%"></div>
 <pre>
 
 Class PseudoSemiRingOrder `{Apart A} `{Plus A}
@@ -367,7 +367,7 @@ Class PseudoSemiRingOrder `{Apart A} `{Plus A}
 <div class="code" title="File: orders.v
 Line: 138
 Time: 0.009s">
-<div class="time" style="width: 1.978021978022%"></div>
+<div class="time" style="width: 1.8672199170124%"></div>
 <pre>
 
 Class FullPseudoSemiRingOrder `{Apart A} `{Plus A}

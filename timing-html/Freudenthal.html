@@ -40,28 +40,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 4
-Time: 0.041s">
-<div class="time" style="width: 0.18536938240347%"></div>
+Time: 0.043s">
+<div class="time" style="width: 0.20077508521268%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 4
 Time: 0.007s">
-<div class="time" style="width: 0.031648431142056%"></div>
+<div class="time" style="width: 0.032684316197413%"></div>
 <pre>
 Require Import HProp EquivalenceVarieties.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 5
-Time: 0.182s">
-<div class="time" style="width: 0.82285920969346%"></div>
+Time: 0.189s">
+<div class="time" style="width: 0.88247653733016%"></div>
 <pre>
 Require Import HIT.Connectedness HIT.Suspension HIT.Truncations.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 6
 Time: 0.004s">
-<div class="time" style="width: 0.018084817795461%"></div>
+<div class="time" style="width: 0.018676752112808%"></div>
 <pre>
 Import TrM.</pre>
 </div>
@@ -120,8 +120,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 17
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre>Global Instance isconn_susp {n : trunc_index} {X : Type} `{H : IsConnected n X}
   : IsConnected n.+1 (Susp X).</pre>
 </div>
@@ -148,22 +148,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 21
-Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> exists (f North).</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 21
-Time: 0.003s">
-<div class="time" style="width: 0.013563613346596%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.018676752112808%"></div>
 <pre>
   assert ({ p0 : f North = f South &amp; forall x:X, ap f (merid x) = p0 })
     as [p0 allpath_p0] by (apply (isconnected_elim n); apply H').</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 23
-Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   apply (Susp_ind (fun a =&gt; f a = f North) 1 p0^).</pre>
 </div>
@@ -177,7 +177,7 @@ Time: 0s">
 <div class="code" title="File: Freudenthal.v
 Line: 25
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre>
   apply (concat (transport_paths_Fl _ _)).</pre>
 </div>
@@ -220,8 +220,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 33
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre>Context `{Funext} (funext_large : Funext * Unit) `{Univalence}
         {n : trunc_index} {Hn : ~ n = -2}
         (X : Type) (x0:X) `{IsConnMap n _ _ (unit_name x0)}.</pre>
@@ -261,7 +261,7 @@ Notation mer := (@merid X).</pre>
 <div class="code" title="File: Freudenthal.v
 Line: 43
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre>
 Definition mer' := (fun x =&gt; mer x @ (mer x0)^).</pre>
 </div>
@@ -313,7 +313,7 @@ Abort.
 <div class="code" title="File: Freudenthal.v
 Line: 53
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre>Definition FST_Codes_No (p : No = No)
   := (Trunc (n +2+ n) (hfiber mer' p)).</pre>
 </div>
@@ -328,7 +328,7 @@ Time: 0s">
 <div class="code" title="File: Freudenthal.v
 Line: 56
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre>Definition FST_Codes_So (q : No = So)
   := (Trunc (n +2+ n) (hfiber mer q)).</pre>
 </div>
@@ -342,15 +342,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 59
-Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition hfiber_pair {A B} {f: A -&gt; B} {b} (a:A) (p:f a = b) : hfiber f b
   := (a;p).</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 60
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre>
 
 Definition FST_Codes_cross (x1 : X) (q : No = So)
@@ -372,15 +372,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 65
-Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   apply Trunc_rec.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 66
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre>
   intros [x2 p].</pre>
 </div>
@@ -392,8 +392,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 67
-Time: 0.057s">
-<div class="time" style="width: 0.25770865358532%"></div>
+Time: 0.049s">
+<div class="time" style="width: 0.22879021338189%"></div>
 <pre>
   refine (@wedge_incl_elim_uncurried _ n n X x0 _ X x0 _
     (fun x1 x2 =&gt; (mer x2 @ (mer x0) ^ = q @ (mer x1) ^)
@@ -401,8 +401,8 @@ Time: 0.057s">
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 70
-Time: 6.06s">
-<div class="time" style="width: 27.398498960123%"></div>
+Time: 5.909s">
+<div class="time" style="width: 27.590232058645%"></div>
 <pre>
   refine (pr1 (@isconnected_elim n.+1 X _ _ _ _)).</pre>
 </div>
@@ -415,8 +415,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 72
-Time: 0.494s">
-<div class="time" style="width: 2.2334749977394%"></div>
+Time: 0.445s">
+<div class="time" style="width: 2.0777886725498%"></div>
 <pre> apply @trunc_sigma; try typeclasses eauto.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
@@ -428,14 +428,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 73
-Time: 0.067s">
-<div class="time" style="width: 0.30292069807397%"></div>
+Time: 0.066s">
+<div class="time" style="width: 0.30816640986133%"></div>
 <pre> apply @trunc_forall; try typeclasses eauto; intro.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 73
 Time: 0.009s">
-<div class="time" style="width: 0.040690840039787%"></div>
+<div class="time" style="width: 0.042022692253817%"></div>
 <pre>
       apply @trunc_arrow; try typeclasses eauto; intro.</pre>
 </div>
@@ -462,7 +462,7 @@ Time: 0s">
 <div class="code" title="File: Freudenthal.v
 Line: 76
 Time: 0.002s">
-<div class="time" style="width: 0.0090424088977304%"></div>
+<div class="time" style="width: 0.0093383760564038%"></div>
 <pre>
     admit.</pre>
 </div>
@@ -474,7 +474,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 77
-Time: 22.118s">
+Time: 21.417s">
 <div class="time" style="width: 100%"></div>
 <pre>
   refine (pr1 (@isconnected_elim n.+1 X _ _ _ _)).</pre>
@@ -489,13 +489,13 @@ Time: 0s">
 <div class="code" title="File: Freudenthal.v
 Line: 79
 Time: 0.239s">
-<div class="time" style="width: 1.0805678632788%"></div>
+<div class="time" style="width: 1.1159359387403%"></div>
 <pre> apply @trunc_arrow; try typeclasses eauto; intros.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 79
 Time: 0.003s">
-<div class="time" style="width: 0.013563613346596%"></div>
+<div class="time" style="width: 0.014007564084606%"></div>
 <pre>
     admit.</pre>
 </div>
@@ -515,13 +515,13 @@ Time: 0s">
 <div class="code" title="File: Freudenthal.v
 Line: 81
 Time: 0.004s">
-<div class="time" style="width: 0.018084817795461%"></div>
+<div class="time" style="width: 0.018676752112808%"></div>
 <pre> exists (fun b s =&gt; tr (hfiber_pair b (cancelR _ _ _ s))).</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 81
 Time: 0.01s">
-<div class="time" style="width: 0.045212044488652%"></div>
+<div class="time" style="width: 0.046691880282019%"></div>
 <pre>
     exists (fun a r =&gt; tr (hfiber_pair a
                                                     (cancelR _ _ _ ((concat_pV _) @ (concat_pV _)^ @ r)))).</pre>
@@ -529,20 +529,20 @@ Time: 0.01s">
 <div class="code" title="File: Freudenthal.v
 Line: 83
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre>
     apply path_forall; intros s.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 84
 Time: 0.003s">
-<div class="time" style="width: 0.013563613346596%"></div>
+<div class="time" style="width: 0.014007564084606%"></div>
 <pre> apply ap, ap, ap.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 84
 Time: 0.002s">
-<div class="time" style="width: 0.0090424088977304%"></div>
+<div class="time" style="width: 0.0093383760564038%"></div>
 <pre>
     exact ((concat_1p _)^ @ whiskerR (concat_pV _)^ _).</pre>
 </div>
@@ -564,7 +564,7 @@ Defined.
 <div class="code" title="File: Freudenthal.v
 Line: 88
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre>Definition FST_Codes_cross_x0 (q : No = So)
   : FST_Codes_No (q @ (mer x0)^) -&gt; FST_Codes_So q.</pre>
 </div>
@@ -585,7 +585,7 @@ Time: 0s">
 <div class="code" title="File: Freudenthal.v
 Line: 91
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre>
   apply Trunc_functor, (functor_sigma idmap).</pre>
 </div>
@@ -614,7 +614,7 @@ Defined.
 <div class="code" title="File: Freudenthal.v
 Line: 95
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre>Definition isequiv_FST_Codes_cross (x : X) (q : No = So)
   : IsEquiv (FST_Codes_cross x q).</pre>
 </div>
@@ -635,7 +635,7 @@ Time: 0s">
 <div class="code" title="File: Freudenthal.v
 Line: 98
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre>
   apply (@conn_map_elim _ _ _ (unit_name x0) _
     (fun x =&gt; IsEquiv (FST_Codes_cross x q))).</pre>
@@ -669,7 +669,7 @@ Time: 0s">
 <div class="code" title="File: Freudenthal.v
 Line: 102
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre> destruct (imposs 1).</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
@@ -707,13 +707,13 @@ Time: 0s">
 <div class="code" title="File: Freudenthal.v
 Line: 104
 Time: 0.006s">
-<div class="time" style="width: 0.027127226693191%"></div>
+<div class="time" style="width: 0.028015128169211%"></div>
 <pre> unfold FST_Codes_cross.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 104
-Time: 2.015s">
-<div class="time" style="width: 9.1102269644633%"></div>
+Time: 1.912s">
+<div class="time" style="width: 8.927487509922%"></div>
 <pre>
     refine (isequiv_homotopic (FST_Codes_cross_x0 q) _).</pre>
 </div>
@@ -733,7 +733,7 @@ Time: 0s">
 <div class="code" title="File: Freudenthal.v
 Line: 106
 Time: 0.002s">
-<div class="time" style="width: 0.0090424088977304%"></div>
+<div class="time" style="width: 0.0093383760564038%"></div>
 <pre>
       apply isequiv_Trunc_functor, @isequiv_functor_sigma.</pre>
 </div>
@@ -747,7 +747,7 @@ Time: 0s">
 <div class="code" title="File: Freudenthal.v
 Line: 108
 Time: 0.004s">
-<div class="time" style="width: 0.018084817795461%"></div>
+<div class="time" style="width: 0.018676752112808%"></div>
 <pre> exact _.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
@@ -785,13 +785,13 @@ Time: 0s">
 <div class="code" title="File: Freudenthal.v
 Line: 110
 Time: 0.002s">
-<div class="time" style="width: 0.0090424088977304%"></div>
+<div class="time" style="width: 0.0093383760564038%"></div>
 <pre> hnf.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 110
-Time: 0.024s">
-<div class="time" style="width: 0.10850890677276%"></div>
+Time: 0.023s">
+<div class="time" style="width: 0.10739132464864%"></div>
 <pre> apply Trunc_ind.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
@@ -803,8 +803,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 111
-Time: 0.014s">
-<div class="time" style="width: 0.063296862284112%"></div>
+Time: 0.013s">
+<div class="time" style="width: 0.060699444366625%"></div>
 <pre> intros ?; apply trunc_succ.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
@@ -816,28 +816,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 112
-Time: 0.092s">
-<div class="time" style="width: 0.4159508092956%"></div>
+Time: 0.091s">
+<div class="time" style="width: 0.42489611056637%"></div>
 <pre> intros [x r]; simpl.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 112
-Time: 0.022s">
-<div class="time" style="width: 0.099466497875034%"></div>
+Time: 0.024s">
+<div class="time" style="width: 0.11206051267685%"></div>
 <pre>
         unfold functor_sigma; simpl.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 113
 Time: 0.023s">
-<div class="time" style="width: 0.1039877023239%"></div>
+<div class="time" style="width: 0.10739132464864%"></div>
 <pre>
         symmetry.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 114
-Time: 0.022s">
-<div class="time" style="width: 0.099466497875034%"></div>
+Time: 0.023s">
+<div class="time" style="width: 0.10739132464864%"></div>
 <pre>
         exact (ap10 (wedge_incl_comp1 x0 x0 _ _ _ _ x) r).</pre>
 </div>
@@ -873,7 +873,7 @@ Proof.</pre>
 <div class="code" title="File: Freudenthal.v
 Line: 119
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre>
   apply (Susp_ind (fun y =&gt; (No = y -&gt; Type)) FST_Codes_No FST_Codes_So).</pre>
 </div>
@@ -899,15 +899,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 122
-Time: 0.014s">
-<div class="time" style="width: 0.063296862284112%"></div>
+Time: 0.016s">
+<div class="time" style="width: 0.07470700845123%"></div>
 <pre>
   refine (transport_const _ _ @ _).</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 123
-Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.0093383760564038%"></div>
 <pre>
   transitivity (FST_Codes_No (p @ (mer x)^)).</pre>
 </div>
@@ -921,7 +921,7 @@ Time: 0s">
 <div class="code" title="File: Freudenthal.v
 Line: 125
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre> apply ap, transport_paths_r.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
@@ -963,7 +963,7 @@ Defined.
 <div class="code" title="File: Freudenthal.v
 Line: 131
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre>Definition FST_Codes_center (y : Susp X) (p : No = y)
   : FST_Codes y p.</pre>
 </div>
@@ -1057,7 +1057,7 @@ Defined.
 <div class="code" title="File: Freudenthal.v
 Line: 141
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre>Lemma transport_as_ap {A} (P : A -&gt; Type) {x y} (p : x = y)
   : transport P p == transport idmap (ap P p).</pre>
 </div>
@@ -1160,7 +1160,7 @@ Time: 0s">
 <div class="code" title="File: Freudenthal.v
 Line: 158
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre>
 
 Lemma transportD_as_apD
@@ -1178,7 +1178,7 @@ Proof.</pre>
 <div class="code" title="File: Freudenthal.v
 Line: 164
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre>
   intros ?; destruct p; simpl.</pre>
 </div>
@@ -1200,7 +1200,7 @@ Defined.
 <div class="code" title="File: Freudenthal.v
 Line: 168
 Time: 0.003s">
-<div class="time" style="width: 0.013563613346596%"></div>
+<div class="time" style="width: 0.014007564084606%"></div>
 <pre>Definition FST_Codes_transportD_concrete (x1 : X) (p : No = No)
   : FST_Codes No p -&gt; FST_Codes So (transport (paths No) (mer x1) p).</pre>
 </div>
@@ -1221,7 +1221,7 @@ Time: 0s">
 <div class="code" title="File: Freudenthal.v
 Line: 171
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre> assert (goal' : FST_Codes So (p @ mer x1)).</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
@@ -1239,15 +1239,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 172
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre>
     refine (transport FST_Codes_No _ rr).</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 173
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre> symmetry; apply concat_pp_V.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
@@ -1260,13 +1260,13 @@ Time: 0s">
 <div class="code" title="File: Freudenthal.v
 Line: 174
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre> refine (transport FST_Codes_So _ goal').</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 174
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre>
     apply inverse, transport_paths_r.</pre>
 </div>
@@ -1282,7 +1282,7 @@ Defined.
 <div class="code" title="File: Freudenthal.v
 Line: 177
 Time: 0.004s">
-<div class="time" style="width: 0.018084817795461%"></div>
+<div class="time" style="width: 0.018676752112808%"></div>
 <pre>Definition FST_Codes_transportD (x1 : X) (p : No = No) (rr : FST_Codes No p)
   : transportD (paths No) FST_Codes (mer x1) p rr
   = FST_Codes_transportD_concrete x1 p rr.</pre>
@@ -1297,7 +1297,7 @@ Proof.</pre>
 <div class="code" title="File: Freudenthal.v
 Line: 180
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre>
   refine (transportD_as_apD _ _ _ _ _ @ _).</pre>
 </div>
@@ -1310,21 +1310,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 182
-Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.0093383760564038%"></div>
 <pre>
   unfold FST_Codes.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 183
 Time: 0.241s">
-<div class="time" style="width: 1.0896102721765%"></div>
+<div class="time" style="width: 1.1252743147967%"></div>
 <pre> rewrite (Susp_ind_beta_merid _ _ _ _ x1); simpl.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 183
-Time: 0.014s">
-<div class="time" style="width: 0.063296862284112%"></div>
+Time: 0.015s">
+<div class="time" style="width: 0.070037820423028%"></div>
 <pre>
     rewrite (@ap10_path_forall (fst funext_large)).</pre>
 </div>
@@ -1337,15 +1337,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 185
-Time: 0.108s">
-<div class="time" style="width: 0.48829008047744%"></div>
+Time: 0.097s">
+<div class="time" style="width: 0.45291123873558%"></div>
 <pre>
   rewrite ! transport_pp.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 186
-Time: 0.011s">
-<div class="time" style="width: 0.049733248937517%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.0093383760564038%"></div>
 <pre>
   refine (transport_path_universe _ _ @ _).</pre>
 </div>
@@ -1359,8 +1359,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 189
-Time: 0.045s">
-<div class="time" style="width: 0.20345420019893%"></div>
+Time: 0.024s">
+<div class="time" style="width: 0.11206051267685%"></div>
 <pre>Admitted.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
@@ -1374,8 +1374,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 192
-Time: 0.002s">
-<div class="time" style="width: 0.0090424088977304%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.014007564084606%"></div>
 <pre>Definition FST_Codes_contr (y : Susp X) (p : No = y) (rr : FST_Codes y p)
   : rr = FST_Codes_center y p.</pre>
 </div>
@@ -1396,7 +1396,7 @@ Time: 0s">
 <div class="code" title="File: Freudenthal.v
 Line: 195
 Time: 0.004s">
-<div class="time" style="width: 0.018084817795461%"></div>
+<div class="time" style="width: 0.018676752112808%"></div>
 <pre>
   Check (Susp_ind (fun y =&gt; forall p rr, rr = FST_Codes_center y p)).</pre>
 </div>
@@ -1412,7 +1412,7 @@ Abort.
 <div class="code" title="File: Freudenthal.v
 Line: 198
 Time: 0.002s">
-<div class="time" style="width: 0.0090424088977304%"></div>
+<div class="time" style="width: 0.0093383760564038%"></div>
 <pre>Definition FST_Codes_contr_No (p : No = No) (rr : FST_Codes No p)
   : (rr = FST_Codes_center No p).</pre>
 </div>
@@ -1433,7 +1433,7 @@ Time: 0s">
 <div class="code" title="File: Freudenthal.v
 Line: 201
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre> apply Trunc_ind.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
@@ -1446,7 +1446,7 @@ Time: 0s">
 <div class="code" title="File: Freudenthal.v
 Line: 202
 Time: 0.002s">
-<div class="time" style="width: 0.0090424088977304%"></div>
+<div class="time" style="width: 0.0093383760564038%"></div>
 <pre> intros ?; apply trunc_succ.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
@@ -1459,13 +1459,13 @@ Time: 0s">
 <div class="code" title="File: Freudenthal.v
 Line: 203
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre> intros [x1 r].</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 203
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre> destruct r.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
@@ -1477,7 +1477,7 @@ Time: 0s">
 <div class="code" title="File: Freudenthal.v
 Line: 203
 Time: 0.001s">
-<div class="time" style="width: 0.0045212044488652%"></div>
+<div class="time" style="width: 0.0046691880282019%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
@@ -1528,8 +1528,8 @@ Admitted.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 213
-Time: 0.236s">
-<div class="time" style="width: 1.0670042499322%"></div>
+Time: 0.239s">
+<div class="time" style="width: 1.1159359387403%"></div>
 <pre>
 
 End Freudenthal.</pre>

@@ -45,8 +45,8 @@ Time: 0.017s">
 </div>
 <div class="code" title="File: Arrow.v
 Line: 3
-Time: 0.004s">
-<div class="time" style="width: 23.529411764706%"></div>
+Time: 0.005s">
+<div class="time" style="width: 29.411764705882%"></div>
 <pre>
 Require Import Types.Paths Types.Forall.</pre>
 </div>
@@ -111,8 +111,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Arrow.v
 Line: 20
-Time: 0.002s">
-<div class="time" style="width: 11.764705882353%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5.8823529411765%"></div>
 <pre>Definition ap10_path_arrow {A B : Type} (f g : A -&gt; B) (h : f == g)
   : ap10 (path_arrow f g h) == h
   := apD10_path_forall f g h.</pre>
@@ -199,8 +199,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Arrow.v
 Line: 53
-Time: 0.001s">
-<div class="time" style="width: 5.8823529411765%"></div>
+Time: 0.002s">
+<div class="time" style="width: 11.764705882353%"></div>
 <pre>Definition path_arrow_pp {A B : Type} (f g h : A -&gt; B)
            (p : f == g) (q : g == h)
 : path_arrow f h (fun x =&gt; p x @ q x) = path_arrow f g p @ path_arrow g h q
@@ -220,8 +220,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Arrow.v
 Line: 61
-Time: 0.002s">
-<div class="time" style="width: 11.764705882353%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5.8823529411765%"></div>
 <pre>Definition transport_arrow {A : Type} {B C : A -&gt; Type}
   {x1 x2 : A} (p : x1 = x2) (f : B x1 -&gt; C x1) (y : B x2)
   : (transport (fun x =&gt; B x -&gt; C x) p f) y  =  p # (f (p^ # y)).</pre>
@@ -297,8 +297,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Arrow.v
 Line: 76
-Time: 0.001s">
-<div class="time" style="width: 5.8823529411765%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   destruct p; simpl; auto.</pre>
 </div>
@@ -441,8 +441,8 @@ Defined.
 </div>
 <div class="code" title="File: Arrow.v
 Line: 121
-Time: 0.002s">
-<div class="time" style="width: 11.764705882353%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5.8823529411765%"></div>
 <pre>Definition ap_apply_l {A B : Type} {x y : A -&gt; B} (p : x = y) (z : A) :
   ap (fun f =&gt; f z) p = ap10 p z
 := 1.</pre>
@@ -459,8 +459,8 @@ Definition ap_apply_Fl {A B C : Type} {x y : A} (p : x = y) (M : A -&gt; B -&gt;
 </div>
 <div class="code" title="File: Arrow.v
 Line: 127
-Time: 0.002s">
-<div class="time" style="width: 11.764705882353%"></div>
+Time: 0.004s">
+<div class="time" style="width: 23.529411764706%"></div>
 <pre>
 
 Definition ap_apply_Fr {A B C : Type} {x y : A} (p : x = y) (z : B -&gt; C) (N : A -&gt; B) :
@@ -502,8 +502,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Arrow.v
 Line: 140
-Time: 0.002s">
-<div class="time" style="width: 11.764705882353%"></div>
+Time: 0.003s">
+<div class="time" style="width: 17.647058823529%"></div>
 <pre>
   destruct p;
   symmetry;
@@ -530,8 +530,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Arrow.v
 Line: 149
-Time: 0.004s">
-<div class="time" style="width: 23.529411764706%"></div>
+Time: 0.005s">
+<div class="time" style="width: 29.411764705882%"></div>
 <pre>
 
 Definition ap_functor_arrow `(f : B -&gt; A) `(g : C -&gt; D)
@@ -581,8 +581,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Arrow.v
 Line: 168
-Time: 0.006s">
-<div class="time" style="width: 35.294117647059%"></div>
+Time: 0.005s">
+<div class="time" style="width: 29.411764705882%"></div>
 <pre>Global Instance isequiv_functor_arrow `{IsEquiv B A f} `{IsEquiv C D g}
   : IsEquiv (functor_arrow f g) | 1000
   := @isequiv_functor_forall _ A (fun _ =&gt; C) B (fun _ =&gt; D)
@@ -625,8 +625,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Arrow.v
 Line: 187
-Time: 0.008s">
-<div class="time" style="width: 47.058823529412%"></div>
+Time: 0.007s">
+<div class="time" style="width: 41.176470588235%"></div>
 <pre>End AssumeFunext.</pre>
 </div>
 <div class="code" title="File: Arrow.v
@@ -656,8 +656,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Arrow.v
 Line: 194
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5.8823529411765%"></div>
 <pre>
   destruct (dec B) as [x2|y2].</pre>
 </div>

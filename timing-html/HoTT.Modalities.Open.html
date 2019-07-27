@@ -39,20 +39,20 @@ Time: 0s">
 <div class="code" title="File: Open.v
 Line: 2
 Time: 0.042s">
-<div class="time" style="width: 2.5641025641026%"></div>
+<div class="time" style="width: 2.6315789473684%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Open.v
 Line: 2
 Time: 0.011s">
-<div class="time" style="width: 0.67155067155067%"></div>
+<div class="time" style="width: 0.68922305764411%"></div>
 <pre>
 Require Import HProp TruncType Extensions.</pre>
 </div>
 <div class="code" title="File: Open.v
 Line: 3
-Time: 0.132s">
-<div class="time" style="width: 8.0586080586081%"></div>
+Time: 0.13s">
+<div class="time" style="width: 8.1453634085213%"></div>
 <pre>
 Require Import Modality Accessible Nullification Lex.</pre>
 </div>
@@ -78,7 +78,7 @@ Time: 0s">
 <div class="code" title="File: Open.v
 Line: 10
 Time: 0.001s">
-<div class="time" style="width: 0.061050061050061%"></div>
+<div class="time" style="width: 0.06265664160401%"></div>
 <pre>Record Open_Modality :=
   Op { funext_Op : Funext ;
        unOp : hProp
@@ -176,7 +176,7 @@ Time: 0s">
 <div class="code" title="File: Open.v
 Line: 36
 Time: 0.002s">
-<div class="time" style="width: 0.12210012210012%"></div>
+<div class="time" style="width: 0.12531328320802%"></div>
 <pre>
     unfold to; apply ap; apply path_ishprop.</pre>
 </div>
@@ -215,7 +215,7 @@ Time: 0s">
 <div class="code" title="File: Open.v
 Line: 45
 Time: 0.004s">
-<div class="time" style="width: 0.24420024420024%"></div>
+<div class="time" style="width: 0.25062656641604%"></div>
 <pre>
     transitivity (transport B 1 (f a u));
       auto with path_hints.</pre>
@@ -223,14 +223,14 @@ Time: 0.004s">
 <div class="code" title="File: Open.v
 Line: 47
 Time: 0.001s">
-<div class="time" style="width: 0.061050061050061%"></div>
+<div class="time" style="width: 0.06265664160401%"></div>
 <pre>
     apply (ap (fun p =&gt; transport B p (f a u))).</pre>
 </div>
 <div class="code" title="File: Open.v
 Line: 48
 Time: 0.014s">
-<div class="time" style="width: 0.85470085470085%"></div>
+<div class="time" style="width: 0.87719298245614%"></div>
 <pre>
     transitivity (path_arrow (fun _ =&gt; a) (fun _ =&gt; a) (@ap10 (unOp O) _ _ _ 1));
       auto with path_hints.</pre>
@@ -251,7 +251,7 @@ Time: 0s">
 <div class="code" title="File: Open.v
 Line: 51
 Time: 0.001s">
-<div class="time" style="width: 0.061050061050061%"></div>
+<div class="time" style="width: 0.06265664160401%"></div>
 <pre>
       apply path_forall; intros u'.</pre>
 </div>
@@ -287,7 +287,7 @@ Time: 0s">
 <div class="code" title="File: Open.v
 Line: 57
 Time: 0.001s">
-<div class="time" style="width: 0.061050061050061%"></div>
+<div class="time" style="width: 0.06265664160401%"></div>
 <pre>Definition minO_pathsO (O : Modality@{u a}) (A : Type@{i})
              (z z' : O_reflector@{u a i} O A)
   : IsEquiv@{i i} (to O (z = z')).</pre>
@@ -336,13 +336,13 @@ Time: 0s">
 <div class="code" title="File: Open.v
 Line: 64
 Time: 0.001s">
-<div class="time" style="width: 0.061050061050061%"></div>
+<div class="time" style="width: 0.06265664160401%"></div>
 <pre> intros f; apply path_arrow; intros u.</pre>
 </div>
 <div class="code" title="File: Open.v
 Line: 64
 Time: 0.002s">
-<div class="time" style="width: 0.12210012210012%"></div>
+<div class="time" style="width: 0.12531328320802%"></div>
 <pre>
       transitivity (path_arrow z z' (ap10 (f u))).</pre>
 </div>
@@ -369,14 +369,14 @@ Time: 0s">
 <div class="code" title="File: Open.v
 Line: 67
 Time: 0.001s">
-<div class="time" style="width: 0.061050061050061%"></div>
+<div class="time" style="width: 0.06265664160401%"></div>
 <pre>
         apply (ap (fun u0 =&gt; ap10 (f u0) u')).</pre>
 </div>
 <div class="code" title="File: Open.v
 Line: 68
 Time: 0.002s">
-<div class="time" style="width: 0.12210012210012%"></div>
+<div class="time" style="width: 0.12531328320802%"></div>
 <pre>
         apply path_ishprop.</pre>
 </div>
@@ -431,7 +431,7 @@ Time: 0s">
 <div class="code" title="File: Open.v
 Line: 74
 Time: 0.004s">
-<div class="time" style="width: 0.24420024420024%"></div>
+<div class="time" style="width: 0.25062656641604%"></div>
 <pre>
 
 Module OpenModalities &lt;: Modalities
@@ -439,8 +439,8 @@ Module OpenModalities &lt;: Modalities
 </div>
 <div class="code" title="File: Open.v
 Line: 77
-Time: 0.107s">
-<div class="time" style="width: 6.5323565323565%"></div>
+Time: 0.105s">
+<div class="time" style="width: 6.5789473684211%"></div>
 <pre>
 
 Module Import OpM := Modalities_Theory OpenModalities.</pre>
@@ -481,7 +481,7 @@ Time: 0s">
 <div class="code" title="File: Open.v
 Line: 88
 Time: 0.175s">
-<div class="time" style="width: 10.683760683761%"></div>
+<div class="time" style="width: 10.964912280702%"></div>
 <pre>Module Import Lex_OpenModalities := Lex_Modalities_Theory OpenModalities.</pre>
 </div>
 <div class="code" title="File: Open.v
@@ -543,15 +543,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Open.v
 Line: 97
-Time: 0.002s">
-<div class="time" style="width: 0.12210012210012%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.06265664160401%"></div>
 <pre>
     pose (contr_inhabited_hprop U u).</pre>
 </div>
 <div class="code" title="File: Open.v
 Line: 98
-Time: 0.014s">
-<div class="time" style="width: 0.85470085470085%"></div>
+Time: 0.016s">
+<div class="time" style="width: 1.0025062656642%"></div>
 <pre>
     refine (contr_equiv (U -&gt; A) (equiv_contr_forall _)).</pre>
 </div>
@@ -578,7 +578,7 @@ Time: 0s">
 <div class="code" title="File: Open.v
 Line: 101
 Time: 0.007s">
-<div class="time" style="width: 0.42735042735043%"></div>
+<div class="time" style="width: 0.43859649122807%"></div>
 <pre> intros u; pose (uc u); exact (center (x=y)).</pre>
 </div>
 <div class="code" title="File: Open.v
@@ -596,8 +596,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Open.v
 Line: 102
-Time: 0.009s">
-<div class="time" style="width: 0.54945054945055%"></div>
+Time: 0.007s">
+<div class="time" style="width: 0.43859649122807%"></div>
 <pre>
     pose proof (uc u); apply path_contr.</pre>
 </div>
@@ -614,14 +614,14 @@ Defined.
 </div>
 <div class="code" title="File: Open.v
 Line: 107
-Time: 0.002s">
-<div class="time" style="width: 0.12210012210012%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.18796992481203%"></div>
 <pre>Module Accessible_OpenModalities &lt;: Accessible_Modalities OpenModalities.</pre>
 </div>
 <div class="code" title="File: Open.v
 Line: 107
-Time: 0.108s">
-<div class="time" style="width: 6.5934065934066%"></div>
+Time: 0.104s">
+<div class="time" style="width: 6.516290726817%"></div>
 <pre>
 
   Module Import Os_Theory := Modalities_Theory OpenModalities.</pre>
@@ -678,14 +678,14 @@ Time: 0s">
 <div class="code" title="File: Open.v
 Line: 122
 Time: 0.001s">
-<div class="time" style="width: 0.061050061050061%"></div>
+<div class="time" style="width: 0.06265664160401%"></div>
 <pre>
       apply (equiv_inverse (equiv_ooextendable_isequiv@{a a i i i  i i i i i  i i i i} _ _)).</pre>
 </div>
 <div class="code" title="File: Open.v
 Line: 123
-Time: 1.515s">
-<div class="time" style="width: 92.490842490842%"></div>
+Time: 1.512s">
+<div class="time" style="width: 94.736842105263%"></div>
 <pre>
       refine (cancelR_isequiv (fun x (u:Unit) =&gt; x)).</pre>
 </div>
@@ -711,7 +711,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Open.v
 Line: 126
-Time: 1.638s">
+Time: 1.596s">
 <div class="time" style="width: 100%"></div>
 <pre>
       refine (isequiv_compose (f := (fun x =&gt; unit_name x))
@@ -741,15 +741,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Open.v
 Line: 138
-Time: 0.002s">
-<div class="time" style="width: 0.12210012210012%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.18796992481203%"></div>
 <pre>Definition inO_iff_isnull@{u a i}
     := Eval unfold inO_iff_isnull' in ltac:(first [exact inO_iff_isnull'@{u a i i i}|exact inO_iff_isnull'@{u a i}]).</pre>
 </div>
 <div class="code" title="File: Open.v
 Line: 139
-Time: 0.057s">
-<div class="time" style="width: 3.4798534798535%"></div>
+Time: 0.065s">
+<div class="time" style="width: 4.0726817042607%"></div>
 <pre>
 
 End Accessible_OpenModalities.</pre>

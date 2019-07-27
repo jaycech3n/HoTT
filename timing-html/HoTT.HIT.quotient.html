@@ -37,26 +37,26 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 1
 Time: 0.017s">
-<div class="time" style="width: 8.9473684210526%"></div>
+<div class="time" style="width: 9.6590909090909%"></div>
 <pre>Require Import HoTT.Basics.</pre>
 </div>
 <div class="code" title="File: quotient.v
 Line: 1
-Time: 0.017s">
-<div class="time" style="width: 8.9473684210526%"></div>
+Time: 0.016s">
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre>
 Require Import Types.Universe Types.Arrow Types.Sigma.</pre>
 </div>
 <div class="code" title="File: quotient.v
 Line: 2
 Time: 0.015s">
-<div class="time" style="width: 7.8947368421053%"></div>
+<div class="time" style="width: 8.5227272727273%"></div>
 <pre>
 Require Import HSet HProp UnivalenceImpliesFunext TruncType.</pre>
 </div>
 <div class="code" title="File: quotient.v
 Line: 3
-Time: 0.19s">
+Time: 0.176s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Require Import HIT.epi HIT.Truncations HIT.Connectedness.</pre>
@@ -170,7 +170,7 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 43
 Time: 0.002s">
-<div class="time" style="width: 1.0526315789474%"></div>
+<div class="time" style="width: 1.1363636363636%"></div>
 <pre>
 
     Definition quotient_ind (P : (@quotient sR) -&gt; Type) {sP : forall x, IsHSet (P x)}
@@ -215,7 +215,7 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 58
 Time: 0.002s">
-<div class="time" style="width: 1.0526315789474%"></div>
+<div class="time" style="width: 1.1363636363636%"></div>
 <pre>Axiom quotient_ind_compute_path
     : forall P sP dclass dequiv,
       forall x y (H : R x y),
@@ -225,7 +225,7 @@ Time: 0.002s">
 <div class="code" title="File: quotient.v
 Line: 62
 Time: 0.001s">
-<div class="time" style="width: 0.52631578947368%"></div>
+<div class="time" style="width: 0.56818181818182%"></div>
 <pre>
 
   End Domain.</pre>
@@ -257,7 +257,7 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 70
 Time: 0.001s">
-<div class="time" style="width: 0.52631578947368%"></div>
+<div class="time" style="width: 0.56818181818182%"></div>
 <pre>
 
   Context {A : Type} (R : relation A) {sR: is_mere_relation _ R}
@@ -315,8 +315,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: quotient.v
 Line: 81
-Time: 0.015s">
-<div class="time" style="width: 7.8947368421053%"></div>
+Time: 0.016s">
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre>
     refine (quotient_ind R (fun _ =&gt; A -&gt; hProp) (fun a b =&gt; BuildhProp (R a b)) _).</pre>
 </div>
@@ -336,7 +336,7 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 83
 Time: 0.001s">
-<div class="time" style="width: 0.52631578947368%"></div>
+<div class="time" style="width: 0.56818181818182%"></div>
 <pre>
     apply path_forall.</pre>
 </div>
@@ -355,7 +355,7 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 84
 Time: 0.008s">
-<div class="time" style="width: 4.2105263157895%"></div>
+<div class="time" style="width: 4.5454545454545%"></div>
 <pre>
     apply @equiv_iff_hprop; eauto.</pre>
 </div>
@@ -377,7 +377,7 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 88
 Time: 0.001s">
-<div class="time" style="width: 0.52631578947368%"></div>
+<div class="time" style="width: 0.56818181818182%"></div>
 <pre>
 
   Lemma in_class_pr : forall x y, (in_class (class_of R x) y : Type) = R x y.</pre>
@@ -430,8 +430,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: quotient.v
 Line: 100
-Time: 0.004s">
-<div class="time" style="width: 2.1052631578947%"></div>
+Time: 0.005s">
+<div class="time" style="width: 2.8409090909091%"></div>
 <pre> apply (quotient_ind R P dclass).</pre>
 </div>
 <div class="code" title="File: quotient.v
@@ -472,8 +472,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: quotient.v
 Line: 106
-Time: 0.042s">
-<div class="time" style="width: 22.105263157895%"></div>
+Time: 0.041s">
+<div class="time" style="width: 23.295454545455%"></div>
 <pre>
     refine (quotient_ind_prop _ _).</pre>
 </div>
@@ -508,8 +508,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: quotient.v
 Line: 112
-Time: 0.097s">
-<div class="time" style="width: 51.052631578947%"></div>
+Time: 0.094s">
+<div class="time" style="width: 53.409090909091%"></div>
 <pre>
     apply (quotient_ind R
                         (fun q : quotient R =&gt; forall x, in_class q x -&gt; q = class_of _ x)
@@ -538,7 +538,7 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 117
 Time: 0.001s">
-<div class="time" style="width: 0.52631578947368%"></div>
+<div class="time" style="width: 0.56818181818182%"></div>
 <pre>
     apply path_forall;intro H'.</pre>
 </div>
@@ -657,8 +657,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: quotient.v
 Line: 135
-Time: 0.01s">
-<div class="time" style="width: 5.2631578947368%"></div>
+Time: 0.009s">
+<div class="time" style="width: 5.1136363636364%"></div>
 <pre> apply equiv_iff_hprop.</pre>
 </div>
 <div class="code" title="File: quotient.v
@@ -715,7 +715,7 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 144
 Time: 0.002s">
-<div class="time" style="width: 1.0526315789474%"></div>
+<div class="time" style="width: 1.1363636363636%"></div>
 <pre>
     apply (quotient_ind R (fun _ : quotient _ =&gt; B)) with dclass.</pre>
 </div>
@@ -729,7 +729,7 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 146
 Time: 0.002s">
-<div class="time" style="width: 1.0526315789474%"></div>
+<div class="time" style="width: 1.1363636363636%"></div>
 <pre> destruct (related_classes_eq R H').</pre>
 </div>
 <div class="code" title="File: quotient.v
@@ -750,7 +750,7 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 149
 Time: 0.001s">
-<div class="time" style="width: 0.52631578947368%"></div>
+<div class="time" style="width: 0.56818181818182%"></div>
 <pre>Definition quotient_rec2 {B : hSet} {dclass : (A -&gt; A -&gt; B)}:
     forall dequiv : (forall x x', R x x' -&gt; forall y y',  R y y' -&gt;
                                                           dclass x y = dclass x' y'),
@@ -780,8 +780,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: quotient.v
 Line: 156
-Time: 0.014s">
-<div class="time" style="width: 7.3684210526316%"></div>
+Time: 0.013s">
+<div class="time" style="width: 7.3863636363636%"></div>
 <pre>
     refine (quotient_rec
               (fun x =&gt; quotient_rec (dclass x) (dequiv0 x)) _).</pre>
@@ -795,8 +795,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: quotient.v
 Line: 159
-Time: 0.001s">
-<div class="time" style="width: 0.52631578947368%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     apply path_forall.</pre>
 </div>
@@ -809,7 +809,7 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 160
 Time: 0.003s">
-<div class="time" style="width: 1.5789473684211%"></div>
+<div class="time" style="width: 1.7045454545455%"></div>
 <pre>
     assert (dequiv1 : forall y : A,
                         quotient_rec (dclass x) (dequiv0 x) (class_of _ y) =
@@ -818,8 +818,8 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: quotient.v
 Line: 164
-Time: 0.025s">
-<div class="time" style="width: 13.157894736842%"></div>
+Time: 0.024s">
+<div class="time" style="width: 13.636363636364%"></div>
 <pre>
     refine (quotient_ind R (fun q =&gt;
                               quotient_rec (dclass x) (dequiv0 x) q =
@@ -835,7 +835,7 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 168
 Time: 0.013s">
-<div class="time" style="width: 6.8421052631579%"></div>
+<div class="time" style="width: 7.3863636363636%"></div>
 <pre> apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: quotient.v
@@ -850,7 +850,7 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 171
 Time: 0.001s">
-<div class="time" style="width: 0.52631578947368%"></div>
+<div class="time" style="width: 0.56818181818182%"></div>
 <pre>Definition quotient_ind_prop' : forall P : quotient R -&gt; Type,
                                   forall (Hprop' : forall x, IsHProp (P (class_of _ x))),
                                     (forall x, P (class_of _ x)) -&gt; forall y, P y.</pre>
@@ -884,14 +884,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: quotient.v
 Line: 176
-Time: 0.019s">
-<div class="time" style="width: 10%"></div>
+Time: 0.018s">
+<div class="time" style="width: 10.227272727273%"></div>
 <pre> simple refine (quotient_ind R (fun x =&gt; IsHSet (P x)) _ _); cbn beta; try exact _.</pre>
 </div>
 <div class="code" title="File: quotient.v
 Line: 176
 Time: 0.001s">
-<div class="time" style="width: 0.52631578947368%"></div>
+<div class="time" style="width: 0.56818181818182%"></div>
 <pre>
       intros; apply path_ishprop.</pre>
 </div>
@@ -947,7 +947,7 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 184
 Time: 0.011s">
-<div class="time" style="width: 5.7894736842105%"></div>
+<div class="time" style="width: 6.25%"></div>
 <pre>
     apply (quotient_ind_prop (fun y =&gt; merely (hfiber (class_of R) y))); try exact _.</pre>
 </div>
@@ -1010,7 +1010,7 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 193
 Time: 0.001s">
-<div class="time" style="width: 0.52631578947368%"></div>
+<div class="time" style="width: 0.56818181818182%"></div>
 <pre> f_ap.</pre>
 </div>
 <div class="code" title="File: quotient.v
@@ -1045,7 +1045,7 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 198
 Time: 0.001s">
-<div class="time" style="width: 0.52631578947368%"></div>
+<div class="time" style="width: 0.56818181818182%"></div>
 <pre>
     apply (quotient_rec _ H').</pre>
 </div>
@@ -1088,14 +1088,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: quotient.v
 Line: 206
-Time: 0.002s">
-<div class="time" style="width: 1.0526315789474%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intros [f Hf].</pre>
 </div>
 <div class="code" title="File: quotient.v
 Line: 206
-Time: 0.057s">
-<div class="time" style="width: 30%"></div>
+Time: 0.055s">
+<div class="time" style="width: 31.25%"></div>
 <pre>
       by apply equiv_path_sigma_hprop.</pre>
 </div>
@@ -1129,7 +1129,7 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 210
 Time: 0.014s">
-<div class="time" style="width: 7.3684210526316%"></div>
+<div class="time" style="width: 7.9545454545455%"></div>
 <pre> apply quotient_ind_prop';[apply _|reflexivity].</pre>
 </div>
 <div class="code" title="File: quotient.v
@@ -1156,8 +1156,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: quotient.v
 Line: 225
-Time: 0.009s">
-<div class="time" style="width: 4.7368421052632%"></div>
+Time: 0.008s">
+<div class="time" style="width: 4.5454545454545%"></div>
 <pre>End Equiv.</pre>
 </div>
 <div class="code" title="File: quotient.v
@@ -1171,7 +1171,7 @@ Section Functoriality.</pre>
 <div class="code" title="File: quotient.v
 Line: 227
 Time: 0.001s">
-<div class="time" style="width: 0.52631578947368%"></div>
+<div class="time" style="width: 0.56818181818182%"></div>
 <pre>
 
   Definition quotient_functor
@@ -1190,7 +1190,7 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 234
 Time: 0.001s">
-<div class="time" style="width: 0.52631578947368%"></div>
+<div class="time" style="width: 0.56818181818182%"></div>
 <pre>
     refine (quotient_rec R (class_of S o f) _).</pre>
 </div>
@@ -1227,7 +1227,7 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 241
 Time: 0.001s">
-<div class="time" style="width: 0.52631578947368%"></div>
+<div class="time" style="width: 0.56818181818182%"></div>
 <pre>
 
   Global Instance quotient_functor_isequiv
@@ -1272,8 +1272,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: quotient.v
 Line: 251
-Time: 0.003s">
-<div class="time" style="width: 1.5789473684211%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.1363636363636%"></div>
 <pre>
       abstract (do 2 rewrite eisretr; apply s).</pre>
 </div>
@@ -1286,8 +1286,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: quotient.v
 Line: 253
-Time: 0.026s">
-<div class="time" style="width: 13.684210526316%"></div>
+Time: 0.024s">
+<div class="time" style="width: 13.636363636364%"></div>
 <pre> intros x; revert x; simple refine (quotient_ind S _ _ _).</pre>
 </div>
 <div class="code" title="File: quotient.v
@@ -1319,7 +1319,7 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 255
 Time: 0.013s">
-<div class="time" style="width: 6.8421052631579%"></div>
+<div class="time" style="width: 7.3863636363636%"></div>
 <pre> intros; apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: quotient.v
@@ -1331,8 +1331,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: quotient.v
 Line: 256
-Time: 0.02s">
-<div class="time" style="width: 10.526315789474%"></div>
+Time: 0.019s">
+<div class="time" style="width: 10.795454545455%"></div>
 <pre> intros x; revert x; simple refine (quotient_ind R _ _ _).</pre>
 </div>
 <div class="code" title="File: quotient.v
@@ -1363,8 +1363,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: quotient.v
 Line: 258
-Time: 0.014s">
-<div class="time" style="width: 7.3684210526316%"></div>
+Time: 0.013s">
+<div class="time" style="width: 7.3863636363636%"></div>
 <pre> intros; apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: quotient.v
@@ -1378,8 +1378,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: quotient.v
 Line: 261
-Time: 0.011s">
-<div class="time" style="width: 5.7894736842105%"></div>
+Time: 0.01s">
+<div class="time" style="width: 5.6818181818182%"></div>
 <pre>Definition quotient_functor_equiv
              (f : A -&gt; B) (fresp : forall x y, R x y &lt;-&gt; S (f x) (f y))
              `{IsEquiv _ _ f}
@@ -1390,7 +1390,7 @@ Time: 0.011s">
 <div class="code" title="File: quotient.v
 Line: 266
 Time: 0.006s">
-<div class="time" style="width: 3.1578947368421%"></div>
+<div class="time" style="width: 3.4090909090909%"></div>
 <pre>
 
   Definition quotient_functor_equiv'
@@ -1401,7 +1401,7 @@ Time: 0.006s">
 <div class="code" title="File: quotient.v
 Line: 271
 Time: 0.003s">
-<div class="time" style="width: 1.5789473684211%"></div>
+<div class="time" style="width: 1.7045454545455%"></div>
 <pre>
 
 End Functoriality.</pre>
@@ -1470,7 +1470,7 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 286
 Time: 0.001s">
-<div class="time" style="width: 0.52631578947368%"></div>
+<div class="time" style="width: 0.56818181818182%"></div>
 <pre>
 
   Theorem quotient_kernel_factor
@@ -1542,8 +1542,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: quotient.v
 Line: 299
-Time: 0.001s">
-<div class="time" style="width: 0.52631578947368%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.1363636363636%"></div>
 <pre> apply quotient_ind with f; try exact _.</pre>
 </div>
 <div class="code" title="File: quotient.v
@@ -1556,7 +1556,7 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 300
 Time: 0.001s">
-<div class="time" style="width: 0.52631578947368%"></div>
+<div class="time" style="width: 0.56818181818182%"></div>
 <pre> transitivity (f x).</pre>
 </div>
 <div class="code" title="File: quotient.v
@@ -1582,7 +1582,7 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 302
 Time: 0.005s">
-<div class="time" style="width: 2.6315789473684%"></div>
+<div class="time" style="width: 2.8409090909091%"></div>
 <pre> exact ((is_ker x y) ^-1 H).</pre>
 </div>
 <div class="code" title="File: quotient.v
@@ -1667,8 +1667,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: quotient.v
 Line: 310
-Time: 0.086s">
-<div class="time" style="width: 45.263157894737%"></div>
+Time: 0.082s">
+<div class="time" style="width: 46.590909090909%"></div>
 <pre> simple refine (quotient_ind R _ _ _).</pre>
 </div>
 <div class="code" title="File: quotient.v
@@ -1687,7 +1687,7 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 311
 Time: 0.065s">
-<div class="time" style="width: 34.210526315789%"></div>
+<div class="time" style="width: 36.931818181818%"></div>
 <pre>
           simple refine (quotient_ind R _ _ _).</pre>
 </div>
@@ -1747,8 +1747,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: quotient.v
 Line: 318
-Time: 0.052s">
-<div class="time" style="width: 27.368421052632%"></div>
+Time: 0.051s">
+<div class="time" style="width: 28.977272727273%"></div>
 <pre> intros; apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: quotient.v
@@ -1760,8 +1760,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: quotient.v
 Line: 319
-Time: 0.067s">
-<div class="time" style="width: 35.263157894737%"></div>
+Time: 0.068s">
+<div class="time" style="width: 38.636363636364%"></div>
 <pre> intros; apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: quotient.v
@@ -1773,14 +1773,14 @@ Time: 0s">
 <div class="code" title="File: quotient.v
 Line: 319
 Time: 0.001s">
-<div class="time" style="width: 0.52631578947368%"></div>
+<div class="time" style="width: 0.56818181818182%"></div>
 <pre>
       intros [x p] [y p'].</pre>
 </div>
 <div class="code" title="File: quotient.v
 Line: 320
-Time: 0.029s">
-<div class="time" style="width: 15.263157894737%"></div>
+Time: 0.033s">
+<div class="time" style="width: 18.75%"></div>
 <pre>
       apply path_sigma_hprop; simpl.</pre>
 </div>
@@ -1815,8 +1815,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: quotient.v
 Line: 325
-Time: 0.004s">
-<div class="time" style="width: 2.1052631578947%"></div>
+Time: 0.003s">
+<div class="time" style="width: 1.7045454545455%"></div>
 <pre>End Kernel.</pre>
 </div>
 <div class="code" title="File: quotient.v
