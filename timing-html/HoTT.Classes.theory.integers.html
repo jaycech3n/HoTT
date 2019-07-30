@@ -36,15 +36,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: integers.v
 Line: 1
-Time: 0.021s">
-<div class="time" style="width: 6.4024390243902%"></div>
+Time: 0.02s">
+<div class="time" style="width: 6.4308681672026%"></div>
 <pre>Require Import
   HoTT.Types.Universe
   HoTT.Basics.Decidable.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 3
-Time: 0.328s">
+Time: 0.311s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Require
@@ -53,7 +53,7 @@ Require
 <div class="code" title="File: integers.v
 Line: 5
 Time: 0.013s">
-<div class="time" style="width: 3.9634146341463%"></div>
+<div class="time" style="width: 4.1800643086817%"></div>
 <pre>
 Require Import
  HoTT.Classes.interfaces.naturals
@@ -72,8 +72,8 @@ Require Export
 </div>
 <div class="code" title="File: integers.v
 Line: 13
-Time: 0.005s">
-<div class="time" style="width: 1.5243902439024%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.2861736334405%"></div>
 <pre>
 
 
@@ -91,14 +91,14 @@ Proof.</pre>
 <div class="code" title="File: integers.v
 Line: 19
 Time: 0.001s">
-<div class="time" style="width: 0.30487804878049%"></div>
+<div class="time" style="width: 0.32154340836013%"></div>
 <pre>
 symmetry.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 20
 Time: 0.001s">
-<div class="time" style="width: 0.30487804878049%"></div>
+<div class="time" style="width: 0.32154340836013%"></div>
 <pre> apply integers_initial.</pre>
 </div>
 <div class="code" title="File: integers.v
@@ -113,7 +113,7 @@ Qed.
 <div class="code" title="File: integers.v
 Line: 22
 Time: 0.006s">
-<div class="time" style="width: 1.8292682926829%"></div>
+<div class="time" style="width: 1.9292604501608%"></div>
 <pre>Lemma to_ring_unique_alt `{Integers Z} `{Ring R} (f g: Z -&gt; R)
   `{!SemiRingPreserving f} `{!SemiRingPreserving g} x :
   f x = g x.</pre>
@@ -128,7 +128,7 @@ Proof.</pre>
 <div class="code" title="File: integers.v
 Line: 25
 Time: 0.008s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.572347266881%"></div>
 <pre>
 rewrite (to_ring_unique f), (to_ring_unique g);reflexivity.</pre>
 </div>
@@ -143,8 +143,8 @@ Qed.
 </div>
 <div class="code" title="File: integers.v
 Line: 28
-Time: 0.015s">
-<div class="time" style="width: 4.5731707317073%"></div>
+Time: 0.014s">
+<div class="time" style="width: 4.5016077170418%"></div>
 <pre>Lemma to_ring_involutive Z `{Integers Z} Z2 `{Integers Z2} x :
   integers_to_ring Z2 Z (integers_to_ring Z Z2 x) = x.</pre>
 </div>
@@ -157,15 +157,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 30
-Time: 0.006s">
-<div class="time" style="width: 1.8292682926829%"></div>
+Time: 0.005s">
+<div class="time" style="width: 1.6077170418006%"></div>
 <pre>
 change (Compose (integers_to_ring Z2 Z) (integers_to_ring Z Z2) x = id x).</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 31
 Time: 0.014s">
-<div class="time" style="width: 4.2682926829268%"></div>
+<div class="time" style="width: 4.5016077170418%"></div>
 <pre>
 apply to_ring_unique_alt;apply _.</pre>
 </div>
@@ -181,7 +181,7 @@ Qed.
 <div class="code" title="File: integers.v
 Line: 34
 Time: 0.006s">
-<div class="time" style="width: 1.8292682926829%"></div>
+<div class="time" style="width: 1.9292604501608%"></div>
 <pre>Lemma morphisms_involutive `{Integers Z} `{Ring R} (f: R -&gt; Z) (g: Z -&gt; R)
   `{!SemiRingPreserving f} `{!SemiRingPreserving g} x : f (g x) = x.</pre>
 </div>
@@ -195,7 +195,7 @@ Proof.</pre>
 <div class="code" title="File: integers.v
 Line: 36
 Time: 0.009s">
-<div class="time" style="width: 2.7439024390244%"></div>
+<div class="time" style="width: 2.8938906752412%"></div>
 <pre> exact (to_ring_unique_alt (f ∘ g) id _).</pre>
 </div>
 <div class="code" title="File: integers.v
@@ -209,7 +209,7 @@ Time: 0s">
 <div class="code" title="File: integers.v
 Line: 37
 Time: 0.013s">
-<div class="time" style="width: 3.9634146341463%"></div>
+<div class="time" style="width: 4.1800643086817%"></div>
 <pre>Lemma to_ring_twice `{Integers Z} `{Ring R1} `{Ring R2}
   (f : R1 -&gt; R2) (g : Z -&gt; R1) (h : Z -&gt; R2)
   `{!SemiRingPreserving f} `{!SemiRingPreserving g} `{!SemiRingPreserving h} x
@@ -225,7 +225,7 @@ Proof.</pre>
 <div class="code" title="File: integers.v
 Line: 41
 Time: 0.006s">
-<div class="time" style="width: 1.8292682926829%"></div>
+<div class="time" style="width: 1.9292604501608%"></div>
 <pre> exact (to_ring_unique_alt (f ∘ g) h _).</pre>
 </div>
 <div class="code" title="File: integers.v
@@ -238,8 +238,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: integers.v
 Line: 42
-Time: 0.003s">
-<div class="time" style="width: 0.91463414634146%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.64308681672026%"></div>
 <pre>Lemma to_ring_self `{Integers Z} (f : Z -&gt; Z) `{!SemiRingPreserving f} x : f x = x.</pre>
 </div>
 <div class="code" title="File: integers.v
@@ -251,8 +251,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 43
-Time: 0.005s">
-<div class="time" style="width: 1.5243902439024%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.2861736334405%"></div>
 <pre> exact (to_ring_unique_alt f id _).</pre>
 </div>
 <div class="code" title="File: integers.v
@@ -266,8 +266,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: integers.v
 Line: 46
-Time: 0.006s">
-<div class="time" style="width: 1.8292682926829%"></div>
+Time: 0.005s">
+<div class="time" style="width: 1.6077170418006%"></div>
 <pre>Lemma to_ring_injective `{Integers Z} `{Ring R} (f: R -&gt; Z) (g: Z -&gt; R)
   `{!SemiRingPreserving f} `{!SemiRingPreserving g}
   : Injective g.</pre>
@@ -295,8 +295,8 @@ change (id x = id y).</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 51
-Time: 0.042s">
-<div class="time" style="width: 12.80487804878%"></div>
+Time: 0.041s">
+<div class="time" style="width: 13.183279742765%"></div>
 <pre>
 rewrite &lt;-(to_ring_twice f g id x), &lt;-(to_ring_twice f g id y).</pre>
 </div>
@@ -319,7 +319,7 @@ Qed.
 <div class="code" title="File: integers.v
 Line: 55
 Time: 0.005s">
-<div class="time" style="width: 1.5243902439024%"></div>
+<div class="time" style="width: 1.6077170418006%"></div>
 <pre>Instance integers_to_integers_injective `{Integers Z} `{Integers Z2}
   (f: Z -&gt; Z2) `{!SemiRingPreserving f}
   : Injective f.</pre>
@@ -333,8 +333,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 58
-Time: 0.01s">
-<div class="time" style="width: 3.0487804878049%"></div>
+Time: 0.009s">
+<div class="time" style="width: 2.8938906752412%"></div>
 <pre> exact (to_ring_injective (integers_to_ring Z2 Z) _).</pre>
 </div>
 <div class="code" title="File: integers.v
@@ -348,7 +348,7 @@ Time: 0s">
 <div class="code" title="File: integers.v
 Line: 59
 Time: 0.004s">
-<div class="time" style="width: 1.219512195122%"></div>
+<div class="time" style="width: 1.2861736334405%"></div>
 <pre>Instance naturals_to_integers_injective `{Funext} `{Univalence}
   `{Integers@{i i i i i i i i} Z} `{Naturals@{i i i i i i i i} N}
   (f: N -&gt; Z) `{!SemiRingPreserving f}
@@ -371,14 +371,14 @@ intros x y E.</pre>
 <div class="code" title="File: integers.v
 Line: 64
 Time: 0.002s">
-<div class="time" style="width: 0.60975609756098%"></div>
+<div class="time" style="width: 0.64308681672026%"></div>
 <pre>
 apply (injective (cast N (NatPair.Z N))).</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 65
-Time: 0.1s">
-<div class="time" style="width: 30.487804878049%"></div>
+Time: 0.097s">
+<div class="time" style="width: 31.189710610932%"></div>
 <pre>
 rewrite &lt;-2!(naturals.to_semiring_twice (integers_to_ring Z (NatPair.Z N))
   f (cast N (NatPair.Z N))).</pre>
@@ -415,7 +415,7 @@ Time: 0s">
 <div class="code" title="File: integers.v
 Line: 71
 Time: 0.003s">
-<div class="time" style="width: 0.91463414634146%"></div>
+<div class="time" style="width: 0.96463022508039%"></div>
 <pre>
   Context `{Integers Z} `{Ring Z2}
     {Z2ap : Apart Z2} {Z2le Z2lt} `{!FullPseudoSemiRingOrder (A:=Z2) Z2le Z2lt}.</pre>
@@ -423,7 +423,7 @@ Time: 0.003s">
 <div class="code" title="File: integers.v
 Line: 73
 Time: 0.002s">
-<div class="time" style="width: 0.60975609756098%"></div>
+<div class="time" style="width: 0.64308681672026%"></div>
 <pre>
   Context (f : Z -&gt; Z2) `{!IsEquiv f} `{!SemiRingPreserving f}
     `{!SemiRingPreserving (f^-1)}.</pre>
@@ -440,7 +440,7 @@ Time: 0s">
 <div class="code" title="File: integers.v
 Line: 78
 Time: 0.001s">
-<div class="time" style="width: 0.30487804878049%"></div>
+<div class="time" style="width: 0.32154340836013%"></div>
 <pre>Definition retract_is_int_to_ring : IntegersToRing Z2 := fun Z2 _ _ _ _ _ _ =&gt;
     integers_to_ring Z Z2 ∘ f^-1.</pre>
 </div>
@@ -461,8 +461,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: integers.v
 Line: 82
-Time: 0.039s">
-<div class="time" style="width: 11.890243902439%"></div>
+Time: 0.038s">
+<div class="time" style="width: 12.218649517685%"></div>
 <pre>
 
     Instance: SemiRingPreserving (integers_to_ring Z R ∘ f^-1) := {}.</pre>
@@ -470,14 +470,14 @@ Time: 0.039s">
 <div class="code" title="File: integers.v
 Line: 84
 Time: 0.001s">
-<div class="time" style="width: 0.30487804878049%"></div>
+<div class="time" style="width: 0.32154340836013%"></div>
 <pre>
     Context (h :  Z2 -&gt; R) `{!SemiRingPreserving h}.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 85
 Time: 0.001s">
-<div class="time" style="width: 0.30487804878049%"></div>
+<div class="time" style="width: 0.32154340836013%"></div>
 <pre>
 
     Lemma same_morphism x : (integers_to_ring Z R ∘ f^-1) x = h x.</pre>
@@ -492,7 +492,7 @@ Time: 0s">
 <div class="code" title="File: integers.v
 Line: 88
 Time: 0.002s">
-<div class="time" style="width: 0.60975609756098%"></div>
+<div class="time" style="width: 0.64308681672026%"></div>
 <pre>
     transitivity ((h ∘ (f ∘ f^-1)) x).</pre>
 </div>
@@ -506,13 +506,13 @@ Time: 0s">
 <div class="code" title="File: integers.v
 Line: 90
 Time: 0.001s">
-<div class="time" style="width: 0.30487804878049%"></div>
+<div class="time" style="width: 0.32154340836013%"></div>
 <pre> symmetry.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 90
 Time: 0.006s">
-<div class="time" style="width: 1.8292682926829%"></div>
+<div class="time" style="width: 1.9292604501608%"></div>
 <pre> apply (to_ring_unique (h ∘ f)).</pre>
 </div>
 <div class="code" title="File: integers.v
@@ -579,8 +579,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: integers.v
 Line: 98
-Time: 0.011s">
-<div class="time" style="width: 3.3536585365854%"></div>
+Time: 0.01s">
+<div class="time" style="width: 3.2154340836013%"></div>
 <pre>
   split;try apply _.</pre>
 </div>
@@ -600,7 +600,7 @@ Time: 0s">
 <div class="code" title="File: integers.v
 Line: 100
 Time: 0.012s">
-<div class="time" style="width: 3.6585365853659%"></div>
+<div class="time" style="width: 3.8585209003215%"></div>
 <pre> apply _.</pre>
 </div>
 <div class="code" title="File: integers.v
@@ -613,7 +613,7 @@ Time: 0s">
 <div class="code" title="File: integers.v
 Line: 101
 Time: 0.001s">
-<div class="time" style="width: 0.30487804878049%"></div>
+<div class="time" style="width: 0.32154340836013%"></div>
 <pre> intros;apply same_morphism;apply _.</pre>
 </div>
 <div class="code" title="File: integers.v
@@ -626,7 +626,7 @@ Time: 0s">
 <div class="code" title="File: integers.v
 Line: 102
 Time: 0.001s">
-<div class="time" style="width: 0.30487804878049%"></div>
+<div class="time" style="width: 0.32154340836013%"></div>
 <pre>End retract_is_int.</pre>
 </div>
 <div class="code" title="File: integers.v
@@ -640,7 +640,7 @@ Section int_to_int_iso.</pre>
 <div class="code" title="File: integers.v
 Line: 104
 Time: 0.002s">
-<div class="time" style="width: 0.60975609756098%"></div>
+<div class="time" style="width: 0.64308681672026%"></div>
 <pre>
 
 Context `{Integers Z1} `{Integers Z2}.</pre>
@@ -648,7 +648,7 @@ Context `{Integers Z1} `{Integers Z2}.</pre>
 <div class="code" title="File: integers.v
 Line: 106
 Time: 0.002s">
-<div class="time" style="width: 0.60975609756098%"></div>
+<div class="time" style="width: 0.64308681672026%"></div>
 <pre>
 
 Global Instance int_to_int_equiv : IsEquiv (integers_to_ring Z1 Z2).</pre>
@@ -663,7 +663,7 @@ Proof.</pre>
 <div class="code" title="File: integers.v
 Line: 109
 Time: 0.005s">
-<div class="time" style="width: 1.5243902439024%"></div>
+<div class="time" style="width: 1.6077170418006%"></div>
 <pre>
 apply Equivalences.isequiv_adjointify with (integers_to_ring Z2 Z1);
 red;apply (to_ring_involutive _ _).</pre>
@@ -680,7 +680,7 @@ Defined.
 <div class="code" title="File: integers.v
 Line: 113
 Time: 0.001s">
-<div class="time" style="width: 0.30487804878049%"></div>
+<div class="time" style="width: 0.32154340836013%"></div>
 <pre>End int_to_int_iso.</pre>
 </div>
 <div class="code" title="File: integers.v
@@ -716,8 +716,8 @@ Context (Z : Type@{U}) `{Integers@{U U U U U U U U} Z}.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 120
-Time: 0.003s">
-<div class="time" style="width: 0.91463414634146%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.64308681672026%"></div>
 <pre>
 
 Lemma from_int_stmt  (Z':Type@{U}) `{Integers@{U U U U U U U U} Z'}
@@ -733,8 +733,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 125
-Time: 0.049s">
-<div class="time" style="width: 14.939024390244%"></div>
+Time: 0.048s">
+<div class="time" style="width: 15.434083601286%"></div>
 <pre>
 apply Rings.iso_leibnitz with (integers_to_ring Z' Z);apply _.</pre>
 </div>
@@ -762,8 +762,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 129
-Time: 0.087s">
-<div class="time" style="width: 26.524390243902%"></div>
+Time: 0.082s">
+<div class="time" style="width: 26.366559485531%"></div>
 <pre>
 apply decidablepaths_equiv with (NatPair.Z nat)
   (integers_to_ring (NatPair.Z nat) Z);apply _.</pre>
@@ -780,7 +780,7 @@ Qed.
 <div class="code" title="File: integers.v
 Line: 133
 Time: 0.003s">
-<div class="time" style="width: 0.91463414634146%"></div>
+<div class="time" style="width: 0.96463022508039%"></div>
 <pre>Global Instance slow_int_abs `{Naturals N} : IntAbs Z N | 10.</pre>
 </div>
 <div class="code" title="File: integers.v
@@ -799,8 +799,8 @@ intros x.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 135
-Time: 0.058s">
-<div class="time" style="width: 17.682926829268%"></div>
+Time: 0.056s">
+<div class="time" style="width: 18.006430868167%"></div>
 <pre>
 destruct (int_abs_sig (NatPair.Z N) N (integers_to_ring Z (NatPair.Z N) x))
 as [[n E]|[n E]];[left|right];exists n.</pre>
@@ -814,21 +814,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: integers.v
 Line: 138
-Time: 0.028s">
-<div class="time" style="width: 8.5365853658537%"></div>
+Time: 0.027s">
+<div class="time" style="width: 8.6816720257235%"></div>
 <pre> apply (injective (integers_to_ring Z (NatPair.Z N))).</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 138
 Time: 0.001s">
-<div class="time" style="width: 0.30487804878049%"></div>
+<div class="time" style="width: 0.32154340836013%"></div>
 <pre>
   rewrite &lt;-E.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 139
-Time: 0.025s">
-<div class="time" style="width: 7.6219512195122%"></div>
+Time: 0.023s">
+<div class="time" style="width: 7.395498392283%"></div>
 <pre> apply (naturals.to_semiring_twice _ _ _).</pre>
 </div>
 <div class="code" title="File: integers.v
@@ -840,21 +840,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: integers.v
 Line: 140
-Time: 0.025s">
-<div class="time" style="width: 7.6219512195122%"></div>
+Time: 0.023s">
+<div class="time" style="width: 7.395498392283%"></div>
 <pre> apply (injective (integers_to_ring Z (NatPair.Z N))).</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 140
-Time: 0.026s">
-<div class="time" style="width: 7.9268292682927%"></div>
+Time: 0.025s">
+<div class="time" style="width: 8.0385852090032%"></div>
 <pre>
   rewrite rings.preserves_negate, &lt;-E.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 141
 Time: 0.024s">
-<div class="time" style="width: 7.3170731707317%"></div>
+<div class="time" style="width: 7.7170418006431%"></div>
 <pre>
   apply (naturals.to_semiring_twice _ _ _).</pre>
 </div>
@@ -890,14 +890,14 @@ intros E.</pre>
 <div class="code" title="File: integers.v
 Line: 146
 Time: 0.001s">
-<div class="time" style="width: 0.30487804878049%"></div>
+<div class="time" style="width: 0.32154340836013%"></div>
 <pre>
 apply (rings.is_ne_0 (1:nat)).</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 147
 Time: 0.008s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.572347266881%"></div>
 <pre>
 apply (injective (naturals_to_semiring nat Z)).</pre>
 </div>
@@ -939,8 +939,8 @@ intros x y E.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 153
-Time: 0.023s">
-<div class="time" style="width: 7.0121951219512%"></div>
+Time: 0.022s">
+<div class="time" style="width: 7.0739549839228%"></div>
 <pre>
 destruct (zero_product (integers_to_ring Z (NatPair.Z nat) x)
   (integers_to_ring Z (NatPair.Z nat) y)).</pre>
@@ -955,7 +955,7 @@ Time: 0s">
 <div class="code" title="File: integers.v
 Line: 156
 Time: 0.016s">
-<div class="time" style="width: 4.8780487804878%"></div>
+<div class="time" style="width: 5.1446945337621%"></div>
 <pre> rewrite &lt;-(rings.preserves_mult (A:=Z)), E, (rings.preserves_0 (A:=Z)).</pre>
 </div>
 <div class="code" title="File: integers.v
@@ -980,14 +980,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: integers.v
 Line: 158
-Time: 0.02s">
-<div class="time" style="width: 6.0975609756098%"></div>
+Time: 0.019s">
+<div class="time" style="width: 6.1093247588424%"></div>
 <pre> apply (injective (integers_to_ring Z (NatPair.Z nat))).</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 158
-Time: 0.009s">
-<div class="time" style="width: 2.7439024390244%"></div>
+Time: 0.008s">
+<div class="time" style="width: 2.572347266881%"></div>
 <pre>
   rewrite rings.preserves_0.</pre>
 </div>
@@ -1013,13 +1013,13 @@ Time: 0s">
 <div class="code" title="File: integers.v
 Line: 160
 Time: 0.02s">
-<div class="time" style="width: 6.0975609756098%"></div>
+<div class="time" style="width: 6.4308681672026%"></div>
 <pre> apply (injective (integers_to_ring Z (NatPair.Z nat))).</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 160
 Time: 0.009s">
-<div class="time" style="width: 2.7439024390244%"></div>
+<div class="time" style="width: 2.8938906752412%"></div>
 <pre>
   rewrite rings.preserves_0.</pre>
 </div>
@@ -1041,13 +1041,13 @@ Qed.
 <div class="code" title="File: integers.v
 Line: 163
 Time: 0.002s">
-<div class="time" style="width: 0.60975609756098%"></div>
+<div class="time" style="width: 0.64308681672026%"></div>
 <pre>Global Instance int_integral_domain : IntegralDomain Z := {}.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 163
 Time: 0.018s">
-<div class="time" style="width: 5.4878048780488%"></div>
+<div class="time" style="width: 5.7877813504823%"></div>
 <pre>
 
 End contents.</pre>

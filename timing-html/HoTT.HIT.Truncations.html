@@ -40,14 +40,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Truncations.v
 Line: 4
-Time: 0.049s">
-<div class="time" style="width: 20.502092050209%"></div>
+Time: 0.045s">
+<div class="time" style="width: 20.454545454545%"></div>
 <pre>Require Import HoTT.Basics Types.Sigma Types.Universe TruncType HProp.</pre>
 </div>
 <div class="code" title="File: Truncations.v
 Line: 4
-Time: 0.155s">
-<div class="time" style="width: 64.853556485356%"></div>
+Time: 0.14s">
+<div class="time" style="width: 63.636363636364%"></div>
 <pre>
 Require Import Modalities.Modality Modalities.Identity.</pre>
 </div>
@@ -149,7 +149,7 @@ Admitted.</pre>
 <div class="code" title="File: Truncations.v
 Line: 33
 Time: 0.002s">
-<div class="time" style="width: 0.83682008368201%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
 
 Definition Trunc_ind {n A}
@@ -178,7 +178,7 @@ Time: 0s">
 <div class="code" title="File: Truncations.v
 Line: 43
 Time: 0.002s">
-<div class="time" style="width: 0.83682008368201%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>Definition Trunc_rec {n A X} `{IsTrunc n X}
   : (A -&gt; X) -&gt; (Trunc n A -&gt; X)
 := Trunc_ind (fun _ =&gt; X).</pre>
@@ -280,7 +280,7 @@ Time: 0s">
 <div class="code" title="File: Truncations.v
 Line: 67
 Time: 0.001s">
-<div class="time" style="width: 0.418410041841%"></div>
+<div class="time" style="width: 0.45454545454545%"></div>
 <pre>
 
   Definition inO_equiv_inO (n : Modality@{u u'})
@@ -325,7 +325,7 @@ Time: 0s">
 <div class="code" title="File: Truncations.v
 Line: 82
 Time: 0.001s">
-<div class="time" style="width: 0.418410041841%"></div>
+<div class="time" style="width: 0.45454545454545%"></div>
 <pre>Definition O_ind_internal
   : forall (n : Modality@{u a})
            (A : Type@{i}) (B : O_reflector n A -&gt; Type@{j})
@@ -337,8 +337,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Truncations.v
 Line: 89
-Time: 0.002s">
-<div class="time" style="width: 0.83682008368201%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.45454545454545%"></div>
 <pre>
 
   Definition O_ind_beta_internal (n : Modality@{u u'})
@@ -365,8 +365,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Truncations.v
 Line: 99
-Time: 0.004s">
-<div class="time" style="width: 1.673640167364%"></div>
+Time: 0.005s">
+<div class="time" style="width: 2.2727272727273%"></div>
 <pre>
     unfold In in *; exact _.</pre>
 </div>
@@ -382,7 +382,7 @@ Time: 0s">
 <div class="code" title="File: Truncations.v
 Line: 102
 Time: 0.001s">
-<div class="time" style="width: 0.418410041841%"></div>
+<div class="time" style="width: 0.45454545454545%"></div>
 <pre>End Truncation_Modalities.</pre>
 </div>
 <div class="code" title="File: Truncations.v
@@ -395,8 +395,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Truncations.v
 Line: 104
-Time: 0.112s">
-<div class="time" style="width: 46.861924686192%"></div>
+Time: 0.103s">
+<div class="time" style="width: 46.818181818182%"></div>
 <pre>Module Import TrM := Modalities_Theory Truncation_Modalities.</pre>
 </div>
 <div class="code" title="File: Truncations.v
@@ -461,7 +461,7 @@ Time: 0s">
 <div class="code" title="File: Truncations.v
 Line: 115
 Time: 0.001s">
-<div class="time" style="width: 0.418410041841%"></div>
+<div class="time" style="width: 0.45454545454545%"></div>
 <pre>
 
   Global Instance isequiv_tr A `{IsTrunc n A} : IsEquiv (@tr n A)
@@ -469,8 +469,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Truncations.v
 Line: 118
-Time: 0.006s">
-<div class="time" style="width: 2.510460251046%"></div>
+Time: 0.005s">
+<div class="time" style="width: 2.2727272727273%"></div>
 <pre>
 
   Definition equiv_tr (A : Type) `{IsTrunc n A}
@@ -480,7 +480,7 @@ Time: 0.006s">
 <div class="code" title="File: Truncations.v
 Line: 122
 Time: 0.005s">
-<div class="time" style="width: 2.092050209205%"></div>
+<div class="time" style="width: 2.2727272727273%"></div>
 <pre>
 
   Definition untrunc_istrunc {A : Type} `{IsTrunc n A}
@@ -500,15 +500,15 @@ Time: 0s">
 <div class="code" title="File: Truncations.v
 Line: 130
 Time: 0.001s">
-<div class="time" style="width: 0.418410041841%"></div>
+<div class="time" style="width: 0.45454545454545%"></div>
 <pre>Definition Trunc_functor {X Y : Type} (f : X -&gt; Y)
   : Tr n X -&gt; Tr n Y
   := O_functor n f.</pre>
 </div>
 <div class="code" title="File: Truncations.v
 Line: 132
-Time: 0.002s">
-<div class="time" style="width: 0.83682008368201%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.45454545454545%"></div>
 <pre>
 
   Global Instance Trunc_functor_isequiv {X Y : Type} (f : X -&gt; Y) `{IsEquiv _ _ f}
@@ -518,7 +518,7 @@ Time: 0.002s">
 <div class="code" title="File: Truncations.v
 Line: 136
 Time: 0.001s">
-<div class="time" style="width: 0.418410041841%"></div>
+<div class="time" style="width: 0.45454545454545%"></div>
 <pre>
 
   Definition Trunc_functor_equiv {X Y : Type} (f : X &lt;~&gt; Y)
@@ -527,8 +527,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Truncations.v
 Line: 140
-Time: 0.005s">
-<div class="time" style="width: 2.092050209205%"></div>
+Time: 0.006s">
+<div class="time" style="width: 2.7272727272727%"></div>
 <pre>
 
   Definition Trunc_functor_compose {X Y Z} (f : X -&gt; Y) (g : Y -&gt; Z)
@@ -537,8 +537,8 @@ Time: 0.005s">
 </div>
 <div class="code" title="File: Truncations.v
 Line: 144
-Time: 0.001s">
-<div class="time" style="width: 0.418410041841%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
 
   Definition Trunc_functor_idmap (X : Type)
@@ -548,7 +548,7 @@ Time: 0.001s">
 <div class="code" title="File: Truncations.v
 Line: 148
 Time: 0.002s">
-<div class="time" style="width: 0.83682008368201%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
 
   Definition isequiv_Trunc_functor {X Y} (f : X -&gt; Y) `{IsEquiv _ _ f}
@@ -558,7 +558,7 @@ Time: 0.002s">
 <div class="code" title="File: Truncations.v
 Line: 152
 Time: 0.002s">
-<div class="time" style="width: 0.83682008368201%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
 
   Definition equiv_Trunc_prod_cmp `{Funext} {X Y}
@@ -567,8 +567,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Truncations.v
 Line: 156
-Time: 0.056s">
-<div class="time" style="width: 23.430962343096%"></div>
+Time: 0.052s">
+<div class="time" style="width: 23.636363636364%"></div>
 <pre>
 
 End TruncationModality.</pre>
@@ -785,8 +785,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Truncations.v
 Line: 201
-Time: 0.001s">
-<div class="time" style="width: 0.418410041841%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition hexists {X} (P : X -&gt; Type) : hProp := merely (sigT P).</pre>
 </div>
 <div class="code" title="File: Truncations.v
@@ -830,8 +830,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Truncations.v
 Line: 210
-Time: 0.006s">
-<div class="time" style="width: 2.510460251046%"></div>
+Time: 0.005s">
+<div class="time" style="width: 2.2727272727273%"></div>
 <pre>
   refine (@contr_trunc_conn -1 A _ _); try assumption.</pre>
 </div>
@@ -955,7 +955,7 @@ Time: 0s">
 <div class="code" title="File: Truncations.v
 Line: 242
 Time: 0.001s">
-<div class="time" style="width: 0.418410041841%"></div>
+<div class="time" style="width: 0.45454545454545%"></div>
 <pre>Definition equiv_path_Tr `{Univalence} {n A} (x y : A)
 : Tr n (x = y) &lt;~&gt; (tr x = tr y :&gt; Tr n.+1 A).</pre>
 </div>
@@ -989,8 +989,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Truncations.v
 Line: 247
-Time: 0.114s">
-<div class="time" style="width: 47.698744769874%"></div>
+Time: 0.106s">
+<div class="time" style="width: 48.181818181818%"></div>
 <pre> intros z w; strip_truncations.</pre>
 </div>
 <div class="code" title="File: Truncations.v
@@ -1055,8 +1055,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Truncations.v
 Line: 253
-Time: 0.073s">
-<div class="time" style="width: 30.543933054393%"></div>
+Time: 0.067s">
+<div class="time" style="width: 30.454545454545%"></div>
 <pre> intros z; strip_truncations; simpl.</pre>
 </div>
 <div class="code" title="File: Truncations.v
@@ -1094,8 +1094,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Truncations.v
 Line: 256
-Time: 0.225s">
-<div class="time" style="width: 94.142259414226%"></div>
+Time: 0.207s">
+<div class="time" style="width: 94.090909090909%"></div>
 <pre>
     strip_truncations.</pre>
 </div>
@@ -1108,8 +1108,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Truncations.v
 Line: 258
-Time: 0.011s">
-<div class="time" style="width: 4.602510460251%"></div>
+Time: 0.01s">
+<div class="time" style="width: 4.5454545454545%"></div>
 <pre> apply Trunc_rec, (ap tr).</pre>
 </div>
 <div class="code" title="File: Truncations.v
@@ -1121,7 +1121,7 @@ Time: 0s">
 <div class="code" title="File: Truncations.v
 Line: 258
 Time: 0.001s">
-<div class="time" style="width: 0.418410041841%"></div>
+<div class="time" style="width: 0.45454545454545%"></div>
 <pre>
   pose (encode := (fun z w p =&gt; transport (code z) p (idcode z))
                   : (forall z w, z = w -&gt; code z w)).</pre>
@@ -1149,13 +1149,13 @@ Time: 0s">
 <div class="code" title="File: Truncations.v
 Line: 262
 Time: 0.001s">
-<div class="time" style="width: 0.418410041841%"></div>
+<div class="time" style="width: 0.45454545454545%"></div>
 <pre> destruct p.</pre>
 </div>
 <div class="code" title="File: Truncations.v
 Line: 262
-Time: 0.191s">
-<div class="time" style="width: 79.916317991632%"></div>
+Time: 0.177s">
+<div class="time" style="width: 80.454545454545%"></div>
 <pre>
     strip_truncations.</pre>
 </div>
@@ -1174,35 +1174,35 @@ Time: 0s">
 </div>
 <div class="code" title="File: Truncations.v
 Line: 264
-Time: 0.235s">
-<div class="time" style="width: 98.326359832636%"></div>
+Time: 0.212s">
+<div class="time" style="width: 96.363636363636%"></div>
 <pre> revert z; refine (Trunc_ind _ _); intro z.</pre>
 </div>
 <div class="code" title="File: Truncations.v
 Line: 264
-Time: 0.239s">
+Time: 0.22s">
 <div class="time" style="width: 100%"></div>
 <pre>
     revert w; refine (Trunc_ind _ _); intro w.</pre>
 </div>
 <div class="code" title="File: Truncations.v
 Line: 265
-Time: 0.004s">
-<div class="time" style="width: 1.673640167364%"></div>
+Time: 0.003s">
+<div class="time" style="width: 1.3636363636364%"></div>
 <pre>
     intros c; simpl in *.</pre>
 </div>
 <div class="code" title="File: Truncations.v
 Line: 266
-Time: 0.075s">
-<div class="time" style="width: 31.380753138075%"></div>
+Time: 0.067s">
+<div class="time" style="width: 30.454545454545%"></div>
 <pre>
     strip_truncations.</pre>
 </div>
 <div class="code" title="File: Truncations.v
 Line: 267
 Time: 0.002s">
-<div class="time" style="width: 0.83682008368201%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre> destruct c.</pre>
 </div>
 <div class="code" title="File: Truncations.v

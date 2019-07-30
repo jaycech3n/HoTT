@@ -40,14 +40,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Interval.v
 Line: 4
-Time: 0.02s">
+Time: 0.016s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.Basics.</pre>
 </div>
 <div class="code" title="File: Interval.v
 Line: 4
-Time: 0.013s">
-<div class="time" style="width: 65%"></div>
+Time: 0.011s">
+<div class="time" style="width: 68.75%"></div>
 <pre>
 Require Import Types.Sigma Types.Forall Types.Paths.</pre>
 </div>
@@ -87,8 +87,8 @@ Axiom seg : zero = one.</pre>
 </div>
 <div class="code" title="File: Interval.v
 Line: 15
-Time: 0.002s">
-<div class="time" style="width: 10%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
 
 Definition interval_ind (P : interval -&gt; Type)
@@ -101,8 +101,8 @@ Definition interval_ind (P : interval -&gt; Type)
 </div>
 <div class="code" title="File: Interval.v
 Line: 23
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.006s">
+<div class="time" style="width: 37.5%"></div>
 <pre>
 
 Axiom interval_ind_beta_seg : forall (P : interval -&gt; Type)
@@ -136,15 +136,15 @@ reflexivity.
 <div class="code" title="File: Interval.v
 Line: 38
 Time: 0.001s">
-<div class="time" style="width: 5%"></div>
+<div class="time" style="width: 6.25%"></div>
 <pre>Definition interval_rec (P : Type) (a b : P) (p : a = b)
   : interval -&gt; P
   := interval_ind (fun _ =&gt; P) a b (transport_const _ _ @ p).</pre>
 </div>
 <div class="code" title="File: Interval.v
 Line: 40
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
 
 Definition interval_rec_beta_seg (P : Type) (a b : P) (p : a = b)
@@ -167,14 +167,14 @@ Time: 0s">
 <div class="code" title="File: Interval.v
 Line: 45
 Time: 0.001s">
-<div class="time" style="width: 5%"></div>
+<div class="time" style="width: 6.25%"></div>
 <pre>
   refine ((apD_const (interval_ind (fun _ =&gt; P) a b _) seg)^ @ _).</pre>
 </div>
 <div class="code" title="File: Interval.v
 Line: 46
-Time: 0.001s">
-<div class="time" style="width: 5%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   refine (interval_ind_beta_seg (fun _ =&gt; P) _ _ _).</pre>
 </div>
@@ -218,8 +218,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Interval.v
 Line: 54
-Time: 0.001s">
-<div class="time" style="width: 5%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   refine (transport_paths_r _ _ @ concat_1p _).</pre>
 </div>
