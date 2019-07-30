@@ -34,8 +34,12 @@
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.Types.Sigma.html#"><span class="id" title="library">Types.Sigma</span></a> <a class="idref" href="HoTT.Types.Forall.html#"><span class="id" title="library">Types.Forall</span></a> <a class="idref" href="HoTT.Types.Paths.html#"><span class="id" title="library">Types.Paths</span></a> <a class="idref" href="HoTT.Types.Bool.html#"><span class="id" title="library">Types.Bool</span></a>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.HProp.html#"><span class="id" title="library">HProp</span></a> <a class="idref" href="HoTT.NullHomotopy.html#"><span class="id" title="library">NullHomotopy</span></a>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.HIT.Suspension.html#"><span class="id" title="library">HIT.Suspension</span></a> <a class="idref" href="HoTT.HIT.Circle.html#"><span class="id" title="library">HIT.Circle</span></a> <a class="idref" href="HoTT.HIT.TwoSphere.html#"><span class="id" title="library">HIT.TwoSphere</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.Pointed.html#"><span class="id" title="library">Pointed</span></a>.<br/>
+
+<br/>
 <span class="id" title="keyword">Local Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">trunc_scope</span>.<br/>
 <span class="id" title="keyword">Local Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">path_scope</span>.<br/>
+<span class="id" title="keyword">Local Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">pointed_scope</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Generalizable</span> <span class="id" title="keyword">Variables</span> <span class="id" title="var">X</span> <span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">f</span> <span class="id" title="var">g</span> <span class="id" title="var">n</span>.<br/>
@@ -62,11 +66,25 @@
 </div>
 
 <div class="doc">
-<a name="lab381"></a><h2 class="section">Explicit equivalences in low dimensions</h2>
+<a name="lab381"></a><h2 class="section">Pointed sphere for non-negative dimensions</h2>
+
+</div>
+<div class="code">
+<span class="id" title="keyword">Definition</span> <a name="psphere"><span class="id" title="definition">psphere</span></a> (<span class="id" title="var">n</span> : <a class="idref" href="Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>) : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">srefine</span> (<a class="idref" href="HoTT.Basics.Overture.html#Build_pType"><span class="id" title="constructor">Build_pType</span></a> (<a class="idref" href="HoTT.HIT.Spheres.html#Sphere"><span class="id" title="definition">Sphere</span></a> <span class="id" title="var">n</span>) <span class="id" title="var">_</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">repeat</span> (<span class="id" title="tactic">destruct</span> <span class="id" title="var">n</span>; <span class="id" title="tactic">try</span> <span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.HIT.Suspension.html#North"><span class="id" title="definition">North</span></a>).<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+<a name="lab382"></a><h2 class="section">Explicit equivalences in low dimensions</h2>
 
 <div class="paragraph"> </div>
 
-<a name="lab382"></a><h3 class="section"><span class="inlinecode"><a class="idref" href="HoTT.HIT.Spheres.html#Sphere"><span class="id" title="definition">Sphere</span></a></span> <span class="inlinecode">0</span></h3>
+<a name="lab383"></a><h3 class="section"><span class="inlinecode"><a class="idref" href="HoTT.HIT.Spheres.html#Sphere"><span class="id" title="definition">Sphere</span></a></span> <span class="inlinecode">0</span></h3>
 
 </div>
 <div class="code">
@@ -93,7 +111,7 @@
 </div>
 
 <div class="doc">
-<a name="lab383"></a><h3 class="section"><span class="inlinecode"><a class="idref" href="HoTT.HIT.Spheres.html#Sphere"><span class="id" title="definition">Sphere</span></a></span> <span class="inlinecode">1</span></h3>
+<a name="lab384"></a><h3 class="section"><span class="inlinecode"><a class="idref" href="HoTT.HIT.Spheres.html#Sphere"><span class="id" title="definition">Sphere</span></a></span> <span class="inlinecode">1</span></h3>
 
 </div>
 <div class="code">
@@ -133,10 +151,20 @@
 <span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
+<span class="id" title="keyword">Lemma</span> <a name="pequiv_pSph1_to_S1"><span class="id" title="lemma">pequiv_pSph1_to_S1</span></a> : <a class="idref" href="HoTT.HIT.Spheres.html#psphere"><span class="id" title="definition">psphere</span></a> 1 <a class="idref" href="HoTT.Pointed.html#103880150f1b8a9c385f8c09ab3e01b0"><span class="id" title="notation">&lt;~&gt;*</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Build_pType"><span class="id" title="constructor">Build_pType</span></a> <a class="idref" href="HoTT.HIT.Circle.html#S1"><span class="id" title="definition">S1</span></a> <a class="idref" href="HoTT.HIT.Circle.html#base"><span class="id" title="definition">Circle.base</span></a>.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">serapply</span> <a class="idref" href="HoTT.Pointed.html#Build_pEquiv"><span class="id" title="constructor">Build_pEquiv</span></a>.<br/>
+&nbsp;&nbsp;1: <span class="id" title="var">serapply</span> <a class="idref" href="HoTT.Pointed.html#Build_pMap"><span class="id" title="constructor">Build_pMap</span></a>.<br/>
+&nbsp;&nbsp;1: <span class="id" title="var">serapply</span> <a class="idref" href="HoTT.HIT.Spheres.html#Sph1_to_S1"><span class="id" title="definition">Sph1_to_S1</span></a>.<br/>
+&nbsp;&nbsp;1: <span class="id" title="tactic">reflexivity</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">exact</span> <span class="id" title="var">_</span>.<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
 </div>
 
 <div class="doc">
-<a name="lab384"></a><h3 class="section"><span class="inlinecode"><a class="idref" href="HoTT.HIT.Spheres.html#Sphere"><span class="id" title="definition">Sphere</span></a></span> <span class="inlinecode">2</span></h3>
+<a name="lab385"></a><h3 class="section"><span class="inlinecode"><a class="idref" href="HoTT.HIT.Spheres.html#Sphere"><span class="id" title="definition">Sphere</span></a></span> <span class="inlinecode">2</span></h3>
 
 </div>
 <div class="code">
@@ -286,7 +314,7 @@
 </div>
 
 <div class="doc">
-<a name="lab385"></a><h2 class="section">Truncatedness via spheres</h2>
+<a name="lab386"></a><h2 class="section">Truncatedness via spheres</h2>
 
 <div class="paragraph"> </div>
 

@@ -533,22 +533,22 @@
           
 
             i = 103;
-            data = "1 subgoal (ID 103)	  	  n : nat	  k : Fin n	  ============================	  fin_transpose_last_with n (inl k) (inr tt) = inl k	";
+            data = "1 subgoal (ID 103)	  	  n : nat	  k : Fin n	  ============================	  fin_transpose_last_with n (inl k) (inr tt) = inl k	2 subgoals (ID 129)	  	  k : Fin 0	  ============================	  Empty_rect (fun _ : Empty => Empty + Unit <~> Empty + Unit) k (inr tt) =	  inl k		subgoal 2 (ID 138) is:	 fin_transpose_last_with n.+1 (inl k) (inr tt) = inl k	";
             responses[i]=data;
           
 
             i = 104;
-            data = "2 subgoals (ID 129)	  	  k : Fin 0	  ============================	  Empty_rect (fun _ : Empty => Empty + Unit <~> Empty + Unit) k (inr tt) =	  inl k		subgoal 2 (ID 138) is:	 fin_transpose_last_with n.+1 (inl k) (inr tt) = inl k	";
+            data = "1 subgoal (ID 129)	  	  k : Fin 0	  ============================	  Empty_rect (fun _ : Empty => Empty + Unit <~> Empty + Unit) k (inr tt) =	  inl k	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 138)		subgoal 1 (ID 138) is:	 fin_transpose_last_with n.+1 (inl k) (inr tt) = inl k	subgoal 2 (ID 104) is:	 fin_transpose_last_with n (inr u) (inr tt) = inr u	";
             responses[i]=data;
           
 
             i = 105;
-            data = "1 subgoal (ID 129)	  	  k : Fin 0	  ============================	  Empty_rect (fun _ : Empty => Empty + Unit <~> Empty + Unit) k (inr tt) =	  inl k	";
+            data = "1 subgoal (ID 138)	  	  n : nat	  k : Fin n.+1	  IH : forall k : Fin n, fin_transpose_last_with n (inl k) (inr tt) = inl k	  ============================	  fin_transpose_last_with n.+1 (inl k) (inr tt) = inl k	2 subgoals (ID 149)	  	  n : nat	  k : Fin n	  IH : forall k : Fin n, fin_transpose_last_with n (inl k) (inr tt) = inl k	  ============================	  fin_transpose_last_with n.+1 (inl (inl k)) (inr tt) = inl (inl k)		subgoal 2 (ID 151) is:	 fin_transpose_last_with n.+1 (inl (inr u)) (inr tt) = inl (inr u)	";
             responses[i]=data;
           
 
             i = 106;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 138)		subgoal 1 (ID 138) is:	 fin_transpose_last_with n.+1 (inl k) (inr tt) = inl k	subgoal 2 (ID 104) is:	 fin_transpose_last_with n (inr u) (inr tt) = inr u	1 subgoal (ID 138)	  	  n : nat	  k : Fin n.+1	  IH : forall k : Fin n, fin_transpose_last_with n (inl k) (inr tt) = inl k	  ============================	  fin_transpose_last_with n.+1 (inl k) (inr tt) = inl k	2 subgoals (ID 149)	  	  n : nat	  k : Fin n	  IH : forall k : Fin n, fin_transpose_last_with n (inl k) (inr tt) = inl k	  ============================	  fin_transpose_last_with n.+1 (inl (inl k)) (inr tt) = inl (inl k)		subgoal 2 (ID 151) is:	 fin_transpose_last_with n.+1 (inl (inr u)) (inr tt) = inl (inr u)	1 subgoal (ID 149)	  	  n : nat	  k : Fin n	  IH : forall k : Fin n, fin_transpose_last_with n (inl k) (inr tt) = inl k	  ============================	  fin_transpose_last_with n.+1 (inl (inl k)) (inr tt) = inl (inl k)	";
+            data = "1 subgoal (ID 149)	  	  n : nat	  k : Fin n	  IH : forall k : Fin n, fin_transpose_last_with n (inl k) (inr tt) = inl k	  ============================	  fin_transpose_last_with n.+1 (inl (inl k)) (inr tt) = inl (inl k)	";
             responses[i]=data;
           
 
@@ -808,12 +808,12 @@
           
 
             i = 158;
-            data = "1 subgoal (ID 175)	  	  n : nat	  k : Fin n	  l : Fin n	  p : k <> l	  ============================	  fin_transpose_last_with n (inl k)	    (fin_transpose_last_with n (inl k) (inl l)) = 	  inl l	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 subgoals (ID 165)		subgoal 1 (ID 165) is:	 fin_transpose_last_with n (inr tt)	   (fin_transpose_last_with n (inr tt) (inl l)) = 	 inl l	subgoal 2 (ID 152) is:	 fin_transpose_last_with n k (fin_transpose_last_with n k (inr tt)) = inr tt	";
+            data = "1 subgoal (ID 175)	  	  n : nat	  k : Fin n	  l : Fin n	  p : k <> l	  ============================	  fin_transpose_last_with n (inl k)	    (fin_transpose_last_with n (inl k) (inl l)) = 	  inl l	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	";
             responses[i]=data;
           
 
             i = 159;
-            data = "1 subgoal (ID 165)	  	  n : nat	  l : Fin n	  ============================	  fin_transpose_last_with n (inr tt)	    (fin_transpose_last_with n (inr tt) (inl l)) = 	  inl l	1 subgoal (ID 165)	  	  n : nat	  l : Fin n	  ============================	  fin_transpose_last_with n (inr tt)	    (fin_transpose_last_with n (inr tt) (inl l)) = 	  inl l	1 subgoal (ID 193)	  	  n : nat	  l : Fin n	  ============================	  fin_transpose_last_with n (inr tt) (inl l) = inl l	";
+            data = "2 subgoals (ID 165)		subgoal 1 (ID 165) is:	 fin_transpose_last_with n (inr tt)	   (fin_transpose_last_with n (inr tt) (inl l)) = 	 inl l	subgoal 2 (ID 152) is:	 fin_transpose_last_with n k (fin_transpose_last_with n k (inr tt)) = inr tt	1 subgoal (ID 165)	  	  n : nat	  l : Fin n	  ============================	  fin_transpose_last_with n (inr tt)	    (fin_transpose_last_with n (inr tt) (inl l)) = 	  inl l	1 subgoal (ID 165)	  	  n : nat	  l : Fin n	  ============================	  fin_transpose_last_with n (inr tt)	    (fin_transpose_last_with n (inr tt) (inl l)) = 	  inl l	1 subgoal (ID 193)	  	  n : nat	  l : Fin n	  ============================	  fin_transpose_last_with n (inr tt) (inl l) = inl l	";
             responses[i]=data;
           
 
@@ -3248,17 +3248,17 @@
           
 
             i = 646;
-            data = "1 subgoal (ID 789)	  	  X : Type	  Y : Type	  H : Finite X	  H0 : Finite Y	  e : X <~> Fin (fcard X)	  ============================	  fcard (Fin 0 * Y) = fcard (Fin 0) * fcard Y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 792)		subgoal 1 (ID 792) is:	 fcard (Fin n.+1 * Y) = fcard (Fin n.+1) * fcard Y	";
+            data = "1 subgoal (ID 789)	  	  X : Type	  Y : Type	  H : Finite X	  H0 : Finite Y	  e : X <~> Fin (fcard X)	  ============================	  fcard (Fin 0 * Y) = fcard (Fin 0) * fcard Y	";
             responses[i]=data;
           
 
             i = 647;
-            data = "1 subgoal (ID 792)	  	  X : Type	  Y : Type	  H : Finite X	  H0 : Finite Y	  e : X <~> Fin (fcard X)	  n : nat	  IH : fcard (Fin n * Y) = fcard (Fin n) * fcard Y	  ============================	  fcard (Fin n.+1 * Y) = fcard (Fin n.+1) * fcard Y	1 subgoal (ID 1053)	  	  X : Type	  Y : Type	  H : Finite X	  H0 : Finite Y	  e : X <~> Fin (fcard X)	  n : nat	  IH : fcard (Fin n * Y) = fcard (Fin n) * fcard Y	  ============================	  fcard (Fin n * Y + Unit * Y) = fcard (Fin n.+1) * fcard Y	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 792)		subgoal 1 (ID 792) is:	 fcard (Fin n.+1 * Y) = fcard (Fin n.+1) * fcard Y	1 subgoal (ID 792)	  	  X : Type	  Y : Type	  H : Finite X	  H0 : Finite Y	  e : X <~> Fin (fcard X)	  n : nat	  IH : fcard (Fin n * Y) = fcard (Fin n) * fcard Y	  ============================	  fcard (Fin n.+1 * Y) = fcard (Fin n.+1) * fcard Y	";
             responses[i]=data;
           
 
             i = 648;
-            data = "1 subgoal (ID 1067)	  	  X : Type	  Y : Type	  H : Finite X	  H0 : Finite Y	  e : X <~> Fin (fcard X)	  n : nat	  IH : fcard (Fin n * Y) = fcard (Fin n) * fcard Y	  ============================	  fcard (Fin n * Y) + fcard (Unit * Y) = fcard (Fin n.+1) * fcard Y	";
+            data = "1 subgoal (ID 1053)	  	  X : Type	  Y : Type	  H : Finite X	  H0 : Finite Y	  e : X <~> Fin (fcard X)	  n : nat	  IH : fcard (Fin n * Y) = fcard (Fin n) * fcard Y	  ============================	  fcard (Fin n * Y + Unit * Y) = fcard (Fin n.+1) * fcard Y	1 subgoal (ID 1067)	  	  X : Type	  Y : Type	  H : Finite X	  H0 : Finite Y	  e : X <~> Fin (fcard X)	  n : nat	  IH : fcard (Fin n * Y) = fcard (Fin n) * fcard Y	  ============================	  fcard (Fin n * Y) + fcard (Unit * Y) = fcard (Fin n.+1) * fcard Y	";
             responses[i]=data;
           
 
@@ -3928,12 +3928,12 @@
           
 
             i = 782;
-            data = "1 subgoal (ID 1413)	  	  X : Type	  Y : X -> Type	  H : Finite X	  H0 : forall x : X, Finite (Y x)	  n : nat	  Y' : Fin n.+1 -> Type	  X0 : forall x : Fin n.+1, Finite (Y' x)	  IH : forall Y' : Fin n -> Type,	       (forall x : Fin n, Finite (Y' x)) -> Finite {x : _ & Y' x}	  ============================	  Finite {x : _ & Y' x}	1 subgoal (ID 1536)	  	  X : Type	  Y : X -> Type	  H : Finite X	  H0 : forall x : X, Finite (Y x)	  n : nat	  Y' : Fin n.+1 -> Type	  X0 : forall x : Fin n.+1, Finite (Y' x)	  IH : forall Y' : Fin n -> Type,	       (forall x : Fin n, Finite (Y' x)) -> Finite {x : _ & Y' x}	  ============================	  Finite ({a : Fin n & Y' (inl a)} + {b : Unit & Y' (inr b)})	";
+            data = "1 subgoal (ID 1413)	  	  X : Type	  Y : X -> Type	  H : Finite X	  H0 : forall x : X, Finite (Y x)	  n : nat	  Y' : Fin n.+1 -> Type	  X0 : forall x : Fin n.+1, Finite (Y' x)	  IH : forall Y' : Fin n -> Type,	       (forall x : Fin n, Finite (Y' x)) -> Finite {x : _ & Y' x}	  ============================	  Finite {x : _ & Y' x}	";
             responses[i]=data;
           
 
             i = 783;
-            data = "2 subgoals (ID 1537)	  	  X : Type	  Y : X -> Type	  H : Finite X	  H0 : forall x : X, Finite (Y x)	  n : nat	  Y' : Fin n.+1 -> Type	  X0 : forall x : Fin n.+1, Finite (Y' x)	  IH : forall Y' : Fin n -> Type,	       (forall x : Fin n, Finite (Y' x)) -> Finite {x : _ & Y' x}	  ============================	  Finite {a : Fin n & Y' (inl a)}		subgoal 2 (ID 1538) is:	 Finite {b : Unit & Y' (inr b)}	";
+            data = "1 subgoal (ID 1536)	  	  X : Type	  Y : X -> Type	  H : Finite X	  H0 : forall x : X, Finite (Y x)	  n : nat	  Y' : Fin n.+1 -> Type	  X0 : forall x : Fin n.+1, Finite (Y' x)	  IH : forall Y' : Fin n -> Type,	       (forall x : Fin n, Finite (Y' x)) -> Finite {x : _ & Y' x}	  ============================	  Finite ({a : Fin n & Y' (inl a)} + {b : Unit & Y' (inr b)})	2 subgoals (ID 1537)	  	  X : Type	  Y : X -> Type	  H : Finite X	  H0 : forall x : X, Finite (Y x)	  n : nat	  Y' : Fin n.+1 -> Type	  X0 : forall x : Fin n.+1, Finite (Y' x)	  IH : forall Y' : Fin n -> Type,	       (forall x : Fin n, Finite (Y' x)) -> Finite {x : _ & Y' x}	  ============================	  Finite {a : Fin n & Y' (inl a)}		subgoal 2 (ID 1538) is:	 Finite {b : Unit & Y' (inr b)}	";
             responses[i]=data;
           
 
@@ -4463,17 +4463,17 @@
           
 
             i = 889;
-            data = "1 subgoal (ID 1781)	  	  X : Type	  Y : Type	  H : Finite X	  H0 : Finite Y	  f : X -> Y	  IsEmbedding0 : IsEmbedding f	  y : Y	  e : merely (hfiber f y <~> Fin 0)	  ============================	  Decidable (hfiber f y)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1783)		subgoal 1 (ID 1783) is:	 Decidable (hfiber f y)	";
+            data = "1 subgoal (ID 1781)	  	  X : Type	  Y : Type	  H : Finite X	  H0 : Finite Y	  f : X -> Y	  IsEmbedding0 : IsEmbedding f	  y : Y	  e : merely (hfiber f y <~> Fin 0)	  ============================	  Decidable (hfiber f y)	";
             responses[i]=data;
           
 
             i = 890;
-            data = "1 subgoal (ID 1783)	  	  X : Type	  Y : Type	  H : Finite X	  H0 : Finite Y	  f : X -> Y	  IsEmbedding0 : IsEmbedding f	  y : Y	  n : nat	  e : merely (hfiber f y <~> Fin n.+1)	  ============================	  Decidable (hfiber f y)	No more subgoals.	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1783)		subgoal 1 (ID 1783) is:	 Decidable (hfiber f y)	1 subgoal (ID 1783)	  	  X : Type	  Y : Type	  H : Finite X	  H0 : Finite Y	  f : X -> Y	  IsEmbedding0 : IsEmbedding f	  y : Y	  n : nat	  e : merely (hfiber f y <~> Fin n.+1)	  ============================	  Decidable (hfiber f y)	";
             responses[i]=data;
           
 
             i = 891;
-            data = "<infomsg>detachable_image_finite is defined</infomsg>	";
+            data = "No more subgoals.	<infomsg>detachable_image_finite is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -4773,12 +4773,12 @@
           
 
             i = 951;
-            data = "1 subgoal (ID 3048)	  	  H : Univalence	  X : Type	  H0 : Finite X	  R : relation X	  is_mere_relation0 : is_mere_relation X R	  H1 : Reflexive R	  H2 : Transitive R	  H3 : Symmetric R	  Rd : forall x y : X, Decidable (R x y)	  n : nat	  IH : forall (R' : Fin n -> Fin n -> Type)	       (X0 : is_mere_relation (Fin n) R'),	       Reflexive R' ->	       Symmetric R' ->	       Transitive R' ->	       (forall x y : Fin n, Decidable (R' x y)) -> Finite (quotient R')	  R' : Fin n.+1 -> Fin n.+1 -> Type	  X0 : is_mere_relation (Fin n.+1) R'	  X1 : Reflexive R'	  X2 : Symmetric R'	  X3 : Transitive R'	  R'd : forall x y : Fin n.+1, Decidable (R' x y)	  R'' := fun	           x	            y : (fix Fin (n : nat) : Type :=	                   match n with	                   | 0 => Empty	                   | n0.+1 => (Fin n0 + Unit)%type	                   end) n => R' (inl x) (inl y)	   : (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n ->	     (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n -> Type	  X4 : is_mere_relation	         ((fix Fin (n : nat) : Type :=	             match n with	             | 0 => Empty	             | n0.+1 => (Fin n0 + Unit)%type	             end) n) R''	  X5 : Reflexive R''	  X6 : Symmetric R''	  X7 : Transitive R''	  X8 : forall	       x	        y : (fix Fin (n : nat) : Type :=	               match n with	               | 0 => Empty	               | n0.+1 => (Fin n0 + Unit)%type	               end) n, Decidable (R'' x y)	  inlresp : forall	            x	             y : (fix Fin (n : nat) : Type :=	                    match n with	                    | 0 => Empty	                    | n0.+1 => (Fin n0 + Unit)%type	                    end) n, R'' x y -> R' (inl x) (inl y)	  x : Fin n	  r : R' (inl x) (inr tt)	  ============================	  hfiber (quotient_functor R'' R' inl inlresp) (class_of R' (inr tt))	1 subgoal (ID 3062)	  	  H : Univalence	  X : Type	  H0 : Finite X	  R : relation X	  is_mere_relation0 : is_mere_relation X R	  H1 : Reflexive R	  H2 : Transitive R	  H3 : Symmetric R	  Rd : forall x y : X, Decidable (R x y)	  n : nat	  IH : forall (R' : Fin n -> Fin n -> Type)	       (X0 : is_mere_relation (Fin n) R'),	       Reflexive R' ->	       Symmetric R' ->	       Transitive R' ->	       (forall x y : Fin n, Decidable (R' x y)) -> Finite (quotient R')	  R' : Fin n.+1 -> Fin n.+1 -> Type	  X0 : is_mere_relation (Fin n.+1) R'	  X1 : Reflexive R'	  X2 : Symmetric R'	  X3 : Transitive R'	  R'd : forall x y : Fin n.+1, Decidable (R' x y)	  R'' := fun	           x	            y : (fix Fin (n : nat) : Type :=	                   match n with	                   | 0 => Empty	                   | n0.+1 => (Fin n0 + Unit)%type	                   end) n => R' (inl x) (inl y)	   : (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n ->	     (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n -> Type	  X4 : is_mere_relation	         ((fix Fin (n : nat) : Type :=	             match n with	             | 0 => Empty	             | n0.+1 => (Fin n0 + Unit)%type	             end) n) R''	  X5 : Reflexive R''	  X6 : Symmetric R''	  X7 : Transitive R''	  X8 : forall	       x	        y : (fix Fin (n : nat) : Type :=	               match n with	               | 0 => Empty	               | n0.+1 => (Fin n0 + Unit)%type	               end) n, Decidable (R'' x y)	  inlresp : forall	            x	             y : (fix Fin (n : nat) : Type :=	                    match n with	                    | 0 => Empty	                    | n0.+1 => (Fin n0 + Unit)%type	                    end) n, R'' x y -> R' (inl x) (inl y)	  x : Fin n	  r : R' (inl x) (inr tt)	  ============================	  class_of R' (inl x) = class_of R' (inr tt)	";
+            data = "1 subgoal (ID 3048)	  	  H : Univalence	  X : Type	  H0 : Finite X	  R : relation X	  is_mere_relation0 : is_mere_relation X R	  H1 : Reflexive R	  H2 : Transitive R	  H3 : Symmetric R	  Rd : forall x y : X, Decidable (R x y)	  n : nat	  IH : forall (R' : Fin n -> Fin n -> Type)	       (X0 : is_mere_relation (Fin n) R'),	       Reflexive R' ->	       Symmetric R' ->	       Transitive R' ->	       (forall x y : Fin n, Decidable (R' x y)) -> Finite (quotient R')	  R' : Fin n.+1 -> Fin n.+1 -> Type	  X0 : is_mere_relation (Fin n.+1) R'	  X1 : Reflexive R'	  X2 : Symmetric R'	  X3 : Transitive R'	  R'd : forall x y : Fin n.+1, Decidable (R' x y)	  R'' := fun	           x	            y : (fix Fin (n : nat) : Type :=	                   match n with	                   | 0 => Empty	                   | n0.+1 => (Fin n0 + Unit)%type	                   end) n => R' (inl x) (inl y)	   : (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n ->	     (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n -> Type	  X4 : is_mere_relation	         ((fix Fin (n : nat) : Type :=	             match n with	             | 0 => Empty	             | n0.+1 => (Fin n0 + Unit)%type	             end) n) R''	  X5 : Reflexive R''	  X6 : Symmetric R''	  X7 : Transitive R''	  X8 : forall	       x	        y : (fix Fin (n : nat) : Type :=	               match n with	               | 0 => Empty	               | n0.+1 => (Fin n0 + Unit)%type	               end) n, Decidable (R'' x y)	  inlresp : forall	            x	             y : (fix Fin (n : nat) : Type :=	                    match n with	                    | 0 => Empty	                    | n0.+1 => (Fin n0 + Unit)%type	                    end) n, R'' x y -> R' (inl x) (inl y)	  x : Fin n	  r : R' (inl x) (inr tt)	  ============================	  hfiber (quotient_functor R'' R' inl inlresp) (class_of R' (inr tt))	";
             responses[i]=data;
           
 
             i = 952;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 3006)		subgoal 1 (ID 3006) is:	 IsEmbedding (quotient_functor R'' R' inl inlresp)	subgoal 2 (ID 2479) is:	 Finite (quotient R')	";
+            data = "1 subgoal (ID 3062)	  	  H : Univalence	  X : Type	  H0 : Finite X	  R : relation X	  is_mere_relation0 : is_mere_relation X R	  H1 : Reflexive R	  H2 : Transitive R	  H3 : Symmetric R	  Rd : forall x y : X, Decidable (R x y)	  n : nat	  IH : forall (R' : Fin n -> Fin n -> Type)	       (X0 : is_mere_relation (Fin n) R'),	       Reflexive R' ->	       Symmetric R' ->	       Transitive R' ->	       (forall x y : Fin n, Decidable (R' x y)) -> Finite (quotient R')	  R' : Fin n.+1 -> Fin n.+1 -> Type	  X0 : is_mere_relation (Fin n.+1) R'	  X1 : Reflexive R'	  X2 : Symmetric R'	  X3 : Transitive R'	  R'd : forall x y : Fin n.+1, Decidable (R' x y)	  R'' := fun	           x	            y : (fix Fin (n : nat) : Type :=	                   match n with	                   | 0 => Empty	                   | n0.+1 => (Fin n0 + Unit)%type	                   end) n => R' (inl x) (inl y)	   : (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n ->	     (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n -> Type	  X4 : is_mere_relation	         ((fix Fin (n : nat) : Type :=	             match n with	             | 0 => Empty	             | n0.+1 => (Fin n0 + Unit)%type	             end) n) R''	  X5 : Reflexive R''	  X6 : Symmetric R''	  X7 : Transitive R''	  X8 : forall	       x	        y : (fix Fin (n : nat) : Type :=	               match n with	               | 0 => Empty	               | n0.+1 => (Fin n0 + Unit)%type	               end) n, Decidable (R'' x y)	  inlresp : forall	            x	             y : (fix Fin (n : nat) : Type :=	                    match n with	                    | 0 => Empty	                    | n0.+1 => (Fin n0 + Unit)%type	                    end) n, R'' x y -> R' (inl x) (inl y)	  x : Fin n	  r : R' (inl x) (inr tt)	  ============================	  class_of R' (inl x) = class_of R' (inr tt)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 3006)		subgoal 1 (ID 3006) is:	 IsEmbedding (quotient_functor R'' R' inl inlresp)	subgoal 2 (ID 2479) is:	 Finite (quotient R')	";
             responses[i]=data;
           
 
@@ -4863,12 +4863,12 @@
           
 
             i = 969;
-            data = "1 subgoal (ID 3384)	  	  H : Univalence	  X : Type	  H0 : Finite X	  R : relation X	  is_mere_relation0 : is_mere_relation X R	  H1 : Reflexive R	  H2 : Transitive R	  H3 : Symmetric R	  Rd : forall x y : X, Decidable (R x y)	  n : nat	  IH : forall (R' : Fin n -> Fin n -> Type)	       (X0 : is_mere_relation (Fin n) R'),	       Reflexive R' ->	       Symmetric R' ->	       Transitive R' ->	       (forall x y : Fin n, Decidable (R' x y)) -> Finite (quotient R')	  R' : Fin n.+1 -> Fin n.+1 -> Type	  X0 : is_mere_relation (Fin n.+1) R'	  X1 : Reflexive R'	  X2 : Symmetric R'	  X3 : Transitive R'	  R'd : forall x y : Fin n.+1, Decidable (R' x y)	  R'' := fun	           x	            y : (fix Fin (n : nat) : Type :=	                   match n with	                   | 0 => Empty	                   | n0.+1 => (Fin n0 + Unit)%type	                   end) n => R' (inl x) (inl y)	   : (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n ->	     (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n -> Type	  X4 : is_mere_relation	         ((fix Fin (n : nat) : Type :=	             match n with	             | 0 => Empty	             | n0.+1 => (Fin n0 + Unit)%type	             end) n) R''	  X5 : Reflexive R''	  X6 : Symmetric R''	  X7 : Transitive R''	  X8 : forall	       x	        y : (fix Fin (n : nat) : Type :=	               match n with	               | 0 => Empty	               | n0.+1 => (Fin n0 + Unit)%type	               end) n, Decidable (R'' x y)	  inlresp : forall	            x	             y : (fix Fin (n : nat) : Type :=	                    match n with	                    | 0 => Empty	                    | n0.+1 => (Fin n0 + Unit)%type	                    end) n, R'' x y -> R' (inl x) (inl y)	  np : ~ merely {x : Fin n & R' (inl x) (inr tt)}	  u : quotient R'' + Unit	  ============================	  forall a : quotient R'',	  sum_ind (fun _ : quotient R'' + Unit => quotient R')	    (quotient_functor R'' R' inl inlresp) (unit_name (class_of R' (inr tt)))	    u =	  sum_ind (fun _ : quotient R'' + Unit => quotient R')	    (quotient_functor R'' R' inl inlresp) (unit_name (class_of R' (inr tt)))	    (inl a) -> u = inl a	1 subgoal (ID 3504)	  	  H : Univalence	  X : Type	  H0 : Finite X	  R : relation X	  is_mere_relation0 : is_mere_relation X R	  H1 : Reflexive R	  H2 : Transitive R	  H3 : Symmetric R	  Rd : forall x y : X, Decidable (R x y)	  n : nat	  IH : forall (R' : Fin n -> Fin n -> Type)	       (X0 : is_mere_relation (Fin n) R'),	       Reflexive R' ->	       Symmetric R' ->	       Transitive R' ->	       (forall x y : Fin n, Decidable (R' x y)) -> Finite (quotient R')	  R' : Fin n.+1 -> Fin n.+1 -> Type	  X0 : is_mere_relation (Fin n.+1) R'	  X1 : Reflexive R'	  X2 : Symmetric R'	  X3 : Transitive R'	  R'd : forall x y : Fin n.+1, Decidable (R' x y)	  R'' := fun	           x	            y : (fix Fin (n : nat) : Type :=	                   match n with	                   | 0 => Empty	                   | n0.+1 => (Fin n0 + Unit)%type	                   end) n => R' (inl x) (inl y)	   : (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n ->	     (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n -> Type	  X4 : is_mere_relation	         ((fix Fin (n : nat) : Type :=	             match n with	             | 0 => Empty	             | n0.+1 => (Fin n0 + Unit)%type	             end) n) R''	  X5 : Reflexive R''	  X6 : Symmetric R''	  X7 : Transitive R''	  X8 : forall	       x	        y : (fix Fin (n : nat) : Type :=	               match n with	               | 0 => Empty	               | n0.+1 => (Fin n0 + Unit)%type	               end) n, Decidable (R'' x y)	  inlresp : forall	            x	             y : (fix Fin (n : nat) : Type :=	                    match n with	                    | 0 => Empty	                    | n0.+1 => (Fin n0 + Unit)%type	                    end) n, R'' x y -> R' (inl x) (inl y)	  np : ~ merely {x : Fin n & R' (inl x) (inr tt)}	  u : quotient R'' + Unit	  v : (fix Fin (n : nat) : Type :=	         match n with	         | 0 => Empty	         | n0.+1 => (Fin n0 + Unit)%type	         end) n	  ============================	  sum_ind (fun _ : quotient R'' + Unit => quotient R')	    (quotient_functor R'' R' inl inlresp) (unit_name (class_of R' (inr tt)))	    u =	  sum_ind (fun _ : quotient R'' + Unit => quotient R')	    (quotient_functor R'' R' inl inlresp) (unit_name (class_of R' (inr tt)))	    (inl (class_of R'' v)) -> u = inl (class_of R'' v)	";
+            data = "1 subgoal (ID 3384)	  	  H : Univalence	  X : Type	  H0 : Finite X	  R : relation X	  is_mere_relation0 : is_mere_relation X R	  H1 : Reflexive R	  H2 : Transitive R	  H3 : Symmetric R	  Rd : forall x y : X, Decidable (R x y)	  n : nat	  IH : forall (R' : Fin n -> Fin n -> Type)	       (X0 : is_mere_relation (Fin n) R'),	       Reflexive R' ->	       Symmetric R' ->	       Transitive R' ->	       (forall x y : Fin n, Decidable (R' x y)) -> Finite (quotient R')	  R' : Fin n.+1 -> Fin n.+1 -> Type	  X0 : is_mere_relation (Fin n.+1) R'	  X1 : Reflexive R'	  X2 : Symmetric R'	  X3 : Transitive R'	  R'd : forall x y : Fin n.+1, Decidable (R' x y)	  R'' := fun	           x	            y : (fix Fin (n : nat) : Type :=	                   match n with	                   | 0 => Empty	                   | n0.+1 => (Fin n0 + Unit)%type	                   end) n => R' (inl x) (inl y)	   : (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n ->	     (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n -> Type	  X4 : is_mere_relation	         ((fix Fin (n : nat) : Type :=	             match n with	             | 0 => Empty	             | n0.+1 => (Fin n0 + Unit)%type	             end) n) R''	  X5 : Reflexive R''	  X6 : Symmetric R''	  X7 : Transitive R''	  X8 : forall	       x	        y : (fix Fin (n : nat) : Type :=	               match n with	               | 0 => Empty	               | n0.+1 => (Fin n0 + Unit)%type	               end) n, Decidable (R'' x y)	  inlresp : forall	            x	             y : (fix Fin (n : nat) : Type :=	                    match n with	                    | 0 => Empty	                    | n0.+1 => (Fin n0 + Unit)%type	                    end) n, R'' x y -> R' (inl x) (inl y)	  np : ~ merely {x : Fin n & R' (inl x) (inr tt)}	  u : quotient R'' + Unit	  ============================	  forall a : quotient R'',	  sum_ind (fun _ : quotient R'' + Unit => quotient R')	    (quotient_functor R'' R' inl inlresp) (unit_name (class_of R' (inr tt)))	    u =	  sum_ind (fun _ : quotient R'' + Unit => quotient R')	    (quotient_functor R'' R' inl inlresp) (unit_name (class_of R' (inr tt)))	    (inl a) -> u = inl a	";
             responses[i]=data;
           
 
             i = 970;
-            data = "2 subgoals (ID 3516)	  	  H : Univalence	  X : Type	  H0 : Finite X	  R : relation X	  is_mere_relation0 : is_mere_relation X R	  H1 : Reflexive R	  H2 : Transitive R	  H3 : Symmetric R	  Rd : forall x y : X, Decidable (R x y)	  n : nat	  IH : forall (R' : Fin n -> Fin n -> Type)	       (X0 : is_mere_relation (Fin n) R'),	       Reflexive R' ->	       Symmetric R' ->	       Transitive R' ->	       (forall x y : Fin n, Decidable (R' x y)) -> Finite (quotient R')	  R' : Fin n.+1 -> Fin n.+1 -> Type	  X0 : is_mere_relation (Fin n.+1) R'	  X1 : Reflexive R'	  X2 : Symmetric R'	  X3 : Transitive R'	  R'd : forall x y : Fin n.+1, Decidable (R' x y)	  R'' := fun	           x	            y : (fix Fin (n : nat) : Type :=	                   match n with	                   | 0 => Empty	                   | n0.+1 => (Fin n0 + Unit)%type	                   end) n => R' (inl x) (inl y)	   : (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n ->	     (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n -> Type	  X4 : is_mere_relation	         ((fix Fin (n : nat) : Type :=	             match n with	             | 0 => Empty	             | n0.+1 => (Fin n0 + Unit)%type	             end) n) R''	  X5 : Reflexive R''	  X6 : Symmetric R''	  X7 : Transitive R''	  X8 : forall	       x	        y : (fix Fin (n : nat) : Type :=	               match n with	               | 0 => Empty	               | n0.+1 => (Fin n0 + Unit)%type	               end) n, Decidable (R'' x y)	  inlresp : forall	            x	             y : (fix Fin (n : nat) : Type :=	                    match n with	                    | 0 => Empty	                    | n0.+1 => (Fin n0 + Unit)%type	                    end) n, R'' x y -> R' (inl x) (inl y)	  np : ~ merely {x : Fin n & R' (inl x) (inr tt)}	  v : (fix Fin (n : nat) : Type :=	         match n with	         | 0 => Empty	         | n0.+1 => (Fin n0 + Unit)%type	         end) n	  ============================	  forall a : quotient R'',	  sum_ind (fun _ : quotient R'' + Unit => quotient R')	    (quotient_functor R'' R' inl inlresp) (unit_name (class_of R' (inr tt)))	    (inl a) =	  sum_ind (fun _ : quotient R'' + Unit => quotient R')	    (quotient_functor R'' R' inl inlresp) (unit_name (class_of R' (inr tt)))	    (inl (class_of R'' v)) -> inl a = inl (class_of R'' v)		subgoal 2 (ID 3518) is:	 forall b : Unit,	 sum_ind (fun _ : quotient R'' + Unit => quotient R')	   (quotient_functor R'' R' inl inlresp) (unit_name (class_of R' (inr tt)))	   (inr b) =	 sum_ind (fun _ : quotient R'' + Unit => quotient R')	   (quotient_functor R'' R' inl inlresp) (unit_name (class_of R' (inr tt)))	   (inl (class_of R'' v)) -> inr b = inl (class_of R'' v)	";
+            data = "1 subgoal (ID 3504)	  	  H : Univalence	  X : Type	  H0 : Finite X	  R : relation X	  is_mere_relation0 : is_mere_relation X R	  H1 : Reflexive R	  H2 : Transitive R	  H3 : Symmetric R	  Rd : forall x y : X, Decidable (R x y)	  n : nat	  IH : forall (R' : Fin n -> Fin n -> Type)	       (X0 : is_mere_relation (Fin n) R'),	       Reflexive R' ->	       Symmetric R' ->	       Transitive R' ->	       (forall x y : Fin n, Decidable (R' x y)) -> Finite (quotient R')	  R' : Fin n.+1 -> Fin n.+1 -> Type	  X0 : is_mere_relation (Fin n.+1) R'	  X1 : Reflexive R'	  X2 : Symmetric R'	  X3 : Transitive R'	  R'd : forall x y : Fin n.+1, Decidable (R' x y)	  R'' := fun	           x	            y : (fix Fin (n : nat) : Type :=	                   match n with	                   | 0 => Empty	                   | n0.+1 => (Fin n0 + Unit)%type	                   end) n => R' (inl x) (inl y)	   : (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n ->	     (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n -> Type	  X4 : is_mere_relation	         ((fix Fin (n : nat) : Type :=	             match n with	             | 0 => Empty	             | n0.+1 => (Fin n0 + Unit)%type	             end) n) R''	  X5 : Reflexive R''	  X6 : Symmetric R''	  X7 : Transitive R''	  X8 : forall	       x	        y : (fix Fin (n : nat) : Type :=	               match n with	               | 0 => Empty	               | n0.+1 => (Fin n0 + Unit)%type	               end) n, Decidable (R'' x y)	  inlresp : forall	            x	             y : (fix Fin (n : nat) : Type :=	                    match n with	                    | 0 => Empty	                    | n0.+1 => (Fin n0 + Unit)%type	                    end) n, R'' x y -> R' (inl x) (inl y)	  np : ~ merely {x : Fin n & R' (inl x) (inr tt)}	  u : quotient R'' + Unit	  v : (fix Fin (n : nat) : Type :=	         match n with	         | 0 => Empty	         | n0.+1 => (Fin n0 + Unit)%type	         end) n	  ============================	  sum_ind (fun _ : quotient R'' + Unit => quotient R')	    (quotient_functor R'' R' inl inlresp) (unit_name (class_of R' (inr tt)))	    u =	  sum_ind (fun _ : quotient R'' + Unit => quotient R')	    (quotient_functor R'' R' inl inlresp) (unit_name (class_of R' (inr tt)))	    (inl (class_of R'' v)) -> u = inl (class_of R'' v)	2 subgoals (ID 3516)	  	  H : Univalence	  X : Type	  H0 : Finite X	  R : relation X	  is_mere_relation0 : is_mere_relation X R	  H1 : Reflexive R	  H2 : Transitive R	  H3 : Symmetric R	  Rd : forall x y : X, Decidable (R x y)	  n : nat	  IH : forall (R' : Fin n -> Fin n -> Type)	       (X0 : is_mere_relation (Fin n) R'),	       Reflexive R' ->	       Symmetric R' ->	       Transitive R' ->	       (forall x y : Fin n, Decidable (R' x y)) -> Finite (quotient R')	  R' : Fin n.+1 -> Fin n.+1 -> Type	  X0 : is_mere_relation (Fin n.+1) R'	  X1 : Reflexive R'	  X2 : Symmetric R'	  X3 : Transitive R'	  R'd : forall x y : Fin n.+1, Decidable (R' x y)	  R'' := fun	           x	            y : (fix Fin (n : nat) : Type :=	                   match n with	                   | 0 => Empty	                   | n0.+1 => (Fin n0 + Unit)%type	                   end) n => R' (inl x) (inl y)	   : (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n ->	     (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n -> Type	  X4 : is_mere_relation	         ((fix Fin (n : nat) : Type :=	             match n with	             | 0 => Empty	             | n0.+1 => (Fin n0 + Unit)%type	             end) n) R''	  X5 : Reflexive R''	  X6 : Symmetric R''	  X7 : Transitive R''	  X8 : forall	       x	        y : (fix Fin (n : nat) : Type :=	               match n with	               | 0 => Empty	               | n0.+1 => (Fin n0 + Unit)%type	               end) n, Decidable (R'' x y)	  inlresp : forall	            x	             y : (fix Fin (n : nat) : Type :=	                    match n with	                    | 0 => Empty	                    | n0.+1 => (Fin n0 + Unit)%type	                    end) n, R'' x y -> R' (inl x) (inl y)	  np : ~ merely {x : Fin n & R' (inl x) (inr tt)}	  v : (fix Fin (n : nat) : Type :=	         match n with	         | 0 => Empty	         | n0.+1 => (Fin n0 + Unit)%type	         end) n	  ============================	  forall a : quotient R'',	  sum_ind (fun _ : quotient R'' + Unit => quotient R')	    (quotient_functor R'' R' inl inlresp) (unit_name (class_of R' (inr tt)))	    (inl a) =	  sum_ind (fun _ : quotient R'' + Unit => quotient R')	    (quotient_functor R'' R' inl inlresp) (unit_name (class_of R' (inr tt)))	    (inl (class_of R'' v)) -> inl a = inl (class_of R'' v)		subgoal 2 (ID 3518) is:	 forall b : Unit,	 sum_ind (fun _ : quotient R'' + Unit => quotient R')	   (quotient_functor R'' R' inl inlresp) (unit_name (class_of R' (inr tt)))	   (inr b) =	 sum_ind (fun _ : quotient R'' + Unit => quotient R')	   (quotient_functor R'' R' inl inlresp) (unit_name (class_of R' (inr tt)))	   (inl (class_of R'' v)) -> inr b = inl (class_of R'' v)	";
             responses[i]=data;
           
 
@@ -4928,12 +4928,12 @@
           
 
             i = 982;
-            data = "1 subgoal (ID 3712)	  	  H : Univalence	  X : Type	  H0 : Finite X	  R : relation X	  is_mere_relation0 : is_mere_relation X R	  H1 : Reflexive R	  H2 : Transitive R	  H3 : Symmetric R	  Rd : forall x y : X, Decidable (R x y)	  n : nat	  IH : forall (R' : Fin n -> Fin n -> Type)	       (X0 : is_mere_relation (Fin n) R'),	       Reflexive R' ->	       Symmetric R' ->	       Transitive R' ->	       (forall x y : Fin n, Decidable (R' x y)) -> Finite (quotient R')	  R' : Fin n.+1 -> Fin n.+1 -> Type	  X0 : is_mere_relation (Fin n.+1) R'	  X1 : Reflexive R'	  X2 : Symmetric R'	  X3 : Transitive R'	  R'd : forall x y : Fin n.+1, Decidable (R' x y)	  R'' := fun	           x	            y : (fix Fin (n : nat) : Type :=	                   match n with	                   | 0 => Empty	                   | n0.+1 => (Fin n0 + Unit)%type	                   end) n => R' (inl x) (inl y)	   : (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n ->	     (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n -> Type	  X4 : is_mere_relation	         ((fix Fin (n : nat) : Type :=	             match n with	             | 0 => Empty	             | n0.+1 => (Fin n0 + Unit)%type	             end) n) R''	  X5 : Reflexive R''	  X6 : Symmetric R''	  X7 : Transitive R''	  X8 : forall	       x	        y : (fix Fin (n : nat) : Type :=	               match n with	               | 0 => Empty	               | n0.+1 => (Fin n0 + Unit)%type	               end) n, Decidable (R'' x y)	  inlresp : forall	            x	             y : (fix Fin (n : nat) : Type :=	                    match n with	                    | 0 => Empty	                    | n0.+1 => (Fin n0 + Unit)%type	                    end) n, R'' x y -> R' (inl x) (inl y)	  np : ~ merely {x : Fin n & R' (inl x) (inr tt)}	  u : quotient R''	  ============================	  quotient_functor R'' R' inl inlresp u = class_of R' (inr tt) ->	  inl u = inr tt	";
+            data = "1 subgoal (ID 3712)	  	  H : Univalence	  X : Type	  H0 : Finite X	  R : relation X	  is_mere_relation0 : is_mere_relation X R	  H1 : Reflexive R	  H2 : Transitive R	  H3 : Symmetric R	  Rd : forall x y : X, Decidable (R x y)	  n : nat	  IH : forall (R' : Fin n -> Fin n -> Type)	       (X0 : is_mere_relation (Fin n) R'),	       Reflexive R' ->	       Symmetric R' ->	       Transitive R' ->	       (forall x y : Fin n, Decidable (R' x y)) -> Finite (quotient R')	  R' : Fin n.+1 -> Fin n.+1 -> Type	  X0 : is_mere_relation (Fin n.+1) R'	  X1 : Reflexive R'	  X2 : Symmetric R'	  X3 : Transitive R'	  R'd : forall x y : Fin n.+1, Decidable (R' x y)	  R'' := fun	           x	            y : (fix Fin (n : nat) : Type :=	                   match n with	                   | 0 => Empty	                   | n0.+1 => (Fin n0 + Unit)%type	                   end) n => R' (inl x) (inl y)	   : (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n ->	     (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n -> Type	  X4 : is_mere_relation	         ((fix Fin (n : nat) : Type :=	             match n with	             | 0 => Empty	             | n0.+1 => (Fin n0 + Unit)%type	             end) n) R''	  X5 : Reflexive R''	  X6 : Symmetric R''	  X7 : Transitive R''	  X8 : forall	       x	        y : (fix Fin (n : nat) : Type :=	               match n with	               | 0 => Empty	               | n0.+1 => (Fin n0 + Unit)%type	               end) n, Decidable (R'' x y)	  inlresp : forall	            x	             y : (fix Fin (n : nat) : Type :=	                    match n with	                    | 0 => Empty	                    | n0.+1 => (Fin n0 + Unit)%type	                    end) n, R'' x y -> R' (inl x) (inl y)	  np : ~ merely {x : Fin n & R' (inl x) (inr tt)}	  u : quotient R''	  ============================	  quotient_functor R'' R' inl inlresp u = class_of R' (inr tt) ->	  inl u = inr tt	1 subgoal (ID 3836)	  	  H : Univalence	  X : Type	  H0 : Finite X	  R : relation X	  is_mere_relation0 : is_mere_relation X R	  H1 : Reflexive R	  H2 : Transitive R	  H3 : Symmetric R	  Rd : forall x y : X, Decidable (R x y)	  n : nat	  IH : forall (R' : Fin n -> Fin n -> Type)	       (X0 : is_mere_relation (Fin n) R'),	       Reflexive R' ->	       Symmetric R' ->	       Transitive R' ->	       (forall x y : Fin n, Decidable (R' x y)) -> Finite (quotient R')	  R' : Fin n.+1 -> Fin n.+1 -> Type	  X0 : is_mere_relation (Fin n.+1) R'	  X1 : Reflexive R'	  X2 : Symmetric R'	  X3 : Transitive R'	  R'd : forall x y : Fin n.+1, Decidable (R' x y)	  R'' := fun	           x	            y : (fix Fin (n : nat) : Type :=	                   match n with	                   | 0 => Empty	                   | n0.+1 => (Fin n0 + Unit)%type	                   end) n => R' (inl x) (inl y)	   : (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n ->	     (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n -> Type	  X4 : is_mere_relation	         ((fix Fin (n : nat) : Type :=	             match n with	             | 0 => Empty	             | n0.+1 => (Fin n0 + Unit)%type	             end) n) R''	  X5 : Reflexive R''	  X6 : Symmetric R''	  X7 : Transitive R''	  X8 : forall	       x	        y : (fix Fin (n : nat) : Type :=	               match n with	               | 0 => Empty	               | n0.+1 => (Fin n0 + Unit)%type	               end) n, Decidable (R'' x y)	  inlresp : forall	            x	             y : (fix Fin (n : nat) : Type :=	                    match n with	                    | 0 => Empty	                    | n0.+1 => (Fin n0 + Unit)%type	                    end) n, R'' x y -> R' (inl x) (inl y)	  np : ~ merely {x : Fin n & R' (inl x) (inr tt)}	  u : (fix Fin (n : nat) : Type :=	         match n with	         | 0 => Empty	         | n0.+1 => (Fin n0 + Unit)%type	         end) n	  ============================	  class_of R' (inl u) = class_of R' (inr tt) -> inl (class_of R'' u) = inr tt	";
             responses[i]=data;
           
 
             i = 983;
-            data = "1 subgoal (ID 3836)	  	  H : Univalence	  X : Type	  H0 : Finite X	  R : relation X	  is_mere_relation0 : is_mere_relation X R	  H1 : Reflexive R	  H2 : Transitive R	  H3 : Symmetric R	  Rd : forall x y : X, Decidable (R x y)	  n : nat	  IH : forall (R' : Fin n -> Fin n -> Type)	       (X0 : is_mere_relation (Fin n) R'),	       Reflexive R' ->	       Symmetric R' ->	       Transitive R' ->	       (forall x y : Fin n, Decidable (R' x y)) -> Finite (quotient R')	  R' : Fin n.+1 -> Fin n.+1 -> Type	  X0 : is_mere_relation (Fin n.+1) R'	  X1 : Reflexive R'	  X2 : Symmetric R'	  X3 : Transitive R'	  R'd : forall x y : Fin n.+1, Decidable (R' x y)	  R'' := fun	           x	            y : (fix Fin (n : nat) : Type :=	                   match n with	                   | 0 => Empty	                   | n0.+1 => (Fin n0 + Unit)%type	                   end) n => R' (inl x) (inl y)	   : (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n ->	     (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n -> Type	  X4 : is_mere_relation	         ((fix Fin (n : nat) : Type :=	             match n with	             | 0 => Empty	             | n0.+1 => (Fin n0 + Unit)%type	             end) n) R''	  X5 : Reflexive R''	  X6 : Symmetric R''	  X7 : Transitive R''	  X8 : forall	       x	        y : (fix Fin (n : nat) : Type :=	               match n with	               | 0 => Empty	               | n0.+1 => (Fin n0 + Unit)%type	               end) n, Decidable (R'' x y)	  inlresp : forall	            x	             y : (fix Fin (n : nat) : Type :=	                    match n with	                    | 0 => Empty	                    | n0.+1 => (Fin n0 + Unit)%type	                    end) n, R'' x y -> R' (inl x) (inl y)	  np : ~ merely {x : Fin n & R' (inl x) (inr tt)}	  u : (fix Fin (n : nat) : Type :=	         match n with	         | 0 => Empty	         | n0.+1 => (Fin n0 + Unit)%type	         end) n	  ============================	  class_of R' (inl u) = class_of R' (inr tt) -> inl (class_of R'' u) = inr tt	1 subgoal (ID 3837)	  	  H : Univalence	  X : Type	  H0 : Finite X	  R : relation X	  is_mere_relation0 : is_mere_relation X R	  H1 : Reflexive R	  H2 : Transitive R	  H3 : Symmetric R	  Rd : forall x y : X, Decidable (R x y)	  n : nat	  IH : forall (R' : Fin n -> Fin n -> Type)	       (X0 : is_mere_relation (Fin n) R'),	       Reflexive R' ->	       Symmetric R' ->	       Transitive R' ->	       (forall x y : Fin n, Decidable (R' x y)) -> Finite (quotient R')	  R' : Fin n.+1 -> Fin n.+1 -> Type	  X0 : is_mere_relation (Fin n.+1) R'	  X1 : Reflexive R'	  X2 : Symmetric R'	  X3 : Transitive R'	  R'd : forall x y : Fin n.+1, Decidable (R' x y)	  R'' := fun	           x	            y : (fix Fin (n : nat) : Type :=	                   match n with	                   | 0 => Empty	                   | n0.+1 => (Fin n0 + Unit)%type	                   end) n => R' (inl x) (inl y)	   : (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n ->	     (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n -> Type	  X4 : is_mere_relation	         ((fix Fin (n : nat) : Type :=	             match n with	             | 0 => Empty	             | n0.+1 => (Fin n0 + Unit)%type	             end) n) R''	  X5 : Reflexive R''	  X6 : Symmetric R''	  X7 : Transitive R''	  X8 : forall	       x	        y : (fix Fin (n : nat) : Type :=	               match n with	               | 0 => Empty	               | n0.+1 => (Fin n0 + Unit)%type	               end) n, Decidable (R'' x y)	  inlresp : forall	            x	             y : (fix Fin (n : nat) : Type :=	                    match n with	                    | 0 => Empty	                    | n0.+1 => (Fin n0 + Unit)%type	                    end) n, R'' x y -> R' (inl x) (inl y)	  np : ~ merely {x : Fin n & R' (inl x) (inr tt)}	  u : (fix Fin (n : nat) : Type :=	         match n with	         | 0 => Empty	         | n0.+1 => (Fin n0 + Unit)%type	         end) n	  q : class_of R' (inl u) = class_of R' (inr tt)	  ============================	  inl (class_of R'' u) = inr tt	";
+            data = "1 subgoal (ID 3837)	  	  H : Univalence	  X : Type	  H0 : Finite X	  R : relation X	  is_mere_relation0 : is_mere_relation X R	  H1 : Reflexive R	  H2 : Transitive R	  H3 : Symmetric R	  Rd : forall x y : X, Decidable (R x y)	  n : nat	  IH : forall (R' : Fin n -> Fin n -> Type)	       (X0 : is_mere_relation (Fin n) R'),	       Reflexive R' ->	       Symmetric R' ->	       Transitive R' ->	       (forall x y : Fin n, Decidable (R' x y)) -> Finite (quotient R')	  R' : Fin n.+1 -> Fin n.+1 -> Type	  X0 : is_mere_relation (Fin n.+1) R'	  X1 : Reflexive R'	  X2 : Symmetric R'	  X3 : Transitive R'	  R'd : forall x y : Fin n.+1, Decidable (R' x y)	  R'' := fun	           x	            y : (fix Fin (n : nat) : Type :=	                   match n with	                   | 0 => Empty	                   | n0.+1 => (Fin n0 + Unit)%type	                   end) n => R' (inl x) (inl y)	   : (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n ->	     (fix Fin (n : nat) : Type :=	        match n with	        | 0 => Empty	        | n0.+1 => (Fin n0 + Unit)%type	        end) n -> Type	  X4 : is_mere_relation	         ((fix Fin (n : nat) : Type :=	             match n with	             | 0 => Empty	             | n0.+1 => (Fin n0 + Unit)%type	             end) n) R''	  X5 : Reflexive R''	  X6 : Symmetric R''	  X7 : Transitive R''	  X8 : forall	       x	        y : (fix Fin (n : nat) : Type :=	               match n with	               | 0 => Empty	               | n0.+1 => (Fin n0 + Unit)%type	               end) n, Decidable (R'' x y)	  inlresp : forall	            x	             y : (fix Fin (n : nat) : Type :=	                    match n with	                    | 0 => Empty	                    | n0.+1 => (Fin n0 + Unit)%type	                    end) n, R'' x y -> R' (inl x) (inl y)	  np : ~ merely {x : Fin n & R' (inl x) (inr tt)}	  u : (fix Fin (n : nat) : Type :=	         match n with	         | 0 => Empty	         | n0.+1 => (Fin n0 + Unit)%type	         end) n	  q : class_of R' (inl u) = class_of R' (inr tt)	  ============================	  inl (class_of R'' u) = inr tt	";
             responses[i]=data;
           
 
@@ -5293,12 +5293,12 @@
           
 
             i = 1055;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 subgoals (ID 2606)		subgoal 1 (ID 2606) is:	 is_inr (h (inr tt))	subgoal 2 (ID 2594) is:	 n.+1 <= m.+1	1 subgoal (ID 2606)	  	  H : Funext	  X : Type	  Y : Type	  n : nat	  f : X -> Y	  X0 : MapIn (-1)%trunc f	  IHn : forall (m : nat) (g : Fin n -> Fin m), MapIn (-1)%trunc g -> n <= m	  m : nat	  g : Fin n.+1 -> Fin m.+1	  X1 : MapIn (-1)%trunc g	  i : isinj g	  h := (fin_transpose_last_with m (g (inr tt)))^-1 o g : Fin n.+1 -> Fin m.+1	  X2 : MapIn (-1)%trunc h	  Ha : forall a : Fin n, is_inl (h (inl a))	  q : h (inr tt) = inr tt	  ============================	  is_inr (h (inr tt))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 2594)		subgoal 1 (ID 2594) is:	 n.+1 <= m.+1	1 subgoal (ID 2594)	  	  H : Funext	  X : Type	  Y : Type	  n : nat	  f : X -> Y	  X0 : MapIn (-1)%trunc f	  IHn : forall (m : nat) (g : Fin n -> Fin m), MapIn (-1)%trunc g -> n <= m	  m : nat	  g : Fin n.+1 -> Fin m.+1	  X1 : MapIn (-1)%trunc g	  i : isinj g	  h := (fin_transpose_last_with m (g (inr tt)))^-1 o g : Fin n.+1 -> Fin m.+1	  X2 : MapIn (-1)%trunc h	  Ha : forall a : Fin n, is_inl (h (inl a))	  Hb : forall b : Unit, is_inr (h (inr b))	  ============================	  n.+1 <= m.+1	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 subgoals (ID 2606)		subgoal 1 (ID 2606) is:	 is_inr (h (inr tt))	subgoal 2 (ID 2594) is:	 n.+1 <= m.+1	1 subgoal (ID 2606)	  	  H : Funext	  X : Type	  Y : Type	  n : nat	  f : X -> Y	  X0 : MapIn (-1)%trunc f	  IHn : forall (m : nat) (g : Fin n -> Fin m), MapIn (-1)%trunc g -> n <= m	  m : nat	  g : Fin n.+1 -> Fin m.+1	  X1 : MapIn (-1)%trunc g	  i : isinj g	  h := (fin_transpose_last_with m (g (inr tt)))^-1 o g : Fin n.+1 -> Fin m.+1	  X2 : MapIn (-1)%trunc h	  Ha : forall a : Fin n, is_inl (h (inl a))	  q : h (inr tt) = inr tt	  ============================	  is_inr (h (inr tt))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 2594)		subgoal 1 (ID 2594) is:	 n.+1 <= m.+1	1 subgoal (ID 2594)	  	  H : Funext	  X : Type	  Y : Type	  n : nat	  f : X -> Y	  X0 : MapIn (-1)%trunc f	  IHn : forall (m : nat) (g : Fin n -> Fin m), MapIn (-1)%trunc g -> n <= m	  m : nat	  g : Fin n.+1 -> Fin m.+1	  X1 : MapIn (-1)%trunc g	  i : isinj g	  h := (fin_transpose_last_with m (g (inr tt)))^-1 o g : Fin n.+1 -> Fin m.+1	  X2 : MapIn (-1)%trunc h	  Ha : forall a : Fin n, is_inl (h (inl a))	  Hb : forall b : Unit, is_inr (h (inr b))	  ============================	  n.+1 <= m.+1	No more subgoals.	";
             responses[i]=data;
           
 
             i = 1056;
-            data = "No more subgoals.	<infomsg>leq_inj_finite is defined</infomsg>	";
+            data = "<infomsg>leq_inj_finite is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -5578,12 +5578,12 @@
           
 
             i = 1112;
-            data = "1 subgoal (ID 1752)	  	  H : Funext	  X : Type	  H0 : Finite X	  e : nat -> X	  er := fun (n : nat) (k : Fin n) => e (nat_fin n k)	   : forall n : nat, Fin n -> X	  n : nat	  IH : IsEmbedding (er n)	  ============================	  IsEmbedding (er n.+1) + {n0 : nat & {k : nat & e n0 = e (n0 + k).+1}}	";
+            data = "1 subgoal (ID 1752)	  	  H : Funext	  X : Type	  H0 : Finite X	  e : nat -> X	  er := fun (n : nat) (k : Fin n) => e (nat_fin n k)	   : forall n : nat, Fin n -> X	  n : nat	  IH : IsEmbedding (er n)	  ============================	  IsEmbedding (er n.+1) + {n0 : nat & {k : nat & e n0 = e (n0 + k).+1}}	2 subgoals (ID 1783)	  	  H : Funext	  X : Type	  H0 : Finite X	  e : nat -> X	  er := fun (n : nat) (k : Fin n) => e (nat_fin n k)	   : forall n : nat, Fin n -> X	  n : nat	  IH : IsEmbedding (er n)	  k : Fin n	  p : er n k = er n.+1 (inr tt)	  ============================	  IsEmbedding (er n.+1) + {n0 : nat & {k0 : nat & e n0 = e (n0 + k0).+1}}		subgoal 2 (ID 1784) is:	 IsEmbedding (er n.+1) + {n0 : nat & {k : nat & e n0 = e (n0 + k).+1}}	";
             responses[i]=data;
           
 
             i = 1113;
-            data = "2 subgoals (ID 1783)	  	  H : Funext	  X : Type	  H0 : Finite X	  e : nat -> X	  er := fun (n : nat) (k : Fin n) => e (nat_fin n k)	   : forall n : nat, Fin n -> X	  n : nat	  IH : IsEmbedding (er n)	  k : Fin n	  p : er n k = er n.+1 (inr tt)	  ============================	  IsEmbedding (er n.+1) + {n0 : nat & {k0 : nat & e n0 = e (n0 + k0).+1}}		subgoal 2 (ID 1784) is:	 IsEmbedding (er n.+1) + {n0 : nat & {k : nat & e n0 = e (n0 + k).+1}}	1 subgoal (ID 1783)	  	  H : Funext	  X : Type	  H0 : Finite X	  e : nat -> X	  er := fun (n : nat) (k : Fin n) => e (nat_fin n k)	   : forall n : nat, Fin n -> X	  n : nat	  IH : IsEmbedding (er n)	  k : Fin n	  p : er n k = er n.+1 (inr tt)	  ============================	  IsEmbedding (er n.+1) + {n0 : nat & {k0 : nat & e n0 = e (n0 + k0).+1}}	1 subgoal (ID 1786)	  	  H : Funext	  X : Type	  H0 : Finite X	  e : nat -> X	  er := fun (n : nat) (k : Fin n) => e (nat_fin n k)	   : forall n : nat, Fin n -> X	  n : nat	  IH : IsEmbedding (er n)	  k : Fin n	  p : er n k = er n.+1 (inr tt)	  ============================	  {n0 : nat & {k0 : nat & e n0 = e (n0 + k0).+1}}	";
+            data = "1 subgoal (ID 1783)	  	  H : Funext	  X : Type	  H0 : Finite X	  e : nat -> X	  er := fun (n : nat) (k : Fin n) => e (nat_fin n k)	   : forall n : nat, Fin n -> X	  n : nat	  IH : IsEmbedding (er n)	  k : Fin n	  p : er n k = er n.+1 (inr tt)	  ============================	  IsEmbedding (er n.+1) + {n0 : nat & {k0 : nat & e n0 = e (n0 + k0).+1}}	1 subgoal (ID 1786)	  	  H : Funext	  X : Type	  H0 : Finite X	  e : nat -> X	  er := fun (n : nat) (k : Fin n) => e (nat_fin n k)	   : forall n : nat, Fin n -> X	  n : nat	  IH : IsEmbedding (er n)	  k : Fin n	  p : er n k = er n.+1 (inr tt)	  ============================	  {n0 : nat & {k0 : nat & e n0 = e (n0 + k0).+1}}	";
             responses[i]=data;
           
 
@@ -5884,9 +5884,9 @@
 </div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a name="lab414"></a><h1 class="section">Finite sets</h1>
+<a name="lab415"></a><h1 class="section">Finite sets</h1>
 <div class="doc" scenenumber="4"> </div>
-<a name="lab415"></a><h2 class="section">Canonical finite sets</h2>
+<a name="lab416"></a><h2 class="section">Canonical finite sets</h2>
 <div class="doc" scenenumber="9"> </div>
 
  A *finite set* is a type that is merely equivalent to the canonical finite set determined by some natural number.  There are many equivalent ways to define the canonical finite sets, such as <span class="inlinecode">{</span> <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#k"><span class="id" title="variable">k</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.nat"><span class="id" title="inductive">nat</span></a></span> <span class="inlinecode">&amp;</span> <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#k"><span class="id" title="variable">k</span></a></span> <span class="inlinecode">&lt;</span> <span class="inlinecode"><a class="idref" href="Coq.Init.Peano.html#n"><span class="id" title="variable">n</span></a>}</span>; we instead choose a recursive one. 
@@ -6008,12 +6008,12 @@
 </div>
 <div class="goal" id="goal0_3_7"><pre><span></span></pre></div>
 <div class="doc" scenenumber="9">
-<a name="lab416"></a><h2 class="section">Transposition equivalences</h2>
+<a name="lab417"></a><h2 class="section">Transposition equivalences</h2>
 <div class="doc" scenenumber="4"> </div>
 
  To prove some basic facts about canonical finite sets, we need some standard automorphisms of them.  Here we define some transpositions and prove that they in fact do the desired things. 
 <div class="doc" scenenumber="6"> </div>
-<a name="lab417"></a><h3 class="section">Swap the last two elements.</h3>
+<a name="lab418"></a><h3 class="section">Swap the last two elements.</h3>
 </div>
 <div scenenumber="11" class="code">
 <span class="command" onmouseout="
@@ -6066,7 +6066,7 @@
 </div>
 <div class="goal" id="goal0_3_11"><pre><span></span></pre></div>
 <div class="doc" scenenumber="13">
-<a name="lab418"></a><h3 class="section">Swap the last element with <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#k"><span class="id" title="variable">k</span></a></span>.</h3>
+<a name="lab419"></a><h3 class="section">Swap the last element with <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#k"><span class="id" title="variable">k</span></a></span>.</h3>
 </div>
 <div scenenumber="15" class="code">
 <span class="command" onmouseout="
@@ -6459,7 +6459,7 @@ We have to destruct <span class="inlinecode"><a class="idref" href="Coq.Init.Pea
 </div>
 <div class="goal" id="goal0_3_19"><pre><span></span></pre></div>
 <div class="doc" scenenumber="21">
-<a name="lab419"></a><h2 class="section">Equivalences between canonical finite sets</h2>
+<a name="lab420"></a><h2 class="section">Equivalences between canonical finite sets</h2>
 <div class="doc" scenenumber="4"> </div>
 
  To give an equivalence <span class="inlinecode"><a class="idref" href="HoTT.Spaces.Finite.html#Fin"><span class="id" title="definition">Fin</span></a></span> <span class="inlinecode"><a class="idref" href="Coq.Init.Peano.html#n"><span class="id" title="variable">n</span></a>.+1</span> <span class="inlinecode">&lt;~&gt;</span> <span class="inlinecode"><a class="idref" href="HoTT.Spaces.Finite.html#Fin"><span class="id" title="definition">Fin</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Functor.Attributes.html#fully_faithful_helpers.m"><span class="id" title="variable">m</span></a>.+1</span> is equivalent to giving an element of <span class="inlinecode"><a class="idref" href="HoTT.Spaces.Finite.html#Fin"><span class="id" title="definition">Fin</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Functor.Attributes.html#fully_faithful_helpers.m"><span class="id" title="variable">m</span></a>.+1</span> (the image of the last element) together with an equivalence <span class="inlinecode"><a class="idref" href="HoTT.Spaces.Finite.html#Fin"><span class="id" title="definition">Fin</span></a></span> <span class="inlinecode"><a class="idref" href="Coq.Init.Peano.html#n"><span class="id" title="variable">n</span></a></span> <span class="inlinecode">&lt;~&gt;</span> <span class="inlinecode"><a class="idref" href="HoTT.Spaces.Finite.html#Fin"><span class="id" title="definition">Fin</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Functor.Attributes.html#fully_faithful_helpers.m"><span class="id" title="variable">m</span></a></span>.  More specifically, any such equivalence can be decomposed uniquely as a last-element transposition followed by an equivalence fixing the last element.  
@@ -6990,7 +6990,7 @@ In particular, this implies that if two canonical finite sets are equivalent, th
 </div>
 <div class="goal" id="goal0_3_39"><pre><span></span></pre></div>
 <div class="doc" scenenumber="41">
-<a name="lab420"></a><h2 class="section">Definition of general finite sets</h2>
+<a name="lab421"></a><h2 class="section">Definition of general finite sets</h2>
 </div>
 <div scenenumber="43" class="code">
 <span class="command" onmouseout="
@@ -7093,7 +7093,7 @@ Note that the sigma over cardinalities is not truncated.  Nevertheless, because 
 </div>
 <div class="goal" id="goal0_3_47"><pre><span></span></pre></div>
 <div class="doc" scenenumber="49">
-<a name="lab421"></a><h2 class="section">Preservation of finiteness by equivalences</h2>
+<a name="lab422"></a><h2 class="section">Preservation of finiteness by equivalences</h2>
 </div>
 <div scenenumber="51" class="code">
 <span class="command" onmouseout="
@@ -7221,7 +7221,7 @@ Note that the sigma over cardinalities is not truncated.  Nevertheless, because 
 </div>
 <div class="goal" id="goal0_3_51"><pre><span></span></pre></div>
 <div class="doc" scenenumber="53">
-<a name="lab422"></a><h2 class="section">Simple examples of finite sets</h2>
+<a name="lab423"></a><h2 class="section">Simple examples of finite sets</h2>
 <div class="doc" scenenumber="4"> </div>
 
  Canonical finite sets are finite 
@@ -7558,7 +7558,7 @@ Finite sets are also closed under successors.
 </div>
 <div class="goal" id="goal0_3_91"><pre><span></span></pre></div>
 <div class="doc" scenenumber="93">
-<a name="lab423"></a><h2 class="section">Decidability</h2>
+<a name="lab424"></a><h2 class="section">Decidability</h2>
 <div class="doc" scenenumber="4"> </div>
 
  Like canonical finite sets, finite sets have decidable equality. 
@@ -7742,7 +7742,7 @@ From this, it follows that any finite set is *merely* decidable.
 </div>
 <div class="goal" id="goal0_3_111"><pre><span></span></pre></div>
 <div class="doc" scenenumber="113">
-<a name="lab424"></a><h2 class="section">Induction over finite sets</h2>
+<a name="lab425"></a><h2 class="section">Induction over finite sets</h2>
 <div class="doc" scenenumber="4"> </div>
 
  Most concrete applications of this don't actually require univalence, but the general version does.  For this reason the general statement is less useful (and less used in the sequel) than it might be. 
@@ -7819,7 +7819,7 @@ From this, it follows that any finite set is *merely* decidable.
 </div>
 <div class="goal" id="goal0_3_115"><pre><span></span></pre></div>
 <div class="doc" scenenumber="117">
-<a name="lab425"></a><h2 class="section">The finite axiom of choice</h2>
+<a name="lab426"></a><h2 class="section">The finite axiom of choice</h2>
 </div>
 <div scenenumber="119" class="code">
 <span class="command" onmouseout="
@@ -7924,12 +7924,12 @@ From this, it follows that any finite set is *merely* decidable.
 </div>
 <div class="goal" id="goal0_3_119"><pre><span></span></pre></div>
 <div class="doc" scenenumber="121">
-<a name="lab426"></a><h2 class="section">Constructions on finite sets</h2>
+<a name="lab427"></a><h2 class="section">Constructions on finite sets</h2>
 <div class="doc" scenenumber="4"> </div>
 
  Finite sets are closed under sums, products, function spaces, and equivalence spaces.  There are multiple choices we could make regarding how to prove these facts.  Since we know what the cardinalities ought to be in all cases (since we know how to add, multiply, exponentiate, and take factorials of natural numbers), we could specify those off the bat, and then reduce to the case of canonical finite sets.  However, it's more amusing to instead prove finiteness of these constructions by "finite-set induction", and then *deduce* that their cardinalities are given by the corresponding operations on natural numbers (because they satisfy the same recurrences). 
 <div class="doc" scenenumber="6"> </div>
-<a name="lab427"></a><h3 class="section">Binary sums</h3>
+<a name="lab428"></a><h3 class="section">Binary sums</h3>
 </div>
 <div scenenumber="123" class="code">
 <span class="command" onmouseout="
@@ -8089,7 +8089,7 @@ Note that the cardinality function <span class="inlinecode"><a class="idref" hre
 </div>
 <div class="goal" id="goal0_3_127"><pre><span></span></pre></div>
 <div class="doc" scenenumber="129">
-<a name="lab428"></a><h3 class="section">Binary products</h3>
+<a name="lab429"></a><h3 class="section">Binary products</h3>
 </div>
 <div scenenumber="131" class="code">
 <span class="command" onmouseout="
@@ -8246,7 +8246,7 @@ Note that the cardinality function <span class="inlinecode"><a class="idref" hre
 </div>
 <div class="goal" id="goal0_3_131"><pre><span></span></pre></div>
 <div class="doc" scenenumber="133">
-<a name="lab429"></a><h3 class="section">Function types</h3>
+<a name="lab430"></a><h3 class="section">Function types</h3>
 <div class="doc" scenenumber="4"> </div>
 
  Finite sets are closed under function types, and even dependent function types. 
@@ -8456,7 +8456,7 @@ Note that the cardinality function <span class="inlinecode"><a class="idref" hre
 </div>
 <div class="goal" id="goal0_3_139"><pre><span></span></pre></div>
 <div class="doc" scenenumber="141">
-<a name="lab430"></a><h3 class="section">Automorphism types (i.e. symmetric groups)</h3>
+<a name="lab431"></a><h3 class="section">Automorphism types (i.e. symmetric groups)</h3>
 </div>
 <div scenenumber="143" class="code">
 <span class="command" onmouseout="
@@ -8623,7 +8623,7 @@ Note that the cardinality function <span class="inlinecode"><a class="idref" hre
 </div>
 <div class="goal" id="goal0_3_147"><pre><span></span></pre></div>
 <div class="doc" scenenumber="149">
-<a name="lab431"></a><h2 class="section">Finite sums of natural numbers</h2>
+<a name="lab432"></a><h2 class="section">Finite sums of natural numbers</h2>
 <div class="doc" scenenumber="4"> </div>
 
  Perhaps slightly less obviously, finite sets are also closed under sigmas. 
@@ -8952,7 +8952,7 @@ In particular, the image of a map between finite sets is finite.
 </div>
 <div class="goal" id="goal0_3_175"><pre><span></span></pre></div>
 <div class="doc" scenenumber="177">
-<a name="lab432"></a><h2 class="section">Finite products of natural numbers</h2>
+<a name="lab433"></a><h2 class="section">Finite products of natural numbers</h2>
 <div class="doc" scenenumber="4"> </div>
 
  Similarly, closure of finite sets under <span class="inlinecode"><span class="id" title="keyword">∀</span></span> automatically gives us a way to multiply a family of natural numbers indexed by any finite set.  Of course, if we defined this explicitly, it wouldn't need funext. 
@@ -9057,7 +9057,7 @@ The product of a finite constant family is the exponential by its cardinality.
 </div>
 <div class="goal" id="goal0_3_183"><pre><span></span></pre></div>
 <div class="doc" scenenumber="185">
-<a name="lab433"></a><h2 class="section">Finite subsets</h2>
+<a name="lab434"></a><h2 class="section">Finite subsets</h2>
 <div class="doc" scenenumber="4"> </div>
 
  Closure under sigmas implies that a detachable subset of a finite set is finite. 
@@ -9216,7 +9216,7 @@ Why doesn't Coq find this?
 </div>
 <div class="goal" id="goal0_3_199"><pre><span></span></pre></div>
 <div class="doc" scenenumber="201">
-<a name="lab434"></a><h2 class="section">Quotients</h2>
+<a name="lab435"></a><h2 class="section">Quotients</h2>
 <div class="doc" scenenumber="4"> </div>
 
  The quotient of a finite set by a detachable equivalence relation is finite. 
@@ -9663,7 +9663,7 @@ Therefore, the cardinality of <span class="inlinecode"><a class="idref" href="Ho
 </div>
 <div class="goal" id="goal0_3_207"><pre><span></span></pre></div>
 <div class="doc" scenenumber="209">
-<a name="lab435"></a><h2 class="section">Injections</h2>
+<a name="lab436"></a><h2 class="section">Injections</h2>
 <div class="doc" scenenumber="4"> </div>
 
  An injection between finite sets induces an inequality between their cardinalities. 
@@ -9902,7 +9902,7 @@ Therefore, the cardinality of <span class="inlinecode"><a class="idref" href="Ho
 </div>
 <div class="goal" id="goal0_3_211"><pre><span></span></pre></div>
 <div class="doc" scenenumber="213">
-<a name="lab436"></a><h2 class="section">Initial segments of <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.nat"><span class="id" title="inductive">nat</span></a></span>
+<a name="lab437"></a><h2 class="section">Initial segments of <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.nat"><span class="id" title="inductive">nat</span></a></span>
 </h2>
 </div>
 <div scenenumber="215" class="code">
@@ -10063,7 +10063,7 @@ Therefore, the cardinality of <span class="inlinecode"><a class="idref" href="Ho
 </div>
 <div class="goal" id="goal0_3_215"><pre><span></span></pre></div>
 <div class="doc" scenenumber="217">
-<a name="lab437"></a><h2 class="section">Enumerations</h2>
+<a name="lab438"></a><h2 class="section">Enumerations</h2>
 <div class="doc" scenenumber="4"> </div>
 
  A function from <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.nat"><span class="id" title="inductive">nat</span></a></span> to a finite set must repeat itself eventually. 

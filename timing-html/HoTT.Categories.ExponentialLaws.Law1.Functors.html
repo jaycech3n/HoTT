@@ -36,14 +36,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Functors.v
 Line: 1
-Time: 0.047s">
-<div class="time" style="width: 46.534653465347%"></div>
+Time: 0.044s">
+<div class="time" style="width: 44.444444444444%"></div>
 <pre>Require Import Category.Core Functor.Core FunctorCategory.Core Functor.Identity NaturalTransformation.Core NaturalTransformation.Paths Functor.Composition.Core.</pre>
 </div>
 <div class="code" title="File: Functors.v
 Line: 1
-Time: 0.015s">
-<div class="time" style="width: 14.851485148515%"></div>
+Time: 0.014s">
+<div class="time" style="width: 14.141414141414%"></div>
 <pre>
 Require Import InitialTerminalCategory.Core InitialTerminalCategory.Functors InitialTerminalCategory.NaturalTransformations.</pre>
 </div>
@@ -147,7 +147,7 @@ Time: 0s">
 <div class="code" title="File: Functors.v
 Line: 21
 Time: 0.006s">
-<div class="time" style="width: 5.9405940594059%"></div>
+<div class="time" style="width: 6.0606060606061%"></div>
 <pre>Definition functor : Functor (1 -&gt; C) C
     := Build_Functor (1 -&gt; C) C
                      (fun F =&gt; F (center _))
@@ -158,7 +158,7 @@ Time: 0.006s">
 <div class="code" title="File: Functors.v
 Line: 26
 Time: 0.002s">
-<div class="time" style="width: 1.980198019802%"></div>
+<div class="time" style="width: 2.020202020202%"></div>
 <pre>
 
   Definition inverse_morphism_of
@@ -177,7 +177,7 @@ Time: 0s">
 <div class="code" title="File: Functors.v
 Line: 33
 Time: 0.001s">
-<div class="time" style="width: 0.99009900990099%"></div>
+<div class="time" style="width: 1.010101010101%"></div>
 <pre>
     refine (Build_NaturalTransformation
               (Functors.from_terminal _ s)
@@ -194,8 +194,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Functors.v
 Line: 39
-Time: 0.004s">
-<div class="time" style="width: 3.960396039604%"></div>
+Time: 0.003s">
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>
     etransitivity;
       [ apply right_identity
@@ -241,7 +241,7 @@ Time: 0s">
 <div class="code" title="File: Functors.v
 Line: 49
 Time: 0.008s">
-<div class="time" style="width: 7.9207920792079%"></div>
+<div class="time" style="width: 8.0808080808081%"></div>
 <pre>
     refine (Build_Functor
               C (1 -&gt; C)
@@ -262,7 +262,7 @@ Time: 0s">
 <div class="code" title="File: Functors.v
 Line: 58
 Time: 0.004s">
-<div class="time" style="width: 3.960396039604%"></div>
+<div class="time" style="width: 4.040404040404%"></div>
 <pre>End law1.</pre>
 </div>
 <div class="code" title="File: Functors.v
@@ -289,8 +289,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Functors.v
 Line: 62
-Time: 0.001s">
-<div class="time" style="width: 0.99009900990099%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Context `{IsTerminalCategory one}.</pre>
 </div>
@@ -318,8 +318,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Functors.v
 Line: 67
-Time: 0.022s">
-<div class="time" style="width: 21.782178217822%"></div>
+Time: 0.021s">
+<div class="time" style="width: 21.212121212121%"></div>
 <pre>
 
   Global Instance: IsTerminalCategory (C -&gt; 1) := {}.</pre>
@@ -336,7 +336,7 @@ Time: 0s">
 <div class="code" title="File: Functors.v
 Line: 72
 Time: 0.001s">
-<div class="time" style="width: 0.99009900990099%"></div>
+<div class="time" style="width: 1.010101010101%"></div>
 <pre>Definition functor' : Functor (C -&gt; 1) 1
     := Functors.to_terminal _.</pre>
 </div>
@@ -351,8 +351,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Functors.v
 Line: 76
-Time: 0.023s">
-<div class="time" style="width: 22.772277227723%"></div>
+Time: 0.022s">
+<div class="time" style="width: 22.222222222222%"></div>
 <pre>Definition inverse' : Functor 1 (C -&gt; 1)
     := Functors.to_terminal _.</pre>
 </div>
@@ -367,7 +367,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Functors.v
 Line: 80
-Time: 0.101s">
+Time: 0.099s">
 <div class="time" style="width: 100%"></div>
 <pre>Definition law'
   : functor' o inverse' = 1
@@ -377,7 +377,7 @@ Time: 0.101s">
 <div class="code" title="File: Functors.v
 Line: 83
 Time: 0.003s">
-<div class="time" style="width: 2.970297029703%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>
 End law1'.</pre>
 </div>

@@ -88,22 +88,22 @@
           
 
             i = 14;
-            data = "<infomsg>n is declared</infomsg>	<infomsg>X is declared</infomsg>	<infomsg>H is declared</infomsg>	";
-            responses[i]=data;
-          
-
-            i = 15;
             data = "<infomsg>Pi is defined</infomsg>	";
             responses[i]=data;
           
 
+            i = 15;
+            data = "";
+            responses[i]=data;
+          
+
             i = 16;
-            data = "<infomsg>gt is declared</infomsg>	";
+            data = "<infomsg>n is declared</infomsg>	<infomsg>X is declared</infomsg>	";
             responses[i]=data;
           
 
             i = 17;
-            data = "1 subgoal (ID 15)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  SgOp Pi	";
+            data = "1 subgoal (ID 20)	  	  n : nat	  X : pType	  ============================	  MonUnit (Pi n.+1 X)	";
             responses[i]=data;
           
 
@@ -113,227 +113,227 @@
           
 
             i = 19;
-            data = "1 subgoal (ID 18)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  a, b : Pi	  ============================	  Pi	";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 
             i = 20;
-            data = "1 subgoal (ID 96)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  b, a : iterated_loops n X	  ============================	  Pi	";
-            responses[i]=data;
-          
-
-            i = 21;
-            data = "1 subgoal (ID 193)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  b, a : iterated_loops n X	  ============================	  iterated_loops n X	";
-            responses[i]=data;
-          
-
-            i = 22;
-            data = "1 subgoal (ID 231)	  	  n : nat	  X : Type	  H : IsPointed X	  n0 : nat	  gt : 0 < n0.+1	  b, a : iterated_loops n0.+1 X	  ============================	  iterated_loops n0.+1 X	";
-            responses[i]=data;
-          
-
-            i = 23;
-            data = "No more subgoals.	";
-            responses[i]=data;
-          
-
-            i = 24;
-            data = "<infomsg>PiOp is defined</infomsg>	";
-            responses[i]=data;
-          
-
-            i = 25;
-            data = "1 subgoal (ID 17)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  Associative PiOp	";
-            responses[i]=data;
-          
-
-            i = 26;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 27;
-            data = "1 subgoal (ID 21)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x, y, z : Pi	  ============================	  PiOp x (PiOp y z) = PiOp (PiOp x y) z	";
-            responses[i]=data;
-          
-
-            i = 28;
-            data = "1 subgoal (ID 306)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  z, y, x : iterated_loops n X	  ============================	  PiOp (tr x) (PiOp (tr y) (tr z)) = PiOp (PiOp (tr x) (tr y)) (tr z)	";
-            responses[i]=data;
-          
-
-            i = 29;
-            data = "1 subgoal (ID 386)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  z, y, x : iterated_loops n X	  ============================	  tr	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 ->	          iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                           end	     | n0.+1 =>	         fun (gt0 : Unit)	           (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	         => match gt0 with	            | tt => a @ b	            end	     end gt	       (match	          n as n0	          return	            (match n0 with	             | 0 => 1	             | _.+1 => 0	             end =n 0 ->	             iterated_loops n0 X ->	             iterated_loops n0 X -> iterated_loops n0 X)	        with	        | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                              end	        | n0.+1 =>	            fun (gt0 : Unit)	              (b	               a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	            => match gt0 with	               | tt => a @ b	               end	        end gt z y) x) =	  tr	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 ->	          iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                           end	     | n0.+1 =>	         fun (gt0 : Unit)	           (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	         => match gt0 with	            | tt => a @ b	            end	     end gt z	       (match	          n as n0	          return	            (match n0 with	             | 0 => 1	             | _.+1 => 0	             end =n 0 ->	             iterated_loops n0 X ->	             iterated_loops n0 X -> iterated_loops n0 X)	        with	        | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                              end	        | n0.+1 =>	            fun (gt0 : Unit)	              (b	               a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	            => match gt0 with	               | tt => a @ b	               end	        end gt y x))	";
-            responses[i]=data;
-          
-
-            i = 30;
-            data = "1 subgoal (ID 389)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  z, y, x : iterated_loops n X	  ============================	  match	    n as n0	    return	      (match n0 with	       | 0 => 1	       | _.+1 => 0	       end =n 0 ->	       iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	  with	  | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                        end	  | n0.+1 =>	      fun (gt0 : Unit)	        (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X)) =>	      match gt0 with	      | tt => a @ b	      end	  end gt	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 ->	          iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                           end	     | n0.+1 =>	         fun (gt0 : Unit)	           (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	         => match gt0 with	            | tt => a @ b	            end	     end gt z y) x =	  match	    n as n0	    return	      (match n0 with	       | 0 => 1	       | _.+1 => 0	       end =n 0 ->	       iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	  with	  | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                        end	  | n0.+1 =>	      fun (gt0 : Unit)	        (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X)) =>	      match gt0 with	      | tt => a @ b	      end	  end gt z	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 ->	          iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                           end	     | n0.+1 =>	         fun (gt0 : Unit)	           (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	         => match gt0 with	            | tt => a @ b	            end	     end gt y x)	";
-            responses[i]=data;
-          
-
-            i = 31;
-            data = "1 subgoal (ID 432)	  	  n : nat	  X : Type	  H : IsPointed X	  n0 : nat	  gt : 0 < n0.+1	  z, y, x : iterated_loops n0.+1 X	  ============================	  x @ (y @ z) = (x @ y) @ z	";
-            responses[i]=data;
-          
-
-            i = 32;
-            data = "No more subgoals.	";
-            responses[i]=data;
-          
-
-            i = 33;
-            data = "<infomsg>PiOp_assoc is defined</infomsg>	";
-            responses[i]=data;
-          
-
-            i = 34;
-            data = "1 subgoal (ID 18)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  Pi	";
-            responses[i]=data;
-          
-
-            i = 35;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 36;
-            data = "1 subgoal (ID 24)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  iterated_loops n X	";
-            responses[i]=data;
-          
-
-            i = 37;
-            data = "1 subgoal (ID 54)	  	  n : nat	  X : Type	  H : IsPointed X	  n0 : nat	  gt : 0 < n0.+1	  ============================	  iterated_loops n0.+1 X	";
-            responses[i]=data;
-          
-
-            i = 38;
-            data = "No more subgoals.	";
-            responses[i]=data;
-          
-
-            i = 39;
             data = "<infomsg>PiUnit is defined</infomsg>	";
             responses[i]=data;
           
 
-            i = 40;
-            data = "1 subgoal (ID 21)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  LeftIdentity PiOp PiUnit	";
+            i = 21;
+            data = "1 subgoal (ID 21)	  	  n : nat	  X : pType	  ============================	  SgOp (Pi n.+1 X)	";
             responses[i]=data;
           
 
-            i = 41;
+            i = 22;
             data = "";
             responses[i]=data;
           
 
-            i = 42;
-            data = "1 subgoal (ID 23)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : Pi	  ============================	  PiOp PiUnit x = x	";
+            i = 23;
+            data = "1 subgoal (ID 102)	  	  n : nat	  X : pType	  b, a : iterated_loops n.+1 X	  ============================	  Pi n.+1 X	";
             responses[i]=data;
           
 
-            i = 43;
-            data = "1 subgoal (ID 94)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  PiOp PiUnit (tr x) = tr x	";
-            responses[i]=data;
-          
-
-            i = 44;
-            data = "1 subgoal (ID 126)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  tr	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 ->	          iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                           end	     | n0.+1 =>	         fun (gt0 : Unit)	           (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	         => match gt0 with	            | tt => a @ b	            end	     end gt x	       (match	          n as n0	          return	            (match n0 with	             | 0 => 1	             | _.+1 => 0	             end =n 0 -> iterated_loops n0 X)	        with	        | 0 => fun gt0 : Empty => match gt0 return X with	                                  end	        | n0.+1 => fun gt0 : Unit => match gt0 with	                                     | tt => 1%path	                                     end	        end gt)) = tr x	";
-            responses[i]=data;
-          
-
-            i = 45;
-            data = "1 subgoal (ID 129)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  match	    n as n0	    return	      (match n0 with	       | 0 => 1	       | _.+1 => 0	       end =n 0 ->	       iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	  with	  | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                        end	  | n0.+1 =>	      fun (gt0 : Unit)	        (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X)) =>	      match gt0 with	      | tt => a @ b	      end	  end gt x	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 -> iterated_loops n0 X)	     with	     | 0 => fun gt0 : Empty => match gt0 return X with	                               end	     | n0.+1 => fun gt0 : Unit => match gt0 with	                                  | tt => 1%path	                                  end	     end gt) = x	";
-            responses[i]=data;
-          
-
-            i = 46;
-            data = "1 subgoal (ID 164)	  	  n : nat	  X : Type	  H : IsPointed X	  n0 : nat	  gt : 0 < n0.+1	  x : iterated_loops n0.+1 X	  ============================	  1 @ x = x	";
-            responses[i]=data;
-          
-
-            i = 47;
+            i = 24;
             data = "No more subgoals.	";
             responses[i]=data;
           
 
-            i = 48;
+            i = 25;
+            data = "<infomsg>PiOp is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 26;
+            data = "1 subgoal (ID 23)	  	  n : nat	  X : pType	  ============================	  Associative PiOp	";
+            responses[i]=data;
+          
+
+            i = 27;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 28;
+            data = "1 subgoal (ID 398)	  	  n : nat	  X : pType	  z, y, x : iterated_loops n.+1 X	  ============================	  tr (x @ (y @ z)) = tr ((x @ y) @ z)	";
+            responses[i]=data;
+          
+
+            i = 29;
+            data = "No more subgoals.	";
+            responses[i]=data;
+          
+
+            i = 30;
+            data = "<infomsg>PiOp_assoc is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 31;
+            data = "1 subgoal (ID 26)	  	  n : nat	  X : pType	  ============================	  LeftIdentity PiOp PiUnit	";
+            responses[i]=data;
+          
+
+            i = 32;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 33;
+            data = "1 subgoal (ID 127)	  	  n : nat	  X : pType	  x : iterated_loops n.+1 X	  ============================	  tr (1 @ x) = tr x	";
+            responses[i]=data;
+          
+
+            i = 34;
+            data = "No more subgoals.	";
+            responses[i]=data;
+          
+
+            i = 35;
             data = "<infomsg>PiOp_leftId is defined</infomsg>	";
             responses[i]=data;
           
 
-            i = 49;
-            data = "1 subgoal (ID 24)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  RightIdentity PiOp PiUnit	";
+            i = 36;
+            data = "1 subgoal (ID 29)	  	  n : nat	  X : pType	  ============================	  RightIdentity PiOp PiUnit	";
             responses[i]=data;
           
 
-            i = 50;
+            i = 37;
             data = "";
             responses[i]=data;
           
 
-            i = 51;
-            data = "1 subgoal (ID 26)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : Pi	  ============================	  PiOp x PiUnit = x	";
+            i = 38;
+            data = "1 subgoal (ID 130)	  	  n : nat	  X : pType	  x : iterated_loops n.+1 X	  ============================	  tr (x @ 1) = tr x	";
             responses[i]=data;
           
 
-            i = 52;
-            data = "1 subgoal (ID 97)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  PiOp (tr x) PiUnit = tr x	";
-            responses[i]=data;
-          
-
-            i = 53;
-            data = "1 subgoal (ID 129)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  tr	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 ->	          iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                           end	     | n0.+1 =>	         fun (gt0 : Unit)	           (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	         => match gt0 with	            | tt => a @ b	            end	     end gt	       (match	          n as n0	          return	            (match n0 with	             | 0 => 1	             | _.+1 => 0	             end =n 0 -> iterated_loops n0 X)	        with	        | 0 => fun gt0 : Empty => match gt0 return X with	                                  end	        | n0.+1 => fun gt0 : Unit => match gt0 with	                                     | tt => 1%path	                                     end	        end gt) x) = tr x	";
-            responses[i]=data;
-          
-
-            i = 54;
-            data = "1 subgoal (ID 132)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  match	    n as n0	    return	      (match n0 with	       | 0 => 1	       | _.+1 => 0	       end =n 0 ->	       iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	  with	  | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                        end	  | n0.+1 =>	      fun (gt0 : Unit)	        (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X)) =>	      match gt0 with	      | tt => a @ b	      end	  end gt	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 -> iterated_loops n0 X)	     with	     | 0 => fun gt0 : Empty => match gt0 return X with	                               end	     | n0.+1 => fun gt0 : Unit => match gt0 with	                                  | tt => 1%path	                                  end	     end gt) x = x	";
-            responses[i]=data;
-          
-
-            i = 55;
-            data = "1 subgoal (ID 167)	  	  n : nat	  X : Type	  H : IsPointed X	  n0 : nat	  gt : 0 < n0.+1	  x : iterated_loops n0.+1 X	  ============================	  x @ 1 = x	";
-            responses[i]=data;
-          
-
-            i = 56;
+            i = 39;
             data = "No more subgoals.	";
             responses[i]=data;
           
 
-            i = 57;
+            i = 40;
             data = "<infomsg>PiOp_rightId is defined</infomsg>	";
             responses[i]=data;
           
 
-            i = 58;
-            data = "1 subgoal (ID 25)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  Pi -> Pi	";
+            i = 41;
+            data = "1 subgoal (ID 30)	  	  n : nat	  X : pType	  ============================	  Negate (Pi n.+1 X)	";
             responses[i]=data;
           
 
-            i = 59;
+            i = 42;
             data = "";
             responses[i]=data;
           
 
+            i = 43;
+            data = "1 subgoal (ID 59)	  	  n : nat	  X : pType	  X0 : iterated_loops n.+1 X	  ============================	  Pi n.+1 X	";
+            responses[i]=data;
+          
+
+            i = 44;
+            data = "No more subgoals.	";
+            responses[i]=data;
+          
+
+            i = 45;
+            data = "<infomsg>PiInverse is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 46;
+            data = "1 subgoal (ID 34)	  	  n : nat	  X : pType	  ============================	  LeftInverse PiOp PiInverse PiUnit	";
+            responses[i]=data;
+          
+
+            i = 47;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 48;
+            data = "1 subgoal (ID 135)	  	  n : nat	  X : pType	  x : iterated_loops n.+1 X	  ============================	  tr (x^ @ x) = PiUnit	";
+            responses[i]=data;
+          
+
+            i = 49;
+            data = "No more subgoals.	";
+            responses[i]=data;
+          
+
+            i = 50;
+            data = "<infomsg>PiOp_leftInv is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 51;
+            data = "1 subgoal (ID 38)	  	  n : nat	  X : pType	  ============================	  RightInverse PiOp PiInverse PiUnit	";
+            responses[i]=data;
+          
+
+            i = 52;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 53;
+            data = "1 subgoal (ID 139)	  	  n : nat	  X : pType	  x : iterated_loops n.+1 X	  ============================	  tr (x @ x^) = PiUnit	";
+            responses[i]=data;
+          
+
+            i = 54;
+            data = "No more subgoals.	";
+            responses[i]=data;
+          
+
+            i = 55;
+            data = "<infomsg>PiOp_rightInv is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 56;
+            data = "1 subgoal (ID 42)	  	  n : nat	  X : pType	  ============================	  Group (Pi n.+1 X)	";
+            responses[i]=data;
+          
+
+            i = 57;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 58;
+            data = "No more subgoals.	";
+            responses[i]=data;
+          
+
+            i = 59;
+            data = "<infomsg>pi_is_Group is defined</infomsg>	";
+            responses[i]=data;
+          
+
             i = 60;
-            data = "1 subgoal (ID 26)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  a : Pi	  ============================	  Pi	";
+            data = "";
             responses[i]=data;
           
 
             i = 61;
-            data = "1 subgoal (ID 53)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  a : iterated_loops n X	  ============================	  Pi	";
+            data = "1 subgoal (ID 26)	  	  n : nat	  X : pType	  ============================	  Commutative (PiOp n.+1 X)	";
             responses[i]=data;
           
 
             i = 62;
-            data = "1 subgoal (ID 126)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  a : iterated_loops n X	  ============================	  iterated_loops n X	";
+            data = "";
             responses[i]=data;
           
 
             i = 63;
-            data = "1 subgoal (ID 160)	  	  n : nat	  X : Type	  H : IsPointed X	  n0 : nat	  gt : 0 < n0.+1	  a : iterated_loops n0.+1 X	  ============================	  iterated_loops n0.+1 X	";
+            data = "1 subgoal (ID 251)	  	  n : nat	  X : pType	  y, x : iterated_loops n.+2 X	  ============================	  tr (x @ y) = tr (y @ x)	";
             responses[i]=data;
           
 
@@ -343,12 +343,12 @@
           
 
             i = 65;
-            data = "<infomsg>PiInverse is defined</infomsg>	";
+            data = "<infomsg>piop_commutative is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 66;
-            data = "1 subgoal (ID 29)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  LeftInverse PiOp PiInverse PiUnit	";
+            data = "1 subgoal (ID 34)	  	  n : nat	  X : pType	  ============================	  AbGroup (Pi n.+2 X)	";
             responses[i]=data;
           
 
@@ -358,27 +358,27 @@
           
 
             i = 68;
-            data = "1 subgoal (ID 31)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : Pi	  ============================	  PiOp (PiInverse x) x = PiUnit	";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 
             i = 69;
-            data = "1 subgoal (ID 102)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  PiOp (PiInverse (tr x)) (tr x) = PiUnit	";
+            data = "<infomsg>pi_is_AbGroup is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 70;
-            data = "1 subgoal (ID 134)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  tr	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 ->	          iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                           end	     | n0.+1 =>	         fun (gt0 : Unit)	           (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	         => match gt0 with	            | tt => a @ b	            end	     end gt x	       (match	          n as n0	          return	            (match n0 with	             | 0 => 1	             | _.+1 => 0	             end =n 0 -> iterated_loops n0 X -> iterated_loops n0 X)	        with	        | 0 => fun (gt0 : Empty) (_ : X) => match gt0 return X with	                                            end	        | n0.+1 =>	            fun (gt0 : Unit)	              (a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	            => match gt0 with	               | tt => a^	               end	        end gt x)) = PiUnit	";
+            data = "1 subgoal (ID 60)	  	  X : pType	  Y : pType	  f : pMap X Y	  ============================	  forall x y : point X = point X,	  loops_functor f (x @ y) = loops_functor f x @ loops_functor f y	";
             responses[i]=data;
           
 
             i = 71;
-            data = "1 subgoal (ID 137)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  match	    n as n0	    return	      (match n0 with	       | 0 => 1	       | _.+1 => 0	       end =n 0 ->	       iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	  with	  | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                        end	  | n0.+1 =>	      fun (gt0 : Unit)	        (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X)) =>	      match gt0 with	      | tt => a @ b	      end	  end gt x	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ : X) => match gt0 return X with	                                         end	     | n0.+1 =>	         fun (gt0 : Unit)	           (a : point (iterated_loops n0 X) = point (iterated_loops n0 X)) =>	         match gt0 with	         | tt => a^	         end	     end gt x) =	  (let n0 := n in	   match n0 as n1 return (0 < n1 -> iterated_loops n1 X) with	   | 0 =>	       fun gt0 : 0 < 0 =>	       let t := gt0 in match t return (iterated_loops 0 X) with	                       end	   | n1.+1 =>	       fun gt0 : 0 < n1.+1 => let t := gt0 in match t with	                                              | tt => 1%path	                                              end	   end gt)	";
+            data = "";
             responses[i]=data;
           
 
             i = 72;
-            data = "1 subgoal (ID 172)	  	  n : nat	  X : Type	  H : IsPointed X	  n0 : nat	  gt : 0 < n0.+1	  x : iterated_loops n0.+1 X	  ============================	  x^ @ x =	  (let n1 := n0.+1 in	   match n1 as n2 return (0 < n2 -> iterated_loops n2 X) with	   | 0 =>	       fun gt0 : 0 < 0 =>	       let t := gt0 in match t return (iterated_loops 0 X) with	                       end	   | n2.+1 =>	       fun gt0 : 0 < n2.+1 => let t := gt0 in match t with	                                              | tt => 1%path	                                              end	   end tt)	";
+            data = "1 subgoal (ID 64)	  	  X : pType	  Y : pType	  f : pMap X Y	  x, y : point X = point X	  ============================	  (point_eq f)^ @ (ap f (x @ y) @ point_eq f) =	  ((point_eq f)^ @ (ap f x @ point_eq f)) @	  ((point_eq f)^ @ (ap f y @ point_eq f))	";
             responses[i]=data;
           
 
@@ -388,12 +388,12 @@
           
 
             i = 74;
-            data = "<infomsg>PiOp_leftInv is defined</infomsg>	";
+            data = "<infomsg>loops_functor_pp is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 75;
-            data = "1 subgoal (ID 33)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  RightInverse PiOp PiInverse PiUnit	";
+            data = "";
             responses[i]=data;
           
 
@@ -403,27 +403,27 @@
           
 
             i = 77;
-            data = "1 subgoal (ID 35)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : Pi	  ============================	  PiOp x (PiInverse x) = PiUnit	";
+            data = "<infomsg>n is declared</infomsg>	<infomsg>X is declared</infomsg>	<infomsg>Y is declared</infomsg>	<infomsg>f is declared</infomsg>	";
             responses[i]=data;
           
 
             i = 78;
-            data = "1 subgoal (ID 106)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  PiOp (tr x) (PiInverse (tr x)) = PiUnit	";
+            data = "1 subgoal (ID 61)	  	  n : nat	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  Pi n.+1 X -> Pi n.+1 Y	";
             responses[i]=data;
           
 
             i = 79;
-            data = "1 subgoal (ID 138)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  tr	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 ->	          iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                           end	     | n0.+1 =>	         fun (gt0 : Unit)	           (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	         => match gt0 with	            | tt => a @ b	            end	     end gt	       (match	          n as n0	          return	            (match n0 with	             | 0 => 1	             | _.+1 => 0	             end =n 0 -> iterated_loops n0 X -> iterated_loops n0 X)	        with	        | 0 => fun (gt0 : Empty) (_ : X) => match gt0 return X with	                                            end	        | n0.+1 =>	            fun (gt0 : Unit)	              (a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	            => match gt0 with	               | tt => a^	               end	        end gt x) x) = PiUnit	";
+            data = "";
             responses[i]=data;
           
 
             i = 80;
-            data = "1 subgoal (ID 141)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  match	    n as n0	    return	      (match n0 with	       | 0 => 1	       | _.+1 => 0	       end =n 0 ->	       iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	  with	  | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                        end	  | n0.+1 =>	      fun (gt0 : Unit)	        (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X)) =>	      match gt0 with	      | tt => a @ b	      end	  end gt	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ : X) => match gt0 return X with	                                         end	     | n0.+1 =>	         fun (gt0 : Unit)	           (a : point (iterated_loops n0 X) = point (iterated_loops n0 X)) =>	         match gt0 with	         | tt => a^	         end	     end gt x) x =	  (let n0 := n in	   match n0 as n1 return (0 < n1 -> iterated_loops n1 X) with	   | 0 =>	       fun gt0 : 0 < 0 =>	       let t := gt0 in match t return (iterated_loops 0 X) with	                       end	   | n1.+1 =>	       fun gt0 : 0 < n1.+1 => let t := gt0 in match t with	                                              | tt => 1%path	                                              end	   end gt)	";
+            data = "1 subgoal (ID 81)	  	  n : nat	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  iterated_loops n.+1 X -> iterated_loops n.+1 Y	";
             responses[i]=data;
           
 
             i = 81;
-            data = "1 subgoal (ID 176)	  	  n : nat	  X : Type	  H : IsPointed X	  n0 : nat	  gt : 0 < n0.+1	  x : iterated_loops n0.+1 X	  ============================	  x @ x^ =	  (let n1 := n0.+1 in	   match n1 as n2 return (0 < n2 -> iterated_loops n2 X) with	   | 0 =>	       fun gt0 : 0 < 0 =>	       let t := gt0 in match t return (iterated_loops 0 X) with	                       end	   | n2.+1 =>	       fun gt0 : 0 < n2.+1 => let t := gt0 in match t with	                                              | tt => 1%path	                                              end	   end tt)	";
+            data = "1 subgoal (ID 94)	  	  n : nat	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  X ->* Y	";
             responses[i]=data;
           
 
@@ -433,12 +433,12 @@
           
 
             i = 83;
-            data = "<infomsg>PiOp_rightInv is defined</infomsg>	";
+            data = "<infomsg>functor_pi is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 84;
-            data = "1 subgoal (ID 34)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  Group Pi	";
+            data = "1 subgoal (ID 68)	  	  n : nat	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  MonoidPreserving functor_pi	";
             responses[i]=data;
           
 
@@ -448,37 +448,37 @@
           
 
             i = 86;
-            data = "No more subgoals.	";
+            data = "2 subgoals (ID 75)	  	  n : nat	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  SemiGroupPreserving functor_pi		subgoal 2 (ID 76) is:	 UnitPreserving functor_pi	";
             responses[i]=data;
           
 
             i = 87;
-            data = "<infomsg>pi_is_Group is defined</infomsg>	";
+            data = "1 subgoal (ID 75)	  	  n : nat	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  SemiGroupPreserving functor_pi	1 subgoal (ID 79)	  	  n : nat	  X : pType	  Y : pType	  f : X ->* Y	  x, y : Pi n.+1 X	  ============================	  functor_pi (x & y) = functor_pi x & functor_pi y	";
             responses[i]=data;
           
 
             i = 88;
-            data = "";
+            data = "1 subgoal (ID 245)	  	  n : nat	  X : pType	  Y : pType	  f : X ->* Y	  y, x : iterated_loops n.+1 X	  ============================	  functor_pi (tr x & tr y) = functor_pi (tr x) & functor_pi (tr y)	";
             responses[i]=data;
           
 
             i = 89;
-            data = "";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 76)		subgoal 1 (ID 76) is:	 UnitPreserving functor_pi	";
             responses[i]=data;
           
 
             i = 90;
-            data = "";
+            data = "1 subgoal (ID 76)	  	  n : nat	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  UnitPreserving functor_pi	1 subgoal (ID 325)	  	  n : nat	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  (point_eq (iterated_loops_functor n f))^ @	  (1 @ point_eq (iterated_loops_functor n f)) = 1%path	";
             responses[i]=data;
           
 
             i = 91;
-            data = "";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 
             i = 92;
-            data = "";
+            data = "<infomsg>functor_pi_homomorphism is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -493,7 +493,7 @@
           
 
             i = 95;
-            data = "";
+            data = "1 subgoal (ID 69)	  	  X : pType	  Y : pType	  n : nat	  ============================	  Pi n (X * Y) <~> Pi n X * Pi n Y	";
             responses[i]=data;
           
 
@@ -503,16 +503,81 @@
           
 
             i = 97;
-            data = "";
+            data = "1 subgoal (ID 71)	  	  X : pType	  Y : pType	  n : nat	  ============================	  Tr 0 (iterated_loops n (X * Y)) <~>	  Tr 0 (iterated_loops n X) * Tr 0 (iterated_loops n Y)	";
             responses[i]=data;
           
 
             i = 98;
-            data = "";
+            data = "1 subgoal (ID 85)	  	  X : pType	  Y : pType	  n : nat	  ============================	  Tr 0 (iterated_loops n (X * Y)) <~>	  Tr 0 (iterated_loops n X * iterated_loops n Y)%type	";
             responses[i]=data;
           
 
             i = 99;
+            data = "1 subgoal (ID 86)	  	  X : pType	  Y : pType	  n : nat	  ============================	  iterated_loops n (X * Y) <~> iterated_loops n X * iterated_loops n Y	";
+            responses[i]=data;
+          
+
+            i = 100;
+            data = "No more subgoals.	";
+            responses[i]=data;
+          
+
+            i = 101;
+            data = "<infomsg>Pi_prod is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 102;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 103;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 104;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 105;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 106;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 107;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 108;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 109;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 110;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 111;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 112;
             data = "";
             responses[i]=data;
           
@@ -573,40 +638,40 @@
       " onmouseover="
       mouseover(12, '0_3_3');
       "><br>
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.DProp.html#"><span class="id" title="library">DProp</span></a>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.UnivalenceAxiom.html#"><span class="id" title="library">UnivalenceAxiom</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(13, '0_3_3');
       "><br>
 <br>
-<span class="id" title="keyword">Section</span> <a name="HomotopyGroups"><span class="id" title="section">HomotopyGroups</span></a>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Import</span> <span class="id" title="var">TrM</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(14, '0_3_3');
       "><br>
 <br>
-  <span class="id" title="keyword">Context</span><br>
-    (<span class="id" title="var">n</span> : <a class="idref" href="Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>)<br>
-    (<span class="id" title="var">X</span> : <span class="id" title="keyword">Type</span>)<br>
-   `{<a class="idref" href="HoTT.Basics.Overture.html#IsPointed"><span class="id" title="class">IsPointed</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#X"><span class="id" title="variable">X</span></a>}.</span><span class="command" onmouseout="
+<br>
+<span class="id" title="keyword">Definition</span> <a name="Pi"><span class="id" title="definition">Pi</span></a> <span class="id" title="var">n</span> (<span class="id" title="var">X</span> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>) := <a class="idref" href="HoTT.HIT.Truncations.html#Tr"><span class="id" title="definition">Tr</span></a> 0 (<a class="idref" href="HoTT.Pointed.html#iterated_loops"><span class="id" title="definition">iterated_loops</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#X"><span class="id" title="variable">X</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(15, '0_3_3');
       "><br>
 <br>
-  <span class="id" title="keyword">Definition</span> <a name="Pi"><span class="id" title="definition">Pi</span></a> := <a class="idref" href="HoTT.HIT.Truncations.html#Tr"><span class="id" title="definition">Tr</span></a> 0 (<a class="idref" href="HoTT.Pointed.html#iterated_loops"><span class="id" title="definition">iterated_loops</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.n"><span class="id" title="variable">n</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.X"><span class="id" title="variable">X</span></a>).</span><span class="command" onmouseout="
+<span class="id" title="keyword">Section</span> <a name="PiGroup"><span class="id" title="section">PiGroup</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(16, '0_3_3');
       "><br>
 <br>
-  <span class="id" title="keyword">Context</span> `{<span class="id" title="var">gt</span> : 0 <a class="idref" href="HoTT.Spaces.Nat.html#00fe0eaf5e6949f0a31725357afa4bba"><span class="id" title="notation">&lt;</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.n"><span class="id" title="variable">n</span></a>}.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Context</span><br>
+    (<span class="id" title="var">n</span> : <a class="idref" href="Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>)<br>
+    (<span class="id" title="var">X</span> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(17, '0_3_3');
       "><br>
 <br>
-  <span class="id" title="keyword">Global Instance</span> <a name="PiOp"><span class="id" title="instance">PiOp</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#SgOp"><span class="id" title="class">SgOp</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Global Instance</span> <a name="PiUnit"><span class="id" title="instance">PiUnit</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#MonUnit"><span class="id" title="class">MonUnit</span></a> (<a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiGroup.n"><span class="id" title="variable">n</span></a><a class="idref" href="HoTT.Basics.Overture.html#bda89d73ec4a8f23ae92b565ffb5aaa6"><span class="id" title="notation">.+1</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiGroup.X"><span class="id" title="variable">X</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(18, '0_3_3');
@@ -616,329 +681,342 @@
       " onmouseover="
       mouseover(19, '0_3_3');
       "><br>
-    <span class="id" title="tactic">intros</span> <span class="id" title="var">a</span> <span class="id" title="var">b</span>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">by</span> <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Truncations.html#Trunc.tr"><span class="id" title="constructor">tr</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(20, '0_3_3');
       "><br>
-    <span class="id" title="var">strip_truncations</span>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(21, '0_3_3');
       "><br>
-    <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Truncations.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
+<br>
+  <span class="id" title="keyword">Global Instance</span> <a name="PiOp"><span class="id" title="instance">PiOp</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#SgOp"><span class="id" title="class">SgOp</span></a> (<a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiGroup.n"><span class="id" title="variable">n</span></a><a class="idref" href="HoTT.Basics.Overture.html#bda89d73ec4a8f23ae92b565ffb5aaa6"><span class="id" title="notation">.+1</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiGroup.X"><span class="id" title="variable">X</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(22, '0_3_3');
       "><br>
-    <span class="id" title="tactic">destruct</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.n"><span class="id" title="variable">n</span></a>, <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.gt"><span class="id" title="variable">gt</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(23, '0_3_3');
       "><br>
-    <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Basics.Overture.html#concat"><span class="id" title="definition">concat</span></a> <span class="id" title="var">a</span> <span class="id" title="var">b</span>).</span><span class="command" onmouseout="
+    <span class="id" title="tactic">intros</span> <span class="id" title="var">a</span> <span class="id" title="var">b</span>; <span class="id" title="var">strip_truncations</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(24, '0_3_3');
       "><br>
-  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.HIT.Truncations.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> (<span class="id" title="var">a</span> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <span class="id" title="var">b</span>)).</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(25, '0_3_3');
+      "><br>
+  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(26, '0_3_3');
       "><br>
 <br>
   <span class="id" title="keyword">Global Instance</span> <a name="PiOp_assoc"><span class="id" title="instance">PiOp_assoc</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#Associative"><span class="id" title="class">Associative</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(26, '0_3_3');
-      "><br>
-  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_3');
-      " onmouseover="
       mouseover(27, '0_3_3');
       "><br>
-    <span class="id" title="tactic">intros</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">z</span>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(28, '0_3_3');
       "><br>
-    <span class="id" title="var">strip_truncations</span>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">intros</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">z</span>; <span class="id" title="var">strip_truncations</span>; <span class="id" title="var">cbn</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(29, '0_3_3');
       "><br>
-    <span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a>; <span class="id" title="var">cbn</span>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>, <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_p_pp"><span class="id" title="definition">concat_p_pp</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(30, '0_3_3');
       "><br>
-    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(31, '0_3_3');
       "><br>
-    <span class="id" title="tactic">destruct</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.n"><span class="id" title="variable">n</span></a>, <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.gt"><span class="id" title="variable">gt</span></a>.</span><span class="command" onmouseout="
+<br>
+  <span class="id" title="keyword">Global Instance</span> <a name="PiOp_leftId"><span class="id" title="instance">PiOp_leftId</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#LeftIdentity"><span class="id" title="class">LeftIdentity</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiUnit"><span class="id" title="instance">PiUnit</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(32, '0_3_3');
       "><br>
-    <span class="id" title="tactic">refine</span> <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_pp_p"><span class="id" title="definition">concat_pp_p</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(33, '0_3_3');
       "><br>
-  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>; <span class="id" title="var">strip_truncations</span>; <span class="id" title="var">cbn</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(34, '0_3_3');
       "><br>
-<br>
-  <span class="id" title="keyword">Definition</span> <a name="PiUnit"><span class="id" title="definition">PiUnit</span></a> : <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>, <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_1p"><span class="id" title="definition">concat_1p</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(35, '0_3_3');
       "><br>
-  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(36, '0_3_3');
       "><br>
-    <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Truncations.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
+<br>
+  <span class="id" title="keyword">Global Instance</span> <a name="PiOp_rightId"><span class="id" title="instance">PiOp_rightId</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#RightIdentity"><span class="id" title="class">RightIdentity</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiUnit"><span class="id" title="instance">PiUnit</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(37, '0_3_3');
       "><br>
-    <span class="id" title="tactic">destruct</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.n"><span class="id" title="variable">n</span></a>, <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.gt"><span class="id" title="variable">gt</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(38, '0_3_3');
       "><br>
-    <span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.Basics.Overture.html#idpath"><span class="id" title="constructor">idpath</span></a>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>; <span class="id" title="var">strip_truncations</span>; <span class="id" title="var">cbn</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(39, '0_3_3');
       "><br>
-  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>, <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_p1"><span class="id" title="definition">concat_p1</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(40, '0_3_3');
       "><br>
-<br>
-  <span class="id" title="keyword">Global Instance</span> <a name="PiOp_leftId"><span class="id" title="instance">PiOp_leftId</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#LeftIdentity"><span class="id" title="class">LeftIdentity</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiUnit"><span class="id" title="definition">PiUnit</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(41, '0_3_3');
       "><br>
-  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+<br>
+  <span class="id" title="keyword">Global Instance</span> <a name="PiInverse"><span class="id" title="instance">PiInverse</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#Negate"><span class="id" title="class">Negate</span></a> (<a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiGroup.n"><span class="id" title="variable">n</span></a><a class="idref" href="HoTT.Basics.Overture.html#bda89d73ec4a8f23ae92b565ffb5aaa6"><span class="id" title="notation">.+1</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiGroup.X"><span class="id" title="variable">X</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(42, '0_3_3');
       "><br>
-    <span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(43, '0_3_3');
       "><br>
-    <span class="id" title="var">strip_truncations</span>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">intro</span>; <span class="id" title="var">strip_truncations</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(44, '0_3_3');
       "><br>
-    <span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a>; <span class="id" title="var">cbn</span>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">by</span> <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Truncations.html#Trunc.tr"><span class="id" title="constructor">tr</span></a>, <a class="idref" href="HoTT.Basics.Overture.html#inverse"><span class="id" title="definition">Overture.inverse</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(45, '0_3_3');
       "><br>
-    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(46, '0_3_3');
       "><br>
-    <span class="id" title="tactic">destruct</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.n"><span class="id" title="variable">n</span></a>, <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.gt"><span class="id" title="variable">gt</span></a>.</span><span class="command" onmouseout="
+<br>
+  <span class="id" title="keyword">Global Instance</span> <a name="PiOp_leftInv"><span class="id" title="instance">PiOp_leftInv</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#LeftInverse"><span class="id" title="class">LeftInverse</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiInverse"><span class="id" title="instance">PiInverse</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiUnit"><span class="id" title="instance">PiUnit</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(47, '0_3_3');
       "><br>
-    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_1p"><span class="id" title="definition">concat_1p</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(48, '0_3_3');
       "><br>
-  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>; <span class="id" title="var">strip_truncations</span>; <span class="id" title="var">cbn</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(49, '0_3_3');
       "><br>
-<br>
-  <span class="id" title="keyword">Global Instance</span> <a name="PiOp_rightId"><span class="id" title="instance">PiOp_rightId</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#RightIdentity"><span class="id" title="class">RightIdentity</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiUnit"><span class="id" title="definition">PiUnit</span></a>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>, <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_Vp"><span class="id" title="definition">concat_Vp</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(50, '0_3_3');
       "><br>
-  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(51, '0_3_3');
       "><br>
-    <span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
+<br>
+  <span class="id" title="keyword">Global Instance</span> <a name="PiOp_rightInv"><span class="id" title="instance">PiOp_rightInv</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#RightInverse"><span class="id" title="class">RightInverse</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiInverse"><span class="id" title="instance">PiInverse</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiUnit"><span class="id" title="instance">PiUnit</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(52, '0_3_3');
       "><br>
-    <span class="id" title="var">strip_truncations</span>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(53, '0_3_3');
       "><br>
-    <span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a>; <span class="id" title="var">cbn</span>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>; <span class="id" title="var">strip_truncations</span>; <span class="id" title="var">cbn</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(54, '0_3_3');
       "><br>
-    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>, <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_pV"><span class="id" title="definition">concat_pV</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(55, '0_3_3');
       "><br>
-    <span class="id" title="tactic">destruct</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.n"><span class="id" title="variable">n</span></a>, <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.gt"><span class="id" title="variable">gt</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(56, '0_3_3');
       "><br>
-    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_p1"><span class="id" title="definition">concat_p1</span></a>.</span><span class="command" onmouseout="
+<br>
+  <span class="id" title="keyword">Global Instance</span> <a name="pi_is_Group"><span class="id" title="instance">pi_is_Group</span></a> : <a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#Group"><span class="id" title="class">Group</span></a> (<a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiGroup.n"><span class="id" title="variable">n</span></a><a class="idref" href="HoTT.Basics.Overture.html#bda89d73ec4a8f23ae92b565ffb5aaa6"><span class="id" title="notation">.+1</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiGroup.X"><span class="id" title="variable">X</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(57, '0_3_3');
       "><br>
-  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(58, '0_3_3');
       "><br>
-<br>
-  <span class="id" title="keyword">Definition</span> <a name="PiInverse"><span class="id" title="definition">PiInverse</span></a> : <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">repeat</span> <span class="id" title="tactic">split</span>; <span class="id" title="tactic">exact</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(59, '0_3_3');
       "><br>
-  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(60, '0_3_3');
       "><br>
-    <span class="id" title="tactic">intro</span> <span class="id" title="var">a</span>.</span><span class="command" onmouseout="
+<br>
+<span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiGroup"><span class="id" title="section">PiGroup</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(61, '0_3_3');
       "><br>
-    <span class="id" title="var">strip_truncations</span>.</span><span class="command" onmouseout="
+<br>
+<span class="id" title="keyword">Global Instance</span> <a name="piop_commutative"><span class="id" title="instance">piop_commutative</span></a> <span class="id" title="var">n</span> <span class="id" title="var">X</span> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#Commutative"><span class="id" title="class">Commutative</span></a> (<a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#n"><span class="id" title="variable">n</span></a><a class="idref" href="HoTT.Basics.Overture.html#bda89d73ec4a8f23ae92b565ffb5aaa6"><span class="id" title="notation">.+1</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#X"><span class="id" title="variable">X</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(62, '0_3_3');
       "><br>
-    <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Truncations.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
+<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(63, '0_3_3');
       "><br>
-    <span class="id" title="tactic">destruct</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.n"><span class="id" title="variable">n</span></a>, <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.gt"><span class="id" title="variable">gt</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="tactic">intros</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>; <span class="id" title="var">strip_truncations</span>; <span class="id" title="var">cbn</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(64, '0_3_3');
       "><br>
-    <span class="id" title="tactic">exact</span> <span class="id" title="var">a</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">^</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>, <a class="idref" href="HoTT.Basics.PathGroupoids.html#eckmann_hilton"><span class="id" title="definition">eckmann_hilton</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(65, '0_3_3');
       "><br>
-  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(66, '0_3_3');
       "><br>
 <br>
-  <span class="id" title="keyword">Global Instance</span> <a name="PiOp_leftInv"><span class="id" title="instance">PiOp_leftInv</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#LeftInverse"><span class="id" title="class">LeftInverse</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiInverse"><span class="id" title="definition">PiInverse</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiUnit"><span class="id" title="definition">PiUnit</span></a>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Global Instance</span> <a name="pi_is_AbGroup"><span class="id" title="instance">pi_is_AbGroup</span></a> <span class="id" title="var">n</span> <span class="id" title="var">X</span> : <a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#AbGroup"><span class="id" title="class">AbGroup</span></a> (<a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#n"><span class="id" title="variable">n</span></a><a class="idref" href="HoTT.Basics.Overture.html#bc63483175fac06bcd5541a5e9093b18"><span class="id" title="notation">.+2</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#X"><span class="id" title="variable">X</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(67, '0_3_3');
       "><br>
-  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(68, '0_3_3');
       "><br>
-    <span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
+  <span class="id" title="var">serapply</span> <a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#Build_AbGroup"><span class="id" title="constructor">Build_AbGroup</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(69, '0_3_3');
       "><br>
-    <span class="id" title="var">strip_truncations</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(70, '0_3_3');
       "><br>
-    <span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a>; <span class="id" title="var">cbn</span>.</span><span class="command" onmouseout="
+<br>
+<span class="id" title="keyword">Lemma</span> <a name="loops_functor_pp"><span class="id" title="lemma">loops_functor_pp</span></a> {<span class="id" title="var">X</span> <span class="id" title="var">Y</span> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} (<span class="id" title="var">f</span> : <a class="idref" href="HoTT.Pointed.html#pMap"><span class="id" title="record">pMap</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#X"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Y"><span class="id" title="variable">Y</span></a>) : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <span class="id" title="var">x</span> <span class="id" title="var">y</span><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a><br>
+  <a class="idref" href="HoTT.Pointed.html#loops_functor"><span class="id" title="definition">loops_functor</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#f"><span class="id" title="variable">f</span></a> (<a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#y"><span class="id" title="variable">y</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Pointed.html#loops_functor"><span class="id" title="definition">loops_functor</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Pointed.html#loops_functor"><span class="id" title="definition">loops_functor</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#y"><span class="id" title="variable">y</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(71, '0_3_3');
       "><br>
-    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(72, '0_3_3');
       "><br>
-    <span class="id" title="tactic">destruct</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.n"><span class="id" title="variable">n</span></a>, <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.gt"><span class="id" title="variable">gt</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="tactic">intros</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>; <span class="id" title="var">cbn</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(73, '0_3_3');
       "><br>
-    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_Vp"><span class="id" title="definition">concat_Vp</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="tactic">by</span> <span class="id" title="tactic">destruct</span> (<a class="idref" href="HoTT.Pointed.html#point_eq"><span class="id" title="projection">point_eq</span></a> <span class="id" title="var">f</span>), <span class="id" title="var">x</span>, <span class="id" title="var">y</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(74, '0_3_3');
       "><br>
-  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(75, '0_3_3');
       "><br>
 <br>
-  <span class="id" title="keyword">Global Instance</span> <a name="PiOp_rightInv"><span class="id" title="instance">PiOp_rightInv</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#RightInverse"><span class="id" title="class">RightInverse</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiInverse"><span class="id" title="definition">PiInverse</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiUnit"><span class="id" title="definition">PiUnit</span></a>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Section</span> <a name="PiFunctor"><span class="id" title="section">PiFunctor</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(76, '0_3_3');
       "><br>
-  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+<br>
+  <span class="id" title="keyword">Local Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">pointed_scope</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(77, '0_3_3');
       "><br>
-    <span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
+<br>
+  <span class="id" title="keyword">Context</span><br>
+    {<span class="id" title="var">n</span> : <a class="idref" href="Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>}<br>
+    {<span class="id" title="var">X</span> <span class="id" title="var">Y</span> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>}<br>
+    (<span class="id" title="var">f</span> : <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#X"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Pointed.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Y"><span class="id" title="variable">Y</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(78, '0_3_3');
       "><br>
-    <span class="id" title="var">strip_truncations</span>.</span><span class="command" onmouseout="
+<br>
+  <span class="id" title="keyword">Definition</span> <a name="functor_pi"><span class="id" title="definition">functor_pi</span></a> : <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiFunctor.n"><span class="id" title="variable">n</span></a><a class="idref" href="HoTT.Basics.Overture.html#bda89d73ec4a8f23ae92b565ffb5aaa6"><span class="id" title="notation">.+1</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiFunctor.X"><span class="id" title="variable">X</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiFunctor.n"><span class="id" title="variable">n</span></a><a class="idref" href="HoTT.Basics.Overture.html#bda89d73ec4a8f23ae92b565ffb5aaa6"><span class="id" title="notation">.+1</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiFunctor.Y"><span class="id" title="variable">Y</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(79, '0_3_3');
       "><br>
-    <span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a>; <span class="id" title="var">cbn</span>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(80, '0_3_3');
       "><br>
-    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>.</span><span class="command" onmouseout="
+    <span class="id" title="var">serapply</span> <a class="idref" href="HoTT.HIT.Truncations.html#Trunc_functor"><span class="id" title="definition">Trunc_functor</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(81, '0_3_3');
       "><br>
-    <span class="id" title="tactic">destruct</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.n"><span class="id" title="variable">n</span></a>, <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.gt"><span class="id" title="variable">gt</span></a>.</span><span class="command" onmouseout="
+    <span class="id" title="var">serapply</span> <a class="idref" href="HoTT.Pointed.html#iterated_loops_functor"><span class="id" title="definition">iterated_loops_functor</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(82, '0_3_3');
       "><br>
-    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_pV"><span class="id" title="definition">concat_pV</span></a>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiFunctor.f"><span class="id" title="variable">f</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(83, '0_3_3');
@@ -949,7 +1027,7 @@
       mouseover(84, '0_3_3');
       "><br>
 <br>
-  <span class="id" title="keyword">Global Instance</span> <a name="pi_is_Group"><span class="id" title="instance">pi_is_Group</span></a> : @<a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#Group"><span class="id" title="class">Group</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiUnit"><span class="id" title="definition">PiUnit</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiInverse"><span class="id" title="definition">PiInverse</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Global Instance</span> <a name="functor_pi_homomorphism"><span class="id" title="instance">functor_pi_homomorphism</span></a> : <a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#MonoidPreserving"><span class="id" title="class">MonoidPreserving</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#functor_pi"><span class="id" title="definition">functor_pi</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(85, '0_3_3');
@@ -959,22 +1037,91 @@
       " onmouseover="
       mouseover(86, '0_3_3');
       "><br>
-    <span class="id" title="tactic">repeat</span> <span class="id" title="tactic">split</span>; <span class="id" title="tactic">exact</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#Build_MonoidPreserving"><span class="id" title="constructor">Build_MonoidPreserving</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(87, '0_3_3');
       "><br>
-  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+    + <span class="id" title="tactic">intros</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(88, '0_3_3');
       "><br>
-<br>
-<span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups"><span class="id" title="section">HomotopyGroups</span></a>.</span><span class="command" onmouseout="
+      <span class="id" title="var">strip_truncations</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(89, '0_3_3');
       "><br>
+      <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Truncations.html#equiv_path_Tr"><span class="id" title="definition">equiv_path_Tr</span></a>, <a class="idref" href="HoTT.HIT.Truncations.html#Trunc.tr"><span class="id" title="constructor">tr</span></a>, <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#loops_functor_pp"><span class="id" title="lemma">loops_functor_pp</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(90, '0_3_3');
+      "><br>
+    + <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Truncations.html#equiv_path_Tr"><span class="id" title="definition">equiv_path_Tr</span></a>, <a class="idref" href="HoTT.HIT.Truncations.html#Trunc.tr"><span class="id" title="constructor">tr</span></a>; <span class="id" title="var">cbn</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(91, '0_3_3');
+      "><br>
+      <span class="id" title="tactic">destruct</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiFunctor.n"><span class="id" title="variable">n</span></a>; <span class="id" title="var">hott_simpl</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(92, '0_3_3');
+      "><br>
+  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(93, '0_3_3');
+      "><br>
+<br>
+<span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiFunctor"><span class="id" title="section">PiFunctor</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(94, '0_3_3');
+      "><br>
+<br>
+<span class="id" title="keyword">Local Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">pointed_scope</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(95, '0_3_3');
+      "><br>
+<br>
+<span class="id" title="keyword">Lemma</span> <a name="Pi_prod"><span class="id" title="lemma">Pi_prod</span></a> (<span class="id" title="var">X</span> <span class="id" title="var">Y</span> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>) {<span class="id" title="var">n</span>}<br>
+  : <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#n"><span class="id" title="variable">n</span></a> (<a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#X"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Pointed.html#867ca46dea6d6884af1893325332ab7c"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Y"><span class="id" title="variable">Y</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#X"><span class="id" title="variable">X</span></a> <a class="idref" href="Coq.Init.Datatypes.html#11c698c8685bb8ab1cf725545c085ac4"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Y"><span class="id" title="variable">Y</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(96, '0_3_3');
+      "><br>
+<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(97, '0_3_3');
+      "><br>
+  <span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(98, '0_3_3');
+      "><br>
+  <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.Basics.Equivalences.html#equiv_compose'"><span class="id" title="definition">equiv_compose'</span></a> (<a class="idref" href="HoTT.HIT.Truncations.html#TrM.RSU.equiv_O_prod_cmp"><span class="id" title="definition">equiv_O_prod_cmp</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>)).</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(99, '0_3_3');
+      "><br>
+  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Truncations.html#Trunc_functor_equiv"><span class="id" title="definition">Trunc_functor_equiv</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(100, '0_3_3');
+      "><br>
+  <span class="id" title="tactic">by</span> <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Pointed.html#pequiv_compose"><span class="id" title="definition">pequiv_compose</span></a> <span class="id" title="var">_</span> (<a class="idref" href="HoTT.Pointed.html#iterated_loops_prod"><span class="id" title="lemma">iterated_loops_prod</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>)).</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(101, '0_3_3');
+      "><br>
+<span class="id" title="keyword">Qed</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(102, '0_3_3');
+      "><br>
+<br>
 </span>
 </div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>

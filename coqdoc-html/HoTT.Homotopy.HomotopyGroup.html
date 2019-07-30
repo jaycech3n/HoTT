@@ -25,114 +25,157 @@
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.Pointed.html#"><span class="id" title="library">Pointed</span></a>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#"><span class="id" title="library">abstract_algebra</span></a>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.Spaces.Nat.html#"><span class="id" title="library">Spaces.Nat</span></a>.<br/>
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.DProp.html#"><span class="id" title="library">DProp</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.UnivalenceAxiom.html#"><span class="id" title="library">UnivalenceAxiom</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Section</span> <a name="HomotopyGroups"><span class="id" title="section">HomotopyGroups</span></a>.<br/>
+<span class="id" title="keyword">Import</span> <span class="id" title="var">TrM</span>.<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="Pi"><span class="id" title="definition">Pi</span></a> <span class="id" title="var">n</span> (<span class="id" title="var">X</span> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>) := <a class="idref" href="HoTT.HIT.Truncations.html#Tr"><span class="id" title="definition">Tr</span></a> 0 (<a class="idref" href="HoTT.Pointed.html#iterated_loops"><span class="id" title="definition">iterated_loops</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#X"><span class="id" title="variable">X</span></a>).<br/>
+
+<br/>
+<span class="id" title="keyword">Section</span> <a name="PiGroup"><span class="id" title="section">PiGroup</span></a>.<br/>
 
 <br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Context</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="var">n</span> : <a class="idref" href="Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="var">X</span> : <span class="id" title="keyword">Type</span>)<br/>
-&nbsp;&nbsp;&nbsp;`{<a class="idref" href="HoTT.Basics.Overture.html#IsPointed"><span class="id" title="class">IsPointed</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#X"><span class="id" title="variable">X</span></a>}.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="var">X</span> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>).<br/>
 
 <br/>
-&nbsp;&nbsp;<span class="id" title="keyword">Definition</span> <a name="Pi"><span class="id" title="definition">Pi</span></a> := <a class="idref" href="HoTT.HIT.Truncations.html#Tr"><span class="id" title="definition">Tr</span></a> 0 (<a class="idref" href="HoTT.Pointed.html#iterated_loops"><span class="id" title="definition">iterated_loops</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.n"><span class="id" title="variable">n</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.X"><span class="id" title="variable">X</span></a>).<br/>
-
-<br/>
-&nbsp;&nbsp;<span class="id" title="keyword">Context</span> `{<span class="id" title="var">gt</span> : 0 <a class="idref" href="HoTT.Spaces.Nat.html#00fe0eaf5e6949f0a31725357afa4bba"><span class="id" title="notation">&lt;</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.n"><span class="id" title="variable">n</span></a>}.<br/>
-
-<br/>
-&nbsp;&nbsp;<span class="id" title="keyword">Global Instance</span> <a name="PiOp"><span class="id" title="instance">PiOp</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#SgOp"><span class="id" title="class">SgOp</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Global Instance</span> <a name="PiUnit"><span class="id" title="instance">PiUnit</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#MonUnit"><span class="id" title="class">MonUnit</span></a> (<a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiGroup.n"><span class="id" title="variable">n</span></a><a class="idref" href="HoTT.Basics.Overture.html#bda89d73ec4a8f23ae92b565ffb5aaa6"><span class="id" title="notation">.+1</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiGroup.X"><span class="id" title="variable">X</span></a>).<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">intros</span> <span class="id" title="var">a</span> <span class="id" title="var">b</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">strip_truncations</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Truncations.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> <span class="id" title="var">_</span>).<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">destruct</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.n"><span class="id" title="variable">n</span></a>, <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.gt"><span class="id" title="variable">gt</span></a>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Basics.Overture.html#concat"><span class="id" title="definition">concat</span></a> <span class="id" title="var">a</span> <span class="id" title="var">b</span>).<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">by</span> <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Truncations.html#Trunc.tr"><span class="id" title="constructor">tr</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Global Instance</span> <a name="PiOp"><span class="id" title="instance">PiOp</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#SgOp"><span class="id" title="class">SgOp</span></a> (<a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiGroup.n"><span class="id" title="variable">n</span></a><a class="idref" href="HoTT.Basics.Overture.html#bda89d73ec4a8f23ae92b565ffb5aaa6"><span class="id" title="notation">.+1</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiGroup.X"><span class="id" title="variable">X</span></a>).<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">intros</span> <span class="id" title="var">a</span> <span class="id" title="var">b</span>; <span class="id" title="var">strip_truncations</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.HIT.Truncations.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> (<span class="id" title="var">a</span> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <span class="id" title="var">b</span>)).<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Global Instance</span> <a name="PiOp_assoc"><span class="id" title="instance">PiOp_assoc</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#Associative"><span class="id" title="class">Associative</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a>.<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">intros</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">z</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">strip_truncations</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a>; <span class="id" title="var">cbn</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">destruct</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.n"><span class="id" title="variable">n</span></a>, <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.gt"><span class="id" title="variable">gt</span></a>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">refine</span> <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_pp_p"><span class="id" title="definition">concat_pp_p</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">intros</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">z</span>; <span class="id" title="var">strip_truncations</span>; <span class="id" title="var">cbn</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>, <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_p_pp"><span class="id" title="definition">concat_p_pp</span></a>.<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
-&nbsp;&nbsp;<span class="id" title="keyword">Definition</span> <a name="PiUnit"><span class="id" title="definition">PiUnit</span></a> : <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Global Instance</span> <a name="PiOp_leftId"><span class="id" title="instance">PiOp_leftId</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#LeftIdentity"><span class="id" title="class">LeftIdentity</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiUnit"><span class="id" title="instance">PiUnit</span></a>.<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Truncations.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> <span class="id" title="var">_</span>).<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">destruct</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.n"><span class="id" title="variable">n</span></a>, <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.gt"><span class="id" title="variable">gt</span></a>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.Basics.Overture.html#idpath"><span class="id" title="constructor">idpath</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>; <span class="id" title="var">strip_truncations</span>; <span class="id" title="var">cbn</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>, <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_1p"><span class="id" title="definition">concat_1p</span></a>.<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
-&nbsp;&nbsp;<span class="id" title="keyword">Global Instance</span> <a name="PiOp_leftId"><span class="id" title="instance">PiOp_leftId</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#LeftIdentity"><span class="id" title="class">LeftIdentity</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiUnit"><span class="id" title="definition">PiUnit</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Global Instance</span> <a name="PiOp_rightId"><span class="id" title="instance">PiOp_rightId</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#RightIdentity"><span class="id" title="class">RightIdentity</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiUnit"><span class="id" title="instance">PiUnit</span></a>.<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">strip_truncations</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a>; <span class="id" title="var">cbn</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">destruct</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.n"><span class="id" title="variable">n</span></a>, <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.gt"><span class="id" title="variable">gt</span></a>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_1p"><span class="id" title="definition">concat_1p</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>; <span class="id" title="var">strip_truncations</span>; <span class="id" title="var">cbn</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>, <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_p1"><span class="id" title="definition">concat_p1</span></a>.<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
-&nbsp;&nbsp;<span class="id" title="keyword">Global Instance</span> <a name="PiOp_rightId"><span class="id" title="instance">PiOp_rightId</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#RightIdentity"><span class="id" title="class">RightIdentity</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiUnit"><span class="id" title="definition">PiUnit</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Global Instance</span> <a name="PiInverse"><span class="id" title="instance">PiInverse</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#Negate"><span class="id" title="class">Negate</span></a> (<a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiGroup.n"><span class="id" title="variable">n</span></a><a class="idref" href="HoTT.Basics.Overture.html#bda89d73ec4a8f23ae92b565ffb5aaa6"><span class="id" title="notation">.+1</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiGroup.X"><span class="id" title="variable">X</span></a>).<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">strip_truncations</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a>; <span class="id" title="var">cbn</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">destruct</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.n"><span class="id" title="variable">n</span></a>, <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.gt"><span class="id" title="variable">gt</span></a>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_p1"><span class="id" title="definition">concat_p1</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">intro</span>; <span class="id" title="var">strip_truncations</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">by</span> <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Truncations.html#Trunc.tr"><span class="id" title="constructor">tr</span></a>, <a class="idref" href="HoTT.Basics.Overture.html#inverse"><span class="id" title="definition">Overture.inverse</span></a>.<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
-&nbsp;&nbsp;<span class="id" title="keyword">Definition</span> <a name="PiInverse"><span class="id" title="definition">PiInverse</span></a> : <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Global Instance</span> <a name="PiOp_leftInv"><span class="id" title="instance">PiOp_leftInv</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#LeftInverse"><span class="id" title="class">LeftInverse</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiInverse"><span class="id" title="instance">PiInverse</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiUnit"><span class="id" title="instance">PiUnit</span></a>.<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">intro</span> <span class="id" title="var">a</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">strip_truncations</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Truncations.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> <span class="id" title="var">_</span>).<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">destruct</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.n"><span class="id" title="variable">n</span></a>, <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.gt"><span class="id" title="variable">gt</span></a>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">exact</span> <span class="id" title="var">a</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">^</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>; <span class="id" title="var">strip_truncations</span>; <span class="id" title="var">cbn</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>, <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_Vp"><span class="id" title="definition">concat_Vp</span></a>.<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
-&nbsp;&nbsp;<span class="id" title="keyword">Global Instance</span> <a name="PiOp_leftInv"><span class="id" title="instance">PiOp_leftInv</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#LeftInverse"><span class="id" title="class">LeftInverse</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiInverse"><span class="id" title="definition">PiInverse</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiUnit"><span class="id" title="definition">PiUnit</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Global Instance</span> <a name="PiOp_rightInv"><span class="id" title="instance">PiOp_rightInv</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#RightInverse"><span class="id" title="class">RightInverse</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiInverse"><span class="id" title="instance">PiInverse</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiUnit"><span class="id" title="instance">PiUnit</span></a>.<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">strip_truncations</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a>; <span class="id" title="var">cbn</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">destruct</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.n"><span class="id" title="variable">n</span></a>, <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.gt"><span class="id" title="variable">gt</span></a>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_Vp"><span class="id" title="definition">concat_Vp</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>; <span class="id" title="var">strip_truncations</span>; <span class="id" title="var">cbn</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>, <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_pV"><span class="id" title="definition">concat_pV</span></a>.<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
-&nbsp;&nbsp;<span class="id" title="keyword">Global Instance</span> <a name="PiOp_rightInv"><span class="id" title="instance">PiOp_rightInv</span></a> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#RightInverse"><span class="id" title="class">RightInverse</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiInverse"><span class="id" title="definition">PiInverse</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiUnit"><span class="id" title="definition">PiUnit</span></a>.<br/>
-&nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">strip_truncations</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a>; <span class="id" title="var">cbn</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">destruct</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.n"><span class="id" title="variable">n</span></a>, <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups.gt"><span class="id" title="variable">gt</span></a>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_pV"><span class="id" title="definition">concat_pV</span></a>.<br/>
-&nbsp;&nbsp;<span class="id" title="keyword">Defined</span>.<br/>
-
-<br/>
-&nbsp;&nbsp;<span class="id" title="keyword">Global Instance</span> <a name="pi_is_Group"><span class="id" title="instance">pi_is_Group</span></a> : @<a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#Group"><span class="id" title="class">Group</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiUnit"><span class="id" title="definition">PiUnit</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiInverse"><span class="id" title="definition">PiInverse</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Global Instance</span> <a name="pi_is_Group"><span class="id" title="instance">pi_is_Group</span></a> : <a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#Group"><span class="id" title="class">Group</span></a> (<a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiGroup.n"><span class="id" title="variable">n</span></a><a class="idref" href="HoTT.Basics.Overture.html#bda89d73ec4a8f23ae92b565ffb5aaa6"><span class="id" title="notation">.+1</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiGroup.X"><span class="id" title="variable">X</span></a>).<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">repeat</span> <span class="id" title="tactic">split</span>; <span class="id" title="tactic">exact</span> <span class="id" title="var">_</span>.<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">End</span>  <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#HomotopyGroups"><span class="id" title="section">HomotopyGroups</span></a>.<br/>
+<span class="id" title="keyword">End</span>  <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiGroup"><span class="id" title="section">PiGroup</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Global Instance</span> <a name="piop_commutative"><span class="id" title="instance">piop_commutative</span></a> <span class="id" title="var">n</span> <span class="id" title="var">X</span> : <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#Commutative"><span class="id" title="class">Commutative</span></a> (<a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiOp"><span class="id" title="instance">PiOp</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#n"><span class="id" title="variable">n</span></a><a class="idref" href="HoTT.Basics.Overture.html#bda89d73ec4a8f23ae92b565ffb5aaa6"><span class="id" title="notation">.+1</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#X"><span class="id" title="variable">X</span></a>).<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">intros</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>; <span class="id" title="var">strip_truncations</span>; <span class="id" title="var">cbn</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>, <a class="idref" href="HoTT.Basics.PathGroupoids.html#eckmann_hilton"><span class="id" title="definition">eckmann_hilton</span></a>.<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Global Instance</span> <a name="pi_is_AbGroup"><span class="id" title="instance">pi_is_AbGroup</span></a> <span class="id" title="var">n</span> <span class="id" title="var">X</span> : <a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#AbGroup"><span class="id" title="class">AbGroup</span></a> (<a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#n"><span class="id" title="variable">n</span></a><a class="idref" href="HoTT.Basics.Overture.html#bc63483175fac06bcd5541a5e9093b18"><span class="id" title="notation">.+2</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#X"><span class="id" title="variable">X</span></a>).<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">serapply</span> <a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#Build_AbGroup"><span class="id" title="constructor">Build_AbGroup</span></a>.<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a name="loops_functor_pp"><span class="id" title="lemma">loops_functor_pp</span></a> {<span class="id" title="var">X</span> <span class="id" title="var">Y</span> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} (<span class="id" title="var">f</span> : <a class="idref" href="HoTT.Pointed.html#pMap"><span class="id" title="record">pMap</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#X"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Y"><span class="id" title="variable">Y</span></a>) : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <span class="id" title="var">x</span> <span class="id" title="var">y</span><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="HoTT.Pointed.html#loops_functor"><span class="id" title="definition">loops_functor</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#f"><span class="id" title="variable">f</span></a> (<a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#y"><span class="id" title="variable">y</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Pointed.html#loops_functor"><span class="id" title="definition">loops_functor</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Pointed.html#loops_functor"><span class="id" title="definition">loops_functor</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#y"><span class="id" title="variable">y</span></a>.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">intros</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>; <span class="id" title="var">cbn</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">by</span> <span class="id" title="tactic">destruct</span> (<a class="idref" href="HoTT.Pointed.html#point_eq"><span class="id" title="projection">point_eq</span></a> <span class="id" title="var">f</span>), <span class="id" title="var">x</span>, <span class="id" title="var">y</span>.<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Section</span> <a name="PiFunctor"><span class="id" title="section">PiFunctor</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Local Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">pointed_scope</span>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Context</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{<span class="id" title="var">n</span> : <a class="idref" href="Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{<span class="id" title="var">X</span> <span class="id" title="var">Y</span> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="var">f</span> : <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#X"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Pointed.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Y"><span class="id" title="variable">Y</span></a>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Definition</span> <a name="functor_pi"><span class="id" title="definition">functor_pi</span></a> : <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiFunctor.n"><span class="id" title="variable">n</span></a><a class="idref" href="HoTT.Basics.Overture.html#bda89d73ec4a8f23ae92b565ffb5aaa6"><span class="id" title="notation">.+1</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiFunctor.X"><span class="id" title="variable">X</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiFunctor.n"><span class="id" title="variable">n</span></a><a class="idref" href="HoTT.Basics.Overture.html#bda89d73ec4a8f23ae92b565ffb5aaa6"><span class="id" title="notation">.+1</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiFunctor.Y"><span class="id" title="variable">Y</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">serapply</span> <a class="idref" href="HoTT.HIT.Truncations.html#Trunc_functor"><span class="id" title="definition">Trunc_functor</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">serapply</span> <a class="idref" href="HoTT.Pointed.html#iterated_loops_functor"><span class="id" title="definition">iterated_loops_functor</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiFunctor.f"><span class="id" title="variable">f</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Global Instance</span> <a name="functor_pi_homomorphism"><span class="id" title="instance">functor_pi_homomorphism</span></a> : <a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#MonoidPreserving"><span class="id" title="class">MonoidPreserving</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#functor_pi"><span class="id" title="definition">functor_pi</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#Build_MonoidPreserving"><span class="id" title="constructor">Build_MonoidPreserving</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;+ <span class="id" title="tactic">intros</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">strip_truncations</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Truncations.html#equiv_path_Tr"><span class="id" title="definition">equiv_path_Tr</span></a>, <a class="idref" href="HoTT.HIT.Truncations.html#Trunc.tr"><span class="id" title="constructor">tr</span></a>, <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#loops_functor_pp"><span class="id" title="lemma">loops_functor_pp</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;+ <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Truncations.html#equiv_path_Tr"><span class="id" title="definition">equiv_path_Tr</span></a>, <a class="idref" href="HoTT.HIT.Truncations.html#Trunc.tr"><span class="id" title="constructor">tr</span></a>; <span class="id" title="var">cbn</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">destruct</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiFunctor.n"><span class="id" title="variable">n</span></a>; <span class="id" title="var">hott_simpl</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#PiFunctor"><span class="id" title="section">PiFunctor</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Local Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">pointed_scope</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a name="Pi_prod"><span class="id" title="lemma">Pi_prod</span></a> (<span class="id" title="var">X</span> <span class="id" title="var">Y</span> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>) {<span class="id" title="var">n</span>}<br/>
+&nbsp;&nbsp;: <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#n"><span class="id" title="variable">n</span></a> (<a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#X"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Pointed.html#867ca46dea6d6884af1893325332ab7c"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Y"><span class="id" title="variable">Y</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#X"><span class="id" title="variable">X</span></a> <a class="idref" href="Coq.Init.Datatypes.html#11c698c8685bb8ab1cf725545c085ac4"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Y"><span class="id" title="variable">Y</span></a>.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi"><span class="id" title="definition">Pi</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.Basics.Equivalences.html#equiv_compose'"><span class="id" title="definition">equiv_compose'</span></a> (<a class="idref" href="HoTT.HIT.Truncations.html#TrM.RSU.equiv_O_prod_cmp"><span class="id" title="definition">equiv_O_prod_cmp</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>)).<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Truncations.html#Trunc_functor_equiv"><span class="id" title="definition">Trunc_functor_equiv</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">by</span> <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Pointed.html#pequiv_compose"><span class="id" title="definition">pequiv_compose</span></a> <span class="id" title="var">_</span> (<a class="idref" href="HoTT.Pointed.html#iterated_loops_prod"><span class="id" title="lemma">iterated_loops_prod</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>)).<br/>
+<span class="id" title="keyword">Qed</span>.<br/>
+
+<br/>
 </div>
 </div>
 
