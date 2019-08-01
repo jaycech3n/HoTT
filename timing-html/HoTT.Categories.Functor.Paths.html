@@ -37,13 +37,13 @@ Time: 0s">
 <div class="code" title="File: Paths.v
 Line: 1
 Time: 0.007s">
-<div class="time" style="width: 5.46875%"></div>
+<div class="time" style="width: 5.3435114503817%"></div>
 <pre>Require Import Category.Core Functor.Core.</pre>
 </div>
 <div class="code" title="File: Paths.v
 Line: 1
-Time: 0.037s">
-<div class="time" style="width: 28.90625%"></div>
+Time: 0.04s">
+<div class="time" style="width: 30.534351145038%"></div>
 <pre>
 Require Import HProp HoTT.Tactics Equivalences Basics.PathGroupoids Types.Sigma Trunc Types.Record Types.Paths.</pre>
 </div>
@@ -150,7 +150,7 @@ Time: 0s">
 <div class="code" title="File: Paths.v
 Line: 30
 Time: 0.002s">
-<div class="time" style="width: 1.5625%"></div>
+<div class="time" style="width: 1.5267175572519%"></div>
 <pre>Lemma equiv_sig_functor
   : functor_sig_T &lt;~&gt; Functor C D.</pre>
 </div>
@@ -163,8 +163,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Paths.v
 Line: 32
-Time: 0.036s">
-<div class="time" style="width: 28.125%"></div>
+Time: 0.037s">
+<div class="time" style="width: 28.24427480916%"></div>
 <pre>
     issig (@Build_Functor C D) (@object_of C D) (@morphism_of C D) (@composition_of C D) (@identity_of C D).</pre>
 </div>
@@ -222,7 +222,7 @@ Time: 0s">
 <div class="code" title="File: Paths.v
 Line: 66
 Time: 0.002s">
-<div class="time" style="width: 1.5625%"></div>
+<div class="time" style="width: 1.5267175572519%"></div>
 <pre>Definition path_functor_uncurried (F G : Functor C D) : path_functor'_T F G -&gt; F = G.</pre>
 </div>
 <div class="code" title="File: Paths.v
@@ -235,28 +235,28 @@ Time: 0s">
 <div class="code" title="File: Paths.v
 Line: 67
 Time: 0.001s">
-<div class="time" style="width: 0.78125%"></div>
+<div class="time" style="width: 0.76335877862595%"></div>
 <pre>
     intros [? ?].</pre>
 </div>
 <div class="code" title="File: Paths.v
 Line: 68
 Time: 0.004s">
-<div class="time" style="width: 3.125%"></div>
+<div class="time" style="width: 3.0534351145038%"></div>
 <pre>
     destruct F, G; simpl in *.</pre>
 </div>
 <div class="code" title="File: Paths.v
 Line: 69
 Time: 0.004s">
-<div class="time" style="width: 3.125%"></div>
+<div class="time" style="width: 3.0534351145038%"></div>
 <pre>
     path_induction; simpl.</pre>
 </div>
 <div class="code" title="File: Paths.v
 Line: 70
-Time: 0.074s">
-<div class="time" style="width: 57.8125%"></div>
+Time: 0.088s">
+<div class="time" style="width: 67.175572519084%"></div>
 <pre>
     f_ap;
       eapply @center; abstract exact _.</pre>
@@ -274,7 +274,7 @@ Time: 0s">
 <div class="code" title="File: Paths.v
 Line: 76
 Time: 0.002s">
-<div class="time" style="width: 1.5625%"></div>
+<div class="time" style="width: 1.5267175572519%"></div>
 <pre>Lemma path_functor_uncurried_fst F G HO HM
   : ap object_of (@path_functor_uncurried F G (HO; HM)) = HO.</pre>
 </div>
@@ -287,15 +287,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Paths.v
 Line: 78
-Time: 0.008s">
-<div class="time" style="width: 6.25%"></div>
+Time: 0.009s">
+<div class="time" style="width: 6.8702290076336%"></div>
 <pre>
     destruct F, G; simpl in *.</pre>
 </div>
 <div class="code" title="File: Paths.v
 Line: 79
-Time: 0.073s">
-<div class="time" style="width: 57.03125%"></div>
+Time: 0.075s">
+<div class="time" style="width: 57.251908396947%"></div>
 <pre>
     path_induction_hammer.</pre>
 </div>
@@ -312,7 +312,7 @@ Time: 0s">
 <div class="code" title="File: Paths.v
 Line: 84
 Time: 0.001s">
-<div class="time" style="width: 0.78125%"></div>
+<div class="time" style="width: 0.76335877862595%"></div>
 <pre>Lemma path_functor_uncurried_idpath F
   : @path_functor_uncurried F F (idpath; idpath) = idpath.</pre>
 </div>
@@ -326,14 +326,14 @@ Time: 0s">
 <div class="code" title="File: Paths.v
 Line: 86
 Time: 0.003s">
-<div class="time" style="width: 2.34375%"></div>
+<div class="time" style="width: 2.2900763358779%"></div>
 <pre>
     destruct F; simpl in *.</pre>
 </div>
 <div class="code" title="File: Paths.v
 Line: 87
 Time: 0.005s">
-<div class="time" style="width: 3.90625%"></div>
+<div class="time" style="width: 3.8167938931298%"></div>
 <pre>
     rewrite !(contr idpath).</pre>
 </div>
@@ -357,7 +357,7 @@ Time: 0s">
 <div class="code" title="File: Paths.v
 Line: 93
 Time: 0.009s">
-<div class="time" style="width: 7.03125%"></div>
+<div class="time" style="width: 6.8702290076336%"></div>
 <pre>Definition path_functor_uncurried_inv (F G : Functor C D) : F = G -&gt; path_functor'_T F G
     := fun H'
        =&gt; (ap object_of H';
@@ -375,7 +375,7 @@ Time: 0s">
 <div class="code" title="File: Paths.v
 Line: 99
 Time: 0.003s">
-<div class="time" style="width: 2.34375%"></div>
+<div class="time" style="width: 2.2900763358779%"></div>
 <pre>Definition path_functor (F G : Functor C D)
         (HO : object_of F = object_of G)
         (HM : transport (fun GO =&gt; forall s d, morphism C s d -&gt; morphism D (GO s) (GO d)) HO (morphism_of F) = morphism_of G)
@@ -394,7 +394,7 @@ Time: 0s">
 <div class="code" title="File: Paths.v
 Line: 106
 Time: 0.002s">
-<div class="time" style="width: 1.5625%"></div>
+<div class="time" style="width: 1.5267175572519%"></div>
 <pre>Definition path_functor_pointwise (F G : Functor C D)
         (HO : object_of F == object_of G)
         (HM : forall s d m,
@@ -422,7 +422,7 @@ Time: 0s">
 <div class="code" title="File: Paths.v
 Line: 116
 Time: 0.002s">
-<div class="time" style="width: 1.5625%"></div>
+<div class="time" style="width: 1.5267175572519%"></div>
 <pre>
     repeat (apply path_forall; intro); apply HM.</pre>
 </div>
@@ -439,7 +439,7 @@ Time: 0s">
 <div class="code" title="File: Paths.v
 Line: 121
 Time: 0.001s">
-<div class="time" style="width: 0.78125%"></div>
+<div class="time" style="width: 0.76335877862595%"></div>
 <pre>Global Instance isequiv_path_functor_uncurried (F G : Functor C D)
   : IsEquiv (@path_functor_uncurried F G).</pre>
 </div>
@@ -501,28 +501,28 @@ Time: 0s">
 <div class="code" title="File: Paths.v
 Line: 129
 Time: 0.001s">
-<div class="time" style="width: 0.78125%"></div>
+<div class="time" style="width: 0.76335877862595%"></div>
 <pre>
       intros [? ?].</pre>
 </div>
 <div class="code" title="File: Paths.v
 Line: 130
 Time: 0.001s">
-<div class="time" style="width: 0.78125%"></div>
+<div class="time" style="width: 0.76335877862595%"></div>
 <pre>
       apply path_sigma_uncurried.</pre>
 </div>
 <div class="code" title="File: Paths.v
 Line: 131
 Time: 0.002s">
-<div class="time" style="width: 1.5625%"></div>
+<div class="time" style="width: 1.5267175572519%"></div>
 <pre>
       exists (path_functor_uncurried_fst _ _ _).</pre>
 </div>
 <div class="code" title="File: Paths.v
 Line: 132
 Time: 0.026s">
-<div class="time" style="width: 20.3125%"></div>
+<div class="time" style="width: 19.847328244275%"></div>
 <pre>
       exact (center _).</pre>
 </div>
@@ -538,7 +538,7 @@ Time: 0s">
 <div class="code" title="File: Paths.v
 Line: 136
 Time: 0.004s">
-<div class="time" style="width: 3.125%"></div>
+<div class="time" style="width: 3.0534351145038%"></div>
 <pre>Definition equiv_path_functor_uncurried (F G : Functor C D)
   : path_functor'_T F G &lt;~&gt; F = G
     := BuildEquiv _ _ (@path_functor_uncurried F G) _.</pre>
@@ -554,7 +554,7 @@ Time: 0s">
 <div class="code" title="File: Paths.v
 Line: 140
 Time: 0.001s">
-<div class="time" style="width: 0.78125%"></div>
+<div class="time" style="width: 0.76335877862595%"></div>
 <pre>
 
   Definition path_path_functor_uncurried (F G : Functor C D) (p q : F = G)
@@ -569,22 +569,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: Paths.v
 Line: 144
-Time: 0.059s">
-<div class="time" style="width: 46.09375%"></div>
+Time: 0.06s">
+<div class="time" style="width: 45.801526717557%"></div>
 <pre>
     refine ((ap (@path_functor_uncurried F G)^-1)^-1 o _).</pre>
 </div>
 <div class="code" title="File: Paths.v
 Line: 145
-Time: 0.068s">
-<div class="time" style="width: 53.125%"></div>
+Time: 0.069s">
+<div class="time" style="width: 52.671755725191%"></div>
 <pre>
     refine ((path_sigma_uncurried _ _ _) o _); simpl.</pre>
 </div>
 <div class="code" title="File: Paths.v
 Line: 146
 Time: 0.036s">
-<div class="time" style="width: 28.125%"></div>
+<div class="time" style="width: 27.480916030534%"></div>
 <pre>
     refine (pr1^-1).</pre>
 </div>
@@ -600,7 +600,7 @@ Time: 0s">
 <div class="code" title="File: Paths.v
 Line: 150
 Time: 0.001s">
-<div class="time" style="width: 0.78125%"></div>
+<div class="time" style="width: 0.76335877862595%"></div>
 <pre>Global Instance isequiv_path_path_functor_uncurried F G p q
   : IsEquiv (@path_path_functor_uncurried F G p q).</pre>
 </div>
@@ -628,8 +628,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Paths.v
 Line: 155
-Time: 0.027s">
-<div class="time" style="width: 21.09375%"></div>
+Time: 0.029s">
+<div class="time" style="width: 22.137404580153%"></div>
 <pre>repeat match goal with
              | [ |- IsEquiv (_ o _) ] =&gt; eapply @isequiv_compose
              | [ |- IsEquiv (_^-1) ] =&gt; eapply @isequiv_inverse
@@ -670,7 +670,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Paths.v
 Line: 167
-Time: 0.128s">
+Time: 0.131s">
 <div class="time" style="width: 100%"></div>
 <pre>
     induction n;
@@ -686,8 +686,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Paths.v
 Line: 171
-Time: 0.078s">
-<div class="time" style="width: 60.9375%"></div>
+Time: 0.084s">
+<div class="time" style="width: 64.12213740458%"></div>
 <pre>End path_functor.</pre>
 </div>
 <div class="code" title="File: Paths.v

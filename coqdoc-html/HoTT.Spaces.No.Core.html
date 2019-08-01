@@ -32,7 +32,7 @@
 </div>
 
 <div class="doc">
-<a name="lab450"></a><h1 class="section">The surreal numbers</h1>
+<a name="lab236"></a><h1 class="section">The surreal numbers</h1>
 
 <div class="paragraph"> </div>
 
@@ -49,7 +49,7 @@
 </div>
 
 <div class="doc">
-<a name="lab451"></a><h2 class="section">Option sorts</h2>
+<a name="lab237"></a><h2 class="section">Option sorts</h2>
 
 <div class="paragraph"> </div>
 
@@ -69,7 +69,7 @@
 The surreal numbers use a lot of universes.  We include some universe annotations here and there to reduce the number of overall universe parameters from an unmanageable number to a slightly less unmanageable number.  This improves performance significantly.  We also use <span class="inlinecode"><span class="id" title="tactic">abstract</span></span> and <span class="inlinecode"><span class="id" title="keyword">Qed</span></span> whenever possible, for the same reason. 
 <div class="paragraph"> </div>
 
-<a name="lab452"></a><h2 class="section">Definition</h2>
+<a name="lab238"></a><h2 class="section">Definition</h2>
 
 </div>
 <div class="code">
@@ -85,15 +85,15 @@ The surreal numbers use a lot of universes.  We include some universe annotation
 </div>
 
 <div class="doc">
-<a name="lab453"></a><h3 class="section">Games first</h3>
+<a name="lab239"></a><h3 class="section">Games first</h3>
 
 <div class="paragraph"> </div>
 
- Since Coq doesn't support inductive-inductive types natively, we have to hack a bit.  Inspired by Conway, we define <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Core.html#Surreals.Game"><span class="id" title="inductive">Game</span></a></span>s to be constructed by the point-constructor of <span class="inlinecode"><a class="idref" href="Freudenthal.html#No"><span class="id" title="abbreviation">No</span></a></span> but without the hypothesis on inequality of options.  Then we define the inequalities as a mutual inductive family over <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Core.html#Surreals.Game"><span class="id" title="inductive">Game</span></a></span>, and put an inductive predicate on <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Core.html#Surreals.Game"><span class="id" title="inductive">Game</span></a></span> characterizing those that are Numbers.  (This is roughly a standard technique described by Fredrik Nordvall Forsberg for reducing induction-induction to parametrized induction.)  We then proceed to add axioms for the path-constructors of <span class="inlinecode"><a class="idref" href="Freudenthal.html#No"><span class="id" title="abbreviation">No</span></a></span>.
+ Since Coq doesn't support inductive-inductive types natively, we have to hack a bit.  Inspired by Conway, we define <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Core.html#Surreals.Game"><span class="id" title="inductive">Game</span></a></span>s to be constructed by the point-constructor of <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Addition.html#Addition.No"><span class="id" title="variable">No</span></a></span> but without the hypothesis on inequality of options.  Then we define the inequalities as a mutual inductive family over <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Core.html#Surreals.Game"><span class="id" title="inductive">Game</span></a></span>, and put an inductive predicate on <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Core.html#Surreals.Game"><span class="id" title="inductive">Game</span></a></span> characterizing those that are Numbers.  (This is roughly a standard technique described by Fredrik Nordvall Forsberg for reducing induction-induction to parametrized induction.)  We then proceed to add axioms for the path-constructors of <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Addition.html#Addition.No"><span class="id" title="variable">No</span></a></span>.
 
 <div class="paragraph"> </div>
 
-  It should be emphasized that this is *not* currently a correct higher inductive-inductive definition of games; these "games" are only being used inside this module as a trick to produce <span class="inlinecode"><a class="idref" href="Freudenthal.html#No"><span class="id" title="abbreviation">No</span></a></span> in a way that computes on the point-constructor.  It should be possible to make a higher inductive-inductive definition of games, but this is not it. 
+  It should be emphasized that this is *not* currently a correct higher inductive-inductive definition of games; these "games" are only being used inside this module as a trick to produce <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Addition.html#Addition.No"><span class="id" title="variable">No</span></a></span> in a way that computes on the point-constructor.  It should be possible to make a higher inductive-inductive definition of games, but this is not it. 
 </div>
 <div class="code">
 
@@ -144,7 +144,7 @@ The surreal numbers use a lot of universes.  We include some universe annotation
 </div>
 
 <div class="doc">
-<a name="lab454"></a><h3 class="section">Now the surreals</h3>
+<a name="lab240"></a><h3 class="section">Now the surreals</h3>
 
 </div>
 <div class="code">
@@ -255,7 +255,7 @@ We call these "general surreal numbers" since they are parametrized by an option
 </div>
 
 <div class="doc">
-<a name="lab455"></a><h3 class="section">Now the induction principle.</h3>
+<a name="lab241"></a><h3 class="section">Now the induction principle.</h3>
 
 </div>
 <div class="code">
@@ -346,15 +346,15 @@ We call these "general surreal numbers" since they are parametrized by an option
 </div>
 
 <div class="doc">
-As usual for HITs implemented with <span class="inlinecode"><span class="id" title="var">Private</span></span> <span class="inlinecode"><span class="id" title="keyword">Inductive</span></span>, we will define <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Core.html#Surreals.No_ind"><span class="id" title="definition">No_ind</span></a></span> inside this module using a fixpoint over <span class="inlinecode"><a class="idref" href="Freudenthal.html#No"><span class="id" title="abbreviation">No</span></a></span>, thereby obtaining a judgmental computation rule for the point-constructor <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Core.html#Surreals.No_cut"><span class="id" title="definition">No_cut</span></a></span>, and then assert the other computation rules as axioms.  In this case, the relevant other rules are the preservation of inequalities.
+As usual for HITs implemented with <span class="inlinecode"><span class="id" title="var">Private</span></span> <span class="inlinecode"><span class="id" title="keyword">Inductive</span></span>, we will define <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Core.html#Surreals.No_ind"><span class="id" title="definition">No_ind</span></a></span> inside this module using a fixpoint over <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Addition.html#Addition.No"><span class="id" title="variable">No</span></a></span>, thereby obtaining a judgmental computation rule for the point-constructor <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Core.html#Surreals.No_cut"><span class="id" title="definition">No_cut</span></a></span>, and then assert the other computation rules as axioms.  In this case, the relevant other rules are the preservation of inequalities.
 
 <div class="paragraph"> </div>
 
-However, it turns out that in defining <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Core.html#Surreals.No_cut"><span class="id" title="definition">No_cut</span></a></span> we already need to know that it preserves inequalities.  Since this is eventually an axiom anyway, we could just assert it with <span class="inlinecode"><span class="id" title="var">admit</span></span> in the proof.  However, if we did this then the <span class="inlinecode"><span class="id" title="var">admit</span></span> would not be *judgmentally* equal to the axiom <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Core.html#Surreals.No_ind_lt"><span class="id" title="definition">No_ind_lt</span></a></span> that we assert afterwards.  Instead, we make use of the fact that <span class="inlinecode"><span class="id" title="var">admit</span></span> is essentially by definition <span class="inlinecode"><span class="id" title="keyword">match</span></span> <span class="inlinecode"><a class="idref" href="Freudenthal.html#proof_admitted"><span class="id" title="axiom">proof_admitted</span></a></span> <span class="inlinecode"><span class="id" title="keyword">with</span></span> <span class="inlinecode"><span class="id" title="keyword">end</span></span> for a global axiom <span class="inlinecode"><a class="idref" href="Freudenthal.html#proof_admitted"><span class="id" title="axiom">proof_admitted</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Empty"><span class="id" title="inductive">Empty</span></a></span>, so that if we use the same <span class="inlinecode"><span class="id" title="var">admit</span></span> both inside the definition of <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Core.html#Surreals.No_ind"><span class="id" title="definition">No_ind</span></a></span> and in asserting <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Core.html#Surreals.No_ind_lt"><span class="id" title="definition">No_ind_lt</span></a></span> as an axiom, they will be the same term judgmentally.
+However, it turns out that in defining <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Core.html#Surreals.No_cut"><span class="id" title="definition">No_cut</span></a></span> we already need to know that it preserves inequalities.  Since this is eventually an axiom anyway, we could just assert it with <span class="inlinecode"><span class="id" title="var">admit</span></span> in the proof.  However, if we did this then the <span class="inlinecode"><span class="id" title="var">admit</span></span> would not be *judgmentally* equal to the axiom <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Core.html#Surreals.No_ind_lt"><span class="id" title="definition">No_ind_lt</span></a></span> that we assert afterwards.  Instead, we make use of the fact that <span class="inlinecode"><span class="id" title="var">admit</span></span> is essentially by definition <span class="inlinecode"><span class="id" title="keyword">match</span></span> <span class="inlinecode"><span class="id" title="var">proof_admitted</span></span> <span class="inlinecode"><span class="id" title="keyword">with</span></span> <span class="inlinecode"><span class="id" title="keyword">end</span></span> for a global axiom <span class="inlinecode"><span class="id" title="var">proof_admitted</span></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Empty"><span class="id" title="inductive">Empty</span></a></span>, so that if we use the same <span class="inlinecode"><span class="id" title="var">admit</span></span> both inside the definition of <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Core.html#Surreals.No_ind"><span class="id" title="definition">No_ind</span></a></span> and in asserting <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Core.html#Surreals.No_ind_lt"><span class="id" title="definition">No_ind_lt</span></a></span> as an axiom, they will be the same term judgmentally.
 
 <div class="paragraph"> </div>
 
-Finally, for conceptual isolation, and so as not to depend on the particular implementation of <span class="inlinecode"><span class="id" title="var">admit</span></span>, we introduce here local copies of <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Empty"><span class="id" title="inductive">Empty</span></a></span> and <span class="inlinecode"><a class="idref" href="Freudenthal.html#proof_admitted"><span class="id" title="axiom">proof_admitted</span></a></span>. 
+Finally, for conceptual isolation, and so as not to depend on the particular implementation of <span class="inlinecode"><span class="id" title="var">admit</span></span>, we introduce here local copies of <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Empty"><span class="id" title="inductive">Empty</span></a></span> and <span class="inlinecode"><span class="id" title="var">proof_admitted</span></span>. 
 </div>
 <div class="code">
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">Inductive</span> <a name="Surreals.No_Empty_for_admitted"><span class="id" title="inductive">No_Empty_for_admitted</span></a> := .<br/>
@@ -475,7 +475,7 @@ We verify that our definition computes judgmentally.
 </div>
 
 <div class="doc">
-<a name="lab456"></a><h2 class="section">A few surreal numbers</h2>
+<a name="lab242"></a><h2 class="section">A few surreal numbers</h2>
 
 </div>
 <div class="code">
@@ -506,11 +506,11 @@ We verify that our definition computes judgmentally.
 </div>
 
 <div class="doc">
-<a name="lab457"></a><h2 class="section">More induction principles</h2>
+<a name="lab243"></a><h2 class="section">More induction principles</h2>
 
 <div class="paragraph"> </div>
 
-<a name="lab458"></a><h3 class="section">The simplified induction principle for hprops</h3>
+<a name="lab244"></a><h3 class="section">The simplified induction principle for hprops</h3>
 
 </div>
 <div class="code">
@@ -540,7 +540,7 @@ We verify that our definition computes judgmentally.
 See also <span class="inlinecode"><span class="id" title="var">repeat_No_ind_hprop</span></span>, below 
 <div class="paragraph"> </div>
 
-<a name="lab459"></a><h3 class="section">The non-dependent recursion principle</h3>
+<a name="lab245"></a><h3 class="section">The non-dependent recursion principle</h3>
 
 </div>
 <div class="code">
@@ -649,7 +649,7 @@ See also <span class="inlinecode"><span class="id" title="var">repeat_No_ind_hpr
 </div>
 
 <div class="doc">
-<a name="lab460"></a><h2 class="section">Conway's Theorem 0</h2>
+<a name="lab246"></a><h2 class="section">Conway's Theorem 0</h2>
 
 <div class="paragraph"> </div>
 
@@ -755,7 +755,7 @@ Theorem 0 Part (ii), right half
 </div>
 
 <div class="doc">
-<a name="lab461"></a><h2 class="section">"One-line proofs"</h2>
+<a name="lab247"></a><h2 class="section">"One-line proofs"</h2>
 
 <div class="paragraph"> </div>
 
@@ -822,7 +822,7 @@ When we want to do induction on several variables at once, we have to be careful
 </div>
 
 <div class="doc">
-<a name="lab462"></a><h2 class="section">Encode-decode to characterize <span class="inlinecode">&lt;</span> and <span class="inlinecode">≤</span> recursively (Theorem 11.6.7).</h2>
+<a name="lab248"></a><h2 class="section">Encode-decode to characterize <span class="inlinecode">&lt;</span> and <span class="inlinecode">≤</span> recursively (Theorem 11.6.7).</h2>
 
 </div>
 <div class="code">
@@ -1285,7 +1285,7 @@ Conway's theorem 1
 </div>
 
 <div class="doc">
-<a name="lab463"></a><h2 class="section">Changing option sorts</h2>
+<a name="lab249"></a><h2 class="section">Changing option sorts</h2>
 
 <div class="paragraph"> </div>
 
@@ -1301,7 +1301,7 @@ Conway's theorem 1
 </div>
 
 <div class="doc">
-This instance should be the one found by default, so that cuts live in <span class="inlinecode"><a class="idref" href="Freudenthal.html#No"><span class="id" title="abbreviation">No</span></a></span> unless otherwise specified.  Thus, all other global instances of <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Core.html#InSort"><span class="id" title="record">InSort</span></a></span> should be declared with higher priority. 
+This instance should be the one found by default, so that cuts live in <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Addition.html#Addition.No"><span class="id" title="variable">No</span></a></span> unless otherwise specified.  Thus, all other global instances of <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Core.html#InSort"><span class="id" title="record">InSort</span></a></span> should be declared with higher priority. 
 </div>
 <div class="code">
 <span class="id" title="keyword">Global Instance</span> <a name="insort_maxsort"><span class="id" title="instance">insort_maxsort</span></a> {<span class="id" title="var">L</span> <span class="id" title="var">R</span> : <span class="id" title="keyword">Type</span>}<br/>
@@ -1417,7 +1417,7 @@ See discussion at <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No
 </div>
 
 <div class="doc">
-<a name="lab464"></a><h2 class="section">Ordinals</h2>
+<a name="lab250"></a><h2 class="section">Ordinals</h2>
 
 <div class="paragraph"> </div>
 
@@ -1434,7 +1434,7 @@ See discussion at <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No
 </div>
 
 <div class="doc">
-<a name="lab465"></a><h2 class="section">Decidable options</h2>
+<a name="lab251"></a><h2 class="section">Decidable options</h2>
 
 <div class="paragraph"> </div>
 

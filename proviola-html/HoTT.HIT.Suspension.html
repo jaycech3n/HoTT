@@ -1378,12 +1378,12 @@
           
 
             i = 272;
-            data = "1 subgoal (ID 361)	  	  X : Type	  ispointed_type0 : IsPointed X	  Y : Type	  f : X -> Y	  ============================	  Susp_ind	    (fun y : Susp (point X = point X) =>	     (fun x : Susp (point X = point X) =>	      f (Susp_rec (point X) (point X) idmap x)) y =	     (fun x : Susp (point X = point X) =>	      Susp_rec (point Y) (point Y) idmap	        (Susp_rec North South	           (fun x0 : point X = point X => merid (1 @ (ap f x0 @ 1))) x)) y) 1	    1	    (fun p : point X = point X =>	     internal_paths_rew_r	       (f (Susp_rec (point X) (point X) idmap South) =	        Susp_rec (point Y) (point Y) idmap	          (Susp_rec North South	             (fun x : point X = point X => merid (1 @ (ap f x @ 1))) South))	       (transport	          (fun x : Susp (point X = point X) =>	           f (Susp_rec (point X) (point X) idmap x) =	           Susp_rec (point Y) (point Y) idmap	             (Susp_rec North South	                (fun x0 : point X = point X => merid (1 @ (ap f x0 @ 1))) x))	          (merid p) 1)	       (((ap	            (fun x : Susp (point X = point X) =>	             f (Susp_rec (point X) (point X) idmap x)) 	            (merid p))^ @ 1) @	        ap	          (fun x : Susp (point X = point X) =>	           Susp_rec (point Y) (point Y) idmap	             (Susp_rec North South	                (fun x0 : point X = point X => merid (1 @ (ap f x0 @ 1))) x))	          (merid p))	       (fun	          p0 : f (Susp_rec (point X) (point X) idmap South) =	               Susp_rec (point Y) (point Y) idmap	                 (Susp_rec North South	                    (fun x : point X = point X => merid (1 @ (ap f x @ 1)))	                    South) => p0 = 1)	       (internal_paths_rew_r	          (f (Susp_rec (point X) (point X) idmap North) =	           f (Susp_rec (point X) (point X) idmap South))	          (ap	             (fun x : Susp (point X = point X) =>	              f (Susp_rec (point X) (point X) idmap x)) 	             (merid p))	          (ap f (ap (Susp_rec (point X) (point X) idmap) (merid p)))	          (fun	             p0 : f (Susp_rec (point X) (point X) idmap North) =	                  f (Susp_rec (point X) (point X) idmap South) =>	           (p0^ @ 1) @	           ap	             (fun x : Susp (point X = point X) =>	              Susp_rec (point Y) (point Y) idmap	                (Susp_rec North South	                   (fun x0 : point X = point X => merid (1 @ (ap f x0 @ 1)))	                   x)) (merid p) = 1)	          (internal_paths_rew_r	             (f (Susp_rec (point X) (point X) idmap South) =	              f (Susp_rec (point X) (point X) idmap North))	             ((ap f (ap (Susp_rec (point X) (point X) idmap) (merid p)))^ @ 1)	             (ap f (ap (Susp_rec (point X) (point X) idmap) (merid p)))^	             (fun	                p0 : f (Susp_rec (point X) (point X) idmap South) =	                     f (Susp_rec (point X) (point X) idmap North) =>	              p0 @	              ap	                (fun x : Susp (point X = point X) =>	                 Susp_rec (point Y) (point Y) idmap	                   (Susp_rec North South	                      (fun x0 : point X = point X =>	                       merid (1 @ (ap f x0 @ 1))) x)) 	                (merid p) = 1)	             (moveR_Vp	                (ap	                   (fun x : Susp (point X = point X) =>	                    Susp_rec (point Y) (point Y) idmap	                      (Susp_rec North South	                         (fun x0 : point X = point X =>	                          merid (1 @ (ap f x0 @ 1))) x)) 	                   (merid p)) 1	                (ap f (ap (Susp_rec (point X) (point X) idmap) (merid p)))	                (ap_compose	                   (Susp_rec North South	                      (fun x0 : point X = point X =>	                       merid (1 @ (ap f x0 @ 1))))	                   (Susp_rec (point Y) (point Y) idmap) 	                   (merid p) @	                 internal_paths_rew_r	                   (Susp_rec North South	                      (fun x0 : point X = point X =>	                       merid (1 @ (ap f x0 @ 1))) North =	                    Susp_rec North South	                      (fun x0 : point X = point X =>	                       merid (1 @ (ap f x0 @ 1))) South)	                   (ap	                      (Susp_rec North South	                         (fun x0 : point X = point X =>	                          merid (1 @ (ap f x0 @ 1)))) 	                      (merid p)) (merid (1 @ (ap f p @ 1)))	                   (fun	                      p0 : Susp_rec North South	                             (fun x0 : point X = point X =>	                              merid (1 @ (ap f x0 @ 1))) North =	                           Susp_rec North South	                             (fun x0 : point X = point X =>	                              merid (1 @ (ap f x0 @ 1))) South =>	                    ap (Susp_rec (point Y) (point Y) idmap) p0 =	                    ap f (ap (Susp_rec (point X) (point X) idmap) (merid p)) @	                    1)	                   (internal_paths_rew_r	                      (Susp_rec (point Y) (point Y) idmap North =	                       Susp_rec (point Y) (point Y) idmap South)	                      (ap (Susp_rec (point Y) (point Y) idmap)	                         (merid (1 @ (ap f p @ 1)))) 	                      (1 @ (ap f p @ 1))	                      (fun	                         p0 : Susp_rec (point Y) (point Y) idmap North =	                              Susp_rec (point Y) (point Y) idmap South =>	                       p0 =	                       ap f	                         (ap (Susp_rec (point X) (point X) idmap) (merid p)) @	                       1)	                      (concat_1p (ap f p @ 1) @	                       ap11 (ap11 1 (ap11 1 (Susp_rec_beta_merid p)^)) 1)	                      (Susp_rec_beta_merid (1 @ (ap f p @ 1))))	                   (Susp_rec_beta_merid p)))	             (concat_p1	                (ap f (ap (Susp_rec (point X) (point X) idmap) (merid p)))^))	          (ap_compose (Susp_rec (point X) (point X) idmap) f (merid p)))	       (transport_paths_FlFr (merid p) 1)) (point (Susp (point X = point X))) @	  1 = 1	";
+            data = "1 subgoal (ID 361)	  	  X : Type	  ispointed_type0 : IsPointed X	  Y : Type	  f : X -> Y	  ============================	  Susp_ind	    (fun y : Susp (point X = point X) =>	     (fun x : Susp (point X = point X) =>	      f (Susp_rec (point X) (point X) idmap x)) y =	     (fun x : Susp (point X = point X) =>	      Susp_rec (point Y) (point Y) idmap	        (Susp_rec North South	           (fun x0 : point X = point X => merid (1 @ (ap f x0 @ 1))) x)) y) 1	    1	    (fun p : point X = point X =>	     internal_paths_rew_r	       (f (Susp_rec (point X) (point X) idmap South) =	        Susp_rec (point Y) (point Y) idmap	          (Susp_rec North South	             (fun x : point X = point X => merid (1 @ (ap f x @ 1))) South))	       (transport	          (fun x : Susp (point X = point X) =>	           f (Susp_rec (point X) (point X) idmap x) =	           Susp_rec (point Y) (point Y) idmap	             (Susp_rec North South	                (fun x0 : point X = point X => merid (1 @ (ap f x0 @ 1))) x))	          (merid p) 1)	       (((ap	            (fun x : Susp (point X = point X) =>	             f (Susp_rec (point X) (point X) idmap x)) 	            (merid p))^ @ 1) @	        ap	          (fun x : Susp (point X = point X) =>	           Susp_rec (point Y) (point Y) idmap	             (Susp_rec North South	                (fun x0 : point X = point X => merid (1 @ (ap f x0 @ 1))) x))	          (merid p))	       (fun	          p0 : f (Susp_rec (point X) (point X) idmap South) =	               Susp_rec (point Y) (point Y) idmap	                 (Susp_rec North South	                    (fun x : point X = point X => merid (1 @ (ap f x @ 1)))	                    South) => p0 = 1)	       (internal_paths_rew_r	          (f (Susp_rec (point X) (point X) idmap North) =	           f (Susp_rec (point X) (point X) idmap South))	          (ap	             (fun x : Susp (point X = point X) =>	              f (Susp_rec (point X) (point X) idmap x)) 	             (merid p))	          (ap f (ap (Susp_rec (point X) (point X) idmap) (merid p)))	          (fun	             p0 : f (Susp_rec (point X) (point X) idmap North) =	                  f (Susp_rec (point X) (point X) idmap South) =>	           (p0^ @ 1) @	           ap	             (fun x : Susp (point X = point X) =>	              Susp_rec (point Y) (point Y) idmap	                (Susp_rec North South	                   (fun x0 : point X = point X => merid (1 @ (ap f x0 @ 1)))	                   x)) (merid p) = 1)	          (internal_paths_rew_r	             (f (Susp_rec (point X) (point X) idmap South) =	              f (Susp_rec (point X) (point X) idmap North))	             ((ap f (ap (Susp_rec (point X) (point X) idmap) (merid p)))^ @ 1)	             (ap f (ap (Susp_rec (point X) (point X) idmap) (merid p)))^	             (fun	                p0 : f (Susp_rec (point X) (point X) idmap South) =	                     f (Susp_rec (point X) (point X) idmap North) =>	              p0 @	              ap	                (fun x : Susp (point X = point X) =>	                 Susp_rec (point Y) (point Y) idmap	                   (Susp_rec North South	                      (fun x0 : point X = point X =>	                       merid (1 @ (ap f x0 @ 1))) x)) 	                (merid p) = 1)	             (moveR_Vp	                (ap	                   (fun x : Susp (point X = point X) =>	                    Susp_rec (point Y) (point Y) idmap	                      (Susp_rec North South	                         (fun x0 : point X = point X =>	                          merid (1 @ (ap f x0 @ 1))) x)) 	                   (merid p)) 1	                (ap f (ap (Susp_rec (point X) (point X) idmap) (merid p)))	                (ap_compose	                   (Susp_rec North South	                      (fun x0 : point X = point X =>	                       merid (1 @ (ap f x0 @ 1))))	                   (Susp_rec (point Y) (point Y) idmap) 	                   (merid p) @	                 internal_paths_rew_r	                   (Susp_rec North South	                      (fun x0 : point X = point X =>	                       merid (1 @ (ap f x0 @ 1))) North =	                    Susp_rec North South	                      (fun x0 : point X = point X =>	                       merid (1 @ (ap f x0 @ 1))) South)	                   (ap	                      (Susp_rec North South	                         (fun x0 : point X = point X =>	                          merid (1 @ (ap f x0 @ 1)))) 	                      (merid p)) (merid (1 @ (ap f p @ 1)))	                   (fun	                      p0 : Susp_rec North South	                             (fun x0 : point X = point X =>	                              merid (1 @ (ap f x0 @ 1))) North =	                           Susp_rec North South	                             (fun x0 : point X = point X =>	                              merid (1 @ (ap f x0 @ 1))) South =>	                    ap (Susp_rec (point Y) (point Y) idmap) p0 =	                    ap f (ap (Susp_rec (point X) (point X) idmap) (merid p)) @	                    1)	                   (internal_paths_rew_r	                      (Susp_rec (point Y) (point Y) idmap North =	                       Susp_rec (point Y) (point Y) idmap South)	                      (ap (Susp_rec (point Y) (point Y) idmap)	                         (merid (1 @ (ap f p @ 1)))) 	                      (1 @ (ap f p @ 1))	                      (fun	                         p0 : Susp_rec (point Y) (point Y) idmap North =	                              Susp_rec (point Y) (point Y) idmap South =>	                       p0 =	                       ap f	                         (ap (Susp_rec (point X) (point X) idmap) (merid p)) @	                       1)	                      (concat_1p (ap f p @ 1) @	                       ap11 (ap11 1 (ap11 1 (Susp_rec_beta_merid p)^)) 1)	                      (Susp_rec_beta_merid (1 @ (ap f p @ 1))))	                   (Susp_rec_beta_merid p)))	             (concat_p1	                (ap f (ap (Susp_rec (point X) (point X) idmap) (merid p)))^))	          (ap_compose (Susp_rec (point X) (point X) idmap) f (merid p)))	       (transport_paths_FlFr (merid p) 1)) (point (Susp (point X = point X))) @	  1 = 1	No more subgoals.	";
             responses[i]=data;
           
 
             i = 273;
-            data = "No more subgoals.	";
+            data = "<infomsg>loop_susp_counit_natural is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -1408,7 +1408,7 @@
           
 
             i = 278;
-            data = "<infomsg>loop_susp_counit_natural is defined</infomsg>	1 subgoal (ID 309)	  	  X : pType	  ============================	  loops_functor (loop_susp_counit X) o* loop_susp_unit (loops X) ==*	  pmap_idmap (loops X)	";
+            data = "1 subgoal (ID 309)	  	  X : pType	  ============================	  loops_functor (loop_susp_counit X) o* loop_susp_unit (loops X) ==*	  pmap_idmap (loops X)	";
             responses[i]=data;
           
 
@@ -1841,7 +1841,7 @@
 </span></div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a name="lab372"></a><h1 class="section">The suspension of a type</h1>
+<a name="lab360"></a><h1 class="section">The suspension of a type</h1>
 </div>
 <div scenenumber="7" class="code">
 <span class="command" onmouseout="
@@ -2086,7 +2086,7 @@ We want to allow the user to forget that we've defined suspension in this way.
 </div>
 <div class="goal" id="goal0_3_11"><pre><span></span></pre></div>
 <div class="doc" scenenumber="13">
-<a name="lab373"></a><h2 class="section">Eta-rule.</h2>
+<a name="lab361"></a><h2 class="section">Eta-rule.</h2>
 <div class="doc" scenenumber="4"> </div>
 
  The eta-rule for suspension states that any function out of a suspension is equal to one defined by <span class="inlinecode"><a class="idref" href="HoTT.HIT.Suspension.html#Susp_ind"><span class="id" title="definition">Susp_ind</span></a></span> in the obvious way. We give it first in a weak form, producing just a pointwise equality, and then turn this into an actual equality using <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="axiom">Funext</span></a></span>. 
@@ -2233,7 +2233,7 @@ We want to allow the user to forget that we've defined suspension in this way.
 </div>
 <div class="goal" id="goal0_3_15"><pre><span></span></pre></div>
 <div class="doc" scenenumber="17">
-<a name="lab374"></a><h2 class="section">Universal property</h2>
+<a name="lab362"></a><h2 class="section">Universal property</h2>
 </div>
 <div scenenumber="19" class="code">
 <span class="command" onmouseout="
@@ -2347,7 +2347,7 @@ We want to allow the user to forget that we've defined suspension in this way.
 </div>
 <div class="goal" id="goal0_3_19"><pre><span></span></pre></div>
 <div class="doc" scenenumber="21">
-<a name="lab375"></a><h2 class="section">Nullhomotopies of maps out of suspensions</h2>
+<a name="lab363"></a><h2 class="section">Nullhomotopies of maps out of suspensions</h2>
 </div>
 <div scenenumber="23" class="code">
 <span class="command" onmouseout="
@@ -2458,7 +2458,7 @@ We want to allow the user to forget that we've defined suspension in this way.
 </div>
 <div class="goal" id="goal0_3_23"><pre><span></span></pre></div>
 <div class="doc" scenenumber="25">
-<a name="lab376"></a><h2 class="section">Pointedness of <span class="inlinecode"><a class="idref" href="HoTT.HIT.Suspension.html#Susp"><span class="id" title="definition">Susp</span></a></span> and path spaces thereof</h2>
+<a name="lab364"></a><h2 class="section">Pointedness of <span class="inlinecode"><a class="idref" href="HoTT.HIT.Suspension.html#Susp"><span class="id" title="definition">Susp</span></a></span> and path spaces thereof</h2>
  We arbitrarily choose <span class="inlinecode"><a class="idref" href="HoTT.HIT.Suspension.html#North"><span class="id" title="definition">North</span></a></span> to be the point. 
 </div>
 <div scenenumber="27" class="code">
@@ -2499,7 +2499,7 @@ We want to allow the user to forget that we've defined suspension in this way.
 </div>
 <div class="goal" id="goal0_3_27"><pre><span></span></pre></div>
 <div class="doc" scenenumber="29">
-<a name="lab377"></a><h2 class="section">Suspension Functor</h2>
+<a name="lab365"></a><h2 class="section">Suspension Functor</h2>
 </div>
 <div scenenumber="31" class="code">
 <span class="command" onmouseout="
@@ -2598,7 +2598,7 @@ We want to allow the user to forget that we've defined suspension in this way.
 </div>
 <div class="goal" id="goal0_3_31"><pre><span></span></pre></div>
 <div class="doc" scenenumber="33">
-<a name="lab378"></a><h2 class="section">Loop-Suspension Adjunction</h2>
+<a name="lab366"></a><h2 class="section">Loop-Suspension Adjunction</h2>
 </div>
 <div scenenumber="35" class="code">
 <span class="command" onmouseout="

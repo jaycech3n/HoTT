@@ -36,28 +36,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 1
-Time: 0.038s">
-<div class="time" style="width: 0.68703670222383%"></div>
+Time: 0.041s">
+<div class="time" style="width: 0.73953823953824%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 1
-Time: 0.007s">
-<div class="time" style="width: 0.12655939251492%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.10822510822511%"></div>
 <pre>
 Require Import UnivalenceImpliesFunext.</pre>
 </div>
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 2
-Time: 0.173s">
-<div class="time" style="width: 3.1278249864401%"></div>
+Time: 0.183s">
+<div class="time" style="width: 3.3008658008658%"></div>
 <pre>
 Require Import Modalities.Modality Modalities.Open.</pre>
 </div>
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 3
-Time: 0.003s">
-<div class="time" style="width: 0.05423973964925%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.072150072150072%"></div>
 <pre>
 Import OpM.</pre>
 </div>
@@ -86,7 +86,7 @@ In particular, since we do not foresee many applications of this file, we don't 
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 13
 Time: 0.005s">
-<div class="time" style="width: 0.090399566082083%"></div>
+<div class="time" style="width: 0.09018759018759%"></div>
 <pre>Record CoreflectiveSubuniverse :=
   { inF : Type -&gt; hProp ;
     F_coreflector : Type -&gt; Type ;
@@ -142,7 +142,7 @@ Time: 0s">
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 33
 Time: 0.001s">
-<div class="time" style="width: 0.018079913216417%"></div>
+<div class="time" style="width: 0.018037518037518%"></div>
 <pre>Definition F_corec {Y X} `(inF F Y) (f : Y -&gt; X) : Y -&gt; F X.</pre>
 </div>
 <div class="code" title="File: CoreflectiveSubuniverse.v
@@ -154,8 +154,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 34
-Time: 3.647s">
-<div class="time" style="width: 65.937443500271%"></div>
+Time: 3.798s">
+<div class="time" style="width: 68.506493506494%"></div>
 <pre>
     refine ((fun (g : Y -&gt; F X) =&gt; fromF F X o g)^-1 f).</pre>
 </div>
@@ -178,7 +178,7 @@ Time: 0s">
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 39
 Time: 0.001s">
-<div class="time" style="width: 0.018079913216417%"></div>
+<div class="time" style="width: 0.018037518037518%"></div>
 <pre>Definition F_corec_beta {Y X} (YF : inF F Y) (f : Y -&gt; X)
   : fromF F X o F_corec YF f == f.</pre>
 </div>
@@ -192,7 +192,7 @@ Time: 0s">
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 41
 Time: 0.001s">
-<div class="time" style="width: 0.018079913216417%"></div>
+<div class="time" style="width: 0.018037518037518%"></div>
 <pre>
     apply ap10, (eisretr (fun g =&gt; fromF F X o g)).</pre>
 </div>
@@ -208,7 +208,7 @@ Time: 0s">
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 45
 Time: 0.002s">
-<div class="time" style="width: 0.036159826432833%"></div>
+<div class="time" style="width: 0.036075036075036%"></div>
 <pre>Definition F_coindpaths {Y X} `(inF F Y) (g h : Y -&gt; F X)
              (p : fromF F X o g == fromF F X o h)
   : g == h.</pre>
@@ -229,8 +229,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 49
-Time: 3.86s">
-<div class="time" style="width: 69.788465015368%"></div>
+Time: 4.159s">
+<div class="time" style="width: 75.018037518038%"></div>
 <pre>
     refine (equiv_inj (fun k =&gt; fromF F X o k) _).</pre>
 </div>
@@ -257,7 +257,7 @@ Time: 0s">
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 52
 Time: 0.001s">
-<div class="time" style="width: 0.018079913216417%"></div>
+<div class="time" style="width: 0.018037518037518%"></div>
 <pre> by apply path_arrow.</pre>
 </div>
 <div class="code" title="File: CoreflectiveSubuniverse.v
@@ -272,8 +272,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 56
-Time: 0.001s">
-<div class="time" style="width: 0.018079913216417%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.036075036075036%"></div>
 <pre>Definition F_functor {X Y} (f : X -&gt; Y) : F X -&gt; F Y
     := F_corec (F_inF F X) (f o fromF F X).</pre>
 </div>
@@ -309,7 +309,7 @@ Time: 0s">
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 62
 Time: 0.001s">
-<div class="time" style="width: 0.018079913216417%"></div>
+<div class="time" style="width: 0.018037518037518%"></div>
 <pre>
     exact (F_coindpaths (F_inF F A) (const x) (const y)
                         (fun _ =&gt; path_ishprop _ _) x).</pre>
@@ -327,7 +327,7 @@ Time: 0s">
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 68
 Time: 0.001s">
-<div class="time" style="width: 0.018079913216417%"></div>
+<div class="time" style="width: 0.018037518037518%"></div>
 <pre>Definition inF_fromF_sect X (s : X -&gt; F X) (p : fromF F X o s == idmap)
   : inF F X.</pre>
 </div>
@@ -340,8 +340,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 70
-Time: 0.124s">
-<div class="time" style="width: 2.2419092388357%"></div>
+Time: 0.125s">
+<div class="time" style="width: 2.2546897546898%"></div>
 <pre>
     refine (transport (inF F) (path_universe (fromF F X)) (F_inF F X)).</pre>
 </div>
@@ -362,7 +362,7 @@ Time: 0s">
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 73
 Time: 0.001s">
-<div class="time" style="width: 0.018079913216417%"></div>
+<div class="time" style="width: 0.018037518037518%"></div>
 <pre>
     apply F_coindpaths; try apply F_inF.</pre>
 </div>
@@ -400,7 +400,7 @@ Time: 0s">
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 81
 Time: 0.016s">
-<div class="time" style="width: 0.28927861146267%"></div>
+<div class="time" style="width: 0.28860028860029%"></div>
 <pre>
     apply equiv_iff_hprop.</pre>
 </div>
@@ -502,7 +502,7 @@ Time: 0s">
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 92
 Time: 0.002s">
-<div class="time" style="width: 0.036159826432833%"></div>
+<div class="time" style="width: 0.036075036075036%"></div>
 <pre>End CoreflectiveSubuniverse.</pre>
 </div>
 <div class="code" title="File: CoreflectiveSubuniverse.v
@@ -545,7 +545,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 99
-Time: 5.531s">
+Time: 5.544s">
 <div class="time" style="width: 100%"></div>
 <pre>
     simple refine (Build_CoreflectiveSubuniverse
@@ -597,7 +597,7 @@ Time: 0s">
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 108
 Time: 0.002s">
-<div class="time" style="width: 0.036159826432833%"></div>
+<div class="time" style="width: 0.036075036075036%"></div>
 <pre>
       apply path_prod; [ reflexivity | by apply path_ishprop ].</pre>
 </div>
@@ -615,7 +615,7 @@ Time: 0s">
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 114
 Time: 0.001s">
-<div class="time" style="width: 0.018079913216417%"></div>
+<div class="time" style="width: 0.018037518037518%"></div>
 <pre>Definition coopen_isequiv_open X
   : IsEquiv (O_functor (Op U) (fromF coOp X)).</pre>
 </div>
@@ -655,8 +655,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 119
-Time: 0.001s">
-<div class="time" style="width: 0.018079913216417%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.036075036075036%"></div>
 <pre>
       transitivity (O_functor (Op U) fst (to (Op U) (X * U) (ux u , u)) u).</pre>
 </div>
@@ -670,13 +670,13 @@ Time: 0s">
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 121
 Time: 0.001s">
-<div class="time" style="width: 0.018079913216417%"></div>
+<div class="time" style="width: 0.018037518037518%"></div>
 <pre> apply ap10, ap, path_arrow; intros u'; simpl in *.</pre>
 </div>
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 121
 Time: 0.004s">
-<div class="time" style="width: 0.072319652865666%"></div>
+<div class="time" style="width: 0.072150072150072%"></div>
 <pre>
         apply path_prod; simpl; [ apply ap | ]; apply path_ishprop.</pre>
 </div>
@@ -690,7 +690,7 @@ Time: 0s">
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 123
 Time: 0.001s">
-<div class="time" style="width: 0.018079913216417%"></div>
+<div class="time" style="width: 0.018037518037518%"></div>
 <pre> exact (ap10 (to_O_natural (Op U) (@fst X U) (ux u , u)) u).</pre>
 </div>
 <div class="code" title="File: CoreflectiveSubuniverse.v
@@ -716,14 +716,14 @@ Time: 0s">
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 125
 Time: 0.002s">
-<div class="time" style="width: 0.036159826432833%"></div>
+<div class="time" style="width: 0.036075036075036%"></div>
 <pre>
       apply path_prod; [ simpl | apply path_ishprop ].</pre>
 </div>
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 126
 Time: 0.002s">
-<div class="time" style="width: 0.036159826432833%"></div>
+<div class="time" style="width: 0.036075036075036%"></div>
 <pre>
       transitivity (O_functor (Op U) fst (to (Op U) _ (fst (uux u) , u)) u).</pre>
 </div>
@@ -737,7 +737,7 @@ Time: 0s">
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 128
 Time: 0.001s">
-<div class="time" style="width: 0.018079913216417%"></div>
+<div class="time" style="width: 0.018037518037518%"></div>
 <pre> apply ap10, ap, path_arrow; intros u'.</pre>
 </div>
 <div class="code" title="File: CoreflectiveSubuniverse.v
@@ -757,7 +757,7 @@ Time: 0s">
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 130
 Time: 0.002s">
-<div class="time" style="width: 0.036159826432833%"></div>
+<div class="time" style="width: 0.036075036075036%"></div>
 <pre> exact (ap fst (ap uux (path_ishprop u' u))).</pre>
 </div>
 <div class="code" title="File: CoreflectiveSubuniverse.v
@@ -769,8 +769,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 131
-Time: 0.001s">
-<div class="time" style="width: 0.018079913216417%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.036075036075036%"></div>
 <pre> apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: CoreflectiveSubuniverse.v
@@ -783,7 +783,7 @@ Time: 0s">
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 132
 Time: 0.001s">
-<div class="time" style="width: 0.018079913216417%"></div>
+<div class="time" style="width: 0.018037518037518%"></div>
 <pre> exact (ap10 (to_O_natural (Op U) (@fst X U) (fst (uux u) , u)) u).</pre>
 </div>
 <div class="code" title="File: CoreflectiveSubuniverse.v
@@ -798,7 +798,7 @@ Time: 0s">
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 135
 Time: 0.003s">
-<div class="time" style="width: 0.05423973964925%"></div>
+<div class="time" style="width: 0.054112554112554%"></div>
 <pre>Definition coopen_equiv_open X
   : Op U (coOp X) &lt;~&gt; Op U X
     := BuildEquiv _ _ (O_functor (Op U) (fromF coOp X))
@@ -807,7 +807,7 @@ Time: 0.003s">
 <div class="code" title="File: CoreflectiveSubuniverse.v
 Line: 138
 Time: 0.004s">
-<div class="time" style="width: 0.072319652865666%"></div>
+<div class="time" style="width: 0.072150072150072%"></div>
 <pre>
 
 End CoOpen.</pre>

@@ -45,8 +45,8 @@ Time: 0.016s">
 </div>
 <div class="code" title="File: Arrow.v
 Line: 3
-Time: 0.004s">
-<div class="time" style="width: 25%"></div>
+Time: 0.005s">
+<div class="time" style="width: 31.25%"></div>
 <pre>
 Require Import Types.Paths Types.Forall.</pre>
 </div>
@@ -129,8 +129,8 @@ Definition apD10_path_arrow {A B : Type} (f g : A -&gt; B) (h : f == g)
 </div>
 <div class="code" title="File: Arrow.v
 Line: 26
-Time: 0.001s">
-<div class="time" style="width: 6.25%"></div>
+Time: 0.002s">
+<div class="time" style="width: 12.5%"></div>
 <pre>
 
 Definition ap10_path_forall {A B : Type} (f g : A -&gt; B) (h : f == g)
@@ -159,8 +159,8 @@ Definition path_arrow_1 {A B : Type} (f : A -&gt; B)
 </div>
 <div class="code" title="File: Arrow.v
 Line: 38
-Time: 0.004s">
-<div class="time" style="width: 25%"></div>
+Time: 0.005s">
+<div class="time" style="width: 31.25%"></div>
 <pre>
 
 Definition equiv_ap10 `{Funext} {A B : Type} f g
@@ -220,8 +220,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Arrow.v
 Line: 61
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>Definition transport_arrow {A : Type} {B C : A -&gt; Type}
   {x1 x2 : A} (p : x1 = x2) (f : B x1 -&gt; C x1) (y : B x2)
   : (transport (fun x =&gt; B x -&gt; C x) p f) y  =  p # (f (p^ # y)).</pre>
@@ -282,8 +282,8 @@ Defined.
 </div>
 <div class="code" title="File: Arrow.v
 Line: 73
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>Definition transport_arrow_fromconst {A B : Type} {C : A -&gt; Type}
   {x1 x2 : A} (p : x1 = x2) (f : B -&gt; C x1) (y : B)
   : (transport (fun x =&gt; B -&gt; C x) p f) y  =  p # (f y).</pre>
@@ -297,8 +297,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Arrow.v
 Line: 76
-Time: 0.001s">
-<div class="time" style="width: 6.25%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   destruct p; simpl; auto.</pre>
 </div>
@@ -372,15 +372,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Arrow.v
 Line: 101
-Time: 0.001s">
-<div class="time" style="width: 6.25%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   destruct p.</pre>
 </div>
 <div class="code" title="File: Arrow.v
 Line: 102
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
   apply equiv_path_arrow.</pre>
 </div>
@@ -395,8 +395,8 @@ Defined.
 </div>
 <div class="code" title="File: Arrow.v
 Line: 105
-Time: 0.006s">
-<div class="time" style="width: 37.5%"></div>
+Time: 0.007s">
+<div class="time" style="width: 43.75%"></div>
 <pre>Definition ap10_dpath_arrow
   {A:Type} (B C : A -&gt; Type) {x1 x2:A} (p:x1=x2)
   (f : B x1 -&gt; C x1) (g : B x2 -&gt; C x2)
@@ -416,8 +416,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Arrow.v
 Line: 114
-Time: 0.002s">
-<div class="time" style="width: 12.5%"></div>
+Time: 0.003s">
+<div class="time" style="width: 18.75%"></div>
 <pre>
   destruct p; simpl; unfold ap10.</pre>
 </div>
@@ -441,16 +441,16 @@ Defined.
 </div>
 <div class="code" title="File: Arrow.v
 Line: 121
-Time: 0.001s">
-<div class="time" style="width: 6.25%"></div>
+Time: 0.002s">
+<div class="time" style="width: 12.5%"></div>
 <pre>Definition ap_apply_l {A B : Type} {x y : A -&gt; B} (p : x = y) (z : A) :
   ap (fun f =&gt; f z) p = ap10 p z
 := 1.</pre>
 </div>
 <div class="code" title="File: Arrow.v
 Line: 123
-Time: 0.003s">
-<div class="time" style="width: 18.75%"></div>
+Time: 0.004s">
+<div class="time" style="width: 25%"></div>
 <pre>
 
 Definition ap_apply_Fl {A B C : Type} {x y : A} (p : x = y) (M : A -&gt; B -&gt; C) (z : B) :
@@ -469,8 +469,8 @@ Definition ap_apply_Fr {A B C : Type} {x y : A} (p : x = y) (z : B -&gt; C) (N :
 </div>
 <div class="code" title="File: Arrow.v
 Line: 131
-Time: 0.004s">
-<div class="time" style="width: 25%"></div>
+Time: 0.005s">
+<div class="time" style="width: 31.25%"></div>
 <pre>
 
 Definition ap_apply_FlFr {A B C : Type} {x y : A} (p : x = y) (M : A -&gt; B -&gt; C) (N : A -&gt; B) :
@@ -530,8 +530,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Arrow.v
 Line: 149
-Time: 0.003s">
-<div class="time" style="width: 18.75%"></div>
+Time: 0.004s">
+<div class="time" style="width: 25%"></div>
 <pre>
 
 Definition ap_functor_arrow `(f : B -&gt; A) `(g : C -&gt; D)
@@ -581,8 +581,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Arrow.v
 Line: 168
-Time: 0.006s">
-<div class="time" style="width: 37.5%"></div>
+Time: 0.005s">
+<div class="time" style="width: 31.25%"></div>
 <pre>Global Instance isequiv_functor_arrow `{IsEquiv B A f} `{IsEquiv C D g}
   : IsEquiv (functor_arrow f g) | 1000
   := @isequiv_functor_forall _ A (fun _ =&gt; C) B (fun _ =&gt; D)
@@ -625,8 +625,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Arrow.v
 Line: 187
-Time: 0.011s">
-<div class="time" style="width: 68.75%"></div>
+Time: 0.009s">
+<div class="time" style="width: 56.25%"></div>
 <pre>End AssumeFunext.</pre>
 </div>
 <div class="code" title="File: Arrow.v
@@ -656,8 +656,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Arrow.v
 Line: 194
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
   destruct (dec B) as [x2|y2].</pre>
 </div>

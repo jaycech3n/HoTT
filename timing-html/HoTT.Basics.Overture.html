@@ -744,8 +744,8 @@ Notation "x .2" := (pr2 x) : fibration_scope.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 145
-Time: 0.001s">
-<div class="time" style="width: 50%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition uncurry {A B C} (f: A -&gt; B -&gt; C) (p: A * B): C := f (fst p) (snd p).</pre>
@@ -1206,8 +1206,8 @@ Module Export symmetric_paths := inverseSymmetric inverse.
 </div>
 <div class="code" title="File: Overture.v
 Line: 247
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>Definition concat {A : Type} {x y z : A} (p : x = y) (q : y = z) : x = z :=
   match p, q with idpath, idpath =&gt; idpath end.</pre>
 </div>
@@ -1433,8 +1433,8 @@ Notation "f == g" := (pointwise_paths f g) : type_scope.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 303
-Time: 0.001s">
-<div class="time" style="width: 50%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition apD10 {A} {B:A-&gt;Type} {f g : forall x, B x} (h:f=g)
@@ -1451,8 +1451,8 @@ Global Arguments apD10 {A%type_scope B} {f g}%function_scope h%path_scope _.</pr
 </div>
 <div class="code" title="File: Overture.v
 Line: 309
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>
 
 Definition ap10 {A B} {f g:A-&gt;B} (h:f=g) : f == g
@@ -1497,8 +1497,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 319
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>
   case h, p; reflexivity.</pre>
 </div>
@@ -1519,8 +1519,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 322
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>
 
 Definition ap2 {A B C} (f : A -&gt; B -&gt; C) {x1 x2 y1 y2}:
@@ -1535,8 +1535,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 326
-Time: 0.001s">
-<div class="time" style="width: 50%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 intros H1 H2;destruct H1,H2;reflexivity.</pre>
 </div>
@@ -1976,8 +1976,8 @@ Local Open Scope trunc_scope.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 451
-Time: 0.001s">
-<div class="time" style="width: 50%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Fixpoint nat_to_trunc_index (n : nat) : trunc_index
   := match n with
@@ -1995,8 +1995,8 @@ Coercion nat_to_trunc_index : nat &gt;-&gt; trunc_index.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 458
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>
 
 Definition int_to_trunc_index (v : Decimal.int) : option trunc_index
@@ -2012,8 +2012,8 @@ Definition int_to_trunc_index (v : Decimal.int) : option trunc_index
 </div>
 <div class="code" title="File: Overture.v
 Line: 469
-Time: 0.001s">
-<div class="time" style="width: 50%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Fixpoint trunc_index_to_little_uint n acc :=
@@ -2026,8 +2026,8 @@ Fixpoint trunc_index_to_little_uint n acc :=
 </div>
 <div class="code" title="File: Overture.v
 Line: 477
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>
 
 Definition trunc_index_to_int n :=
@@ -2067,8 +2067,8 @@ Notation "-1" := (- 1) : trunc_scope.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 488
-Time: 0.001s">
-<div class="time" style="width: 50%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Fixpoint IsTrunc_internal (n : trunc_index) (A : Type) : Type :=
@@ -2474,8 +2474,8 @@ Notation "x &lt;&gt; y" := (x &lt;&gt; y :&gt; _) : type_scope.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 601
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>
 
 Definition symmetric_neq {A} {x y : A} : x &lt;&gt; y -&gt; y &lt;&gt; x
@@ -2500,8 +2500,8 @@ Typeclasses Opaque complement.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 609
-Time: 0.001s">
-<div class="time" style="width: 50%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Class Irreflexive {A} (R : relation A) :=
@@ -2509,8 +2509,8 @@ Class Irreflexive {A} (R : relation A) :=
 </div>
 <div class="code" title="File: Overture.v
 Line: 612
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>
 
 Class Asymmetric {A} (R : relation A) :=
@@ -2593,8 +2593,8 @@ Arguments point A {_}.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 630
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>
 
 Record pType :=
